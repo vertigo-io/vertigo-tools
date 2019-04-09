@@ -1,0 +1,94 @@
+grammar io.vertigo.dsl.VertigoDsl with org.eclipse.xtext.common.Terminals
+
+generate vertigoDsl "http://www.vertigo.io/dsl/VertigoDsl"
+
+Model:
+	'package' package+=ID ("."+ packages+=ID)*
+	elements+=Element*
+;
+
+Element:
+	Constraint | Formatter | Domain | FileInfo | DeclaredDomain | DtDefinition
+;
+
+
+DeclaredDomain:
+	'declare' 'Domain' name = ID
+;
+
+Constraint:
+	'create' 'Constraint' name=ID '{'
+		'className' ':' className=STRING
+		('args' ':' args=STRING)?
+		('msg' ':' msg=STRING)?
+	'}';
+
+FileInfo:
+	'create' 'FileInfo' name=ID '{'
+		'storeName' ':' storeName=STRING
+	'}';
+
+
+	
+Formatter:
+	'create' 'Formatter' name=ID '{'
+		'className' ':' className=STRING
+		('args' ':' args=STRING)?
+	'}';
+
+
+enum DataType: 
+	INTEGER='Integer' | 
+	DOUBLE='Double' | 
+	BOOLEAN='Boolean' | 
+	STRING='String' | 
+	LOCAL_DATE='LocalDate' |
+	INSTANT='Instant' |
+	BIG_DECIMAL='BigDecimal' |
+	LONG='Long' |
+	DATA_STREAM='DataStream';
+
+enum BooleanString:
+	TRUE='\"true\"' |
+	FALSE='\"false\"';
+
+enum MultiplicityString:
+	ZERO_ONE="0..1" |
+	ZERO_N="0..*";
+
+Domain:
+	'create' 'Domain' name=ID '{'
+		'dataType' ':'  dataType=DataType &
+		'formatter' ':' formatter=[Formatter] &
+		('storeType' ':' storeType=STRING)? &
+		('indexType' ':' indexType=STRING)? &
+		('constraint' ':' '[' constraints+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
+		('multiple' ':' multiple=BooleanString)? &
+		('unit' ':' unit=STRING)? &
+	'}';
+
+FieldDescriptionString:
+	fieldDescriptionString = '{' ( ('domain:' (domain=[Domain]) | (declaredDomain=[DeclaredDomain]))? & ('label:' label=STRING)? & ('required:' required=BooleanString)? ) '}';
+
+DtDefinition:
+	'create' 'DtDefinition' name=ID '{'
+		('stereoType' ':' stereoType=STRING)? &
+		('id' ID idFieldDescriptionString=FieldDescriptionString)? &
+		('field' ID fieldDescriptionString=FieldDescriptionString)? &
+	'}'
+;
+
+Association:
+	'create' 'Association' name=ID '{'
+		('fkFieldName' ':' fkFieldName=STRING) &
+		('dtDefinitionA' ':' dtDefinitionA=[DtDefinition]) &
+		('dtDefinitionB' ':' dtDefinitionB=[DtDefinition]) &
+		('navigabilityA' ':' navigabilityA=BooleanString)&
+		('navigabilityB' ':' navigabilityB=BooleanString)&
+		('multiplicityA' ':' multiplicityA=MultiplicityString)&
+		('multiplicityB' ':' multiplicityB=MultiplicityString)&
+		('labelA' ':' labelA=STRING) &
+		('labelB' ':' labelB=STRING) &
+		('roleA' ':' roleA=STRING) &
+		('roleB' ':' roleB=STRING) &
+	'}';
