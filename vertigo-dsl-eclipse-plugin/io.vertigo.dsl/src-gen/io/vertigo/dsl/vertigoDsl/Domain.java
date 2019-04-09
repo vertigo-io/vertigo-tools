@@ -18,6 +18,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getFormatter <em>Formatter</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getStoreType <em>Store Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getIndexType <em>Index Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getMultiple <em>Multiple</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getUnit <em>Unit</em>}</li>
@@ -135,6 +136,22 @@ public interface Domain extends Element
    * @generated
    */
   void setIndexType(String value);
+
+  /**
+   * Returns the value of the '<em><b>Constraint</b></em>' reference list.
+   * The list contents are of type {@link io.vertigo.dsl.vertigoDsl.Constraint}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Constraint</em>' reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Constraint</em>' reference list.
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain_Constraint()
+   * @model
+   * @generated
+   */
+  EList<Constraint> getConstraint();
 
   /**
    * Returns the value of the '<em><b>Constraints</b></em>' reference list.

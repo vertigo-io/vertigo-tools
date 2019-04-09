@@ -96,6 +96,33 @@ public interface VertigoDslFactory extends EFactory
   FieldDescriptionString createFieldDescriptionString();
 
   /**
+   * Returns a new object of class '<em>Dt Definition Id</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Id</em>'.
+   * @generated
+   */
+  DtDefinitionId createDtDefinitionId();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Field</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Field</em>'.
+   * @generated
+   */
+  DtDefinitionField createDtDefinitionField();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Stereotype</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Stereotype</em>'.
+   * @generated
+   */
+  DtDefinitionStereotype createDtDefinitionStereotype();
+
+  /**
    * Returns a new object of class '<em>Dt Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

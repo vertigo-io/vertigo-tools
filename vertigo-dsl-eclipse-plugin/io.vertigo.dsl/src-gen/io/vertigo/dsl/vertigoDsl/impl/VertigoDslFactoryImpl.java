@@ -74,6 +74,9 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.FORMATTER: return createFormatter();
       case VertigoDslPackage.DOMAIN: return createDomain();
       case VertigoDslPackage.FIELD_DESCRIPTION_STRING: return createFieldDescriptionString();
+      case VertigoDslPackage.DT_DEFINITION_ID: return createDtDefinitionId();
+      case VertigoDslPackage.DT_DEFINITION_FIELD: return createDtDefinitionField();
+      case VertigoDslPackage.DT_DEFINITION_STEREOTYPE: return createDtDefinitionStereotype();
       case VertigoDslPackage.DT_DEFINITION: return createDtDefinition();
       case VertigoDslPackage.ASSOCIATION: return createAssociation();
       default:
@@ -209,6 +212,39 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     FieldDescriptionStringImpl fieldDescriptionString = new FieldDescriptionStringImpl();
     return fieldDescriptionString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionId createDtDefinitionId()
+  {
+    DtDefinitionIdImpl dtDefinitionId = new DtDefinitionIdImpl();
+    return dtDefinitionId;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionField createDtDefinitionField()
+  {
+    DtDefinitionFieldImpl dtDefinitionField = new DtDefinitionFieldImpl();
+    return dtDefinitionField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionStereotype createDtDefinitionStereotype()
+  {
+    DtDefinitionStereotypeImpl dtDefinitionStereotype = new DtDefinitionStereotypeImpl();
+    return dtDefinitionStereotype;
   }
 
   /**

@@ -134,6 +134,27 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.DT_DEFINITION_ID:
+      {
+        DtDefinitionId dtDefinitionId = (DtDefinitionId)theEObject;
+        T result = caseDtDefinitionId(dtDefinitionId);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_FIELD:
+      {
+        DtDefinitionField dtDefinitionField = (DtDefinitionField)theEObject;
+        T result = caseDtDefinitionField(dtDefinitionField);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_STEREOTYPE:
+      {
+        DtDefinitionStereotype dtDefinitionStereotype = (DtDefinitionStereotype)theEObject;
+        T result = caseDtDefinitionStereotype(dtDefinitionStereotype);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.DT_DEFINITION:
       {
         DtDefinition dtDefinition = (DtDefinition)theEObject;
@@ -146,6 +167,7 @@ public class VertigoDslSwitch<T> extends Switch<T>
       {
         Association association = (Association)theEObject;
         T result = caseAssociation(association);
+        if (result == null) result = caseElement(association);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -277,6 +299,54 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFieldDescriptionString(FieldDescriptionString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Id</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Id</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionId(DtDefinitionId object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Field</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Field</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionField(DtDefinitionField object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Stereotype</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Stereotype</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionStereotype(DtDefinitionStereotype object)
   {
     return null;
   }

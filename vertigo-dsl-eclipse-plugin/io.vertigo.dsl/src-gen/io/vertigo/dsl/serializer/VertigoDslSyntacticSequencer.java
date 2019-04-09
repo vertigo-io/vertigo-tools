@@ -11,7 +11,6 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
-import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -21,45 +20,25 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VertigoDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Association_RightCurlyBracketKeyword_11_a;
-	protected AbstractElementAlias match_Association_RightCurlyBracketKeyword_11_p;
 	protected AbstractElementAlias match_Domain_CommaKeyword_4_4_0_p;
-	protected AbstractElementAlias match_Domain_DtDefinition___RightCurlyBracketKeyword_3_p_or_RightCurlyBracketKeyword_7_p__q;
 	protected AbstractElementAlias match_Domain_RightCurlyBracketKeyword_7_a;
 	protected AbstractElementAlias match_Domain_RightCurlyBracketKeyword_7_p;
-	protected AbstractElementAlias match_DtDefinition_RightCurlyBracketKeyword_3_a;
-	protected AbstractElementAlias match_DtDefinition_RightCurlyBracketKeyword_3_p;
 	protected AbstractElementAlias match_Model_FullStopKeyword_2_0_p;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (VertigoDslGrammarAccess) access;
-		match_Association_RightCurlyBracketKeyword_11_a = new TokenAlias(true, true, grammarAccess.getAssociationAccess().getRightCurlyBracketKeyword_11());
-		match_Association_RightCurlyBracketKeyword_11_p = new TokenAlias(true, false, grammarAccess.getAssociationAccess().getRightCurlyBracketKeyword_11());
 		match_Domain_CommaKeyword_4_4_0_p = new TokenAlias(true, false, grammarAccess.getDomainAccess().getCommaKeyword_4_4_0());
-		match_Domain_DtDefinition___RightCurlyBracketKeyword_3_p_or_RightCurlyBracketKeyword_7_p__q = new AlternativeAlias(false, true, new TokenAlias(true, false, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_7()), new TokenAlias(true, false, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_3()));
 		match_Domain_RightCurlyBracketKeyword_7_a = new TokenAlias(true, true, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_7());
 		match_Domain_RightCurlyBracketKeyword_7_p = new TokenAlias(true, false, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_7());
-		match_DtDefinition_RightCurlyBracketKeyword_3_a = new TokenAlias(true, true, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_3());
-		match_DtDefinition_RightCurlyBracketKeyword_3_p = new TokenAlias(true, false, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_3());
 		match_Model_FullStopKeyword_2_0_p = new TokenAlias(true, false, grammarAccess.getModelAccess().getFullStopKeyword_2_0());
 	}
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (ruleCall.getRule() == grammarAccess.getIDRule())
-			return getIDToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
-	/**
-	 * terminal ID: '^'?('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
-	 */
-	protected String getIDToken(EObject semanticObject, RuleCall ruleCall, INode node) {
-		if (node != null)
-			return getTokenText(node);
-		return "";
-	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -67,22 +46,12 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Association_RightCurlyBracketKeyword_11_a.equals(syntax))
-				emit_Association_RightCurlyBracketKeyword_11_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Association_RightCurlyBracketKeyword_11_p.equals(syntax))
-				emit_Association_RightCurlyBracketKeyword_11_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Domain_CommaKeyword_4_4_0_p.equals(syntax))
+			if (match_Domain_CommaKeyword_4_4_0_p.equals(syntax))
 				emit_Domain_CommaKeyword_4_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Domain_DtDefinition___RightCurlyBracketKeyword_3_p_or_RightCurlyBracketKeyword_7_p__q.equals(syntax))
-				emit_Domain_DtDefinition___RightCurlyBracketKeyword_3_p_or_RightCurlyBracketKeyword_7_p__q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Domain_RightCurlyBracketKeyword_7_a.equals(syntax))
 				emit_Domain_RightCurlyBracketKeyword_7_a(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Domain_RightCurlyBracketKeyword_7_p.equals(syntax))
 				emit_Domain_RightCurlyBracketKeyword_7_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_DtDefinition_RightCurlyBracketKeyword_3_a.equals(syntax))
-				emit_DtDefinition_RightCurlyBracketKeyword_3_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_DtDefinition_RightCurlyBracketKeyword_3_p.equals(syntax))
-				emit_DtDefinition_RightCurlyBracketKeyword_3_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_FullStopKeyword_2_0_p.equals(syntax))
 				emit_Model_FullStopKeyword_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
@@ -91,173 +60,10 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	/**
 	 * Ambiguous syntax:
-	 *     '}'*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) 'create' 'Association' name=ID
-	 *     (rule start) (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     (rule start) (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     (rule start) (ambiguity) 'labelA' ':' labelA=STRING
-	 *     (rule start) (ambiguity) 'labelB' ':' labelB=STRING
-	 *     (rule start) (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     (rule start) (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     (rule start) (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     (rule start) (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     (rule start) (ambiguity) 'roleA' ':' roleA=STRING
-	 *     (rule start) (ambiguity) 'roleB' ':' roleB=STRING
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'create' 'Association' name=ID
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'labelA' ':' labelA=STRING
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'labelB' ':' labelB=STRING
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'roleA' ':' roleA=STRING
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) 'roleB' ':' roleB=STRING
-	 *     dtDefinitionA=[DtDefinition|ID] (ambiguity) (rule end)
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'create' 'Association' name=ID
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'labelA' ':' labelA=STRING
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'labelB' ':' labelB=STRING
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'roleA' ':' roleA=STRING
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) 'roleB' ':' roleB=STRING
-	 *     dtDefinitionB=[DtDefinition|ID] (ambiguity) (rule end)
-	 *     fkFieldName=STRING (ambiguity) 'create' 'Association' name=ID
-	 *     fkFieldName=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     fkFieldName=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     fkFieldName=STRING (ambiguity) 'labelA' ':' labelA=STRING
-	 *     fkFieldName=STRING (ambiguity) 'labelB' ':' labelB=STRING
-	 *     fkFieldName=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     fkFieldName=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     fkFieldName=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     fkFieldName=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     fkFieldName=STRING (ambiguity) 'roleA' ':' roleA=STRING
-	 *     fkFieldName=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     fkFieldName=STRING (ambiguity) (rule end)
-	 *     labelA=STRING (ambiguity) 'create' 'Association' name=ID
-	 *     labelA=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     labelA=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     labelA=STRING (ambiguity) 'labelA' ':' labelA=STRING
-	 *     labelA=STRING (ambiguity) 'labelB' ':' labelB=STRING
-	 *     labelA=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     labelA=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     labelA=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     labelA=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     labelA=STRING (ambiguity) 'roleA' ':' roleA=STRING
-	 *     labelA=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     labelA=STRING (ambiguity) (rule end)
-	 *     labelB=STRING (ambiguity) 'create' 'Association' name=ID
-	 *     labelB=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     labelB=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     labelB=STRING (ambiguity) 'labelA' ':' labelA=STRING
-	 *     labelB=STRING (ambiguity) 'labelB' ':' labelB=STRING
-	 *     labelB=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     labelB=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     labelB=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     labelB=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     labelB=STRING (ambiguity) 'roleA' ':' roleA=STRING
-	 *     labelB=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     labelB=STRING (ambiguity) (rule end)
-	 *     multiplicityA=MultiplicityString (ambiguity) 'create' 'Association' name=ID
-	 *     multiplicityA=MultiplicityString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     multiplicityA=MultiplicityString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     multiplicityA=MultiplicityString (ambiguity) 'labelA' ':' labelA=STRING
-	 *     multiplicityA=MultiplicityString (ambiguity) 'labelB' ':' labelB=STRING
-	 *     multiplicityA=MultiplicityString (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     multiplicityA=MultiplicityString (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     multiplicityA=MultiplicityString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     multiplicityA=MultiplicityString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     multiplicityA=MultiplicityString (ambiguity) 'roleA' ':' roleA=STRING
-	 *     multiplicityA=MultiplicityString (ambiguity) 'roleB' ':' roleB=STRING
-	 *     multiplicityA=MultiplicityString (ambiguity) (rule end)
-	 *     multiplicityB=MultiplicityString (ambiguity) 'create' 'Association' name=ID
-	 *     multiplicityB=MultiplicityString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     multiplicityB=MultiplicityString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     multiplicityB=MultiplicityString (ambiguity) 'labelA' ':' labelA=STRING
-	 *     multiplicityB=MultiplicityString (ambiguity) 'labelB' ':' labelB=STRING
-	 *     multiplicityB=MultiplicityString (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     multiplicityB=MultiplicityString (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     multiplicityB=MultiplicityString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     multiplicityB=MultiplicityString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     multiplicityB=MultiplicityString (ambiguity) 'roleA' ':' roleA=STRING
-	 *     multiplicityB=MultiplicityString (ambiguity) 'roleB' ':' roleB=STRING
-	 *     multiplicityB=MultiplicityString (ambiguity) (rule end)
-	 *     navigabilityA=BooleanString (ambiguity) 'create' 'Association' name=ID
-	 *     navigabilityA=BooleanString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     navigabilityA=BooleanString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     navigabilityA=BooleanString (ambiguity) 'labelA' ':' labelA=STRING
-	 *     navigabilityA=BooleanString (ambiguity) 'labelB' ':' labelB=STRING
-	 *     navigabilityA=BooleanString (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     navigabilityA=BooleanString (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     navigabilityA=BooleanString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     navigabilityA=BooleanString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     navigabilityA=BooleanString (ambiguity) 'roleA' ':' roleA=STRING
-	 *     navigabilityA=BooleanString (ambiguity) 'roleB' ':' roleB=STRING
-	 *     navigabilityA=BooleanString (ambiguity) (rule end)
-	 *     navigabilityB=BooleanString (ambiguity) 'create' 'Association' name=ID
-	 *     navigabilityB=BooleanString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     navigabilityB=BooleanString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     navigabilityB=BooleanString (ambiguity) 'labelA' ':' labelA=STRING
-	 *     navigabilityB=BooleanString (ambiguity) 'labelB' ':' labelB=STRING
-	 *     navigabilityB=BooleanString (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     navigabilityB=BooleanString (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     navigabilityB=BooleanString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     navigabilityB=BooleanString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     navigabilityB=BooleanString (ambiguity) 'roleA' ':' roleA=STRING
-	 *     navigabilityB=BooleanString (ambiguity) 'roleB' ':' roleB=STRING
-	 *     navigabilityB=BooleanString (ambiguity) (rule end)
-	 *     roleA=STRING (ambiguity) 'create' 'Association' name=ID
-	 *     roleA=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     roleA=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     roleA=STRING (ambiguity) 'labelA' ':' labelA=STRING
-	 *     roleA=STRING (ambiguity) 'labelB' ':' labelB=STRING
-	 *     roleA=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     roleA=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     roleA=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     roleA=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     roleA=STRING (ambiguity) 'roleA' ':' roleA=STRING
-	 *     roleA=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     roleA=STRING (ambiguity) (rule end)
-	 *     roleB=STRING (ambiguity) 'create' 'Association' name=ID
-	 *     roleB=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinition|ID]
-	 *     roleB=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinition|ID]
-	 *     roleB=STRING (ambiguity) 'labelA' ':' labelA=STRING
-	 *     roleB=STRING (ambiguity) 'labelB' ':' labelB=STRING
-	 *     roleB=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
-	 *     roleB=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
-	 *     roleB=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
-	 *     roleB=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
-	 *     roleB=STRING (ambiguity) 'roleA' ':' roleA=STRING
-	 *     roleB=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     roleB=STRING (ambiguity) (rule end)
-	 */
-	protected void emit_Association_RightCurlyBracketKeyword_11_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_Association_RightCurlyBracketKeyword_11_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
 	 *     ','+
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     constraint+=[Constraint|ID] (ambiguity) constraints+=[Constraint|ID]
 	 *     constraints+=[Constraint|ID] (ambiguity) constraints+=[Constraint|ID]
 	 */
 	protected void emit_Domain_CommaKeyword_4_4_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -266,21 +72,10 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ('}'+ | '}'+)?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_Domain_DtDefinition___RightCurlyBracketKeyword_3_p_or_RightCurlyBracketKeyword_7_p__q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
 	 *     '}'*
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) 'constraint' ':' '[' constraints+=[Constraint|ID]
+	 *     (rule start) (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
 	 *     (rule start) (ambiguity) 'create' 'Domain' name=ID
 	 *     (rule start) (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     (rule start) (ambiguity) 'indexType' ':' indexType=STRING
@@ -288,7 +83,15 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) 'storeType' ':' storeType=STRING
 	 *     (rule start) (ambiguity) 'unit' ':' unit=STRING
 	 *     (rule start) (ambiguity) (rule start)
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraints+=[Constraint|ID]
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'create' 'Domain' name=ID
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'indexType' ':' indexType=STRING
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'multiple' ':' multiple=BooleanString
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'storeType' ':' storeType=STRING
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'unit' ':' unit=STRING
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) (rule end)
+	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'create' 'Domain' name=ID
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'indexType' ':' indexType=STRING
@@ -296,7 +99,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'storeType' ':' storeType=STRING
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'unit' ':' unit=STRING
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) (rule end)
-	 *     dataType=DataType (ambiguity) 'constraint' ':' '[' constraints+=[Constraint|ID]
+	 *     dataType=DataType (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
 	 *     dataType=DataType (ambiguity) 'create' 'Domain' name=ID
 	 *     dataType=DataType (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     dataType=DataType (ambiguity) 'indexType' ':' indexType=STRING
@@ -304,7 +107,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     dataType=DataType (ambiguity) 'storeType' ':' storeType=STRING
 	 *     dataType=DataType (ambiguity) 'unit' ':' unit=STRING
 	 *     dataType=DataType (ambiguity) (rule end)
-	 *     formatter=[Formatter|ID] (ambiguity) 'constraint' ':' '[' constraints+=[Constraint|ID]
+	 *     formatter=[Formatter|ID] (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
 	 *     formatter=[Formatter|ID] (ambiguity) 'create' 'Domain' name=ID
 	 *     formatter=[Formatter|ID] (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     formatter=[Formatter|ID] (ambiguity) 'indexType' ':' indexType=STRING
@@ -312,7 +115,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     formatter=[Formatter|ID] (ambiguity) 'storeType' ':' storeType=STRING
 	 *     formatter=[Formatter|ID] (ambiguity) 'unit' ':' unit=STRING
 	 *     formatter=[Formatter|ID] (ambiguity) (rule end)
-	 *     indexType=STRING (ambiguity) 'constraint' ':' '[' constraints+=[Constraint|ID]
+	 *     indexType=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
 	 *     indexType=STRING (ambiguity) 'create' 'Domain' name=ID
 	 *     indexType=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     indexType=STRING (ambiguity) 'indexType' ':' indexType=STRING
@@ -320,7 +123,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     indexType=STRING (ambiguity) 'storeType' ':' storeType=STRING
 	 *     indexType=STRING (ambiguity) 'unit' ':' unit=STRING
 	 *     indexType=STRING (ambiguity) (rule end)
-	 *     multiple=BooleanString (ambiguity) 'constraint' ':' '[' constraints+=[Constraint|ID]
+	 *     multiple=BooleanString (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
 	 *     multiple=BooleanString (ambiguity) 'create' 'Domain' name=ID
 	 *     multiple=BooleanString (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     multiple=BooleanString (ambiguity) 'indexType' ':' indexType=STRING
@@ -328,7 +131,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     multiple=BooleanString (ambiguity) 'storeType' ':' storeType=STRING
 	 *     multiple=BooleanString (ambiguity) 'unit' ':' unit=STRING
 	 *     multiple=BooleanString (ambiguity) (rule end)
-	 *     storeType=STRING (ambiguity) 'constraint' ':' '[' constraints+=[Constraint|ID]
+	 *     storeType=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
 	 *     storeType=STRING (ambiguity) 'create' 'Domain' name=ID
 	 *     storeType=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     storeType=STRING (ambiguity) 'indexType' ':' indexType=STRING
@@ -336,7 +139,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     storeType=STRING (ambiguity) 'storeType' ':' storeType=STRING
 	 *     storeType=STRING (ambiguity) 'unit' ':' unit=STRING
 	 *     storeType=STRING (ambiguity) (rule end)
-	 *     unit=STRING (ambiguity) 'constraint' ':' '[' constraints+=[Constraint|ID]
+	 *     unit=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
 	 *     unit=STRING (ambiguity) 'create' 'Domain' name=ID
 	 *     unit=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     unit=STRING (ambiguity) 'indexType' ':' indexType=STRING
@@ -357,47 +160,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     (rule start) (ambiguity) (rule start)
 	 */
 	protected void emit_Domain_RightCurlyBracketKeyword_7_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) 'create' 'DtDefinition' name=ID
-	 *     (rule start) (ambiguity) 'field' ID fieldDescriptionString=FieldDescriptionString
-	 *     (rule start) (ambiguity) 'id' ID idFieldDescriptionString=FieldDescriptionString
-	 *     (rule start) (ambiguity) (rule start)
-	 *     fieldDescriptionString=FieldDescriptionString (ambiguity) 'create' 'DtDefinition' name=ID
-	 *     fieldDescriptionString=FieldDescriptionString (ambiguity) 'field' ID fieldDescriptionString=FieldDescriptionString
-	 *     fieldDescriptionString=FieldDescriptionString (ambiguity) 'id' ID idFieldDescriptionString=FieldDescriptionString
-	 *     fieldDescriptionString=FieldDescriptionString (ambiguity) (rule end)
-	 *     idFieldDescriptionString=FieldDescriptionString (ambiguity) 'create' 'DtDefinition' name=ID
-	 *     idFieldDescriptionString=FieldDescriptionString (ambiguity) 'field' ID fieldDescriptionString=FieldDescriptionString
-	 *     idFieldDescriptionString=FieldDescriptionString (ambiguity) 'id' ID idFieldDescriptionString=FieldDescriptionString
-	 *     idFieldDescriptionString=FieldDescriptionString (ambiguity) (rule end)
-	 *     name=ID '{' (ambiguity) 'create' 'DtDefinition' name=ID
-	 *     name=ID '{' (ambiguity) 'field' ID fieldDescriptionString=FieldDescriptionString
-	 *     name=ID '{' (ambiguity) 'id' ID idFieldDescriptionString=FieldDescriptionString
-	 *     name=ID '{' (ambiguity) (rule end)
-	 *     stereoType=STRING (ambiguity) 'create' 'DtDefinition' name=ID
-	 *     stereoType=STRING (ambiguity) 'field' ID fieldDescriptionString=FieldDescriptionString
-	 *     stereoType=STRING (ambiguity) 'id' ID idFieldDescriptionString=FieldDescriptionString
-	 *     stereoType=STRING (ambiguity) (rule end)
-	 */
-	protected void emit_DtDefinition_RightCurlyBracketKeyword_3_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_DtDefinition_RightCurlyBracketKeyword_3_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

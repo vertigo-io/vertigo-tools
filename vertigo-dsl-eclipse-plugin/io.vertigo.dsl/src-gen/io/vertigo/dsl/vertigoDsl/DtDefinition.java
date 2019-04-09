@@ -3,6 +3,7 @@
  */
 package io.vertigo.dsl.vertigoDsl;
 
+import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -13,9 +14,9 @@ package io.vertigo.dsl.vertigoDsl;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getStereoType <em>Stereo Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getIdFieldDescriptionString <em>Id Field Description String</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getFieldDescriptionString <em>Field Description String</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getDtDefinitionStereotype <em>Dt Definition Stereotype</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getDtDefinitionId <em>Dt Definition Id</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getDtDefinitionFields <em>Dt Definition Fields</em>}</li>
  * </ul>
  *
  * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinition()
@@ -25,81 +26,71 @@ package io.vertigo.dsl.vertigoDsl;
 public interface DtDefinition extends Element
 {
   /**
-   * Returns the value of the '<em><b>Stereo Type</b></em>' attribute.
+   * Returns the value of the '<em><b>Dt Definition Stereotype</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Stereo Type</em>' attribute isn't clear,
+   * If the meaning of the '<em>Dt Definition Stereotype</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Stereo Type</em>' attribute.
-   * @see #setStereoType(String)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinition_StereoType()
-   * @model
-   * @generated
-   */
-  String getStereoType();
-
-  /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getStereoType <em>Stereo Type</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Stereo Type</em>' attribute.
-   * @see #getStereoType()
-   * @generated
-   */
-  void setStereoType(String value);
-
-  /**
-   * Returns the value of the '<em><b>Id Field Description String</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Id Field Description String</em>' containment reference isn't clear,
-   * there really should be more of a description here...
-   * </p>
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Id Field Description String</em>' containment reference.
-   * @see #setIdFieldDescriptionString(FieldDescriptionString)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinition_IdFieldDescriptionString()
+   * @return the value of the '<em>Dt Definition Stereotype</em>' containment reference.
+   * @see #setDtDefinitionStereotype(DtDefinitionStereotype)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinition_DtDefinitionStereotype()
    * @model containment="true"
    * @generated
    */
-  FieldDescriptionString getIdFieldDescriptionString();
+  DtDefinitionStereotype getDtDefinitionStereotype();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getIdFieldDescriptionString <em>Id Field Description String</em>}' containment reference.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getDtDefinitionStereotype <em>Dt Definition Stereotype</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Id Field Description String</em>' containment reference.
-   * @see #getIdFieldDescriptionString()
+   * @param value the new value of the '<em>Dt Definition Stereotype</em>' containment reference.
+   * @see #getDtDefinitionStereotype()
    * @generated
    */
-  void setIdFieldDescriptionString(FieldDescriptionString value);
+  void setDtDefinitionStereotype(DtDefinitionStereotype value);
 
   /**
-   * Returns the value of the '<em><b>Field Description String</b></em>' containment reference.
+   * Returns the value of the '<em><b>Dt Definition Id</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Field Description String</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Dt Definition Id</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Field Description String</em>' containment reference.
-   * @see #setFieldDescriptionString(FieldDescriptionString)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinition_FieldDescriptionString()
+   * @return the value of the '<em>Dt Definition Id</em>' containment reference.
+   * @see #setDtDefinitionId(DtDefinitionId)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinition_DtDefinitionId()
    * @model containment="true"
    * @generated
    */
-  FieldDescriptionString getFieldDescriptionString();
+  DtDefinitionId getDtDefinitionId();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getFieldDescriptionString <em>Field Description String</em>}' containment reference.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinition#getDtDefinitionId <em>Dt Definition Id</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Field Description String</em>' containment reference.
-   * @see #getFieldDescriptionString()
+   * @param value the new value of the '<em>Dt Definition Id</em>' containment reference.
+   * @see #getDtDefinitionId()
    * @generated
    */
-  void setFieldDescriptionString(FieldDescriptionString value);
+  void setDtDefinitionId(DtDefinitionId value);
+
+  /**
+   * Returns the value of the '<em><b>Dt Definition Fields</b></em>' containment reference list.
+   * The list contents are of type {@link io.vertigo.dsl.vertigoDsl.DtDefinitionField}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Dt Definition Fields</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Dt Definition Fields</em>' containment reference list.
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinition_DtDefinitionFields()
+   * @model containment="true"
+   * @generated
+   */
+  EList<DtDefinitionField> getDtDefinitionFields();
 
 } // DtDefinition

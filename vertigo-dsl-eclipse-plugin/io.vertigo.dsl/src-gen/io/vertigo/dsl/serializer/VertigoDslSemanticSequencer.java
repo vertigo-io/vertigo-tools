@@ -10,6 +10,9 @@ import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
 import io.vertigo.dsl.vertigoDsl.Domain;
 import io.vertigo.dsl.vertigoDsl.DtDefinition;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionField;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionId;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionStereotype;
 import io.vertigo.dsl.vertigoDsl.FieldDescriptionString;
 import io.vertigo.dsl.vertigoDsl.FileInfo;
 import io.vertigo.dsl.vertigoDsl.Formatter;
@@ -55,6 +58,15 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case VertigoDslPackage.DT_DEFINITION:
 				sequence_DtDefinition(context, (DtDefinition) semanticObject); 
 				return; 
+			case VertigoDslPackage.DT_DEFINITION_FIELD:
+				sequence_DtDefinitionField(context, (DtDefinitionField) semanticObject); 
+				return; 
+			case VertigoDslPackage.DT_DEFINITION_ID:
+				sequence_DtDefinitionId(context, (DtDefinitionId) semanticObject); 
+				return; 
+			case VertigoDslPackage.DT_DEFINITION_STEREOTYPE:
+				sequence_DtDefinitionStereotype(context, (DtDefinitionStereotype) semanticObject); 
+				return; 
 			case VertigoDslPackage.FIELD_DESCRIPTION_STRING:
 				sequence_FieldDescriptionString(context, (FieldDescriptionString) semanticObject); 
 				return; 
@@ -74,11 +86,14 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     Element returns Association
 	 *     Association returns Association
 	 *
 	 * Constraint:
 	 *     (
+	 *         name=ID 
 	 *         (
+	 *             fkFieldName=STRING | 
 	 *             dtDefinitionA=[DtDefinition|ID] | 
 	 *             dtDefinitionB=[DtDefinition|ID] | 
 	 *             navigabilityA=BooleanString | 
@@ -89,9 +104,8 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *             labelB=STRING | 
 	 *             roleA=STRING | 
 	 *             roleB=STRING
-	 *         )? 
-	 *         (name=ID fkFieldName=STRING)?
-	 *     )+
+	 *         )+
+	 *     )
 	 */
 	protected void sequence_Association(ISerializationContext context, Association semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -138,7 +152,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (
 	 *         (formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | multiple=BooleanString | unit=STRING)? 
-	 *         (constraints+=[Constraint|ID] constraints+=[Constraint|ID]*)? 
+	 *         (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)? 
 	 *         (name=ID dataType=DataType)?
 	 *     )+
 	 */
@@ -149,11 +163,71 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     DtDefinitionField returns DtDefinitionField
+	 *
+	 * Constraint:
+	 *     (name=ID fieldDescriptionString=FieldDescriptionString)
+	 */
+	protected void sequence_DtDefinitionField(ISerializationContext context, DtDefinitionField semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_FIELD__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_FIELD__NAME));
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_FIELD__FIELD_DESCRIPTION_STRING) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_FIELD__FIELD_DESCRIPTION_STRING));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDtDefinitionFieldAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDtDefinitionFieldAccess().getFieldDescriptionStringFieldDescriptionStringParserRuleCall_2_0(), semanticObject.getFieldDescriptionString());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DtDefinitionId returns DtDefinitionId
+	 *
+	 * Constraint:
+	 *     (name=ID idFieldDescriptionString=FieldDescriptionString)
+	 */
+	protected void sequence_DtDefinitionId(ISerializationContext context, DtDefinitionId semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_ID__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_ID__NAME));
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDtDefinitionIdAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getDtDefinitionIdAccess().getIdFieldDescriptionStringFieldDescriptionStringParserRuleCall_2_0(), semanticObject.getIdFieldDescriptionString());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     DtDefinitionStereotype returns DtDefinitionStereotype
+	 *
+	 * Constraint:
+	 *     stereoType=STRING
+	 */
+	protected void sequence_DtDefinitionStereotype(ISerializationContext context, DtDefinitionStereotype semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_STEREOTYPE__STEREO_TYPE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_STEREOTYPE__STEREO_TYPE));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDtDefinitionStereotypeAccess().getStereoTypeSTRINGTerminalRuleCall_2_0(), semanticObject.getStereoType());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Element returns DtDefinition
 	 *     DtDefinition returns DtDefinition
 	 *
 	 * Constraint:
-	 *     ((idFieldDescriptionString=FieldDescriptionString | fieldDescriptionString=FieldDescriptionString)? (name=ID stereoType=STRING?)?)+
+	 *     (name=ID dtDefinitionStereotype=DtDefinitionStereotype? dtDefinitionId=DtDefinitionId? dtDefinitionFields+=DtDefinitionField*)
 	 */
 	protected void sequence_DtDefinition(ISerializationContext context, DtDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

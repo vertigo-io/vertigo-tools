@@ -216,6 +216,15 @@ ruleElement returns [EObject current=null]
 			$current = $this_DtDefinition_5.current;
 			afterParserOrEnumRuleCall();
 		}
+		    |
+		{
+			newCompositeNode(grammarAccess.getElementAccess().getAssociationParserRuleCall_6());
+		}
+		this_Association_6=ruleAssociation
+		{
+			$current = $this_Association_6.current;
+			afterParserOrEnumRuleCall();
+		}
 	)
 ;
 
@@ -807,7 +816,7 @@ ruleDomain returns [EObject current=null]
 									}
 									otherlv_20=RULE_ID
 									{
-										newLeafNode(otherlv_20, grammarAccess.getDomainAccess().getConstraintsConstraintCrossReference_4_3_0());
+										newLeafNode(otherlv_20, grammarAccess.getDomainAccess().getConstraintConstraintCrossReference_4_3_0());
 									}
 								)
 							)
@@ -1104,6 +1113,171 @@ ruleFieldDescriptionString returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleDtDefinitionId
+entryRuleDtDefinitionId returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDtDefinitionIdRule()); }
+	iv_ruleDtDefinitionId=ruleDtDefinitionId
+	{ $current=$iv_ruleDtDefinitionId.current; }
+	EOF;
+
+// Rule DtDefinitionId
+ruleDtDefinitionId returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='id'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDtDefinitionIdAccess().getIdKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getDtDefinitionIdAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDtDefinitionIdRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDtDefinitionIdAccess().getIdFieldDescriptionStringFieldDescriptionStringParserRuleCall_2_0());
+				}
+				lv_idFieldDescriptionString_2_0=ruleFieldDescriptionString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDtDefinitionIdRule());
+					}
+					set(
+						$current,
+						"idFieldDescriptionString",
+						lv_idFieldDescriptionString_2_0,
+						"io.vertigo.dsl.VertigoDsl.FieldDescriptionString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleDtDefinitionField
+entryRuleDtDefinitionField returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDtDefinitionFieldRule()); }
+	iv_ruleDtDefinitionField=ruleDtDefinitionField
+	{ $current=$iv_ruleDtDefinitionField.current; }
+	EOF;
+
+// Rule DtDefinitionField
+ruleDtDefinitionField returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='field'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDtDefinitionFieldAccess().getFieldKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getDtDefinitionFieldAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDtDefinitionFieldRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDtDefinitionFieldAccess().getFieldDescriptionStringFieldDescriptionStringParserRuleCall_2_0());
+				}
+				lv_fieldDescriptionString_2_0=ruleFieldDescriptionString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDtDefinitionFieldRule());
+					}
+					set(
+						$current,
+						"fieldDescriptionString",
+						lv_fieldDescriptionString_2_0,
+						"io.vertigo.dsl.VertigoDsl.FieldDescriptionString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+	)
+;
+
+// Entry rule entryRuleDtDefinitionStereotype
+entryRuleDtDefinitionStereotype returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDtDefinitionStereotypeRule()); }
+	iv_ruleDtDefinitionStereotype=ruleDtDefinitionStereotype
+	{ $current=$iv_ruleDtDefinitionStereotype.current; }
+	EOF;
+
+// Rule DtDefinitionStereotype
+ruleDtDefinitionStereotype returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='stereotype'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDtDefinitionStereotypeAccess().getStereotypeKeyword_0());
+		}
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDtDefinitionStereotypeAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_stereoType_2_0=RULE_STRING
+				{
+					newLeafNode(lv_stereoType_2_0, grammarAccess.getDtDefinitionStereotypeAccess().getStereoTypeSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDtDefinitionStereotypeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"stereoType",
+						lv_stereoType_2_0,
+						"org.eclipse.xtext.common.Terminals.STRING");
+				}
+			)
+		)
+	)
+;
+
 // Entry rule entryRuleDtDefinition
 entryRuleDtDefinition returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getDtDefinitionRule()); }
@@ -1120,179 +1294,566 @@ ruleDtDefinition returns [EObject current=null]
 	leaveRule();
 }:
 	(
+		otherlv_0='create'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDtDefinitionAccess().getCreateKeyword_0());
+		}
+		otherlv_1='DtDefinition'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDtDefinitionAccess().getDtDefinitionKeyword_1());
+		}
 		(
-			{ 
-			  getUnorderedGroupHelper().enter(grammarAccess.getDtDefinitionAccess().getUnorderedGroup());
-			}
 			(
-				(
-		(
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup(), 0)}?=>(
+				lv_name_2_0=RULE_ID
 				{
-					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup(), 0);
+					newLeafNode(lv_name_2_0, grammarAccess.getDtDefinitionAccess().getNameIDTerminalRuleCall_2_0());
 				}
-							({true}?=>(otherlv_1='create'
-							{
-								newLeafNode(otherlv_1, grammarAccess.getDtDefinitionAccess().getCreateKeyword_0_0());
-							}
-							otherlv_2='DtDefinition'
-							{
-								newLeafNode(otherlv_2, grammarAccess.getDtDefinitionAccess().getDtDefinitionKeyword_0_1());
-							}
-							(
-								(
-									lv_name_3_0=RULE_ID
-									{
-										newLeafNode(lv_name_3_0, grammarAccess.getDtDefinitionAccess().getNameIDTerminalRuleCall_0_2_0());
-									}
-									{
-										if ($current==null) {
-											$current = createModelElement(grammarAccess.getDtDefinitionRule());
-										}
-										setWithLastConsumed(
-											$current,
-											"name",
-											lv_name_3_0,
-											"org.eclipse.xtext.common.Terminals.ID");
-									}
-								)
-							)
-							otherlv_4='{'
-							{
-								newLeafNode(otherlv_4, grammarAccess.getDtDefinitionAccess().getLeftCurlyBracketKeyword_0_3());
-							}
-							(
-								otherlv_5='stereoType'
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDtDefinitionRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_3='{'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getDtDefinitionAccess().getLeftCurlyBracketKeyword_3());
+		}
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0());
+				}
+				lv_dtDefinitionStereotype_4_0=ruleDtDefinitionStereotype
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
+					}
+					set(
+						$current,
+						"dtDefinitionStereotype",
+						lv_dtDefinitionStereotype_4_0,
+						"io.vertigo.dsl.VertigoDsl.DtDefinitionStereotype");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionIdDtDefinitionIdParserRuleCall_5_0());
+				}
+				lv_dtDefinitionId_5_0=ruleDtDefinitionId
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
+					}
+					set(
+						$current,
+						"dtDefinitionId",
+						lv_dtDefinitionId_5_0,
+						"io.vertigo.dsl.VertigoDsl.DtDefinitionId");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionFieldsDtDefinitionFieldParserRuleCall_6_0());
+				}
+				lv_dtDefinitionFields_6_0=ruleDtDefinitionField
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
+					}
+					add(
+						$current,
+						"dtDefinitionFields",
+						lv_dtDefinitionFields_6_0,
+						"io.vertigo.dsl.VertigoDsl.DtDefinitionField");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)*
+		otherlv_7='}'
+		{
+			newLeafNode(otherlv_7, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_7());
+		}
+	)
+;
+
+// Entry rule entryRuleAssociation
+entryRuleAssociation returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getAssociationRule()); }
+	iv_ruleAssociation=ruleAssociation
+	{ $current=$iv_ruleAssociation.current; }
+	EOF;
+
+// Rule Association
+ruleAssociation returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='create'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getAssociationAccess().getCreateKeyword_0());
+		}
+		otherlv_1='Association'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getAssociationAccess().getAssociationKeyword_1());
+		}
+		(
+			(
+				lv_name_2_0=RULE_ID
+				{
+					newLeafNode(lv_name_2_0, grammarAccess.getAssociationAccess().getNameIDTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getAssociationRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_2_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		otherlv_3='{'
+		{
+			newLeafNode(otherlv_3, grammarAccess.getAssociationAccess().getLeftCurlyBracketKeyword_3());
+		}
+		(
+			(
+				{ 
+				  getUnorderedGroupHelper().enter(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+				}
+				(
+					(
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0);
+					}
+								({true}?=>(otherlv_5='fkFieldName'
 								{
-									newLeafNode(otherlv_5, grammarAccess.getDtDefinitionAccess().getStereoTypeKeyword_0_4_0());
+									newLeafNode(otherlv_5, grammarAccess.getAssociationAccess().getFkFieldNameKeyword_4_0_0());
 								}
 								otherlv_6=':'
 								{
-									newLeafNode(otherlv_6, grammarAccess.getDtDefinitionAccess().getColonKeyword_0_4_1());
+									newLeafNode(otherlv_6, grammarAccess.getAssociationAccess().getColonKeyword_4_0_1());
 								}
 								(
 									(
-										lv_stereoType_7_0=RULE_STRING
+										lv_fkFieldName_7_0=RULE_STRING
 										{
-											newLeafNode(lv_stereoType_7_0, grammarAccess.getDtDefinitionAccess().getStereoTypeSTRINGTerminalRuleCall_0_4_2_0());
+											newLeafNode(lv_fkFieldName_7_0, grammarAccess.getAssociationAccess().getFkFieldNameSTRINGTerminalRuleCall_4_0_2_0());
 										}
 										{
 											if ($current==null) {
-												$current = createModelElement(grammarAccess.getDtDefinitionRule());
+												$current = createModelElement(grammarAccess.getAssociationRule());
 											}
 											setWithLastConsumed(
 												$current,
-												"stereoType",
-												lv_stereoType_7_0,
+												"fkFieldName",
+												lv_fkFieldName_7_0,
 												"org.eclipse.xtext.common.Terminals.STRING");
 										}
 									)
 								)
-							)?
-							))
-				{ 
-					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup());
-				}
-			)
-		)|
-		(
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup(), 1)}?=>(
-				{
-					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup(), 1);
-				}
-							({true}?=>(otherlv_8='id'
-							{
-								newLeafNode(otherlv_8, grammarAccess.getDtDefinitionAccess().getIdKeyword_1_0());
-							}
-							this_ID_9=RULE_ID
-							{
-								newLeafNode(this_ID_9, grammarAccess.getDtDefinitionAccess().getIDTerminalRuleCall_1_1());
-							}
-							(
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1);
+					}
+								({true}?=>(otherlv_8='dtDefinitionA'
+								{
+									newLeafNode(otherlv_8, grammarAccess.getAssociationAccess().getDtDefinitionAKeyword_4_1_0());
+								}
+								otherlv_9=':'
+								{
+									newLeafNode(otherlv_9, grammarAccess.getAssociationAccess().getColonKeyword_4_1_1());
+								}
 								(
-									{
-										newCompositeNode(grammarAccess.getDtDefinitionAccess().getIdFieldDescriptionStringFieldDescriptionStringParserRuleCall_1_2_0());
-									}
-									lv_idFieldDescriptionString_10_0=ruleFieldDescriptionString
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
+									(
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getAssociationRule());
+											}
 										}
-										set(
-											$current,
-											"idFieldDescriptionString",
-											lv_idFieldDescriptionString_10_0,
-											"io.vertigo.dsl.VertigoDsl.FieldDescriptionString");
-										afterParserOrEnumRuleCall();
-									}
+										otherlv_10=RULE_ID
+										{
+											newLeafNode(otherlv_10, grammarAccess.getAssociationAccess().getDtDefinitionADtDefinitionCrossReference_4_1_2_0());
+										}
+									)
 								)
-							)
-							))
-				{ 
-					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup());
-				}
-			)
-		)|
-		(
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup(), 2)}?=>(
-				{
-					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup(), 2);
-				}
-							({true}?=>(otherlv_11='field'
-							{
-								newLeafNode(otherlv_11, grammarAccess.getDtDefinitionAccess().getFieldKeyword_2_0());
-							}
-							this_ID_12=RULE_ID
-							{
-								newLeafNode(this_ID_12, grammarAccess.getDtDefinitionAccess().getIDTerminalRuleCall_2_1());
-							}
-							(
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2);
+					}
+								({true}?=>(otherlv_11='dtDefinitionB'
+								{
+									newLeafNode(otherlv_11, grammarAccess.getAssociationAccess().getDtDefinitionBKeyword_4_2_0());
+								}
+								otherlv_12=':'
+								{
+									newLeafNode(otherlv_12, grammarAccess.getAssociationAccess().getColonKeyword_4_2_1());
+								}
 								(
-									{
-										newCompositeNode(grammarAccess.getDtDefinitionAccess().getFieldDescriptionStringFieldDescriptionStringParserRuleCall_2_2_0());
-									}
-									lv_fieldDescriptionString_13_0=ruleFieldDescriptionString
-									{
-										if ($current==null) {
-											$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
+									(
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getAssociationRule());
+											}
 										}
-										set(
-											$current,
-											"fieldDescriptionString",
-											lv_fieldDescriptionString_13_0,
-											"io.vertigo.dsl.VertigoDsl.FieldDescriptionString");
-										afterParserOrEnumRuleCall();
-									}
+										otherlv_13=RULE_ID
+										{
+											newLeafNode(otherlv_13, grammarAccess.getAssociationAccess().getDtDefinitionBDtDefinitionCrossReference_4_2_2_0());
+										}
+									)
 								)
-							)
-							))
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3);
+					}
+								({true}?=>(otherlv_14='navigabilityA'
+								{
+									newLeafNode(otherlv_14, grammarAccess.getAssociationAccess().getNavigabilityAKeyword_4_3_0());
+								}
+								otherlv_15=':'
+								{
+									newLeafNode(otherlv_15, grammarAccess.getAssociationAccess().getColonKeyword_4_3_1());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getAssociationAccess().getNavigabilityABooleanStringEnumRuleCall_4_3_2_0());
+										}
+										lv_navigabilityA_16_0=ruleBooleanString
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getAssociationRule());
+											}
+											set(
+												$current,
+												"navigabilityA",
+												lv_navigabilityA_16_0,
+												"io.vertigo.dsl.VertigoDsl.BooleanString");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4);
+					}
+								({true}?=>(otherlv_17='navigabilityB'
+								{
+									newLeafNode(otherlv_17, grammarAccess.getAssociationAccess().getNavigabilityBKeyword_4_4_0());
+								}
+								otherlv_18=':'
+								{
+									newLeafNode(otherlv_18, grammarAccess.getAssociationAccess().getColonKeyword_4_4_1());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getAssociationAccess().getNavigabilityBBooleanStringEnumRuleCall_4_4_2_0());
+										}
+										lv_navigabilityB_19_0=ruleBooleanString
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getAssociationRule());
+											}
+											set(
+												$current,
+												"navigabilityB",
+												lv_navigabilityB_19_0,
+												"io.vertigo.dsl.VertigoDsl.BooleanString");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5);
+					}
+								({true}?=>(otherlv_20='multiplicityA'
+								{
+									newLeafNode(otherlv_20, grammarAccess.getAssociationAccess().getMultiplicityAKeyword_4_5_0());
+								}
+								otherlv_21=':'
+								{
+									newLeafNode(otherlv_21, grammarAccess.getAssociationAccess().getColonKeyword_4_5_1());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getAssociationAccess().getMultiplicityAMultiplicityStringEnumRuleCall_4_5_2_0());
+										}
+										lv_multiplicityA_22_0=ruleMultiplicityString
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getAssociationRule());
+											}
+											set(
+												$current,
+												"multiplicityA",
+												lv_multiplicityA_22_0,
+												"io.vertigo.dsl.VertigoDsl.MultiplicityString");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6);
+					}
+								({true}?=>(otherlv_23='multiplicityB'
+								{
+									newLeafNode(otherlv_23, grammarAccess.getAssociationAccess().getMultiplicityBKeyword_4_6_0());
+								}
+								otherlv_24=':'
+								{
+									newLeafNode(otherlv_24, grammarAccess.getAssociationAccess().getColonKeyword_4_6_1());
+								}
+								(
+									(
+										{
+											newCompositeNode(grammarAccess.getAssociationAccess().getMultiplicityBMultiplicityStringEnumRuleCall_4_6_2_0());
+										}
+										lv_multiplicityB_25_0=ruleMultiplicityString
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getAssociationRule());
+											}
+											set(
+												$current,
+												"multiplicityB",
+												lv_multiplicityB_25_0,
+												"io.vertigo.dsl.VertigoDsl.MultiplicityString");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7);
+					}
+								({true}?=>(otherlv_26='labelA'
+								{
+									newLeafNode(otherlv_26, grammarAccess.getAssociationAccess().getLabelAKeyword_4_7_0());
+								}
+								otherlv_27=':'
+								{
+									newLeafNode(otherlv_27, grammarAccess.getAssociationAccess().getColonKeyword_4_7_1());
+								}
+								(
+									(
+										lv_labelA_28_0=RULE_STRING
+										{
+											newLeafNode(lv_labelA_28_0, grammarAccess.getAssociationAccess().getLabelASTRINGTerminalRuleCall_4_7_2_0());
+										}
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getAssociationRule());
+											}
+											setWithLastConsumed(
+												$current,
+												"labelA",
+												lv_labelA_28_0,
+												"org.eclipse.xtext.common.Terminals.STRING");
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8);
+					}
+								({true}?=>(otherlv_29='labelB'
+								{
+									newLeafNode(otherlv_29, grammarAccess.getAssociationAccess().getLabelBKeyword_4_8_0());
+								}
+								otherlv_30=':'
+								{
+									newLeafNode(otherlv_30, grammarAccess.getAssociationAccess().getColonKeyword_4_8_1());
+								}
+								(
+									(
+										lv_labelB_31_0=RULE_STRING
+										{
+											newLeafNode(lv_labelB_31_0, grammarAccess.getAssociationAccess().getLabelBSTRINGTerminalRuleCall_4_8_2_0());
+										}
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getAssociationRule());
+											}
+											setWithLastConsumed(
+												$current,
+												"labelB",
+												lv_labelB_31_0,
+												"org.eclipse.xtext.common.Terminals.STRING");
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9);
+					}
+								({true}?=>(otherlv_32='roleA'
+								{
+									newLeafNode(otherlv_32, grammarAccess.getAssociationAccess().getRoleAKeyword_4_9_0());
+								}
+								otherlv_33=':'
+								{
+									newLeafNode(otherlv_33, grammarAccess.getAssociationAccess().getColonKeyword_4_9_1());
+								}
+								(
+									(
+										lv_roleA_34_0=RULE_STRING
+										{
+											newLeafNode(lv_roleA_34_0, grammarAccess.getAssociationAccess().getRoleASTRINGTerminalRuleCall_4_9_2_0());
+										}
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getAssociationRule());
+											}
+											setWithLastConsumed(
+												$current,
+												"roleA",
+												lv_roleA_34_0,
+												"org.eclipse.xtext.common.Terminals.STRING");
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10);
+					}
+								({true}?=>(otherlv_35='roleB'
+								{
+									newLeafNode(otherlv_35, grammarAccess.getAssociationAccess().getRoleBKeyword_4_10_0());
+								}
+								otherlv_36=':'
+								{
+									newLeafNode(otherlv_36, grammarAccess.getAssociationAccess().getColonKeyword_4_10_1());
+								}
+								(
+									(
+										lv_roleB_37_0=RULE_STRING
+										{
+											newLeafNode(lv_roleB_37_0, grammarAccess.getAssociationAccess().getRoleBSTRINGTerminalRuleCall_4_10_2_0());
+										}
+										{
+											if ($current==null) {
+												$current = createModelElement(grammarAccess.getAssociationRule());
+											}
+											setWithLastConsumed(
+												$current,
+												"roleB",
+												lv_roleB_37_0,
+												"org.eclipse.xtext.common.Terminals.STRING");
+										}
+									)
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
+					}
+				)
+			)
+					)+
+					{getUnorderedGroupHelper().canLeave(grammarAccess.getAssociationAccess().getUnorderedGroup_4())}?
+				)
+			)
 				{ 
-					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup());
+				  getUnorderedGroupHelper().leave(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
 				}
-			)
-		)|
-		(
-			{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup(), 3)}?=>(
-				{
-					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup(), 3);
-				}
-							({true}?=>(otherlv_14='}'
-							{
-								newLeafNode(otherlv_14, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_3());
-							}
-							))
-				{ 
-					getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup());
-				}
-			)
 		)
-				)+
-				{getUnorderedGroupHelper().canLeave(grammarAccess.getDtDefinitionAccess().getUnorderedGroup())}?
-			)
-		)
-			{ 
-			  getUnorderedGroupHelper().leave(grammarAccess.getDtDefinitionAccess().getUnorderedGroup());
-			}
+		otherlv_38='}'
+		{
+			newLeafNode(otherlv_38, grammarAccess.getAssociationAccess().getRightCurlyBracketKeyword_5());
+		}
 	)
 ;
 
@@ -1416,7 +1977,7 @@ ruleMultiplicityString returns [Enumerator current=null]
 }:
 	(
 		(
-			enumLiteral_0='0..1'
+			enumLiteral_0='"0..1"'
 			{
 				$current = grammarAccess.getMultiplicityStringAccess().getZERO_ONEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_0, grammarAccess.getMultiplicityStringAccess().getZERO_ONEEnumLiteralDeclaration_0());
@@ -1424,7 +1985,7 @@ ruleMultiplicityString returns [Enumerator current=null]
 		)
 		    |
 		(
-			enumLiteral_1='0..*'
+			enumLiteral_1='"0..*"'
 			{
 				$current = grammarAccess.getMultiplicityStringAccess().getZERO_NEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_1, grammarAccess.getMultiplicityStringAccess().getZERO_NEnumLiteralDeclaration_1());

@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getFormatter <em>Formatter</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getStoreType <em>Store Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getIndexType <em>Index Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getConstraints <em>Constraints</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getMultiple <em>Multiple</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getUnit <em>Unit</em>}</li>
@@ -113,6 +114,16 @@ public class DomainImpl extends ElementImpl implements Domain
    * @ordered
    */
   protected String indexType = INDEX_TYPE_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConstraint()
+   * @generated
+   * @ordered
+   */
+  protected EList<Constraint> constraint;
 
   /**
    * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' reference list.
@@ -302,6 +313,20 @@ public class DomainImpl extends ElementImpl implements Domain
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<Constraint> getConstraint()
+  {
+    if (constraint == null)
+    {
+      constraint = new EObjectResolvingEList<Constraint>(Constraint.class, this, VertigoDslPackage.DOMAIN__CONSTRAINT);
+    }
+    return constraint;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<Constraint> getConstraints()
   {
     if (constraints == null)
@@ -376,6 +401,8 @@ public class DomainImpl extends ElementImpl implements Domain
         return getStoreType();
       case VertigoDslPackage.DOMAIN__INDEX_TYPE:
         return getIndexType();
+      case VertigoDslPackage.DOMAIN__CONSTRAINT:
+        return getConstraint();
       case VertigoDslPackage.DOMAIN__CONSTRAINTS:
         return getConstraints();
       case VertigoDslPackage.DOMAIN__MULTIPLE:
@@ -408,6 +435,10 @@ public class DomainImpl extends ElementImpl implements Domain
         return;
       case VertigoDslPackage.DOMAIN__INDEX_TYPE:
         setIndexType((String)newValue);
+        return;
+      case VertigoDslPackage.DOMAIN__CONSTRAINT:
+        getConstraint().clear();
+        getConstraint().addAll((Collection<? extends Constraint>)newValue);
         return;
       case VertigoDslPackage.DOMAIN__CONSTRAINTS:
         getConstraints().clear();
@@ -445,6 +476,9 @@ public class DomainImpl extends ElementImpl implements Domain
       case VertigoDslPackage.DOMAIN__INDEX_TYPE:
         setIndexType(INDEX_TYPE_EDEFAULT);
         return;
+      case VertigoDslPackage.DOMAIN__CONSTRAINT:
+        getConstraint().clear();
+        return;
       case VertigoDslPackage.DOMAIN__CONSTRAINTS:
         getConstraints().clear();
         return;
@@ -476,6 +510,8 @@ public class DomainImpl extends ElementImpl implements Domain
         return STORE_TYPE_EDEFAULT == null ? storeType != null : !STORE_TYPE_EDEFAULT.equals(storeType);
       case VertigoDslPackage.DOMAIN__INDEX_TYPE:
         return INDEX_TYPE_EDEFAULT == null ? indexType != null : !INDEX_TYPE_EDEFAULT.equals(indexType);
+      case VertigoDslPackage.DOMAIN__CONSTRAINT:
+        return constraint != null && !constraint.isEmpty();
       case VertigoDslPackage.DOMAIN__CONSTRAINTS:
         return constraints != null && !constraints.isEmpty();
       case VertigoDslPackage.DOMAIN__MULTIPLE:

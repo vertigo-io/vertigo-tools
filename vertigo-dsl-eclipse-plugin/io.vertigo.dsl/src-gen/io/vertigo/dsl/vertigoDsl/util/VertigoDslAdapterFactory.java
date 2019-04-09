@@ -116,6 +116,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createFieldDescriptionStringAdapter();
       }
       @Override
+      public Adapter caseDtDefinitionId(DtDefinitionId object)
+      {
+        return createDtDefinitionIdAdapter();
+      }
+      @Override
+      public Adapter caseDtDefinitionField(DtDefinitionField object)
+      {
+        return createDtDefinitionFieldAdapter();
+      }
+      @Override
+      public Adapter caseDtDefinitionStereotype(DtDefinitionStereotype object)
+      {
+        return createDtDefinitionStereotypeAdapter();
+      }
+      @Override
       public Adapter caseDtDefinition(DtDefinition object)
       {
         return createDtDefinitionAdapter();
@@ -263,6 +278,51 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFieldDescriptionStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionId <em>Dt Definition Id</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionId
+   * @generated
+   */
+  public Adapter createDtDefinitionIdAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionField <em>Dt Definition Field</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionField
+   * @generated
+   */
+  public Adapter createDtDefinitionFieldAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionStereotype <em>Dt Definition Stereotype</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionStereotype
+   * @generated
+   */
+  public Adapter createDtDefinitionStereotypeAdapter()
   {
     return null;
   }

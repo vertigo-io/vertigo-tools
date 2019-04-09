@@ -8,13 +8,11 @@ Model:
 ;
 
 Element:
-	Constraint | Formatter | Domain | FileInfo | DeclaredDomain | DtDefinition
-;
+	Constraint | Formatter | Domain | FileInfo | DeclaredDomain | DtDefinition | Association;
 
 
 DeclaredDomain:
-	'declare' 'Domain' name = ID
-;
+	'declare' 'Domain' name = ID;
 
 Constraint:
 	'create' 'Constraint' name=ID '{'
@@ -52,17 +50,13 @@ enum BooleanString:
 	TRUE='\"true\"' |
 	FALSE='\"false\"';
 
-enum MultiplicityString:
-	ZERO_ONE="0..1" |
-	ZERO_N="0..*";
-
 Domain:
 	'create' 'Domain' name=ID '{'
 		'dataType' ':'  dataType=DataType &
 		'formatter' ':' formatter=[Formatter] &
 		('storeType' ':' storeType=STRING)? &
 		('indexType' ':' indexType=STRING)? &
-		('constraint' ':' '[' constraints+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
+		('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
 		('multiple' ':' multiple=BooleanString)? &
 		('unit' ':' unit=STRING)? &
 	'}';
@@ -70,17 +64,33 @@ Domain:
 FieldDescriptionString:
 	fieldDescriptionString = '{' ( ('domain:' (domain=[Domain]) | (declaredDomain=[DeclaredDomain]))? & ('label:' label=STRING)? & ('required:' required=BooleanString)? ) '}';
 
+
+DtDefinitionId:
+	'id' name=ID idFieldDescriptionString=FieldDescriptionString
+;
+
+DtDefinitionField:
+	'field' name=ID fieldDescriptionString=FieldDescriptionString
+;
+
+DtDefinitionStereotype:
+ 	'stereotype' ':' stereoType=STRING
+;
+
 DtDefinition:
 	'create' 'DtDefinition' name=ID '{'
-		('stereoType' ':' stereoType=STRING)? &
-		('id' ID idFieldDescriptionString=FieldDescriptionString)? &
-		('field' ID fieldDescriptionString=FieldDescriptionString)? &
-	'}'
-;
+		dtDefinitionStereotype=DtDefinitionStereotype?
+		dtDefinitionId=DtDefinitionId?
+		dtDefinitionFields+=DtDefinitionField*
+	'}';
+
+enum MultiplicityString:
+	ZERO_ONE='\"0..1\"' |
+	ZERO_N='\"0..*\"';
 
 Association:
 	'create' 'Association' name=ID '{'
-		('fkFieldName' ':' fkFieldName=STRING) &
+		(('fkFieldName' ':' fkFieldName=STRING) &
 		('dtDefinitionA' ':' dtDefinitionA=[DtDefinition]) &
 		('dtDefinitionB' ':' dtDefinitionB=[DtDefinition]) &
 		('navigabilityA' ':' navigabilityA=BooleanString)&
@@ -90,5 +100,5 @@ Association:
 		('labelA' ':' labelA=STRING) &
 		('labelB' ':' labelB=STRING) &
 		('roleA' ':' roleA=STRING) &
-		('roleB' ':' roleB=STRING) &
-	'}';
+		('roleB' ':' roleB=STRING))
+	'}'; 

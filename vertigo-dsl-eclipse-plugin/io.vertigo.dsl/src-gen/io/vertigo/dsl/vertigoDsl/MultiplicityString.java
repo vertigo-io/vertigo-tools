@@ -28,7 +28,7 @@ public enum MultiplicityString implements Enumerator
    * @generated
    * @ordered
    */
-  ZERO_ONE(0, "ZERO_ONE", "0..1"),
+  ZERO_ONE(0, "ZERO_ONE", "\"0..1\""),
 
   /**
    * The '<em><b>ZERO N</b></em>' literal object.
@@ -38,7 +38,7 @@ public enum MultiplicityString implements Enumerator
    * @generated
    * @ordered
    */
-  ZERO_N(1, "ZERO_N", "0..*");
+  ZERO_N(1, "ZERO_N", "\"0..*\"");
 
   /**
    * The '<em><b>ZERO ONE</b></em>' literal value.
@@ -49,7 +49,7 @@ public enum MultiplicityString implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #ZERO_ONE
-   * @model literal="0..1"
+   * @model literal="\"0..1\""
    * @generated
    * @ordered
    */
@@ -64,7 +64,7 @@ public enum MultiplicityString implements Enumerator
    * </p>
    * <!-- end-user-doc -->
    * @see #ZERO_N
-   * @model literal="0..*"
+   * @model literal="\"0..*\""
    * @generated
    * @ordered
    */
