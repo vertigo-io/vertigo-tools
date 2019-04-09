@@ -350,6 +350,17 @@ finally {
 }
 
 // Entry rule entryRuleAssociation
+entryRuleAssociation
+:
+{ before(grammarAccess.getAssociationRule()); }
+	 ruleAssociation
+{ after(grammarAccess.getAssociationRule()); } 
+	 EOF 
+;
+
+// Rule Association
+ruleAssociation 
+	@init {
 		int stackSize = keepStackSize();
 	}
 	:
