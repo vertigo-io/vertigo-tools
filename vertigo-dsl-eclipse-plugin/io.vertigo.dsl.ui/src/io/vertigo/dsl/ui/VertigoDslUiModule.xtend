@@ -3,11 +3,19 @@
  */
 package io.vertigo.dsl.ui
 
+import io.vertigo.dsl.ui.highlighting.VertigoUISemanticHighlightingCalculator
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
+import org.eclipse.xtext.ide.editor.syntaxcoloring.ISemanticHighlightingCalculator
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
  */
 @FinalFieldsConstructor
 class VertigoDslUiModule extends AbstractVertigoDslUiModule {
+	
+	def Class<? extends ISemanticHighlightingCalculator> bindISemanticHighlightingCalculator() {
+		System.out.println("binding binding binding");
+		return VertigoUISemanticHighlightingCalculator;
+	}
 }
+	

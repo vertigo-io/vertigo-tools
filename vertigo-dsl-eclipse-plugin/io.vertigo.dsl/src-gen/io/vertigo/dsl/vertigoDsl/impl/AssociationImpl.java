@@ -5,7 +5,7 @@ package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.Association;
 import io.vertigo.dsl.vertigoDsl.BooleanString;
-import io.vertigo.dsl.vertigoDsl.DtDefinition;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionType;
 import io.vertigo.dsl.vertigoDsl.MultiplicityString;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
@@ -35,6 +35,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl#getLabelB <em>Label B</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl#getRoleA <em>Role A</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl#getRoleB <em>Role B</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl#getType <em>Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -69,7 +70,7 @@ public class AssociationImpl extends ElementImpl implements Association
    * @generated
    * @ordered
    */
-  protected DtDefinition dtDefinitionA;
+  protected DtDefinitionType dtDefinitionA;
 
   /**
    * The cached value of the '{@link #getDtDefinitionB() <em>Dt Definition B</em>}' reference.
@@ -79,7 +80,7 @@ public class AssociationImpl extends ElementImpl implements Association
    * @generated
    * @ordered
    */
-  protected DtDefinition dtDefinitionB;
+  protected DtDefinitionType dtDefinitionB;
 
   /**
    * The default value of the '{@link #getNavigabilityA() <em>Navigability A</em>}' attribute.
@@ -242,6 +243,26 @@ public class AssociationImpl extends ElementImpl implements Association
   protected String roleB = ROLE_B_EDEFAULT;
 
   /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
+
+  /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -290,12 +311,12 @@ public class AssociationImpl extends ElementImpl implements Association
    * <!-- end-user-doc -->
    * @generated
    */
-  public DtDefinition getDtDefinitionA()
+  public DtDefinitionType getDtDefinitionA()
   {
     if (dtDefinitionA != null && dtDefinitionA.eIsProxy())
     {
       InternalEObject oldDtDefinitionA = (InternalEObject)dtDefinitionA;
-      dtDefinitionA = (DtDefinition)eResolveProxy(oldDtDefinitionA);
+      dtDefinitionA = (DtDefinitionType)eResolveProxy(oldDtDefinitionA);
       if (dtDefinitionA != oldDtDefinitionA)
       {
         if (eNotificationRequired())
@@ -310,7 +331,7 @@ public class AssociationImpl extends ElementImpl implements Association
    * <!-- end-user-doc -->
    * @generated
    */
-  public DtDefinition basicGetDtDefinitionA()
+  public DtDefinitionType basicGetDtDefinitionA()
   {
     return dtDefinitionA;
   }
@@ -320,9 +341,9 @@ public class AssociationImpl extends ElementImpl implements Association
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDtDefinitionA(DtDefinition newDtDefinitionA)
+  public void setDtDefinitionA(DtDefinitionType newDtDefinitionA)
   {
-    DtDefinition oldDtDefinitionA = dtDefinitionA;
+    DtDefinitionType oldDtDefinitionA = dtDefinitionA;
     dtDefinitionA = newDtDefinitionA;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ASSOCIATION__DT_DEFINITION_A, oldDtDefinitionA, dtDefinitionA));
@@ -333,12 +354,12 @@ public class AssociationImpl extends ElementImpl implements Association
    * <!-- end-user-doc -->
    * @generated
    */
-  public DtDefinition getDtDefinitionB()
+  public DtDefinitionType getDtDefinitionB()
   {
     if (dtDefinitionB != null && dtDefinitionB.eIsProxy())
     {
       InternalEObject oldDtDefinitionB = (InternalEObject)dtDefinitionB;
-      dtDefinitionB = (DtDefinition)eResolveProxy(oldDtDefinitionB);
+      dtDefinitionB = (DtDefinitionType)eResolveProxy(oldDtDefinitionB);
       if (dtDefinitionB != oldDtDefinitionB)
       {
         if (eNotificationRequired())
@@ -353,7 +374,7 @@ public class AssociationImpl extends ElementImpl implements Association
    * <!-- end-user-doc -->
    * @generated
    */
-  public DtDefinition basicGetDtDefinitionB()
+  public DtDefinitionType basicGetDtDefinitionB()
   {
     return dtDefinitionB;
   }
@@ -363,9 +384,9 @@ public class AssociationImpl extends ElementImpl implements Association
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setDtDefinitionB(DtDefinition newDtDefinitionB)
+  public void setDtDefinitionB(DtDefinitionType newDtDefinitionB)
   {
-    DtDefinition oldDtDefinitionB = dtDefinitionB;
+    DtDefinitionType oldDtDefinitionB = dtDefinitionB;
     dtDefinitionB = newDtDefinitionB;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ASSOCIATION__DT_DEFINITION_B, oldDtDefinitionB, dtDefinitionB));
@@ -560,6 +581,29 @@ public class AssociationImpl extends ElementImpl implements Association
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ASSOCIATION__TYPE, oldType, type));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
@@ -589,6 +633,8 @@ public class AssociationImpl extends ElementImpl implements Association
         return getRoleA();
       case VertigoDslPackage.ASSOCIATION__ROLE_B:
         return getRoleB();
+      case VertigoDslPackage.ASSOCIATION__TYPE:
+        return getType();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -607,10 +653,10 @@ public class AssociationImpl extends ElementImpl implements Association
         setFkFieldName((String)newValue);
         return;
       case VertigoDslPackage.ASSOCIATION__DT_DEFINITION_A:
-        setDtDefinitionA((DtDefinition)newValue);
+        setDtDefinitionA((DtDefinitionType)newValue);
         return;
       case VertigoDslPackage.ASSOCIATION__DT_DEFINITION_B:
-        setDtDefinitionB((DtDefinition)newValue);
+        setDtDefinitionB((DtDefinitionType)newValue);
         return;
       case VertigoDslPackage.ASSOCIATION__NAVIGABILITY_A:
         setNavigabilityA((BooleanString)newValue);
@@ -636,6 +682,9 @@ public class AssociationImpl extends ElementImpl implements Association
       case VertigoDslPackage.ASSOCIATION__ROLE_B:
         setRoleB((String)newValue);
         return;
+      case VertigoDslPackage.ASSOCIATION__TYPE:
+        setType((String)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -654,10 +703,10 @@ public class AssociationImpl extends ElementImpl implements Association
         setFkFieldName(FK_FIELD_NAME_EDEFAULT);
         return;
       case VertigoDslPackage.ASSOCIATION__DT_DEFINITION_A:
-        setDtDefinitionA((DtDefinition)null);
+        setDtDefinitionA((DtDefinitionType)null);
         return;
       case VertigoDslPackage.ASSOCIATION__DT_DEFINITION_B:
-        setDtDefinitionB((DtDefinition)null);
+        setDtDefinitionB((DtDefinitionType)null);
         return;
       case VertigoDslPackage.ASSOCIATION__NAVIGABILITY_A:
         setNavigabilityA(NAVIGABILITY_A_EDEFAULT);
@@ -682,6 +731,9 @@ public class AssociationImpl extends ElementImpl implements Association
         return;
       case VertigoDslPackage.ASSOCIATION__ROLE_B:
         setRoleB(ROLE_B_EDEFAULT);
+        return;
+      case VertigoDslPackage.ASSOCIATION__TYPE:
+        setType(TYPE_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -719,6 +771,8 @@ public class AssociationImpl extends ElementImpl implements Association
         return ROLE_A_EDEFAULT == null ? roleA != null : !ROLE_A_EDEFAULT.equals(roleA);
       case VertigoDslPackage.ASSOCIATION__ROLE_B:
         return ROLE_B_EDEFAULT == null ? roleB != null : !ROLE_B_EDEFAULT.equals(roleB);
+      case VertigoDslPackage.ASSOCIATION__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
     }
     return super.eIsSet(featureID);
   }
@@ -752,6 +806,8 @@ public class AssociationImpl extends ElementImpl implements Association
     result.append(roleA);
     result.append(", roleB: ");
     result.append(roleB);
+    result.append(", type: ");
+    result.append(type);
     result.append(')');
     return result.toString();
   }

@@ -69,16 +69,29 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.MODEL: return createModel();
       case VertigoDslPackage.ELEMENT: return createElement();
       case VertigoDslPackage.DECLARED_DOMAIN: return createDeclaredDomain();
+      case VertigoDslPackage.DECLARED_DT_DEFINITION: return createDeclaredDtDefinition();
       case VertigoDslPackage.CONSTRAINT: return createConstraint();
       case VertigoDslPackage.FILE_INFO: return createFileInfo();
       case VertigoDslPackage.FORMATTER: return createFormatter();
       case VertigoDslPackage.DOMAIN: return createDomain();
-      case VertigoDslPackage.FIELD_DESCRIPTION_STRING: return createFieldDescriptionString();
-      case VertigoDslPackage.DT_DEFINITION_ID: return createDtDefinitionId();
-      case VertigoDslPackage.DT_DEFINITION_FIELD: return createDtDefinitionField();
+      case VertigoDslPackage.DOMAIN_TYPE: return createDomainType();
+      case VertigoDslPackage.DT_DEFINITION_ID_STRING: return createDtDefinitionIdString();
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING: return createDtDefinitionDataFieldString();
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING: return createDtDefinitionComputedFieldString();
+      case VertigoDslPackage.DT_DEFINITION_ID_FIELD: return createDtDefinitionIdField();
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD: return createDtDefinitionDataField();
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD: return createDtDefinitionComputedField();
       case VertigoDslPackage.DT_DEFINITION_STEREOTYPE: return createDtDefinitionStereotype();
+      case VertigoDslPackage.DT_DEFINITION_DATA_SPACE: return createDtDefinitionDataSpace();
+      case VertigoDslPackage.DT_DEFINITION_DISPLAY_FIELD: return createDtDefinitionDisplayField();
+      case VertigoDslPackage.DT_DEFINITION_SORT_FIELD: return createDtDefinitionSortField();
+      case VertigoDslPackage.DT_DEFINITION_TYPE: return createDtDefinitionType();
       case VertigoDslPackage.DT_DEFINITION: return createDtDefinition();
       case VertigoDslPackage.ASSOCIATION: return createAssociation();
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING: return createTaskAttributeString();
+      case VertigoDslPackage.TASK_ATTRIBUTE: return createTaskAttribute();
+      case VertigoDslPackage.TASK_DATA_SPACE: return createTaskDataSpace();
+      case VertigoDslPackage.TASK_DEFINITION: return createTaskDefinition();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -100,6 +113,8 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
         return createBooleanStringFromString(eDataType, initialValue);
       case VertigoDslPackage.MULTIPLICITY_STRING:
         return createMultiplicityStringFromString(eDataType, initialValue);
+      case VertigoDslPackage.IN_OUT_STRING:
+        return createInOutStringFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -121,6 +136,8 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
         return convertBooleanStringToString(eDataType, instanceValue);
       case VertigoDslPackage.MULTIPLICITY_STRING:
         return convertMultiplicityStringToString(eDataType, instanceValue);
+      case VertigoDslPackage.IN_OUT_STRING:
+        return convertInOutStringToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -157,6 +174,17 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     DeclaredDomainImpl declaredDomain = new DeclaredDomainImpl();
     return declaredDomain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DeclaredDtDefinition createDeclaredDtDefinition()
+  {
+    DeclaredDtDefinitionImpl declaredDtDefinition = new DeclaredDtDefinitionImpl();
+    return declaredDtDefinition;
   }
 
   /**
@@ -208,10 +236,10 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public FieldDescriptionString createFieldDescriptionString()
+  public DomainType createDomainType()
   {
-    FieldDescriptionStringImpl fieldDescriptionString = new FieldDescriptionStringImpl();
-    return fieldDescriptionString;
+    DomainTypeImpl domainType = new DomainTypeImpl();
+    return domainType;
   }
 
   /**
@@ -219,10 +247,10 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public DtDefinitionId createDtDefinitionId()
+  public DtDefinitionIdString createDtDefinitionIdString()
   {
-    DtDefinitionIdImpl dtDefinitionId = new DtDefinitionIdImpl();
-    return dtDefinitionId;
+    DtDefinitionIdStringImpl dtDefinitionIdString = new DtDefinitionIdStringImpl();
+    return dtDefinitionIdString;
   }
 
   /**
@@ -230,10 +258,54 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * <!-- end-user-doc -->
    * @generated
    */
-  public DtDefinitionField createDtDefinitionField()
+  public DtDefinitionDataFieldString createDtDefinitionDataFieldString()
   {
-    DtDefinitionFieldImpl dtDefinitionField = new DtDefinitionFieldImpl();
-    return dtDefinitionField;
+    DtDefinitionDataFieldStringImpl dtDefinitionDataFieldString = new DtDefinitionDataFieldStringImpl();
+    return dtDefinitionDataFieldString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionComputedFieldString createDtDefinitionComputedFieldString()
+  {
+    DtDefinitionComputedFieldStringImpl dtDefinitionComputedFieldString = new DtDefinitionComputedFieldStringImpl();
+    return dtDefinitionComputedFieldString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionIdField createDtDefinitionIdField()
+  {
+    DtDefinitionIdFieldImpl dtDefinitionIdField = new DtDefinitionIdFieldImpl();
+    return dtDefinitionIdField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionDataField createDtDefinitionDataField()
+  {
+    DtDefinitionDataFieldImpl dtDefinitionDataField = new DtDefinitionDataFieldImpl();
+    return dtDefinitionDataField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionComputedField createDtDefinitionComputedField()
+  {
+    DtDefinitionComputedFieldImpl dtDefinitionComputedField = new DtDefinitionComputedFieldImpl();
+    return dtDefinitionComputedField;
   }
 
   /**
@@ -245,6 +317,50 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     DtDefinitionStereotypeImpl dtDefinitionStereotype = new DtDefinitionStereotypeImpl();
     return dtDefinitionStereotype;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionDataSpace createDtDefinitionDataSpace()
+  {
+    DtDefinitionDataSpaceImpl dtDefinitionDataSpace = new DtDefinitionDataSpaceImpl();
+    return dtDefinitionDataSpace;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionDisplayField createDtDefinitionDisplayField()
+  {
+    DtDefinitionDisplayFieldImpl dtDefinitionDisplayField = new DtDefinitionDisplayFieldImpl();
+    return dtDefinitionDisplayField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionSortField createDtDefinitionSortField()
+  {
+    DtDefinitionSortFieldImpl dtDefinitionSortField = new DtDefinitionSortFieldImpl();
+    return dtDefinitionSortField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionType createDtDefinitionType()
+  {
+    DtDefinitionTypeImpl dtDefinitionType = new DtDefinitionTypeImpl();
+    return dtDefinitionType;
   }
 
   /**
@@ -267,6 +383,50 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     AssociationImpl association = new AssociationImpl();
     return association;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TaskAttributeString createTaskAttributeString()
+  {
+    TaskAttributeStringImpl taskAttributeString = new TaskAttributeStringImpl();
+    return taskAttributeString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TaskAttribute createTaskAttribute()
+  {
+    TaskAttributeImpl taskAttribute = new TaskAttributeImpl();
+    return taskAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TaskDataSpace createTaskDataSpace()
+  {
+    TaskDataSpaceImpl taskDataSpace = new TaskDataSpaceImpl();
+    return taskDataSpace;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TaskDefinition createTaskDefinition()
+  {
+    TaskDefinitionImpl taskDefinition = new TaskDefinitionImpl();
+    return taskDefinition;
   }
 
   /**
@@ -331,6 +491,28 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   public String convertMultiplicityStringToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public InOutString createInOutStringFromString(EDataType eDataType, String initialValue)
+  {
+    InOutString result = InOutString.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertInOutStringToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

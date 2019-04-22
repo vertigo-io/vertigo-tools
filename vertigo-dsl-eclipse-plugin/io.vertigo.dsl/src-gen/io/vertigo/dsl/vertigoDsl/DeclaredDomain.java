@@ -14,6 +14,6 @@ package io.vertigo.dsl.vertigoDsl;
  * @model
  * @generated
  */
-public interface DeclaredDomain extends Element
+public interface DeclaredDomain extends Element, DomainType
 {
 } // DeclaredDomain

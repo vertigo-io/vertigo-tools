@@ -51,6 +51,15 @@ public interface VertigoDslFactory extends EFactory
   DeclaredDomain createDeclaredDomain();
 
   /**
+   * Returns a new object of class '<em>Declared Dt Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Declared Dt Definition</em>'.
+   * @generated
+   */
+  DeclaredDtDefinition createDeclaredDtDefinition();
+
+  /**
    * Returns a new object of class '<em>Constraint</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -87,31 +96,67 @@ public interface VertigoDslFactory extends EFactory
   Domain createDomain();
 
   /**
-   * Returns a new object of class '<em>Field Description String</em>'.
+   * Returns a new object of class '<em>Domain Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Field Description String</em>'.
+   * @return a new object of class '<em>Domain Type</em>'.
    * @generated
    */
-  FieldDescriptionString createFieldDescriptionString();
+  DomainType createDomainType();
 
   /**
-   * Returns a new object of class '<em>Dt Definition Id</em>'.
+   * Returns a new object of class '<em>Dt Definition Id String</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dt Definition Id</em>'.
+   * @return a new object of class '<em>Dt Definition Id String</em>'.
    * @generated
    */
-  DtDefinitionId createDtDefinitionId();
+  DtDefinitionIdString createDtDefinitionIdString();
 
   /**
-   * Returns a new object of class '<em>Dt Definition Field</em>'.
+   * Returns a new object of class '<em>Dt Definition Data Field String</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dt Definition Field</em>'.
+   * @return a new object of class '<em>Dt Definition Data Field String</em>'.
    * @generated
    */
-  DtDefinitionField createDtDefinitionField();
+  DtDefinitionDataFieldString createDtDefinitionDataFieldString();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Computed Field String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Computed Field String</em>'.
+   * @generated
+   */
+  DtDefinitionComputedFieldString createDtDefinitionComputedFieldString();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Id Field</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Id Field</em>'.
+   * @generated
+   */
+  DtDefinitionIdField createDtDefinitionIdField();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Data Field</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Data Field</em>'.
+   * @generated
+   */
+  DtDefinitionDataField createDtDefinitionDataField();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Computed Field</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Computed Field</em>'.
+   * @generated
+   */
+  DtDefinitionComputedField createDtDefinitionComputedField();
 
   /**
    * Returns a new object of class '<em>Dt Definition Stereotype</em>'.
@@ -121,6 +166,42 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   DtDefinitionStereotype createDtDefinitionStereotype();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Data Space</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Data Space</em>'.
+   * @generated
+   */
+  DtDefinitionDataSpace createDtDefinitionDataSpace();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Display Field</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Display Field</em>'.
+   * @generated
+   */
+  DtDefinitionDisplayField createDtDefinitionDisplayField();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Sort Field</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Sort Field</em>'.
+   * @generated
+   */
+  DtDefinitionSortField createDtDefinitionSortField();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Type</em>'.
+   * @generated
+   */
+  DtDefinitionType createDtDefinitionType();
 
   /**
    * Returns a new object of class '<em>Dt Definition</em>'.
@@ -139,6 +220,42 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   Association createAssociation();
+
+  /**
+   * Returns a new object of class '<em>Task Attribute String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task Attribute String</em>'.
+   * @generated
+   */
+  TaskAttributeString createTaskAttributeString();
+
+  /**
+   * Returns a new object of class '<em>Task Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task Attribute</em>'.
+   * @generated
+   */
+  TaskAttribute createTaskAttribute();
+
+  /**
+   * Returns a new object of class '<em>Task Data Space</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task Data Space</em>'.
+   * @generated
+   */
+  TaskDataSpace createTaskDataSpace();
+
+  /**
+   * Returns a new object of class '<em>Task Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task Definition</em>'.
+   * @generated
+   */
+  TaskDefinition createTaskDefinition();
 
   /**
    * Returns the package supported by this factory.

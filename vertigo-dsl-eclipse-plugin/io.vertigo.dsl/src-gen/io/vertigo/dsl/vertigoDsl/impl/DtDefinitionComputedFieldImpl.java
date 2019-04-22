@@ -3,8 +3,8 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.DtDefinitionId;
-import io.vertigo.dsl.vertigoDsl.FieldDescriptionString;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedField;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,19 +18,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dt Definition Id</b></em>'.
+ * An implementation of the model object '<em><b>Dt Definition Computed Field</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionIdImpl#getName <em>Name</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionIdImpl#getIdFieldDescriptionString <em>Id Field Description String</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionComputedFieldImpl#getName <em>Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionComputedFieldImpl#getComputedFieldString <em>Computed Field String</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements DtDefinitionId
+public class DtDefinitionComputedFieldImpl extends MinimalEObjectImpl.Container implements DtDefinitionComputedField
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -53,21 +53,21 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIdFieldDescriptionString() <em>Id Field Description String</em>}' containment reference.
+   * The cached value of the '{@link #getComputedFieldString() <em>Computed Field String</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIdFieldDescriptionString()
+   * @see #getComputedFieldString()
    * @generated
    * @ordered
    */
-  protected FieldDescriptionString idFieldDescriptionString;
+  protected DtDefinitionComputedFieldString computedFieldString;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DtDefinitionIdImpl()
+  protected DtDefinitionComputedFieldImpl()
   {
     super();
   }
@@ -80,7 +80,7 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
   @Override
   protected EClass eStaticClass()
   {
-    return VertigoDslPackage.Literals.DT_DEFINITION_ID;
+    return VertigoDslPackage.Literals.DT_DEFINITION_COMPUTED_FIELD;
   }
 
   /**
@@ -103,7 +103,7 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_ID__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__NAME, oldName, name));
   }
 
   /**
@@ -111,9 +111,9 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public FieldDescriptionString getIdFieldDescriptionString()
+  public DtDefinitionComputedFieldString getComputedFieldString()
   {
-    return idFieldDescriptionString;
+    return computedFieldString;
   }
 
   /**
@@ -121,13 +121,13 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetIdFieldDescriptionString(FieldDescriptionString newIdFieldDescriptionString, NotificationChain msgs)
+  public NotificationChain basicSetComputedFieldString(DtDefinitionComputedFieldString newComputedFieldString, NotificationChain msgs)
   {
-    FieldDescriptionString oldIdFieldDescriptionString = idFieldDescriptionString;
-    idFieldDescriptionString = newIdFieldDescriptionString;
+    DtDefinitionComputedFieldString oldComputedFieldString = computedFieldString;
+    computedFieldString = newComputedFieldString;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING, oldIdFieldDescriptionString, newIdFieldDescriptionString);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING, oldComputedFieldString, newComputedFieldString);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -138,20 +138,20 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setIdFieldDescriptionString(FieldDescriptionString newIdFieldDescriptionString)
+  public void setComputedFieldString(DtDefinitionComputedFieldString newComputedFieldString)
   {
-    if (newIdFieldDescriptionString != idFieldDescriptionString)
+    if (newComputedFieldString != computedFieldString)
     {
       NotificationChain msgs = null;
-      if (idFieldDescriptionString != null)
-        msgs = ((InternalEObject)idFieldDescriptionString).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING, null, msgs);
-      if (newIdFieldDescriptionString != null)
-        msgs = ((InternalEObject)newIdFieldDescriptionString).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING, null, msgs);
-      msgs = basicSetIdFieldDescriptionString(newIdFieldDescriptionString, msgs);
+      if (computedFieldString != null)
+        msgs = ((InternalEObject)computedFieldString).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING, null, msgs);
+      if (newComputedFieldString != null)
+        msgs = ((InternalEObject)newComputedFieldString).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING, null, msgs);
+      msgs = basicSetComputedFieldString(newComputedFieldString, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING, newIdFieldDescriptionString, newIdFieldDescriptionString));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING, newComputedFieldString, newComputedFieldString));
   }
 
   /**
@@ -164,8 +164,8 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING:
-        return basicSetIdFieldDescriptionString(null, msgs);
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING:
+        return basicSetComputedFieldString(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -180,10 +180,10 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_ID__NAME:
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__NAME:
         return getName();
-      case VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING:
-        return getIdFieldDescriptionString();
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING:
+        return getComputedFieldString();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -198,11 +198,11 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_ID__NAME:
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__NAME:
         setName((String)newValue);
         return;
-      case VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING:
-        setIdFieldDescriptionString((FieldDescriptionString)newValue);
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING:
+        setComputedFieldString((DtDefinitionComputedFieldString)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -218,11 +218,11 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_ID__NAME:
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING:
-        setIdFieldDescriptionString((FieldDescriptionString)null);
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING:
+        setComputedFieldString((DtDefinitionComputedFieldString)null);
         return;
     }
     super.eUnset(featureID);
@@ -238,10 +238,10 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_ID__NAME:
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case VertigoDslPackage.DT_DEFINITION_ID__ID_FIELD_DESCRIPTION_STRING:
-        return idFieldDescriptionString != null;
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD__COMPUTED_FIELD_STRING:
+        return computedFieldString != null;
     }
     return super.eIsSet(featureID);
   }
@@ -263,4 +263,4 @@ public class DtDefinitionIdImpl extends MinimalEObjectImpl.Container implements 
     return result.toString();
   }
 
-} //DtDefinitionIdImpl
+} //DtDefinitionComputedFieldImpl

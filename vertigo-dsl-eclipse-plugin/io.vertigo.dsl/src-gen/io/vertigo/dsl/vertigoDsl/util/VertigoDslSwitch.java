@@ -92,6 +92,16 @@ public class VertigoDslSwitch<T> extends Switch<T>
         DeclaredDomain declaredDomain = (DeclaredDomain)theEObject;
         T result = caseDeclaredDomain(declaredDomain);
         if (result == null) result = caseElement(declaredDomain);
+        if (result == null) result = caseDomainType(declaredDomain);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DECLARED_DT_DEFINITION:
+      {
+        DeclaredDtDefinition declaredDtDefinition = (DeclaredDtDefinition)theEObject;
+        T result = caseDeclaredDtDefinition(declaredDtDefinition);
+        if (result == null) result = caseElement(declaredDtDefinition);
+        if (result == null) result = caseDtDefinitionType(declaredDtDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -124,27 +134,56 @@ public class VertigoDslSwitch<T> extends Switch<T>
         Domain domain = (Domain)theEObject;
         T result = caseDomain(domain);
         if (result == null) result = caseElement(domain);
+        if (result == null) result = caseDomainType(domain);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case VertigoDslPackage.FIELD_DESCRIPTION_STRING:
+      case VertigoDslPackage.DOMAIN_TYPE:
       {
-        FieldDescriptionString fieldDescriptionString = (FieldDescriptionString)theEObject;
-        T result = caseFieldDescriptionString(fieldDescriptionString);
+        DomainType domainType = (DomainType)theEObject;
+        T result = caseDomainType(domainType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case VertigoDslPackage.DT_DEFINITION_ID:
+      case VertigoDslPackage.DT_DEFINITION_ID_STRING:
       {
-        DtDefinitionId dtDefinitionId = (DtDefinitionId)theEObject;
-        T result = caseDtDefinitionId(dtDefinitionId);
+        DtDefinitionIdString dtDefinitionIdString = (DtDefinitionIdString)theEObject;
+        T result = caseDtDefinitionIdString(dtDefinitionIdString);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case VertigoDslPackage.DT_DEFINITION_FIELD:
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING:
       {
-        DtDefinitionField dtDefinitionField = (DtDefinitionField)theEObject;
-        T result = caseDtDefinitionField(dtDefinitionField);
+        DtDefinitionDataFieldString dtDefinitionDataFieldString = (DtDefinitionDataFieldString)theEObject;
+        T result = caseDtDefinitionDataFieldString(dtDefinitionDataFieldString);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING:
+      {
+        DtDefinitionComputedFieldString dtDefinitionComputedFieldString = (DtDefinitionComputedFieldString)theEObject;
+        T result = caseDtDefinitionComputedFieldString(dtDefinitionComputedFieldString);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_ID_FIELD:
+      {
+        DtDefinitionIdField dtDefinitionIdField = (DtDefinitionIdField)theEObject;
+        T result = caseDtDefinitionIdField(dtDefinitionIdField);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD:
+      {
+        DtDefinitionDataField dtDefinitionDataField = (DtDefinitionDataField)theEObject;
+        T result = caseDtDefinitionDataField(dtDefinitionDataField);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD:
+      {
+        DtDefinitionComputedField dtDefinitionComputedField = (DtDefinitionComputedField)theEObject;
+        T result = caseDtDefinitionComputedField(dtDefinitionComputedField);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -155,11 +194,40 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.DT_DEFINITION_DATA_SPACE:
+      {
+        DtDefinitionDataSpace dtDefinitionDataSpace = (DtDefinitionDataSpace)theEObject;
+        T result = caseDtDefinitionDataSpace(dtDefinitionDataSpace);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_DISPLAY_FIELD:
+      {
+        DtDefinitionDisplayField dtDefinitionDisplayField = (DtDefinitionDisplayField)theEObject;
+        T result = caseDtDefinitionDisplayField(dtDefinitionDisplayField);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_SORT_FIELD:
+      {
+        DtDefinitionSortField dtDefinitionSortField = (DtDefinitionSortField)theEObject;
+        T result = caseDtDefinitionSortField(dtDefinitionSortField);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_TYPE:
+      {
+        DtDefinitionType dtDefinitionType = (DtDefinitionType)theEObject;
+        T result = caseDtDefinitionType(dtDefinitionType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.DT_DEFINITION:
       {
         DtDefinition dtDefinition = (DtDefinition)theEObject;
         T result = caseDtDefinition(dtDefinition);
         if (result == null) result = caseElement(dtDefinition);
+        if (result == null) result = caseDtDefinitionType(dtDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -168,6 +236,35 @@ public class VertigoDslSwitch<T> extends Switch<T>
         Association association = (Association)theEObject;
         T result = caseAssociation(association);
         if (result == null) result = caseElement(association);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING:
+      {
+        TaskAttributeString taskAttributeString = (TaskAttributeString)theEObject;
+        T result = caseTaskAttributeString(taskAttributeString);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.TASK_ATTRIBUTE:
+      {
+        TaskAttribute taskAttribute = (TaskAttribute)theEObject;
+        T result = caseTaskAttribute(taskAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.TASK_DATA_SPACE:
+      {
+        TaskDataSpace taskDataSpace = (TaskDataSpace)theEObject;
+        T result = caseTaskDataSpace(taskDataSpace);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.TASK_DEFINITION:
+      {
+        TaskDefinition taskDefinition = (TaskDefinition)theEObject;
+        T result = caseTaskDefinition(taskDefinition);
+        if (result == null) result = caseElement(taskDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -219,6 +316,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDeclaredDomain(DeclaredDomain object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Declared Dt Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Declared Dt Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDeclaredDtDefinition(DeclaredDtDefinition object)
   {
     return null;
   }
@@ -288,49 +401,113 @@ public class VertigoDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Field Description String</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Domain Type</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Field Description String</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Domain Type</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseFieldDescriptionString(FieldDescriptionString object)
+  public T caseDomainType(DomainType object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Id</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Id String</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Dt Definition Id</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Id String</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDtDefinitionId(DtDefinitionId object)
+  public T caseDtDefinitionIdString(DtDefinitionIdString object)
   {
     return null;
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Field</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Data Field String</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Dt Definition Field</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Data Field String</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseDtDefinitionField(DtDefinitionField object)
+  public T caseDtDefinitionDataFieldString(DtDefinitionDataFieldString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Computed Field String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Computed Field String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionComputedFieldString(DtDefinitionComputedFieldString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Id Field</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Id Field</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionIdField(DtDefinitionIdField object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Data Field</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Data Field</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionDataField(DtDefinitionDataField object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Computed Field</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Computed Field</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionComputedField(DtDefinitionComputedField object)
   {
     return null;
   }
@@ -347,6 +524,70 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDtDefinitionStereotype(DtDefinitionStereotype object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Data Space</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Data Space</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionDataSpace(DtDefinitionDataSpace object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Display Field</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Display Field</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionDisplayField(DtDefinitionDisplayField object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Sort Field</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Sort Field</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionSortField(DtDefinitionSortField object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionType(DtDefinitionType object)
   {
     return null;
   }
@@ -379,6 +620,70 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseAssociation(Association object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Task Attribute String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task Attribute String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaskAttributeString(TaskAttributeString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Task Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaskAttribute(TaskAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Task Data Space</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task Data Space</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaskDataSpace(TaskDataSpace object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Task Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaskDefinition(TaskDefinition object)
   {
     return null;
   }

@@ -28,7 +28,7 @@ import org.eclipse.emf.common.util.EList;
  * @model
  * @generated
  */
-public interface Domain extends Element
+public interface Domain extends Element, DomainType
 {
   /**
    * Returns the value of the '<em><b>Data Type</b></em>' attribute.

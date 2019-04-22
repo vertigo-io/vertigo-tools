@@ -11,6 +11,7 @@ import org.eclipse.xtext.IGrammarAccess;
 import org.eclipse.xtext.RuleCall;
 import org.eclipse.xtext.nodemodel.INode;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.AbstractElementAlias;
+import org.eclipse.xtext.serializer.analysis.GrammarAlias.AlternativeAlias;
 import org.eclipse.xtext.serializer.analysis.GrammarAlias.TokenAlias;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynNavigable;
 import org.eclipse.xtext.serializer.analysis.ISyntacticSequencerPDAProvider.ISynTransition;
@@ -20,18 +21,90 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VertigoDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_Domain_CommaKeyword_4_4_0_p;
-	protected AbstractElementAlias match_Domain_RightCurlyBracketKeyword_7_a;
-	protected AbstractElementAlias match_Domain_RightCurlyBracketKeyword_7_p;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_0_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_10_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_1_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_2_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_3_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_4_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_5_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_6_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_7_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_8_3_q;
+	protected AbstractElementAlias match_Association_CommaKeyword_4_9_3_q;
+	protected AbstractElementAlias match_Domain_AlterKeyword_0_0_1_or_CreateKeyword_0_0_0;
+	protected AbstractElementAlias match_Domain_CommaKeyword_1_0_2_4_0_p;
+	protected AbstractElementAlias match_Domain_RightCurlyBracketKeyword_1_1_a;
+	protected AbstractElementAlias match_Domain_RightCurlyBracketKeyword_1_1_p;
+	protected AbstractElementAlias match_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q;
+	protected AbstractElementAlias match_DtDefinitionComputedFieldString_CommaKeyword_1_1_3_q;
+	protected AbstractElementAlias match_DtDefinitionComputedFieldString_CommaKeyword_1_2_3_q;
+	protected AbstractElementAlias match_DtDefinitionComputedField_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionDataFieldString_CommaKeyword_1_0_3_q;
+	protected AbstractElementAlias match_DtDefinitionDataFieldString_CommaKeyword_1_1_3_q;
+	protected AbstractElementAlias match_DtDefinitionDataFieldString_CommaKeyword_1_2_3_q;
+	protected AbstractElementAlias match_DtDefinitionDataFieldString_CommaKeyword_1_3_3_q;
+	protected AbstractElementAlias match_DtDefinitionDataField_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionDataSpace_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionDisplayField_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionIdField_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionIdString_CommaKeyword_1_0_3_q;
+	protected AbstractElementAlias match_DtDefinitionIdString_CommaKeyword_1_1_3_q;
+	protected AbstractElementAlias match_DtDefinitionSortField_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionStereotype_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionType_CommaKeyword_1_1_q;
+	protected AbstractElementAlias match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0;
 	protected AbstractElementAlias match_Model_FullStopKeyword_2_0_p;
+	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_0_3_q;
+	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_1_3_q;
+	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_2_3_q;
+	protected AbstractElementAlias match_TaskAttribute_CommaKeyword_3_q;
+	protected AbstractElementAlias match_TaskDefinition_CommaKeyword_11_q;
+	protected AbstractElementAlias match_TaskDefinition_CommaKeyword_7_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (VertigoDslGrammarAccess) access;
-		match_Domain_CommaKeyword_4_4_0_p = new TokenAlias(true, false, grammarAccess.getDomainAccess().getCommaKeyword_4_4_0());
-		match_Domain_RightCurlyBracketKeyword_7_a = new TokenAlias(true, true, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_7());
-		match_Domain_RightCurlyBracketKeyword_7_p = new TokenAlias(true, false, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_7());
+		match_Association_CommaKeyword_4_0_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_0_3());
+		match_Association_CommaKeyword_4_10_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_10_3());
+		match_Association_CommaKeyword_4_1_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_1_3());
+		match_Association_CommaKeyword_4_2_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_2_3());
+		match_Association_CommaKeyword_4_3_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_3_3());
+		match_Association_CommaKeyword_4_4_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_4_3());
+		match_Association_CommaKeyword_4_5_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_5_3());
+		match_Association_CommaKeyword_4_6_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_6_3());
+		match_Association_CommaKeyword_4_7_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_7_3());
+		match_Association_CommaKeyword_4_8_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_8_3());
+		match_Association_CommaKeyword_4_9_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_9_3());
+		match_Domain_AlterKeyword_0_0_1_or_CreateKeyword_0_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDomainAccess().getAlterKeyword_0_0_1()), new TokenAlias(false, false, grammarAccess.getDomainAccess().getCreateKeyword_0_0_0()));
+		match_Domain_CommaKeyword_1_0_2_4_0_p = new TokenAlias(true, false, grammarAccess.getDomainAccess().getCommaKeyword_1_0_2_4_0());
+		match_Domain_RightCurlyBracketKeyword_1_1_a = new TokenAlias(true, true, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_1_1());
+		match_Domain_RightCurlyBracketKeyword_1_1_p = new TokenAlias(true, false, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_1_1());
+		match_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_0_3());
+		match_DtDefinitionComputedFieldString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_1_3());
+		match_DtDefinitionComputedFieldString_CommaKeyword_1_2_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_2_3());
+		match_DtDefinitionComputedField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionComputedFieldAccess().getCommaKeyword_3());
+		match_DtDefinitionDataFieldString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDataFieldStringAccess().getCommaKeyword_1_0_3());
+		match_DtDefinitionDataFieldString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDataFieldStringAccess().getCommaKeyword_1_1_3());
+		match_DtDefinitionDataFieldString_CommaKeyword_1_2_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDataFieldStringAccess().getCommaKeyword_1_2_3());
+		match_DtDefinitionDataFieldString_CommaKeyword_1_3_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDataFieldStringAccess().getCommaKeyword_1_3_3());
+		match_DtDefinitionDataField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDataFieldAccess().getCommaKeyword_3());
+		match_DtDefinitionDataSpace_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDataSpaceAccess().getCommaKeyword_3());
+		match_DtDefinitionDisplayField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDisplayFieldAccess().getCommaKeyword_3());
+		match_DtDefinitionIdField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionIdFieldAccess().getCommaKeyword_3());
+		match_DtDefinitionIdString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionIdStringAccess().getCommaKeyword_1_0_3());
+		match_DtDefinitionIdString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionIdStringAccess().getCommaKeyword_1_1_3());
+		match_DtDefinitionSortField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionSortFieldAccess().getCommaKeyword_3());
+		match_DtDefinitionStereotype_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionStereotypeAccess().getCommaKeyword_3());
+		match_DtDefinitionType_CommaKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionTypeAccess().getCommaKeyword_1_1());
+		match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getAlterKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getCreateKeyword_0_0()));
 		match_Model_FullStopKeyword_2_0_p = new TokenAlias(true, false, grammarAccess.getModelAccess().getFullStopKeyword_2_0());
+		match_TaskAttributeString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_0_3());
+		match_TaskAttributeString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_1_3());
+		match_TaskAttributeString_CommaKeyword_1_2_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_2_3());
+		match_TaskAttribute_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeAccess().getCommaKeyword_3());
+		match_TaskDefinition_CommaKeyword_11_q = new TokenAlias(false, true, grammarAccess.getTaskDefinitionAccess().getCommaKeyword_11());
+		match_TaskDefinition_CommaKeyword_7_q = new TokenAlias(false, true, grammarAccess.getTaskDefinitionAccess().getCommaKeyword_7());
 	}
 	
 	@Override
@@ -46,18 +119,361 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Domain_CommaKeyword_4_4_0_p.equals(syntax))
-				emit_Domain_CommaKeyword_4_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Domain_RightCurlyBracketKeyword_7_a.equals(syntax))
-				emit_Domain_RightCurlyBracketKeyword_7_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Domain_RightCurlyBracketKeyword_7_p.equals(syntax))
-				emit_Domain_RightCurlyBracketKeyword_7_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			if (match_Association_CommaKeyword_4_0_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_10_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_10_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_1_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_2_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_3_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_3_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_4_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_4_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_5_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_5_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_6_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_6_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_7_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_7_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_8_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_8_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_9_3_q.equals(syntax))
+				emit_Association_CommaKeyword_4_9_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Domain_AlterKeyword_0_0_1_or_CreateKeyword_0_0_0.equals(syntax))
+				emit_Domain_AlterKeyword_0_0_1_or_CreateKeyword_0_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Domain_CommaKeyword_1_0_2_4_0_p.equals(syntax))
+				emit_Domain_CommaKeyword_1_0_2_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Domain_RightCurlyBracketKeyword_1_1_a.equals(syntax))
+				emit_Domain_RightCurlyBracketKeyword_1_1_a(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Domain_RightCurlyBracketKeyword_1_1_p.equals(syntax))
+				emit_Domain_RightCurlyBracketKeyword_1_1_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q.equals(syntax))
+				emit_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionComputedFieldString_CommaKeyword_1_1_3_q.equals(syntax))
+				emit_DtDefinitionComputedFieldString_CommaKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionComputedFieldString_CommaKeyword_1_2_3_q.equals(syntax))
+				emit_DtDefinitionComputedFieldString_CommaKeyword_1_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionComputedField_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionComputedField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionDataFieldString_CommaKeyword_1_0_3_q.equals(syntax))
+				emit_DtDefinitionDataFieldString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionDataFieldString_CommaKeyword_1_1_3_q.equals(syntax))
+				emit_DtDefinitionDataFieldString_CommaKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionDataFieldString_CommaKeyword_1_2_3_q.equals(syntax))
+				emit_DtDefinitionDataFieldString_CommaKeyword_1_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionDataFieldString_CommaKeyword_1_3_3_q.equals(syntax))
+				emit_DtDefinitionDataFieldString_CommaKeyword_1_3_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionDataField_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionDataField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionDataSpace_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionDataSpace_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionDisplayField_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionDisplayField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionIdField_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionIdField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionIdString_CommaKeyword_1_0_3_q.equals(syntax))
+				emit_DtDefinitionIdString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionIdString_CommaKeyword_1_1_3_q.equals(syntax))
+				emit_DtDefinitionIdString_CommaKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionSortField_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionSortField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionStereotype_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionStereotype_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionType_CommaKeyword_1_1_q.equals(syntax))
+				emit_DtDefinitionType_CommaKeyword_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0.equals(syntax))
+				emit_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Model_FullStopKeyword_2_0_p.equals(syntax))
 				emit_Model_FullStopKeyword_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskAttributeString_CommaKeyword_1_0_3_q.equals(syntax))
+				emit_TaskAttributeString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskAttributeString_CommaKeyword_1_1_3_q.equals(syntax))
+				emit_TaskAttributeString_CommaKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskAttributeString_CommaKeyword_1_2_3_q.equals(syntax))
+				emit_TaskAttributeString_CommaKeyword_1_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskAttribute_CommaKeyword_3_q.equals(syntax))
+				emit_TaskAttribute_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskDefinition_CommaKeyword_11_q.equals(syntax))
+				emit_TaskDefinition_CommaKeyword_11_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskDefinition_CommaKeyword_7_q.equals(syntax))
+				emit_TaskDefinition_CommaKeyword_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     fkFieldName=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     fkFieldName=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     fkFieldName=STRING (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     fkFieldName=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     fkFieldName=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     fkFieldName=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     fkFieldName=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     fkFieldName=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     fkFieldName=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     fkFieldName=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     fkFieldName=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     fkFieldName=STRING (ambiguity) 'type' ':' type=STRING
+	 *     fkFieldName=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     roleB=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     roleB=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     roleB=STRING (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     roleB=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     roleB=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     roleB=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     roleB=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     roleB=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     roleB=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     roleB=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     roleB=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     roleB=STRING (ambiguity) 'type' ':' type=STRING
+	 *     roleB=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_10_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'labelA' ':' labelA=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'labelB' ':' labelB=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'roleA' ':' roleA=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'roleB' ':' roleB=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'type' ':' type=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'labelA' ':' labelA=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'labelB' ':' labelB=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'roleA' ':' roleA=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'roleB' ':' roleB=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'type' ':' type=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_2_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     navigabilityA=BooleanString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     navigabilityA=BooleanString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     navigabilityA=BooleanString (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'labelA' ':' labelA=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'labelB' ':' labelB=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     navigabilityA=BooleanString (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     navigabilityA=BooleanString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     navigabilityA=BooleanString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     navigabilityA=BooleanString (ambiguity) 'roleA' ':' roleA=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'roleB' ':' roleB=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'type' ':' type=STRING
+	 *     navigabilityA=BooleanString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_3_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     navigabilityB=BooleanString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     navigabilityB=BooleanString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     navigabilityB=BooleanString (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'labelA' ':' labelA=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'labelB' ':' labelB=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     navigabilityB=BooleanString (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     navigabilityB=BooleanString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     navigabilityB=BooleanString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     navigabilityB=BooleanString (ambiguity) 'roleA' ':' roleA=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'roleB' ':' roleB=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'type' ':' type=STRING
+	 *     navigabilityB=BooleanString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_4_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     multiplicityA=MultiplicityString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     multiplicityA=MultiplicityString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     multiplicityA=MultiplicityString (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     multiplicityA=MultiplicityString (ambiguity) 'labelA' ':' labelA=STRING
+	 *     multiplicityA=MultiplicityString (ambiguity) 'labelB' ':' labelB=STRING
+	 *     multiplicityA=MultiplicityString (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     multiplicityA=MultiplicityString (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     multiplicityA=MultiplicityString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     multiplicityA=MultiplicityString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     multiplicityA=MultiplicityString (ambiguity) 'roleA' ':' roleA=STRING
+	 *     multiplicityA=MultiplicityString (ambiguity) 'roleB' ':' roleB=STRING
+	 *     multiplicityA=MultiplicityString (ambiguity) 'type' ':' type=STRING
+	 *     multiplicityA=MultiplicityString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_5_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     multiplicityB=MultiplicityString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     multiplicityB=MultiplicityString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     multiplicityB=MultiplicityString (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     multiplicityB=MultiplicityString (ambiguity) 'labelA' ':' labelA=STRING
+	 *     multiplicityB=MultiplicityString (ambiguity) 'labelB' ':' labelB=STRING
+	 *     multiplicityB=MultiplicityString (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     multiplicityB=MultiplicityString (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     multiplicityB=MultiplicityString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     multiplicityB=MultiplicityString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     multiplicityB=MultiplicityString (ambiguity) 'roleA' ':' roleA=STRING
+	 *     multiplicityB=MultiplicityString (ambiguity) 'roleB' ':' roleB=STRING
+	 *     multiplicityB=MultiplicityString (ambiguity) 'type' ':' type=STRING
+	 *     multiplicityB=MultiplicityString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_6_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     labelA=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     labelA=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     labelA=STRING (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     labelA=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     labelA=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     labelA=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     labelA=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     labelA=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     labelA=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     labelA=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     labelA=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     labelA=STRING (ambiguity) 'type' ':' type=STRING
+	 *     labelA=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_7_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     labelB=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     labelB=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     labelB=STRING (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     labelB=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     labelB=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     labelB=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     labelB=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     labelB=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     labelB=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     labelB=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     labelB=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     labelB=STRING (ambiguity) 'type' ':' type=STRING
+	 *     labelB=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_8_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     roleA=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     roleA=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     roleA=STRING (ambiguity) 'fkFieldName' ':' fkFieldName=STRING
+	 *     roleA=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     roleA=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     roleA=STRING (ambiguity) 'multiplicityA' ':' multiplicityA=MultiplicityString
+	 *     roleA=STRING (ambiguity) 'multiplicityB' ':' multiplicityB=MultiplicityString
+	 *     roleA=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     roleA=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     roleA=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     roleA=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     roleA=STRING (ambiguity) 'type' ':' type=STRING
+	 *     roleA=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_Association_CommaKeyword_4_9_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'create' | 'alter'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) '}'* (ambiguity) 'Domain' name=ID
+	 *     constraint+=[Constraint|ID] ']' '}'+ (ambiguity) 'Domain' name=ID
+	 *     constraints+=[Constraint|ID] ']' '}'+ (ambiguity) 'Domain' name=ID
+	 *     formatter=[Formatter|ID] '}'* (ambiguity) 'Domain' name=ID
+	 *     indexType=STRING '}'+ (ambiguity) 'Domain' name=ID
+	 *     multiple=BooleanString '}'+ (ambiguity) 'Domain' name=ID
+	 *     storeType=STRING '}'+ (ambiguity) 'Domain' name=ID
+	 *     unit=STRING '}'+ (ambiguity) 'Domain' name=ID
+	 */
+	protected void emit_Domain_AlterKeyword_0_0_1_or_CreateKeyword_0_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Ambiguous syntax:
 	 *     ','+
@@ -66,7 +482,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     constraint+=[Constraint|ID] (ambiguity) constraints+=[Constraint|ID]
 	 *     constraints+=[Constraint|ID] (ambiguity) constraints+=[Constraint|ID]
 	 */
-	protected void emit_Domain_CommaKeyword_4_4_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Domain_CommaKeyword_1_0_2_4_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -76,79 +492,50 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     (rule start) (ambiguity) 'create' 'Domain' name=ID
-	 *     (rule start) (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     (rule start) (ambiguity) 'indexType' ':' indexType=STRING
 	 *     (rule start) (ambiguity) 'multiple' ':' multiple=BooleanString
 	 *     (rule start) (ambiguity) 'storeType' ':' storeType=STRING
 	 *     (rule start) (ambiguity) 'unit' ':' unit=STRING
-	 *     (rule start) (ambiguity) (rule start)
+	 *     (rule start) (ambiguity) ('create' | 'alter') 'Domain' name=ID
 	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'create' 'Domain' name=ID
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'indexType' ':' indexType=STRING
 	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'multiple' ':' multiple=BooleanString
 	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'storeType' ':' storeType=STRING
 	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'unit' ':' unit=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) (rule end)
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'create' 'Domain' name=ID
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'indexType' ':' indexType=STRING
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'multiple' ':' multiple=BooleanString
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'storeType' ':' storeType=STRING
 	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'unit' ':' unit=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) (rule end)
-	 *     dataType=DataType (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     dataType=DataType (ambiguity) 'create' 'Domain' name=ID
-	 *     dataType=DataType (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     dataType=DataType (ambiguity) 'indexType' ':' indexType=STRING
-	 *     dataType=DataType (ambiguity) 'multiple' ':' multiple=BooleanString
-	 *     dataType=DataType (ambiguity) 'storeType' ':' storeType=STRING
-	 *     dataType=DataType (ambiguity) 'unit' ':' unit=STRING
-	 *     dataType=DataType (ambiguity) (rule end)
 	 *     formatter=[Formatter|ID] (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     formatter=[Formatter|ID] (ambiguity) 'create' 'Domain' name=ID
-	 *     formatter=[Formatter|ID] (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     formatter=[Formatter|ID] (ambiguity) 'indexType' ':' indexType=STRING
 	 *     formatter=[Formatter|ID] (ambiguity) 'multiple' ':' multiple=BooleanString
 	 *     formatter=[Formatter|ID] (ambiguity) 'storeType' ':' storeType=STRING
 	 *     formatter=[Formatter|ID] (ambiguity) 'unit' ':' unit=STRING
+	 *     formatter=[Formatter|ID] (ambiguity) ('create' | 'alter') 'Domain' name=ID
 	 *     formatter=[Formatter|ID] (ambiguity) (rule end)
 	 *     indexType=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     indexType=STRING (ambiguity) 'create' 'Domain' name=ID
-	 *     indexType=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     indexType=STRING (ambiguity) 'indexType' ':' indexType=STRING
 	 *     indexType=STRING (ambiguity) 'multiple' ':' multiple=BooleanString
 	 *     indexType=STRING (ambiguity) 'storeType' ':' storeType=STRING
 	 *     indexType=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     indexType=STRING (ambiguity) (rule end)
 	 *     multiple=BooleanString (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     multiple=BooleanString (ambiguity) 'create' 'Domain' name=ID
-	 *     multiple=BooleanString (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     multiple=BooleanString (ambiguity) 'indexType' ':' indexType=STRING
 	 *     multiple=BooleanString (ambiguity) 'multiple' ':' multiple=BooleanString
 	 *     multiple=BooleanString (ambiguity) 'storeType' ':' storeType=STRING
 	 *     multiple=BooleanString (ambiguity) 'unit' ':' unit=STRING
-	 *     multiple=BooleanString (ambiguity) (rule end)
 	 *     storeType=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     storeType=STRING (ambiguity) 'create' 'Domain' name=ID
-	 *     storeType=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     storeType=STRING (ambiguity) 'indexType' ':' indexType=STRING
 	 *     storeType=STRING (ambiguity) 'multiple' ':' multiple=BooleanString
 	 *     storeType=STRING (ambiguity) 'storeType' ':' storeType=STRING
 	 *     storeType=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     storeType=STRING (ambiguity) (rule end)
 	 *     unit=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     unit=STRING (ambiguity) 'create' 'Domain' name=ID
-	 *     unit=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
 	 *     unit=STRING (ambiguity) 'indexType' ':' indexType=STRING
 	 *     unit=STRING (ambiguity) 'multiple' ':' multiple=BooleanString
 	 *     unit=STRING (ambiguity) 'storeType' ':' storeType=STRING
 	 *     unit=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     unit=STRING (ambiguity) (rule end)
 	 */
-	protected void emit_Domain_RightCurlyBracketKeyword_7_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Domain_RightCurlyBracketKeyword_1_1_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -158,8 +545,247 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) (rule start)
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) ('create' | 'alter') 'Domain' name=ID
+	 *     constraint+=[Constraint|ID] ']' (ambiguity) (rule end)
+	 *     constraints+=[Constraint|ID] ']' (ambiguity) ('create' | 'alter') 'Domain' name=ID
+	 *     constraints+=[Constraint|ID] ']' (ambiguity) (rule end)
+	 *     indexType=STRING (ambiguity) ('create' | 'alter') 'Domain' name=ID
+	 *     indexType=STRING (ambiguity) (rule end)
+	 *     multiple=BooleanString (ambiguity) ('create' | 'alter') 'Domain' name=ID
+	 *     multiple=BooleanString (ambiguity) (rule end)
+	 *     storeType=STRING (ambiguity) ('create' | 'alter') 'Domain' name=ID
+	 *     storeType=STRING (ambiguity) (rule end)
+	 *     unit=STRING (ambiguity) ('create' | 'alter') 'Domain' name=ID
+	 *     unit=STRING (ambiguity) (rule end)
 	 */
-	protected void emit_Domain_RightCurlyBracketKeyword_7_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_Domain_RightCurlyBracketKeyword_1_1_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     domainType=[DomainType|ID] (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     domainType=[DomainType|ID] (ambiguity) 'expression' ':' expressionString=STRING
+	 *     domainType=[DomainType|ID] (ambiguity) 'label' ':' label=STRING
+	 *     domainType=[DomainType|ID] (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     label=STRING (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     label=STRING (ambiguity) 'expression' ':' expressionString=STRING
+	 *     label=STRING (ambiguity) 'label' ':' label=STRING
+	 *     label=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionComputedFieldString_CommaKeyword_1_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     expressionString=STRING (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     expressionString=STRING (ambiguity) 'expression' ':' expressionString=STRING
+	 *     expressionString=STRING (ambiguity) 'label' ':' label=STRING
+	 *     expressionString=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionComputedFieldString_CommaKeyword_1_2_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     computedFieldString=DtDefinitionComputedFieldString (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionComputedField_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     domainType=[DomainType|ID] (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     domainType=[DomainType|ID] (ambiguity) 'label' ':' label=STRING
+	 *     domainType=[DomainType|ID] (ambiguity) 'persistent' ':' persistent=BooleanString
+	 *     domainType=[DomainType|ID] (ambiguity) 'required' ':' required=BooleanString
+	 *     domainType=[DomainType|ID] (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionDataFieldString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     label=STRING (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     label=STRING (ambiguity) 'label' ':' label=STRING
+	 *     label=STRING (ambiguity) 'persistent' ':' persistent=BooleanString
+	 *     label=STRING (ambiguity) 'required' ':' required=BooleanString
+	 *     label=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionDataFieldString_CommaKeyword_1_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     required=BooleanString (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     required=BooleanString (ambiguity) 'label' ':' label=STRING
+	 *     required=BooleanString (ambiguity) 'persistent' ':' persistent=BooleanString
+	 *     required=BooleanString (ambiguity) 'required' ':' required=BooleanString
+	 *     required=BooleanString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionDataFieldString_CommaKeyword_1_2_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     persistent=BooleanString (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     persistent=BooleanString (ambiguity) 'label' ':' label=STRING
+	 *     persistent=BooleanString (ambiguity) 'persistent' ':' persistent=BooleanString
+	 *     persistent=BooleanString (ambiguity) 'required' ':' required=BooleanString
+	 *     persistent=BooleanString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionDataFieldString_CommaKeyword_1_3_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     dataFieldString=DtDefinitionDataFieldString (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionDataField_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     storeName=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionDataSpace_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     displayField=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionDisplayField_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     idString=DtDefinitionIdString (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionIdField_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     domainType=[DomainType|ID] (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     domainType=[DomainType|ID] (ambiguity) 'label' ':' label=STRING
+	 *     domainType=[DomainType|ID] (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionIdString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     label=STRING (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     label=STRING (ambiguity) 'label' ':' label=STRING
+	 *     label=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_DtDefinitionIdString_CommaKeyword_1_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     sortField=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionSortField_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     stereoType=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionStereotype_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     name=ID (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionType_CommaKeyword_1_1_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     'create' | 'alter'
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     (rule start) (ambiguity) 'DtDefinition' name=ID
+	 */
+	protected void emit_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -172,6 +798,83 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     packages+=ID (ambiguity) packages+=ID
 	 */
 	protected void emit_Model_FullStopKeyword_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     domain=[DomainType|ID] (ambiguity) 'domain' ':' domain=[DomainType|ID]
+	 *     domain=[DomainType|ID] (ambiguity) 'inOut' ':' inout=InOutString
+	 *     domain=[DomainType|ID] (ambiguity) 'required' ':' required=BooleanString
+	 *     domain=[DomainType|ID] (ambiguity) '}' (rule end)
+	 */
+	protected void emit_TaskAttributeString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     required=BooleanString (ambiguity) 'domain' ':' domain=[DomainType|ID]
+	 *     required=BooleanString (ambiguity) 'inOut' ':' inout=InOutString
+	 *     required=BooleanString (ambiguity) 'required' ':' required=BooleanString
+	 *     required=BooleanString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_TaskAttributeString_CommaKeyword_1_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     inout=InOutString (ambiguity) 'domain' ':' domain=[DomainType|ID]
+	 *     inout=InOutString (ambiguity) 'inOut' ':' inout=InOutString
+	 *     inout=InOutString (ambiguity) 'required' ':' required=BooleanString
+	 *     inout=InOutString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_TaskAttributeString_CommaKeyword_1_2_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     taskAttributeString=TaskAttributeString (ambiguity) (rule end)
+	 */
+	protected void emit_TaskAttribute_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     request=STRING (ambiguity) '}' (rule end)
+	 *     request=STRING (ambiguity) taskAttributes+=TaskAttribute
+	 *     request=STRING (ambiguity) taskDataSpace=TaskDataSpace
+	 */
+	protected void emit_TaskDefinition_CommaKeyword_11_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     classname=STRING (ambiguity) 'request' ':' request=STRING
+	 */
+	protected void emit_TaskDefinition_CommaKeyword_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

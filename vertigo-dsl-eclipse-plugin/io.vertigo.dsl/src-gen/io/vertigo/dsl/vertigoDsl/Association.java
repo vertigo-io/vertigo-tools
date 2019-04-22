@@ -24,6 +24,7 @@ package io.vertigo.dsl.vertigoDsl;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Association#getLabelB <em>Label B</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Association#getRoleA <em>Role A</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Association#getRoleB <em>Role B</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.Association#getType <em>Type</em>}</li>
  * </ul>
  *
  * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAssociation()
@@ -67,12 +68,12 @@ public interface Association extends Element
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Dt Definition A</em>' reference.
-   * @see #setDtDefinitionA(DtDefinition)
+   * @see #setDtDefinitionA(DtDefinitionType)
    * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAssociation_DtDefinitionA()
    * @model
    * @generated
    */
-  DtDefinition getDtDefinitionA();
+  DtDefinitionType getDtDefinitionA();
 
   /**
    * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Association#getDtDefinitionA <em>Dt Definition A</em>}' reference.
@@ -82,7 +83,7 @@ public interface Association extends Element
    * @see #getDtDefinitionA()
    * @generated
    */
-  void setDtDefinitionA(DtDefinition value);
+  void setDtDefinitionA(DtDefinitionType value);
 
   /**
    * Returns the value of the '<em><b>Dt Definition B</b></em>' reference.
@@ -93,12 +94,12 @@ public interface Association extends Element
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Dt Definition B</em>' reference.
-   * @see #setDtDefinitionB(DtDefinition)
+   * @see #setDtDefinitionB(DtDefinitionType)
    * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAssociation_DtDefinitionB()
    * @model
    * @generated
    */
-  DtDefinition getDtDefinitionB();
+  DtDefinitionType getDtDefinitionB();
 
   /**
    * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Association#getDtDefinitionB <em>Dt Definition B</em>}' reference.
@@ -108,7 +109,7 @@ public interface Association extends Element
    * @see #getDtDefinitionB()
    * @generated
    */
-  void setDtDefinitionB(DtDefinition value);
+  void setDtDefinitionB(DtDefinitionType value);
 
   /**
    * Returns the value of the '<em><b>Navigability A</b></em>' attribute.
@@ -329,5 +330,31 @@ public interface Association extends Element
    * @generated
    */
   void setRoleB(String value);
+
+  /**
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Type</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAssociation_Type()
+   * @model
+   * @generated
+   */
+  String getType();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Association#getType <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
+   * @generated
+   */
+  void setType(String value);
 
 } // Association
