@@ -53,8 +53,8 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_DtDefinitionSortField_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionStereotype_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionType_CommaKeyword_1_1_q;
-	protected AbstractElementAlias match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0;
-	protected AbstractElementAlias match_Model_FullStopKeyword_2_0_p;
+	protected AbstractElementAlias match_DtDefinition_AlterKeyword_1_1_or_CreateKeyword_1_0;
+	protected AbstractElementAlias match_PackageString_FullStopKeyword_1_0_p;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_0_3_q;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_1_3_q;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_2_3_q;
@@ -97,8 +97,8 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_DtDefinitionSortField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionSortFieldAccess().getCommaKeyword_3());
 		match_DtDefinitionStereotype_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionStereotypeAccess().getCommaKeyword_3());
 		match_DtDefinitionType_CommaKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionTypeAccess().getCommaKeyword_1_1());
-		match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getAlterKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getCreateKeyword_0_0()));
-		match_Model_FullStopKeyword_2_0_p = new TokenAlias(true, false, grammarAccess.getModelAccess().getFullStopKeyword_2_0());
+		match_DtDefinition_AlterKeyword_1_1_or_CreateKeyword_1_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getAlterKeyword_1_1()), new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getCreateKeyword_1_0()));
+		match_PackageString_FullStopKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getPackageStringAccess().getFullStopKeyword_1_0());
 		match_TaskAttributeString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_0_3());
 		match_TaskAttributeString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_1_3());
 		match_TaskAttributeString_CommaKeyword_1_2_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_2_3());
@@ -183,10 +183,10 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_DtDefinitionStereotype_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionType_CommaKeyword_1_1_q.equals(syntax))
 				emit_DtDefinitionType_CommaKeyword_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0.equals(syntax))
-				emit_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Model_FullStopKeyword_2_0_p.equals(syntax))
-				emit_Model_FullStopKeyword_2_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinition_AlterKeyword_1_1_or_CreateKeyword_1_0.equals(syntax))
+				emit_DtDefinition_AlterKeyword_1_1_or_CreateKeyword_1_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_PackageString_FullStopKeyword_1_0_p.equals(syntax))
+				emit_PackageString_FullStopKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskAttributeString_CommaKeyword_1_0_3_q.equals(syntax))
 				emit_TaskAttributeString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskAttributeString_CommaKeyword_1_1_3_q.equals(syntax))
@@ -567,10 +567,10 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     domainType=[DomainType|ID] (ambiguity) 'domain' ':' domainType=[DomainType|ID]
-	 *     domainType=[DomainType|ID] (ambiguity) 'expression' ':' expressionString=STRING
-	 *     domainType=[DomainType|ID] (ambiguity) 'label' ':' label=STRING
-	 *     domainType=[DomainType|ID] (ambiguity) '}' (rule end)
+	 *     refToDomainType=RefToDomainType (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
+	 *     refToDomainType=RefToDomainType (ambiguity) 'expression' ':' expressionString=STRING
+	 *     refToDomainType=RefToDomainType (ambiguity) 'label' ':' label=STRING
+	 *     refToDomainType=RefToDomainType (ambiguity) '}' (rule end)
 	 */
 	protected void emit_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -581,7 +581,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     label=STRING (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     label=STRING (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
 	 *     label=STRING (ambiguity) 'expression' ':' expressionString=STRING
 	 *     label=STRING (ambiguity) 'label' ':' label=STRING
 	 *     label=STRING (ambiguity) '}' (rule end)
@@ -595,7 +595,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     expressionString=STRING (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     expressionString=STRING (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
 	 *     expressionString=STRING (ambiguity) 'expression' ':' expressionString=STRING
 	 *     expressionString=STRING (ambiguity) 'label' ':' label=STRING
 	 *     expressionString=STRING (ambiguity) '}' (rule end)
@@ -620,11 +620,11 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     domainType=[DomainType|ID] (ambiguity) 'domain' ':' domainType=[DomainType|ID]
-	 *     domainType=[DomainType|ID] (ambiguity) 'label' ':' label=STRING
-	 *     domainType=[DomainType|ID] (ambiguity) 'persistent' ':' persistent=BooleanString
-	 *     domainType=[DomainType|ID] (ambiguity) 'required' ':' required=BooleanString
-	 *     domainType=[DomainType|ID] (ambiguity) '}' (rule end)
+	 *     refToDomainType=RefToDomainType (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
+	 *     refToDomainType=RefToDomainType (ambiguity) 'label' ':' label=STRING
+	 *     refToDomainType=RefToDomainType (ambiguity) 'persistent' ':' persistent=BooleanString
+	 *     refToDomainType=RefToDomainType (ambiguity) 'required' ':' required=BooleanString
+	 *     refToDomainType=RefToDomainType (ambiguity) '}' (rule end)
 	 */
 	protected void emit_DtDefinitionDataFieldString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -635,7 +635,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     label=STRING (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     label=STRING (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
 	 *     label=STRING (ambiguity) 'label' ':' label=STRING
 	 *     label=STRING (ambiguity) 'persistent' ':' persistent=BooleanString
 	 *     label=STRING (ambiguity) 'required' ':' required=BooleanString
@@ -650,7 +650,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     required=BooleanString (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     required=BooleanString (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
 	 *     required=BooleanString (ambiguity) 'label' ':' label=STRING
 	 *     required=BooleanString (ambiguity) 'persistent' ':' persistent=BooleanString
 	 *     required=BooleanString (ambiguity) 'required' ':' required=BooleanString
@@ -665,7 +665,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     persistent=BooleanString (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     persistent=BooleanString (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
 	 *     persistent=BooleanString (ambiguity) 'label' ':' label=STRING
 	 *     persistent=BooleanString (ambiguity) 'persistent' ':' persistent=BooleanString
 	 *     persistent=BooleanString (ambiguity) 'required' ':' required=BooleanString
@@ -724,9 +724,9 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     domainType=[DomainType|ID] (ambiguity) 'domain' ':' domainType=[DomainType|ID]
-	 *     domainType=[DomainType|ID] (ambiguity) 'label' ':' label=STRING
-	 *     domainType=[DomainType|ID] (ambiguity) '}' (rule end)
+	 *     refToDomainType=RefToDomainType (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
+	 *     refToDomainType=RefToDomainType (ambiguity) 'label' ':' label=STRING
+	 *     refToDomainType=RefToDomainType (ambiguity) '}' (rule end)
 	 */
 	protected void emit_DtDefinitionIdString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -737,7 +737,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     label=STRING (ambiguity) 'domain' ':' domainType=[DomainType|ID]
+	 *     label=STRING (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
 	 *     label=STRING (ambiguity) 'label' ':' label=STRING
 	 *     label=STRING (ambiguity) '}' (rule end)
 	 */
@@ -785,7 +785,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     (rule start) (ambiguity) 'DtDefinition' name=ID
 	 */
-	protected void emit_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_DtDefinition_AlterKeyword_1_1_or_CreateKeyword_1_0(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -794,10 +794,10 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     '.'+
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     package+=ID (ambiguity) packages+=ID
-	 *     packages+=ID (ambiguity) packages+=ID
+	 *     package+=KEYWORDID (ambiguity) packages+=KEYWORDID
+	 *     packages+=KEYWORDID (ambiguity) packages+=KEYWORDID
 	 */
-	protected void emit_Model_FullStopKeyword_2_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_PackageString_FullStopKeyword_1_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

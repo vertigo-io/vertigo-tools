@@ -83,54 +83,29 @@ ruleModel returns [EObject current=null]
 		}
 		(
 			(
-				lv_package_1_0=RULE_ID
 				{
-					newLeafNode(lv_package_1_0, grammarAccess.getModelAccess().getPackageIDTerminalRuleCall_1_0());
+					newCompositeNode(grammarAccess.getModelAccess().getPackageStringPackageStringParserRuleCall_1_0());
 				}
+				lv_packageString_1_0=rulePackageString
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getModelRule());
+						$current = createModelElementForParent(grammarAccess.getModelRule());
 					}
-					addWithLastConsumed(
+					set(
 						$current,
-						"package",
-						lv_package_1_0,
-						"org.eclipse.xtext.common.Terminals.ID");
+						"packageString",
+						lv_packageString_1_0,
+						"io.vertigo.dsl.VertigoDsl.PackageString");
+					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
 			(
-				otherlv_2='.'
 				{
-					newLeafNode(otherlv_2, grammarAccess.getModelAccess().getFullStopKeyword_2_0());
+					newCompositeNode(grammarAccess.getModelAccess().getElementsElementParserRuleCall_2_0());
 				}
-			)+
-			(
-				(
-					lv_packages_3_0=RULE_ID
-					{
-						newLeafNode(lv_packages_3_0, grammarAccess.getModelAccess().getPackagesIDTerminalRuleCall_2_1_0());
-					}
-					{
-						if ($current==null) {
-							$current = createModelElement(grammarAccess.getModelRule());
-						}
-						addWithLastConsumed(
-							$current,
-							"packages",
-							lv_packages_3_0,
-							"org.eclipse.xtext.common.Terminals.ID");
-					}
-				)
-			)
-		)*
-		(
-			(
-				{
-					newCompositeNode(grammarAccess.getModelAccess().getElementsElementParserRuleCall_3_0());
-				}
-				lv_elements_4_0=ruleElement
+				lv_elements_2_0=ruleElement
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getModelRule());
@@ -138,12 +113,125 @@ ruleModel returns [EObject current=null]
 					add(
 						$current,
 						"elements",
-						lv_elements_4_0,
+						lv_elements_2_0,
 						"io.vertigo.dsl.VertigoDsl.Element");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
+	)
+;
+
+// Entry rule entryRulePackageString
+entryRulePackageString returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getPackageStringRule()); }
+	iv_rulePackageString=rulePackageString
+	{ $current=$iv_rulePackageString.current; }
+	EOF;
+
+// Rule PackageString
+rulePackageString returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getPackageStringAccess().getPackageKEYWORDIDParserRuleCall_0_0());
+				}
+				lv_package_0_0=ruleKEYWORDID
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getPackageStringRule());
+					}
+					add(
+						$current,
+						"package",
+						lv_package_0_0,
+						"io.vertigo.dsl.VertigoDsl.KEYWORDID");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			(
+				otherlv_1='.'
+				{
+					newLeafNode(otherlv_1, grammarAccess.getPackageStringAccess().getFullStopKeyword_1_0());
+				}
+			)+
+			(
+				(
+					{
+						newCompositeNode(grammarAccess.getPackageStringAccess().getPackagesKEYWORDIDParserRuleCall_1_1_0());
+					}
+					lv_packages_2_0=ruleKEYWORDID
+					{
+						if ($current==null) {
+							$current = createModelElementForParent(grammarAccess.getPackageStringRule());
+						}
+						add(
+							$current,
+							"packages",
+							lv_packages_2_0,
+							"io.vertigo.dsl.VertigoDsl.KEYWORDID");
+						afterParserOrEnumRuleCall();
+					}
+				)
+			)
+		)*
+	)
+;
+
+// Entry rule entryRuleKEYWORDID
+entryRuleKEYWORDID returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getKEYWORDIDRule()); }
+	iv_ruleKEYWORDID=ruleKEYWORDID
+	{ $current=$iv_ruleKEYWORDID.current; }
+	EOF;
+
+// Rule KEYWORDID
+ruleKEYWORDID returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			(
+				lv_keywordID_0_1=RULE_ID
+				{
+					newLeafNode(lv_keywordID_0_1, grammarAccess.getKEYWORDIDAccess().getKeywordIDIDTerminalRuleCall_0_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getKEYWORDIDRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"keywordID",
+						lv_keywordID_0_1,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+				    |
+				lv_keywordID_0_2='domain'
+				{
+					newLeafNode(lv_keywordID_0_2, grammarAccess.getKEYWORDIDAccess().getKeywordIDDomainKeyword_0_1());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getKEYWORDIDRule());
+					}
+					setWithLastConsumed($current, "keywordID", lv_keywordID_0_2, null);
+				}
+			)
+		)
 	)
 ;
 
@@ -404,7 +492,7 @@ ruleConstraint returns [EObject current=null]
 						$current,
 						"className",
 						lv_className_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -431,7 +519,7 @@ ruleConstraint returns [EObject current=null]
 							$current,
 							"args",
 							lv_args_9_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
+							"io.vertigo.dsl.VertigoDsl.STRING");
 					}
 				)
 			)
@@ -459,7 +547,7 @@ ruleConstraint returns [EObject current=null]
 							$current,
 							"msg",
 							lv_msg_12_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
+							"io.vertigo.dsl.VertigoDsl.STRING");
 					}
 				)
 			)
@@ -539,7 +627,7 @@ ruleFileInfo returns [EObject current=null]
 						$current,
 						"storeName",
 						lv_storeName_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -618,7 +706,7 @@ ruleFormatter returns [EObject current=null]
 						$current,
 						"className",
 						lv_className_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -645,7 +733,7 @@ ruleFormatter returns [EObject current=null]
 							$current,
 							"args",
 							lv_args_9_0,
-							"org.eclipse.xtext.common.Terminals.STRING");
+							"io.vertigo.dsl.VertigoDsl.STRING");
 					}
 				)
 			)
@@ -814,7 +902,7 @@ ruleDomain returns [EObject current=null]
 																	$current,
 																	"storeType",
 																	lv_storeType_15_0,
-																	"org.eclipse.xtext.common.Terminals.STRING");
+																	"io.vertigo.dsl.VertigoDsl.STRING");
 															}
 														)
 													)
@@ -851,7 +939,7 @@ ruleDomain returns [EObject current=null]
 																	$current,
 																	"indexType",
 																	lv_indexType_18_0,
-																	"org.eclipse.xtext.common.Terminals.STRING");
+																	"io.vertigo.dsl.VertigoDsl.STRING");
 															}
 														)
 													)
@@ -987,7 +1075,7 @@ ruleDomain returns [EObject current=null]
 																	$current,
 																	"unit",
 																	lv_unit_31_0,
-																	"org.eclipse.xtext.common.Terminals.STRING");
+																	"io.vertigo.dsl.VertigoDsl.STRING");
 															}
 														)
 													)
@@ -1021,6 +1109,45 @@ ruleDomain returns [EObject current=null]
 			{ 
 			  getUnorderedGroupHelper().leave(grammarAccess.getDomainAccess().getUnorderedGroup());
 			}
+	)
+;
+
+// Entry rule entryRuleRefToDomainType
+entryRuleRefToDomainType returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getRefToDomainTypeRule()); }
+	iv_ruleRefToDomainType=ruleRefToDomainType
+	{ $current=$iv_ruleRefToDomainType.current; }
+	EOF;
+
+// Rule RefToDomainType
+ruleRefToDomainType returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		(
+			{
+				$current = forceCreateModelElement(
+					grammarAccess.getRefToDomainTypeAccess().getRefToDomainTypeAction_0(),
+					$current);
+			}
+		)
+		(
+			(
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getRefToDomainTypeRule());
+					}
+				}
+				otherlv_1=RULE_ID
+				{
+					newLeafNode(otherlv_1, grammarAccess.getRefToDomainTypeAccess().getRefDomainTypeCrossReference_1_0());
+				}
+			)
+		)
 	)
 ;
 
@@ -1067,13 +1194,19 @@ ruleDtDefinitionIdString returns [EObject current=null]
 								(
 									(
 										{
-											if ($current==null) {
-												$current = createModelElement(grammarAccess.getDtDefinitionIdStringRule());
-											}
+											newCompositeNode(grammarAccess.getDtDefinitionIdStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0());
 										}
-										otherlv_4=RULE_ID
+										lv_refToDomainType_4_0=ruleRefToDomainType
 										{
-											newLeafNode(otherlv_4, grammarAccess.getDtDefinitionIdStringAccess().getDomainTypeDomainTypeCrossReference_1_0_2_0());
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getDtDefinitionIdStringRule());
+											}
+											set(
+												$current,
+												"refToDomainType",
+												lv_refToDomainType_4_0,
+												"io.vertigo.dsl.VertigoDsl.RefToDomainType");
+											afterParserOrEnumRuleCall();
 										}
 									)
 								)
@@ -1116,7 +1249,7 @@ ruleDtDefinitionIdString returns [EObject current=null]
 												$current,
 												"label",
 												lv_label_8_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -1190,13 +1323,19 @@ ruleDtDefinitionDataFieldString returns [EObject current=null]
 								(
 									(
 										{
-											if ($current==null) {
-												$current = createModelElement(grammarAccess.getDtDefinitionDataFieldStringRule());
-											}
+											newCompositeNode(grammarAccess.getDtDefinitionDataFieldStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0());
 										}
-										otherlv_4=RULE_ID
+										lv_refToDomainType_4_0=ruleRefToDomainType
 										{
-											newLeafNode(otherlv_4, grammarAccess.getDtDefinitionDataFieldStringAccess().getDomainTypeDomainTypeCrossReference_1_0_2_0());
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getDtDefinitionDataFieldStringRule());
+											}
+											set(
+												$current,
+												"refToDomainType",
+												lv_refToDomainType_4_0,
+												"io.vertigo.dsl.VertigoDsl.RefToDomainType");
+											afterParserOrEnumRuleCall();
 										}
 									)
 								)
@@ -1239,7 +1378,7 @@ ruleDtDefinitionDataFieldString returns [EObject current=null]
 												$current,
 												"label",
 												lv_label_8_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -1401,13 +1540,19 @@ ruleDtDefinitionComputedFieldString returns [EObject current=null]
 								(
 									(
 										{
-											if ($current==null) {
-												$current = createModelElement(grammarAccess.getDtDefinitionComputedFieldStringRule());
-											}
+											newCompositeNode(grammarAccess.getDtDefinitionComputedFieldStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0());
 										}
-										otherlv_4=RULE_ID
+										lv_refToDomainType_4_0=ruleRefToDomainType
 										{
-											newLeafNode(otherlv_4, grammarAccess.getDtDefinitionComputedFieldStringAccess().getDomainTypeDomainTypeCrossReference_1_0_2_0());
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getDtDefinitionComputedFieldStringRule());
+											}
+											set(
+												$current,
+												"refToDomainType",
+												lv_refToDomainType_4_0,
+												"io.vertigo.dsl.VertigoDsl.RefToDomainType");
+											afterParserOrEnumRuleCall();
 										}
 									)
 								)
@@ -1450,7 +1595,7 @@ ruleDtDefinitionComputedFieldString returns [EObject current=null]
 												$current,
 												"label",
 												lv_label_8_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -1493,7 +1638,7 @@ ruleDtDefinitionComputedFieldString returns [EObject current=null]
 												$current,
 												"expressionString",
 												lv_expressionString_12_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -1760,7 +1905,7 @@ ruleDtDefinitionStereotype returns [EObject current=null]
 						$current,
 						"stereoType",
 						lv_stereoType_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -1811,7 +1956,7 @@ ruleDtDefinitionDataSpace returns [EObject current=null]
 						$current,
 						"storeName",
 						lv_storeName_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -1862,7 +2007,7 @@ ruleDtDefinitionDisplayField returns [EObject current=null]
 						$current,
 						"displayField",
 						lv_displayField_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -1913,7 +2058,7 @@ ruleDtDefinitionSortField returns [EObject current=null]
 						$current,
 						"sortField",
 						lv_sortField_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -1943,25 +2088,32 @@ ruleDtDefinition returns [EObject current=null]
 }:
 	(
 		(
-			otherlv_0='create'
 			{
-				newLeafNode(otherlv_0, grammarAccess.getDtDefinitionAccess().getCreateKeyword_0_0());
-			}
-			    |
-			otherlv_1='alter'
-			{
-				newLeafNode(otherlv_1, grammarAccess.getDtDefinitionAccess().getAlterKeyword_0_1());
+				$current = forceCreateModelElement(
+					grammarAccess.getDtDefinitionAccess().getDtDefinitionActionAction_0(),
+					$current);
 			}
 		)
-		otherlv_2='DtDefinition'
+		(
+			otherlv_1='create'
+			{
+				newLeafNode(otherlv_1, grammarAccess.getDtDefinitionAccess().getCreateKeyword_1_0());
+			}
+			    |
+			otherlv_2='alter'
+			{
+				newLeafNode(otherlv_2, grammarAccess.getDtDefinitionAccess().getAlterKeyword_1_1());
+			}
+		)
+		otherlv_3='DtDefinition'
 		{
-			newLeafNode(otherlv_2, grammarAccess.getDtDefinitionAccess().getDtDefinitionKeyword_1());
+			newLeafNode(otherlv_3, grammarAccess.getDtDefinitionAccess().getDtDefinitionKeyword_2());
 		}
 		(
 			(
-				lv_name_3_0=RULE_ID
+				lv_name_4_0=RULE_ID
 				{
-					newLeafNode(lv_name_3_0, grammarAccess.getDtDefinitionAccess().getNameIDTerminalRuleCall_2_0());
+					newLeafNode(lv_name_4_0, grammarAccess.getDtDefinitionAccess().getNameIDTerminalRuleCall_3_0());
 				}
 				{
 					if ($current==null) {
@@ -1970,21 +2122,21 @@ ruleDtDefinition returns [EObject current=null]
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_3_0,
+						lv_name_4_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
 		)
-		otherlv_4='{'
+		otherlv_5='{'
 		{
-			newLeafNode(otherlv_4, grammarAccess.getDtDefinitionAccess().getLeftCurlyBracketKeyword_3());
+			newLeafNode(otherlv_5, grammarAccess.getDtDefinitionAccess().getLeftCurlyBracketKeyword_4());
 		}
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0());
+					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0());
 				}
-				lv_dtDefinitionStereotype_5_0=ruleDtDefinitionStereotype
+				lv_dtDefinitionStereotype_6_0=ruleDtDefinitionStereotype
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
@@ -1992,7 +2144,7 @@ ruleDtDefinition returns [EObject current=null]
 					set(
 						$current,
 						"dtDefinitionStereotype",
-						lv_dtDefinitionStereotype_5_0,
+						lv_dtDefinitionStereotype_6_0,
 						"io.vertigo.dsl.VertigoDsl.DtDefinitionStereotype");
 					afterParserOrEnumRuleCall();
 				}
@@ -2001,9 +2153,9 @@ ruleDtDefinition returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_5_0());
+					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0());
 				}
-				lv_dtDefinitionIdField_6_0=ruleDtDefinitionIdField
+				lv_dtDefinitionIdField_7_0=ruleDtDefinitionIdField
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
@@ -2011,7 +2163,7 @@ ruleDtDefinition returns [EObject current=null]
 					set(
 						$current,
 						"dtDefinitionIdField",
-						lv_dtDefinitionIdField_6_0,
+						lv_dtDefinitionIdField_7_0,
 						"io.vertigo.dsl.VertigoDsl.DtDefinitionIdField");
 					afterParserOrEnumRuleCall();
 				}
@@ -2020,9 +2172,9 @@ ruleDtDefinition returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_6_0());
+					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0());
 				}
-				lv_dtDefinitionDataFields_7_0=ruleDtDefinitionDataField
+				lv_dtDefinitionDataFields_8_0=ruleDtDefinitionDataField
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
@@ -2030,7 +2182,7 @@ ruleDtDefinition returns [EObject current=null]
 					add(
 						$current,
 						"dtDefinitionDataFields",
-						lv_dtDefinitionDataFields_7_0,
+						lv_dtDefinitionDataFields_8_0,
 						"io.vertigo.dsl.VertigoDsl.DtDefinitionDataField");
 					afterParserOrEnumRuleCall();
 				}
@@ -2039,9 +2191,9 @@ ruleDtDefinition returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0());
 				}
-				lv_dtDefinitionComputedFields_8_0=ruleDtDefinitionComputedField
+				lv_dtDefinitionComputedFields_9_0=ruleDtDefinitionComputedField
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
@@ -2049,7 +2201,7 @@ ruleDtDefinition returns [EObject current=null]
 					add(
 						$current,
 						"dtDefinitionComputedFields",
-						lv_dtDefinitionComputedFields_8_0,
+						lv_dtDefinitionComputedFields_9_0,
 						"io.vertigo.dsl.VertigoDsl.DtDefinitionComputedField");
 					afterParserOrEnumRuleCall();
 				}
@@ -2058,20 +2210,20 @@ ruleDtDefinition returns [EObject current=null]
 		(
 			(
 				{ 
-				  getUnorderedGroupHelper().enter(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8());
+				  getUnorderedGroupHelper().enter(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
 				}
 				(
 					(
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8(), 0)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8(), 0);
+						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0);
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_8_0_0());
+										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0());
 									}
-									lv_dtDefinitionDataSpace_10_0=ruleDtDefinitionDataSpace
+									lv_dtDefinitionDataSpace_11_0=ruleDtDefinitionDataSpace
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
@@ -2079,27 +2231,27 @@ ruleDtDefinition returns [EObject current=null]
 										set(
 											$current,
 											"dtDefinitionDataSpace",
-											lv_dtDefinitionDataSpace_10_0,
+											lv_dtDefinitionDataSpace_11_0,
 											"io.vertigo.dsl.VertigoDsl.DtDefinitionDataSpace");
 										afterParserOrEnumRuleCall();
 									}
 								)
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8(), 1)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8(), 1);
+						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1);
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_8_1_0());
+										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0());
 									}
-									lv_dtDefinitionSortField_11_0=ruleDtDefinitionSortField
+									lv_dtDefinitionSortField_12_0=ruleDtDefinitionSortField
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
@@ -2107,27 +2259,27 @@ ruleDtDefinition returns [EObject current=null]
 										set(
 											$current,
 											"dtDefinitionSortField",
-											lv_dtDefinitionSortField_11_0,
+											lv_dtDefinitionSortField_12_0,
 											"io.vertigo.dsl.VertigoDsl.DtDefinitionSortField");
 										afterParserOrEnumRuleCall();
 									}
 								)
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
 					}
 				)
 			)|
 			(
-				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8(), 2)}?=>(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2)}?=>(
 					{
-						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8(), 2);
+						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2);
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0());
+										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0());
 									}
-									lv_dtDefinitionDisplayField_12_0=ruleDtDefinitionDisplayField
+									lv_dtDefinitionDisplayField_13_0=ruleDtDefinitionDisplayField
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
@@ -2135,14 +2287,14 @@ ruleDtDefinition returns [EObject current=null]
 										set(
 											$current,
 											"dtDefinitionDisplayField",
-											lv_dtDefinitionDisplayField_12_0,
+											lv_dtDefinitionDisplayField_13_0,
 											"io.vertigo.dsl.VertigoDsl.DtDefinitionDisplayField");
 										afterParserOrEnumRuleCall();
 									}
 								)
 								))
 					{ 
-						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8());
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
 					}
 				)
 			)
@@ -2150,12 +2302,12 @@ ruleDtDefinition returns [EObject current=null]
 				)
 			)
 				{ 
-				  getUnorderedGroupHelper().leave(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_8());
+				  getUnorderedGroupHelper().leave(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
 				}
 		)
-		otherlv_13='}'
+		otherlv_14='}'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_9());
+			newLeafNode(otherlv_14, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_10());
 		}
 	)
 ;
@@ -2240,7 +2392,7 @@ ruleAssociation returns [EObject current=null]
 												$current,
 												"fkFieldName",
 												lv_fkFieldName_7_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -2535,7 +2687,7 @@ ruleAssociation returns [EObject current=null]
 												$current,
 												"labelA",
 												lv_labelA_35_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -2578,7 +2730,7 @@ ruleAssociation returns [EObject current=null]
 												$current,
 												"labelB",
 												lv_labelB_39_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -2621,7 +2773,7 @@ ruleAssociation returns [EObject current=null]
 												$current,
 												"roleA",
 												lv_roleA_43_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -2664,7 +2816,7 @@ ruleAssociation returns [EObject current=null]
 												$current,
 												"roleB",
 												lv_roleB_47_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -2707,7 +2859,7 @@ ruleAssociation returns [EObject current=null]
 												$current,
 												"type",
 												lv_type_51_0,
-												"org.eclipse.xtext.common.Terminals.STRING");
+												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
@@ -3004,7 +3156,7 @@ ruleTaskDataSpace returns [EObject current=null]
 						$current,
 						"storeName",
 						lv_storeName_2_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -3079,7 +3231,7 @@ ruleTaskDefinition returns [EObject current=null]
 						$current,
 						"classname",
 						lv_classname_6_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -3111,7 +3263,7 @@ ruleTaskDefinition returns [EObject current=null]
 						$current,
 						"request",
 						lv_request_10_0,
-						"org.eclipse.xtext.common.Terminals.STRING");
+						"io.vertigo.dsl.VertigoDsl.STRING");
 				}
 			)
 		)
@@ -3330,11 +3482,13 @@ ruleInOutString returns [Enumerator current=null]
 	)
 ;
 
+fragment RULE_ESCAPED_CHAR : '\\' ('n'|'t'|'r'|'\\'|'.'|'"');
+
+RULE_STRING : ('"' (RULE_ESCAPED_CHAR|~(('\\'|'"')))* '"'|'\'' (RULE_ESCAPED_CHAR|~(('\\'|'\'')))* '\'');
+
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 
 RULE_INT : ('0'..'9')+;
-
-RULE_STRING : ('"' ('\\' .|~(('\\'|'"')))* '"'|'\'' ('\\' .|~(('\\'|'\'')))* '\'');
 
 RULE_ML_COMMENT : '/*' ( options {greedy=false;} : . )*'*/';
 

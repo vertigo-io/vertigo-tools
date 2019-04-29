@@ -13,6 +13,7 @@ package io.vertigo.dsl.vertigoDsl;
  * The following features are supported:
  * </p>
  * <ul>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.Constraint#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Constraint#getClassName <em>Class Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Constraint#getArgs <em>Args</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Constraint#getMsg <em>Msg</em>}</li>
@@ -24,6 +25,32 @@ package io.vertigo.dsl.vertigoDsl;
  */
 public interface Constraint extends Element
 {
+  /**
+   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Name</em>' attribute.
+   * @see #setName(String)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getConstraint_Name()
+   * @model
+   * @generated
+   */
+  String getName();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Constraint#getName <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Name</em>' attribute.
+   * @see #getName()
+   * @generated
+   */
+  void setName(String value);
+
   /**
    * Returns the value of the '<em><b>Class Name</b></em>' attribute.
    * <!-- begin-user-doc -->

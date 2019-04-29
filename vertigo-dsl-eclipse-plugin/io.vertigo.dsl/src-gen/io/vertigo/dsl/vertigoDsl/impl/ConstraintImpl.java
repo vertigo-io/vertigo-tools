@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.ConstraintImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.ConstraintImpl#getClassName <em>Class Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.ConstraintImpl#getArgs <em>Args</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.ConstraintImpl#getMsg <em>Msg</em>}</li>
@@ -29,6 +30,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class ConstraintImpl extends ElementImpl implements Constraint
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getClassName() <em>Class Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -115,6 +136,29 @@ public class ConstraintImpl extends ElementImpl implements Constraint
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.CONSTRAINT__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getClassName()
   {
     return className;
@@ -189,6 +233,8 @@ public class ConstraintImpl extends ElementImpl implements Constraint
   {
     switch (featureID)
     {
+      case VertigoDslPackage.CONSTRAINT__NAME:
+        return getName();
       case VertigoDslPackage.CONSTRAINT__CLASS_NAME:
         return getClassName();
       case VertigoDslPackage.CONSTRAINT__ARGS:
@@ -209,6 +255,9 @@ public class ConstraintImpl extends ElementImpl implements Constraint
   {
     switch (featureID)
     {
+      case VertigoDslPackage.CONSTRAINT__NAME:
+        setName((String)newValue);
+        return;
       case VertigoDslPackage.CONSTRAINT__CLASS_NAME:
         setClassName((String)newValue);
         return;
@@ -232,6 +281,9 @@ public class ConstraintImpl extends ElementImpl implements Constraint
   {
     switch (featureID)
     {
+      case VertigoDslPackage.CONSTRAINT__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case VertigoDslPackage.CONSTRAINT__CLASS_NAME:
         setClassName(CLASS_NAME_EDEFAULT);
         return;
@@ -255,6 +307,8 @@ public class ConstraintImpl extends ElementImpl implements Constraint
   {
     switch (featureID)
     {
+      case VertigoDslPackage.CONSTRAINT__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case VertigoDslPackage.CONSTRAINT__CLASS_NAME:
         return CLASS_NAME_EDEFAULT == null ? className != null : !CLASS_NAME_EDEFAULT.equals(className);
       case VertigoDslPackage.CONSTRAINT__ARGS:
@@ -276,7 +330,9 @@ public class ConstraintImpl extends ElementImpl implements Constraint
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (className: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", className: ");
     result.append(className);
     result.append(", args: ");
     result.append(args);

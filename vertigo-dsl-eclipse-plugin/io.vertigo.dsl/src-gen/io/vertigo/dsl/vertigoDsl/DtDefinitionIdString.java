@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionIdString#getDomainType <em>Domain Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionIdString#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionIdString#getLabel <em>Label</em>}</li>
  * </ul>
  *
@@ -25,30 +25,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface DtDefinitionIdString extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Domain Type</b></em>' reference.
+   * Returns the value of the '<em><b>Ref To Domain Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Domain Type</em>' reference isn't clear,
+   * If the meaning of the '<em>Ref To Domain Type</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Domain Type</em>' reference.
-   * @see #setDomainType(DomainType)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinitionIdString_DomainType()
-   * @model
+   * @return the value of the '<em>Ref To Domain Type</em>' containment reference.
+   * @see #setRefToDomainType(RefToDomainType)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinitionIdString_RefToDomainType()
+   * @model containment="true"
    * @generated
    */
-  DomainType getDomainType();
+  RefToDomainType getRefToDomainType();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionIdString#getDomainType <em>Domain Type</em>}' reference.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionIdString#getRefToDomainType <em>Ref To Domain Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Domain Type</em>' reference.
-   * @see #getDomainType()
+   * @param value the new value of the '<em>Ref To Domain Type</em>' containment reference.
+   * @see #getRefToDomainType()
    * @generated
    */
-  void setDomainType(DomainType value);
+  void setRefToDomainType(RefToDomainType value);
 
   /**
    * Returns the value of the '<em><b>Label</b></em>' attribute.

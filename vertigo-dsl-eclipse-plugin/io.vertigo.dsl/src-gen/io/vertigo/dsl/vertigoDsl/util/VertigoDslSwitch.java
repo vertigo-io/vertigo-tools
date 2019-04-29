@@ -80,6 +80,20 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.PACKAGE_STRING:
+      {
+        PackageString packageString = (PackageString)theEObject;
+        T result = casePackageString(packageString);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.KEYWORDID:
+      {
+        KEYWORDID keywordid = (KEYWORDID)theEObject;
+        T result = caseKEYWORDID(keywordid);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.ELEMENT:
       {
         Element element = (Element)theEObject;
@@ -142,6 +156,13 @@ public class VertigoDslSwitch<T> extends Switch<T>
       {
         DomainType domainType = (DomainType)theEObject;
         T result = caseDomainType(domainType);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.REF_TO_DOMAIN_TYPE:
+      {
+        RefToDomainType refToDomainType = (RefToDomainType)theEObject;
+        T result = caseRefToDomainType(refToDomainType);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -268,6 +289,16 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.DT_DEFINITION_ACTION:
+      {
+        DtDefinitionAction dtDefinitionAction = (DtDefinitionAction)theEObject;
+        T result = caseDtDefinitionAction(dtDefinitionAction);
+        if (result == null) result = caseDtDefinition(dtDefinitionAction);
+        if (result == null) result = caseElement(dtDefinitionAction);
+        if (result == null) result = caseDtDefinitionType(dtDefinitionAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       default: return defaultCase(theEObject);
     }
   }
@@ -284,6 +315,38 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseModel(Model object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Package String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Package String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casePackageString(PackageString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>KEYWORDID</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>KEYWORDID</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseKEYWORDID(KEYWORDID object)
   {
     return null;
   }
@@ -412,6 +475,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDomainType(DomainType object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Ref To Domain Type</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Ref To Domain Type</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseRefToDomainType(RefToDomainType object)
   {
     return null;
   }
@@ -684,6 +763,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTaskDefinition(TaskDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionAction(DtDefinitionAction object)
   {
     return null;
   }

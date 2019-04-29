@@ -81,6 +81,16 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createModelAdapter();
       }
       @Override
+      public Adapter casePackageString(PackageString object)
+      {
+        return createPackageStringAdapter();
+      }
+      @Override
+      public Adapter caseKEYWORDID(KEYWORDID object)
+      {
+        return createKEYWORDIDAdapter();
+      }
+      @Override
       public Adapter caseElement(Element object)
       {
         return createElementAdapter();
@@ -119,6 +129,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDomainType(DomainType object)
       {
         return createDomainTypeAdapter();
+      }
+      @Override
+      public Adapter caseRefToDomainType(RefToDomainType object)
+      {
+        return createRefToDomainTypeAdapter();
       }
       @Override
       public Adapter caseDtDefinitionIdString(DtDefinitionIdString object)
@@ -206,6 +221,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createTaskDefinitionAdapter();
       }
       @Override
+      public Adapter caseDtDefinitionAction(DtDefinitionAction object)
+      {
+        return createDtDefinitionActionAdapter();
+      }
+      @Override
       public Adapter defaultCase(EObject object)
       {
         return createEObjectAdapter();
@@ -238,6 +258,36 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createModelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.PackageString <em>Package String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.PackageString
+   * @generated
+   */
+  public Adapter createPackageStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.KEYWORDID <em>KEYWORDID</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.KEYWORDID
+   * @generated
+   */
+  public Adapter createKEYWORDIDAdapter()
   {
     return null;
   }
@@ -358,6 +408,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDomainTypeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.RefToDomainType <em>Ref To Domain Type</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.RefToDomainType
+   * @generated
+   */
+  public Adapter createRefToDomainTypeAdapter()
   {
     return null;
   }
@@ -613,6 +678,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTaskDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction <em>Dt Definition Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionAction
+   * @generated
+   */
+  public Adapter createDtDefinitionActionAdapter()
   {
     return null;
   }

@@ -20,6 +20,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FileInfoImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FileInfoImpl#getStoreName <em>Store Name</em>}</li>
  * </ul>
  *
@@ -27,6 +28,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class FileInfoImpl extends ElementImpl implements FileInfo
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getStoreName() <em>Store Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -73,6 +94,29 @@ public class FileInfoImpl extends ElementImpl implements FileInfo
    * <!-- end-user-doc -->
    * @generated
    */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.FILE_INFO__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public String getStoreName()
   {
     return storeName;
@@ -101,6 +145,8 @@ public class FileInfoImpl extends ElementImpl implements FileInfo
   {
     switch (featureID)
     {
+      case VertigoDslPackage.FILE_INFO__NAME:
+        return getName();
       case VertigoDslPackage.FILE_INFO__STORE_NAME:
         return getStoreName();
     }
@@ -117,6 +163,9 @@ public class FileInfoImpl extends ElementImpl implements FileInfo
   {
     switch (featureID)
     {
+      case VertigoDslPackage.FILE_INFO__NAME:
+        setName((String)newValue);
+        return;
       case VertigoDslPackage.FILE_INFO__STORE_NAME:
         setStoreName((String)newValue);
         return;
@@ -134,6 +183,9 @@ public class FileInfoImpl extends ElementImpl implements FileInfo
   {
     switch (featureID)
     {
+      case VertigoDslPackage.FILE_INFO__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case VertigoDslPackage.FILE_INFO__STORE_NAME:
         setStoreName(STORE_NAME_EDEFAULT);
         return;
@@ -151,6 +203,8 @@ public class FileInfoImpl extends ElementImpl implements FileInfo
   {
     switch (featureID)
     {
+      case VertigoDslPackage.FILE_INFO__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case VertigoDslPackage.FILE_INFO__STORE_NAME:
         return STORE_NAME_EDEFAULT == null ? storeName != null : !STORE_NAME_EDEFAULT.equals(storeName);
     }
@@ -168,7 +222,9 @@ public class FileInfoImpl extends ElementImpl implements FileInfo
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (storeName: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", storeName: ");
     result.append(storeName);
     result.append(')');
     return result.toString();

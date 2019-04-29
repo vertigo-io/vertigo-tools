@@ -3,7 +3,6 @@
  */
 package io.vertigo.dsl.validation
 
-
 /**
  * This class contains custom validation rules. 
  *
@@ -11,15 +10,22 @@ package io.vertigo.dsl.validation
  */
 class VertigoDslValidator extends AbstractVertigoDslValidator {
 	
-//	public static val INVALID_NAME = 'invalidName'
-//
+	public static val INVALID_NAME = 'invalidName'
+
+
 //	@Check
-//	def checkGreetingStartsWithCapital(Greeting greeting) {
-//		if (!Character.isUpperCase(greeting.name.charAt(0))) {
-//			warning('Name should start with a capital', 
-//					VertigoDslPackage.Literals.GREETING__NAME,
-//					INVALID_NAME)
+//	def checkDomain(Domain domain) {
+//		System.out.println(domain.name);
+//		if (domain.name.startsWith("Do") && domain.name.endsWith("Dtc")) {
+//				System.out.println("encore ici");
 //		}
 //	}
+//	
+//	@Check
+//	def checkDomain(DomainType domainType) {
+//		System.out.println(domainType.toString());
+//		
+//	}
+	
 	
 }

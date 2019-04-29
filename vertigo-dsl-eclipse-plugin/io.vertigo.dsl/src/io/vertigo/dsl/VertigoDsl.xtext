@@ -3,12 +3,29 @@ grammar io.vertigo.dsl.VertigoDsl with org.eclipse.xtext.common.Terminals
 generate vertigoDsl "http://www.vertigo.io/dsl/VertigoDsl"
 
 
+
 Model:
-	'package' package+=ID ("."+ packages+=ID)*
+	'package' packageString=PackageString 
 	elements+=Element*
 ;
 
 
+PackageString:
+	package+=KEYWORDID ("."+ packages+=KEYWORDID)*	
+;
+
+KEYWORDID:
+	keywordID = (ID | 'domain');
+
+
+
+terminal fragment ESCAPED_CHAR:
+    '\\' ('n'|'t'|'r'|'\\'|'.'|'"');
+
+@Override
+terminal STRING: 
+    '"' ( ESCAPED_CHAR | !('\\'|'"') )* '"' |
+    "'" ( ESCAPED_CHAR | ! ('\\'|"'") )* "'";
 
 
 Element:
@@ -69,40 +86,26 @@ Domain:
 		('unit' ':' unit=STRING)?)
 	'}';
 
-/*
-IdFieldString:
-	//'{' ('label:' label=STRING) '}';
-	'{' ('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) '}';
-*/
-
-
-// old
-/*
-DtDefinitionIdString:
-	'{' ('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) '}';
-
-DtDefinitionDataFieldString:
-	'{' (('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) & ('required:' required=BooleanString) & ('persistent:' persistent=BooleanString)?) '}';
-
-DtDefinitionComputedFieldString:
-	'{' (('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) & ('expression:' expressionString=STRING)) '}';
-
-*/
- 
-
 DomainType:
 	Domain | DeclaredDomain
 ;
 
+RefToDomainType:
+	{RefToDomainType} ref = [DomainType]
+;
+
+/*
+ * '{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
+ */
 
 DtDefinitionIdString:
-	'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? ) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & ('label' ':' label=STRING ','?) ) '}';
 
 DtDefinitionDataFieldString:
-	'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
 
 DtDefinitionComputedFieldString:
-	'{' ('domain' ':' domainType=[DomainType]  ','? & 'label' ':' label=STRING ','? & 'expression' ':' expressionString=STRING ','? ) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType  ','? & 'label' ':' label=STRING ','? & 'expression' ':' expressionString=STRING ','? ) '}';
 
 DtDefinitionIdField:
 	'id' name=ID idString=DtDefinitionIdString ','? ; 
@@ -134,7 +137,7 @@ DtDefinitionType:
 ;
 
 DtDefinition:
-	('create' | 'alter') 'DtDefinition' name=ID '{'
+	('create' | 'alter') 'DtDefinition' {DtDefinitionAction} name=ID '{'
 		dtDefinitionStereotype=DtDefinitionStereotype?
 		dtDefinitionIdField=DtDefinitionIdField?
 		dtDefinitionDataFields+=DtDefinitionDataField*

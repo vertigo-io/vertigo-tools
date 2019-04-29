@@ -2,27 +2,39 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="vertigoDsl" nsURI="http://www.vertigo.io/dsl/VertigoDsl" nsPrefix="vertigoDsl">
   <eClassifiers xsi:type="ecore:EClass" name="Model">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="package" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="packages" unique="false"
-        upperBound="-1" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packageString" eType="#//PackageString"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="elements" upperBound="-1"
         eType="#//Element" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Element">
+  <eClassifiers xsi:type="ecore:EClass" name="PackageString">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="package" upperBound="-1"
+        eType="#//KEYWORDID" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="packages" upperBound="-1"
+        eType="#//KEYWORDID" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="KEYWORDID">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="keywordID" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Element"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclaredDomain" eSuperTypes="#//Element #//DomainType">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="DeclaredDomain" eSuperTypes="#//Element #//DomainType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DeclaredDtDefinition" eSuperTypes="#//Element #//DtDefinitionType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="DeclaredDtDefinition" eSuperTypes="#//Element #//DtDefinitionType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Constraint" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="args" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="msg" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FileInfo" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="storeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Formatter" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="className" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="args" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -42,6 +54,7 @@
     <eLiterals name="FALSE" value="1" literal="&quot;false&quot;"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Domain" eSuperTypes="#//Element #//DomainType">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="dataType" eType="#//DataType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="formatter" eType="#//Formatter"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="storeType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -54,18 +67,24 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="unit" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DomainType"/>
+  <eClassifiers xsi:type="ecore:EClass" name="RefToDomainType">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ref" eType="#//DomainType"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionIdString">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="domainType" eType="#//DomainType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refToDomainType" eType="#//RefToDomainType"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionDataFieldString">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="domainType" eType="#//DomainType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refToDomainType" eType="#//RefToDomainType"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="required" eType="#//BooleanString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="persistent" eType="#//BooleanString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionComputedFieldString">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="domainType" eType="#//DomainType"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="refToDomainType" eType="#//RefToDomainType"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
@@ -97,27 +116,13 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sortField" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionType"/>
-  <eClassifiers xsi:type="ecore:EClass" name="DtDefinition" eSuperTypes="#//Element #//DtDefinitionType">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionStereotype"
-        eType="#//DtDefinitionStereotype" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionIdField" eType="#//DtDefinitionIdField"
-        containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDataFields"
-        upperBound="-1" eType="#//DtDefinitionDataField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionComputedFields"
-        upperBound="-1" eType="#//DtDefinitionComputedField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDataSpace"
-        eType="#//DtDefinitionDataSpace" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionSortField"
-        eType="#//DtDefinitionSortField" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDisplayField"
-        eType="#//DtDefinitionDisplayField" containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DtDefinition" eSuperTypes="#//Element #//DtDefinitionType"/>
   <eClassifiers xsi:type="ecore:EEnum" name="MultiplicityString">
     <eLiterals name="ZERO_ONE" literal="&quot;0..1&quot;"/>
     <eLiterals name="ZERO_N" value="1" literal="&quot;0..*&quot;"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="fkFieldName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionA" eType="#//DtDefinitionType"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionB" eType="#//DtDefinitionType"/>
@@ -149,11 +154,29 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="storeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TaskDefinition" eSuperTypes="#//Element">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="request" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskAttributes" upperBound="-1"
         eType="#//TaskAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskDataSpace" eType="#//TaskDataSpace"
         containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionAction" eSuperTypes="#//DtDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionStereotype"
+        eType="#//DtDefinitionStereotype" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionIdField" eType="#//DtDefinitionIdField"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDataFields"
+        upperBound="-1" eType="#//DtDefinitionDataField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionComputedFields"
+        upperBound="-1" eType="#//DtDefinitionComputedField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDataSpace"
+        eType="#//DtDefinitionDataSpace" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionSortField"
+        eType="#//DtDefinitionSortField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDisplayField"
+        eType="#//DtDefinitionDisplayField" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

@@ -17,5 +17,6 @@ class VertigoDslUiModule extends AbstractVertigoDslUiModule {
 		System.out.println("binding binding binding");
 		return VertigoUISemanticHighlightingCalculator;
 	}
+	
 }
 	

@@ -67,6 +67,8 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
     switch (eClass.getClassifierID())
     {
       case VertigoDslPackage.MODEL: return createModel();
+      case VertigoDslPackage.PACKAGE_STRING: return createPackageString();
+      case VertigoDslPackage.KEYWORDID: return createKEYWORDID();
       case VertigoDslPackage.ELEMENT: return createElement();
       case VertigoDslPackage.DECLARED_DOMAIN: return createDeclaredDomain();
       case VertigoDslPackage.DECLARED_DT_DEFINITION: return createDeclaredDtDefinition();
@@ -75,6 +77,7 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.FORMATTER: return createFormatter();
       case VertigoDslPackage.DOMAIN: return createDomain();
       case VertigoDslPackage.DOMAIN_TYPE: return createDomainType();
+      case VertigoDslPackage.REF_TO_DOMAIN_TYPE: return createRefToDomainType();
       case VertigoDslPackage.DT_DEFINITION_ID_STRING: return createDtDefinitionIdString();
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING: return createDtDefinitionDataFieldString();
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING: return createDtDefinitionComputedFieldString();
@@ -92,6 +95,7 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.TASK_ATTRIBUTE: return createTaskAttribute();
       case VertigoDslPackage.TASK_DATA_SPACE: return createTaskDataSpace();
       case VertigoDslPackage.TASK_DEFINITION: return createTaskDefinition();
+      case VertigoDslPackage.DT_DEFINITION_ACTION: return createDtDefinitionAction();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -152,6 +156,28 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     ModelImpl model = new ModelImpl();
     return model;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public PackageString createPackageString()
+  {
+    PackageStringImpl packageString = new PackageStringImpl();
+    return packageString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public KEYWORDID createKEYWORDID()
+  {
+    KEYWORDIDImpl keywordid = new KEYWORDIDImpl();
+    return keywordid;
   }
 
   /**
@@ -240,6 +266,17 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     DomainTypeImpl domainType = new DomainTypeImpl();
     return domainType;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public RefToDomainType createRefToDomainType()
+  {
+    RefToDomainTypeImpl refToDomainType = new RefToDomainTypeImpl();
+    return refToDomainType;
   }
 
   /**
@@ -427,6 +464,17 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     TaskDefinitionImpl taskDefinition = new TaskDefinitionImpl();
     return taskDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DtDefinitionAction createDtDefinitionAction()
+  {
+    DtDefinitionActionImpl dtDefinitionAction = new DtDefinitionActionImpl();
+    return dtDefinitionAction;
   }
 
   /**

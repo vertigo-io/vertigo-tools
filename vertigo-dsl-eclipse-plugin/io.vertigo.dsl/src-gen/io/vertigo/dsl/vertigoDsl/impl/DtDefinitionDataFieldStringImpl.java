@@ -4,11 +4,12 @@
 package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.BooleanString;
-import io.vertigo.dsl.vertigoDsl.DomainType;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString;
+import io.vertigo.dsl.vertigoDsl.RefToDomainType;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -24,7 +25,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getDomainType <em>Domain Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getLabel <em>Label</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getRequired <em>Required</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getPersistent <em>Persistent</em>}</li>
@@ -35,14 +36,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Container implements DtDefinitionDataFieldString
 {
   /**
-   * The cached value of the '{@link #getDomainType() <em>Domain Type</em>}' reference.
+   * The cached value of the '{@link #getRefToDomainType() <em>Ref To Domain Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDomainType()
+   * @see #getRefToDomainType()
    * @generated
    * @ordered
    */
-  protected DomainType domainType;
+  protected RefToDomainType refToDomainType;
 
   /**
    * The default value of the '{@link #getLabel() <em>Label</em>}' attribute.
@@ -130,19 +131,9 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
    * <!-- end-user-doc -->
    * @generated
    */
-  public DomainType getDomainType()
+  public RefToDomainType getRefToDomainType()
   {
-    if (domainType != null && domainType.eIsProxy())
-    {
-      InternalEObject oldDomainType = (InternalEObject)domainType;
-      domainType = (DomainType)eResolveProxy(oldDomainType);
-      if (domainType != oldDomainType)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__DOMAIN_TYPE, oldDomainType, domainType));
-      }
-    }
-    return domainType;
+    return refToDomainType;
   }
 
   /**
@@ -150,22 +141,37 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
    * <!-- end-user-doc -->
    * @generated
    */
-  public DomainType basicGetDomainType()
+  public NotificationChain basicSetRefToDomainType(RefToDomainType newRefToDomainType, NotificationChain msgs)
   {
-    return domainType;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDomainType(DomainType newDomainType)
-  {
-    DomainType oldDomainType = domainType;
-    domainType = newDomainType;
+    RefToDomainType oldRefToDomainType = refToDomainType;
+    refToDomainType = newRefToDomainType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__DOMAIN_TYPE, oldDomainType, domainType));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE, oldRefToDomainType, newRefToDomainType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefToDomainType(RefToDomainType newRefToDomainType)
+  {
+    if (newRefToDomainType != refToDomainType)
+    {
+      NotificationChain msgs = null;
+      if (refToDomainType != null)
+        msgs = ((InternalEObject)refToDomainType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE, null, msgs);
+      if (newRefToDomainType != null)
+        msgs = ((InternalEObject)newRefToDomainType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE, null, msgs);
+      msgs = basicSetRefToDomainType(newRefToDomainType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE, newRefToDomainType, newRefToDomainType));
   }
 
   /**
@@ -243,13 +249,28 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
    * @generated
    */
   @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE:
+        return basicSetRefToDomainType(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__DOMAIN_TYPE:
-        if (resolve) return getDomainType();
-        return basicGetDomainType();
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE:
+        return getRefToDomainType();
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__LABEL:
         return getLabel();
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REQUIRED:
@@ -270,8 +291,8 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__DOMAIN_TYPE:
-        setDomainType((DomainType)newValue);
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE:
+        setRefToDomainType((RefToDomainType)newValue);
         return;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__LABEL:
         setLabel((String)newValue);
@@ -296,8 +317,8 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__DOMAIN_TYPE:
-        setDomainType((DomainType)null);
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE:
+        setRefToDomainType((RefToDomainType)null);
         return;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__LABEL:
         setLabel(LABEL_EDEFAULT);
@@ -322,8 +343,8 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__DOMAIN_TYPE:
-        return domainType != null;
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE:
+        return refToDomainType != null;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__LABEL:
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REQUIRED:

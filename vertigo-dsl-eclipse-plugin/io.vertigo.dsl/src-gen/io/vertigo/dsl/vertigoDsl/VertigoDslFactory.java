@@ -33,6 +33,24 @@ public interface VertigoDslFactory extends EFactory
   Model createModel();
 
   /**
+   * Returns a new object of class '<em>Package String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Package String</em>'.
+   * @generated
+   */
+  PackageString createPackageString();
+
+  /**
+   * Returns a new object of class '<em>KEYWORDID</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>KEYWORDID</em>'.
+   * @generated
+   */
+  KEYWORDID createKEYWORDID();
+
+  /**
    * Returns a new object of class '<em>Element</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -103,6 +121,15 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   DomainType createDomainType();
+
+  /**
+   * Returns a new object of class '<em>Ref To Domain Type</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Ref To Domain Type</em>'.
+   * @generated
+   */
+  RefToDomainType createRefToDomainType();
 
   /**
    * Returns a new object of class '<em>Dt Definition Id String</em>'.
@@ -256,6 +283,15 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   TaskDefinition createTaskDefinition();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Action</em>'.
+   * @generated
+   */
+  DtDefinitionAction createDtDefinitionAction();
 
   /**
    * Returns the package supported by this factory.

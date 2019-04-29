@@ -5,10 +5,12 @@ package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.Element;
 import io.vertigo.dsl.vertigoDsl.Model;
+import io.vertigo.dsl.vertigoDsl.PackageString;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import java.util.Collection;
 
+import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -16,9 +18,9 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EDataTypeEList;
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
@@ -30,8 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.ModelImpl#getPackage <em>Package</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.ModelImpl#getPackages <em>Packages</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.ModelImpl#getPackageString <em>Package String</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.ModelImpl#getElements <em>Elements</em>}</li>
  * </ul>
  *
@@ -40,24 +41,14 @@ import org.eclipse.emf.ecore.util.InternalEList;
 public class ModelImpl extends MinimalEObjectImpl.Container implements Model
 {
   /**
-   * The cached value of the '{@link #getPackage() <em>Package</em>}' attribute list.
+   * The cached value of the '{@link #getPackageString() <em>Package String</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getPackage()
+   * @see #getPackageString()
    * @generated
    * @ordered
    */
-  protected EList<String> package_;
-
-  /**
-   * The cached value of the '{@link #getPackages() <em>Packages</em>}' attribute list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getPackages()
-   * @generated
-   * @ordered
-   */
-  protected EList<String> packages;
+  protected PackageString packageString;
 
   /**
    * The cached value of the '{@link #getElements() <em>Elements</em>}' containment reference list.
@@ -95,13 +86,9 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getPackage()
+  public PackageString getPackageString()
   {
-    if (package_ == null)
-    {
-      package_ = new EDataTypeEList<String>(String.class, this, VertigoDslPackage.MODEL__PACKAGE);
-    }
-    return package_;
+    return packageString;
   }
 
   /**
@@ -109,13 +96,37 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<String> getPackages()
+  public NotificationChain basicSetPackageString(PackageString newPackageString, NotificationChain msgs)
   {
-    if (packages == null)
+    PackageString oldPackageString = packageString;
+    packageString = newPackageString;
+    if (eNotificationRequired())
     {
-      packages = new EDataTypeEList<String>(String.class, this, VertigoDslPackage.MODEL__PACKAGES);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.MODEL__PACKAGE_STRING, oldPackageString, newPackageString);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
     }
-    return packages;
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPackageString(PackageString newPackageString)
+  {
+    if (newPackageString != packageString)
+    {
+      NotificationChain msgs = null;
+      if (packageString != null)
+        msgs = ((InternalEObject)packageString).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.MODEL__PACKAGE_STRING, null, msgs);
+      if (newPackageString != null)
+        msgs = ((InternalEObject)newPackageString).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.MODEL__PACKAGE_STRING, null, msgs);
+      msgs = basicSetPackageString(newPackageString, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.MODEL__PACKAGE_STRING, newPackageString, newPackageString));
   }
 
   /**
@@ -142,6 +153,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
+      case VertigoDslPackage.MODEL__PACKAGE_STRING:
+        return basicSetPackageString(null, msgs);
       case VertigoDslPackage.MODEL__ELEMENTS:
         return ((InternalEList<?>)getElements()).basicRemove(otherEnd, msgs);
     }
@@ -158,10 +171,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case VertigoDslPackage.MODEL__PACKAGE:
-        return getPackage();
-      case VertigoDslPackage.MODEL__PACKAGES:
-        return getPackages();
+      case VertigoDslPackage.MODEL__PACKAGE_STRING:
+        return getPackageString();
       case VertigoDslPackage.MODEL__ELEMENTS:
         return getElements();
     }
@@ -179,13 +190,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case VertigoDslPackage.MODEL__PACKAGE:
-        getPackage().clear();
-        getPackage().addAll((Collection<? extends String>)newValue);
-        return;
-      case VertigoDslPackage.MODEL__PACKAGES:
-        getPackages().clear();
-        getPackages().addAll((Collection<? extends String>)newValue);
+      case VertigoDslPackage.MODEL__PACKAGE_STRING:
+        setPackageString((PackageString)newValue);
         return;
       case VertigoDslPackage.MODEL__ELEMENTS:
         getElements().clear();
@@ -205,11 +211,8 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case VertigoDslPackage.MODEL__PACKAGE:
-        getPackage().clear();
-        return;
-      case VertigoDslPackage.MODEL__PACKAGES:
-        getPackages().clear();
+      case VertigoDslPackage.MODEL__PACKAGE_STRING:
+        setPackageString((PackageString)null);
         return;
       case VertigoDslPackage.MODEL__ELEMENTS:
         getElements().clear();
@@ -228,33 +231,12 @@ public class ModelImpl extends MinimalEObjectImpl.Container implements Model
   {
     switch (featureID)
     {
-      case VertigoDslPackage.MODEL__PACKAGE:
-        return package_ != null && !package_.isEmpty();
-      case VertigoDslPackage.MODEL__PACKAGES:
-        return packages != null && !packages.isEmpty();
+      case VertigoDslPackage.MODEL__PACKAGE_STRING:
+        return packageString != null;
       case VertigoDslPackage.MODEL__ELEMENTS:
         return elements != null && !elements.isEmpty();
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (package: ");
-    result.append(package_);
-    result.append(", packages: ");
-    result.append(packages);
-    result.append(')');
-    return result.toString();
   }
 
 } //ModelImpl

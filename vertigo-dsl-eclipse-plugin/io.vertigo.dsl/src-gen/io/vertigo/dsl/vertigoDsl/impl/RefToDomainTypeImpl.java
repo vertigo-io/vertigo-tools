@@ -3,56 +3,49 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
+import io.vertigo.dsl.vertigoDsl.DomainType;
+import io.vertigo.dsl.vertigoDsl.RefToDomainType;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Declared Domain</b></em>'.
+ * An implementation of the model object '<em><b>Ref To Domain Type</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DeclaredDomainImpl#getName <em>Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.RefToDomainTypeImpl#getRef <em>Ref</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
+public class RefToDomainTypeImpl extends MinimalEObjectImpl.Container implements RefToDomainType
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getRef() <em>Ref</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getRef()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected DomainType ref;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DeclaredDomainImpl()
+  protected RefToDomainTypeImpl()
   {
     super();
   }
@@ -65,7 +58,7 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   @Override
   protected EClass eStaticClass()
   {
-    return VertigoDslPackage.Literals.DECLARED_DOMAIN;
+    return VertigoDslPackage.Literals.REF_TO_DOMAIN_TYPE;
   }
 
   /**
@@ -73,9 +66,19 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public DomainType getRef()
   {
-    return name;
+    if (ref != null && ref.eIsProxy())
+    {
+      InternalEObject oldRef = (InternalEObject)ref;
+      ref = (DomainType)eResolveProxy(oldRef);
+      if (ref != oldRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VertigoDslPackage.REF_TO_DOMAIN_TYPE__REF, oldRef, ref));
+      }
+    }
+    return ref;
   }
 
   /**
@@ -83,12 +86,22 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public DomainType basicGetRef()
   {
-    String oldName = name;
-    name = newName;
+    return ref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRef(DomainType newRef)
+  {
+    DomainType oldRef = ref;
+    ref = newRef;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DECLARED_DOMAIN__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.REF_TO_DOMAIN_TYPE__REF, oldRef, ref));
   }
 
   /**
@@ -101,8 +114,9 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DECLARED_DOMAIN__NAME:
-        return getName();
+      case VertigoDslPackage.REF_TO_DOMAIN_TYPE__REF:
+        if (resolve) return getRef();
+        return basicGetRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +131,8 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DECLARED_DOMAIN__NAME:
-        setName((String)newValue);
+      case VertigoDslPackage.REF_TO_DOMAIN_TYPE__REF:
+        setRef((DomainType)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +148,8 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DECLARED_DOMAIN__NAME:
-        setName(NAME_EDEFAULT);
+      case VertigoDslPackage.REF_TO_DOMAIN_TYPE__REF:
+        setRef((DomainType)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,27 +165,10 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DECLARED_DOMAIN__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case VertigoDslPackage.REF_TO_DOMAIN_TYPE__REF:
+        return ref != null;
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
-
-} //DeclaredDomainImpl
+} //RefToDomainTypeImpl

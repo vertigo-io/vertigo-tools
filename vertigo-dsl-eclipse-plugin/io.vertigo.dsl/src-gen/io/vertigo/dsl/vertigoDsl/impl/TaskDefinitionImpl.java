@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getClassname <em>Classname</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getRequest <em>Request</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getTaskAttributes <em>Task Attributes</em>}</li>
@@ -41,6 +42,26 @@ import org.eclipse.emf.ecore.util.InternalEList;
  */
 public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getClassname() <em>Classname</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -120,6 +141,29 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   protected EClass eStaticClass()
   {
     return VertigoDslPackage.Literals.TASK_DEFINITION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_DEFINITION__NAME, oldName, name));
   }
 
   /**
@@ -258,6 +302,8 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
+      case VertigoDslPackage.TASK_DEFINITION__NAME:
+        return getName();
       case VertigoDslPackage.TASK_DEFINITION__CLASSNAME:
         return getClassname();
       case VertigoDslPackage.TASK_DEFINITION__REQUEST:
@@ -281,6 +327,9 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
+      case VertigoDslPackage.TASK_DEFINITION__NAME:
+        setName((String)newValue);
+        return;
       case VertigoDslPackage.TASK_DEFINITION__CLASSNAME:
         setClassname((String)newValue);
         return;
@@ -308,6 +357,9 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
+      case VertigoDslPackage.TASK_DEFINITION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case VertigoDslPackage.TASK_DEFINITION__CLASSNAME:
         setClassname(CLASSNAME_EDEFAULT);
         return;
@@ -334,6 +386,8 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
+      case VertigoDslPackage.TASK_DEFINITION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case VertigoDslPackage.TASK_DEFINITION__CLASSNAME:
         return CLASSNAME_EDEFAULT == null ? classname != null : !CLASSNAME_EDEFAULT.equals(classname);
       case VertigoDslPackage.TASK_DEFINITION__REQUEST:
@@ -357,7 +411,9 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (classname: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", classname: ");
     result.append(classname);
     result.append(", request: ");
     result.append(request);

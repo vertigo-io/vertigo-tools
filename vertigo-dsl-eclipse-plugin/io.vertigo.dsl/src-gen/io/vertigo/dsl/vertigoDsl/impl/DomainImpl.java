@@ -31,6 +31,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getDataType <em>Data Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getFormatter <em>Formatter</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getStoreType <em>Store Type</em>}</li>
@@ -45,6 +46,26 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  */
 public class DomainImpl extends ElementImpl implements Domain
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -194,6 +215,29 @@ public class DomainImpl extends ElementImpl implements Domain
   protected EClass eStaticClass()
   {
     return VertigoDslPackage.Literals.DOMAIN;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__NAME, oldName, name));
   }
 
   /**
@@ -392,6 +436,8 @@ public class DomainImpl extends ElementImpl implements Domain
   {
     switch (featureID)
     {
+      case VertigoDslPackage.DOMAIN__NAME:
+        return getName();
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         return getDataType();
       case VertigoDslPackage.DOMAIN__FORMATTER:
@@ -424,6 +470,9 @@ public class DomainImpl extends ElementImpl implements Domain
   {
     switch (featureID)
     {
+      case VertigoDslPackage.DOMAIN__NAME:
+        setName((String)newValue);
+        return;
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         setDataType((DataType)newValue);
         return;
@@ -464,6 +513,9 @@ public class DomainImpl extends ElementImpl implements Domain
   {
     switch (featureID)
     {
+      case VertigoDslPackage.DOMAIN__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         setDataType(DATA_TYPE_EDEFAULT);
         return;
@@ -502,6 +554,8 @@ public class DomainImpl extends ElementImpl implements Domain
   {
     switch (featureID)
     {
+      case VertigoDslPackage.DOMAIN__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         return dataType != DATA_TYPE_EDEFAULT;
       case VertigoDslPackage.DOMAIN__FORMATTER:
@@ -533,7 +587,9 @@ public class DomainImpl extends ElementImpl implements Domain
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (dataType: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", dataType: ");
     result.append(dataType);
     result.append(", storeType: ");
     result.append(storeType);

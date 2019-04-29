@@ -24,6 +24,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * The following features are implemented:
  * </p>
  * <ul>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl#getFkFieldName <em>Fk Field Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl#getDtDefinitionA <em>Dt Definition A</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl#getDtDefinitionB <em>Dt Definition B</em>}</li>
@@ -42,6 +43,26 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  */
 public class AssociationImpl extends ElementImpl implements Association
 {
+  /**
+   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected static final String NAME_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getName()
+   * @generated
+   * @ordered
+   */
+  protected String name = NAME_EDEFAULT;
+
   /**
    * The default value of the '{@link #getFkFieldName() <em>Fk Field Name</em>}' attribute.
    * <!-- begin-user-doc -->
@@ -281,6 +302,29 @@ public class AssociationImpl extends ElementImpl implements Association
   protected EClass eStaticClass()
   {
     return VertigoDslPackage.Literals.ASSOCIATION;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String getName()
+  {
+    return name;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setName(String newName)
+  {
+    String oldName = name;
+    name = newName;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ASSOCIATION__NAME, oldName, name));
   }
 
   /**
@@ -609,6 +653,8 @@ public class AssociationImpl extends ElementImpl implements Association
   {
     switch (featureID)
     {
+      case VertigoDslPackage.ASSOCIATION__NAME:
+        return getName();
       case VertigoDslPackage.ASSOCIATION__FK_FIELD_NAME:
         return getFkFieldName();
       case VertigoDslPackage.ASSOCIATION__DT_DEFINITION_A:
@@ -649,6 +695,9 @@ public class AssociationImpl extends ElementImpl implements Association
   {
     switch (featureID)
     {
+      case VertigoDslPackage.ASSOCIATION__NAME:
+        setName((String)newValue);
+        return;
       case VertigoDslPackage.ASSOCIATION__FK_FIELD_NAME:
         setFkFieldName((String)newValue);
         return;
@@ -699,6 +748,9 @@ public class AssociationImpl extends ElementImpl implements Association
   {
     switch (featureID)
     {
+      case VertigoDslPackage.ASSOCIATION__NAME:
+        setName(NAME_EDEFAULT);
+        return;
       case VertigoDslPackage.ASSOCIATION__FK_FIELD_NAME:
         setFkFieldName(FK_FIELD_NAME_EDEFAULT);
         return;
@@ -749,6 +801,8 @@ public class AssociationImpl extends ElementImpl implements Association
   {
     switch (featureID)
     {
+      case VertigoDslPackage.ASSOCIATION__NAME:
+        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case VertigoDslPackage.ASSOCIATION__FK_FIELD_NAME:
         return FK_FIELD_NAME_EDEFAULT == null ? fkFieldName != null : !FK_FIELD_NAME_EDEFAULT.equals(fkFieldName);
       case VertigoDslPackage.ASSOCIATION__DT_DEFINITION_A:
@@ -788,7 +842,9 @@ public class AssociationImpl extends ElementImpl implements Association
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (fkFieldName: ");
+    result.append(" (name: ");
+    result.append(name);
+    result.append(", fkFieldName: ");
     result.append(fkFieldName);
     result.append(", navigabilityA: ");
     result.append(navigabilityA);

@@ -6,6 +6,7 @@ package io.vertigo.dsl.services;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import java.util.List;
+import org.eclipse.xtext.Action;
 import org.eclipse.xtext.Alternatives;
 import org.eclipse.xtext.Assignment;
 import org.eclipse.xtext.CrossReference;
@@ -31,49 +32,91 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.Model");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cPackageKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cPackageAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cPackageIDTerminalRuleCall_1_0 = (RuleCall)cPackageAssignment_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cGroup.eContents().get(2);
-		private final Keyword cFullStopKeyword_2_0 = (Keyword)cGroup_2.eContents().get(0);
-		private final Assignment cPackagesAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
-		private final RuleCall cPackagesIDTerminalRuleCall_2_1_0 = (RuleCall)cPackagesAssignment_2_1.eContents().get(0);
-		private final Assignment cElementsAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cElementsElementParserRuleCall_3_0 = (RuleCall)cElementsAssignment_3.eContents().get(0);
+		private final Assignment cPackageStringAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cPackageStringPackageStringParserRuleCall_1_0 = (RuleCall)cPackageStringAssignment_1.eContents().get(0);
+		private final Assignment cElementsAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cElementsElementParserRuleCall_2_0 = (RuleCall)cElementsAssignment_2.eContents().get(0);
 		
 		//Model:
-		//	'package' package+=ID ("."+ packages+=ID)*
+		//	'package' packageString=PackageString
 		//	elements+=Element*;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'package' package+=ID ("."+ packages+=ID)* elements+=Element*
+		//'package' packageString=PackageString elements+=Element*
 		public Group getGroup() { return cGroup; }
 		
 		//'package'
 		public Keyword getPackageKeyword_0() { return cPackageKeyword_0; }
 		
-		//package+=ID
-		public Assignment getPackageAssignment_1() { return cPackageAssignment_1; }
+		//packageString=PackageString
+		public Assignment getPackageStringAssignment_1() { return cPackageStringAssignment_1; }
 		
-		//ID
-		public RuleCall getPackageIDTerminalRuleCall_1_0() { return cPackageIDTerminalRuleCall_1_0; }
-		
-		//("."+ packages+=ID)*
-		public Group getGroup_2() { return cGroup_2; }
-		
-		//"."+
-		public Keyword getFullStopKeyword_2_0() { return cFullStopKeyword_2_0; }
-		
-		//packages+=ID
-		public Assignment getPackagesAssignment_2_1() { return cPackagesAssignment_2_1; }
-		
-		//ID
-		public RuleCall getPackagesIDTerminalRuleCall_2_1_0() { return cPackagesIDTerminalRuleCall_2_1_0; }
+		//PackageString
+		public RuleCall getPackageStringPackageStringParserRuleCall_1_0() { return cPackageStringPackageStringParserRuleCall_1_0; }
 		
 		//elements+=Element*
-		public Assignment getElementsAssignment_3() { return cElementsAssignment_3; }
+		public Assignment getElementsAssignment_2() { return cElementsAssignment_2; }
 		
 		//Element
-		public RuleCall getElementsElementParserRuleCall_3_0() { return cElementsElementParserRuleCall_3_0; }
+		public RuleCall getElementsElementParserRuleCall_2_0() { return cElementsElementParserRuleCall_2_0; }
+	}
+	public class PackageStringElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.PackageString");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cPackageAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final RuleCall cPackageKEYWORDIDParserRuleCall_0_0 = (RuleCall)cPackageAssignment_0.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cPackagesAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cPackagesKEYWORDIDParserRuleCall_1_1_0 = (RuleCall)cPackagesAssignment_1_1.eContents().get(0);
+		
+		//PackageString:
+		//	package+=KEYWORDID ("."+ packages+=KEYWORDID)*;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//package+=KEYWORDID ("."+ packages+=KEYWORDID)*
+		public Group getGroup() { return cGroup; }
+		
+		//package+=KEYWORDID
+		public Assignment getPackageAssignment_0() { return cPackageAssignment_0; }
+		
+		//KEYWORDID
+		public RuleCall getPackageKEYWORDIDParserRuleCall_0_0() { return cPackageKEYWORDIDParserRuleCall_0_0; }
+		
+		//("."+ packages+=KEYWORDID)*
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//"."+
+		public Keyword getFullStopKeyword_1_0() { return cFullStopKeyword_1_0; }
+		
+		//packages+=KEYWORDID
+		public Assignment getPackagesAssignment_1_1() { return cPackagesAssignment_1_1; }
+		
+		//KEYWORDID
+		public RuleCall getPackagesKEYWORDIDParserRuleCall_1_1_0() { return cPackagesKEYWORDIDParserRuleCall_1_1_0; }
+	}
+	public class KEYWORDIDElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.KEYWORDID");
+		private final Assignment cKeywordIDAssignment = (Assignment)rule.eContents().get(1);
+		private final Alternatives cKeywordIDAlternatives_0 = (Alternatives)cKeywordIDAssignment.eContents().get(0);
+		private final RuleCall cKeywordIDIDTerminalRuleCall_0_0 = (RuleCall)cKeywordIDAlternatives_0.eContents().get(0);
+		private final Keyword cKeywordIDDomainKeyword_0_1 = (Keyword)cKeywordIDAlternatives_0.eContents().get(1);
+		
+		//KEYWORDID:
+		//	keywordID=(ID | 'domain');
+		@Override public ParserRule getRule() { return rule; }
+		
+		//keywordID=(ID | 'domain')
+		public Assignment getKeywordIDAssignment() { return cKeywordIDAssignment; }
+		
+		//(ID | 'domain')
+		public Alternatives getKeywordIDAlternatives_0() { return cKeywordIDAlternatives_0; }
+		
+		//ID
+		public RuleCall getKeywordIDIDTerminalRuleCall_0_0() { return cKeywordIDIDTerminalRuleCall_0_0; }
+		
+		//'domain'
+		public Keyword getKeywordIDDomainKeyword_0_1() { return cKeywordIDDomainKeyword_0_1; }
 	}
 	public class ElementElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.Element");
@@ -638,22 +681,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDomainParserRuleCall_0 = (RuleCall)cAlternatives.eContents().get(0);
 		private final RuleCall cDeclaredDomainParserRuleCall_1 = (RuleCall)cAlternatives.eContents().get(1);
 		
-		///*
-		//IdFieldString:
-		//	//'{' ('label:' label=STRING) '}';
-		//	'{' ('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) '}';
-		//*/ // old
-		///*
-		//DtDefinitionIdString:
-		//	'{' ('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) '}';
-		//
-		//DtDefinitionDataFieldString:
-		//	'{' (('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) & ('required:' required=BooleanString) & ('persistent:' persistent=BooleanString)?) '}';
-		//
-		//DtDefinitionComputedFieldString:
-		//	'{' (('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) & ('expression:' expressionString=STRING)) '}';
-		//
-		//*/ DomainType:
+		//DomainType:
 		//	Domain | DeclaredDomain;
 		@Override public ParserRule getRule() { return rule; }
 		
@@ -666,6 +694,33 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//DeclaredDomain
 		public RuleCall getDeclaredDomainParserRuleCall_1() { return cDeclaredDomainParserRuleCall_1; }
 	}
+	public class RefToDomainTypeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.RefToDomainType");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Action cRefToDomainTypeAction_0 = (Action)cGroup.eContents().get(0);
+		private final Assignment cRefAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final CrossReference cRefDomainTypeCrossReference_1_0 = (CrossReference)cRefAssignment_1.eContents().get(0);
+		private final RuleCall cRefDomainTypeIDTerminalRuleCall_1_0_1 = (RuleCall)cRefDomainTypeCrossReference_1_0.eContents().get(1);
+		
+		//RefToDomainType:
+		//	{RefToDomainType} ref=[DomainType];
+		@Override public ParserRule getRule() { return rule; }
+		
+		//{RefToDomainType} ref=[DomainType]
+		public Group getGroup() { return cGroup; }
+		
+		//{RefToDomainType}
+		public Action getRefToDomainTypeAction_0() { return cRefToDomainTypeAction_0; }
+		
+		//ref=[DomainType]
+		public Assignment getRefAssignment_1() { return cRefAssignment_1; }
+		
+		//[DomainType]
+		public CrossReference getRefDomainTypeCrossReference_1_0() { return cRefDomainTypeCrossReference_1_0; }
+		
+		//ID
+		public RuleCall getRefDomainTypeIDTerminalRuleCall_1_0_1() { return cRefDomainTypeIDTerminalRuleCall_1_0_1; }
+	}
 	public class DtDefinitionIdStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.DtDefinitionIdString");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -674,9 +729,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0 = (Group)cUnorderedGroup_1.eContents().get(0);
 		private final Keyword cDomainKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
 		private final Keyword cColonKeyword_1_0_1 = (Keyword)cGroup_1_0.eContents().get(1);
-		private final Assignment cDomainTypeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
-		private final CrossReference cDomainTypeDomainTypeCrossReference_1_0_2_0 = (CrossReference)cDomainTypeAssignment_1_0_2.eContents().get(0);
-		private final RuleCall cDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1 = (RuleCall)cDomainTypeDomainTypeCrossReference_1_0_2_0.eContents().get(1);
+		private final Assignment cRefToDomainTypeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
+		private final RuleCall cRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0 = (RuleCall)cRefToDomainTypeAssignment_1_0_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_0_3 = (Keyword)cGroup_1_0.eContents().get(3);
 		private final Group cGroup_1_1 = (Group)cUnorderedGroup_1.eContents().get(1);
 		private final Keyword cLabelKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
@@ -686,20 +740,22 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cCommaKeyword_1_1_3 = (Keyword)cGroup_1_1.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
-		//DtDefinitionIdString:
-		//	'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','?) '}';
+		///*
+		// * '{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
+		// */ DtDefinitionIdString:
+		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','?) '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','?) '}'
+		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','?) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
-		//'domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','?
+		//'domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','?
 		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
 		
-		//'domain' ':' domainType=[DomainType] ','?
+		//'domain' ':' refToDomainType=RefToDomainType ','?
 		public Group getGroup_1_0() { return cGroup_1_0; }
 		
 		//'domain'
@@ -708,14 +764,11 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//':'
 		public Keyword getColonKeyword_1_0_1() { return cColonKeyword_1_0_1; }
 		
-		//domainType=[DomainType]
-		public Assignment getDomainTypeAssignment_1_0_2() { return cDomainTypeAssignment_1_0_2; }
+		//refToDomainType=RefToDomainType
+		public Assignment getRefToDomainTypeAssignment_1_0_2() { return cRefToDomainTypeAssignment_1_0_2; }
 		
-		//[DomainType]
-		public CrossReference getDomainTypeDomainTypeCrossReference_1_0_2_0() { return cDomainTypeDomainTypeCrossReference_1_0_2_0; }
-		
-		//ID
-		public RuleCall getDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1() { return cDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1; }
+		//RefToDomainType
+		public RuleCall getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0() { return cRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0; }
 		
 		//','?
 		public Keyword getCommaKeyword_1_0_3() { return cCommaKeyword_1_0_3; }
@@ -749,9 +802,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0 = (Group)cUnorderedGroup_1.eContents().get(0);
 		private final Keyword cDomainKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
 		private final Keyword cColonKeyword_1_0_1 = (Keyword)cGroup_1_0.eContents().get(1);
-		private final Assignment cDomainTypeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
-		private final CrossReference cDomainTypeDomainTypeCrossReference_1_0_2_0 = (CrossReference)cDomainTypeAssignment_1_0_2.eContents().get(0);
-		private final RuleCall cDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1 = (RuleCall)cDomainTypeDomainTypeCrossReference_1_0_2_0.eContents().get(1);
+		private final Assignment cRefToDomainTypeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
+		private final RuleCall cRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0 = (RuleCall)cRefToDomainTypeAssignment_1_0_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_0_3 = (Keyword)cGroup_1_0.eContents().get(3);
 		private final Group cGroup_1_1 = (Group)cUnorderedGroup_1.eContents().get(1);
 		private final Keyword cLabelKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
@@ -774,22 +826,22 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//DtDefinitionDataFieldString:
-		//	'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':'
+		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':'
 		//	required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString
-		//','? & ('persistent' ':' persistent=BooleanString ','?)?) '}'
+		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':'
+		//required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
-		//'domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString ','? &
-		//('persistent' ':' persistent=BooleanString ','?)?
+		//'domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':'
+		//required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','?)?
 		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
 		
-		//'domain' ':' domainType=[DomainType] ','?
+		//'domain' ':' refToDomainType=RefToDomainType ','?
 		public Group getGroup_1_0() { return cGroup_1_0; }
 		
 		//'domain'
@@ -798,14 +850,11 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//':'
 		public Keyword getColonKeyword_1_0_1() { return cColonKeyword_1_0_1; }
 		
-		//domainType=[DomainType]
-		public Assignment getDomainTypeAssignment_1_0_2() { return cDomainTypeAssignment_1_0_2; }
+		//refToDomainType=RefToDomainType
+		public Assignment getRefToDomainTypeAssignment_1_0_2() { return cRefToDomainTypeAssignment_1_0_2; }
 		
-		//[DomainType]
-		public CrossReference getDomainTypeDomainTypeCrossReference_1_0_2_0() { return cDomainTypeDomainTypeCrossReference_1_0_2_0; }
-		
-		//ID
-		public RuleCall getDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1() { return cDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1; }
+		//RefToDomainType
+		public RuleCall getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0() { return cRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0; }
 		
 		//','?
 		public Keyword getCommaKeyword_1_0_3() { return cCommaKeyword_1_0_3; }
@@ -875,9 +924,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup_1_0 = (Group)cUnorderedGroup_1.eContents().get(0);
 		private final Keyword cDomainKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
 		private final Keyword cColonKeyword_1_0_1 = (Keyword)cGroup_1_0.eContents().get(1);
-		private final Assignment cDomainTypeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
-		private final CrossReference cDomainTypeDomainTypeCrossReference_1_0_2_0 = (CrossReference)cDomainTypeAssignment_1_0_2.eContents().get(0);
-		private final RuleCall cDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1 = (RuleCall)cDomainTypeDomainTypeCrossReference_1_0_2_0.eContents().get(1);
+		private final Assignment cRefToDomainTypeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
+		private final RuleCall cRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0 = (RuleCall)cRefToDomainTypeAssignment_1_0_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_0_3 = (Keyword)cGroup_1_0.eContents().get(3);
 		private final Group cGroup_1_1 = (Group)cUnorderedGroup_1.eContents().get(1);
 		private final Keyword cLabelKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
@@ -894,22 +942,22 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//DtDefinitionComputedFieldString:
-		//	'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'expression' ':'
+		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'expression' ':'
 		//	expressionString=STRING ','?) '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'expression' ':'
+		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'expression' ':'
 		//expressionString=STRING ','?) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
-		//'domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'expression' ':' expressionString=STRING
-		//','?
+		//'domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'expression' ':'
+		//expressionString=STRING ','?
 		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
 		
-		//'domain' ':' domainType=[DomainType] ','?
+		//'domain' ':' refToDomainType=RefToDomainType ','?
 		public Group getGroup_1_0() { return cGroup_1_0; }
 		
 		//'domain'
@@ -918,14 +966,11 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//':'
 		public Keyword getColonKeyword_1_0_1() { return cColonKeyword_1_0_1; }
 		
-		//domainType=[DomainType]
-		public Assignment getDomainTypeAssignment_1_0_2() { return cDomainTypeAssignment_1_0_2; }
+		//refToDomainType=RefToDomainType
+		public Assignment getRefToDomainTypeAssignment_1_0_2() { return cRefToDomainTypeAssignment_1_0_2; }
 		
-		//[DomainType]
-		public CrossReference getDomainTypeDomainTypeCrossReference_1_0_2_0() { return cDomainTypeDomainTypeCrossReference_1_0_2_0; }
-		
-		//ID
-		public RuleCall getDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1() { return cDomainTypeDomainTypeIDTerminalRuleCall_1_0_2_0_1; }
+		//RefToDomainType
+		public RuleCall getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0() { return cRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0; }
 		
 		//','?
 		public Keyword getCommaKeyword_1_0_3() { return cCommaKeyword_1_0_3; }
@@ -1228,32 +1273,33 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	public class DtDefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.DtDefinition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Keyword cCreateKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
-		private final Keyword cAlterKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
-		private final Keyword cDtDefinitionKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cDtDefinitionStereotypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0 = (RuleCall)cDtDefinitionStereotypeAssignment_4.eContents().get(0);
-		private final Assignment cDtDefinitionIdFieldAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_5_0 = (RuleCall)cDtDefinitionIdFieldAssignment_5.eContents().get(0);
-		private final Assignment cDtDefinitionDataFieldsAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_6_0 = (RuleCall)cDtDefinitionDataFieldsAssignment_6.eContents().get(0);
-		private final Assignment cDtDefinitionComputedFieldsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_7_0 = (RuleCall)cDtDefinitionComputedFieldsAssignment_7.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_8 = (UnorderedGroup)cGroup.eContents().get(8);
-		private final Assignment cDtDefinitionDataSpaceAssignment_8_0 = (Assignment)cUnorderedGroup_8.eContents().get(0);
-		private final RuleCall cDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_8_0_0 = (RuleCall)cDtDefinitionDataSpaceAssignment_8_0.eContents().get(0);
-		private final Assignment cDtDefinitionSortFieldAssignment_8_1 = (Assignment)cUnorderedGroup_8.eContents().get(1);
-		private final RuleCall cDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_8_1_0 = (RuleCall)cDtDefinitionSortFieldAssignment_8_1.eContents().get(0);
-		private final Assignment cDtDefinitionDisplayFieldAssignment_8_2 = (Assignment)cUnorderedGroup_8.eContents().get(2);
-		private final RuleCall cDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0 = (RuleCall)cDtDefinitionDisplayFieldAssignment_8_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
+		private final Action cDtDefinitionActionAction_0 = (Action)cGroup.eContents().get(0);
+		private final Alternatives cAlternatives_1 = (Alternatives)cGroup.eContents().get(1);
+		private final Keyword cCreateKeyword_1_0 = (Keyword)cAlternatives_1.eContents().get(0);
+		private final Keyword cAlterKeyword_1_1 = (Keyword)cAlternatives_1.eContents().get(1);
+		private final Keyword cDtDefinitionKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		private final Assignment cDtDefinitionStereotypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0 = (RuleCall)cDtDefinitionStereotypeAssignment_5.eContents().get(0);
+		private final Assignment cDtDefinitionIdFieldAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0 = (RuleCall)cDtDefinitionIdFieldAssignment_6.eContents().get(0);
+		private final Assignment cDtDefinitionDataFieldsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0 = (RuleCall)cDtDefinitionDataFieldsAssignment_7.eContents().get(0);
+		private final Assignment cDtDefinitionComputedFieldsAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0 = (RuleCall)cDtDefinitionComputedFieldsAssignment_8.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_9 = (UnorderedGroup)cGroup.eContents().get(9);
+		private final Assignment cDtDefinitionDataSpaceAssignment_9_0 = (Assignment)cUnorderedGroup_9.eContents().get(0);
+		private final RuleCall cDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0 = (RuleCall)cDtDefinitionDataSpaceAssignment_9_0.eContents().get(0);
+		private final Assignment cDtDefinitionSortFieldAssignment_9_1 = (Assignment)cUnorderedGroup_9.eContents().get(1);
+		private final RuleCall cDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0 = (RuleCall)cDtDefinitionSortFieldAssignment_9_1.eContents().get(0);
+		private final Assignment cDtDefinitionDisplayFieldAssignment_9_2 = (Assignment)cUnorderedGroup_9.eContents().get(2);
+		private final RuleCall cDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0 = (RuleCall)cDtDefinitionDisplayFieldAssignment_9_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//DtDefinition:
-		//	('create' | 'alter') 'DtDefinition' name=ID '{'
+		//	{DtDefinitionAction} ('create' | 'alter') 'DtDefinition' name=ID '{'
 		//	dtDefinitionStereotype=DtDefinitionStereotype?
 		//	dtDefinitionIdField=DtDefinitionIdField?
 		//	dtDefinitionDataFields+=DtDefinitionDataField*
@@ -1262,81 +1308,84 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('create' | 'alter') 'DtDefinition' name=ID '{' dtDefinitionStereotype=DtDefinitionStereotype?
+		//{DtDefinitionAction} ('create' | 'alter') 'DtDefinition' name=ID '{' dtDefinitionStereotype=DtDefinitionStereotype?
 		//dtDefinitionIdField=DtDefinitionIdField? dtDefinitionDataFields+=DtDefinitionDataField*
 		//dtDefinitionComputedFields+=DtDefinitionComputedField* (dtDefinitionDataSpace=DtDefinitionDataSpace? &
 		//dtDefinitionSortField=DtDefinitionSortField? & dtDefinitionDisplayField=DtDefinitionDisplayField?) '}'
 		public Group getGroup() { return cGroup; }
 		
+		//{DtDefinitionAction}
+		public Action getDtDefinitionActionAction_0() { return cDtDefinitionActionAction_0; }
+		
 		//'create' | 'alter'
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
+		public Alternatives getAlternatives_1() { return cAlternatives_1; }
 		
 		//'create'
-		public Keyword getCreateKeyword_0_0() { return cCreateKeyword_0_0; }
+		public Keyword getCreateKeyword_1_0() { return cCreateKeyword_1_0; }
 		
 		//'alter'
-		public Keyword getAlterKeyword_0_1() { return cAlterKeyword_0_1; }
+		public Keyword getAlterKeyword_1_1() { return cAlterKeyword_1_1; }
 		
 		//'DtDefinition'
-		public Keyword getDtDefinitionKeyword_1() { return cDtDefinitionKeyword_1; }
+		public Keyword getDtDefinitionKeyword_2() { return cDtDefinitionKeyword_2; }
 		
 		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 		
 		//dtDefinitionStereotype=DtDefinitionStereotype?
-		public Assignment getDtDefinitionStereotypeAssignment_4() { return cDtDefinitionStereotypeAssignment_4; }
+		public Assignment getDtDefinitionStereotypeAssignment_5() { return cDtDefinitionStereotypeAssignment_5; }
 		
 		//DtDefinitionStereotype
-		public RuleCall getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0() { return cDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0; }
+		public RuleCall getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0() { return cDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0; }
 		
 		//dtDefinitionIdField=DtDefinitionIdField?
-		public Assignment getDtDefinitionIdFieldAssignment_5() { return cDtDefinitionIdFieldAssignment_5; }
+		public Assignment getDtDefinitionIdFieldAssignment_6() { return cDtDefinitionIdFieldAssignment_6; }
 		
 		//DtDefinitionIdField
-		public RuleCall getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_5_0() { return cDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_5_0; }
+		public RuleCall getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0() { return cDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0; }
 		
 		//dtDefinitionDataFields+=DtDefinitionDataField*
-		public Assignment getDtDefinitionDataFieldsAssignment_6() { return cDtDefinitionDataFieldsAssignment_6; }
+		public Assignment getDtDefinitionDataFieldsAssignment_7() { return cDtDefinitionDataFieldsAssignment_7; }
 		
 		//DtDefinitionDataField
-		public RuleCall getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_6_0() { return cDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_6_0; }
+		public RuleCall getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0() { return cDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0; }
 		
 		//dtDefinitionComputedFields+=DtDefinitionComputedField*
-		public Assignment getDtDefinitionComputedFieldsAssignment_7() { return cDtDefinitionComputedFieldsAssignment_7; }
+		public Assignment getDtDefinitionComputedFieldsAssignment_8() { return cDtDefinitionComputedFieldsAssignment_8; }
 		
 		//DtDefinitionComputedField
-		public RuleCall getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_7_0() { return cDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_7_0; }
+		public RuleCall getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0() { return cDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0; }
 		
 		//dtDefinitionDataSpace=DtDefinitionDataSpace? & dtDefinitionSortField=DtDefinitionSortField? &
 		//dtDefinitionDisplayField=DtDefinitionDisplayField?
-		public UnorderedGroup getUnorderedGroup_8() { return cUnorderedGroup_8; }
+		public UnorderedGroup getUnorderedGroup_9() { return cUnorderedGroup_9; }
 		
 		//dtDefinitionDataSpace=DtDefinitionDataSpace?
-		public Assignment getDtDefinitionDataSpaceAssignment_8_0() { return cDtDefinitionDataSpaceAssignment_8_0; }
+		public Assignment getDtDefinitionDataSpaceAssignment_9_0() { return cDtDefinitionDataSpaceAssignment_9_0; }
 		
 		//DtDefinitionDataSpace
-		public RuleCall getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_8_0_0() { return cDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_8_0_0; }
+		public RuleCall getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0() { return cDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0; }
 		
 		//dtDefinitionSortField=DtDefinitionSortField?
-		public Assignment getDtDefinitionSortFieldAssignment_8_1() { return cDtDefinitionSortFieldAssignment_8_1; }
+		public Assignment getDtDefinitionSortFieldAssignment_9_1() { return cDtDefinitionSortFieldAssignment_9_1; }
 		
 		//DtDefinitionSortField
-		public RuleCall getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_8_1_0() { return cDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_8_1_0; }
+		public RuleCall getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0() { return cDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0; }
 		
 		//dtDefinitionDisplayField=DtDefinitionDisplayField?
-		public Assignment getDtDefinitionDisplayFieldAssignment_8_2() { return cDtDefinitionDisplayFieldAssignment_8_2; }
+		public Assignment getDtDefinitionDisplayFieldAssignment_9_2() { return cDtDefinitionDisplayFieldAssignment_9_2; }
 		
 		//DtDefinitionDisplayField
-		public RuleCall getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0() { return cDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0; }
+		public RuleCall getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0() { return cDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
+		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
 	}
 	public class AssociationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.Association");
@@ -2123,6 +2172,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	private final ModelElements pModel;
+	private final PackageStringElements pPackageString;
+	private final KEYWORDIDElements pKEYWORDID;
+	private final TerminalRule tESCAPED_CHAR;
+	private final TerminalRule tSTRING;
 	private final ElementElements pElement;
 	private final DeclaredDomainElements pDeclaredDomain;
 	private final DeclaredDtDefinitionElements pDeclaredDtDefinition;
@@ -2133,6 +2186,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final BooleanStringElements eBooleanString;
 	private final DomainElements pDomain;
 	private final DomainTypeElements pDomainType;
+	private final RefToDomainTypeElements pRefToDomainType;
 	private final DtDefinitionIdStringElements pDtDefinitionIdString;
 	private final DtDefinitionDataFieldStringElements pDtDefinitionDataFieldString;
 	private final DtDefinitionComputedFieldStringElements pDtDefinitionComputedFieldString;
@@ -2163,6 +2217,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pModel = new ModelElements();
+		this.pPackageString = new PackageStringElements();
+		this.pKEYWORDID = new KEYWORDIDElements();
+		this.tESCAPED_CHAR = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.ESCAPED_CHAR");
+		this.tSTRING = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.STRING");
 		this.pElement = new ElementElements();
 		this.pDeclaredDomain = new DeclaredDomainElements();
 		this.pDeclaredDtDefinition = new DeclaredDtDefinitionElements();
@@ -2173,6 +2231,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.eBooleanString = new BooleanStringElements();
 		this.pDomain = new DomainElements();
 		this.pDomainType = new DomainTypeElements();
+		this.pRefToDomainType = new RefToDomainTypeElements();
 		this.pDtDefinitionIdString = new DtDefinitionIdStringElements();
 		this.pDtDefinitionDataFieldString = new DtDefinitionDataFieldStringElements();
 		this.pDtDefinitionComputedFieldString = new DtDefinitionComputedFieldStringElements();
@@ -2222,7 +2281,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	'package' package+=ID ("."+ packages+=ID)*
+	//	'package' packageString=PackageString
 	//	elements+=Element*;
 	public ModelElements getModelAccess() {
 		return pModel;
@@ -2230,6 +2289,40 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getModelRule() {
 		return getModelAccess().getRule();
+	}
+	
+	//PackageString:
+	//	package+=KEYWORDID ("."+ packages+=KEYWORDID)*;
+	public PackageStringElements getPackageStringAccess() {
+		return pPackageString;
+	}
+	
+	public ParserRule getPackageStringRule() {
+		return getPackageStringAccess().getRule();
+	}
+	
+	//KEYWORDID:
+	//	keywordID=(ID | 'domain');
+	public KEYWORDIDElements getKEYWORDIDAccess() {
+		return pKEYWORDID;
+	}
+	
+	public ParserRule getKEYWORDIDRule() {
+		return getKEYWORDIDAccess().getRule();
+	}
+	
+	//terminal fragment ESCAPED_CHAR:
+	//	'\\' ('n' | 't' | 'r' | '\\' | '.' | '"');
+	public TerminalRule getESCAPED_CHARRule() {
+		return tESCAPED_CHAR;
+	}
+	
+	//@Override
+	//terminal STRING:
+	//	'"' (ESCAPED_CHAR | !('\\' | '"'))* '"' |
+	//	"'" (ESCAPED_CHAR | !('\\' | "'"))* "'";
+	public TerminalRule getSTRINGRule() {
+		return tSTRING;
 	}
 	
 	//Element:
@@ -2343,22 +2436,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDomainAccess().getRule();
 	}
 	
-	///*
-	//IdFieldString:
-	//	//'{' ('label:' label=STRING) '}';
-	//	'{' ('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) '}';
-	//*/ // old
-	///*
-	//DtDefinitionIdString:
-	//	'{' ('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) '}';
-	//
-	//DtDefinitionDataFieldString:
-	//	'{' (('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) & ('required:' required=BooleanString) & ('persistent:' persistent=BooleanString)?) '}';
-	//
-	//DtDefinitionComputedFieldString:
-	//	'{' (('domain:' (domain=[Domain]) | (domain=[DeclaredDomain])) & ('label:' label=STRING) & ('expression:' expressionString=STRING)) '}';
-	//
-	//*/ DomainType:
+	//DomainType:
 	//	Domain | DeclaredDomain;
 	public DomainTypeElements getDomainTypeAccess() {
 		return pDomainType;
@@ -2368,8 +2446,20 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getDomainTypeAccess().getRule();
 	}
 	
-	//DtDefinitionIdString:
-	//	'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','?) '}';
+	//RefToDomainType:
+	//	{RefToDomainType} ref=[DomainType];
+	public RefToDomainTypeElements getRefToDomainTypeAccess() {
+		return pRefToDomainType;
+	}
+	
+	public ParserRule getRefToDomainTypeRule() {
+		return getRefToDomainTypeAccess().getRule();
+	}
+	
+	///*
+	// * '{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
+	// */ DtDefinitionIdString:
+	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','?) '}';
 	public DtDefinitionIdStringElements getDtDefinitionIdStringAccess() {
 		return pDtDefinitionIdString;
 	}
@@ -2379,7 +2469,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DtDefinitionDataFieldString:
-	//	'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':'
+	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':'
 	//	required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
 	public DtDefinitionDataFieldStringElements getDtDefinitionDataFieldStringAccess() {
 		return pDtDefinitionDataFieldString;
@@ -2390,7 +2480,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DtDefinitionComputedFieldString:
-	//	'{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'expression' ':'
+	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'expression' ':'
 	//	expressionString=STRING ','?) '}';
 	public DtDefinitionComputedFieldStringElements getDtDefinitionComputedFieldStringAccess() {
 		return pDtDefinitionComputedFieldString;
@@ -2481,7 +2571,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DtDefinition:
-	//	('create' | 'alter') 'DtDefinition' name=ID '{'
+	//	{DtDefinitionAction} ('create' | 'alter') 'DtDefinition' name=ID '{'
 	//	dtDefinitionStereotype=DtDefinitionStereotype?
 	//	dtDefinitionIdField=DtDefinitionIdField?
 	//	dtDefinitionDataFields+=DtDefinitionDataField*
@@ -2590,12 +2680,6 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	'0'..'9'+;
 	public TerminalRule getINTRule() {
 		return gaTerminals.getINTRule();
-	}
-	
-	//terminal STRING:
-	//	'"' ('\\' . | !('\\' | '"'))* '"' | "'" ('\\' . | !('\\' | "'"))* "'";
-	public TerminalRule getSTRINGRule() {
-		return gaTerminals.getSTRINGRule();
 	}
 	
 	//terminal ML_COMMENT:

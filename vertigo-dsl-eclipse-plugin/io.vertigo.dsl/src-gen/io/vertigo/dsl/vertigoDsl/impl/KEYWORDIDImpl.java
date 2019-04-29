@@ -3,7 +3,7 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
+import io.vertigo.dsl.vertigoDsl.KEYWORDID;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -11,48 +11,49 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.ecore.EClass;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Declared Domain</b></em>'.
+ * An implementation of the model object '<em><b>KEYWORDID</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DeclaredDomainImpl#getName <em>Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.KEYWORDIDImpl#getKeywordID <em>Keyword ID</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
+public class KEYWORDIDImpl extends MinimalEObjectImpl.Container implements KEYWORDID
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The default value of the '{@link #getKeywordID() <em>Keyword ID</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getKeywordID()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
+  protected static final String KEYWORD_ID_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getKeywordID() <em>Keyword ID</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getKeywordID()
    * @generated
    * @ordered
    */
-  protected String name = NAME_EDEFAULT;
+  protected String keywordID = KEYWORD_ID_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DeclaredDomainImpl()
+  protected KEYWORDIDImpl()
   {
     super();
   }
@@ -65,7 +66,7 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   @Override
   protected EClass eStaticClass()
   {
-    return VertigoDslPackage.Literals.DECLARED_DOMAIN;
+    return VertigoDslPackage.Literals.KEYWORDID;
   }
 
   /**
@@ -73,9 +74,9 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public String getKeywordID()
   {
-    return name;
+    return keywordID;
   }
 
   /**
@@ -83,12 +84,12 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public void setKeywordID(String newKeywordID)
   {
-    String oldName = name;
-    name = newName;
+    String oldKeywordID = keywordID;
+    keywordID = newKeywordID;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DECLARED_DOMAIN__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.KEYWORDID__KEYWORD_ID, oldKeywordID, keywordID));
   }
 
   /**
@@ -101,8 +102,8 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DECLARED_DOMAIN__NAME:
-        return getName();
+      case VertigoDslPackage.KEYWORDID__KEYWORD_ID:
+        return getKeywordID();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +118,8 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DECLARED_DOMAIN__NAME:
-        setName((String)newValue);
+      case VertigoDslPackage.KEYWORDID__KEYWORD_ID:
+        setKeywordID((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +135,8 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DECLARED_DOMAIN__NAME:
-        setName(NAME_EDEFAULT);
+      case VertigoDslPackage.KEYWORDID__KEYWORD_ID:
+        setKeywordID(KEYWORD_ID_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +152,8 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DECLARED_DOMAIN__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case VertigoDslPackage.KEYWORDID__KEYWORD_ID:
+        return KEYWORD_ID_EDEFAULT == null ? keywordID != null : !KEYWORD_ID_EDEFAULT.equals(keywordID);
     }
     return super.eIsSet(featureID);
   }
@@ -168,10 +169,10 @@ public class DeclaredDomainImpl extends ElementImpl implements DeclaredDomain
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
+    result.append(" (keywordID: ");
+    result.append(keywordID);
     result.append(')');
     return result.toString();
   }
 
-} //DeclaredDomainImpl
+} //KEYWORDIDImpl

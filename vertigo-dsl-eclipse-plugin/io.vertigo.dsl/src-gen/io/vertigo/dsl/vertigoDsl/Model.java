@@ -16,8 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Model#getPackage <em>Package</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Model#getPackages <em>Packages</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.Model#getPackageString <em>Package String</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Model#getElements <em>Elements</em>}</li>
  * </ul>
  *
@@ -28,36 +27,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface Model extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Package</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Returns the value of the '<em><b>Package String</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Package</em>' attribute list isn't clear,
+   * If the meaning of the '<em>Package String</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Package</em>' attribute list.
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getModel_Package()
-   * @model unique="false"
+   * @return the value of the '<em>Package String</em>' containment reference.
+   * @see #setPackageString(PackageString)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getModel_PackageString()
+   * @model containment="true"
    * @generated
    */
-  EList<String> getPackage();
+  PackageString getPackageString();
 
   /**
-   * Returns the value of the '<em><b>Packages</b></em>' attribute list.
-   * The list contents are of type {@link java.lang.String}.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Model#getPackageString <em>Package String</em>}' containment reference.
    * <!-- begin-user-doc -->
-   * <p>
-   * If the meaning of the '<em>Packages</em>' attribute list isn't clear,
-   * there really should be more of a description here...
-   * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Packages</em>' attribute list.
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getModel_Packages()
-   * @model unique="false"
+   * @param value the new value of the '<em>Package String</em>' containment reference.
+   * @see #getPackageString()
    * @generated
    */
-  EList<String> getPackages();
+  void setPackageString(PackageString value);
 
   /**
    * Returns the value of the '<em><b>Elements</b></em>' containment reference list.

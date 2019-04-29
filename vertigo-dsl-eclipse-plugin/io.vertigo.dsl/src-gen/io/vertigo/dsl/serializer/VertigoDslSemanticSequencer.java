@@ -10,7 +10,7 @@ import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
 import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition;
 import io.vertigo.dsl.vertigoDsl.Domain;
-import io.vertigo.dsl.vertigoDsl.DtDefinition;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataField;
@@ -23,7 +23,10 @@ import io.vertigo.dsl.vertigoDsl.DtDefinitionSortField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionStereotype;
 import io.vertigo.dsl.vertigoDsl.FileInfo;
 import io.vertigo.dsl.vertigoDsl.Formatter;
+import io.vertigo.dsl.vertigoDsl.KEYWORDID;
 import io.vertigo.dsl.vertigoDsl.Model;
+import io.vertigo.dsl.vertigoDsl.PackageString;
+import io.vertigo.dsl.vertigoDsl.RefToDomainType;
 import io.vertigo.dsl.vertigoDsl.TaskAttribute;
 import io.vertigo.dsl.vertigoDsl.TaskAttributeString;
 import io.vertigo.dsl.vertigoDsl.TaskDataSpace;
@@ -69,8 +72,8 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case VertigoDslPackage.DOMAIN:
 				sequence_Domain(context, (Domain) semanticObject); 
 				return; 
-			case VertigoDslPackage.DT_DEFINITION:
-				sequence_DtDefinition(context, (DtDefinition) semanticObject); 
+			case VertigoDslPackage.DT_DEFINITION_ACTION:
+				sequence_DtDefinition(context, (DtDefinitionAction) semanticObject); 
 				return; 
 			case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD:
 				sequence_DtDefinitionComputedField(context, (DtDefinitionComputedField) semanticObject); 
@@ -108,8 +111,17 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case VertigoDslPackage.FORMATTER:
 				sequence_Formatter(context, (Formatter) semanticObject); 
 				return; 
+			case VertigoDslPackage.KEYWORDID:
+				sequence_KEYWORDID(context, (KEYWORDID) semanticObject); 
+				return; 
 			case VertigoDslPackage.MODEL:
 				sequence_Model(context, (Model) semanticObject); 
+				return; 
+			case VertigoDslPackage.PACKAGE_STRING:
+				sequence_PackageString(context, (PackageString) semanticObject); 
+				return; 
+			case VertigoDslPackage.REF_TO_DOMAIN_TYPE:
+				sequence_RefToDomainType(context, (RefToDomainType) semanticObject); 
 				return; 
 			case VertigoDslPackage.TASK_ATTRIBUTE:
 				sequence_TaskAttribute(context, (TaskAttribute) semanticObject); 
@@ -181,8 +193,8 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_DeclaredDomain(ISerializationContext context, DeclaredDomain semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.DECLARED_DOMAIN__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.DECLARED_DOMAIN__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDeclaredDomainAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
@@ -201,8 +213,8 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_DeclaredDtDefinition(ISerializationContext context, DeclaredDtDefinition semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.DECLARED_DT_DEFINITION__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.DECLARED_DT_DEFINITION__NAME));
 		}
 		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
 		feeder.accept(grammarAccess.getDeclaredDtDefinitionAccess().getNameIDTerminalRuleCall_2_0(), semanticObject.getName());
@@ -233,7 +245,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     DtDefinitionComputedFieldString returns DtDefinitionComputedFieldString
 	 *
 	 * Constraint:
-	 *     (domainType=[DomainType|ID] | label=STRING | expressionString=STRING)+
+	 *     (refToDomainType=RefToDomainType | label=STRING | expressionString=STRING)+
 	 */
 	protected void sequence_DtDefinitionComputedFieldString(ISerializationContext context, DtDefinitionComputedFieldString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -266,7 +278,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     DtDefinitionDataFieldString returns DtDefinitionDataFieldString
 	 *
 	 * Constraint:
-	 *     (domainType=[DomainType|ID] | label=STRING | required=BooleanString | persistent=BooleanString)+
+	 *     (refToDomainType=RefToDomainType | label=STRING | required=BooleanString | persistent=BooleanString)+
 	 */
 	protected void sequence_DtDefinitionDataFieldString(ISerializationContext context, DtDefinitionDataFieldString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -356,7 +368,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     DtDefinitionIdString returns DtDefinitionIdString
 	 *
 	 * Constraint:
-	 *     (domainType=[DomainType|ID] | label=STRING)+
+	 *     (refToDomainType=RefToDomainType | label=STRING)+
 	 */
 	protected void sequence_DtDefinitionIdString(ISerializationContext context, DtDefinitionIdString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -401,9 +413,9 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Element returns DtDefinition
-	 *     DtDefinitionType returns DtDefinition
-	 *     DtDefinition returns DtDefinition
+	 *     Element returns DtDefinitionAction
+	 *     DtDefinitionType returns DtDefinitionAction
+	 *     DtDefinition returns DtDefinitionAction
 	 *
 	 * Constraint:
 	 *     (
@@ -415,7 +427,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *         (dtDefinitionDataSpace=DtDefinitionDataSpace | dtDefinitionSortField=DtDefinitionSortField | dtDefinitionDisplayField=DtDefinitionDisplayField)*
 	 *     )
 	 */
-	protected void sequence_DtDefinition(ISerializationContext context, DtDefinition semanticObject) {
+	protected void sequence_DtDefinition(ISerializationContext context, DtDefinitionAction semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -430,8 +442,8 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_FileInfo(ISerializationContext context, FileInfo semanticObject) {
 		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.ELEMENT__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.ELEMENT__NAME));
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FILE_INFO__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FILE_INFO__NAME));
 			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FILE_INFO__STORE_NAME) == ValueTransient.YES)
 				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FILE_INFO__STORE_NAME));
 		}
@@ -457,13 +469,55 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     KEYWORDID returns KEYWORDID
+	 *
+	 * Constraint:
+	 *     (keywordID=ID | keywordID='domain')
+	 */
+	protected void sequence_KEYWORDID(ISerializationContext context, KEYWORDID semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     Model returns Model
 	 *
 	 * Constraint:
-	 *     (package+=ID packages+=ID* elements+=Element*)
+	 *     (packageString=PackageString elements+=Element*)
 	 */
 	protected void sequence_Model(ISerializationContext context, Model semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     PackageString returns PackageString
+	 *
+	 * Constraint:
+	 *     (package+=KEYWORDID packages+=KEYWORDID*)
+	 */
+	protected void sequence_PackageString(ISerializationContext context, PackageString semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     RefToDomainType returns RefToDomainType
+	 *
+	 * Constraint:
+	 *     ref=[DomainType|ID]
+	 */
+	protected void sequence_RefToDomainType(ISerializationContext context, RefToDomainType semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.REF_TO_DOMAIN_TYPE__REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.REF_TO_DOMAIN_TYPE__REF));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getRefToDomainTypeAccess().getRefDomainTypeIDTerminalRuleCall_1_0_1(), semanticObject.eGet(VertigoDslPackage.Literals.REF_TO_DOMAIN_TYPE__REF, false));
+		feeder.finish();
 	}
 	
 	
