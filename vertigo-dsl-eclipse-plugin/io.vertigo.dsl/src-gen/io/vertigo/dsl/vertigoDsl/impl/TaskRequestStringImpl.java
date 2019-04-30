@@ -3,7 +3,7 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.DtDefinitionSortField;
+import io.vertigo.dsl.vertigoDsl.TaskRequestString;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -15,45 +15,45 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Dt Definition Sort Field</b></em>'.
+ * An implementation of the model object '<em><b>Task Request String</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionSortFieldImpl#getSortField <em>Sort Field</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskRequestStringImpl#getString <em>String</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container implements DtDefinitionSortField
+public class TaskRequestStringImpl extends MinimalEObjectImpl.Container implements TaskRequestString
 {
   /**
-   * The default value of the '{@link #getSortField() <em>Sort Field</em>}' attribute.
+   * The default value of the '{@link #getString() <em>String</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSortField()
+   * @see #getString()
    * @generated
    * @ordered
    */
-  protected static final String SORT_FIELD_EDEFAULT = null;
+  protected static final String STRING_EDEFAULT = null;
 
   /**
-   * The cached value of the '{@link #getSortField() <em>Sort Field</em>}' attribute.
+   * The cached value of the '{@link #getString() <em>String</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSortField()
+   * @see #getString()
    * @generated
    * @ordered
    */
-  protected String sortField = SORT_FIELD_EDEFAULT;
+  protected String string = STRING_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  protected DtDefinitionSortFieldImpl()
+  protected TaskRequestStringImpl()
   {
     super();
   }
@@ -66,7 +66,7 @@ public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container impl
   @Override
   protected EClass eStaticClass()
   {
-    return VertigoDslPackage.Literals.DT_DEFINITION_SORT_FIELD;
+    return VertigoDslPackage.Literals.TASK_REQUEST_STRING;
   }
 
   /**
@@ -74,9 +74,9 @@ public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container impl
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getSortField()
+  public String getString()
   {
-    return sortField;
+    return string;
   }
 
   /**
@@ -84,12 +84,12 @@ public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container impl
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setSortField(String newSortField)
+  public void setString(String newString)
   {
-    String oldSortField = sortField;
-    sortField = newSortField;
+    String oldString = string;
+    string = newString;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_SORT_FIELD__SORT_FIELD, oldSortField, sortField));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_REQUEST_STRING__STRING, oldString, string));
   }
 
   /**
@@ -102,8 +102,8 @@ public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container impl
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_SORT_FIELD__SORT_FIELD:
-        return getSortField();
+      case VertigoDslPackage.TASK_REQUEST_STRING__STRING:
+        return getString();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -118,8 +118,8 @@ public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container impl
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_SORT_FIELD__SORT_FIELD:
-        setSortField((String)newValue);
+      case VertigoDslPackage.TASK_REQUEST_STRING__STRING:
+        setString((String)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -135,8 +135,8 @@ public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container impl
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_SORT_FIELD__SORT_FIELD:
-        setSortField(SORT_FIELD_EDEFAULT);
+      case VertigoDslPackage.TASK_REQUEST_STRING__STRING:
+        setString(STRING_EDEFAULT);
         return;
     }
     super.eUnset(featureID);
@@ -152,8 +152,8 @@ public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container impl
   {
     switch (featureID)
     {
-      case VertigoDslPackage.DT_DEFINITION_SORT_FIELD__SORT_FIELD:
-        return SORT_FIELD_EDEFAULT == null ? sortField != null : !SORT_FIELD_EDEFAULT.equals(sortField);
+      case VertigoDslPackage.TASK_REQUEST_STRING__STRING:
+        return STRING_EDEFAULT == null ? string != null : !STRING_EDEFAULT.equals(string);
     }
     return super.eIsSet(featureID);
   }
@@ -169,10 +169,10 @@ public class DtDefinitionSortFieldImpl extends MinimalEObjectImpl.Container impl
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (sortField: ");
-    result.append(sortField);
+    result.append(" (string: ");
+    result.append(string);
     result.append(')');
     return result.toString();
   }
 
-} //DtDefinitionSortFieldImpl
+} //TaskRequestStringImpl

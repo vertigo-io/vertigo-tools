@@ -153,10 +153,14 @@
   <eClassifiers xsi:type="ecore:EClass" name="TaskDataSpace">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="storeName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskRequestString">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="string" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="TaskDefinition" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="classname" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="request" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="request" eType="#//TaskRequestString"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskAttributes" upperBound="-1"
         eType="#//TaskAttribute" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskDataSpace" eType="#//TaskDataSpace"

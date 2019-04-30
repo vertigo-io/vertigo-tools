@@ -15,7 +15,7 @@ PackageString:
 ;
 
 KEYWORDID:
-	keywordID = (ID | 'domain');
+	keywordID = (ID | 'domain' | 'id');
 
 
 
@@ -93,10 +93,6 @@ DomainType:
 RefToDomainType:
 	{RefToDomainType} ref = [DomainType]
 ;
-
-/*
- * '{' ('domain' ':' domainType=[DomainType] ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
- */
 
 DtDefinitionIdString:
 	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & ('label' ':' label=STRING ','?) ) '}';
@@ -184,10 +180,14 @@ TaskDataSpace:
 	'storeName' ':' storeName=STRING
 ;
 
+TaskRequestString:
+	string = STRING
+;
+
 TaskDefinition:
 	'create' 'Task' name=ID '{'
 		'className' ':' classname=STRING ','?
-		'request' ':' request=STRING ','?
+		'request' ':' request=TaskRequestString ','?
 		taskAttributes+=TaskAttribute*
 		taskDataSpace=TaskDataSpace?
 	'}';
