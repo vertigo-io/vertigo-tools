@@ -14,7 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getDomain <em>Domain</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRequired <em>Required</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getInout <em>Inout</em>}</li>
  * </ul>
@@ -26,30 +26,30 @@ import org.eclipse.emf.ecore.EObject;
 public interface TaskAttributeString extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Domain</b></em>' reference.
+   * Returns the value of the '<em><b>Ref To Domain Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Domain</em>' reference isn't clear,
+   * If the meaning of the '<em>Ref To Domain Type</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Domain</em>' reference.
-   * @see #setDomain(DomainType)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttributeString_Domain()
-   * @model
+   * @return the value of the '<em>Ref To Domain Type</em>' containment reference.
+   * @see #setRefToDomainType(RefToDomainType)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttributeString_RefToDomainType()
+   * @model containment="true"
    * @generated
    */
-  DomainType getDomain();
+  RefToDomainType getRefToDomainType();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getDomain <em>Domain</em>}' reference.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRefToDomainType <em>Ref To Domain Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Domain</em>' reference.
-   * @see #getDomain()
+   * @param value the new value of the '<em>Ref To Domain Type</em>' containment reference.
+   * @see #getRefToDomainType()
    * @generated
    */
-  void setDomain(DomainType value);
+  void setRefToDomainType(RefToDomainType value);
 
   /**
    * Returns the value of the '<em><b>Required</b></em>' attribute.

@@ -25,9 +25,29 @@ import io.vertigo.dsl.vertigoDsl.DtDefinitionSortField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionStereotype;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionType;
 import io.vertigo.dsl.vertigoDsl.Element;
+import io.vertigo.dsl.vertigoDsl.FacetDefinition;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionRange;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinition;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery;
 import io.vertigo.dsl.vertigoDsl.FileInfo;
 import io.vertigo.dsl.vertigoDsl.Formatter;
 import io.vertigo.dsl.vertigoDsl.InOutString;
+import io.vertigo.dsl.vertigoDsl.IndexDefinition;
+import io.vertigo.dsl.vertigoDsl.IndexDefinitionAction;
+import io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex;
+import io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo;
+import io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyToString;
+import io.vertigo.dsl.vertigoDsl.IndexDefinitionKeyConcept;
+import io.vertigo.dsl.vertigoDsl.IndexDefinitionLoaderId;
 import io.vertigo.dsl.vertigoDsl.Model;
 import io.vertigo.dsl.vertigoDsl.MultiplicityString;
 import io.vertigo.dsl.vertigoDsl.PackageString;
@@ -271,7 +291,147 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass facetDefinitionDtDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetDefinitionFieldNameEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetDefinitionLabelEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetDefinitionRangeStringEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetDefinitionRangeEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetedQueryDefinitionKeyConceptEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetedQueryDefinitionDomainCriteriaEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetedQueryDefinitionListFilterBuilderQueryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetedQueryDefinitionListFilterBuilderClassEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetedQueryDefinitionFacetsEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetedQueryDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indexDefinitionKeyConceptEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indexDefinitionDtIndexEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indexDefinitionIndexCopyToStringEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indexDefinitionIndexCopyToEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indexDefinitionLoaderIdEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indexDefinitionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass dtDefinitionActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetedQueryDefinitionActionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass indexDefinitionActionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1209,7 +1369,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getTaskAttributeString_Domain()
+  public EReference getTaskAttributeString_RefToDomainType()
   {
     return (EReference)taskAttributeStringEClass.getEStructuralFeatures().get(0);
   }
@@ -1369,6 +1529,406 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getFacetDefinitionDtDefinition()
+  {
+    return facetDefinitionDtDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetDefinitionDtDefinition_DtDefinition()
+  {
+    return (EReference)facetDefinitionDtDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetDefinitionFieldName()
+  {
+    return facetDefinitionFieldNameEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFacetDefinitionFieldName_String()
+  {
+    return (EAttribute)facetDefinitionFieldNameEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetDefinitionLabel()
+  {
+    return facetDefinitionLabelEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFacetDefinitionLabel_String()
+  {
+    return (EAttribute)facetDefinitionLabelEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetDefinitionRangeString()
+  {
+    return facetDefinitionRangeStringEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFacetDefinitionRangeString_FilterString()
+  {
+    return (EAttribute)facetDefinitionRangeStringEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFacetDefinitionRangeString_LabelString()
+  {
+    return (EAttribute)facetDefinitionRangeStringEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetDefinitionRange()
+  {
+    return facetDefinitionRangeEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFacetDefinitionRange_Name()
+  {
+    return (EAttribute)facetDefinitionRangeEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetDefinitionRange_FacetDefinitionRangeString()
+  {
+    return (EReference)facetDefinitionRangeEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetDefinition()
+  {
+    return facetDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetDefinition_FacetDefinitionDtDefinition()
+  {
+    return (EReference)facetDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetDefinition_FacetDefinitionFieldName()
+  {
+    return (EReference)facetDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetDefinition_FacetDefinitonLabel()
+  {
+    return (EReference)facetDefinitionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetedQueryDefinitionKeyConcept()
+  {
+    return facetedQueryDefinitionKeyConceptEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionKeyConcept_DtDefinition()
+  {
+    return (EReference)facetedQueryDefinitionKeyConceptEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetedQueryDefinitionDomainCriteria()
+  {
+    return facetedQueryDefinitionDomainCriteriaEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionDomainCriteria_RefToDomainType()
+  {
+    return (EReference)facetedQueryDefinitionDomainCriteriaEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetedQueryDefinitionListFilterBuilderQuery()
+  {
+    return facetedQueryDefinitionListFilterBuilderQueryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFacetedQueryDefinitionListFilterBuilderQuery_String()
+  {
+    return (EAttribute)facetedQueryDefinitionListFilterBuilderQueryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetedQueryDefinitionListFilterBuilderClass()
+  {
+    return facetedQueryDefinitionListFilterBuilderClassEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFacetedQueryDefinitionListFilterBuilderClass_String()
+  {
+    return (EAttribute)facetedQueryDefinitionListFilterBuilderClassEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetedQueryDefinitionFacets()
+  {
+    return facetedQueryDefinitionFacetsEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionFacets_FacetDefinition()
+  {
+    return (EReference)facetedQueryDefinitionFacetsEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionFacets_Facets()
+  {
+    return (EReference)facetedQueryDefinitionFacetsEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetedQueryDefinition()
+  {
+    return facetedQueryDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIndexDefinitionKeyConcept()
+  {
+    return indexDefinitionKeyConceptEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIndexDefinitionKeyConcept_DtDefinition()
+  {
+    return (EReference)indexDefinitionKeyConceptEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIndexDefinitionDtIndex()
+  {
+    return indexDefinitionDtIndexEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIndexDefinitionDtIndex_DtDefinition()
+  {
+    return (EReference)indexDefinitionDtIndexEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIndexDefinitionIndexCopyToString()
+  {
+    return indexDefinitionIndexCopyToStringEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIndexDefinitionIndexCopyToString_String()
+  {
+    return (EAttribute)indexDefinitionIndexCopyToStringEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIndexDefinitionIndexCopyTo()
+  {
+    return indexDefinitionIndexCopyToEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIndexDefinitionIndexCopyTo_Name()
+  {
+    return (EAttribute)indexDefinitionIndexCopyToEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIndexDefinitionIndexCopyTo_IndexDefinitionIndexCopyToString()
+  {
+    return (EReference)indexDefinitionIndexCopyToEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIndexDefinitionLoaderId()
+  {
+    return indexDefinitionLoaderIdEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIndexDefinitionLoaderId_LoaderIdString()
+  {
+    return (EAttribute)indexDefinitionLoaderIdEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIndexDefinition()
+  {
+    return indexDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getDtDefinitionAction()
   {
     return dtDefinitionActionEClass;
@@ -1452,6 +2012,136 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   public EReference getDtDefinitionAction_DtDefinitionDisplayField()
   {
     return (EReference)dtDefinitionActionEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFacetedQueryDefinitionAction()
+  {
+    return facetedQueryDefinitionActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFacetedQueryDefinitionAction_Name()
+  {
+    return (EAttribute)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionKeyConcept()
+  {
+    return (EReference)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionDomainCriteria()
+  {
+    return (EReference)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderQuery()
+  {
+    return (EReference)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderClass()
+  {
+    return (EReference)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionFacets()
+  {
+    return (EReference)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIndexDefinitionAction()
+  {
+    return indexDefinitionActionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getIndexDefinitionAction_Name()
+  {
+    return (EAttribute)indexDefinitionActionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIndexDefinitionAction_IndexDefinitionKeyConcept()
+  {
+    return (EReference)indexDefinitionActionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIndexDefinitionAction_IndexDefinitionDtIndex()
+  {
+    return (EReference)indexDefinitionActionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIndexDefinitionAction_IndexDefinitionIndexCopyTo()
+  {
+    return (EReference)indexDefinitionActionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getIndexDefinitionAction_IndexDefinitionLoaderId()
+  {
+    return (EReference)indexDefinitionActionEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1633,7 +2323,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEAttribute(associationEClass, ASSOCIATION__TYPE);
 
     taskAttributeStringEClass = createEClass(TASK_ATTRIBUTE_STRING);
-    createEReference(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__DOMAIN);
+    createEReference(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE);
     createEAttribute(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__REQUIRED);
     createEAttribute(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__INOUT);
 
@@ -1654,6 +2344,64 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEReference(taskDefinitionEClass, TASK_DEFINITION__TASK_ATTRIBUTES);
     createEReference(taskDefinitionEClass, TASK_DEFINITION__TASK_DATA_SPACE);
 
+    facetDefinitionDtDefinitionEClass = createEClass(FACET_DEFINITION_DT_DEFINITION);
+    createEReference(facetDefinitionDtDefinitionEClass, FACET_DEFINITION_DT_DEFINITION__DT_DEFINITION);
+
+    facetDefinitionFieldNameEClass = createEClass(FACET_DEFINITION_FIELD_NAME);
+    createEAttribute(facetDefinitionFieldNameEClass, FACET_DEFINITION_FIELD_NAME__STRING);
+
+    facetDefinitionLabelEClass = createEClass(FACET_DEFINITION_LABEL);
+    createEAttribute(facetDefinitionLabelEClass, FACET_DEFINITION_LABEL__STRING);
+
+    facetDefinitionRangeStringEClass = createEClass(FACET_DEFINITION_RANGE_STRING);
+    createEAttribute(facetDefinitionRangeStringEClass, FACET_DEFINITION_RANGE_STRING__FILTER_STRING);
+    createEAttribute(facetDefinitionRangeStringEClass, FACET_DEFINITION_RANGE_STRING__LABEL_STRING);
+
+    facetDefinitionRangeEClass = createEClass(FACET_DEFINITION_RANGE);
+    createEAttribute(facetDefinitionRangeEClass, FACET_DEFINITION_RANGE__NAME);
+    createEReference(facetDefinitionRangeEClass, FACET_DEFINITION_RANGE__FACET_DEFINITION_RANGE_STRING);
+
+    facetDefinitionEClass = createEClass(FACET_DEFINITION);
+    createEReference(facetDefinitionEClass, FACET_DEFINITION__FACET_DEFINITION_DT_DEFINITION);
+    createEReference(facetDefinitionEClass, FACET_DEFINITION__FACET_DEFINITION_FIELD_NAME);
+    createEReference(facetDefinitionEClass, FACET_DEFINITION__FACET_DEFINITON_LABEL);
+
+    facetedQueryDefinitionKeyConceptEClass = createEClass(FACETED_QUERY_DEFINITION_KEY_CONCEPT);
+    createEReference(facetedQueryDefinitionKeyConceptEClass, FACETED_QUERY_DEFINITION_KEY_CONCEPT__DT_DEFINITION);
+
+    facetedQueryDefinitionDomainCriteriaEClass = createEClass(FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA);
+    createEReference(facetedQueryDefinitionDomainCriteriaEClass, FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA__REF_TO_DOMAIN_TYPE);
+
+    facetedQueryDefinitionListFilterBuilderQueryEClass = createEClass(FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY);
+    createEAttribute(facetedQueryDefinitionListFilterBuilderQueryEClass, FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY__STRING);
+
+    facetedQueryDefinitionListFilterBuilderClassEClass = createEClass(FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS);
+    createEAttribute(facetedQueryDefinitionListFilterBuilderClassEClass, FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS__STRING);
+
+    facetedQueryDefinitionFacetsEClass = createEClass(FACETED_QUERY_DEFINITION_FACETS);
+    createEReference(facetedQueryDefinitionFacetsEClass, FACETED_QUERY_DEFINITION_FACETS__FACET_DEFINITION);
+    createEReference(facetedQueryDefinitionFacetsEClass, FACETED_QUERY_DEFINITION_FACETS__FACETS);
+
+    facetedQueryDefinitionEClass = createEClass(FACETED_QUERY_DEFINITION);
+
+    indexDefinitionKeyConceptEClass = createEClass(INDEX_DEFINITION_KEY_CONCEPT);
+    createEReference(indexDefinitionKeyConceptEClass, INDEX_DEFINITION_KEY_CONCEPT__DT_DEFINITION);
+
+    indexDefinitionDtIndexEClass = createEClass(INDEX_DEFINITION_DT_INDEX);
+    createEReference(indexDefinitionDtIndexEClass, INDEX_DEFINITION_DT_INDEX__DT_DEFINITION);
+
+    indexDefinitionIndexCopyToStringEClass = createEClass(INDEX_DEFINITION_INDEX_COPY_TO_STRING);
+    createEAttribute(indexDefinitionIndexCopyToStringEClass, INDEX_DEFINITION_INDEX_COPY_TO_STRING__STRING);
+
+    indexDefinitionIndexCopyToEClass = createEClass(INDEX_DEFINITION_INDEX_COPY_TO);
+    createEAttribute(indexDefinitionIndexCopyToEClass, INDEX_DEFINITION_INDEX_COPY_TO__NAME);
+    createEReference(indexDefinitionIndexCopyToEClass, INDEX_DEFINITION_INDEX_COPY_TO__INDEX_DEFINITION_INDEX_COPY_TO_STRING);
+
+    indexDefinitionLoaderIdEClass = createEClass(INDEX_DEFINITION_LOADER_ID);
+    createEAttribute(indexDefinitionLoaderIdEClass, INDEX_DEFINITION_LOADER_ID__LOADER_ID_STRING);
+
+    indexDefinitionEClass = createEClass(INDEX_DEFINITION);
+
     dtDefinitionActionEClass = createEClass(DT_DEFINITION_ACTION);
     createEAttribute(dtDefinitionActionEClass, DT_DEFINITION_ACTION__NAME);
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_STEREOTYPE);
@@ -1663,6 +2411,21 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_DATA_SPACE);
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_SORT_FIELD);
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD);
+
+    facetedQueryDefinitionActionEClass = createEClass(FACETED_QUERY_DEFINITION_ACTION);
+    createEAttribute(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__NAME);
+    createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_KEY_CONCEPT);
+    createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA);
+    createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY);
+    createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS);
+    createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS);
+
+    indexDefinitionActionEClass = createEClass(INDEX_DEFINITION_ACTION);
+    createEAttribute(indexDefinitionActionEClass, INDEX_DEFINITION_ACTION__NAME);
+    createEReference(indexDefinitionActionEClass, INDEX_DEFINITION_ACTION__INDEX_DEFINITION_KEY_CONCEPT);
+    createEReference(indexDefinitionActionEClass, INDEX_DEFINITION_ACTION__INDEX_DEFINITION_DT_INDEX);
+    createEReference(indexDefinitionActionEClass, INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO);
+    createEReference(indexDefinitionActionEClass, INDEX_DEFINITION_ACTION__INDEX_DEFINITION_LOADER_ID);
 
     // Create enums
     dataTypeEEnum = createEEnum(DATA_TYPE);
@@ -1714,6 +2477,8 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     associationEClass.getESuperTypes().add(this.getElement());
     taskDefinitionEClass.getESuperTypes().add(this.getElement());
     dtDefinitionActionEClass.getESuperTypes().add(this.getDtDefinition());
+    facetedQueryDefinitionActionEClass.getESuperTypes().add(this.getFacetedQueryDefinition());
+    indexDefinitionActionEClass.getESuperTypes().add(this.getIndexDefinition());
 
     // Initialize classes and features; add operations and parameters
     initEClass(modelEClass, Model.class, "Model", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1825,7 +2590,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEAttribute(getAssociation_Type(), ecorePackage.getEString(), "type", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(taskAttributeStringEClass, TaskAttributeString.class, "TaskAttributeString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getTaskAttributeString_Domain(), this.getDomainType(), null, "domain", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getTaskAttributeString_RefToDomainType(), this.getRefToDomainType(), null, "refToDomainType", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTaskAttributeString_Required(), this.getBooleanString(), "required", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTaskAttributeString_Inout(), this.getInOutString(), "inout", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1846,6 +2611,64 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEReference(getTaskDefinition_TaskAttributes(), this.getTaskAttribute(), null, "taskAttributes", null, 0, -1, TaskDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getTaskDefinition_TaskDataSpace(), this.getTaskDataSpace(), null, "taskDataSpace", null, 0, 1, TaskDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(facetDefinitionDtDefinitionEClass, FacetDefinitionDtDefinition.class, "FacetDefinitionDtDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFacetDefinitionDtDefinition_DtDefinition(), this.getDtDefinitionType(), null, "dtDefinition", null, 0, 1, FacetDefinitionDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetDefinitionFieldNameEClass, FacetDefinitionFieldName.class, "FacetDefinitionFieldName", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetDefinitionFieldName_String(), ecorePackage.getEString(), "string", null, 0, 1, FacetDefinitionFieldName.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetDefinitionLabelEClass, FacetDefinitionLabel.class, "FacetDefinitionLabel", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetDefinitionLabel_String(), ecorePackage.getEString(), "string", null, 0, 1, FacetDefinitionLabel.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetDefinitionRangeStringEClass, FacetDefinitionRangeString.class, "FacetDefinitionRangeString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetDefinitionRangeString_FilterString(), ecorePackage.getEString(), "filterString", null, 0, 1, FacetDefinitionRangeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getFacetDefinitionRangeString_LabelString(), ecorePackage.getEString(), "labelString", null, 0, 1, FacetDefinitionRangeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetDefinitionRangeEClass, FacetDefinitionRange.class, "FacetDefinitionRange", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetDefinitionRange_Name(), ecorePackage.getEString(), "name", null, 0, 1, FacetDefinitionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetDefinitionRange_FacetDefinitionRangeString(), this.getFacetDefinitionRangeString(), null, "facetDefinitionRangeString", null, 0, 1, FacetDefinitionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetDefinitionEClass, FacetDefinition.class, "FacetDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFacetDefinition_FacetDefinitionDtDefinition(), this.getFacetDefinitionDtDefinition(), null, "facetDefinitionDtDefinition", null, 0, 1, FacetDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetDefinition_FacetDefinitionFieldName(), this.getFacetDefinitionFieldName(), null, "facetDefinitionFieldName", null, 0, 1, FacetDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetDefinition_FacetDefinitonLabel(), this.getFacetDefinitionLabel(), null, "facetDefinitonLabel", null, 0, 1, FacetDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetedQueryDefinitionKeyConceptEClass, FacetedQueryDefinitionKeyConcept.class, "FacetedQueryDefinitionKeyConcept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFacetedQueryDefinitionKeyConcept_DtDefinition(), this.getDtDefinitionType(), null, "dtDefinition", null, 0, 1, FacetedQueryDefinitionKeyConcept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetedQueryDefinitionDomainCriteriaEClass, FacetedQueryDefinitionDomainCriteria.class, "FacetedQueryDefinitionDomainCriteria", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFacetedQueryDefinitionDomainCriteria_RefToDomainType(), this.getRefToDomainType(), null, "refToDomainType", null, 0, 1, FacetedQueryDefinitionDomainCriteria.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetedQueryDefinitionListFilterBuilderQueryEClass, FacetedQueryDefinitionListFilterBuilderQuery.class, "FacetedQueryDefinitionListFilterBuilderQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetedQueryDefinitionListFilterBuilderQuery_String(), ecorePackage.getEString(), "string", null, 0, 1, FacetedQueryDefinitionListFilterBuilderQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetedQueryDefinitionListFilterBuilderClassEClass, FacetedQueryDefinitionListFilterBuilderClass.class, "FacetedQueryDefinitionListFilterBuilderClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetedQueryDefinitionListFilterBuilderClass_String(), ecorePackage.getEString(), "string", null, 0, 1, FacetedQueryDefinitionListFilterBuilderClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetedQueryDefinitionFacetsEClass, FacetedQueryDefinitionFacets.class, "FacetedQueryDefinitionFacets", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFacetedQueryDefinitionFacets_FacetDefinition(), this.getFacetDefinition(), null, "facetDefinition", null, 0, -1, FacetedQueryDefinitionFacets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetedQueryDefinitionFacets_Facets(), this.getFacetDefinition(), null, "facets", null, 0, -1, FacetedQueryDefinitionFacets.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetedQueryDefinitionEClass, FacetedQueryDefinition.class, "FacetedQueryDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(indexDefinitionKeyConceptEClass, IndexDefinitionKeyConcept.class, "IndexDefinitionKeyConcept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIndexDefinitionKeyConcept_DtDefinition(), this.getDtDefinitionType(), null, "dtDefinition", null, 0, 1, IndexDefinitionKeyConcept.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(indexDefinitionDtIndexEClass, IndexDefinitionDtIndex.class, "IndexDefinitionDtIndex", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getIndexDefinitionDtIndex_DtDefinition(), this.getDtDefinitionType(), null, "dtDefinition", null, 0, 1, IndexDefinitionDtIndex.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(indexDefinitionIndexCopyToStringEClass, IndexDefinitionIndexCopyToString.class, "IndexDefinitionIndexCopyToString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIndexDefinitionIndexCopyToString_String(), ecorePackage.getEString(), "string", null, 0, 1, IndexDefinitionIndexCopyToString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(indexDefinitionIndexCopyToEClass, IndexDefinitionIndexCopyTo.class, "IndexDefinitionIndexCopyTo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIndexDefinitionIndexCopyTo_Name(), ecorePackage.getEString(), "name", null, 0, 1, IndexDefinitionIndexCopyTo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIndexDefinitionIndexCopyTo_IndexDefinitionIndexCopyToString(), this.getIndexDefinitionIndexCopyToString(), null, "indexDefinitionIndexCopyToString", null, 0, 1, IndexDefinitionIndexCopyTo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(indexDefinitionLoaderIdEClass, IndexDefinitionLoaderId.class, "IndexDefinitionLoaderId", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIndexDefinitionLoaderId_LoaderIdString(), ecorePackage.getEString(), "loaderIdString", null, 0, 1, IndexDefinitionLoaderId.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(indexDefinitionEClass, IndexDefinition.class, "IndexDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
     initEClass(dtDefinitionActionEClass, DtDefinitionAction.class, "DtDefinitionAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDtDefinitionAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDtDefinitionAction_DtDefinitionStereotype(), this.getDtDefinitionStereotype(), null, "dtDefinitionStereotype", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1855,6 +2678,21 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEReference(getDtDefinitionAction_DtDefinitionDataSpace(), this.getDtDefinitionDataSpace(), null, "dtDefinitionDataSpace", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDtDefinitionAction_DtDefinitionSortField(), this.getDtDefinitionSortField(), null, "dtDefinitionSortField", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDtDefinitionAction_DtDefinitionDisplayField(), this.getDtDefinitionDisplayField(), null, "dtDefinitionDisplayField", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetedQueryDefinitionActionEClass, FacetedQueryDefinitionAction.class, "FacetedQueryDefinitionAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetedQueryDefinitionAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionKeyConcept(), this.getFacetedQueryDefinitionKeyConcept(), null, "facetedQueryDefinitionKeyConcept", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionDomainCriteria(), this.getFacetedQueryDefinitionDomainCriteria(), null, "facetedQueryDefinitionDomainCriteria", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderQuery(), this.getFacetedQueryDefinitionListFilterBuilderQuery(), null, "facetedQueryDefinitionListFilterBuilderQuery", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderClass(), this.getFacetedQueryDefinitionListFilterBuilderClass(), null, "facetedQueryDefinitionListFilterBuilderClass", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionFacets(), this.getFacetedQueryDefinitionFacets(), null, "facetedQueryDefinitionFacets", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(indexDefinitionActionEClass, IndexDefinitionAction.class, "IndexDefinitionAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIndexDefinitionAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, IndexDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIndexDefinitionAction_IndexDefinitionKeyConcept(), this.getIndexDefinitionKeyConcept(), null, "indexDefinitionKeyConcept", null, 0, 1, IndexDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIndexDefinitionAction_IndexDefinitionDtIndex(), this.getIndexDefinitionDtIndex(), null, "indexDefinitionDtIndex", null, 0, 1, IndexDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIndexDefinitionAction_IndexDefinitionIndexCopyTo(), this.getIndexDefinitionIndexCopyTo(), null, "indexDefinitionIndexCopyTo", null, 0, 1, IndexDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getIndexDefinitionAction_IndexDefinitionLoaderId(), this.getIndexDefinitionLoaderId(), null, "indexDefinitionLoaderId", null, 0, 1, IndexDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Initialize enums and add enum literals
     initEEnum(dataTypeEEnum, DataType.class, "DataType");

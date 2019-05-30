@@ -4,7 +4,12 @@
 package io.vertigo.dsl.tests
 
 import com.google.inject.Inject
+import io.vertigo.dsl.services.VertigoDslGrammarAccess
 import io.vertigo.dsl.vertigoDsl.Model
+import java.io.StringReader
+import org.eclipse.xtext.GrammarUtil
+import org.eclipse.xtext.ParserRule
+import org.eclipse.xtext.parser.IParser
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.extensions.InjectionExtension
 import org.eclipse.xtext.testing.util.ParseHelper
@@ -17,14 +22,39 @@ import org.junit.jupiter.api.^extension.ExtendWith
 class VertigoDslParsingTest {
 	@Inject
 	ParseHelper<Model> parseHelper
+
+	@Inject
+	VertigoDslGrammarAccess access;
+
+
+	@Inject
+	IParser parser;
 	
 	@Test
-	def void loadModel() {
-		val result = parseHelper.parse('''
-			Hello Xtext!
-		''')
+	def void checkParsingDeclaredDomain() {
+		
+		
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "DeclaredDomain") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			declare Domain Toto
+		'''))
 		Assertions.assertNotNull(result)
-		val errors = result.eResource.errors
+		val errors = result.syntaxErrors
+		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
+	}
+	
+	@Test
+	def void checkParsingDomain() {
+		
+		
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "DeclaredDomain") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			declare Domain Toto
+		'''))
+		Assertions.assertNotNull(result)
+		val errors = result.syntaxErrors
 		Assertions.assertTrue(errors.isEmpty, '''Unexpected errors: «errors.join(", ")»''')
 	}
 }

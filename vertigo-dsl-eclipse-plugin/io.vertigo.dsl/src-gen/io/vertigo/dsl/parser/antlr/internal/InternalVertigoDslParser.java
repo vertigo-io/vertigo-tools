@@ -22,21 +22,13 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_ESCAPED_CHAR", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'.'", "'domain'", "'id'", "'declare'", "'Domain'", "'DtDefinition'", "'create'", "'Constraint'", "'{'", "'className'", "':'", "'args'", "'msg'", "'}'", "'FileInfo'", "'storeName'", "'Formatter'", "'alter'", "'dataType'", "'formatter'", "'storeType'", "'indexType'", "'constraint'", "'['", "','", "']'", "'multiple'", "'unit'", "'label'", "'required'", "'persistent'", "'expression'", "'field'", "'computed'", "'stereotype'", "'displayField'", "'sortField'", "'Association'", "'fkFieldName'", "'dtDefinitionA'", "'dtDefinitionB'", "'navigabilityA'", "'navigabilityB'", "'multiplicityA'", "'multiplicityB'", "'labelA'", "'labelB'", "'roleA'", "'roleB'", "'type'", "'inOut'", "'attribute'", "'Task'", "'request'", "'Integer'", "'Double'", "'Boolean'", "'String'", "'LocalDate'", "'Instant'", "'BigDecimal'", "'Long'", "'DataStream'", "'\"true\"'", "'\"false\"'", "'\"0..1\"'", "'\"0..*\"'", "'\"in\"'", "'\"out\"'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_ESCAPED_CHAR", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'.'", "'domain'", "'id'", "'declare'", "'Domain'", "'DtDefinition'", "'create'", "'Constraint'", "'{'", "'className'", "':'", "'args'", "'msg'", "'}'", "'FileInfo'", "'storeName'", "'Formatter'", "'alter'", "'dataType'", "'formatter'", "'storeType'", "'indexType'", "'constraint'", "'['", "','", "']'", "'multiple'", "'unit'", "'label'", "'required'", "'persistent'", "'expression'", "'field'", "'computed'", "'stereotype'", "'displayField'", "'sortField'", "'Association'", "'fkFieldName'", "'dtDefinitionA'", "'dtDefinitionB'", "'navigabilityA'", "'navigabilityB'", "'multiplicityA'", "'multiplicityB'", "'labelA'", "'labelB'", "'roleA'", "'roleB'", "'type'", "'inOut'", "'attribute'", "'Task'", "'request'", "'dtDefinition'", "'fieldName'", "'filter'", "'keyConcept'", "'domainCriteria'", "'facets'", "'dtIndex'", "'from'", "'indexCopyTo'", "'loaderId'", "'Integer'", "'Double'", "'Boolean'", "'String'", "'LocalDate'", "'Instant'", "'BigDecimal'", "'Long'", "'DataStream'", "'\"true\"'", "'\"false\"'", "'\"0..1\"'", "'\"0..*\"'", "'\"in\"'", "'\"out\"'"
     };
     public static final int T__50=50;
-    public static final int T__19=19;
-    public static final int T__15=15;
     public static final int T__59=59;
-    public static final int T__16=16;
-    public static final int T__17=17;
-    public static final int T__18=18;
     public static final int T__55=55;
-    public static final int T__12=12;
     public static final int T__56=56;
-    public static final int T__13=13;
     public static final int T__57=57;
-    public static final int T__14=14;
     public static final int T__58=58;
     public static final int T__51=51;
     public static final int T__52=52;
@@ -45,54 +37,27 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final int T__60=60;
     public static final int T__61=61;
     public static final int RULE_ID=4;
-    public static final int T__26=26;
-    public static final int T__27=27;
-    public static final int T__28=28;
     public static final int RULE_INT=7;
-    public static final int T__29=29;
-    public static final int T__22=22;
     public static final int T__66=66;
     public static final int RULE_ML_COMMENT=8;
-    public static final int T__23=23;
     public static final int T__67=67;
-    public static final int T__24=24;
     public static final int T__68=68;
-    public static final int T__25=25;
     public static final int T__69=69;
     public static final int T__62=62;
     public static final int T__63=63;
-    public static final int T__20=20;
     public static final int T__64=64;
-    public static final int T__21=21;
     public static final int T__65=65;
-    public static final int T__70=70;
-    public static final int T__71=71;
-    public static final int T__72=72;
     public static final int RULE_ESCAPED_CHAR=6;
-    public static final int RULE_STRING=5;
-    public static final int RULE_SL_COMMENT=9;
     public static final int T__37=37;
     public static final int T__38=38;
     public static final int T__39=39;
     public static final int T__33=33;
-    public static final int T__77=77;
     public static final int T__34=34;
-    public static final int T__78=78;
     public static final int T__35=35;
-    public static final int T__79=79;
     public static final int T__36=36;
-    public static final int T__73=73;
-    public static final int EOF=-1;
     public static final int T__30=30;
-    public static final int T__74=74;
     public static final int T__31=31;
-    public static final int T__75=75;
     public static final int T__32=32;
-    public static final int T__76=76;
-    public static final int T__80=80;
-    public static final int T__81=81;
-    public static final int RULE_WS=10;
-    public static final int RULE_ANY_OTHER=11;
     public static final int T__48=48;
     public static final int T__49=49;
     public static final int T__44=44;
@@ -103,6 +68,51 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final int T__41=41;
     public static final int T__42=42;
     public static final int T__43=43;
+    public static final int T__91=91;
+    public static final int T__90=90;
+    public static final int T__19=19;
+    public static final int T__15=15;
+    public static final int T__16=16;
+    public static final int T__17=17;
+    public static final int T__18=18;
+    public static final int T__12=12;
+    public static final int T__13=13;
+    public static final int T__14=14;
+    public static final int T__26=26;
+    public static final int T__27=27;
+    public static final int T__28=28;
+    public static final int T__29=29;
+    public static final int T__22=22;
+    public static final int T__23=23;
+    public static final int T__24=24;
+    public static final int T__25=25;
+    public static final int T__20=20;
+    public static final int T__21=21;
+    public static final int T__70=70;
+    public static final int T__71=71;
+    public static final int T__72=72;
+    public static final int RULE_STRING=5;
+    public static final int RULE_SL_COMMENT=9;
+    public static final int T__77=77;
+    public static final int T__78=78;
+    public static final int T__79=79;
+    public static final int T__73=73;
+    public static final int EOF=-1;
+    public static final int T__74=74;
+    public static final int T__75=75;
+    public static final int T__76=76;
+    public static final int T__80=80;
+    public static final int T__81=81;
+    public static final int T__82=82;
+    public static final int T__83=83;
+    public static final int RULE_WS=10;
+    public static final int RULE_ANY_OTHER=11;
+    public static final int T__88=88;
+    public static final int T__89=89;
+    public static final int T__84=84;
+    public static final int T__85=85;
+    public static final int T__86=86;
+    public static final int T__87=87;
 
     // delegates
     // delegators
@@ -7177,14 +7187,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskAttributeString"
-    // InternalVertigoDsl.g:2906:1: ruleTaskAttributeString returns [EObject current=null] : (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' ) ;
+    // InternalVertigoDsl.g:2906:1: ruleTaskAttributeString returns [EObject current=null] : (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' ) ;
     public final EObject ruleTaskAttributeString() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        Token otherlv_4=null;
         Token otherlv_5=null;
         Token otherlv_6=null;
         Token otherlv_7=null;
@@ -7193,6 +7202,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         Token otherlv_11=null;
         Token otherlv_13=null;
         Token otherlv_14=null;
+        EObject lv_refToDomainType_4_0 = null;
+
         Enumerator lv_required_8_0 = null;
 
         Enumerator lv_inout_12_0 = null;
@@ -7202,29 +7213,29 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:2912:2: ( (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' ) )
-            // InternalVertigoDsl.g:2913:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' )
+            // InternalVertigoDsl.g:2912:2: ( (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' ) )
+            // InternalVertigoDsl.g:2913:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' )
             {
-            // InternalVertigoDsl.g:2913:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' )
-            // InternalVertigoDsl.g:2914:3: otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}'
+            // InternalVertigoDsl.g:2913:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' )
+            // InternalVertigoDsl.g:2914:3: otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}'
             {
             otherlv_0=(Token)match(input,21,FOLLOW_51); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTaskAttributeStringAccess().getLeftCurlyBracketKeyword_0());
             		
-            // InternalVertigoDsl.g:2918:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) )
-            // InternalVertigoDsl.g:2919:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:2918:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) )
+            // InternalVertigoDsl.g:2919:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) )
             {
-            // InternalVertigoDsl.g:2919:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) )
-            // InternalVertigoDsl.g:2920:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:2919:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:2920:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?)
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1());
             				
-            // InternalVertigoDsl.g:2923:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?)
-            // InternalVertigoDsl.g:2924:6: ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?
+            // InternalVertigoDsl.g:2923:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:2924:6: ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?
             {
-            // InternalVertigoDsl.g:2924:6: ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+
+            // InternalVertigoDsl.g:2924:6: ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+
             int cnt54=0;
             loop54:
             do {
@@ -7244,28 +7255,28 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
                 switch (alt54) {
             	case 1 :
-            	    // InternalVertigoDsl.g:2925:4: ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:2925:4: ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2925:4: ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:2926:5: {...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:2925:4: ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:2926:5: {...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:2926:116: ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:2927:6: ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) )
+            	    // InternalVertigoDsl.g:2926:116: ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:2927:6: ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0);
             	    					
-            	    // InternalVertigoDsl.g:2930:9: ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? ) )
-            	    // InternalVertigoDsl.g:2930:10: {...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? )
+            	    // InternalVertigoDsl.g:2930:9: ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) )
+            	    // InternalVertigoDsl.g:2930:10: {...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "true");
             	    }
-            	    // InternalVertigoDsl.g:2930:19: (otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )? )
-            	    // InternalVertigoDsl.g:2930:20: otherlv_2= 'domain' otherlv_3= ':' ( (otherlv_4= RULE_ID ) ) (otherlv_5= ',' )?
+            	    // InternalVertigoDsl.g:2930:19: (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? )
+            	    // InternalVertigoDsl.g:2930:20: otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )?
             	    {
             	    otherlv_2=(Token)match(input,14,FOLLOW_13); 
 
@@ -7275,20 +7286,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_3, grammarAccess.getTaskAttributeStringAccess().getColonKeyword_1_0_1());
             	    								
-            	    // InternalVertigoDsl.g:2938:9: ( (otherlv_4= RULE_ID ) )
-            	    // InternalVertigoDsl.g:2939:10: (otherlv_4= RULE_ID )
+            	    // InternalVertigoDsl.g:2938:9: ( (lv_refToDomainType_4_0= ruleRefToDomainType ) )
+            	    // InternalVertigoDsl.g:2939:10: (lv_refToDomainType_4_0= ruleRefToDomainType )
             	    {
-            	    // InternalVertigoDsl.g:2939:10: (otherlv_4= RULE_ID )
-            	    // InternalVertigoDsl.g:2940:11: otherlv_4= RULE_ID
+            	    // InternalVertigoDsl.g:2939:10: (lv_refToDomainType_4_0= ruleRefToDomainType )
+            	    // InternalVertigoDsl.g:2940:11: lv_refToDomainType_4_0= ruleRefToDomainType
             	    {
+
+            	    											newCompositeNode(grammarAccess.getTaskAttributeStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0());
+            	    										
+            	    pushFollow(FOLLOW_52);
+            	    lv_refToDomainType_4_0=ruleRefToDomainType();
+
+            	    state._fsp--;
+
 
             	    											if (current==null) {
-            	    												current = createModelElement(grammarAccess.getTaskAttributeStringRule());
+            	    												current = createModelElementForParent(grammarAccess.getTaskAttributeStringRule());
             	    											}
-            	    										
-            	    otherlv_4=(Token)match(input,RULE_ID,FOLLOW_52); 
-
-            	    											newLeafNode(otherlv_4, grammarAccess.getTaskAttributeStringAccess().getDomainDomainTypeCrossReference_1_0_2_0());
+            	    											set(
+            	    												current,
+            	    												"refToDomainType",
+            	    												lv_refToDomainType_4_0,
+            	    												"io.vertigo.dsl.VertigoDsl.RefToDomainType");
+            	    											afterParserOrEnumRuleCall();
             	    										
 
             	    }
@@ -7296,7 +7317,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:2951:9: (otherlv_5= ',' )?
+            	    // InternalVertigoDsl.g:2957:9: (otherlv_5= ',' )?
             	    int alt51=2;
             	    int LA51_0 = input.LA(1);
 
@@ -7305,7 +7326,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt51) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:2952:10: otherlv_5= ','
+            	            // InternalVertigoDsl.g:2958:10: otherlv_5= ','
             	            {
             	            otherlv_5=(Token)match(input,37,FOLLOW_53); 
 
@@ -7336,28 +7357,28 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:2963:4: ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:2969:4: ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2963:4: ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:2964:5: {...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:2969:4: ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:2970:5: {...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:2964:116: ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:2965:6: ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) )
+            	    // InternalVertigoDsl.g:2970:116: ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:2971:6: ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1);
             	    					
-            	    // InternalVertigoDsl.g:2968:9: ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) )
-            	    // InternalVertigoDsl.g:2968:10: {...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? )
+            	    // InternalVertigoDsl.g:2974:9: ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) )
+            	    // InternalVertigoDsl.g:2974:10: {...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "true");
             	    }
-            	    // InternalVertigoDsl.g:2968:19: (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? )
-            	    // InternalVertigoDsl.g:2968:20: otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )?
+            	    // InternalVertigoDsl.g:2974:19: (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? )
+            	    // InternalVertigoDsl.g:2974:20: otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )?
             	    {
             	    otherlv_6=(Token)match(input,42,FOLLOW_13); 
 
@@ -7367,11 +7388,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_7, grammarAccess.getTaskAttributeStringAccess().getColonKeyword_1_1_1());
             	    								
-            	    // InternalVertigoDsl.g:2976:9: ( (lv_required_8_0= ruleBooleanString ) )
-            	    // InternalVertigoDsl.g:2977:10: (lv_required_8_0= ruleBooleanString )
+            	    // InternalVertigoDsl.g:2982:9: ( (lv_required_8_0= ruleBooleanString ) )
+            	    // InternalVertigoDsl.g:2983:10: (lv_required_8_0= ruleBooleanString )
             	    {
-            	    // InternalVertigoDsl.g:2977:10: (lv_required_8_0= ruleBooleanString )
-            	    // InternalVertigoDsl.g:2978:11: lv_required_8_0= ruleBooleanString
+            	    // InternalVertigoDsl.g:2983:10: (lv_required_8_0= ruleBooleanString )
+            	    // InternalVertigoDsl.g:2984:11: lv_required_8_0= ruleBooleanString
             	    {
 
             	    											newCompositeNode(grammarAccess.getTaskAttributeStringAccess().getRequiredBooleanStringEnumRuleCall_1_1_2_0());
@@ -7398,7 +7419,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:2995:9: (otherlv_9= ',' )?
+            	    // InternalVertigoDsl.g:3001:9: (otherlv_9= ',' )?
             	    int alt52=2;
             	    int LA52_0 = input.LA(1);
 
@@ -7407,7 +7428,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt52) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:2996:10: otherlv_9= ','
+            	            // InternalVertigoDsl.g:3002:10: otherlv_9= ','
             	            {
             	            otherlv_9=(Token)match(input,37,FOLLOW_53); 
 
@@ -7438,28 +7459,28 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalVertigoDsl.g:3007:4: ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3013:4: ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3007:4: ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3008:5: {...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3013:4: ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3014:5: {...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2)");
             	    }
-            	    // InternalVertigoDsl.g:3008:116: ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3009:6: ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) )
+            	    // InternalVertigoDsl.g:3014:116: ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3015:6: ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2);
             	    					
-            	    // InternalVertigoDsl.g:3012:9: ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) )
-            	    // InternalVertigoDsl.g:3012:10: {...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? )
+            	    // InternalVertigoDsl.g:3018:9: ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) )
+            	    // InternalVertigoDsl.g:3018:10: {...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "true");
             	    }
-            	    // InternalVertigoDsl.g:3012:19: (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? )
-            	    // InternalVertigoDsl.g:3012:20: otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )?
+            	    // InternalVertigoDsl.g:3018:19: (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? )
+            	    // InternalVertigoDsl.g:3018:20: otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )?
             	    {
             	    otherlv_10=(Token)match(input,63,FOLLOW_13); 
 
@@ -7469,11 +7490,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_11, grammarAccess.getTaskAttributeStringAccess().getColonKeyword_1_2_1());
             	    								
-            	    // InternalVertigoDsl.g:3020:9: ( (lv_inout_12_0= ruleInOutString ) )
-            	    // InternalVertigoDsl.g:3021:10: (lv_inout_12_0= ruleInOutString )
+            	    // InternalVertigoDsl.g:3026:9: ( (lv_inout_12_0= ruleInOutString ) )
+            	    // InternalVertigoDsl.g:3027:10: (lv_inout_12_0= ruleInOutString )
             	    {
-            	    // InternalVertigoDsl.g:3021:10: (lv_inout_12_0= ruleInOutString )
-            	    // InternalVertigoDsl.g:3022:11: lv_inout_12_0= ruleInOutString
+            	    // InternalVertigoDsl.g:3027:10: (lv_inout_12_0= ruleInOutString )
+            	    // InternalVertigoDsl.g:3028:11: lv_inout_12_0= ruleInOutString
             	    {
 
             	    											newCompositeNode(grammarAccess.getTaskAttributeStringAccess().getInoutInOutStringEnumRuleCall_1_2_2_0());
@@ -7500,7 +7521,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3039:9: (otherlv_13= ',' )?
+            	    // InternalVertigoDsl.g:3045:9: (otherlv_13= ',' )?
             	    int alt53=2;
             	    int LA53_0 = input.LA(1);
 
@@ -7509,7 +7530,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    switch (alt53) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3040:10: otherlv_13= ','
+            	            // InternalVertigoDsl.g:3046:10: otherlv_13= ','
             	            {
             	            otherlv_13=(Token)match(input,37,FOLLOW_53); 
 
@@ -7591,7 +7612,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskAttribute"
-    // InternalVertigoDsl.g:3067:1: entryRuleTaskAttribute returns [EObject current=null] : iv_ruleTaskAttribute= ruleTaskAttribute EOF ;
+    // InternalVertigoDsl.g:3073:1: entryRuleTaskAttribute returns [EObject current=null] : iv_ruleTaskAttribute= ruleTaskAttribute EOF ;
     public final EObject entryRuleTaskAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -7599,8 +7620,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3067:54: (iv_ruleTaskAttribute= ruleTaskAttribute EOF )
-            // InternalVertigoDsl.g:3068:2: iv_ruleTaskAttribute= ruleTaskAttribute EOF
+            // InternalVertigoDsl.g:3073:54: (iv_ruleTaskAttribute= ruleTaskAttribute EOF )
+            // InternalVertigoDsl.g:3074:2: iv_ruleTaskAttribute= ruleTaskAttribute EOF
             {
              newCompositeNode(grammarAccess.getTaskAttributeRule()); 
             pushFollow(FOLLOW_1);
@@ -7627,7 +7648,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskAttribute"
-    // InternalVertigoDsl.g:3074:1: ruleTaskAttribute returns [EObject current=null] : (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:3080:1: ruleTaskAttribute returns [EObject current=null] : (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleTaskAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -7641,21 +7662,21 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3080:2: ( (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:3081:2: (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:3086:2: ( (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:3087:2: (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:3081:2: (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:3082:3: otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:3087:2: (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:3088:3: otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )?
             {
             otherlv_0=(Token)match(input,64,FOLLOW_8); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTaskAttributeAccess().getAttributeKeyword_0());
             		
-            // InternalVertigoDsl.g:3086:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalVertigoDsl.g:3087:4: (lv_name_1_0= RULE_ID )
+            // InternalVertigoDsl.g:3092:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalVertigoDsl.g:3093:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:3087:4: (lv_name_1_0= RULE_ID )
-            // InternalVertigoDsl.g:3088:5: lv_name_1_0= RULE_ID
+            // InternalVertigoDsl.g:3093:4: (lv_name_1_0= RULE_ID )
+            // InternalVertigoDsl.g:3094:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -7677,11 +7698,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3104:3: ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) )
-            // InternalVertigoDsl.g:3105:4: (lv_taskAttributeString_2_0= ruleTaskAttributeString )
+            // InternalVertigoDsl.g:3110:3: ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) )
+            // InternalVertigoDsl.g:3111:4: (lv_taskAttributeString_2_0= ruleTaskAttributeString )
             {
-            // InternalVertigoDsl.g:3105:4: (lv_taskAttributeString_2_0= ruleTaskAttributeString )
-            // InternalVertigoDsl.g:3106:5: lv_taskAttributeString_2_0= ruleTaskAttributeString
+            // InternalVertigoDsl.g:3111:4: (lv_taskAttributeString_2_0= ruleTaskAttributeString )
+            // InternalVertigoDsl.g:3112:5: lv_taskAttributeString_2_0= ruleTaskAttributeString
             {
 
             					newCompositeNode(grammarAccess.getTaskAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0());
@@ -7708,7 +7729,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3123:3: (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:3129:3: (otherlv_3= ',' )?
             int alt55=2;
             int LA55_0 = input.LA(1);
 
@@ -7717,7 +7738,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             }
             switch (alt55) {
                 case 1 :
-                    // InternalVertigoDsl.g:3124:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:3130:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -7752,7 +7773,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskDataSpace"
-    // InternalVertigoDsl.g:3133:1: entryRuleTaskDataSpace returns [EObject current=null] : iv_ruleTaskDataSpace= ruleTaskDataSpace EOF ;
+    // InternalVertigoDsl.g:3139:1: entryRuleTaskDataSpace returns [EObject current=null] : iv_ruleTaskDataSpace= ruleTaskDataSpace EOF ;
     public final EObject entryRuleTaskDataSpace() throws RecognitionException {
         EObject current = null;
 
@@ -7760,8 +7781,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3133:54: (iv_ruleTaskDataSpace= ruleTaskDataSpace EOF )
-            // InternalVertigoDsl.g:3134:2: iv_ruleTaskDataSpace= ruleTaskDataSpace EOF
+            // InternalVertigoDsl.g:3139:54: (iv_ruleTaskDataSpace= ruleTaskDataSpace EOF )
+            // InternalVertigoDsl.g:3140:2: iv_ruleTaskDataSpace= ruleTaskDataSpace EOF
             {
              newCompositeNode(grammarAccess.getTaskDataSpaceRule()); 
             pushFollow(FOLLOW_1);
@@ -7788,23 +7809,24 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskDataSpace"
-    // InternalVertigoDsl.g:3140:1: ruleTaskDataSpace returns [EObject current=null] : (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) ) ;
+    // InternalVertigoDsl.g:3146:1: ruleTaskDataSpace returns [EObject current=null] : (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleTaskDataSpace() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_0=null;
         Token otherlv_1=null;
         Token lv_storeName_2_0=null;
+        Token otherlv_3=null;
 
 
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3146:2: ( (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) ) )
-            // InternalVertigoDsl.g:3147:2: (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) )
+            // InternalVertigoDsl.g:3152:2: ( (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:3153:2: (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:3147:2: (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) )
-            // InternalVertigoDsl.g:3148:3: otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3153:2: (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:3154:3: otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
             {
             otherlv_0=(Token)match(input,28,FOLLOW_13); 
 
@@ -7814,13 +7836,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getTaskDataSpaceAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:3156:3: ( (lv_storeName_2_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:3157:4: (lv_storeName_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:3162:3: ( (lv_storeName_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3163:4: (lv_storeName_2_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:3157:4: (lv_storeName_2_0= RULE_STRING )
-            // InternalVertigoDsl.g:3158:5: lv_storeName_2_0= RULE_STRING
+            // InternalVertigoDsl.g:3163:4: (lv_storeName_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:3164:5: lv_storeName_2_0= RULE_STRING
             {
-            lv_storeName_2_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+            lv_storeName_2_0=(Token)match(input,RULE_STRING,FOLLOW_40); 
 
             					newLeafNode(lv_storeName_2_0, grammarAccess.getTaskDataSpaceAccess().getStoreNameSTRINGTerminalRuleCall_2_0());
             				
@@ -7837,6 +7859,27 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
+
+            }
+
+            // InternalVertigoDsl.g:3180:3: (otherlv_3= ',' )?
+            int alt56=2;
+            int LA56_0 = input.LA(1);
+
+            if ( (LA56_0==37) ) {
+                alt56=1;
+            }
+            switch (alt56) {
+                case 1 :
+                    // InternalVertigoDsl.g:3181:4: otherlv_3= ','
+                    {
+                    otherlv_3=(Token)match(input,37,FOLLOW_2); 
+
+                    				newLeafNode(otherlv_3, grammarAccess.getTaskDataSpaceAccess().getCommaKeyword_3());
+                    			
+
+                    }
+                    break;
 
             }
 
@@ -7863,7 +7906,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskRequestString"
-    // InternalVertigoDsl.g:3178:1: entryRuleTaskRequestString returns [EObject current=null] : iv_ruleTaskRequestString= ruleTaskRequestString EOF ;
+    // InternalVertigoDsl.g:3190:1: entryRuleTaskRequestString returns [EObject current=null] : iv_ruleTaskRequestString= ruleTaskRequestString EOF ;
     public final EObject entryRuleTaskRequestString() throws RecognitionException {
         EObject current = null;
 
@@ -7871,8 +7914,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3178:58: (iv_ruleTaskRequestString= ruleTaskRequestString EOF )
-            // InternalVertigoDsl.g:3179:2: iv_ruleTaskRequestString= ruleTaskRequestString EOF
+            // InternalVertigoDsl.g:3190:58: (iv_ruleTaskRequestString= ruleTaskRequestString EOF )
+            // InternalVertigoDsl.g:3191:2: iv_ruleTaskRequestString= ruleTaskRequestString EOF
             {
              newCompositeNode(grammarAccess.getTaskRequestStringRule()); 
             pushFollow(FOLLOW_1);
@@ -7899,7 +7942,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskRequestString"
-    // InternalVertigoDsl.g:3185:1: ruleTaskRequestString returns [EObject current=null] : ( (lv_string_0_0= RULE_STRING ) ) ;
+    // InternalVertigoDsl.g:3197:1: ruleTaskRequestString returns [EObject current=null] : ( (lv_string_0_0= RULE_STRING ) ) ;
     public final EObject ruleTaskRequestString() throws RecognitionException {
         EObject current = null;
 
@@ -7909,14 +7952,14 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3191:2: ( ( (lv_string_0_0= RULE_STRING ) ) )
-            // InternalVertigoDsl.g:3192:2: ( (lv_string_0_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3203:2: ( ( (lv_string_0_0= RULE_STRING ) ) )
+            // InternalVertigoDsl.g:3204:2: ( (lv_string_0_0= RULE_STRING ) )
             {
-            // InternalVertigoDsl.g:3192:2: ( (lv_string_0_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:3193:3: (lv_string_0_0= RULE_STRING )
+            // InternalVertigoDsl.g:3204:2: ( (lv_string_0_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3205:3: (lv_string_0_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:3193:3: (lv_string_0_0= RULE_STRING )
-            // InternalVertigoDsl.g:3194:4: lv_string_0_0= RULE_STRING
+            // InternalVertigoDsl.g:3205:3: (lv_string_0_0= RULE_STRING )
+            // InternalVertigoDsl.g:3206:4: lv_string_0_0= RULE_STRING
             {
             lv_string_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -7958,7 +8001,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskDefinition"
-    // InternalVertigoDsl.g:3213:1: entryRuleTaskDefinition returns [EObject current=null] : iv_ruleTaskDefinition= ruleTaskDefinition EOF ;
+    // InternalVertigoDsl.g:3225:1: entryRuleTaskDefinition returns [EObject current=null] : iv_ruleTaskDefinition= ruleTaskDefinition EOF ;
     public final EObject entryRuleTaskDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -7966,8 +8009,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3213:55: (iv_ruleTaskDefinition= ruleTaskDefinition EOF )
-            // InternalVertigoDsl.g:3214:2: iv_ruleTaskDefinition= ruleTaskDefinition EOF
+            // InternalVertigoDsl.g:3225:55: (iv_ruleTaskDefinition= ruleTaskDefinition EOF )
+            // InternalVertigoDsl.g:3226:2: iv_ruleTaskDefinition= ruleTaskDefinition EOF
             {
              newCompositeNode(grammarAccess.getTaskDefinitionRule()); 
             pushFollow(FOLLOW_1);
@@ -7994,7 +8037,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskDefinition"
-    // InternalVertigoDsl.g:3220:1: ruleTaskDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' ) ;
+    // InternalVertigoDsl.g:3232:1: ruleTaskDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' ) ;
     public final EObject ruleTaskDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -8021,11 +8064,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3226:2: ( (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' ) )
-            // InternalVertigoDsl.g:3227:2: (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' )
+            // InternalVertigoDsl.g:3238:2: ( (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' ) )
+            // InternalVertigoDsl.g:3239:2: (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' )
             {
-            // InternalVertigoDsl.g:3227:2: (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' )
-            // InternalVertigoDsl.g:3228:3: otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}'
+            // InternalVertigoDsl.g:3239:2: (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' )
+            // InternalVertigoDsl.g:3240:3: otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}'
             {
             otherlv_0=(Token)match(input,19,FOLLOW_55); 
 
@@ -8035,11 +8078,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getTaskDefinitionAccess().getTaskKeyword_1());
             		
-            // InternalVertigoDsl.g:3236:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalVertigoDsl.g:3237:4: (lv_name_2_0= RULE_ID )
+            // InternalVertigoDsl.g:3248:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalVertigoDsl.g:3249:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:3237:4: (lv_name_2_0= RULE_ID )
-            // InternalVertigoDsl.g:3238:5: lv_name_2_0= RULE_ID
+            // InternalVertigoDsl.g:3249:4: (lv_name_2_0= RULE_ID )
+            // InternalVertigoDsl.g:3250:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -8073,11 +8116,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_5, grammarAccess.getTaskDefinitionAccess().getColonKeyword_5());
             		
-            // InternalVertigoDsl.g:3266:3: ( (lv_classname_6_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:3267:4: (lv_classname_6_0= RULE_STRING )
+            // InternalVertigoDsl.g:3278:3: ( (lv_classname_6_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3279:4: (lv_classname_6_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:3267:4: (lv_classname_6_0= RULE_STRING )
-            // InternalVertigoDsl.g:3268:5: lv_classname_6_0= RULE_STRING
+            // InternalVertigoDsl.g:3279:4: (lv_classname_6_0= RULE_STRING )
+            // InternalVertigoDsl.g:3280:5: lv_classname_6_0= RULE_STRING
             {
             lv_classname_6_0=(Token)match(input,RULE_STRING,FOLLOW_56); 
 
@@ -8099,16 +8142,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3284:3: (otherlv_7= ',' )?
-            int alt56=2;
-            int LA56_0 = input.LA(1);
+            // InternalVertigoDsl.g:3296:3: (otherlv_7= ',' )?
+            int alt57=2;
+            int LA57_0 = input.LA(1);
 
-            if ( (LA56_0==37) ) {
-                alt56=1;
+            if ( (LA57_0==37) ) {
+                alt57=1;
             }
-            switch (alt56) {
+            switch (alt57) {
                 case 1 :
-                    // InternalVertigoDsl.g:3285:4: otherlv_7= ','
+                    // InternalVertigoDsl.g:3297:4: otherlv_7= ','
                     {
                     otherlv_7=(Token)match(input,37,FOLLOW_57); 
 
@@ -8128,11 +8171,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_9, grammarAccess.getTaskDefinitionAccess().getColonKeyword_9());
             		
-            // InternalVertigoDsl.g:3298:3: ( (lv_request_10_0= ruleTaskRequestString ) )
-            // InternalVertigoDsl.g:3299:4: (lv_request_10_0= ruleTaskRequestString )
+            // InternalVertigoDsl.g:3310:3: ( (lv_request_10_0= ruleTaskRequestString ) )
+            // InternalVertigoDsl.g:3311:4: (lv_request_10_0= ruleTaskRequestString )
             {
-            // InternalVertigoDsl.g:3299:4: (lv_request_10_0= ruleTaskRequestString )
-            // InternalVertigoDsl.g:3300:5: lv_request_10_0= ruleTaskRequestString
+            // InternalVertigoDsl.g:3311:4: (lv_request_10_0= ruleTaskRequestString )
+            // InternalVertigoDsl.g:3312:5: lv_request_10_0= ruleTaskRequestString
             {
 
             					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getRequestTaskRequestStringParserRuleCall_10_0());
@@ -8159,16 +8202,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3317:3: (otherlv_11= ',' )?
-            int alt57=2;
-            int LA57_0 = input.LA(1);
+            // InternalVertigoDsl.g:3329:3: (otherlv_11= ',' )?
+            int alt58=2;
+            int LA58_0 = input.LA(1);
 
-            if ( (LA57_0==37) ) {
-                alt57=1;
+            if ( (LA58_0==37) ) {
+                alt58=1;
             }
-            switch (alt57) {
+            switch (alt58) {
                 case 1 :
-                    // InternalVertigoDsl.g:3318:4: otherlv_11= ','
+                    // InternalVertigoDsl.g:3330:4: otherlv_11= ','
                     {
                     otherlv_11=(Token)match(input,37,FOLLOW_59); 
 
@@ -8180,23 +8223,23 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3323:3: ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )*
-            loop58:
+            // InternalVertigoDsl.g:3335:3: ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )*
+            loop59:
             do {
-                int alt58=2;
-                int LA58_0 = input.LA(1);
+                int alt59=2;
+                int LA59_0 = input.LA(1);
 
-                if ( (LA58_0==64) ) {
-                    alt58=1;
+                if ( (LA59_0==64) ) {
+                    alt59=1;
                 }
 
 
-                switch (alt58) {
+                switch (alt59) {
             	case 1 :
-            	    // InternalVertigoDsl.g:3324:4: (lv_taskAttributes_12_0= ruleTaskAttribute )
+            	    // InternalVertigoDsl.g:3336:4: (lv_taskAttributes_12_0= ruleTaskAttribute )
             	    {
-            	    // InternalVertigoDsl.g:3324:4: (lv_taskAttributes_12_0= ruleTaskAttribute )
-            	    // InternalVertigoDsl.g:3325:5: lv_taskAttributes_12_0= ruleTaskAttribute
+            	    // InternalVertigoDsl.g:3336:4: (lv_taskAttributes_12_0= ruleTaskAttribute )
+            	    // InternalVertigoDsl.g:3337:5: lv_taskAttributes_12_0= ruleTaskAttribute
             	    {
 
             	    					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getTaskAttributesTaskAttributeParserRuleCall_12_0());
@@ -8225,23 +8268,23 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop58;
+            	    break loop59;
                 }
             } while (true);
 
-            // InternalVertigoDsl.g:3342:3: ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )?
-            int alt59=2;
-            int LA59_0 = input.LA(1);
+            // InternalVertigoDsl.g:3354:3: ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )?
+            int alt60=2;
+            int LA60_0 = input.LA(1);
 
-            if ( (LA59_0==28) ) {
-                alt59=1;
+            if ( (LA60_0==28) ) {
+                alt60=1;
             }
-            switch (alt59) {
+            switch (alt60) {
                 case 1 :
-                    // InternalVertigoDsl.g:3343:4: (lv_taskDataSpace_13_0= ruleTaskDataSpace )
+                    // InternalVertigoDsl.g:3355:4: (lv_taskDataSpace_13_0= ruleTaskDataSpace )
                     {
-                    // InternalVertigoDsl.g:3343:4: (lv_taskDataSpace_13_0= ruleTaskDataSpace )
-                    // InternalVertigoDsl.g:3344:5: lv_taskDataSpace_13_0= ruleTaskDataSpace
+                    // InternalVertigoDsl.g:3355:4: (lv_taskDataSpace_13_0= ruleTaskDataSpace )
+                    // InternalVertigoDsl.g:3356:5: lv_taskDataSpace_13_0= ruleTaskDataSpace
                     {
 
                     					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getTaskDataSpaceTaskDataSpaceParserRuleCall_13_0());
@@ -8297,8 +8340,1889 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleTaskDefinition"
 
 
+    // $ANTLR start "entryRuleFacetDefinitionDtDefinition"
+    // InternalVertigoDsl.g:3381:1: entryRuleFacetDefinitionDtDefinition returns [EObject current=null] : iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF ;
+    public final EObject entryRuleFacetDefinitionDtDefinition() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetDefinitionDtDefinition = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3381:68: (iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF )
+            // InternalVertigoDsl.g:3382:2: iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF
+            {
+             newCompositeNode(grammarAccess.getFacetDefinitionDtDefinitionRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetDefinitionDtDefinition=ruleFacetDefinitionDtDefinition();
+
+            state._fsp--;
+
+             current =iv_ruleFacetDefinitionDtDefinition; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetDefinitionDtDefinition"
+
+
+    // $ANTLR start "ruleFacetDefinitionDtDefinition"
+    // InternalVertigoDsl.g:3388:1: ruleFacetDefinitionDtDefinition returns [EObject current=null] : (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) ;
+    public final EObject ruleFacetDefinitionDtDefinition() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3394:2: ( (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) )
+            // InternalVertigoDsl.g:3395:2: (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            {
+            // InternalVertigoDsl.g:3395:2: (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            // InternalVertigoDsl.g:3396:3: otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) )
+            {
+            otherlv_0=(Token)match(input,67,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionDtDefinitionAccess().getDtDefinitionKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_8); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getFacetDefinitionDtDefinitionAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:3404:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:3405:4: (otherlv_2= RULE_ID )
+            {
+            // InternalVertigoDsl.g:3405:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:3406:5: otherlv_2= RULE_ID
+            {
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getFacetDefinitionDtDefinitionRule());
+            					}
+            				
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+            					newLeafNode(otherlv_2, grammarAccess.getFacetDefinitionDtDefinitionAccess().getDtDefinitionDtDefinitionTypeCrossReference_2_0());
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetDefinitionDtDefinition"
+
+
+    // $ANTLR start "entryRuleFacetDefinitionFieldName"
+    // InternalVertigoDsl.g:3421:1: entryRuleFacetDefinitionFieldName returns [EObject current=null] : iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF ;
+    public final EObject entryRuleFacetDefinitionFieldName() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetDefinitionFieldName = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3421:65: (iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF )
+            // InternalVertigoDsl.g:3422:2: iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF
+            {
+             newCompositeNode(grammarAccess.getFacetDefinitionFieldNameRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetDefinitionFieldName=ruleFacetDefinitionFieldName();
+
+            state._fsp--;
+
+             current =iv_ruleFacetDefinitionFieldName; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetDefinitionFieldName"
+
+
+    // $ANTLR start "ruleFacetDefinitionFieldName"
+    // InternalVertigoDsl.g:3428:1: ruleFacetDefinitionFieldName returns [EObject current=null] : (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) ) ;
+    public final EObject ruleFacetDefinitionFieldName() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token lv_string_2_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3434:2: ( (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) ) )
+            // InternalVertigoDsl.g:3435:2: (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) )
+            {
+            // InternalVertigoDsl.g:3435:2: (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) )
+            // InternalVertigoDsl.g:3436:3: otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) )
+            {
+            otherlv_0=(Token)match(input,68,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionFieldNameAccess().getFieldNameKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_14); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getFacetDefinitionFieldNameAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:3444:3: ( (lv_string_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3445:4: (lv_string_2_0= RULE_STRING )
+            {
+            // InternalVertigoDsl.g:3445:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:3446:5: lv_string_2_0= RULE_STRING
+            {
+            lv_string_2_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+            					newLeafNode(lv_string_2_0, grammarAccess.getFacetDefinitionFieldNameAccess().getStringSTRINGTerminalRuleCall_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getFacetDefinitionFieldNameRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"string",
+            						lv_string_2_0,
+            						"io.vertigo.dsl.VertigoDsl.STRING");
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetDefinitionFieldName"
+
+
+    // $ANTLR start "entryRuleFacetDefinitionLabel"
+    // InternalVertigoDsl.g:3466:1: entryRuleFacetDefinitionLabel returns [EObject current=null] : iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF ;
+    public final EObject entryRuleFacetDefinitionLabel() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetDefinitionLabel = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3466:61: (iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF )
+            // InternalVertigoDsl.g:3467:2: iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF
+            {
+             newCompositeNode(grammarAccess.getFacetDefinitionLabelRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetDefinitionLabel=ruleFacetDefinitionLabel();
+
+            state._fsp--;
+
+             current =iv_ruleFacetDefinitionLabel; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetDefinitionLabel"
+
+
+    // $ANTLR start "ruleFacetDefinitionLabel"
+    // InternalVertigoDsl.g:3473:1: ruleFacetDefinitionLabel returns [EObject current=null] : (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) ) ;
+    public final EObject ruleFacetDefinitionLabel() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token lv_string_2_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3479:2: ( (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) ) )
+            // InternalVertigoDsl.g:3480:2: (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) )
+            {
+            // InternalVertigoDsl.g:3480:2: (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) )
+            // InternalVertigoDsl.g:3481:3: otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) )
+            {
+            otherlv_0=(Token)match(input,41,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionLabelAccess().getLabelKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_14); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getFacetDefinitionLabelAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:3489:3: ( (lv_string_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3490:4: (lv_string_2_0= RULE_STRING )
+            {
+            // InternalVertigoDsl.g:3490:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:3491:5: lv_string_2_0= RULE_STRING
+            {
+            lv_string_2_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+            					newLeafNode(lv_string_2_0, grammarAccess.getFacetDefinitionLabelAccess().getStringSTRINGTerminalRuleCall_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getFacetDefinitionLabelRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"string",
+            						lv_string_2_0,
+            						"io.vertigo.dsl.VertigoDsl.STRING");
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetDefinitionLabel"
+
+
+    // $ANTLR start "entryRuleFacetDefinitionRangeString"
+    // InternalVertigoDsl.g:3511:1: entryRuleFacetDefinitionRangeString returns [EObject current=null] : iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF ;
+    public final EObject entryRuleFacetDefinitionRangeString() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetDefinitionRangeString = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3511:67: (iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF )
+            // InternalVertigoDsl.g:3512:2: iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF
+            {
+             newCompositeNode(grammarAccess.getFacetDefinitionRangeStringRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetDefinitionRangeString=ruleFacetDefinitionRangeString();
+
+            state._fsp--;
+
+             current =iv_ruleFacetDefinitionRangeString; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetDefinitionRangeString"
+
+
+    // $ANTLR start "ruleFacetDefinitionRangeString"
+    // InternalVertigoDsl.g:3518:1: ruleFacetDefinitionRangeString returns [EObject current=null] : (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) ;
+    public final EObject ruleFacetDefinitionRangeString() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token lv_filterString_4_0=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+        Token otherlv_7=null;
+        Token lv_labelString_8_0=null;
+        Token otherlv_9=null;
+        Token otherlv_10=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3524:2: ( (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) )
+            // InternalVertigoDsl.g:3525:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
+            {
+            // InternalVertigoDsl.g:3525:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
+            // InternalVertigoDsl.g:3526:3: otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}'
+            {
+            otherlv_0=(Token)match(input,21,FOLLOW_60); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionRangeStringAccess().getLeftCurlyBracketKeyword_0());
+            		
+            // InternalVertigoDsl.g:3530:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) )
+            // InternalVertigoDsl.g:3531:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) )
+            {
+            // InternalVertigoDsl.g:3531:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:3532:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?)
+            {
+             
+            				  getUnorderedGroupHelper().enter(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1());
+            				
+            // InternalVertigoDsl.g:3535:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:3536:6: ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?
+            {
+            // InternalVertigoDsl.g:3536:6: ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+
+            int cnt63=0;
+            loop63:
+            do {
+                int alt63=3;
+                int LA63_0 = input.LA(1);
+
+                if ( LA63_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
+                    alt63=1;
+                }
+                else if ( LA63_0 == 41 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
+                    alt63=2;
+                }
+
+
+                switch (alt63) {
+            	case 1 :
+            	    // InternalVertigoDsl.g:3537:4: ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) )
+            	    {
+            	    // InternalVertigoDsl.g:3537:4: ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3538:5: {...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) )
+            	    {
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
+            	        throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0)");
+            	    }
+            	    // InternalVertigoDsl.g:3538:123: ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3539:6: ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) )
+            	    {
+
+            	    						getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0);
+            	    					
+            	    // InternalVertigoDsl.g:3542:9: ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) )
+            	    // InternalVertigoDsl.g:3542:10: {...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? )
+            	    {
+            	    if ( !((true)) ) {
+            	        throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "true");
+            	    }
+            	    // InternalVertigoDsl.g:3542:19: (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? )
+            	    // InternalVertigoDsl.g:3542:20: otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )?
+            	    {
+            	    otherlv_2=(Token)match(input,69,FOLLOW_13); 
+
+            	    									newLeafNode(otherlv_2, grammarAccess.getFacetDefinitionRangeStringAccess().getFilterKeyword_1_0_0());
+            	    								
+            	    otherlv_3=(Token)match(input,23,FOLLOW_14); 
+
+            	    									newLeafNode(otherlv_3, grammarAccess.getFacetDefinitionRangeStringAccess().getColonKeyword_1_0_1());
+            	    								
+            	    // InternalVertigoDsl.g:3550:9: ( (lv_filterString_4_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3551:10: (lv_filterString_4_0= RULE_STRING )
+            	    {
+            	    // InternalVertigoDsl.g:3551:10: (lv_filterString_4_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3552:11: lv_filterString_4_0= RULE_STRING
+            	    {
+            	    lv_filterString_4_0=(Token)match(input,RULE_STRING,FOLLOW_61); 
+
+            	    											newLeafNode(lv_filterString_4_0, grammarAccess.getFacetDefinitionRangeStringAccess().getFilterStringSTRINGTerminalRuleCall_1_0_2_0());
+            	    										
+
+            	    											if (current==null) {
+            	    												current = createModelElement(grammarAccess.getFacetDefinitionRangeStringRule());
+            	    											}
+            	    											setWithLastConsumed(
+            	    												current,
+            	    												"filterString",
+            	    												lv_filterString_4_0,
+            	    												"io.vertigo.dsl.VertigoDsl.STRING");
+            	    										
+
+            	    }
+
+
+            	    }
+
+            	    // InternalVertigoDsl.g:3568:9: (otherlv_5= ',' )?
+            	    int alt61=2;
+            	    int LA61_0 = input.LA(1);
+
+            	    if ( (LA61_0==37) ) {
+            	        alt61=1;
+            	    }
+            	    switch (alt61) {
+            	        case 1 :
+            	            // InternalVertigoDsl.g:3569:10: otherlv_5= ','
+            	            {
+            	            otherlv_5=(Token)match(input,37,FOLLOW_62); 
+
+            	            										newLeafNode(otherlv_5, grammarAccess.getFacetDefinitionRangeStringAccess().getCommaKeyword_1_0_3());
+            	            									
+
+            	            }
+            	            break;
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+
+            	     
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1());
+            	    					
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 2 :
+            	    // InternalVertigoDsl.g:3580:4: ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) )
+            	    {
+            	    // InternalVertigoDsl.g:3580:4: ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3581:5: {...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) )
+            	    {
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
+            	        throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1)");
+            	    }
+            	    // InternalVertigoDsl.g:3581:123: ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3582:6: ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) )
+            	    {
+
+            	    						getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1);
+            	    					
+            	    // InternalVertigoDsl.g:3585:9: ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) )
+            	    // InternalVertigoDsl.g:3585:10: {...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? )
+            	    {
+            	    if ( !((true)) ) {
+            	        throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "true");
+            	    }
+            	    // InternalVertigoDsl.g:3585:19: (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? )
+            	    // InternalVertigoDsl.g:3585:20: otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )?
+            	    {
+            	    otherlv_6=(Token)match(input,41,FOLLOW_13); 
+
+            	    									newLeafNode(otherlv_6, grammarAccess.getFacetDefinitionRangeStringAccess().getLabelKeyword_1_1_0());
+            	    								
+            	    otherlv_7=(Token)match(input,23,FOLLOW_14); 
+
+            	    									newLeafNode(otherlv_7, grammarAccess.getFacetDefinitionRangeStringAccess().getColonKeyword_1_1_1());
+            	    								
+            	    // InternalVertigoDsl.g:3593:9: ( (lv_labelString_8_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3594:10: (lv_labelString_8_0= RULE_STRING )
+            	    {
+            	    // InternalVertigoDsl.g:3594:10: (lv_labelString_8_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3595:11: lv_labelString_8_0= RULE_STRING
+            	    {
+            	    lv_labelString_8_0=(Token)match(input,RULE_STRING,FOLLOW_61); 
+
+            	    											newLeafNode(lv_labelString_8_0, grammarAccess.getFacetDefinitionRangeStringAccess().getLabelStringSTRINGTerminalRuleCall_1_1_2_0());
+            	    										
+
+            	    											if (current==null) {
+            	    												current = createModelElement(grammarAccess.getFacetDefinitionRangeStringRule());
+            	    											}
+            	    											setWithLastConsumed(
+            	    												current,
+            	    												"labelString",
+            	    												lv_labelString_8_0,
+            	    												"io.vertigo.dsl.VertigoDsl.STRING");
+            	    										
+
+            	    }
+
+
+            	    }
+
+            	    // InternalVertigoDsl.g:3611:9: (otherlv_9= ',' )?
+            	    int alt62=2;
+            	    int LA62_0 = input.LA(1);
+
+            	    if ( (LA62_0==37) ) {
+            	        alt62=1;
+            	    }
+            	    switch (alt62) {
+            	        case 1 :
+            	            // InternalVertigoDsl.g:3612:10: otherlv_9= ','
+            	            {
+            	            otherlv_9=(Token)match(input,37,FOLLOW_62); 
+
+            	            										newLeafNode(otherlv_9, grammarAccess.getFacetDefinitionRangeStringAccess().getCommaKeyword_1_1_3());
+            	            									
+
+            	            }
+            	            break;
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+
+            	     
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1());
+            	    					
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    if ( cnt63 >= 1 ) break loop63;
+                        EarlyExitException eee =
+                            new EarlyExitException(63, input);
+                        throw eee;
+                }
+                cnt63++;
+            } while (true);
+
+            if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1()) ) {
+                throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "getUnorderedGroupHelper().canLeave(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1())");
+            }
+
+            }
+
+
+            }
+
+             
+            				  getUnorderedGroupHelper().leave(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1());
+            				
+
+            }
+
+            otherlv_10=(Token)match(input,26,FOLLOW_2); 
+
+            			newLeafNode(otherlv_10, grammarAccess.getFacetDefinitionRangeStringAccess().getRightCurlyBracketKeyword_2());
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetDefinitionRangeString"
+
+
+    // $ANTLR start "entryRuleFacetedQueryDefinitionKeyConcept"
+    // InternalVertigoDsl.g:3639:1: entryRuleFacetedQueryDefinitionKeyConcept returns [EObject current=null] : iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF ;
+    public final EObject entryRuleFacetedQueryDefinitionKeyConcept() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetedQueryDefinitionKeyConcept = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3639:73: (iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF )
+            // InternalVertigoDsl.g:3640:2: iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF
+            {
+             newCompositeNode(grammarAccess.getFacetedQueryDefinitionKeyConceptRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetedQueryDefinitionKeyConcept=ruleFacetedQueryDefinitionKeyConcept();
+
+            state._fsp--;
+
+             current =iv_ruleFacetedQueryDefinitionKeyConcept; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetedQueryDefinitionKeyConcept"
+
+
+    // $ANTLR start "ruleFacetedQueryDefinitionKeyConcept"
+    // InternalVertigoDsl.g:3646:1: ruleFacetedQueryDefinitionKeyConcept returns [EObject current=null] : (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) ;
+    public final EObject ruleFacetedQueryDefinitionKeyConcept() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3652:2: ( (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) )
+            // InternalVertigoDsl.g:3653:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            {
+            // InternalVertigoDsl.g:3653:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            // InternalVertigoDsl.g:3654:3: otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) )
+            {
+            otherlv_0=(Token)match(input,70,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionKeyConceptAccess().getKeyConceptKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_8); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getFacetedQueryDefinitionKeyConceptAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:3662:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:3663:4: (otherlv_2= RULE_ID )
+            {
+            // InternalVertigoDsl.g:3663:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:3664:5: otherlv_2= RULE_ID
+            {
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getFacetedQueryDefinitionKeyConceptRule());
+            					}
+            				
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+            					newLeafNode(otherlv_2, grammarAccess.getFacetedQueryDefinitionKeyConceptAccess().getDtDefinitionDtDefinitionTypeCrossReference_2_0());
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetedQueryDefinitionKeyConcept"
+
+
+    // $ANTLR start "entryRuleFacetedQueryDefinitionDomainCriteria"
+    // InternalVertigoDsl.g:3679:1: entryRuleFacetedQueryDefinitionDomainCriteria returns [EObject current=null] : iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF ;
+    public final EObject entryRuleFacetedQueryDefinitionDomainCriteria() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetedQueryDefinitionDomainCriteria = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3679:77: (iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF )
+            // InternalVertigoDsl.g:3680:2: iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF
+            {
+             newCompositeNode(grammarAccess.getFacetedQueryDefinitionDomainCriteriaRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetedQueryDefinitionDomainCriteria=ruleFacetedQueryDefinitionDomainCriteria();
+
+            state._fsp--;
+
+             current =iv_ruleFacetedQueryDefinitionDomainCriteria; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetedQueryDefinitionDomainCriteria"
+
+
+    // $ANTLR start "ruleFacetedQueryDefinitionDomainCriteria"
+    // InternalVertigoDsl.g:3686:1: ruleFacetedQueryDefinitionDomainCriteria returns [EObject current=null] : (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) ) ;
+    public final EObject ruleFacetedQueryDefinitionDomainCriteria() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        EObject lv_refToDomainType_2_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3692:2: ( (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) ) )
+            // InternalVertigoDsl.g:3693:2: (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) )
+            {
+            // InternalVertigoDsl.g:3693:2: (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) )
+            // InternalVertigoDsl.g:3694:3: otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) )
+            {
+            otherlv_0=(Token)match(input,71,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionDomainCriteriaAccess().getDomainCriteriaKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_8); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getFacetedQueryDefinitionDomainCriteriaAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:3702:3: ( (lv_refToDomainType_2_0= ruleRefToDomainType ) )
+            // InternalVertigoDsl.g:3703:4: (lv_refToDomainType_2_0= ruleRefToDomainType )
+            {
+            // InternalVertigoDsl.g:3703:4: (lv_refToDomainType_2_0= ruleRefToDomainType )
+            // InternalVertigoDsl.g:3704:5: lv_refToDomainType_2_0= ruleRefToDomainType
+            {
+
+            					newCompositeNode(grammarAccess.getFacetedQueryDefinitionDomainCriteriaAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_2_0());
+            				
+            pushFollow(FOLLOW_2);
+            lv_refToDomainType_2_0=ruleRefToDomainType();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getFacetedQueryDefinitionDomainCriteriaRule());
+            					}
+            					set(
+            						current,
+            						"refToDomainType",
+            						lv_refToDomainType_2_0,
+            						"io.vertigo.dsl.VertigoDsl.RefToDomainType");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetedQueryDefinitionDomainCriteria"
+
+
+    // $ANTLR start "entryRuleFacetedQueryDefinitionListFilterBuilderQuery"
+    // InternalVertigoDsl.g:3725:1: entryRuleFacetedQueryDefinitionListFilterBuilderQuery returns [EObject current=null] : iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF ;
+    public final EObject entryRuleFacetedQueryDefinitionListFilterBuilderQuery() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetedQueryDefinitionListFilterBuilderQuery = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3725:85: (iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF )
+            // InternalVertigoDsl.g:3726:2: iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF
+            {
+             newCompositeNode(grammarAccess.getFacetedQueryDefinitionListFilterBuilderQueryRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetedQueryDefinitionListFilterBuilderQuery=ruleFacetedQueryDefinitionListFilterBuilderQuery();
+
+            state._fsp--;
+
+             current =iv_ruleFacetedQueryDefinitionListFilterBuilderQuery; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetedQueryDefinitionListFilterBuilderQuery"
+
+
+    // $ANTLR start "ruleFacetedQueryDefinitionListFilterBuilderQuery"
+    // InternalVertigoDsl.g:3732:1: ruleFacetedQueryDefinitionListFilterBuilderQuery returns [EObject current=null] : ( (lv_string_0_0= RULE_STRING ) ) ;
+    public final EObject ruleFacetedQueryDefinitionListFilterBuilderQuery() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_string_0_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3738:2: ( ( (lv_string_0_0= RULE_STRING ) ) )
+            // InternalVertigoDsl.g:3739:2: ( (lv_string_0_0= RULE_STRING ) )
+            {
+            // InternalVertigoDsl.g:3739:2: ( (lv_string_0_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3740:3: (lv_string_0_0= RULE_STRING )
+            {
+            // InternalVertigoDsl.g:3740:3: (lv_string_0_0= RULE_STRING )
+            // InternalVertigoDsl.g:3741:4: lv_string_0_0= RULE_STRING
+            {
+            lv_string_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+            				newLeafNode(lv_string_0_0, grammarAccess.getFacetedQueryDefinitionListFilterBuilderQueryAccess().getStringSTRINGTerminalRuleCall_0());
+            			
+
+            				if (current==null) {
+            					current = createModelElement(grammarAccess.getFacetedQueryDefinitionListFilterBuilderQueryRule());
+            				}
+            				setWithLastConsumed(
+            					current,
+            					"string",
+            					lv_string_0_0,
+            					"io.vertigo.dsl.VertigoDsl.STRING");
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetedQueryDefinitionListFilterBuilderQuery"
+
+
+    // $ANTLR start "entryRuleFacetedQueryDefinitionListFilterBuilderClass"
+    // InternalVertigoDsl.g:3760:1: entryRuleFacetedQueryDefinitionListFilterBuilderClass returns [EObject current=null] : iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF ;
+    public final EObject entryRuleFacetedQueryDefinitionListFilterBuilderClass() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetedQueryDefinitionListFilterBuilderClass = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3760:85: (iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF )
+            // InternalVertigoDsl.g:3761:2: iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF
+            {
+             newCompositeNode(grammarAccess.getFacetedQueryDefinitionListFilterBuilderClassRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetedQueryDefinitionListFilterBuilderClass=ruleFacetedQueryDefinitionListFilterBuilderClass();
+
+            state._fsp--;
+
+             current =iv_ruleFacetedQueryDefinitionListFilterBuilderClass; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetedQueryDefinitionListFilterBuilderClass"
+
+
+    // $ANTLR start "ruleFacetedQueryDefinitionListFilterBuilderClass"
+    // InternalVertigoDsl.g:3767:1: ruleFacetedQueryDefinitionListFilterBuilderClass returns [EObject current=null] : ( (lv_string_0_0= RULE_STRING ) ) ;
+    public final EObject ruleFacetedQueryDefinitionListFilterBuilderClass() throws RecognitionException {
+        EObject current = null;
+
+        Token lv_string_0_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3773:2: ( ( (lv_string_0_0= RULE_STRING ) ) )
+            // InternalVertigoDsl.g:3774:2: ( (lv_string_0_0= RULE_STRING ) )
+            {
+            // InternalVertigoDsl.g:3774:2: ( (lv_string_0_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3775:3: (lv_string_0_0= RULE_STRING )
+            {
+            // InternalVertigoDsl.g:3775:3: (lv_string_0_0= RULE_STRING )
+            // InternalVertigoDsl.g:3776:4: lv_string_0_0= RULE_STRING
+            {
+            lv_string_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+            				newLeafNode(lv_string_0_0, grammarAccess.getFacetedQueryDefinitionListFilterBuilderClassAccess().getStringSTRINGTerminalRuleCall_0());
+            			
+
+            				if (current==null) {
+            					current = createModelElement(grammarAccess.getFacetedQueryDefinitionListFilterBuilderClassRule());
+            				}
+            				setWithLastConsumed(
+            					current,
+            					"string",
+            					lv_string_0_0,
+            					"io.vertigo.dsl.VertigoDsl.STRING");
+            			
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetedQueryDefinitionListFilterBuilderClass"
+
+
+    // $ANTLR start "entryRuleFacetedQueryDefinitionFacets"
+    // InternalVertigoDsl.g:3795:1: entryRuleFacetedQueryDefinitionFacets returns [EObject current=null] : iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF ;
+    public final EObject entryRuleFacetedQueryDefinitionFacets() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleFacetedQueryDefinitionFacets = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3795:69: (iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF )
+            // InternalVertigoDsl.g:3796:2: iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF
+            {
+             newCompositeNode(grammarAccess.getFacetedQueryDefinitionFacetsRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleFacetedQueryDefinitionFacets=ruleFacetedQueryDefinitionFacets();
+
+            state._fsp--;
+
+             current =iv_ruleFacetedQueryDefinitionFacets; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleFacetedQueryDefinitionFacets"
+
+
+    // $ANTLR start "ruleFacetedQueryDefinitionFacets"
+    // InternalVertigoDsl.g:3802:1: ruleFacetedQueryDefinitionFacets returns [EObject current=null] : (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' ) ;
+    public final EObject ruleFacetedQueryDefinitionFacets() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token otherlv_3=null;
+        Token otherlv_4=null;
+        Token otherlv_5=null;
+        Token otherlv_6=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3808:2: ( (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' ) )
+            // InternalVertigoDsl.g:3809:2: (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' )
+            {
+            // InternalVertigoDsl.g:3809:2: (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' )
+            // InternalVertigoDsl.g:3810:3: otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']'
+            {
+            otherlv_0=(Token)match(input,72,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetsKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_27); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getColonKeyword_1());
+            		
+            otherlv_2=(Token)match(input,36,FOLLOW_8); 
+
+            			newLeafNode(otherlv_2, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getLeftSquareBracketKeyword_2());
+            		
+            // InternalVertigoDsl.g:3822:3: ( (otherlv_3= RULE_ID ) )
+            // InternalVertigoDsl.g:3823:4: (otherlv_3= RULE_ID )
+            {
+            // InternalVertigoDsl.g:3823:4: (otherlv_3= RULE_ID )
+            // InternalVertigoDsl.g:3824:5: otherlv_3= RULE_ID
+            {
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getFacetedQueryDefinitionFacetsRule());
+            					}
+            				
+            otherlv_3=(Token)match(input,RULE_ID,FOLLOW_28); 
+
+            					newLeafNode(otherlv_3, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetDefinitionFacetDefinitionCrossReference_3_0());
+            				
+
+            }
+
+
+            }
+
+            // InternalVertigoDsl.g:3835:3: ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )*
+            loop65:
+            do {
+                int alt65=2;
+                int LA65_0 = input.LA(1);
+
+                if ( (LA65_0==37) ) {
+                    alt65=1;
+                }
+
+
+                switch (alt65) {
+            	case 1 :
+            	    // InternalVertigoDsl.g:3836:4: (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) )
+            	    {
+            	    // InternalVertigoDsl.g:3836:4: (otherlv_4= ',' )+
+            	    int cnt64=0;
+            	    loop64:
+            	    do {
+            	        int alt64=2;
+            	        int LA64_0 = input.LA(1);
+
+            	        if ( (LA64_0==37) ) {
+            	            alt64=1;
+            	        }
+
+
+            	        switch (alt64) {
+            	    	case 1 :
+            	    	    // InternalVertigoDsl.g:3837:5: otherlv_4= ','
+            	    	    {
+            	    	    otherlv_4=(Token)match(input,37,FOLLOW_29); 
+
+            	    	    					newLeafNode(otherlv_4, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getCommaKeyword_4_0());
+            	    	    				
+
+            	    	    }
+            	    	    break;
+
+            	    	default :
+            	    	    if ( cnt64 >= 1 ) break loop64;
+            	                EarlyExitException eee =
+            	                    new EarlyExitException(64, input);
+            	                throw eee;
+            	        }
+            	        cnt64++;
+            	    } while (true);
+
+            	    // InternalVertigoDsl.g:3842:4: ( (otherlv_5= RULE_ID ) )
+            	    // InternalVertigoDsl.g:3843:5: (otherlv_5= RULE_ID )
+            	    {
+            	    // InternalVertigoDsl.g:3843:5: (otherlv_5= RULE_ID )
+            	    // InternalVertigoDsl.g:3844:6: otherlv_5= RULE_ID
+            	    {
+
+            	    						if (current==null) {
+            	    							current = createModelElement(grammarAccess.getFacetedQueryDefinitionFacetsRule());
+            	    						}
+            	    					
+            	    otherlv_5=(Token)match(input,RULE_ID,FOLLOW_28); 
+
+            	    						newLeafNode(otherlv_5, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetsFacetDefinitionCrossReference_4_1_0());
+            	    					
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+
+            	default :
+            	    break loop65;
+                }
+            } while (true);
+
+            otherlv_6=(Token)match(input,38,FOLLOW_2); 
+
+            			newLeafNode(otherlv_6, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getRightSquareBracketKeyword_5());
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleFacetedQueryDefinitionFacets"
+
+
+    // $ANTLR start "entryRuleIndexDefinitionKeyConcept"
+    // InternalVertigoDsl.g:3864:1: entryRuleIndexDefinitionKeyConcept returns [EObject current=null] : iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF ;
+    public final EObject entryRuleIndexDefinitionKeyConcept() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleIndexDefinitionKeyConcept = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3864:66: (iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF )
+            // InternalVertigoDsl.g:3865:2: iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF
+            {
+             newCompositeNode(grammarAccess.getIndexDefinitionKeyConceptRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleIndexDefinitionKeyConcept=ruleIndexDefinitionKeyConcept();
+
+            state._fsp--;
+
+             current =iv_ruleIndexDefinitionKeyConcept; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleIndexDefinitionKeyConcept"
+
+
+    // $ANTLR start "ruleIndexDefinitionKeyConcept"
+    // InternalVertigoDsl.g:3871:1: ruleIndexDefinitionKeyConcept returns [EObject current=null] : (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) ;
+    public final EObject ruleIndexDefinitionKeyConcept() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3877:2: ( (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) )
+            // InternalVertigoDsl.g:3878:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            {
+            // InternalVertigoDsl.g:3878:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            // InternalVertigoDsl.g:3879:3: otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) )
+            {
+            otherlv_0=(Token)match(input,70,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionKeyConceptAccess().getKeyConceptKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_8); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionKeyConceptAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:3887:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:3888:4: (otherlv_2= RULE_ID )
+            {
+            // InternalVertigoDsl.g:3888:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:3889:5: otherlv_2= RULE_ID
+            {
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getIndexDefinitionKeyConceptRule());
+            					}
+            				
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+            					newLeafNode(otherlv_2, grammarAccess.getIndexDefinitionKeyConceptAccess().getDtDefinitionDtDefinitionTypeCrossReference_2_0());
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleIndexDefinitionKeyConcept"
+
+
+    // $ANTLR start "entryRuleIndexDefinitionDtIndex"
+    // InternalVertigoDsl.g:3904:1: entryRuleIndexDefinitionDtIndex returns [EObject current=null] : iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF ;
+    public final EObject entryRuleIndexDefinitionDtIndex() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleIndexDefinitionDtIndex = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3904:63: (iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF )
+            // InternalVertigoDsl.g:3905:2: iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF
+            {
+             newCompositeNode(grammarAccess.getIndexDefinitionDtIndexRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleIndexDefinitionDtIndex=ruleIndexDefinitionDtIndex();
+
+            state._fsp--;
+
+             current =iv_ruleIndexDefinitionDtIndex; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleIndexDefinitionDtIndex"
+
+
+    // $ANTLR start "ruleIndexDefinitionDtIndex"
+    // InternalVertigoDsl.g:3911:1: ruleIndexDefinitionDtIndex returns [EObject current=null] : (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) ;
+    public final EObject ruleIndexDefinitionDtIndex() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3917:2: ( (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) ) )
+            // InternalVertigoDsl.g:3918:2: (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            {
+            // InternalVertigoDsl.g:3918:2: (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) )
+            // InternalVertigoDsl.g:3919:3: otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) )
+            {
+            otherlv_0=(Token)match(input,73,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionDtIndexAccess().getDtIndexKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_8); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionDtIndexAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:3927:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:3928:4: (otherlv_2= RULE_ID )
+            {
+            // InternalVertigoDsl.g:3928:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:3929:5: otherlv_2= RULE_ID
+            {
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getIndexDefinitionDtIndexRule());
+            					}
+            				
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_2); 
+
+            					newLeafNode(otherlv_2, grammarAccess.getIndexDefinitionDtIndexAccess().getDtDefinitionDtDefinitionTypeCrossReference_2_0());
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleIndexDefinitionDtIndex"
+
+
+    // $ANTLR start "entryRuleIndexDefinitionIndexCopyToString"
+    // InternalVertigoDsl.g:3944:1: entryRuleIndexDefinitionIndexCopyToString returns [EObject current=null] : iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF ;
+    public final EObject entryRuleIndexDefinitionIndexCopyToString() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleIndexDefinitionIndexCopyToString = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3944:73: (iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF )
+            // InternalVertigoDsl.g:3945:2: iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF
+            {
+             newCompositeNode(grammarAccess.getIndexDefinitionIndexCopyToStringRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleIndexDefinitionIndexCopyToString=ruleIndexDefinitionIndexCopyToString();
+
+            state._fsp--;
+
+             current =iv_ruleIndexDefinitionIndexCopyToString; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleIndexDefinitionIndexCopyToString"
+
+
+    // $ANTLR start "ruleIndexDefinitionIndexCopyToString"
+    // InternalVertigoDsl.g:3951:1: ruleIndexDefinitionIndexCopyToString returns [EObject current=null] : (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' ) ;
+    public final EObject ruleIndexDefinitionIndexCopyToString() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token otherlv_2=null;
+        Token lv_string_3_0=null;
+        Token otherlv_4=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:3957:2: ( (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' ) )
+            // InternalVertigoDsl.g:3958:2: (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' )
+            {
+            // InternalVertigoDsl.g:3958:2: (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' )
+            // InternalVertigoDsl.g:3959:3: otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}'
+            {
+            otherlv_0=(Token)match(input,21,FOLLOW_63); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getLeftCurlyBracketKeyword_0());
+            		
+            otherlv_1=(Token)match(input,74,FOLLOW_13); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getFromKeyword_1());
+            		
+            otherlv_2=(Token)match(input,23,FOLLOW_14); 
+
+            			newLeafNode(otherlv_2, grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getColonKeyword_2());
+            		
+            // InternalVertigoDsl.g:3971:3: ( (lv_string_3_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3972:4: (lv_string_3_0= RULE_STRING )
+            {
+            // InternalVertigoDsl.g:3972:4: (lv_string_3_0= RULE_STRING )
+            // InternalVertigoDsl.g:3973:5: lv_string_3_0= RULE_STRING
+            {
+            lv_string_3_0=(Token)match(input,RULE_STRING,FOLLOW_17); 
+
+            					newLeafNode(lv_string_3_0, grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getStringSTRINGTerminalRuleCall_3_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getIndexDefinitionIndexCopyToStringRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"string",
+            						lv_string_3_0,
+            						"io.vertigo.dsl.VertigoDsl.STRING");
+            				
+
+            }
+
+
+            }
+
+            otherlv_4=(Token)match(input,26,FOLLOW_2); 
+
+            			newLeafNode(otherlv_4, grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getRightCurlyBracketKeyword_4());
+            		
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleIndexDefinitionIndexCopyToString"
+
+
+    // $ANTLR start "entryRuleIndexDefinitionIndexCopyTo"
+    // InternalVertigoDsl.g:3997:1: entryRuleIndexDefinitionIndexCopyTo returns [EObject current=null] : iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF ;
+    public final EObject entryRuleIndexDefinitionIndexCopyTo() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleIndexDefinitionIndexCopyTo = null;
+
+
+        try {
+            // InternalVertigoDsl.g:3997:67: (iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF )
+            // InternalVertigoDsl.g:3998:2: iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF
+            {
+             newCompositeNode(grammarAccess.getIndexDefinitionIndexCopyToRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleIndexDefinitionIndexCopyTo=ruleIndexDefinitionIndexCopyTo();
+
+            state._fsp--;
+
+             current =iv_ruleIndexDefinitionIndexCopyTo; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleIndexDefinitionIndexCopyTo"
+
+
+    // $ANTLR start "ruleIndexDefinitionIndexCopyTo"
+    // InternalVertigoDsl.g:4004:1: ruleIndexDefinitionIndexCopyTo returns [EObject current=null] : (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= RULE_ID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? ) ;
+    public final EObject ruleIndexDefinitionIndexCopyTo() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token lv_name_1_0=null;
+        Token otherlv_3=null;
+        EObject lv_indexDefinitionIndexCopyToString_2_0 = null;
+
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:4010:2: ( (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= RULE_ID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4011:2: (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= RULE_ID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? )
+            {
+            // InternalVertigoDsl.g:4011:2: (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= RULE_ID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4012:3: otherlv_0= 'indexCopyTo' ( (lv_name_1_0= RULE_ID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )?
+            {
+            otherlv_0=(Token)match(input,75,FOLLOW_8); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionIndexCopyToAccess().getIndexCopyToKeyword_0());
+            		
+            // InternalVertigoDsl.g:4016:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalVertigoDsl.g:4017:4: (lv_name_1_0= RULE_ID )
+            {
+            // InternalVertigoDsl.g:4017:4: (lv_name_1_0= RULE_ID )
+            // InternalVertigoDsl.g:4018:5: lv_name_1_0= RULE_ID
+            {
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_11); 
+
+            					newLeafNode(lv_name_1_0, grammarAccess.getIndexDefinitionIndexCopyToAccess().getNameIDTerminalRuleCall_1_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getIndexDefinitionIndexCopyToRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"name",
+            						lv_name_1_0,
+            						"org.eclipse.xtext.common.Terminals.ID");
+            				
+
+            }
+
+
+            }
+
+            // InternalVertigoDsl.g:4034:3: ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) )
+            // InternalVertigoDsl.g:4035:4: (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString )
+            {
+            // InternalVertigoDsl.g:4035:4: (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString )
+            // InternalVertigoDsl.g:4036:5: lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString
+            {
+
+            					newCompositeNode(grammarAccess.getIndexDefinitionIndexCopyToAccess().getIndexDefinitionIndexCopyToStringIndexDefinitionIndexCopyToStringParserRuleCall_2_0());
+            				
+            pushFollow(FOLLOW_40);
+            lv_indexDefinitionIndexCopyToString_2_0=ruleIndexDefinitionIndexCopyToString();
+
+            state._fsp--;
+
+
+            					if (current==null) {
+            						current = createModelElementForParent(grammarAccess.getIndexDefinitionIndexCopyToRule());
+            					}
+            					set(
+            						current,
+            						"indexDefinitionIndexCopyToString",
+            						lv_indexDefinitionIndexCopyToString_2_0,
+            						"io.vertigo.dsl.VertigoDsl.IndexDefinitionIndexCopyToString");
+            					afterParserOrEnumRuleCall();
+            				
+
+            }
+
+
+            }
+
+            // InternalVertigoDsl.g:4053:3: (otherlv_3= ',' )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
+
+            if ( (LA66_0==37) ) {
+                alt66=1;
+            }
+            switch (alt66) {
+                case 1 :
+                    // InternalVertigoDsl.g:4054:4: otherlv_3= ','
+                    {
+                    otherlv_3=(Token)match(input,37,FOLLOW_2); 
+
+                    				newLeafNode(otherlv_3, grammarAccess.getIndexDefinitionIndexCopyToAccess().getCommaKeyword_3());
+                    			
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleIndexDefinitionIndexCopyTo"
+
+
+    // $ANTLR start "entryRuleIndexDefinitionLoaderId"
+    // InternalVertigoDsl.g:4063:1: entryRuleIndexDefinitionLoaderId returns [EObject current=null] : iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF ;
+    public final EObject entryRuleIndexDefinitionLoaderId() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleIndexDefinitionLoaderId = null;
+
+
+        try {
+            // InternalVertigoDsl.g:4063:64: (iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF )
+            // InternalVertigoDsl.g:4064:2: iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF
+            {
+             newCompositeNode(grammarAccess.getIndexDefinitionLoaderIdRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleIndexDefinitionLoaderId=ruleIndexDefinitionLoaderId();
+
+            state._fsp--;
+
+             current =iv_ruleIndexDefinitionLoaderId; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleIndexDefinitionLoaderId"
+
+
+    // $ANTLR start "ruleIndexDefinitionLoaderId"
+    // InternalVertigoDsl.g:4070:1: ruleIndexDefinitionLoaderId returns [EObject current=null] : (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) ) ;
+    public final EObject ruleIndexDefinitionLoaderId() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token lv_loaderIdString_2_0=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:4076:2: ( (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) ) )
+            // InternalVertigoDsl.g:4077:2: (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) )
+            {
+            // InternalVertigoDsl.g:4077:2: (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) )
+            // InternalVertigoDsl.g:4078:3: otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) )
+            {
+            otherlv_0=(Token)match(input,76,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionLoaderIdAccess().getLoaderIdKeyword_0());
+            		
+            otherlv_1=(Token)match(input,23,FOLLOW_14); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionLoaderIdAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:4086:3: ( (lv_loaderIdString_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:4087:4: (lv_loaderIdString_2_0= RULE_STRING )
+            {
+            // InternalVertigoDsl.g:4087:4: (lv_loaderIdString_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4088:5: lv_loaderIdString_2_0= RULE_STRING
+            {
+            lv_loaderIdString_2_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
+
+            					newLeafNode(lv_loaderIdString_2_0, grammarAccess.getIndexDefinitionLoaderIdAccess().getLoaderIdStringSTRINGTerminalRuleCall_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getIndexDefinitionLoaderIdRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"loaderIdString",
+            						lv_loaderIdString_2_0,
+            						"io.vertigo.dsl.VertigoDsl.STRING");
+            				
+
+            }
+
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleIndexDefinitionLoaderId"
+
+
     // $ANTLR start "ruleDataType"
-    // InternalVertigoDsl.g:3369:1: ruleDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) ) ;
+    // InternalVertigoDsl.g:4108:1: ruleDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) ) ;
     public final Enumerator ruleDataType() throws RecognitionException {
         Enumerator current = null;
 
@@ -8316,72 +10240,72 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3375:2: ( ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) ) )
-            // InternalVertigoDsl.g:3376:2: ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) )
+            // InternalVertigoDsl.g:4114:2: ( ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) ) )
+            // InternalVertigoDsl.g:4115:2: ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) )
             {
-            // InternalVertigoDsl.g:3376:2: ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) )
-            int alt60=9;
+            // InternalVertigoDsl.g:4115:2: ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) )
+            int alt67=9;
             switch ( input.LA(1) ) {
-            case 67:
+            case 77:
                 {
-                alt60=1;
+                alt67=1;
                 }
                 break;
-            case 68:
+            case 78:
                 {
-                alt60=2;
+                alt67=2;
                 }
                 break;
-            case 69:
+            case 79:
                 {
-                alt60=3;
+                alt67=3;
                 }
                 break;
-            case 70:
+            case 80:
                 {
-                alt60=4;
+                alt67=4;
                 }
                 break;
-            case 71:
+            case 81:
                 {
-                alt60=5;
+                alt67=5;
                 }
                 break;
-            case 72:
+            case 82:
                 {
-                alt60=6;
+                alt67=6;
                 }
                 break;
-            case 73:
+            case 83:
                 {
-                alt60=7;
+                alt67=7;
                 }
                 break;
-            case 74:
+            case 84:
                 {
-                alt60=8;
+                alt67=8;
                 }
                 break;
-            case 75:
+            case 85:
                 {
-                alt60=9;
+                alt67=9;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 60, 0, input);
+                    new NoViableAltException("", 67, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt60) {
+            switch (alt67) {
                 case 1 :
-                    // InternalVertigoDsl.g:3377:3: (enumLiteral_0= 'Integer' )
+                    // InternalVertigoDsl.g:4116:3: (enumLiteral_0= 'Integer' )
                     {
-                    // InternalVertigoDsl.g:3377:3: (enumLiteral_0= 'Integer' )
-                    // InternalVertigoDsl.g:3378:4: enumLiteral_0= 'Integer'
+                    // InternalVertigoDsl.g:4116:3: (enumLiteral_0= 'Integer' )
+                    // InternalVertigoDsl.g:4117:4: enumLiteral_0= 'Integer'
                     {
-                    enumLiteral_0=(Token)match(input,67,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,77,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getINTEGEREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getDataTypeAccess().getINTEGEREnumLiteralDeclaration_0());
@@ -8393,12 +10317,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:3385:3: (enumLiteral_1= 'Double' )
+                    // InternalVertigoDsl.g:4124:3: (enumLiteral_1= 'Double' )
                     {
-                    // InternalVertigoDsl.g:3385:3: (enumLiteral_1= 'Double' )
-                    // InternalVertigoDsl.g:3386:4: enumLiteral_1= 'Double'
+                    // InternalVertigoDsl.g:4124:3: (enumLiteral_1= 'Double' )
+                    // InternalVertigoDsl.g:4125:4: enumLiteral_1= 'Double'
                     {
-                    enumLiteral_1=(Token)match(input,68,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,78,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getDOUBLEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getDataTypeAccess().getDOUBLEEnumLiteralDeclaration_1());
@@ -8410,12 +10334,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVertigoDsl.g:3393:3: (enumLiteral_2= 'Boolean' )
+                    // InternalVertigoDsl.g:4132:3: (enumLiteral_2= 'Boolean' )
                     {
-                    // InternalVertigoDsl.g:3393:3: (enumLiteral_2= 'Boolean' )
-                    // InternalVertigoDsl.g:3394:4: enumLiteral_2= 'Boolean'
+                    // InternalVertigoDsl.g:4132:3: (enumLiteral_2= 'Boolean' )
+                    // InternalVertigoDsl.g:4133:4: enumLiteral_2= 'Boolean'
                     {
-                    enumLiteral_2=(Token)match(input,69,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,79,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getBOOLEANEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getDataTypeAccess().getBOOLEANEnumLiteralDeclaration_2());
@@ -8427,12 +10351,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalVertigoDsl.g:3401:3: (enumLiteral_3= 'String' )
+                    // InternalVertigoDsl.g:4140:3: (enumLiteral_3= 'String' )
                     {
-                    // InternalVertigoDsl.g:3401:3: (enumLiteral_3= 'String' )
-                    // InternalVertigoDsl.g:3402:4: enumLiteral_3= 'String'
+                    // InternalVertigoDsl.g:4140:3: (enumLiteral_3= 'String' )
+                    // InternalVertigoDsl.g:4141:4: enumLiteral_3= 'String'
                     {
-                    enumLiteral_3=(Token)match(input,70,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,80,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getSTRINGEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getDataTypeAccess().getSTRINGEnumLiteralDeclaration_3());
@@ -8444,12 +10368,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalVertigoDsl.g:3409:3: (enumLiteral_4= 'LocalDate' )
+                    // InternalVertigoDsl.g:4148:3: (enumLiteral_4= 'LocalDate' )
                     {
-                    // InternalVertigoDsl.g:3409:3: (enumLiteral_4= 'LocalDate' )
-                    // InternalVertigoDsl.g:3410:4: enumLiteral_4= 'LocalDate'
+                    // InternalVertigoDsl.g:4148:3: (enumLiteral_4= 'LocalDate' )
+                    // InternalVertigoDsl.g:4149:4: enumLiteral_4= 'LocalDate'
                     {
-                    enumLiteral_4=(Token)match(input,71,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,81,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getLOCAL_DATEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getDataTypeAccess().getLOCAL_DATEEnumLiteralDeclaration_4());
@@ -8461,12 +10385,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalVertigoDsl.g:3417:3: (enumLiteral_5= 'Instant' )
+                    // InternalVertigoDsl.g:4156:3: (enumLiteral_5= 'Instant' )
                     {
-                    // InternalVertigoDsl.g:3417:3: (enumLiteral_5= 'Instant' )
-                    // InternalVertigoDsl.g:3418:4: enumLiteral_5= 'Instant'
+                    // InternalVertigoDsl.g:4156:3: (enumLiteral_5= 'Instant' )
+                    // InternalVertigoDsl.g:4157:4: enumLiteral_5= 'Instant'
                     {
-                    enumLiteral_5=(Token)match(input,72,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,82,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getINSTANTEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getDataTypeAccess().getINSTANTEnumLiteralDeclaration_5());
@@ -8478,12 +10402,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalVertigoDsl.g:3425:3: (enumLiteral_6= 'BigDecimal' )
+                    // InternalVertigoDsl.g:4164:3: (enumLiteral_6= 'BigDecimal' )
                     {
-                    // InternalVertigoDsl.g:3425:3: (enumLiteral_6= 'BigDecimal' )
-                    // InternalVertigoDsl.g:3426:4: enumLiteral_6= 'BigDecimal'
+                    // InternalVertigoDsl.g:4164:3: (enumLiteral_6= 'BigDecimal' )
+                    // InternalVertigoDsl.g:4165:4: enumLiteral_6= 'BigDecimal'
                     {
-                    enumLiteral_6=(Token)match(input,73,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,83,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getBIG_DECIMALEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getDataTypeAccess().getBIG_DECIMALEnumLiteralDeclaration_6());
@@ -8495,12 +10419,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalVertigoDsl.g:3433:3: (enumLiteral_7= 'Long' )
+                    // InternalVertigoDsl.g:4172:3: (enumLiteral_7= 'Long' )
                     {
-                    // InternalVertigoDsl.g:3433:3: (enumLiteral_7= 'Long' )
-                    // InternalVertigoDsl.g:3434:4: enumLiteral_7= 'Long'
+                    // InternalVertigoDsl.g:4172:3: (enumLiteral_7= 'Long' )
+                    // InternalVertigoDsl.g:4173:4: enumLiteral_7= 'Long'
                     {
-                    enumLiteral_7=(Token)match(input,74,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,84,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getLONGEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getDataTypeAccess().getLONGEnumLiteralDeclaration_7());
@@ -8512,12 +10436,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalVertigoDsl.g:3441:3: (enumLiteral_8= 'DataStream' )
+                    // InternalVertigoDsl.g:4180:3: (enumLiteral_8= 'DataStream' )
                     {
-                    // InternalVertigoDsl.g:3441:3: (enumLiteral_8= 'DataStream' )
-                    // InternalVertigoDsl.g:3442:4: enumLiteral_8= 'DataStream'
+                    // InternalVertigoDsl.g:4180:3: (enumLiteral_8= 'DataStream' )
+                    // InternalVertigoDsl.g:4181:4: enumLiteral_8= 'DataStream'
                     {
-                    enumLiteral_8=(Token)match(input,75,FOLLOW_2); 
+                    enumLiteral_8=(Token)match(input,85,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getDATA_STREAMEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_8, grammarAccess.getDataTypeAccess().getDATA_STREAMEnumLiteralDeclaration_8());
@@ -8551,7 +10475,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanString"
-    // InternalVertigoDsl.g:3452:1: ruleBooleanString returns [Enumerator current=null] : ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) ;
+    // InternalVertigoDsl.g:4191:1: ruleBooleanString returns [Enumerator current=null] : ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) ;
     public final Enumerator ruleBooleanString() throws RecognitionException {
         Enumerator current = null;
 
@@ -8562,33 +10486,33 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3458:2: ( ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) )
-            // InternalVertigoDsl.g:3459:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
+            // InternalVertigoDsl.g:4197:2: ( ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) )
+            // InternalVertigoDsl.g:4198:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
             {
-            // InternalVertigoDsl.g:3459:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // InternalVertigoDsl.g:4198:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA61_0==76) ) {
-                alt61=1;
+            if ( (LA68_0==86) ) {
+                alt68=1;
             }
-            else if ( (LA61_0==77) ) {
-                alt61=2;
+            else if ( (LA68_0==87) ) {
+                alt68=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 61, 0, input);
+                    new NoViableAltException("", 68, 0, input);
 
                 throw nvae;
             }
-            switch (alt61) {
+            switch (alt68) {
                 case 1 :
-                    // InternalVertigoDsl.g:3460:3: (enumLiteral_0= '\"true\"' )
+                    // InternalVertigoDsl.g:4199:3: (enumLiteral_0= '\"true\"' )
                     {
-                    // InternalVertigoDsl.g:3460:3: (enumLiteral_0= '\"true\"' )
-                    // InternalVertigoDsl.g:3461:4: enumLiteral_0= '\"true\"'
+                    // InternalVertigoDsl.g:4199:3: (enumLiteral_0= '\"true\"' )
+                    // InternalVertigoDsl.g:4200:4: enumLiteral_0= '\"true\"'
                     {
-                    enumLiteral_0=(Token)match(input,76,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,86,FOLLOW_2); 
 
                     				current = grammarAccess.getBooleanStringAccess().getTRUEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getBooleanStringAccess().getTRUEEnumLiteralDeclaration_0());
@@ -8600,12 +10524,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:3468:3: (enumLiteral_1= '\"false\"' )
+                    // InternalVertigoDsl.g:4207:3: (enumLiteral_1= '\"false\"' )
                     {
-                    // InternalVertigoDsl.g:3468:3: (enumLiteral_1= '\"false\"' )
-                    // InternalVertigoDsl.g:3469:4: enumLiteral_1= '\"false\"'
+                    // InternalVertigoDsl.g:4207:3: (enumLiteral_1= '\"false\"' )
+                    // InternalVertigoDsl.g:4208:4: enumLiteral_1= '\"false\"'
                     {
-                    enumLiteral_1=(Token)match(input,77,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,87,FOLLOW_2); 
 
                     				current = grammarAccess.getBooleanStringAccess().getFALSEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getBooleanStringAccess().getFALSEEnumLiteralDeclaration_1());
@@ -8639,7 +10563,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplicityString"
-    // InternalVertigoDsl.g:3479:1: ruleMultiplicityString returns [Enumerator current=null] : ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) ) ;
+    // InternalVertigoDsl.g:4218:1: ruleMultiplicityString returns [Enumerator current=null] : ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) ) ;
     public final Enumerator ruleMultiplicityString() throws RecognitionException {
         Enumerator current = null;
 
@@ -8650,33 +10574,33 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3485:2: ( ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) ) )
-            // InternalVertigoDsl.g:3486:2: ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) )
+            // InternalVertigoDsl.g:4224:2: ( ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) ) )
+            // InternalVertigoDsl.g:4225:2: ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) )
             {
-            // InternalVertigoDsl.g:3486:2: ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) )
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            // InternalVertigoDsl.g:4225:2: ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) )
+            int alt69=2;
+            int LA69_0 = input.LA(1);
 
-            if ( (LA62_0==78) ) {
-                alt62=1;
+            if ( (LA69_0==88) ) {
+                alt69=1;
             }
-            else if ( (LA62_0==79) ) {
-                alt62=2;
+            else if ( (LA69_0==89) ) {
+                alt69=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 62, 0, input);
+                    new NoViableAltException("", 69, 0, input);
 
                 throw nvae;
             }
-            switch (alt62) {
+            switch (alt69) {
                 case 1 :
-                    // InternalVertigoDsl.g:3487:3: (enumLiteral_0= '\"0..1\"' )
+                    // InternalVertigoDsl.g:4226:3: (enumLiteral_0= '\"0..1\"' )
                     {
-                    // InternalVertigoDsl.g:3487:3: (enumLiteral_0= '\"0..1\"' )
-                    // InternalVertigoDsl.g:3488:4: enumLiteral_0= '\"0..1\"'
+                    // InternalVertigoDsl.g:4226:3: (enumLiteral_0= '\"0..1\"' )
+                    // InternalVertigoDsl.g:4227:4: enumLiteral_0= '\"0..1\"'
                     {
-                    enumLiteral_0=(Token)match(input,78,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,88,FOLLOW_2); 
 
                     				current = grammarAccess.getMultiplicityStringAccess().getZERO_ONEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getMultiplicityStringAccess().getZERO_ONEEnumLiteralDeclaration_0());
@@ -8688,12 +10612,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:3495:3: (enumLiteral_1= '\"0..*\"' )
+                    // InternalVertigoDsl.g:4234:3: (enumLiteral_1= '\"0..*\"' )
                     {
-                    // InternalVertigoDsl.g:3495:3: (enumLiteral_1= '\"0..*\"' )
-                    // InternalVertigoDsl.g:3496:4: enumLiteral_1= '\"0..*\"'
+                    // InternalVertigoDsl.g:4234:3: (enumLiteral_1= '\"0..*\"' )
+                    // InternalVertigoDsl.g:4235:4: enumLiteral_1= '\"0..*\"'
                     {
-                    enumLiteral_1=(Token)match(input,79,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,89,FOLLOW_2); 
 
                     				current = grammarAccess.getMultiplicityStringAccess().getZERO_NEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getMultiplicityStringAccess().getZERO_NEnumLiteralDeclaration_1());
@@ -8727,7 +10651,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInOutString"
-    // InternalVertigoDsl.g:3506:1: ruleInOutString returns [Enumerator current=null] : ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) ) ;
+    // InternalVertigoDsl.g:4245:1: ruleInOutString returns [Enumerator current=null] : ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) ) ;
     public final Enumerator ruleInOutString() throws RecognitionException {
         Enumerator current = null;
 
@@ -8738,33 +10662,33 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3512:2: ( ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) ) )
-            // InternalVertigoDsl.g:3513:2: ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) )
+            // InternalVertigoDsl.g:4251:2: ( ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) ) )
+            // InternalVertigoDsl.g:4252:2: ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) )
             {
-            // InternalVertigoDsl.g:3513:2: ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) )
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // InternalVertigoDsl.g:4252:2: ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) )
+            int alt70=2;
+            int LA70_0 = input.LA(1);
 
-            if ( (LA63_0==80) ) {
-                alt63=1;
+            if ( (LA70_0==90) ) {
+                alt70=1;
             }
-            else if ( (LA63_0==81) ) {
-                alt63=2;
+            else if ( (LA70_0==91) ) {
+                alt70=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 63, 0, input);
+                    new NoViableAltException("", 70, 0, input);
 
                 throw nvae;
             }
-            switch (alt63) {
+            switch (alt70) {
                 case 1 :
-                    // InternalVertigoDsl.g:3514:3: (enumLiteral_0= '\"in\"' )
+                    // InternalVertigoDsl.g:4253:3: (enumLiteral_0= '\"in\"' )
                     {
-                    // InternalVertigoDsl.g:3514:3: (enumLiteral_0= '\"in\"' )
-                    // InternalVertigoDsl.g:3515:4: enumLiteral_0= '\"in\"'
+                    // InternalVertigoDsl.g:4253:3: (enumLiteral_0= '\"in\"' )
+                    // InternalVertigoDsl.g:4254:4: enumLiteral_0= '\"in\"'
                     {
-                    enumLiteral_0=(Token)match(input,80,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,90,FOLLOW_2); 
 
                     				current = grammarAccess.getInOutStringAccess().getINOUT_INEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getInOutStringAccess().getINOUT_INEnumLiteralDeclaration_0());
@@ -8776,12 +10700,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:3522:3: (enumLiteral_1= '\"out\"' )
+                    // InternalVertigoDsl.g:4261:3: (enumLiteral_1= '\"out\"' )
                     {
-                    // InternalVertigoDsl.g:3522:3: (enumLiteral_1= '\"out\"' )
-                    // InternalVertigoDsl.g:3523:4: enumLiteral_1= '\"out\"'
+                    // InternalVertigoDsl.g:4261:3: (enumLiteral_1= '\"out\"' )
+                    // InternalVertigoDsl.g:4262:4: enumLiteral_1= '\"out\"'
                     {
-                    enumLiteral_1=(Token)match(input,81,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,91,FOLLOW_2); 
 
                     				current = grammarAccess.getInOutStringAccess().getINOUT_OUTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getInOutStringAccess().getINOUT_OUTEnumLiteralDeclaration_1());
@@ -8822,11 +10746,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     static final String dfa_1s = "\15\uffff";
     static final String dfa_2s = "\1\20\2\21\1\uffff\1\21\10\uffff";
     static final String dfa_3s = "\1\50\1\101\1\22\1\uffff\1\22\10\uffff";
-    static final String dfa_4s = "\3\uffff\1\3\1\uffff\1\10\1\4\1\11\1\1\1\2\1\6\1\7\1\5";
+    static final String dfa_4s = "\3\uffff\1\3\1\uffff\1\10\1\4\1\1\1\2\1\11\1\6\1\7\1\5";
     static final String dfa_5s = "\15\uffff}>";
     static final String[] dfa_6s = {
             "\1\4\2\uffff\1\1\6\uffff\1\3\3\uffff\1\2\2\uffff\3\3\3\uffff\2\3",
-            "\1\3\1\12\1\uffff\1\10\6\uffff\1\6\1\uffff\1\11\24\uffff\1\5\16\uffff\1\7",
+            "\1\3\1\12\1\uffff\1\7\6\uffff\1\6\1\uffff\1\10\24\uffff\1\5\16\uffff\1\11",
             "\1\3\1\12",
             "",
             "\1\14\1\13",
@@ -8869,7 +10793,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     static final String dfa_9s = "\1\20\1\uffff\10\0\2\uffff";
     static final String dfa_10s = "\1\50\1\uffff\10\0\2\uffff";
     static final String dfa_11s = "\1\uffff\1\3\10\uffff\1\1\1\2";
-    static final String dfa_12s = "\2\uffff\1\1\1\0\1\5\1\6\1\7\1\2\1\3\1\4\2\uffff}>";
+    static final String dfa_12s = "\2\uffff\1\4\1\2\1\5\1\6\1\7\1\0\1\1\1\3\2\uffff}>";
     static final String[] dfa_13s = {
             "\1\1\2\uffff\1\2\6\uffff\1\11\3\uffff\1\3\2\uffff\1\4\1\5\1\6\3\uffff\1\7\1\10",
             "",
@@ -8914,36 +10838,6 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA13_3 = input.LA(1);
-
-                         
-                        int index13_3 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 0) ) {s = 10;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index13_3);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA13_2 = input.LA(1);
-
-                         
-                        int index13_2 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 0) ) {s = 10;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup()) ) {s = 1;}
-
-                         
-                        input.seek(index13_2);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 2 : 
                         int LA13_7 = input.LA(1);
 
                          
@@ -8958,7 +10852,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                         input.seek(index13_7);
                         if ( s>=0 ) return s;
                         break;
-                    case 3 : 
+                    case 1 : 
                         int LA13_8 = input.LA(1);
 
                          
@@ -8973,7 +10867,22 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                         input.seek(index13_8);
                         if ( s>=0 ) return s;
                         break;
-                    case 4 : 
+                    case 2 : 
+                        int LA13_3 = input.LA(1);
+
+                         
+                        int index13_3 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 0) ) {s = 10;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index13_3);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 3 : 
                         int LA13_9 = input.LA(1);
 
                          
@@ -8986,6 +10895,21 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
                          
                         input.seek(index13_9);
+                        if ( s>=0 ) return s;
+                        break;
+                    case 4 : 
+                        int LA13_2 = input.LA(1);
+
+                         
+                        int index13_2 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 0) ) {s = 10;}
+
+                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup()) ) {s = 1;}
+
+                         
+                        input.seek(index13_2);
                         if ( s>=0 ) return s;
                         break;
                     case 5 : 
@@ -9157,14 +11081,14 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000020000000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000000005000000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000FF8L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000000L,0x00000000003FE000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000018E44080002L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000018E04000000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000001000000000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000006000000000L});
     public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000002000000010L});
-    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000000L,0x0000000000003000L});
+    public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000000000L,0x0000000000C00000L});
     public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000020000004000L});
     public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000022004004000L});
     public static final BitSet FOLLOW_33 = new BitSet(new long[]{0x0000020004004000L});
@@ -9184,15 +11108,19 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x7FF8000000000000L});
     public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x7FF8002004000000L});
     public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x7FF8000004000000L});
-    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000000L,0x000000000000C000L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000000000000000L,0x0000000003000000L});
     public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x8000040000004000L});
     public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x8000042004004000L});
     public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x8000040004004000L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x0000000000030000L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x000000000C000000L});
     public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
     public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000002000000000L,0x0000000000000004L});
     public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
     public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000002014000000L,0x0000000000000001L});
     public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000014000000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000020000000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000022004000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000020004000000L,0x0000000000000020L});
+    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000400L});
 
 }

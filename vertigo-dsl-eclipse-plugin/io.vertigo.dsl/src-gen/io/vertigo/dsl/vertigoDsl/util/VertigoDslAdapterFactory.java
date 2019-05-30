@@ -226,9 +226,109 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createTaskDefinitionAdapter();
       }
       @Override
+      public Adapter caseFacetDefinitionDtDefinition(FacetDefinitionDtDefinition object)
+      {
+        return createFacetDefinitionDtDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseFacetDefinitionFieldName(FacetDefinitionFieldName object)
+      {
+        return createFacetDefinitionFieldNameAdapter();
+      }
+      @Override
+      public Adapter caseFacetDefinitionLabel(FacetDefinitionLabel object)
+      {
+        return createFacetDefinitionLabelAdapter();
+      }
+      @Override
+      public Adapter caseFacetDefinitionRangeString(FacetDefinitionRangeString object)
+      {
+        return createFacetDefinitionRangeStringAdapter();
+      }
+      @Override
+      public Adapter caseFacetDefinitionRange(FacetDefinitionRange object)
+      {
+        return createFacetDefinitionRangeAdapter();
+      }
+      @Override
+      public Adapter caseFacetDefinition(FacetDefinition object)
+      {
+        return createFacetDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseFacetedQueryDefinitionKeyConcept(FacetedQueryDefinitionKeyConcept object)
+      {
+        return createFacetedQueryDefinitionKeyConceptAdapter();
+      }
+      @Override
+      public Adapter caseFacetedQueryDefinitionDomainCriteria(FacetedQueryDefinitionDomainCriteria object)
+      {
+        return createFacetedQueryDefinitionDomainCriteriaAdapter();
+      }
+      @Override
+      public Adapter caseFacetedQueryDefinitionListFilterBuilderQuery(FacetedQueryDefinitionListFilterBuilderQuery object)
+      {
+        return createFacetedQueryDefinitionListFilterBuilderQueryAdapter();
+      }
+      @Override
+      public Adapter caseFacetedQueryDefinitionListFilterBuilderClass(FacetedQueryDefinitionListFilterBuilderClass object)
+      {
+        return createFacetedQueryDefinitionListFilterBuilderClassAdapter();
+      }
+      @Override
+      public Adapter caseFacetedQueryDefinitionFacets(FacetedQueryDefinitionFacets object)
+      {
+        return createFacetedQueryDefinitionFacetsAdapter();
+      }
+      @Override
+      public Adapter caseFacetedQueryDefinition(FacetedQueryDefinition object)
+      {
+        return createFacetedQueryDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseIndexDefinitionKeyConcept(IndexDefinitionKeyConcept object)
+      {
+        return createIndexDefinitionKeyConceptAdapter();
+      }
+      @Override
+      public Adapter caseIndexDefinitionDtIndex(IndexDefinitionDtIndex object)
+      {
+        return createIndexDefinitionDtIndexAdapter();
+      }
+      @Override
+      public Adapter caseIndexDefinitionIndexCopyToString(IndexDefinitionIndexCopyToString object)
+      {
+        return createIndexDefinitionIndexCopyToStringAdapter();
+      }
+      @Override
+      public Adapter caseIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo object)
+      {
+        return createIndexDefinitionIndexCopyToAdapter();
+      }
+      @Override
+      public Adapter caseIndexDefinitionLoaderId(IndexDefinitionLoaderId object)
+      {
+        return createIndexDefinitionLoaderIdAdapter();
+      }
+      @Override
+      public Adapter caseIndexDefinition(IndexDefinition object)
+      {
+        return createIndexDefinitionAdapter();
+      }
+      @Override
       public Adapter caseDtDefinitionAction(DtDefinitionAction object)
       {
         return createDtDefinitionActionAdapter();
+      }
+      @Override
+      public Adapter caseFacetedQueryDefinitionAction(FacetedQueryDefinitionAction object)
+      {
+        return createFacetedQueryDefinitionActionAdapter();
+      }
+      @Override
+      public Adapter caseIndexDefinitionAction(IndexDefinitionAction object)
+      {
+        return createIndexDefinitionActionAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -703,6 +803,276 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition <em>Facet Definition Dt Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition
+   * @generated
+   */
+  public Adapter createFacetDefinitionDtDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName <em>Facet Definition Field Name</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName
+   * @generated
+   */
+  public Adapter createFacetDefinitionFieldNameAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel <em>Facet Definition Label</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel
+   * @generated
+   */
+  public Adapter createFacetDefinitionLabelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString <em>Facet Definition Range String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString
+   * @generated
+   */
+  public Adapter createFacetDefinitionRangeStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionRange <em>Facet Definition Range</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionRange
+   * @generated
+   */
+  public Adapter createFacetDefinitionRangeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinition <em>Facet Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinition
+   * @generated
+   */
+  public Adapter createFacetDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept <em>Faceted Query Definition Key Concept</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept
+   * @generated
+   */
+  public Adapter createFacetedQueryDefinitionKeyConceptAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria <em>Faceted Query Definition Domain Criteria</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria
+   * @generated
+   */
+  public Adapter createFacetedQueryDefinitionDomainCriteriaAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery <em>Faceted Query Definition List Filter Builder Query</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery
+   * @generated
+   */
+  public Adapter createFacetedQueryDefinitionListFilterBuilderQueryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass <em>Faceted Query Definition List Filter Builder Class</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass
+   * @generated
+   */
+  public Adapter createFacetedQueryDefinitionListFilterBuilderClassAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets <em>Faceted Query Definition Facets</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets
+   * @generated
+   */
+  public Adapter createFacetedQueryDefinitionFacetsAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinition <em>Faceted Query Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinition
+   * @generated
+   */
+  public Adapter createFacetedQueryDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionKeyConcept <em>Index Definition Key Concept</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionKeyConcept
+   * @generated
+   */
+  public Adapter createIndexDefinitionKeyConceptAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex <em>Index Definition Dt Index</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex
+   * @generated
+   */
+  public Adapter createIndexDefinitionDtIndexAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyToString <em>Index Definition Index Copy To String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyToString
+   * @generated
+   */
+  public Adapter createIndexDefinitionIndexCopyToStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo
+   * @generated
+   */
+  public Adapter createIndexDefinitionIndexCopyToAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionLoaderId <em>Index Definition Loader Id</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionLoaderId
+   * @generated
+   */
+  public Adapter createIndexDefinitionLoaderIdAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinition <em>Index Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinition
+   * @generated
+   */
+  public Adapter createIndexDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction <em>Dt Definition Action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -713,6 +1083,36 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDtDefinitionActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction <em>Faceted Query Definition Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction
+   * @generated
+   */
+  public Adapter createFacetedQueryDefinitionActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction <em>Index Definition Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionAction
+   * @generated
+   */
+  public Adapter createIndexDefinitionActionAdapter()
   {
     return null;
   }

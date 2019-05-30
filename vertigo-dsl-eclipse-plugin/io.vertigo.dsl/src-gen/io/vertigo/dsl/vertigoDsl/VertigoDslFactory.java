@@ -294,6 +294,168 @@ public interface VertigoDslFactory extends EFactory
   TaskDefinition createTaskDefinition();
 
   /**
+   * Returns a new object of class '<em>Facet Definition Dt Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Facet Definition Dt Definition</em>'.
+   * @generated
+   */
+  FacetDefinitionDtDefinition createFacetDefinitionDtDefinition();
+
+  /**
+   * Returns a new object of class '<em>Facet Definition Field Name</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Facet Definition Field Name</em>'.
+   * @generated
+   */
+  FacetDefinitionFieldName createFacetDefinitionFieldName();
+
+  /**
+   * Returns a new object of class '<em>Facet Definition Label</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Facet Definition Label</em>'.
+   * @generated
+   */
+  FacetDefinitionLabel createFacetDefinitionLabel();
+
+  /**
+   * Returns a new object of class '<em>Facet Definition Range String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Facet Definition Range String</em>'.
+   * @generated
+   */
+  FacetDefinitionRangeString createFacetDefinitionRangeString();
+
+  /**
+   * Returns a new object of class '<em>Facet Definition Range</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Facet Definition Range</em>'.
+   * @generated
+   */
+  FacetDefinitionRange createFacetDefinitionRange();
+
+  /**
+   * Returns a new object of class '<em>Facet Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Facet Definition</em>'.
+   * @generated
+   */
+  FacetDefinition createFacetDefinition();
+
+  /**
+   * Returns a new object of class '<em>Faceted Query Definition Key Concept</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Faceted Query Definition Key Concept</em>'.
+   * @generated
+   */
+  FacetedQueryDefinitionKeyConcept createFacetedQueryDefinitionKeyConcept();
+
+  /**
+   * Returns a new object of class '<em>Faceted Query Definition Domain Criteria</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Faceted Query Definition Domain Criteria</em>'.
+   * @generated
+   */
+  FacetedQueryDefinitionDomainCriteria createFacetedQueryDefinitionDomainCriteria();
+
+  /**
+   * Returns a new object of class '<em>Faceted Query Definition List Filter Builder Query</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Faceted Query Definition List Filter Builder Query</em>'.
+   * @generated
+   */
+  FacetedQueryDefinitionListFilterBuilderQuery createFacetedQueryDefinitionListFilterBuilderQuery();
+
+  /**
+   * Returns a new object of class '<em>Faceted Query Definition List Filter Builder Class</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Faceted Query Definition List Filter Builder Class</em>'.
+   * @generated
+   */
+  FacetedQueryDefinitionListFilterBuilderClass createFacetedQueryDefinitionListFilterBuilderClass();
+
+  /**
+   * Returns a new object of class '<em>Faceted Query Definition Facets</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Faceted Query Definition Facets</em>'.
+   * @generated
+   */
+  FacetedQueryDefinitionFacets createFacetedQueryDefinitionFacets();
+
+  /**
+   * Returns a new object of class '<em>Faceted Query Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Faceted Query Definition</em>'.
+   * @generated
+   */
+  FacetedQueryDefinition createFacetedQueryDefinition();
+
+  /**
+   * Returns a new object of class '<em>Index Definition Key Concept</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Definition Key Concept</em>'.
+   * @generated
+   */
+  IndexDefinitionKeyConcept createIndexDefinitionKeyConcept();
+
+  /**
+   * Returns a new object of class '<em>Index Definition Dt Index</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Definition Dt Index</em>'.
+   * @generated
+   */
+  IndexDefinitionDtIndex createIndexDefinitionDtIndex();
+
+  /**
+   * Returns a new object of class '<em>Index Definition Index Copy To String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Definition Index Copy To String</em>'.
+   * @generated
+   */
+  IndexDefinitionIndexCopyToString createIndexDefinitionIndexCopyToString();
+
+  /**
+   * Returns a new object of class '<em>Index Definition Index Copy To</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Definition Index Copy To</em>'.
+   * @generated
+   */
+  IndexDefinitionIndexCopyTo createIndexDefinitionIndexCopyTo();
+
+  /**
+   * Returns a new object of class '<em>Index Definition Loader Id</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Definition Loader Id</em>'.
+   * @generated
+   */
+  IndexDefinitionLoaderId createIndexDefinitionLoaderId();
+
+  /**
+   * Returns a new object of class '<em>Index Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Definition</em>'.
+   * @generated
+   */
+  IndexDefinition createIndexDefinition();
+
+  /**
    * Returns a new object of class '<em>Dt Definition Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -301,6 +463,24 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   DtDefinitionAction createDtDefinitionAction();
+
+  /**
+   * Returns a new object of class '<em>Faceted Query Definition Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Faceted Query Definition Action</em>'.
+   * @generated
+   */
+  FacetedQueryDefinitionAction createFacetedQueryDefinitionAction();
+
+  /**
+   * Returns a new object of class '<em>Index Definition Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Index Definition Action</em>'.
+   * @generated
+   */
+  IndexDefinitionAction createIndexDefinitionAction();
 
   /**
    * Returns the package supported by this factory.

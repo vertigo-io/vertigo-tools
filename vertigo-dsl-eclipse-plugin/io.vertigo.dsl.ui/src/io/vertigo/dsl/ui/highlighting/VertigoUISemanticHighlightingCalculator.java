@@ -132,7 +132,7 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 	    				 String text = node.getText();
 	    				 Map<Integer, Integer> keywordPositionMap = getKeywordPositionMap(text, SQL_KEYWORDS); 
 	    				 for (Entry<Integer, Integer> mapEntry : keywordPositionMap.entrySet()) {
-	    					 acceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
+	    					 acceptor.addPosition(node.getOffset() + mapEntry.getKey() - 2, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
 	    				 }
 
 	    			 }
@@ -145,7 +145,7 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 		Map<Integer,Integer> keywordOffsetsAndLength = new HashMap<Integer, Integer>();
 		for (String keyword : keywordsToFind) {
 			String wholeWordPattern = "\\b" + keyword + "\\b";
-			Pattern pattern = Pattern.compile(wholeWordPattern);
+			Pattern pattern = Pattern.compile(wholeWordPattern,Pattern.CASE_INSENSITIVE);
 			Matcher matcher = pattern.matcher(stringToparse);
 			while (matcher.find()) {
 				keywordOffsetsAndLength.put(matcher.start(), keyword.length());

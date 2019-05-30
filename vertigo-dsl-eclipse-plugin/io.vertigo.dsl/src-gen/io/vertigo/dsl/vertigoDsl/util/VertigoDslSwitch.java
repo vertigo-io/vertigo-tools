@@ -296,6 +296,132 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.FACET_DEFINITION_DT_DEFINITION:
+      {
+        FacetDefinitionDtDefinition facetDefinitionDtDefinition = (FacetDefinitionDtDefinition)theEObject;
+        T result = caseFacetDefinitionDtDefinition(facetDefinitionDtDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACET_DEFINITION_FIELD_NAME:
+      {
+        FacetDefinitionFieldName facetDefinitionFieldName = (FacetDefinitionFieldName)theEObject;
+        T result = caseFacetDefinitionFieldName(facetDefinitionFieldName);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACET_DEFINITION_LABEL:
+      {
+        FacetDefinitionLabel facetDefinitionLabel = (FacetDefinitionLabel)theEObject;
+        T result = caseFacetDefinitionLabel(facetDefinitionLabel);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACET_DEFINITION_RANGE_STRING:
+      {
+        FacetDefinitionRangeString facetDefinitionRangeString = (FacetDefinitionRangeString)theEObject;
+        T result = caseFacetDefinitionRangeString(facetDefinitionRangeString);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACET_DEFINITION_RANGE:
+      {
+        FacetDefinitionRange facetDefinitionRange = (FacetDefinitionRange)theEObject;
+        T result = caseFacetDefinitionRange(facetDefinitionRange);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACET_DEFINITION:
+      {
+        FacetDefinition facetDefinition = (FacetDefinition)theEObject;
+        T result = caseFacetDefinition(facetDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_KEY_CONCEPT:
+      {
+        FacetedQueryDefinitionKeyConcept facetedQueryDefinitionKeyConcept = (FacetedQueryDefinitionKeyConcept)theEObject;
+        T result = caseFacetedQueryDefinitionKeyConcept(facetedQueryDefinitionKeyConcept);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA:
+      {
+        FacetedQueryDefinitionDomainCriteria facetedQueryDefinitionDomainCriteria = (FacetedQueryDefinitionDomainCriteria)theEObject;
+        T result = caseFacetedQueryDefinitionDomainCriteria(facetedQueryDefinitionDomainCriteria);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY:
+      {
+        FacetedQueryDefinitionListFilterBuilderQuery facetedQueryDefinitionListFilterBuilderQuery = (FacetedQueryDefinitionListFilterBuilderQuery)theEObject;
+        T result = caseFacetedQueryDefinitionListFilterBuilderQuery(facetedQueryDefinitionListFilterBuilderQuery);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS:
+      {
+        FacetedQueryDefinitionListFilterBuilderClass facetedQueryDefinitionListFilterBuilderClass = (FacetedQueryDefinitionListFilterBuilderClass)theEObject;
+        T result = caseFacetedQueryDefinitionListFilterBuilderClass(facetedQueryDefinitionListFilterBuilderClass);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_FACETS:
+      {
+        FacetedQueryDefinitionFacets facetedQueryDefinitionFacets = (FacetedQueryDefinitionFacets)theEObject;
+        T result = caseFacetedQueryDefinitionFacets(facetedQueryDefinitionFacets);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION:
+      {
+        FacetedQueryDefinition facetedQueryDefinition = (FacetedQueryDefinition)theEObject;
+        T result = caseFacetedQueryDefinition(facetedQueryDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.INDEX_DEFINITION_KEY_CONCEPT:
+      {
+        IndexDefinitionKeyConcept indexDefinitionKeyConcept = (IndexDefinitionKeyConcept)theEObject;
+        T result = caseIndexDefinitionKeyConcept(indexDefinitionKeyConcept);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.INDEX_DEFINITION_DT_INDEX:
+      {
+        IndexDefinitionDtIndex indexDefinitionDtIndex = (IndexDefinitionDtIndex)theEObject;
+        T result = caseIndexDefinitionDtIndex(indexDefinitionDtIndex);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO_STRING:
+      {
+        IndexDefinitionIndexCopyToString indexDefinitionIndexCopyToString = (IndexDefinitionIndexCopyToString)theEObject;
+        T result = caseIndexDefinitionIndexCopyToString(indexDefinitionIndexCopyToString);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO:
+      {
+        IndexDefinitionIndexCopyTo indexDefinitionIndexCopyTo = (IndexDefinitionIndexCopyTo)theEObject;
+        T result = caseIndexDefinitionIndexCopyTo(indexDefinitionIndexCopyTo);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.INDEX_DEFINITION_LOADER_ID:
+      {
+        IndexDefinitionLoaderId indexDefinitionLoaderId = (IndexDefinitionLoaderId)theEObject;
+        T result = caseIndexDefinitionLoaderId(indexDefinitionLoaderId);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.INDEX_DEFINITION:
+      {
+        IndexDefinition indexDefinition = (IndexDefinition)theEObject;
+        T result = caseIndexDefinition(indexDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.DT_DEFINITION_ACTION:
       {
         DtDefinitionAction dtDefinitionAction = (DtDefinitionAction)theEObject;
@@ -303,6 +429,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = caseDtDefinition(dtDefinitionAction);
         if (result == null) result = caseElement(dtDefinitionAction);
         if (result == null) result = caseDtDefinitionType(dtDefinitionAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION:
+      {
+        FacetedQueryDefinitionAction facetedQueryDefinitionAction = (FacetedQueryDefinitionAction)theEObject;
+        T result = caseFacetedQueryDefinitionAction(facetedQueryDefinitionAction);
+        if (result == null) result = caseFacetedQueryDefinition(facetedQueryDefinitionAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.INDEX_DEFINITION_ACTION:
+      {
+        IndexDefinitionAction indexDefinitionAction = (IndexDefinitionAction)theEObject;
+        T result = caseIndexDefinitionAction(indexDefinitionAction);
+        if (result == null) result = caseIndexDefinition(indexDefinitionAction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -791,6 +933,294 @@ public class VertigoDslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition Dt Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition Dt Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinitionDtDefinition(FacetDefinitionDtDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition Field Name</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition Field Name</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinitionFieldName(FacetDefinitionFieldName object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition Label</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition Label</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinitionLabel(FacetDefinitionLabel object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition Range String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition Range String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinitionRangeString(FacetDefinitionRangeString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition Range</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition Range</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinitionRange(FacetDefinitionRange object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinition(FacetDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Faceted Query Definition Key Concept</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Faceted Query Definition Key Concept</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetedQueryDefinitionKeyConcept(FacetedQueryDefinitionKeyConcept object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Faceted Query Definition Domain Criteria</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Faceted Query Definition Domain Criteria</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetedQueryDefinitionDomainCriteria(FacetedQueryDefinitionDomainCriteria object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Faceted Query Definition List Filter Builder Query</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Faceted Query Definition List Filter Builder Query</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetedQueryDefinitionListFilterBuilderQuery(FacetedQueryDefinitionListFilterBuilderQuery object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Faceted Query Definition List Filter Builder Class</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Faceted Query Definition List Filter Builder Class</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetedQueryDefinitionListFilterBuilderClass(FacetedQueryDefinitionListFilterBuilderClass object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Faceted Query Definition Facets</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Faceted Query Definition Facets</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetedQueryDefinitionFacets(FacetedQueryDefinitionFacets object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Faceted Query Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Faceted Query Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetedQueryDefinition(FacetedQueryDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Index Definition Key Concept</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Index Definition Key Concept</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndexDefinitionKeyConcept(IndexDefinitionKeyConcept object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Index Definition Dt Index</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Index Definition Dt Index</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndexDefinitionDtIndex(IndexDefinitionDtIndex object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Index Definition Index Copy To String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Index Definition Index Copy To String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndexDefinitionIndexCopyToString(IndexDefinitionIndexCopyToString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Index Definition Index Copy To</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Index Definition Index Copy To</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Index Definition Loader Id</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Index Definition Loader Id</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndexDefinitionLoaderId(IndexDefinitionLoaderId object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Index Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Index Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndexDefinition(IndexDefinition object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Dt Definition Action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -802,6 +1232,38 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDtDefinitionAction(DtDefinitionAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Faceted Query Definition Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Faceted Query Definition Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetedQueryDefinitionAction(FacetedQueryDefinitionAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Index Definition Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Index Definition Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIndexDefinitionAction(IndexDefinitionAction object)
   {
     return null;
   }

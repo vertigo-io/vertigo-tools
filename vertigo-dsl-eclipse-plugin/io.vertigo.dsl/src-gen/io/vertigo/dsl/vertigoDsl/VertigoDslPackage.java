@@ -1066,13 +1066,13 @@ public interface VertigoDslPackage extends EPackage
   int TASK_ATTRIBUTE_STRING = 25;
 
   /**
-   * The feature id for the '<em><b>Domain</b></em>' reference.
+   * The feature id for the '<em><b>Ref To Domain Type</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int TASK_ATTRIBUTE_STRING__DOMAIN = 0;
+  int TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE = 0;
 
   /**
    * The feature id for the '<em><b>Required</b></em>' attribute.
@@ -1259,6 +1259,546 @@ public interface VertigoDslPackage extends EPackage
   int TASK_DEFINITION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 5;
 
   /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionDtDefinitionImpl <em>Facet Definition Dt Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionDtDefinitionImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionDtDefinition()
+   * @generated
+   */
+  int FACET_DEFINITION_DT_DEFINITION = 30;
+
+  /**
+   * The feature id for the '<em><b>Dt Definition</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_DT_DEFINITION__DT_DEFINITION = 0;
+
+  /**
+   * The number of structural features of the '<em>Facet Definition Dt Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_DT_DEFINITION_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionFieldNameImpl <em>Facet Definition Field Name</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionFieldNameImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionFieldName()
+   * @generated
+   */
+  int FACET_DEFINITION_FIELD_NAME = 31;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_FIELD_NAME__STRING = 0;
+
+  /**
+   * The number of structural features of the '<em>Facet Definition Field Name</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_FIELD_NAME_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionLabelImpl <em>Facet Definition Label</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionLabelImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionLabel()
+   * @generated
+   */
+  int FACET_DEFINITION_LABEL = 32;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_LABEL__STRING = 0;
+
+  /**
+   * The number of structural features of the '<em>Facet Definition Label</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_LABEL_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionRangeStringImpl <em>Facet Definition Range String</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionRangeStringImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionRangeString()
+   * @generated
+   */
+  int FACET_DEFINITION_RANGE_STRING = 33;
+
+  /**
+   * The feature id for the '<em><b>Filter String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_RANGE_STRING__FILTER_STRING = 0;
+
+  /**
+   * The feature id for the '<em><b>Label String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_RANGE_STRING__LABEL_STRING = 1;
+
+  /**
+   * The number of structural features of the '<em>Facet Definition Range String</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_RANGE_STRING_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionRangeImpl <em>Facet Definition Range</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionRangeImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionRange()
+   * @generated
+   */
+  int FACET_DEFINITION_RANGE = 34;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_RANGE__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Facet Definition Range String</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_RANGE__FACET_DEFINITION_RANGE_STRING = 1;
+
+  /**
+   * The number of structural features of the '<em>Facet Definition Range</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_RANGE_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionImpl <em>Facet Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinition()
+   * @generated
+   */
+  int FACET_DEFINITION = 35;
+
+  /**
+   * The feature id for the '<em><b>Facet Definition Dt Definition</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION__FACET_DEFINITION_DT_DEFINITION = 0;
+
+  /**
+   * The feature id for the '<em><b>Facet Definition Field Name</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION__FACET_DEFINITION_FIELD_NAME = 1;
+
+  /**
+   * The feature id for the '<em><b>Facet Definiton Label</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION__FACET_DEFINITON_LABEL = 2;
+
+  /**
+   * The number of structural features of the '<em>Facet Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACET_DEFINITION_FEATURE_COUNT = 3;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionKeyConceptImpl <em>Faceted Query Definition Key Concept</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionKeyConceptImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionKeyConcept()
+   * @generated
+   */
+  int FACETED_QUERY_DEFINITION_KEY_CONCEPT = 36;
+
+  /**
+   * The feature id for the '<em><b>Dt Definition</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_KEY_CONCEPT__DT_DEFINITION = 0;
+
+  /**
+   * The number of structural features of the '<em>Faceted Query Definition Key Concept</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_KEY_CONCEPT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionDomainCriteriaImpl <em>Faceted Query Definition Domain Criteria</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionDomainCriteriaImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionDomainCriteria()
+   * @generated
+   */
+  int FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA = 37;
+
+  /**
+   * The feature id for the '<em><b>Ref To Domain Type</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA__REF_TO_DOMAIN_TYPE = 0;
+
+  /**
+   * The number of structural features of the '<em>Faceted Query Definition Domain Criteria</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionListFilterBuilderQueryImpl <em>Faceted Query Definition List Filter Builder Query</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionListFilterBuilderQueryImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionListFilterBuilderQuery()
+   * @generated
+   */
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY = 38;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY__STRING = 0;
+
+  /**
+   * The number of structural features of the '<em>Faceted Query Definition List Filter Builder Query</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionListFilterBuilderClassImpl <em>Faceted Query Definition List Filter Builder Class</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionListFilterBuilderClassImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionListFilterBuilderClass()
+   * @generated
+   */
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS = 39;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS__STRING = 0;
+
+  /**
+   * The number of structural features of the '<em>Faceted Query Definition List Filter Builder Class</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionFacetsImpl <em>Faceted Query Definition Facets</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionFacetsImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionFacets()
+   * @generated
+   */
+  int FACETED_QUERY_DEFINITION_FACETS = 40;
+
+  /**
+   * The feature id for the '<em><b>Facet Definition</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_FACETS__FACET_DEFINITION = 0;
+
+  /**
+   * The feature id for the '<em><b>Facets</b></em>' reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_FACETS__FACETS = 1;
+
+  /**
+   * The number of structural features of the '<em>Faceted Query Definition Facets</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_FACETS_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionImpl <em>Faceted Query Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinition()
+   * @generated
+   */
+  int FACETED_QUERY_DEFINITION = 41;
+
+  /**
+   * The number of structural features of the '<em>Faceted Query Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_FEATURE_COUNT = 0;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionKeyConceptImpl <em>Index Definition Key Concept</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionKeyConceptImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionKeyConcept()
+   * @generated
+   */
+  int INDEX_DEFINITION_KEY_CONCEPT = 42;
+
+  /**
+   * The feature id for the '<em><b>Dt Definition</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_KEY_CONCEPT__DT_DEFINITION = 0;
+
+  /**
+   * The number of structural features of the '<em>Index Definition Key Concept</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_KEY_CONCEPT_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionDtIndexImpl <em>Index Definition Dt Index</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionDtIndexImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionDtIndex()
+   * @generated
+   */
+  int INDEX_DEFINITION_DT_INDEX = 43;
+
+  /**
+   * The feature id for the '<em><b>Dt Definition</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_DT_INDEX__DT_DEFINITION = 0;
+
+  /**
+   * The number of structural features of the '<em>Index Definition Dt Index</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_DT_INDEX_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionIndexCopyToStringImpl <em>Index Definition Index Copy To String</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionIndexCopyToStringImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionIndexCopyToString()
+   * @generated
+   */
+  int INDEX_DEFINITION_INDEX_COPY_TO_STRING = 44;
+
+  /**
+   * The feature id for the '<em><b>String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_INDEX_COPY_TO_STRING__STRING = 0;
+
+  /**
+   * The number of structural features of the '<em>Index Definition Index Copy To String</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_INDEX_COPY_TO_STRING_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionIndexCopyToImpl <em>Index Definition Index Copy To</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionIndexCopyToImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionIndexCopyTo()
+   * @generated
+   */
+  int INDEX_DEFINITION_INDEX_COPY_TO = 45;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_INDEX_COPY_TO__NAME = 0;
+
+  /**
+   * The feature id for the '<em><b>Index Definition Index Copy To String</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_INDEX_COPY_TO__INDEX_DEFINITION_INDEX_COPY_TO_STRING = 1;
+
+  /**
+   * The number of structural features of the '<em>Index Definition Index Copy To</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_INDEX_COPY_TO_FEATURE_COUNT = 2;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionLoaderIdImpl <em>Index Definition Loader Id</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionLoaderIdImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionLoaderId()
+   * @generated
+   */
+  int INDEX_DEFINITION_LOADER_ID = 46;
+
+  /**
+   * The feature id for the '<em><b>Loader Id String</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_LOADER_ID__LOADER_ID_STRING = 0;
+
+  /**
+   * The number of structural features of the '<em>Index Definition Loader Id</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_LOADER_ID_FEATURE_COUNT = 1;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionImpl <em>Index Definition</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinition()
+   * @generated
+   */
+  int INDEX_DEFINITION = 47;
+
+  /**
+   * The number of structural features of the '<em>Index Definition</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_FEATURE_COUNT = 0;
+
+  /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionActionImpl <em>Dt Definition Action</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1266,7 +1806,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDtDefinitionAction()
    * @generated
    */
-  int DT_DEFINITION_ACTION = 30;
+  int DT_DEFINITION_ACTION = 48;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1350,6 +1890,143 @@ public interface VertigoDslPackage extends EPackage
   int DT_DEFINITION_ACTION_FEATURE_COUNT = DT_DEFINITION_FEATURE_COUNT + 8;
 
   /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl <em>Faceted Query Definition Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionAction()
+   * @generated
+   */
+  int FACETED_QUERY_DEFINITION_ACTION = 49;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_ACTION__NAME = FACETED_QUERY_DEFINITION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Faceted Query Definition Key Concept</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_KEY_CONCEPT = FACETED_QUERY_DEFINITION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Faceted Query Definition Domain Criteria</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA = FACETED_QUERY_DEFINITION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Faceted Query Definition List Filter Builder Query</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY = FACETED_QUERY_DEFINITION_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Faceted Query Definition List Filter Builder Class</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS = FACETED_QUERY_DEFINITION_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Faceted Query Definition Facets</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS = FACETED_QUERY_DEFINITION_FEATURE_COUNT + 5;
+
+  /**
+   * The number of structural features of the '<em>Faceted Query Definition Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FACETED_QUERY_DEFINITION_ACTION_FEATURE_COUNT = FACETED_QUERY_DEFINITION_FEATURE_COUNT + 6;
+
+  /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl <em>Index Definition Action</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionAction()
+   * @generated
+   */
+  int INDEX_DEFINITION_ACTION = 50;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_ACTION__NAME = INDEX_DEFINITION_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Index Definition Key Concept</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_ACTION__INDEX_DEFINITION_KEY_CONCEPT = INDEX_DEFINITION_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Index Definition Dt Index</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_ACTION__INDEX_DEFINITION_DT_INDEX = INDEX_DEFINITION_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Index Definition Index Copy To</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO = INDEX_DEFINITION_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Index Definition Loader Id</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_ACTION__INDEX_DEFINITION_LOADER_ID = INDEX_DEFINITION_FEATURE_COUNT + 4;
+
+  /**
+   * The number of structural features of the '<em>Index Definition Action</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INDEX_DEFINITION_ACTION_FEATURE_COUNT = INDEX_DEFINITION_FEATURE_COUNT + 5;
+
+  /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.DataType <em>Data Type</em>}' enum.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1357,7 +2034,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 31;
+  int DATA_TYPE = 51;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.BooleanString <em>Boolean String</em>}' enum.
@@ -1367,7 +2044,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getBooleanString()
    * @generated
    */
-  int BOOLEAN_STRING = 32;
+  int BOOLEAN_STRING = 52;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.MultiplicityString <em>Multiplicity String</em>}' enum.
@@ -1377,7 +2054,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getMultiplicityString()
    * @generated
    */
-  int MULTIPLICITY_STRING = 33;
+  int MULTIPLICITY_STRING = 53;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.InOutString <em>In Out String</em>}' enum.
@@ -1387,7 +2064,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getInOutString()
    * @generated
    */
-  int IN_OUT_STRING = 34;
+  int IN_OUT_STRING = 54;
 
 
   /**
@@ -2289,15 +2966,15 @@ public interface VertigoDslPackage extends EPackage
   EClass getTaskAttributeString();
 
   /**
-   * Returns the meta object for the reference '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getDomain <em>Domain</em>}'.
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRefToDomainType <em>Ref To Domain Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the reference '<em>Domain</em>'.
-   * @see io.vertigo.dsl.vertigoDsl.TaskAttributeString#getDomain()
+   * @return the meta object for the containment reference '<em>Ref To Domain Type</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRefToDomainType()
    * @see #getTaskAttributeString()
    * @generated
    */
-  EReference getTaskAttributeString_Domain();
+  EReference getTaskAttributeString_RefToDomainType();
 
   /**
    * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRequired <em>Required</em>}'.
@@ -2461,6 +3138,428 @@ public interface VertigoDslPackage extends EPackage
   EReference getTaskDefinition_TaskDataSpace();
 
   /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition <em>Facet Definition Dt Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Facet Definition Dt Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition
+   * @generated
+   */
+  EClass getFacetDefinitionDtDefinition();
+
+  /**
+   * Returns the meta object for the reference '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition#getDtDefinition <em>Dt Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Dt Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition#getDtDefinition()
+   * @see #getFacetDefinitionDtDefinition()
+   * @generated
+   */
+  EReference getFacetDefinitionDtDefinition_DtDefinition();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName <em>Facet Definition Field Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Facet Definition Field Name</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName
+   * @generated
+   */
+  EClass getFacetDefinitionFieldName();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName#getString()
+   * @see #getFacetDefinitionFieldName()
+   * @generated
+   */
+  EAttribute getFacetDefinitionFieldName_String();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel <em>Facet Definition Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Facet Definition Label</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel
+   * @generated
+   */
+  EClass getFacetDefinitionLabel();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel#getString()
+   * @see #getFacetDefinitionLabel()
+   * @generated
+   */
+  EAttribute getFacetDefinitionLabel_String();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString <em>Facet Definition Range String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Facet Definition Range String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString
+   * @generated
+   */
+  EClass getFacetDefinitionRangeString();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString#getFilterString <em>Filter String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Filter String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString#getFilterString()
+   * @see #getFacetDefinitionRangeString()
+   * @generated
+   */
+  EAttribute getFacetDefinitionRangeString_FilterString();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString#getLabelString <em>Label String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString#getLabelString()
+   * @see #getFacetDefinitionRangeString()
+   * @generated
+   */
+  EAttribute getFacetDefinitionRangeString_LabelString();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionRange <em>Facet Definition Range</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Facet Definition Range</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionRange
+   * @generated
+   */
+  EClass getFacetDefinitionRange();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionRange#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionRange#getName()
+   * @see #getFacetDefinitionRange()
+   * @generated
+   */
+  EAttribute getFacetDefinitionRange_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionRange#getFacetDefinitionRangeString <em>Facet Definition Range String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Facet Definition Range String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionRange#getFacetDefinitionRangeString()
+   * @see #getFacetDefinitionRange()
+   * @generated
+   */
+  EReference getFacetDefinitionRange_FacetDefinitionRangeString();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinition <em>Facet Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Facet Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinition
+   * @generated
+   */
+  EClass getFacetDefinition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetDefinition#getFacetDefinitionDtDefinition <em>Facet Definition Dt Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Facet Definition Dt Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinition#getFacetDefinitionDtDefinition()
+   * @see #getFacetDefinition()
+   * @generated
+   */
+  EReference getFacetDefinition_FacetDefinitionDtDefinition();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetDefinition#getFacetDefinitionFieldName <em>Facet Definition Field Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Facet Definition Field Name</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinition#getFacetDefinitionFieldName()
+   * @see #getFacetDefinition()
+   * @generated
+   */
+  EReference getFacetDefinition_FacetDefinitionFieldName();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetDefinition#getFacetDefinitonLabel <em>Facet Definiton Label</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Facet Definiton Label</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinition#getFacetDefinitonLabel()
+   * @see #getFacetDefinition()
+   * @generated
+   */
+  EReference getFacetDefinition_FacetDefinitonLabel();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept <em>Faceted Query Definition Key Concept</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Faceted Query Definition Key Concept</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept
+   * @generated
+   */
+  EClass getFacetedQueryDefinitionKeyConcept();
+
+  /**
+   * Returns the meta object for the reference '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept#getDtDefinition <em>Dt Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Dt Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept#getDtDefinition()
+   * @see #getFacetedQueryDefinitionKeyConcept()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionKeyConcept_DtDefinition();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria <em>Faceted Query Definition Domain Criteria</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Faceted Query Definition Domain Criteria</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria
+   * @generated
+   */
+  EClass getFacetedQueryDefinitionDomainCriteria();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria#getRefToDomainType <em>Ref To Domain Type</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Ref To Domain Type</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria#getRefToDomainType()
+   * @see #getFacetedQueryDefinitionDomainCriteria()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionDomainCriteria_RefToDomainType();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery <em>Faceted Query Definition List Filter Builder Query</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Faceted Query Definition List Filter Builder Query</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery
+   * @generated
+   */
+  EClass getFacetedQueryDefinitionListFilterBuilderQuery();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery#getString()
+   * @see #getFacetedQueryDefinitionListFilterBuilderQuery()
+   * @generated
+   */
+  EAttribute getFacetedQueryDefinitionListFilterBuilderQuery_String();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass <em>Faceted Query Definition List Filter Builder Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Faceted Query Definition List Filter Builder Class</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass
+   * @generated
+   */
+  EClass getFacetedQueryDefinitionListFilterBuilderClass();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass#getString()
+   * @see #getFacetedQueryDefinitionListFilterBuilderClass()
+   * @generated
+   */
+  EAttribute getFacetedQueryDefinitionListFilterBuilderClass_String();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets <em>Faceted Query Definition Facets</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Faceted Query Definition Facets</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets
+   * @generated
+   */
+  EClass getFacetedQueryDefinitionFacets();
+
+  /**
+   * Returns the meta object for the reference list '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets#getFacetDefinition <em>Facet Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Facet Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets#getFacetDefinition()
+   * @see #getFacetedQueryDefinitionFacets()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionFacets_FacetDefinition();
+
+  /**
+   * Returns the meta object for the reference list '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets#getFacets <em>Facets</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference list '<em>Facets</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets#getFacets()
+   * @see #getFacetedQueryDefinitionFacets()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionFacets_Facets();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinition <em>Faceted Query Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Faceted Query Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinition
+   * @generated
+   */
+  EClass getFacetedQueryDefinition();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionKeyConcept <em>Index Definition Key Concept</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Index Definition Key Concept</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionKeyConcept
+   * @generated
+   */
+  EClass getIndexDefinitionKeyConcept();
+
+  /**
+   * Returns the meta object for the reference '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionKeyConcept#getDtDefinition <em>Dt Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Dt Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionKeyConcept#getDtDefinition()
+   * @see #getIndexDefinitionKeyConcept()
+   * @generated
+   */
+  EReference getIndexDefinitionKeyConcept_DtDefinition();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex <em>Index Definition Dt Index</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Index Definition Dt Index</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex
+   * @generated
+   */
+  EClass getIndexDefinitionDtIndex();
+
+  /**
+   * Returns the meta object for the reference '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex#getDtDefinition <em>Dt Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Dt Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex#getDtDefinition()
+   * @see #getIndexDefinitionDtIndex()
+   * @generated
+   */
+  EReference getIndexDefinitionDtIndex_DtDefinition();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyToString <em>Index Definition Index Copy To String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Index Definition Index Copy To String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyToString
+   * @generated
+   */
+  EClass getIndexDefinitionIndexCopyToString();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyToString#getString <em>String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyToString#getString()
+   * @see #getIndexDefinitionIndexCopyToString()
+   * @generated
+   */
+  EAttribute getIndexDefinitionIndexCopyToString_String();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Index Definition Index Copy To</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo
+   * @generated
+   */
+  EClass getIndexDefinitionIndexCopyTo();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo#getName()
+   * @see #getIndexDefinitionIndexCopyTo()
+   * @generated
+   */
+  EAttribute getIndexDefinitionIndexCopyTo_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo#getIndexDefinitionIndexCopyToString <em>Index Definition Index Copy To String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Index Definition Index Copy To String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo#getIndexDefinitionIndexCopyToString()
+   * @see #getIndexDefinitionIndexCopyTo()
+   * @generated
+   */
+  EReference getIndexDefinitionIndexCopyTo_IndexDefinitionIndexCopyToString();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionLoaderId <em>Index Definition Loader Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Index Definition Loader Id</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionLoaderId
+   * @generated
+   */
+  EClass getIndexDefinitionLoaderId();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionLoaderId#getLoaderIdString <em>Loader Id String</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Loader Id String</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionLoaderId#getLoaderIdString()
+   * @see #getIndexDefinitionLoaderId()
+   * @generated
+   */
+  EAttribute getIndexDefinitionLoaderId_LoaderIdString();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinition <em>Index Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Index Definition</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinition
+   * @generated
+   */
+  EClass getIndexDefinition();
+
+  /**
    * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction <em>Dt Definition Action</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -2557,6 +3656,147 @@ public interface VertigoDslPackage extends EPackage
    * @generated
    */
   EReference getDtDefinitionAction_DtDefinitionDisplayField();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction <em>Faceted Query Definition Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Faceted Query Definition Action</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction
+   * @generated
+   */
+  EClass getFacetedQueryDefinitionAction();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getName()
+   * @see #getFacetedQueryDefinitionAction()
+   * @generated
+   */
+  EAttribute getFacetedQueryDefinitionAction_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionKeyConcept <em>Faceted Query Definition Key Concept</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Faceted Query Definition Key Concept</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionKeyConcept()
+   * @see #getFacetedQueryDefinitionAction()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionKeyConcept();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionDomainCriteria <em>Faceted Query Definition Domain Criteria</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Faceted Query Definition Domain Criteria</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionDomainCriteria()
+   * @see #getFacetedQueryDefinitionAction()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionDomainCriteria();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionListFilterBuilderQuery <em>Faceted Query Definition List Filter Builder Query</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Faceted Query Definition List Filter Builder Query</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionListFilterBuilderQuery()
+   * @see #getFacetedQueryDefinitionAction()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderQuery();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionListFilterBuilderClass <em>Faceted Query Definition List Filter Builder Class</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Faceted Query Definition List Filter Builder Class</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionListFilterBuilderClass()
+   * @see #getFacetedQueryDefinitionAction()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderClass();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionFacets <em>Faceted Query Definition Facets</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Faceted Query Definition Facets</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionFacets()
+   * @see #getFacetedQueryDefinitionAction()
+   * @generated
+   */
+  EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionFacets();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction <em>Index Definition Action</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Index Definition Action</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionAction
+   * @generated
+   */
+  EClass getIndexDefinitionAction();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getName()
+   * @see #getIndexDefinitionAction()
+   * @generated
+   */
+  EAttribute getIndexDefinitionAction_Name();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionKeyConcept <em>Index Definition Key Concept</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Index Definition Key Concept</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionKeyConcept()
+   * @see #getIndexDefinitionAction()
+   * @generated
+   */
+  EReference getIndexDefinitionAction_IndexDefinitionKeyConcept();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionDtIndex <em>Index Definition Dt Index</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Index Definition Dt Index</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionDtIndex()
+   * @see #getIndexDefinitionAction()
+   * @generated
+   */
+  EReference getIndexDefinitionAction_IndexDefinitionDtIndex();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Index Definition Index Copy To</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionIndexCopyTo()
+   * @see #getIndexDefinitionAction()
+   * @generated
+   */
+  EReference getIndexDefinitionAction_IndexDefinitionIndexCopyTo();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionLoaderId <em>Index Definition Loader Id</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Index Definition Loader Id</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionLoaderId()
+   * @see #getIndexDefinitionAction()
+   * @generated
+   */
+  EReference getIndexDefinitionAction_IndexDefinitionLoaderId();
 
   /**
    * Returns the meta object for enum '{@link io.vertigo.dsl.vertigoDsl.DataType <em>Data Type</em>}'.
@@ -3346,12 +4586,12 @@ public interface VertigoDslPackage extends EPackage
     EClass TASK_ATTRIBUTE_STRING = eINSTANCE.getTaskAttributeString();
 
     /**
-     * The meta object literal for the '<em><b>Domain</b></em>' reference feature.
+     * The meta object literal for the '<em><b>Ref To Domain Type</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference TASK_ATTRIBUTE_STRING__DOMAIN = eINSTANCE.getTaskAttributeString_Domain();
+    EReference TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE = eINSTANCE.getTaskAttributeString_RefToDomainType();
 
     /**
      * The meta object literal for the '<em><b>Required</b></em>' attribute feature.
@@ -3482,6 +4722,362 @@ public interface VertigoDslPackage extends EPackage
     EReference TASK_DEFINITION__TASK_DATA_SPACE = eINSTANCE.getTaskDefinition_TaskDataSpace();
 
     /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionDtDefinitionImpl <em>Facet Definition Dt Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionDtDefinitionImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionDtDefinition()
+     * @generated
+     */
+    EClass FACET_DEFINITION_DT_DEFINITION = eINSTANCE.getFacetDefinitionDtDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Dt Definition</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACET_DEFINITION_DT_DEFINITION__DT_DEFINITION = eINSTANCE.getFacetDefinitionDtDefinition_DtDefinition();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionFieldNameImpl <em>Facet Definition Field Name</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionFieldNameImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionFieldName()
+     * @generated
+     */
+    EClass FACET_DEFINITION_FIELD_NAME = eINSTANCE.getFacetDefinitionFieldName();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACET_DEFINITION_FIELD_NAME__STRING = eINSTANCE.getFacetDefinitionFieldName_String();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionLabelImpl <em>Facet Definition Label</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionLabelImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionLabel()
+     * @generated
+     */
+    EClass FACET_DEFINITION_LABEL = eINSTANCE.getFacetDefinitionLabel();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACET_DEFINITION_LABEL__STRING = eINSTANCE.getFacetDefinitionLabel_String();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionRangeStringImpl <em>Facet Definition Range String</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionRangeStringImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionRangeString()
+     * @generated
+     */
+    EClass FACET_DEFINITION_RANGE_STRING = eINSTANCE.getFacetDefinitionRangeString();
+
+    /**
+     * The meta object literal for the '<em><b>Filter String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACET_DEFINITION_RANGE_STRING__FILTER_STRING = eINSTANCE.getFacetDefinitionRangeString_FilterString();
+
+    /**
+     * The meta object literal for the '<em><b>Label String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACET_DEFINITION_RANGE_STRING__LABEL_STRING = eINSTANCE.getFacetDefinitionRangeString_LabelString();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionRangeImpl <em>Facet Definition Range</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionRangeImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionRange()
+     * @generated
+     */
+    EClass FACET_DEFINITION_RANGE = eINSTANCE.getFacetDefinitionRange();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACET_DEFINITION_RANGE__NAME = eINSTANCE.getFacetDefinitionRange_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Facet Definition Range String</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACET_DEFINITION_RANGE__FACET_DEFINITION_RANGE_STRING = eINSTANCE.getFacetDefinitionRange_FacetDefinitionRangeString();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionImpl <em>Facet Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinition()
+     * @generated
+     */
+    EClass FACET_DEFINITION = eINSTANCE.getFacetDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Facet Definition Dt Definition</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACET_DEFINITION__FACET_DEFINITION_DT_DEFINITION = eINSTANCE.getFacetDefinition_FacetDefinitionDtDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Facet Definition Field Name</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACET_DEFINITION__FACET_DEFINITION_FIELD_NAME = eINSTANCE.getFacetDefinition_FacetDefinitionFieldName();
+
+    /**
+     * The meta object literal for the '<em><b>Facet Definiton Label</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACET_DEFINITION__FACET_DEFINITON_LABEL = eINSTANCE.getFacetDefinition_FacetDefinitonLabel();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionKeyConceptImpl <em>Faceted Query Definition Key Concept</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionKeyConceptImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionKeyConcept()
+     * @generated
+     */
+    EClass FACETED_QUERY_DEFINITION_KEY_CONCEPT = eINSTANCE.getFacetedQueryDefinitionKeyConcept();
+
+    /**
+     * The meta object literal for the '<em><b>Dt Definition</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_KEY_CONCEPT__DT_DEFINITION = eINSTANCE.getFacetedQueryDefinitionKeyConcept_DtDefinition();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionDomainCriteriaImpl <em>Faceted Query Definition Domain Criteria</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionDomainCriteriaImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionDomainCriteria()
+     * @generated
+     */
+    EClass FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA = eINSTANCE.getFacetedQueryDefinitionDomainCriteria();
+
+    /**
+     * The meta object literal for the '<em><b>Ref To Domain Type</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA__REF_TO_DOMAIN_TYPE = eINSTANCE.getFacetedQueryDefinitionDomainCriteria_RefToDomainType();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionListFilterBuilderQueryImpl <em>Faceted Query Definition List Filter Builder Query</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionListFilterBuilderQueryImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionListFilterBuilderQuery()
+     * @generated
+     */
+    EClass FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY = eINSTANCE.getFacetedQueryDefinitionListFilterBuilderQuery();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY__STRING = eINSTANCE.getFacetedQueryDefinitionListFilterBuilderQuery_String();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionListFilterBuilderClassImpl <em>Faceted Query Definition List Filter Builder Class</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionListFilterBuilderClassImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionListFilterBuilderClass()
+     * @generated
+     */
+    EClass FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS = eINSTANCE.getFacetedQueryDefinitionListFilterBuilderClass();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS__STRING = eINSTANCE.getFacetedQueryDefinitionListFilterBuilderClass_String();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionFacetsImpl <em>Faceted Query Definition Facets</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionFacetsImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionFacets()
+     * @generated
+     */
+    EClass FACETED_QUERY_DEFINITION_FACETS = eINSTANCE.getFacetedQueryDefinitionFacets();
+
+    /**
+     * The meta object literal for the '<em><b>Facet Definition</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_FACETS__FACET_DEFINITION = eINSTANCE.getFacetedQueryDefinitionFacets_FacetDefinition();
+
+    /**
+     * The meta object literal for the '<em><b>Facets</b></em>' reference list feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_FACETS__FACETS = eINSTANCE.getFacetedQueryDefinitionFacets_Facets();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionImpl <em>Faceted Query Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinition()
+     * @generated
+     */
+    EClass FACETED_QUERY_DEFINITION = eINSTANCE.getFacetedQueryDefinition();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionKeyConceptImpl <em>Index Definition Key Concept</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionKeyConceptImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionKeyConcept()
+     * @generated
+     */
+    EClass INDEX_DEFINITION_KEY_CONCEPT = eINSTANCE.getIndexDefinitionKeyConcept();
+
+    /**
+     * The meta object literal for the '<em><b>Dt Definition</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDEX_DEFINITION_KEY_CONCEPT__DT_DEFINITION = eINSTANCE.getIndexDefinitionKeyConcept_DtDefinition();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionDtIndexImpl <em>Index Definition Dt Index</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionDtIndexImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionDtIndex()
+     * @generated
+     */
+    EClass INDEX_DEFINITION_DT_INDEX = eINSTANCE.getIndexDefinitionDtIndex();
+
+    /**
+     * The meta object literal for the '<em><b>Dt Definition</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDEX_DEFINITION_DT_INDEX__DT_DEFINITION = eINSTANCE.getIndexDefinitionDtIndex_DtDefinition();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionIndexCopyToStringImpl <em>Index Definition Index Copy To String</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionIndexCopyToStringImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionIndexCopyToString()
+     * @generated
+     */
+    EClass INDEX_DEFINITION_INDEX_COPY_TO_STRING = eINSTANCE.getIndexDefinitionIndexCopyToString();
+
+    /**
+     * The meta object literal for the '<em><b>String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDEX_DEFINITION_INDEX_COPY_TO_STRING__STRING = eINSTANCE.getIndexDefinitionIndexCopyToString_String();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionIndexCopyToImpl <em>Index Definition Index Copy To</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionIndexCopyToImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionIndexCopyTo()
+     * @generated
+     */
+    EClass INDEX_DEFINITION_INDEX_COPY_TO = eINSTANCE.getIndexDefinitionIndexCopyTo();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDEX_DEFINITION_INDEX_COPY_TO__NAME = eINSTANCE.getIndexDefinitionIndexCopyTo_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Index Definition Index Copy To String</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDEX_DEFINITION_INDEX_COPY_TO__INDEX_DEFINITION_INDEX_COPY_TO_STRING = eINSTANCE.getIndexDefinitionIndexCopyTo_IndexDefinitionIndexCopyToString();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionLoaderIdImpl <em>Index Definition Loader Id</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionLoaderIdImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionLoaderId()
+     * @generated
+     */
+    EClass INDEX_DEFINITION_LOADER_ID = eINSTANCE.getIndexDefinitionLoaderId();
+
+    /**
+     * The meta object literal for the '<em><b>Loader Id String</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDEX_DEFINITION_LOADER_ID__LOADER_ID_STRING = eINSTANCE.getIndexDefinitionLoaderId_LoaderIdString();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionImpl <em>Index Definition</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinition()
+     * @generated
+     */
+    EClass INDEX_DEFINITION = eINSTANCE.getIndexDefinition();
+
+    /**
      * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionActionImpl <em>Dt Definition Action</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -3554,6 +5150,114 @@ public interface VertigoDslPackage extends EPackage
      * @generated
      */
     EReference DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD = eINSTANCE.getDtDefinitionAction_DtDefinitionDisplayField();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl <em>Faceted Query Definition Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionAction()
+     * @generated
+     */
+    EClass FACETED_QUERY_DEFINITION_ACTION = eINSTANCE.getFacetedQueryDefinitionAction();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FACETED_QUERY_DEFINITION_ACTION__NAME = eINSTANCE.getFacetedQueryDefinitionAction_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Faceted Query Definition Key Concept</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_KEY_CONCEPT = eINSTANCE.getFacetedQueryDefinitionAction_FacetedQueryDefinitionKeyConcept();
+
+    /**
+     * The meta object literal for the '<em><b>Faceted Query Definition Domain Criteria</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA = eINSTANCE.getFacetedQueryDefinitionAction_FacetedQueryDefinitionDomainCriteria();
+
+    /**
+     * The meta object literal for the '<em><b>Faceted Query Definition List Filter Builder Query</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY = eINSTANCE.getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderQuery();
+
+    /**
+     * The meta object literal for the '<em><b>Faceted Query Definition List Filter Builder Class</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS = eINSTANCE.getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderClass();
+
+    /**
+     * The meta object literal for the '<em><b>Faceted Query Definition Facets</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS = eINSTANCE.getFacetedQueryDefinitionAction_FacetedQueryDefinitionFacets();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl <em>Index Definition Action</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionAction()
+     * @generated
+     */
+    EClass INDEX_DEFINITION_ACTION = eINSTANCE.getIndexDefinitionAction();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INDEX_DEFINITION_ACTION__NAME = eINSTANCE.getIndexDefinitionAction_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Index Definition Key Concept</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDEX_DEFINITION_ACTION__INDEX_DEFINITION_KEY_CONCEPT = eINSTANCE.getIndexDefinitionAction_IndexDefinitionKeyConcept();
+
+    /**
+     * The meta object literal for the '<em><b>Index Definition Dt Index</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDEX_DEFINITION_ACTION__INDEX_DEFINITION_DT_INDEX = eINSTANCE.getIndexDefinitionAction_IndexDefinitionDtIndex();
+
+    /**
+     * The meta object literal for the '<em><b>Index Definition Index Copy To</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO = eINSTANCE.getIndexDefinitionAction_IndexDefinitionIndexCopyTo();
+
+    /**
+     * The meta object literal for the '<em><b>Index Definition Loader Id</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference INDEX_DEFINITION_ACTION__INDEX_DEFINITION_LOADER_ID = eINSTANCE.getIndexDefinitionAction_IndexDefinitionLoaderId();
 
     /**
      * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.DataType <em>Data Type</em>}' enum.

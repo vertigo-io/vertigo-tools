@@ -96,7 +96,27 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.TASK_DATA_SPACE: return createTaskDataSpace();
       case VertigoDslPackage.TASK_REQUEST_STRING: return createTaskRequestString();
       case VertigoDslPackage.TASK_DEFINITION: return createTaskDefinition();
+      case VertigoDslPackage.FACET_DEFINITION_DT_DEFINITION: return createFacetDefinitionDtDefinition();
+      case VertigoDslPackage.FACET_DEFINITION_FIELD_NAME: return createFacetDefinitionFieldName();
+      case VertigoDslPackage.FACET_DEFINITION_LABEL: return createFacetDefinitionLabel();
+      case VertigoDslPackage.FACET_DEFINITION_RANGE_STRING: return createFacetDefinitionRangeString();
+      case VertigoDslPackage.FACET_DEFINITION_RANGE: return createFacetDefinitionRange();
+      case VertigoDslPackage.FACET_DEFINITION: return createFacetDefinition();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_KEY_CONCEPT: return createFacetedQueryDefinitionKeyConcept();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA: return createFacetedQueryDefinitionDomainCriteria();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY: return createFacetedQueryDefinitionListFilterBuilderQuery();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS: return createFacetedQueryDefinitionListFilterBuilderClass();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_FACETS: return createFacetedQueryDefinitionFacets();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION: return createFacetedQueryDefinition();
+      case VertigoDslPackage.INDEX_DEFINITION_KEY_CONCEPT: return createIndexDefinitionKeyConcept();
+      case VertigoDslPackage.INDEX_DEFINITION_DT_INDEX: return createIndexDefinitionDtIndex();
+      case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO_STRING: return createIndexDefinitionIndexCopyToString();
+      case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO: return createIndexDefinitionIndexCopyTo();
+      case VertigoDslPackage.INDEX_DEFINITION_LOADER_ID: return createIndexDefinitionLoaderId();
+      case VertigoDslPackage.INDEX_DEFINITION: return createIndexDefinition();
       case VertigoDslPackage.DT_DEFINITION_ACTION: return createDtDefinitionAction();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION: return createFacetedQueryDefinitionAction();
+      case VertigoDslPackage.INDEX_DEFINITION_ACTION: return createIndexDefinitionAction();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -483,10 +503,230 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * <!-- end-user-doc -->
    * @generated
    */
+  public FacetDefinitionDtDefinition createFacetDefinitionDtDefinition()
+  {
+    FacetDefinitionDtDefinitionImpl facetDefinitionDtDefinition = new FacetDefinitionDtDefinitionImpl();
+    return facetDefinitionDtDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetDefinitionFieldName createFacetDefinitionFieldName()
+  {
+    FacetDefinitionFieldNameImpl facetDefinitionFieldName = new FacetDefinitionFieldNameImpl();
+    return facetDefinitionFieldName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetDefinitionLabel createFacetDefinitionLabel()
+  {
+    FacetDefinitionLabelImpl facetDefinitionLabel = new FacetDefinitionLabelImpl();
+    return facetDefinitionLabel;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetDefinitionRangeString createFacetDefinitionRangeString()
+  {
+    FacetDefinitionRangeStringImpl facetDefinitionRangeString = new FacetDefinitionRangeStringImpl();
+    return facetDefinitionRangeString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetDefinitionRange createFacetDefinitionRange()
+  {
+    FacetDefinitionRangeImpl facetDefinitionRange = new FacetDefinitionRangeImpl();
+    return facetDefinitionRange;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetDefinition createFacetDefinition()
+  {
+    FacetDefinitionImpl facetDefinition = new FacetDefinitionImpl();
+    return facetDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetedQueryDefinitionKeyConcept createFacetedQueryDefinitionKeyConcept()
+  {
+    FacetedQueryDefinitionKeyConceptImpl facetedQueryDefinitionKeyConcept = new FacetedQueryDefinitionKeyConceptImpl();
+    return facetedQueryDefinitionKeyConcept;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetedQueryDefinitionDomainCriteria createFacetedQueryDefinitionDomainCriteria()
+  {
+    FacetedQueryDefinitionDomainCriteriaImpl facetedQueryDefinitionDomainCriteria = new FacetedQueryDefinitionDomainCriteriaImpl();
+    return facetedQueryDefinitionDomainCriteria;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetedQueryDefinitionListFilterBuilderQuery createFacetedQueryDefinitionListFilterBuilderQuery()
+  {
+    FacetedQueryDefinitionListFilterBuilderQueryImpl facetedQueryDefinitionListFilterBuilderQuery = new FacetedQueryDefinitionListFilterBuilderQueryImpl();
+    return facetedQueryDefinitionListFilterBuilderQuery;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetedQueryDefinitionListFilterBuilderClass createFacetedQueryDefinitionListFilterBuilderClass()
+  {
+    FacetedQueryDefinitionListFilterBuilderClassImpl facetedQueryDefinitionListFilterBuilderClass = new FacetedQueryDefinitionListFilterBuilderClassImpl();
+    return facetedQueryDefinitionListFilterBuilderClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetedQueryDefinitionFacets createFacetedQueryDefinitionFacets()
+  {
+    FacetedQueryDefinitionFacetsImpl facetedQueryDefinitionFacets = new FacetedQueryDefinitionFacetsImpl();
+    return facetedQueryDefinitionFacets;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetedQueryDefinition createFacetedQueryDefinition()
+  {
+    FacetedQueryDefinitionImpl facetedQueryDefinition = new FacetedQueryDefinitionImpl();
+    return facetedQueryDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndexDefinitionKeyConcept createIndexDefinitionKeyConcept()
+  {
+    IndexDefinitionKeyConceptImpl indexDefinitionKeyConcept = new IndexDefinitionKeyConceptImpl();
+    return indexDefinitionKeyConcept;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndexDefinitionDtIndex createIndexDefinitionDtIndex()
+  {
+    IndexDefinitionDtIndexImpl indexDefinitionDtIndex = new IndexDefinitionDtIndexImpl();
+    return indexDefinitionDtIndex;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndexDefinitionIndexCopyToString createIndexDefinitionIndexCopyToString()
+  {
+    IndexDefinitionIndexCopyToStringImpl indexDefinitionIndexCopyToString = new IndexDefinitionIndexCopyToStringImpl();
+    return indexDefinitionIndexCopyToString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndexDefinitionIndexCopyTo createIndexDefinitionIndexCopyTo()
+  {
+    IndexDefinitionIndexCopyToImpl indexDefinitionIndexCopyTo = new IndexDefinitionIndexCopyToImpl();
+    return indexDefinitionIndexCopyTo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndexDefinitionLoaderId createIndexDefinitionLoaderId()
+  {
+    IndexDefinitionLoaderIdImpl indexDefinitionLoaderId = new IndexDefinitionLoaderIdImpl();
+    return indexDefinitionLoaderId;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndexDefinition createIndexDefinition()
+  {
+    IndexDefinitionImpl indexDefinition = new IndexDefinitionImpl();
+    return indexDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public DtDefinitionAction createDtDefinitionAction()
   {
     DtDefinitionActionImpl dtDefinitionAction = new DtDefinitionActionImpl();
     return dtDefinitionAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FacetedQueryDefinitionAction createFacetedQueryDefinitionAction()
+  {
+    FacetedQueryDefinitionActionImpl facetedQueryDefinitionAction = new FacetedQueryDefinitionActionImpl();
+    return facetedQueryDefinitionAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IndexDefinitionAction createIndexDefinitionAction()
+  {
+    IndexDefinitionActionImpl indexDefinitionAction = new IndexDefinitionActionImpl();
+    return indexDefinitionAction;
   }
 
   /**

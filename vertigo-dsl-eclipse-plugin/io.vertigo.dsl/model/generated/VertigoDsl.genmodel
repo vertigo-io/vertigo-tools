@@ -134,7 +134,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//Association/type"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//TaskAttributeString">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//TaskAttributeString/domain"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//TaskAttributeString/refToDomainType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//TaskAttributeString/required"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//TaskAttributeString/inout"/>
     </genClasses>
@@ -155,6 +155,62 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//TaskDefinition/taskAttributes"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//TaskDefinition/taskDataSpace"/>
     </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinitionDtDefinition">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetDefinitionDtDefinition/dtDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinitionFieldName">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionFieldName/string"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinitionLabel">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionLabel/string"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinitionRangeString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionRangeString/filterString"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionRangeString/labelString"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinitionRange">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionRange/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetDefinitionRange/facetDefinitionRangeString"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinition">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetDefinition/facetDefinitionDtDefinition"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetDefinition/facetDefinitionFieldName"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetDefinition/facetDefinitonLabel"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetedQueryDefinitionKeyConcept">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionKeyConcept/dtDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetedQueryDefinitionDomainCriteria">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionDomainCriteria/refToDomainType"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetedQueryDefinitionListFilterBuilderQuery">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetedQueryDefinitionListFilterBuilderQuery/string"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetedQueryDefinitionListFilterBuilderClass">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetedQueryDefinitionListFilterBuilderClass/string"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetedQueryDefinitionFacets">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionFacets/facetDefinition"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionFacets/facets"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetedQueryDefinition"/>
+    <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinitionKeyConcept">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionKeyConcept/dtDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinitionDtIndex">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionDtIndex/dtDefinition"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinitionIndexCopyToString">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//IndexDefinitionIndexCopyToString/string"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinitionIndexCopyTo">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//IndexDefinitionIndexCopyTo/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionIndexCopyTo/indexDefinitionIndexCopyToString"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinitionLoaderId">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//IndexDefinitionLoaderId/loaderIdString"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinition"/>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionAction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionAction/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionStereotype"/>
@@ -164,6 +220,21 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionDataSpace"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionSortField"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionDisplayField"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//FacetedQueryDefinitionAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetedQueryDefinitionAction/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionAction/facetedQueryDefinitionKeyConcept"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionAction/facetedQueryDefinitionDomainCriteria"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionAction/facetedQueryDefinitionListFilterBuilderQuery"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionAction/facetedQueryDefinitionListFilterBuilderClass"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetedQueryDefinitionAction/facetedQueryDefinitionFacets"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinitionAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//IndexDefinitionAction/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionAction/indexDefinitionKeyConcept"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionAction/indexDefinitionDtIndex"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionAction/indexDefinitionIndexCopyTo"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionAction/indexDefinitionLoaderId"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>

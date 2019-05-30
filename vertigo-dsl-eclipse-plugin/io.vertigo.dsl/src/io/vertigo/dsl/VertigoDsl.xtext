@@ -170,14 +170,14 @@ enum InOutString:
 	INOUT_OUT='\"out\"';
 
 TaskAttributeString:
-	'{' ('domain' ':' domain=[DomainType] ','? & 'required' ':' required=BooleanString ','? & 'inOut' ':' inout=InOutString ','? ) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'required' ':' required=BooleanString ','? & 'inOut' ':' inout=InOutString ','? ) '}';
 
 TaskAttribute:
 	'attribute' name=ID taskAttributeString=TaskAttributeString ','?
 ;
 
 TaskDataSpace:
-	'storeName' ':' storeName=STRING
+	'storeName' ':' storeName=STRING ','?
 ;
 
 TaskRequestString:
@@ -192,3 +192,85 @@ TaskDefinition:
 		taskDataSpace=TaskDataSpace?
 	'}';
 
+
+FacetDefinitionDtDefinition:
+	'dtDefinition' ':' dtDefinition=[DtDefinitionType];
+
+FacetDefinitionFieldName:
+	'fieldName' ':' string = STRING
+;
+
+
+FacetDefinitionLabel:
+	'label' ':' string = STRING
+;
+
+FacetDefinitionRangeString:
+	'{' ('filter' ':' filterString=STRING ','? & 'label' ':' labelString=STRING ','?) '}';
+
+FacetDefinitionRange:
+	'range' name = ID facetDefinitionRangeString=FacetDefinitionRangeString ','?
+;
+
+
+FacetDefinition:
+	facetDefinitionDtDefinition = FacetDefinitionDtDefinition
+	facetDefinitionFieldName = FacetDefinitionFieldName
+	facetDefinitonLabel = FacetDefinitionLabel
+	
+;
+
+
+
+FacetedQueryDefinitionKeyConcept:
+	'keyConcept' ':' dtDefinition=[DtDefinitionType];
+
+FacetedQueryDefinitionDomainCriteria:
+	'domainCriteria' ':' refToDomainType=RefToDomainType;
+
+FacetedQueryDefinitionListFilterBuilderQuery:
+	string = STRING;
+
+FacetedQueryDefinitionListFilterBuilderClass:
+	string = STRING;
+
+FacetedQueryDefinitionFacets:
+	'facets' ':' '[' facetDefinition+=[FacetDefinition] (','+ facets+=[FacetDefinition])* ']'
+;
+
+
+FacetedQueryDefinition:
+	'create' 'FacetedQueryDefinition' {FacetedQueryDefinitionAction} name=ID '{'
+		facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept
+		facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria
+		facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery
+		facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass
+		facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
+	'}';
+
+
+IndexDefinitionKeyConcept:
+	'keyConcept' ':' dtDefinition=[DtDefinitionType];
+
+IndexDefinitionDtIndex:
+	'dtIndex' ':' dtDefinition=[DtDefinitionType];
+
+// TODO : voir si on ne peut pas ici restreindre les éléments du STRING aux filters, soit en autocomplétion soit en validation
+IndexDefinitionIndexCopyToString:
+	'{' 'from' ':' string=STRING '}';
+
+IndexDefinitionIndexCopyTo:
+	'indexCopyTo' name = ID indexDefinitionIndexCopyToString=IndexDefinitionIndexCopyToString ','?
+;
+
+IndexDefinitionLoaderId:
+	'loaderId' ':' loaderIdString=STRING
+;
+
+IndexDefinition:
+	'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{'
+		indexDefinitionKeyConcept=IndexDefinitionKeyConcept
+		indexDefinitionDtIndex=IndexDefinitionDtIndex
+		indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo
+		indexDefinitionLoaderId=IndexDefinitionLoaderId
+	'}';

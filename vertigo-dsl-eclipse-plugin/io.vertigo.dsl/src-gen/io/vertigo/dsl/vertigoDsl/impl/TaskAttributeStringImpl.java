@@ -4,12 +4,13 @@
 package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.BooleanString;
-import io.vertigo.dsl.vertigoDsl.DomainType;
 import io.vertigo.dsl.vertigoDsl.InOutString;
+import io.vertigo.dsl.vertigoDsl.RefToDomainType;
 import io.vertigo.dsl.vertigoDsl.TaskAttributeString;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -25,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getDomain <em>Domain</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getRequired <em>Required</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getInout <em>Inout</em>}</li>
  * </ul>
@@ -35,14 +36,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implements TaskAttributeString
 {
   /**
-   * The cached value of the '{@link #getDomain() <em>Domain</em>}' reference.
+   * The cached value of the '{@link #getRefToDomainType() <em>Ref To Domain Type</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getDomain()
+   * @see #getRefToDomainType()
    * @generated
    * @ordered
    */
-  protected DomainType domain;
+  protected RefToDomainType refToDomainType;
 
   /**
    * The default value of the '{@link #getRequired() <em>Required</em>}' attribute.
@@ -110,19 +111,9 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public DomainType getDomain()
+  public RefToDomainType getRefToDomainType()
   {
-    if (domain != null && domain.eIsProxy())
-    {
-      InternalEObject oldDomain = (InternalEObject)domain;
-      domain = (DomainType)eResolveProxy(oldDomain);
-      if (domain != oldDomain)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VertigoDslPackage.TASK_ATTRIBUTE_STRING__DOMAIN, oldDomain, domain));
-      }
-    }
-    return domain;
+    return refToDomainType;
   }
 
   /**
@@ -130,22 +121,37 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
    * <!-- end-user-doc -->
    * @generated
    */
-  public DomainType basicGetDomain()
+  public NotificationChain basicSetRefToDomainType(RefToDomainType newRefToDomainType, NotificationChain msgs)
   {
-    return domain;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setDomain(DomainType newDomain)
-  {
-    DomainType oldDomain = domain;
-    domain = newDomain;
+    RefToDomainType oldRefToDomainType = refToDomainType;
+    refToDomainType = newRefToDomainType;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE_STRING__DOMAIN, oldDomain, domain));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE, oldRefToDomainType, newRefToDomainType);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRefToDomainType(RefToDomainType newRefToDomainType)
+  {
+    if (newRefToDomainType != refToDomainType)
+    {
+      NotificationChain msgs = null;
+      if (refToDomainType != null)
+        msgs = ((InternalEObject)refToDomainType).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE, null, msgs);
+      if (newRefToDomainType != null)
+        msgs = ((InternalEObject)newRefToDomainType).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE, null, msgs);
+      msgs = basicSetRefToDomainType(newRefToDomainType, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE, newRefToDomainType, newRefToDomainType));
   }
 
   /**
@@ -200,13 +206,28 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
    * @generated
    */
   @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
+        return basicSetRefToDomainType(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public Object eGet(int featureID, boolean resolve, boolean coreType)
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__DOMAIN:
-        if (resolve) return getDomain();
-        return basicGetDomain();
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
+        return getRefToDomainType();
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED:
         return getRequired();
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
@@ -225,8 +246,8 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__DOMAIN:
-        setDomain((DomainType)newValue);
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
+        setRefToDomainType((RefToDomainType)newValue);
         return;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED:
         setRequired((BooleanString)newValue);
@@ -248,8 +269,8 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__DOMAIN:
-        setDomain((DomainType)null);
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
+        setRefToDomainType((RefToDomainType)null);
         return;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED:
         setRequired(REQUIRED_EDEFAULT);
@@ -271,8 +292,8 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__DOMAIN:
-        return domain != null;
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
+        return refToDomainType != null;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED:
         return required != REQUIRED_EDEFAULT;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:

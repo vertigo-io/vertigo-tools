@@ -54,11 +54,17 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_DtDefinitionStereotype_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionType_CommaKeyword_1_1_q;
 	protected AbstractElementAlias match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0;
+	protected AbstractElementAlias match_FacetDefinitionRangeString_CommaKeyword_1_0_3_q;
+	protected AbstractElementAlias match_FacetDefinitionRangeString_CommaKeyword_1_1_3_q;
+	protected AbstractElementAlias match_FacetDefinitionRange_CommaKeyword_3_q;
+	protected AbstractElementAlias match_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p;
+	protected AbstractElementAlias match_IndexDefinitionIndexCopyTo_CommaKeyword_3_q;
 	protected AbstractElementAlias match_PackageString_FullStopKeyword_1_0_p;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_0_3_q;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_1_3_q;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_2_3_q;
 	protected AbstractElementAlias match_TaskAttribute_CommaKeyword_3_q;
+	protected AbstractElementAlias match_TaskDataSpace_CommaKeyword_3_q;
 	protected AbstractElementAlias match_TaskDefinition_CommaKeyword_11_q;
 	protected AbstractElementAlias match_TaskDefinition_CommaKeyword_7_q;
 	
@@ -98,11 +104,17 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_DtDefinitionStereotype_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionStereotypeAccess().getCommaKeyword_3());
 		match_DtDefinitionType_CommaKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionTypeAccess().getCommaKeyword_1_1());
 		match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getAlterKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getCreateKeyword_0_0()));
+		match_FacetDefinitionRangeString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionRangeStringAccess().getCommaKeyword_1_0_3());
+		match_FacetDefinitionRangeString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionRangeStringAccess().getCommaKeyword_1_1_3());
+		match_FacetDefinitionRange_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionRangeAccess().getCommaKeyword_3());
+		match_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p = new TokenAlias(true, false, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getCommaKeyword_4_0());
+		match_IndexDefinitionIndexCopyTo_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getIndexDefinitionIndexCopyToAccess().getCommaKeyword_3());
 		match_PackageString_FullStopKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getPackageStringAccess().getFullStopKeyword_1_0());
 		match_TaskAttributeString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_0_3());
 		match_TaskAttributeString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_1_3());
 		match_TaskAttributeString_CommaKeyword_1_2_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_2_3());
 		match_TaskAttribute_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeAccess().getCommaKeyword_3());
+		match_TaskDataSpace_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskDataSpaceAccess().getCommaKeyword_3());
 		match_TaskDefinition_CommaKeyword_11_q = new TokenAlias(false, true, grammarAccess.getTaskDefinitionAccess().getCommaKeyword_11());
 		match_TaskDefinition_CommaKeyword_7_q = new TokenAlias(false, true, grammarAccess.getTaskDefinitionAccess().getCommaKeyword_7());
 	}
@@ -185,6 +197,16 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_DtDefinitionType_CommaKeyword_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0.equals(syntax))
 				emit_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetDefinitionRangeString_CommaKeyword_1_0_3_q.equals(syntax))
+				emit_FacetDefinitionRangeString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetDefinitionRangeString_CommaKeyword_1_1_3_q.equals(syntax))
+				emit_FacetDefinitionRangeString_CommaKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetDefinitionRange_CommaKeyword_3_q.equals(syntax))
+				emit_FacetDefinitionRange_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p.equals(syntax))
+				emit_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_IndexDefinitionIndexCopyTo_CommaKeyword_3_q.equals(syntax))
+				emit_IndexDefinitionIndexCopyTo_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_PackageString_FullStopKeyword_1_0_p.equals(syntax))
 				emit_PackageString_FullStopKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskAttributeString_CommaKeyword_1_0_3_q.equals(syntax))
@@ -195,6 +217,8 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_TaskAttributeString_CommaKeyword_1_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskAttribute_CommaKeyword_3_q.equals(syntax))
 				emit_TaskAttribute_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskDataSpace_CommaKeyword_3_q.equals(syntax))
+				emit_TaskDataSpace_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskDefinition_CommaKeyword_11_q.equals(syntax))
 				emit_TaskDefinition_CommaKeyword_11_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskDefinition_CommaKeyword_7_q.equals(syntax))
@@ -791,6 +815,66 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     filterString=STRING (ambiguity) 'filter' ':' filterString=STRING
+	 *     filterString=STRING (ambiguity) 'label' ':' labelString=STRING
+	 *     filterString=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_FacetDefinitionRangeString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     labelString=STRING (ambiguity) 'filter' ':' filterString=STRING
+	 *     labelString=STRING (ambiguity) 'label' ':' labelString=STRING
+	 *     labelString=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_FacetDefinitionRangeString_CommaKeyword_1_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     facetDefinitionRangeString=FacetDefinitionRangeString (ambiguity) (rule end)
+	 */
+	protected void emit_FacetDefinitionRange_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','+
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     facetDefinition+=[FacetDefinition|ID] (ambiguity) facets+=[FacetDefinition|ID]
+	 *     facets+=[FacetDefinition|ID] (ambiguity) facets+=[FacetDefinition|ID]
+	 */
+	protected void emit_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     indexDefinitionIndexCopyToString=IndexDefinitionIndexCopyToString (ambiguity) (rule end)
+	 */
+	protected void emit_IndexDefinitionIndexCopyTo_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
 	 *     '.'+
 	 *
 	 * This ambiguous syntax occurs at:
@@ -806,10 +890,10 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     domain=[DomainType|ID] (ambiguity) 'domain' ':' domain=[DomainType|ID]
-	 *     domain=[DomainType|ID] (ambiguity) 'inOut' ':' inout=InOutString
-	 *     domain=[DomainType|ID] (ambiguity) 'required' ':' required=BooleanString
-	 *     domain=[DomainType|ID] (ambiguity) '}' (rule end)
+	 *     refToDomainType=RefToDomainType (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
+	 *     refToDomainType=RefToDomainType (ambiguity) 'inOut' ':' inout=InOutString
+	 *     refToDomainType=RefToDomainType (ambiguity) 'required' ':' required=BooleanString
+	 *     refToDomainType=RefToDomainType (ambiguity) '}' (rule end)
 	 */
 	protected void emit_TaskAttributeString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
@@ -820,7 +904,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     required=BooleanString (ambiguity) 'domain' ':' domain=[DomainType|ID]
+	 *     required=BooleanString (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
 	 *     required=BooleanString (ambiguity) 'inOut' ':' inout=InOutString
 	 *     required=BooleanString (ambiguity) 'required' ':' required=BooleanString
 	 *     required=BooleanString (ambiguity) '}' (rule end)
@@ -834,7 +918,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     inout=InOutString (ambiguity) 'domain' ':' domain=[DomainType|ID]
+	 *     inout=InOutString (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
 	 *     inout=InOutString (ambiguity) 'inOut' ':' inout=InOutString
 	 *     inout=InOutString (ambiguity) 'required' ':' required=BooleanString
 	 *     inout=InOutString (ambiguity) '}' (rule end)
@@ -851,6 +935,17 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     taskAttributeString=TaskAttributeString (ambiguity) (rule end)
 	 */
 	protected void emit_TaskAttribute_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     storeName=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_TaskDataSpace_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
