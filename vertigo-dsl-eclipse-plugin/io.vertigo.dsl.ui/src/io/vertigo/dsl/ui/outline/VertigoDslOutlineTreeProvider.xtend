@@ -3,7 +3,12 @@
  */
 package io.vertigo.dsl.ui.outline
 
+import com.google.inject.Inject
+import io.vertigo.dsl.vertigoDsl.Model
+import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
+import org.eclipse.xtext.ui.IImageHelper
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
+import org.eclipse.xtext.ui.editor.outline.impl.DocumentRootNode
 
 /**
  * Customization of the default outline structure.
@@ -12,4 +17,74 @@ import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
  */
 class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	
+	@Inject
+	IImageHelper imageHelper;
+	
+	def protected _createChildren(DocumentRootNode parentNode, Model model) {
+		println(model.toString)
+		
+		
+		
+		// create feature groups
+		val dtDefinitionOutlineNode = createEStructuralFeatureNode(parentNode, 
+    		model, 
+    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
+    		imageHelper.getImage("cog.png"), 
+    		"DtDefinitions", 
+    		true);
+    	
+    	val domainOutlineNode = createEStructuralFeatureNode(parentNode, 
+    		model, 
+    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
+    		imageHelper.getImage("cog.png"), 
+    		"Domains", 
+    		true);
+		
+		val constraintOutlineNode = createEStructuralFeatureNode(parentNode, 
+    		model, 
+    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
+    		imageHelper.getImage("cog.png"), 
+    		"Constraints", 
+    		true);
+		
+		
+		val formatterOutlineNode = createEStructuralFeatureNode(parentNode, 
+    		model, 
+    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
+    		imageHelper.getImage("cog.png"), 
+    		"Formatters", 
+    		true);
+		
+		val associationOutlineNode = createEStructuralFeatureNode(parentNode, 
+    		model, 
+    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
+    		imageHelper.getImage("cog.png"), 
+    		"Associations", 
+    		true);
+    		
+    	val taskOutlineNode = createEStructuralFeatureNode(parentNode, 
+    		model, 
+    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
+    		imageHelper.getImage("cog.png"), 
+    		"Tasks", 
+    		true);
+		
+		
+		model.elements.forEach[element | 
+			if(element.eClass == VertigoDslPackage.Literals.DOMAIN || element.eClass == VertigoDslPackage.Literals.DECLARED_DOMAIN) {
+				_createNode(domainOutlineNode, element); 
+			} else if (element.eClass == VertigoDslPackage.Literals.DT_DEFINITION_ACTION || element.eClass == VertigoDslPackage.Literals.DECLARED_DT_DEFINITION) {
+				_createNode(dtDefinitionOutlineNode, element); 
+			} else if (element.eClass == VertigoDslPackage.Literals.ASSOCIATION) {
+				_createNode(associationOutlineNode, element); 
+			} else if (element.eClass == VertigoDslPackage.Literals.CONSTRAINT) {
+				_createNode(constraintOutlineNode, element); 
+			} else if (element.eClass == VertigoDslPackage.Literals.FORMATTER) {
+				_createNode(formatterOutlineNode, element); 
+			} else if (element.eClass == VertigoDslPackage.Literals.TASK_DEFINITION) {
+				_createNode(taskOutlineNode, element); 
+			}
+		]
+		
+	}
 }

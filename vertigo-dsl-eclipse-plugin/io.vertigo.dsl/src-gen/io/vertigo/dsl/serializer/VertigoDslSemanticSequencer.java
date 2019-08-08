@@ -237,7 +237,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *             roleA=STRING | 
 	 *             roleB=STRING | 
 	 *             type=STRING
-	 *         )+
+	 *         )*
 	 *     )
 	 */
 	protected void sequence_Association(ISerializationContext context, Association semanticObject) {
@@ -306,10 +306,13 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *
 	 * Constraint:
 	 *     (
-	 *         (storeType=STRING | indexType=STRING | multiple=BooleanString | unit=STRING)? 
-	 *         (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)? 
-	 *         (name=ID dataType=DataType formatter=[Formatter|ID])?
-	 *     )+
+	 *         name=ID 
+	 *         dataType=DataType 
+	 *         (
+	 *             (formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | multiple=BooleanString | unit=STRING)? 
+	 *             (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)?
+	 *         )+
+	 *     )
 	 */
 	protected void sequence_Domain(ISerializationContext context, Domain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

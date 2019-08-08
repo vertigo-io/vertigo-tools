@@ -2,7 +2,7 @@ grammar io.vertigo.dsl.VertigoDsl with org.eclipse.xtext.common.Terminals
 
 generate vertigoDsl "http://www.vertigo.io/dsl/VertigoDsl"
 
-
+import "http://www.eclipse.org/xtext/common/JavaVMTypes" as jvmTypes
 
 Model:
 	'package' packageString=PackageString 
@@ -19,7 +19,7 @@ KEYWORDID:
 
 
 terminal fragment ESCAPED_CHAR:
-    '\\' ('n'|'t'|'r'|'\\'|'.'|'"');
+    '\\' ('b'|'n'|'t'|'r'|'\\'|'.'|'"');
 
 @Override
 terminal STRING: 
@@ -75,8 +75,8 @@ enum BooleanString:
 Domain:
 	('create' | 'alter') 'Domain' name=ID '{'
 		'dataType' ':'  dataType=DataType
-		'formatter' ':' formatter=[Formatter] &
-		(('storeType' ':' storeType=STRING)? &
+		(('formatter' ':' formatter=[Formatter]) &
+		('storeType' ':' storeType=STRING)? &
 		('indexType' ':' indexType=STRING)? &
 		('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
 		('multiple' ':' multiple=BooleanString)? &
@@ -149,14 +149,14 @@ Association:
 		(('fkFieldName' ':' fkFieldName=STRING ','? ) &
 		('dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','?) &
 		('dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? ) &
-		('navigabilityA' ':' navigabilityA=BooleanString ','? )&
-		('navigabilityB' ':' navigabilityB=BooleanString ','? )&
-		('multiplicityA' ':' multiplicityA=MultiplicityString ','? )&
-		('multiplicityB' ':' multiplicityB=MultiplicityString ','? )&
-		('labelA' ':' labelA=STRING ','? ) &
-		('labelB' ':' labelB=STRING ','? ) &
-		('roleA' ':' roleA=STRING ','? ) &
-		('roleB' ':' roleB=STRING ','? ) &
+		('navigabilityA' ':' navigabilityA=BooleanString ','? )? &
+		('navigabilityB' ':' navigabilityB=BooleanString ','? )? &
+		('multiplicityA' ':' multiplicityA=MultiplicityString ','? )? &
+		('multiplicityB' ':' multiplicityB=MultiplicityString ','? )? &
+		('labelA' ':' labelA=STRING ','? )? &
+		('labelB' ':' labelB=STRING ','? )? &
+		('roleA' ':' roleA=STRING ','? )? &
+		('roleB' ':' roleB=STRING ','? )? &
 		('type' ':' type=STRING))
 	'}'; 
 
@@ -214,7 +214,6 @@ FacetDefinition:
 	facetDefinitionDtDefinition = FacetDefinitionDtDefinition
 	facetDefinitionFieldName = FacetDefinitionFieldName
 	facetDefinitonLabel = FacetDefinitionLabel
-	
 ;
 
 
@@ -251,7 +250,7 @@ IndexDefinitionKeyConcept:
 IndexDefinitionDtIndex:
 	'dtIndex' ':' dtDefinition=[DtDefinitionType];
 
-// TODO : voir si on ne peut pas ici restreindre les éléments du STRING aux filters, soit en autocomplétion soit en validation
+// TODO : voir si on ne peut pas ici restreindre les ï¿½lï¿½ments du STRING aux filters, soit en autocomplï¿½tion soit en validation
 IndexDefinitionIndexCopyToString:
 	'{' 'from' ':' string=STRING '}';
 

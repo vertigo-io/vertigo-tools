@@ -873,31 +873,31 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "ruleDomain"
-    // InternalVertigoDsl.g:287:1: ruleDomain : ( ( rule__Domain__UnorderedGroup ) ) ;
+    // InternalVertigoDsl.g:287:1: ruleDomain : ( ( rule__Domain__Group__0 ) ) ;
     public final void ruleDomain() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:291:2: ( ( ( rule__Domain__UnorderedGroup ) ) )
-            // InternalVertigoDsl.g:292:2: ( ( rule__Domain__UnorderedGroup ) )
+            // InternalVertigoDsl.g:291:2: ( ( ( rule__Domain__Group__0 ) ) )
+            // InternalVertigoDsl.g:292:2: ( ( rule__Domain__Group__0 ) )
             {
-            // InternalVertigoDsl.g:292:2: ( ( rule__Domain__UnorderedGroup ) )
-            // InternalVertigoDsl.g:293:3: ( rule__Domain__UnorderedGroup )
+            // InternalVertigoDsl.g:292:2: ( ( rule__Domain__Group__0 ) )
+            // InternalVertigoDsl.g:293:3: ( rule__Domain__Group__0 )
             {
-             before(grammarAccess.getDomainAccess().getUnorderedGroup()); 
-            // InternalVertigoDsl.g:294:3: ( rule__Domain__UnorderedGroup )
-            // InternalVertigoDsl.g:294:4: rule__Domain__UnorderedGroup
+             before(grammarAccess.getDomainAccess().getGroup()); 
+            // InternalVertigoDsl.g:294:3: ( rule__Domain__Group__0 )
+            // InternalVertigoDsl.g:294:4: rule__Domain__Group__0
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__UnorderedGroup();
+            rule__Domain__Group__0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getUnorderedGroup()); 
+             after(grammarAccess.getDomainAccess().getGroup()); 
 
             }
 
@@ -3865,9 +3865,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Element__Alternatives"
 
 
-    // $ANTLR start "rule__Domain__Alternatives_0_0"
-    // InternalVertigoDsl.g:1256:1: rule__Domain__Alternatives_0_0 : ( ( 'create' ) | ( 'alter' ) );
-    public final void rule__Domain__Alternatives_0_0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Alternatives_0"
+    // InternalVertigoDsl.g:1256:1: rule__Domain__Alternatives_0 : ( ( 'create' ) | ( 'alter' ) );
+    public final void rule__Domain__Alternatives_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -3895,9 +3895,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     // InternalVertigoDsl.g:1261:2: ( 'create' )
                     // InternalVertigoDsl.g:1262:3: 'create'
                     {
-                     before(grammarAccess.getDomainAccess().getCreateKeyword_0_0_0()); 
+                     before(grammarAccess.getDomainAccess().getCreateKeyword_0_0()); 
                     match(input,14,FOLLOW_2); 
-                     after(grammarAccess.getDomainAccess().getCreateKeyword_0_0_0()); 
+                     after(grammarAccess.getDomainAccess().getCreateKeyword_0_0()); 
 
                     }
 
@@ -3910,9 +3910,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     // InternalVertigoDsl.g:1267:2: ( 'alter' )
                     // InternalVertigoDsl.g:1268:3: 'alter'
                     {
-                     before(grammarAccess.getDomainAccess().getAlterKeyword_0_0_1()); 
+                     before(grammarAccess.getDomainAccess().getAlterKeyword_0_1()); 
                     match(input,15,FOLLOW_2); 
-                     after(grammarAccess.getDomainAccess().getAlterKeyword_0_0_1()); 
+                     after(grammarAccess.getDomainAccess().getAlterKeyword_0_1()); 
 
                     }
 
@@ -3933,7 +3933,7 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Alternatives_0_0"
+    // $ANTLR end "rule__Domain__Alternatives_0"
 
 
     // $ANTLR start "rule__DtDefinition__Alternatives_0"
@@ -4738,7 +4738,7 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                 int alt9=2;
                 int LA9_0 = input.LA(1);
 
-                if ( ((LA9_0>=14 && LA9_0<=15)||LA9_0==33||LA9_0==40||(LA9_0>=48 && LA9_0<=50)||(LA9_0>=54 && LA9_0<=55)) ) {
+                if ( ((LA9_0>=14 && LA9_0<=15)||LA9_0==33) ) {
                     alt9=1;
                 }
 
@@ -8449,23 +8449,23 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Formatter__Group_7__2__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_0__0"
-    // InternalVertigoDsl.g:2754:1: rule__Domain__Group_0__0 : rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1 ;
-    public final void rule__Domain__Group_0__0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__0"
+    // InternalVertigoDsl.g:2754:1: rule__Domain__Group__0 : rule__Domain__Group__0__Impl rule__Domain__Group__1 ;
+    public final void rule__Domain__Group__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2758:1: ( rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1 )
-            // InternalVertigoDsl.g:2759:2: rule__Domain__Group_0__0__Impl rule__Domain__Group_0__1
+            // InternalVertigoDsl.g:2758:1: ( rule__Domain__Group__0__Impl rule__Domain__Group__1 )
+            // InternalVertigoDsl.g:2759:2: rule__Domain__Group__0__Impl rule__Domain__Group__1
             {
             pushFollow(FOLLOW_8);
-            rule__Domain__Group_0__0__Impl();
+            rule__Domain__Group__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__1();
+            rule__Domain__Group__1();
 
             state._fsp--;
 
@@ -8484,35 +8484,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__0"
+    // $ANTLR end "rule__Domain__Group__0"
 
 
-    // $ANTLR start "rule__Domain__Group_0__0__Impl"
-    // InternalVertigoDsl.g:2766:1: rule__Domain__Group_0__0__Impl : ( ( rule__Domain__Alternatives_0_0 ) ) ;
-    public final void rule__Domain__Group_0__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__0__Impl"
+    // InternalVertigoDsl.g:2766:1: rule__Domain__Group__0__Impl : ( ( rule__Domain__Alternatives_0 ) ) ;
+    public final void rule__Domain__Group__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2770:1: ( ( ( rule__Domain__Alternatives_0_0 ) ) )
-            // InternalVertigoDsl.g:2771:1: ( ( rule__Domain__Alternatives_0_0 ) )
+            // InternalVertigoDsl.g:2770:1: ( ( ( rule__Domain__Alternatives_0 ) ) )
+            // InternalVertigoDsl.g:2771:1: ( ( rule__Domain__Alternatives_0 ) )
             {
-            // InternalVertigoDsl.g:2771:1: ( ( rule__Domain__Alternatives_0_0 ) )
-            // InternalVertigoDsl.g:2772:2: ( rule__Domain__Alternatives_0_0 )
+            // InternalVertigoDsl.g:2771:1: ( ( rule__Domain__Alternatives_0 ) )
+            // InternalVertigoDsl.g:2772:2: ( rule__Domain__Alternatives_0 )
             {
-             before(grammarAccess.getDomainAccess().getAlternatives_0_0()); 
-            // InternalVertigoDsl.g:2773:2: ( rule__Domain__Alternatives_0_0 )
-            // InternalVertigoDsl.g:2773:3: rule__Domain__Alternatives_0_0
+             before(grammarAccess.getDomainAccess().getAlternatives_0()); 
+            // InternalVertigoDsl.g:2773:2: ( rule__Domain__Alternatives_0 )
+            // InternalVertigoDsl.g:2773:3: rule__Domain__Alternatives_0
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__Alternatives_0_0();
+            rule__Domain__Alternatives_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getAlternatives_0_0()); 
+             after(grammarAccess.getDomainAccess().getAlternatives_0()); 
 
             }
 
@@ -8531,26 +8531,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__0__Impl"
+    // $ANTLR end "rule__Domain__Group__0__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_0__1"
-    // InternalVertigoDsl.g:2781:1: rule__Domain__Group_0__1 : rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2 ;
-    public final void rule__Domain__Group_0__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__1"
+    // InternalVertigoDsl.g:2781:1: rule__Domain__Group__1 : rule__Domain__Group__1__Impl rule__Domain__Group__2 ;
+    public final void rule__Domain__Group__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2785:1: ( rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2 )
-            // InternalVertigoDsl.g:2786:2: rule__Domain__Group_0__1__Impl rule__Domain__Group_0__2
+            // InternalVertigoDsl.g:2785:1: ( rule__Domain__Group__1__Impl rule__Domain__Group__2 )
+            // InternalVertigoDsl.g:2786:2: rule__Domain__Group__1__Impl rule__Domain__Group__2
             {
             pushFollow(FOLLOW_9);
-            rule__Domain__Group_0__1__Impl();
+            rule__Domain__Group__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__2();
+            rule__Domain__Group__2();
 
             state._fsp--;
 
@@ -8569,12 +8569,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__1"
+    // $ANTLR end "rule__Domain__Group__1"
 
 
-    // $ANTLR start "rule__Domain__Group_0__1__Impl"
-    // InternalVertigoDsl.g:2793:1: rule__Domain__Group_0__1__Impl : ( 'Domain' ) ;
-    public final void rule__Domain__Group_0__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__1__Impl"
+    // InternalVertigoDsl.g:2793:1: rule__Domain__Group__1__Impl : ( 'Domain' ) ;
+    public final void rule__Domain__Group__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8585,9 +8585,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:2798:1: ( 'Domain' )
             // InternalVertigoDsl.g:2799:2: 'Domain'
             {
-             before(grammarAccess.getDomainAccess().getDomainKeyword_0_1()); 
+             before(grammarAccess.getDomainAccess().getDomainKeyword_1()); 
             match(input,34,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getDomainKeyword_0_1()); 
+             after(grammarAccess.getDomainAccess().getDomainKeyword_1()); 
 
             }
 
@@ -8606,26 +8606,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__1__Impl"
+    // $ANTLR end "rule__Domain__Group__1__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_0__2"
-    // InternalVertigoDsl.g:2808:1: rule__Domain__Group_0__2 : rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3 ;
-    public final void rule__Domain__Group_0__2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__2"
+    // InternalVertigoDsl.g:2808:1: rule__Domain__Group__2 : rule__Domain__Group__2__Impl rule__Domain__Group__3 ;
+    public final void rule__Domain__Group__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2812:1: ( rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3 )
-            // InternalVertigoDsl.g:2813:2: rule__Domain__Group_0__2__Impl rule__Domain__Group_0__3
+            // InternalVertigoDsl.g:2812:1: ( rule__Domain__Group__2__Impl rule__Domain__Group__3 )
+            // InternalVertigoDsl.g:2813:2: rule__Domain__Group__2__Impl rule__Domain__Group__3
             {
             pushFollow(FOLLOW_12);
-            rule__Domain__Group_0__2__Impl();
+            rule__Domain__Group__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__3();
+            rule__Domain__Group__3();
 
             state._fsp--;
 
@@ -8644,35 +8644,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__2"
+    // $ANTLR end "rule__Domain__Group__2"
 
 
-    // $ANTLR start "rule__Domain__Group_0__2__Impl"
-    // InternalVertigoDsl.g:2820:1: rule__Domain__Group_0__2__Impl : ( ( rule__Domain__NameAssignment_0_2 ) ) ;
-    public final void rule__Domain__Group_0__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__2__Impl"
+    // InternalVertigoDsl.g:2820:1: rule__Domain__Group__2__Impl : ( ( rule__Domain__NameAssignment_2 ) ) ;
+    public final void rule__Domain__Group__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2824:1: ( ( ( rule__Domain__NameAssignment_0_2 ) ) )
-            // InternalVertigoDsl.g:2825:1: ( ( rule__Domain__NameAssignment_0_2 ) )
+            // InternalVertigoDsl.g:2824:1: ( ( ( rule__Domain__NameAssignment_2 ) ) )
+            // InternalVertigoDsl.g:2825:1: ( ( rule__Domain__NameAssignment_2 ) )
             {
-            // InternalVertigoDsl.g:2825:1: ( ( rule__Domain__NameAssignment_0_2 ) )
-            // InternalVertigoDsl.g:2826:2: ( rule__Domain__NameAssignment_0_2 )
+            // InternalVertigoDsl.g:2825:1: ( ( rule__Domain__NameAssignment_2 ) )
+            // InternalVertigoDsl.g:2826:2: ( rule__Domain__NameAssignment_2 )
             {
-             before(grammarAccess.getDomainAccess().getNameAssignment_0_2()); 
-            // InternalVertigoDsl.g:2827:2: ( rule__Domain__NameAssignment_0_2 )
-            // InternalVertigoDsl.g:2827:3: rule__Domain__NameAssignment_0_2
+             before(grammarAccess.getDomainAccess().getNameAssignment_2()); 
+            // InternalVertigoDsl.g:2827:2: ( rule__Domain__NameAssignment_2 )
+            // InternalVertigoDsl.g:2827:3: rule__Domain__NameAssignment_2
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__NameAssignment_0_2();
+            rule__Domain__NameAssignment_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getNameAssignment_0_2()); 
+             after(grammarAccess.getDomainAccess().getNameAssignment_2()); 
 
             }
 
@@ -8691,26 +8691,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__2__Impl"
+    // $ANTLR end "rule__Domain__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_0__3"
-    // InternalVertigoDsl.g:2835:1: rule__Domain__Group_0__3 : rule__Domain__Group_0__3__Impl rule__Domain__Group_0__4 ;
-    public final void rule__Domain__Group_0__3() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__3"
+    // InternalVertigoDsl.g:2835:1: rule__Domain__Group__3 : rule__Domain__Group__3__Impl rule__Domain__Group__4 ;
+    public final void rule__Domain__Group__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2839:1: ( rule__Domain__Group_0__3__Impl rule__Domain__Group_0__4 )
-            // InternalVertigoDsl.g:2840:2: rule__Domain__Group_0__3__Impl rule__Domain__Group_0__4
+            // InternalVertigoDsl.g:2839:1: ( rule__Domain__Group__3__Impl rule__Domain__Group__4 )
+            // InternalVertigoDsl.g:2840:2: rule__Domain__Group__3__Impl rule__Domain__Group__4
             {
             pushFollow(FOLLOW_22);
-            rule__Domain__Group_0__3__Impl();
+            rule__Domain__Group__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__4();
+            rule__Domain__Group__4();
 
             state._fsp--;
 
@@ -8729,12 +8729,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__3"
+    // $ANTLR end "rule__Domain__Group__3"
 
 
-    // $ANTLR start "rule__Domain__Group_0__3__Impl"
-    // InternalVertigoDsl.g:2847:1: rule__Domain__Group_0__3__Impl : ( '{' ) ;
-    public final void rule__Domain__Group_0__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__3__Impl"
+    // InternalVertigoDsl.g:2847:1: rule__Domain__Group__3__Impl : ( '{' ) ;
+    public final void rule__Domain__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8745,9 +8745,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:2852:1: ( '{' )
             // InternalVertigoDsl.g:2853:2: '{'
             {
-             before(grammarAccess.getDomainAccess().getLeftCurlyBracketKeyword_0_3()); 
+             before(grammarAccess.getDomainAccess().getLeftCurlyBracketKeyword_3()); 
             match(input,37,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getLeftCurlyBracketKeyword_0_3()); 
+             after(grammarAccess.getDomainAccess().getLeftCurlyBracketKeyword_3()); 
 
             }
 
@@ -8766,26 +8766,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__3__Impl"
+    // $ANTLR end "rule__Domain__Group__3__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_0__4"
-    // InternalVertigoDsl.g:2862:1: rule__Domain__Group_0__4 : rule__Domain__Group_0__4__Impl rule__Domain__Group_0__5 ;
-    public final void rule__Domain__Group_0__4() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__4"
+    // InternalVertigoDsl.g:2862:1: rule__Domain__Group__4 : rule__Domain__Group__4__Impl rule__Domain__Group__5 ;
+    public final void rule__Domain__Group__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2866:1: ( rule__Domain__Group_0__4__Impl rule__Domain__Group_0__5 )
-            // InternalVertigoDsl.g:2867:2: rule__Domain__Group_0__4__Impl rule__Domain__Group_0__5
+            // InternalVertigoDsl.g:2866:1: ( rule__Domain__Group__4__Impl rule__Domain__Group__5 )
+            // InternalVertigoDsl.g:2867:2: rule__Domain__Group__4__Impl rule__Domain__Group__5
             {
             pushFollow(FOLLOW_14);
-            rule__Domain__Group_0__4__Impl();
+            rule__Domain__Group__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__5();
+            rule__Domain__Group__5();
 
             state._fsp--;
 
@@ -8804,12 +8804,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__4"
+    // $ANTLR end "rule__Domain__Group__4"
 
 
-    // $ANTLR start "rule__Domain__Group_0__4__Impl"
-    // InternalVertigoDsl.g:2874:1: rule__Domain__Group_0__4__Impl : ( 'dataType' ) ;
-    public final void rule__Domain__Group_0__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__4__Impl"
+    // InternalVertigoDsl.g:2874:1: rule__Domain__Group__4__Impl : ( 'dataType' ) ;
+    public final void rule__Domain__Group__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8820,9 +8820,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:2879:1: ( 'dataType' )
             // InternalVertigoDsl.g:2880:2: 'dataType'
             {
-             before(grammarAccess.getDomainAccess().getDataTypeKeyword_0_4()); 
+             before(grammarAccess.getDomainAccess().getDataTypeKeyword_4()); 
             match(input,46,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getDataTypeKeyword_0_4()); 
+             after(grammarAccess.getDomainAccess().getDataTypeKeyword_4()); 
 
             }
 
@@ -8841,26 +8841,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__4__Impl"
+    // $ANTLR end "rule__Domain__Group__4__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_0__5"
-    // InternalVertigoDsl.g:2889:1: rule__Domain__Group_0__5 : rule__Domain__Group_0__5__Impl rule__Domain__Group_0__6 ;
-    public final void rule__Domain__Group_0__5() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__5"
+    // InternalVertigoDsl.g:2889:1: rule__Domain__Group__5 : rule__Domain__Group__5__Impl rule__Domain__Group__6 ;
+    public final void rule__Domain__Group__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2893:1: ( rule__Domain__Group_0__5__Impl rule__Domain__Group_0__6 )
-            // InternalVertigoDsl.g:2894:2: rule__Domain__Group_0__5__Impl rule__Domain__Group_0__6
+            // InternalVertigoDsl.g:2893:1: ( rule__Domain__Group__5__Impl rule__Domain__Group__6 )
+            // InternalVertigoDsl.g:2894:2: rule__Domain__Group__5__Impl rule__Domain__Group__6
             {
             pushFollow(FOLLOW_23);
-            rule__Domain__Group_0__5__Impl();
+            rule__Domain__Group__5__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__6();
+            rule__Domain__Group__6();
 
             state._fsp--;
 
@@ -8879,12 +8879,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__5"
+    // $ANTLR end "rule__Domain__Group__5"
 
 
-    // $ANTLR start "rule__Domain__Group_0__5__Impl"
-    // InternalVertigoDsl.g:2901:1: rule__Domain__Group_0__5__Impl : ( ':' ) ;
-    public final void rule__Domain__Group_0__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__5__Impl"
+    // InternalVertigoDsl.g:2901:1: rule__Domain__Group__5__Impl : ( ':' ) ;
+    public final void rule__Domain__Group__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -8895,9 +8895,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:2906:1: ( ':' )
             // InternalVertigoDsl.g:2907:2: ':'
             {
-             before(grammarAccess.getDomainAccess().getColonKeyword_0_5()); 
+             before(grammarAccess.getDomainAccess().getColonKeyword_5()); 
             match(input,39,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getColonKeyword_0_5()); 
+             after(grammarAccess.getDomainAccess().getColonKeyword_5()); 
 
             }
 
@@ -8916,26 +8916,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__5__Impl"
+    // $ANTLR end "rule__Domain__Group__5__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_0__6"
-    // InternalVertigoDsl.g:2916:1: rule__Domain__Group_0__6 : rule__Domain__Group_0__6__Impl rule__Domain__Group_0__7 ;
-    public final void rule__Domain__Group_0__6() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__6"
+    // InternalVertigoDsl.g:2916:1: rule__Domain__Group__6 : rule__Domain__Group__6__Impl rule__Domain__Group__7 ;
+    public final void rule__Domain__Group__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2920:1: ( rule__Domain__Group_0__6__Impl rule__Domain__Group_0__7 )
-            // InternalVertigoDsl.g:2921:2: rule__Domain__Group_0__6__Impl rule__Domain__Group_0__7
+            // InternalVertigoDsl.g:2920:1: ( rule__Domain__Group__6__Impl rule__Domain__Group__7 )
+            // InternalVertigoDsl.g:2921:2: rule__Domain__Group__6__Impl rule__Domain__Group__7
             {
             pushFollow(FOLLOW_24);
-            rule__Domain__Group_0__6__Impl();
+            rule__Domain__Group__6__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__7();
+            rule__Domain__Group__7();
 
             state._fsp--;
 
@@ -8954,35 +8954,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__6"
+    // $ANTLR end "rule__Domain__Group__6"
 
 
-    // $ANTLR start "rule__Domain__Group_0__6__Impl"
-    // InternalVertigoDsl.g:2928:1: rule__Domain__Group_0__6__Impl : ( ( rule__Domain__DataTypeAssignment_0_6 ) ) ;
-    public final void rule__Domain__Group_0__6__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__6__Impl"
+    // InternalVertigoDsl.g:2928:1: rule__Domain__Group__6__Impl : ( ( rule__Domain__DataTypeAssignment_6 ) ) ;
+    public final void rule__Domain__Group__6__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2932:1: ( ( ( rule__Domain__DataTypeAssignment_0_6 ) ) )
-            // InternalVertigoDsl.g:2933:1: ( ( rule__Domain__DataTypeAssignment_0_6 ) )
+            // InternalVertigoDsl.g:2932:1: ( ( ( rule__Domain__DataTypeAssignment_6 ) ) )
+            // InternalVertigoDsl.g:2933:1: ( ( rule__Domain__DataTypeAssignment_6 ) )
             {
-            // InternalVertigoDsl.g:2933:1: ( ( rule__Domain__DataTypeAssignment_0_6 ) )
-            // InternalVertigoDsl.g:2934:2: ( rule__Domain__DataTypeAssignment_0_6 )
+            // InternalVertigoDsl.g:2933:1: ( ( rule__Domain__DataTypeAssignment_6 ) )
+            // InternalVertigoDsl.g:2934:2: ( rule__Domain__DataTypeAssignment_6 )
             {
-             before(grammarAccess.getDomainAccess().getDataTypeAssignment_0_6()); 
-            // InternalVertigoDsl.g:2935:2: ( rule__Domain__DataTypeAssignment_0_6 )
-            // InternalVertigoDsl.g:2935:3: rule__Domain__DataTypeAssignment_0_6
+             before(grammarAccess.getDomainAccess().getDataTypeAssignment_6()); 
+            // InternalVertigoDsl.g:2935:2: ( rule__Domain__DataTypeAssignment_6 )
+            // InternalVertigoDsl.g:2935:3: rule__Domain__DataTypeAssignment_6
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__DataTypeAssignment_0_6();
+            rule__Domain__DataTypeAssignment_6();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getDataTypeAssignment_0_6()); 
+             after(grammarAccess.getDomainAccess().getDataTypeAssignment_6()); 
 
             }
 
@@ -9001,256 +9001,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_0__6__Impl"
+    // $ANTLR end "rule__Domain__Group__6__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_0__7"
-    // InternalVertigoDsl.g:2943:1: rule__Domain__Group_0__7 : rule__Domain__Group_0__7__Impl rule__Domain__Group_0__8 ;
-    public final void rule__Domain__Group_0__7() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:2947:1: ( rule__Domain__Group_0__7__Impl rule__Domain__Group_0__8 )
-            // InternalVertigoDsl.g:2948:2: rule__Domain__Group_0__7__Impl rule__Domain__Group_0__8
-            {
-            pushFollow(FOLLOW_14);
-            rule__Domain__Group_0__7__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__8();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__Group_0__7"
-
-
-    // $ANTLR start "rule__Domain__Group_0__7__Impl"
-    // InternalVertigoDsl.g:2955:1: rule__Domain__Group_0__7__Impl : ( 'formatter' ) ;
-    public final void rule__Domain__Group_0__7__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__7"
+    // InternalVertigoDsl.g:2943:1: rule__Domain__Group__7 : rule__Domain__Group__7__Impl rule__Domain__Group__8 ;
+    public final void rule__Domain__Group__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:2959:1: ( ( 'formatter' ) )
-            // InternalVertigoDsl.g:2960:1: ( 'formatter' )
-            {
-            // InternalVertigoDsl.g:2960:1: ( 'formatter' )
-            // InternalVertigoDsl.g:2961:2: 'formatter'
-            {
-             before(grammarAccess.getDomainAccess().getFormatterKeyword_0_7()); 
-            match(input,47,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getFormatterKeyword_0_7()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__Group_0__7__Impl"
-
-
-    // $ANTLR start "rule__Domain__Group_0__8"
-    // InternalVertigoDsl.g:2970:1: rule__Domain__Group_0__8 : rule__Domain__Group_0__8__Impl rule__Domain__Group_0__9 ;
-    public final void rule__Domain__Group_0__8() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:2974:1: ( rule__Domain__Group_0__8__Impl rule__Domain__Group_0__9 )
-            // InternalVertigoDsl.g:2975:2: rule__Domain__Group_0__8__Impl rule__Domain__Group_0__9
-            {
-            pushFollow(FOLLOW_9);
-            rule__Domain__Group_0__8__Impl();
-
-            state._fsp--;
-
-            pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__9();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__Group_0__8"
-
-
-    // $ANTLR start "rule__Domain__Group_0__8__Impl"
-    // InternalVertigoDsl.g:2982:1: rule__Domain__Group_0__8__Impl : ( ':' ) ;
-    public final void rule__Domain__Group_0__8__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:2986:1: ( ( ':' ) )
-            // InternalVertigoDsl.g:2987:1: ( ':' )
-            {
-            // InternalVertigoDsl.g:2987:1: ( ':' )
-            // InternalVertigoDsl.g:2988:2: ':'
-            {
-             before(grammarAccess.getDomainAccess().getColonKeyword_0_8()); 
-            match(input,39,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getColonKeyword_0_8()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__Group_0__8__Impl"
-
-
-    // $ANTLR start "rule__Domain__Group_0__9"
-    // InternalVertigoDsl.g:2997:1: rule__Domain__Group_0__9 : rule__Domain__Group_0__9__Impl ;
-    public final void rule__Domain__Group_0__9() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:3001:1: ( rule__Domain__Group_0__9__Impl )
-            // InternalVertigoDsl.g:3002:2: rule__Domain__Group_0__9__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Domain__Group_0__9__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__Group_0__9"
-
-
-    // $ANTLR start "rule__Domain__Group_0__9__Impl"
-    // InternalVertigoDsl.g:3008:1: rule__Domain__Group_0__9__Impl : ( ( rule__Domain__FormatterAssignment_0_9 ) ) ;
-    public final void rule__Domain__Group_0__9__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:3012:1: ( ( ( rule__Domain__FormatterAssignment_0_9 ) ) )
-            // InternalVertigoDsl.g:3013:1: ( ( rule__Domain__FormatterAssignment_0_9 ) )
-            {
-            // InternalVertigoDsl.g:3013:1: ( ( rule__Domain__FormatterAssignment_0_9 ) )
-            // InternalVertigoDsl.g:3014:2: ( rule__Domain__FormatterAssignment_0_9 )
-            {
-             before(grammarAccess.getDomainAccess().getFormatterAssignment_0_9()); 
-            // InternalVertigoDsl.g:3015:2: ( rule__Domain__FormatterAssignment_0_9 )
-            // InternalVertigoDsl.g:3015:3: rule__Domain__FormatterAssignment_0_9
-            {
-            pushFollow(FOLLOW_2);
-            rule__Domain__FormatterAssignment_0_9();
-
-            state._fsp--;
-
-
-            }
-
-             after(grammarAccess.getDomainAccess().getFormatterAssignment_0_9()); 
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__Group_0__9__Impl"
-
-
-    // $ANTLR start "rule__Domain__Group_1__0"
-    // InternalVertigoDsl.g:3024:1: rule__Domain__Group_1__0 : rule__Domain__Group_1__0__Impl rule__Domain__Group_1__1 ;
-    public final void rule__Domain__Group_1__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:3028:1: ( rule__Domain__Group_1__0__Impl rule__Domain__Group_1__1 )
-            // InternalVertigoDsl.g:3029:2: rule__Domain__Group_1__0__Impl rule__Domain__Group_1__1
+            // InternalVertigoDsl.g:2947:1: ( rule__Domain__Group__7__Impl rule__Domain__Group__8 )
+            // InternalVertigoDsl.g:2948:2: rule__Domain__Group__7__Impl rule__Domain__Group__8
             {
             pushFollow(FOLLOW_19);
-            rule__Domain__Group_1__0__Impl();
+            rule__Domain__Group__7__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1__1();
+            rule__Domain__Group__8();
 
             state._fsp--;
 
@@ -9269,35 +9039,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1__0"
+    // $ANTLR end "rule__Domain__Group__7"
 
 
-    // $ANTLR start "rule__Domain__Group_1__0__Impl"
-    // InternalVertigoDsl.g:3036:1: rule__Domain__Group_1__0__Impl : ( ( rule__Domain__UnorderedGroup_1_0 ) ) ;
-    public final void rule__Domain__Group_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__7__Impl"
+    // InternalVertigoDsl.g:2955:1: rule__Domain__Group__7__Impl : ( ( rule__Domain__UnorderedGroup_7 ) ) ;
+    public final void rule__Domain__Group__7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3040:1: ( ( ( rule__Domain__UnorderedGroup_1_0 ) ) )
-            // InternalVertigoDsl.g:3041:1: ( ( rule__Domain__UnorderedGroup_1_0 ) )
+            // InternalVertigoDsl.g:2959:1: ( ( ( rule__Domain__UnorderedGroup_7 ) ) )
+            // InternalVertigoDsl.g:2960:1: ( ( rule__Domain__UnorderedGroup_7 ) )
             {
-            // InternalVertigoDsl.g:3041:1: ( ( rule__Domain__UnorderedGroup_1_0 ) )
-            // InternalVertigoDsl.g:3042:2: ( rule__Domain__UnorderedGroup_1_0 )
+            // InternalVertigoDsl.g:2960:1: ( ( rule__Domain__UnorderedGroup_7 ) )
+            // InternalVertigoDsl.g:2961:2: ( rule__Domain__UnorderedGroup_7 )
             {
-             before(grammarAccess.getDomainAccess().getUnorderedGroup_1_0()); 
-            // InternalVertigoDsl.g:3043:2: ( rule__Domain__UnorderedGroup_1_0 )
-            // InternalVertigoDsl.g:3043:3: rule__Domain__UnorderedGroup_1_0
+             before(grammarAccess.getDomainAccess().getUnorderedGroup_7()); 
+            // InternalVertigoDsl.g:2962:2: ( rule__Domain__UnorderedGroup_7 )
+            // InternalVertigoDsl.g:2962:3: rule__Domain__UnorderedGroup_7
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__UnorderedGroup_1_0();
+            rule__Domain__UnorderedGroup_7();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getUnorderedGroup_1_0()); 
+             after(grammarAccess.getDomainAccess().getUnorderedGroup_7()); 
 
             }
 
@@ -9316,21 +9086,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1__0__Impl"
+    // $ANTLR end "rule__Domain__Group__7__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1__1"
-    // InternalVertigoDsl.g:3051:1: rule__Domain__Group_1__1 : rule__Domain__Group_1__1__Impl ;
-    public final void rule__Domain__Group_1__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__8"
+    // InternalVertigoDsl.g:2970:1: rule__Domain__Group__8 : rule__Domain__Group__8__Impl ;
+    public final void rule__Domain__Group__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3055:1: ( rule__Domain__Group_1__1__Impl )
-            // InternalVertigoDsl.g:3056:2: rule__Domain__Group_1__1__Impl
+            // InternalVertigoDsl.g:2974:1: ( rule__Domain__Group__8__Impl )
+            // InternalVertigoDsl.g:2975:2: rule__Domain__Group__8__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1__1__Impl();
+            rule__Domain__Group__8__Impl();
 
             state._fsp--;
 
@@ -9349,25 +9119,25 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1__1"
+    // $ANTLR end "rule__Domain__Group__8"
 
 
-    // $ANTLR start "rule__Domain__Group_1__1__Impl"
-    // InternalVertigoDsl.g:3062:1: rule__Domain__Group_1__1__Impl : ( '}' ) ;
-    public final void rule__Domain__Group_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group__8__Impl"
+    // InternalVertigoDsl.g:2981:1: rule__Domain__Group__8__Impl : ( '}' ) ;
+    public final void rule__Domain__Group__8__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3066:1: ( ( '}' ) )
-            // InternalVertigoDsl.g:3067:1: ( '}' )
+            // InternalVertigoDsl.g:2985:1: ( ( '}' ) )
+            // InternalVertigoDsl.g:2986:1: ( '}' )
             {
-            // InternalVertigoDsl.g:3067:1: ( '}' )
-            // InternalVertigoDsl.g:3068:2: '}'
+            // InternalVertigoDsl.g:2986:1: ( '}' )
+            // InternalVertigoDsl.g:2987:2: '}'
             {
-             before(grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_1_1()); 
+             before(grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_8()); 
             match(input,40,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_1_1()); 
+             after(grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_8()); 
 
             }
 
@@ -9386,26 +9156,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1__1__Impl"
+    // $ANTLR end "rule__Domain__Group__8__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_0__0"
-    // InternalVertigoDsl.g:3078:1: rule__Domain__Group_1_0_0__0 : rule__Domain__Group_1_0_0__0__Impl rule__Domain__Group_1_0_0__1 ;
-    public final void rule__Domain__Group_1_0_0__0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_0__0"
+    // InternalVertigoDsl.g:2997:1: rule__Domain__Group_7_0__0 : rule__Domain__Group_7_0__0__Impl rule__Domain__Group_7_0__1 ;
+    public final void rule__Domain__Group_7_0__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3082:1: ( rule__Domain__Group_1_0_0__0__Impl rule__Domain__Group_1_0_0__1 )
-            // InternalVertigoDsl.g:3083:2: rule__Domain__Group_1_0_0__0__Impl rule__Domain__Group_1_0_0__1
+            // InternalVertigoDsl.g:3001:1: ( rule__Domain__Group_7_0__0__Impl rule__Domain__Group_7_0__1 )
+            // InternalVertigoDsl.g:3002:2: rule__Domain__Group_7_0__0__Impl rule__Domain__Group_7_0__1
             {
             pushFollow(FOLLOW_14);
-            rule__Domain__Group_1_0_0__0__Impl();
+            rule__Domain__Group_7_0__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_0__1();
+            rule__Domain__Group_7_0__1();
 
             state._fsp--;
 
@@ -9424,12 +9194,242 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_0__0"
+    // $ANTLR end "rule__Domain__Group_7_0__0"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_0__0__Impl"
-    // InternalVertigoDsl.g:3090:1: rule__Domain__Group_1_0_0__0__Impl : ( 'storeType' ) ;
-    public final void rule__Domain__Group_1_0_0__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_0__0__Impl"
+    // InternalVertigoDsl.g:3009:1: rule__Domain__Group_7_0__0__Impl : ( 'formatter' ) ;
+    public final void rule__Domain__Group_7_0__0__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:3013:1: ( ( 'formatter' ) )
+            // InternalVertigoDsl.g:3014:1: ( 'formatter' )
+            {
+            // InternalVertigoDsl.g:3014:1: ( 'formatter' )
+            // InternalVertigoDsl.g:3015:2: 'formatter'
+            {
+             before(grammarAccess.getDomainAccess().getFormatterKeyword_7_0_0()); 
+            match(input,47,FOLLOW_2); 
+             after(grammarAccess.getDomainAccess().getFormatterKeyword_7_0_0()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__Group_7_0__0__Impl"
+
+
+    // $ANTLR start "rule__Domain__Group_7_0__1"
+    // InternalVertigoDsl.g:3024:1: rule__Domain__Group_7_0__1 : rule__Domain__Group_7_0__1__Impl rule__Domain__Group_7_0__2 ;
+    public final void rule__Domain__Group_7_0__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:3028:1: ( rule__Domain__Group_7_0__1__Impl rule__Domain__Group_7_0__2 )
+            // InternalVertigoDsl.g:3029:2: rule__Domain__Group_7_0__1__Impl rule__Domain__Group_7_0__2
+            {
+            pushFollow(FOLLOW_9);
+            rule__Domain__Group_7_0__1__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Domain__Group_7_0__2();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__Group_7_0__1"
+
+
+    // $ANTLR start "rule__Domain__Group_7_0__1__Impl"
+    // InternalVertigoDsl.g:3036:1: rule__Domain__Group_7_0__1__Impl : ( ':' ) ;
+    public final void rule__Domain__Group_7_0__1__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:3040:1: ( ( ':' ) )
+            // InternalVertigoDsl.g:3041:1: ( ':' )
+            {
+            // InternalVertigoDsl.g:3041:1: ( ':' )
+            // InternalVertigoDsl.g:3042:2: ':'
+            {
+             before(grammarAccess.getDomainAccess().getColonKeyword_7_0_1()); 
+            match(input,39,FOLLOW_2); 
+             after(grammarAccess.getDomainAccess().getColonKeyword_7_0_1()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__Group_7_0__1__Impl"
+
+
+    // $ANTLR start "rule__Domain__Group_7_0__2"
+    // InternalVertigoDsl.g:3051:1: rule__Domain__Group_7_0__2 : rule__Domain__Group_7_0__2__Impl ;
+    public final void rule__Domain__Group_7_0__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:3055:1: ( rule__Domain__Group_7_0__2__Impl )
+            // InternalVertigoDsl.g:3056:2: rule__Domain__Group_7_0__2__Impl
+            {
+            pushFollow(FOLLOW_2);
+            rule__Domain__Group_7_0__2__Impl();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__Group_7_0__2"
+
+
+    // $ANTLR start "rule__Domain__Group_7_0__2__Impl"
+    // InternalVertigoDsl.g:3062:1: rule__Domain__Group_7_0__2__Impl : ( ( rule__Domain__FormatterAssignment_7_0_2 ) ) ;
+    public final void rule__Domain__Group_7_0__2__Impl() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:3066:1: ( ( ( rule__Domain__FormatterAssignment_7_0_2 ) ) )
+            // InternalVertigoDsl.g:3067:1: ( ( rule__Domain__FormatterAssignment_7_0_2 ) )
+            {
+            // InternalVertigoDsl.g:3067:1: ( ( rule__Domain__FormatterAssignment_7_0_2 ) )
+            // InternalVertigoDsl.g:3068:2: ( rule__Domain__FormatterAssignment_7_0_2 )
+            {
+             before(grammarAccess.getDomainAccess().getFormatterAssignment_7_0_2()); 
+            // InternalVertigoDsl.g:3069:2: ( rule__Domain__FormatterAssignment_7_0_2 )
+            // InternalVertigoDsl.g:3069:3: rule__Domain__FormatterAssignment_7_0_2
+            {
+            pushFollow(FOLLOW_2);
+            rule__Domain__FormatterAssignment_7_0_2();
+
+            state._fsp--;
+
+
+            }
+
+             after(grammarAccess.getDomainAccess().getFormatterAssignment_7_0_2()); 
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__Group_7_0__2__Impl"
+
+
+    // $ANTLR start "rule__Domain__Group_7_1__0"
+    // InternalVertigoDsl.g:3078:1: rule__Domain__Group_7_1__0 : rule__Domain__Group_7_1__0__Impl rule__Domain__Group_7_1__1 ;
+    public final void rule__Domain__Group_7_1__0() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:3082:1: ( rule__Domain__Group_7_1__0__Impl rule__Domain__Group_7_1__1 )
+            // InternalVertigoDsl.g:3083:2: rule__Domain__Group_7_1__0__Impl rule__Domain__Group_7_1__1
+            {
+            pushFollow(FOLLOW_14);
+            rule__Domain__Group_7_1__0__Impl();
+
+            state._fsp--;
+
+            pushFollow(FOLLOW_2);
+            rule__Domain__Group_7_1__1();
+
+            state._fsp--;
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__Group_7_1__0"
+
+
+    // $ANTLR start "rule__Domain__Group_7_1__0__Impl"
+    // InternalVertigoDsl.g:3090:1: rule__Domain__Group_7_1__0__Impl : ( 'storeType' ) ;
+    public final void rule__Domain__Group_7_1__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9440,9 +9440,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3095:1: ( 'storeType' )
             // InternalVertigoDsl.g:3096:2: 'storeType'
             {
-             before(grammarAccess.getDomainAccess().getStoreTypeKeyword_1_0_0_0()); 
+             before(grammarAccess.getDomainAccess().getStoreTypeKeyword_7_1_0()); 
             match(input,48,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getStoreTypeKeyword_1_0_0_0()); 
+             after(grammarAccess.getDomainAccess().getStoreTypeKeyword_7_1_0()); 
 
             }
 
@@ -9461,26 +9461,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_0__0__Impl"
+    // $ANTLR end "rule__Domain__Group_7_1__0__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_0__1"
-    // InternalVertigoDsl.g:3105:1: rule__Domain__Group_1_0_0__1 : rule__Domain__Group_1_0_0__1__Impl rule__Domain__Group_1_0_0__2 ;
-    public final void rule__Domain__Group_1_0_0__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_1__1"
+    // InternalVertigoDsl.g:3105:1: rule__Domain__Group_7_1__1 : rule__Domain__Group_7_1__1__Impl rule__Domain__Group_7_1__2 ;
+    public final void rule__Domain__Group_7_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3109:1: ( rule__Domain__Group_1_0_0__1__Impl rule__Domain__Group_1_0_0__2 )
-            // InternalVertigoDsl.g:3110:2: rule__Domain__Group_1_0_0__1__Impl rule__Domain__Group_1_0_0__2
+            // InternalVertigoDsl.g:3109:1: ( rule__Domain__Group_7_1__1__Impl rule__Domain__Group_7_1__2 )
+            // InternalVertigoDsl.g:3110:2: rule__Domain__Group_7_1__1__Impl rule__Domain__Group_7_1__2
             {
             pushFollow(FOLLOW_15);
-            rule__Domain__Group_1_0_0__1__Impl();
+            rule__Domain__Group_7_1__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_0__2();
+            rule__Domain__Group_7_1__2();
 
             state._fsp--;
 
@@ -9499,12 +9499,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_0__1"
+    // $ANTLR end "rule__Domain__Group_7_1__1"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_0__1__Impl"
-    // InternalVertigoDsl.g:3117:1: rule__Domain__Group_1_0_0__1__Impl : ( ':' ) ;
-    public final void rule__Domain__Group_1_0_0__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_1__1__Impl"
+    // InternalVertigoDsl.g:3117:1: rule__Domain__Group_7_1__1__Impl : ( ':' ) ;
+    public final void rule__Domain__Group_7_1__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9515,9 +9515,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3122:1: ( ':' )
             // InternalVertigoDsl.g:3123:2: ':'
             {
-             before(grammarAccess.getDomainAccess().getColonKeyword_1_0_0_1()); 
+             before(grammarAccess.getDomainAccess().getColonKeyword_7_1_1()); 
             match(input,39,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getColonKeyword_1_0_0_1()); 
+             after(grammarAccess.getDomainAccess().getColonKeyword_7_1_1()); 
 
             }
 
@@ -9536,21 +9536,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_0__1__Impl"
+    // $ANTLR end "rule__Domain__Group_7_1__1__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_0__2"
-    // InternalVertigoDsl.g:3132:1: rule__Domain__Group_1_0_0__2 : rule__Domain__Group_1_0_0__2__Impl ;
-    public final void rule__Domain__Group_1_0_0__2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_1__2"
+    // InternalVertigoDsl.g:3132:1: rule__Domain__Group_7_1__2 : rule__Domain__Group_7_1__2__Impl ;
+    public final void rule__Domain__Group_7_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3136:1: ( rule__Domain__Group_1_0_0__2__Impl )
-            // InternalVertigoDsl.g:3137:2: rule__Domain__Group_1_0_0__2__Impl
+            // InternalVertigoDsl.g:3136:1: ( rule__Domain__Group_7_1__2__Impl )
+            // InternalVertigoDsl.g:3137:2: rule__Domain__Group_7_1__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_0__2__Impl();
+            rule__Domain__Group_7_1__2__Impl();
 
             state._fsp--;
 
@@ -9569,35 +9569,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_0__2"
+    // $ANTLR end "rule__Domain__Group_7_1__2"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_0__2__Impl"
-    // InternalVertigoDsl.g:3143:1: rule__Domain__Group_1_0_0__2__Impl : ( ( rule__Domain__StoreTypeAssignment_1_0_0_2 ) ) ;
-    public final void rule__Domain__Group_1_0_0__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_1__2__Impl"
+    // InternalVertigoDsl.g:3143:1: rule__Domain__Group_7_1__2__Impl : ( ( rule__Domain__StoreTypeAssignment_7_1_2 ) ) ;
+    public final void rule__Domain__Group_7_1__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3147:1: ( ( ( rule__Domain__StoreTypeAssignment_1_0_0_2 ) ) )
-            // InternalVertigoDsl.g:3148:1: ( ( rule__Domain__StoreTypeAssignment_1_0_0_2 ) )
+            // InternalVertigoDsl.g:3147:1: ( ( ( rule__Domain__StoreTypeAssignment_7_1_2 ) ) )
+            // InternalVertigoDsl.g:3148:1: ( ( rule__Domain__StoreTypeAssignment_7_1_2 ) )
             {
-            // InternalVertigoDsl.g:3148:1: ( ( rule__Domain__StoreTypeAssignment_1_0_0_2 ) )
-            // InternalVertigoDsl.g:3149:2: ( rule__Domain__StoreTypeAssignment_1_0_0_2 )
+            // InternalVertigoDsl.g:3148:1: ( ( rule__Domain__StoreTypeAssignment_7_1_2 ) )
+            // InternalVertigoDsl.g:3149:2: ( rule__Domain__StoreTypeAssignment_7_1_2 )
             {
-             before(grammarAccess.getDomainAccess().getStoreTypeAssignment_1_0_0_2()); 
-            // InternalVertigoDsl.g:3150:2: ( rule__Domain__StoreTypeAssignment_1_0_0_2 )
-            // InternalVertigoDsl.g:3150:3: rule__Domain__StoreTypeAssignment_1_0_0_2
+             before(grammarAccess.getDomainAccess().getStoreTypeAssignment_7_1_2()); 
+            // InternalVertigoDsl.g:3150:2: ( rule__Domain__StoreTypeAssignment_7_1_2 )
+            // InternalVertigoDsl.g:3150:3: rule__Domain__StoreTypeAssignment_7_1_2
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__StoreTypeAssignment_1_0_0_2();
+            rule__Domain__StoreTypeAssignment_7_1_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getStoreTypeAssignment_1_0_0_2()); 
+             after(grammarAccess.getDomainAccess().getStoreTypeAssignment_7_1_2()); 
 
             }
 
@@ -9616,26 +9616,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_0__2__Impl"
+    // $ANTLR end "rule__Domain__Group_7_1__2__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_1__0"
-    // InternalVertigoDsl.g:3159:1: rule__Domain__Group_1_0_1__0 : rule__Domain__Group_1_0_1__0__Impl rule__Domain__Group_1_0_1__1 ;
-    public final void rule__Domain__Group_1_0_1__0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_2__0"
+    // InternalVertigoDsl.g:3159:1: rule__Domain__Group_7_2__0 : rule__Domain__Group_7_2__0__Impl rule__Domain__Group_7_2__1 ;
+    public final void rule__Domain__Group_7_2__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3163:1: ( rule__Domain__Group_1_0_1__0__Impl rule__Domain__Group_1_0_1__1 )
-            // InternalVertigoDsl.g:3164:2: rule__Domain__Group_1_0_1__0__Impl rule__Domain__Group_1_0_1__1
+            // InternalVertigoDsl.g:3163:1: ( rule__Domain__Group_7_2__0__Impl rule__Domain__Group_7_2__1 )
+            // InternalVertigoDsl.g:3164:2: rule__Domain__Group_7_2__0__Impl rule__Domain__Group_7_2__1
             {
             pushFollow(FOLLOW_14);
-            rule__Domain__Group_1_0_1__0__Impl();
+            rule__Domain__Group_7_2__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_1__1();
+            rule__Domain__Group_7_2__1();
 
             state._fsp--;
 
@@ -9654,12 +9654,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_1__0"
+    // $ANTLR end "rule__Domain__Group_7_2__0"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_1__0__Impl"
-    // InternalVertigoDsl.g:3171:1: rule__Domain__Group_1_0_1__0__Impl : ( 'indexType' ) ;
-    public final void rule__Domain__Group_1_0_1__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_2__0__Impl"
+    // InternalVertigoDsl.g:3171:1: rule__Domain__Group_7_2__0__Impl : ( 'indexType' ) ;
+    public final void rule__Domain__Group_7_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9670,9 +9670,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3176:1: ( 'indexType' )
             // InternalVertigoDsl.g:3177:2: 'indexType'
             {
-             before(grammarAccess.getDomainAccess().getIndexTypeKeyword_1_0_1_0()); 
+             before(grammarAccess.getDomainAccess().getIndexTypeKeyword_7_2_0()); 
             match(input,49,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getIndexTypeKeyword_1_0_1_0()); 
+             after(grammarAccess.getDomainAccess().getIndexTypeKeyword_7_2_0()); 
 
             }
 
@@ -9691,26 +9691,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_1__0__Impl"
+    // $ANTLR end "rule__Domain__Group_7_2__0__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_1__1"
-    // InternalVertigoDsl.g:3186:1: rule__Domain__Group_1_0_1__1 : rule__Domain__Group_1_0_1__1__Impl rule__Domain__Group_1_0_1__2 ;
-    public final void rule__Domain__Group_1_0_1__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_2__1"
+    // InternalVertigoDsl.g:3186:1: rule__Domain__Group_7_2__1 : rule__Domain__Group_7_2__1__Impl rule__Domain__Group_7_2__2 ;
+    public final void rule__Domain__Group_7_2__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3190:1: ( rule__Domain__Group_1_0_1__1__Impl rule__Domain__Group_1_0_1__2 )
-            // InternalVertigoDsl.g:3191:2: rule__Domain__Group_1_0_1__1__Impl rule__Domain__Group_1_0_1__2
+            // InternalVertigoDsl.g:3190:1: ( rule__Domain__Group_7_2__1__Impl rule__Domain__Group_7_2__2 )
+            // InternalVertigoDsl.g:3191:2: rule__Domain__Group_7_2__1__Impl rule__Domain__Group_7_2__2
             {
             pushFollow(FOLLOW_15);
-            rule__Domain__Group_1_0_1__1__Impl();
+            rule__Domain__Group_7_2__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_1__2();
+            rule__Domain__Group_7_2__2();
 
             state._fsp--;
 
@@ -9729,12 +9729,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_1__1"
+    // $ANTLR end "rule__Domain__Group_7_2__1"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_1__1__Impl"
-    // InternalVertigoDsl.g:3198:1: rule__Domain__Group_1_0_1__1__Impl : ( ':' ) ;
-    public final void rule__Domain__Group_1_0_1__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_2__1__Impl"
+    // InternalVertigoDsl.g:3198:1: rule__Domain__Group_7_2__1__Impl : ( ':' ) ;
+    public final void rule__Domain__Group_7_2__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9745,9 +9745,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3203:1: ( ':' )
             // InternalVertigoDsl.g:3204:2: ':'
             {
-             before(grammarAccess.getDomainAccess().getColonKeyword_1_0_1_1()); 
+             before(grammarAccess.getDomainAccess().getColonKeyword_7_2_1()); 
             match(input,39,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getColonKeyword_1_0_1_1()); 
+             after(grammarAccess.getDomainAccess().getColonKeyword_7_2_1()); 
 
             }
 
@@ -9766,21 +9766,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_1__1__Impl"
+    // $ANTLR end "rule__Domain__Group_7_2__1__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_1__2"
-    // InternalVertigoDsl.g:3213:1: rule__Domain__Group_1_0_1__2 : rule__Domain__Group_1_0_1__2__Impl ;
-    public final void rule__Domain__Group_1_0_1__2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_2__2"
+    // InternalVertigoDsl.g:3213:1: rule__Domain__Group_7_2__2 : rule__Domain__Group_7_2__2__Impl ;
+    public final void rule__Domain__Group_7_2__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3217:1: ( rule__Domain__Group_1_0_1__2__Impl )
-            // InternalVertigoDsl.g:3218:2: rule__Domain__Group_1_0_1__2__Impl
+            // InternalVertigoDsl.g:3217:1: ( rule__Domain__Group_7_2__2__Impl )
+            // InternalVertigoDsl.g:3218:2: rule__Domain__Group_7_2__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_1__2__Impl();
+            rule__Domain__Group_7_2__2__Impl();
 
             state._fsp--;
 
@@ -9799,35 +9799,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_1__2"
+    // $ANTLR end "rule__Domain__Group_7_2__2"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_1__2__Impl"
-    // InternalVertigoDsl.g:3224:1: rule__Domain__Group_1_0_1__2__Impl : ( ( rule__Domain__IndexTypeAssignment_1_0_1_2 ) ) ;
-    public final void rule__Domain__Group_1_0_1__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_2__2__Impl"
+    // InternalVertigoDsl.g:3224:1: rule__Domain__Group_7_2__2__Impl : ( ( rule__Domain__IndexTypeAssignment_7_2_2 ) ) ;
+    public final void rule__Domain__Group_7_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3228:1: ( ( ( rule__Domain__IndexTypeAssignment_1_0_1_2 ) ) )
-            // InternalVertigoDsl.g:3229:1: ( ( rule__Domain__IndexTypeAssignment_1_0_1_2 ) )
+            // InternalVertigoDsl.g:3228:1: ( ( ( rule__Domain__IndexTypeAssignment_7_2_2 ) ) )
+            // InternalVertigoDsl.g:3229:1: ( ( rule__Domain__IndexTypeAssignment_7_2_2 ) )
             {
-            // InternalVertigoDsl.g:3229:1: ( ( rule__Domain__IndexTypeAssignment_1_0_1_2 ) )
-            // InternalVertigoDsl.g:3230:2: ( rule__Domain__IndexTypeAssignment_1_0_1_2 )
+            // InternalVertigoDsl.g:3229:1: ( ( rule__Domain__IndexTypeAssignment_7_2_2 ) )
+            // InternalVertigoDsl.g:3230:2: ( rule__Domain__IndexTypeAssignment_7_2_2 )
             {
-             before(grammarAccess.getDomainAccess().getIndexTypeAssignment_1_0_1_2()); 
-            // InternalVertigoDsl.g:3231:2: ( rule__Domain__IndexTypeAssignment_1_0_1_2 )
-            // InternalVertigoDsl.g:3231:3: rule__Domain__IndexTypeAssignment_1_0_1_2
+             before(grammarAccess.getDomainAccess().getIndexTypeAssignment_7_2_2()); 
+            // InternalVertigoDsl.g:3231:2: ( rule__Domain__IndexTypeAssignment_7_2_2 )
+            // InternalVertigoDsl.g:3231:3: rule__Domain__IndexTypeAssignment_7_2_2
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__IndexTypeAssignment_1_0_1_2();
+            rule__Domain__IndexTypeAssignment_7_2_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getIndexTypeAssignment_1_0_1_2()); 
+             after(grammarAccess.getDomainAccess().getIndexTypeAssignment_7_2_2()); 
 
             }
 
@@ -9846,26 +9846,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_1__2__Impl"
+    // $ANTLR end "rule__Domain__Group_7_2__2__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__0"
-    // InternalVertigoDsl.g:3240:1: rule__Domain__Group_1_0_2__0 : rule__Domain__Group_1_0_2__0__Impl rule__Domain__Group_1_0_2__1 ;
-    public final void rule__Domain__Group_1_0_2__0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__0"
+    // InternalVertigoDsl.g:3240:1: rule__Domain__Group_7_3__0 : rule__Domain__Group_7_3__0__Impl rule__Domain__Group_7_3__1 ;
+    public final void rule__Domain__Group_7_3__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3244:1: ( rule__Domain__Group_1_0_2__0__Impl rule__Domain__Group_1_0_2__1 )
-            // InternalVertigoDsl.g:3245:2: rule__Domain__Group_1_0_2__0__Impl rule__Domain__Group_1_0_2__1
+            // InternalVertigoDsl.g:3244:1: ( rule__Domain__Group_7_3__0__Impl rule__Domain__Group_7_3__1 )
+            // InternalVertigoDsl.g:3245:2: rule__Domain__Group_7_3__0__Impl rule__Domain__Group_7_3__1
             {
             pushFollow(FOLLOW_14);
-            rule__Domain__Group_1_0_2__0__Impl();
+            rule__Domain__Group_7_3__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_2__1();
+            rule__Domain__Group_7_3__1();
 
             state._fsp--;
 
@@ -9884,12 +9884,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__0"
+    // $ANTLR end "rule__Domain__Group_7_3__0"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__0__Impl"
-    // InternalVertigoDsl.g:3252:1: rule__Domain__Group_1_0_2__0__Impl : ( 'constraint' ) ;
-    public final void rule__Domain__Group_1_0_2__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__0__Impl"
+    // InternalVertigoDsl.g:3252:1: rule__Domain__Group_7_3__0__Impl : ( 'constraint' ) ;
+    public final void rule__Domain__Group_7_3__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9900,9 +9900,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3257:1: ( 'constraint' )
             // InternalVertigoDsl.g:3258:2: 'constraint'
             {
-             before(grammarAccess.getDomainAccess().getConstraintKeyword_1_0_2_0()); 
+             before(grammarAccess.getDomainAccess().getConstraintKeyword_7_3_0()); 
             match(input,50,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getConstraintKeyword_1_0_2_0()); 
+             after(grammarAccess.getDomainAccess().getConstraintKeyword_7_3_0()); 
 
             }
 
@@ -9921,26 +9921,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__0__Impl"
+    // $ANTLR end "rule__Domain__Group_7_3__0__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__1"
-    // InternalVertigoDsl.g:3267:1: rule__Domain__Group_1_0_2__1 : rule__Domain__Group_1_0_2__1__Impl rule__Domain__Group_1_0_2__2 ;
-    public final void rule__Domain__Group_1_0_2__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__1"
+    // InternalVertigoDsl.g:3267:1: rule__Domain__Group_7_3__1 : rule__Domain__Group_7_3__1__Impl rule__Domain__Group_7_3__2 ;
+    public final void rule__Domain__Group_7_3__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3271:1: ( rule__Domain__Group_1_0_2__1__Impl rule__Domain__Group_1_0_2__2 )
-            // InternalVertigoDsl.g:3272:2: rule__Domain__Group_1_0_2__1__Impl rule__Domain__Group_1_0_2__2
+            // InternalVertigoDsl.g:3271:1: ( rule__Domain__Group_7_3__1__Impl rule__Domain__Group_7_3__2 )
+            // InternalVertigoDsl.g:3272:2: rule__Domain__Group_7_3__1__Impl rule__Domain__Group_7_3__2
             {
             pushFollow(FOLLOW_25);
-            rule__Domain__Group_1_0_2__1__Impl();
+            rule__Domain__Group_7_3__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_2__2();
+            rule__Domain__Group_7_3__2();
 
             state._fsp--;
 
@@ -9959,12 +9959,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__1"
+    // $ANTLR end "rule__Domain__Group_7_3__1"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__1__Impl"
-    // InternalVertigoDsl.g:3279:1: rule__Domain__Group_1_0_2__1__Impl : ( ':' ) ;
-    public final void rule__Domain__Group_1_0_2__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__1__Impl"
+    // InternalVertigoDsl.g:3279:1: rule__Domain__Group_7_3__1__Impl : ( ':' ) ;
+    public final void rule__Domain__Group_7_3__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -9975,9 +9975,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3284:1: ( ':' )
             // InternalVertigoDsl.g:3285:2: ':'
             {
-             before(grammarAccess.getDomainAccess().getColonKeyword_1_0_2_1()); 
+             before(grammarAccess.getDomainAccess().getColonKeyword_7_3_1()); 
             match(input,39,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getColonKeyword_1_0_2_1()); 
+             after(grammarAccess.getDomainAccess().getColonKeyword_7_3_1()); 
 
             }
 
@@ -9996,26 +9996,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__1__Impl"
+    // $ANTLR end "rule__Domain__Group_7_3__1__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__2"
-    // InternalVertigoDsl.g:3294:1: rule__Domain__Group_1_0_2__2 : rule__Domain__Group_1_0_2__2__Impl rule__Domain__Group_1_0_2__3 ;
-    public final void rule__Domain__Group_1_0_2__2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__2"
+    // InternalVertigoDsl.g:3294:1: rule__Domain__Group_7_3__2 : rule__Domain__Group_7_3__2__Impl rule__Domain__Group_7_3__3 ;
+    public final void rule__Domain__Group_7_3__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3298:1: ( rule__Domain__Group_1_0_2__2__Impl rule__Domain__Group_1_0_2__3 )
-            // InternalVertigoDsl.g:3299:2: rule__Domain__Group_1_0_2__2__Impl rule__Domain__Group_1_0_2__3
+            // InternalVertigoDsl.g:3298:1: ( rule__Domain__Group_7_3__2__Impl rule__Domain__Group_7_3__3 )
+            // InternalVertigoDsl.g:3299:2: rule__Domain__Group_7_3__2__Impl rule__Domain__Group_7_3__3
             {
             pushFollow(FOLLOW_9);
-            rule__Domain__Group_1_0_2__2__Impl();
+            rule__Domain__Group_7_3__2__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_2__3();
+            rule__Domain__Group_7_3__3();
 
             state._fsp--;
 
@@ -10034,12 +10034,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__2"
+    // $ANTLR end "rule__Domain__Group_7_3__2"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__2__Impl"
-    // InternalVertigoDsl.g:3306:1: rule__Domain__Group_1_0_2__2__Impl : ( '[' ) ;
-    public final void rule__Domain__Group_1_0_2__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__2__Impl"
+    // InternalVertigoDsl.g:3306:1: rule__Domain__Group_7_3__2__Impl : ( '[' ) ;
+    public final void rule__Domain__Group_7_3__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10050,9 +10050,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3311:1: ( '[' )
             // InternalVertigoDsl.g:3312:2: '['
             {
-             before(grammarAccess.getDomainAccess().getLeftSquareBracketKeyword_1_0_2_2()); 
+             before(grammarAccess.getDomainAccess().getLeftSquareBracketKeyword_7_3_2()); 
             match(input,51,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getLeftSquareBracketKeyword_1_0_2_2()); 
+             after(grammarAccess.getDomainAccess().getLeftSquareBracketKeyword_7_3_2()); 
 
             }
 
@@ -10071,26 +10071,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__2__Impl"
+    // $ANTLR end "rule__Domain__Group_7_3__2__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__3"
-    // InternalVertigoDsl.g:3321:1: rule__Domain__Group_1_0_2__3 : rule__Domain__Group_1_0_2__3__Impl rule__Domain__Group_1_0_2__4 ;
-    public final void rule__Domain__Group_1_0_2__3() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__3"
+    // InternalVertigoDsl.g:3321:1: rule__Domain__Group_7_3__3 : rule__Domain__Group_7_3__3__Impl rule__Domain__Group_7_3__4 ;
+    public final void rule__Domain__Group_7_3__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3325:1: ( rule__Domain__Group_1_0_2__3__Impl rule__Domain__Group_1_0_2__4 )
-            // InternalVertigoDsl.g:3326:2: rule__Domain__Group_1_0_2__3__Impl rule__Domain__Group_1_0_2__4
+            // InternalVertigoDsl.g:3325:1: ( rule__Domain__Group_7_3__3__Impl rule__Domain__Group_7_3__4 )
+            // InternalVertigoDsl.g:3326:2: rule__Domain__Group_7_3__3__Impl rule__Domain__Group_7_3__4
             {
             pushFollow(FOLLOW_26);
-            rule__Domain__Group_1_0_2__3__Impl();
+            rule__Domain__Group_7_3__3__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_2__4();
+            rule__Domain__Group_7_3__4();
 
             state._fsp--;
 
@@ -10109,35 +10109,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__3"
+    // $ANTLR end "rule__Domain__Group_7_3__3"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__3__Impl"
-    // InternalVertigoDsl.g:3333:1: rule__Domain__Group_1_0_2__3__Impl : ( ( rule__Domain__ConstraintAssignment_1_0_2_3 ) ) ;
-    public final void rule__Domain__Group_1_0_2__3__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__3__Impl"
+    // InternalVertigoDsl.g:3333:1: rule__Domain__Group_7_3__3__Impl : ( ( rule__Domain__ConstraintAssignment_7_3_3 ) ) ;
+    public final void rule__Domain__Group_7_3__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3337:1: ( ( ( rule__Domain__ConstraintAssignment_1_0_2_3 ) ) )
-            // InternalVertigoDsl.g:3338:1: ( ( rule__Domain__ConstraintAssignment_1_0_2_3 ) )
+            // InternalVertigoDsl.g:3337:1: ( ( ( rule__Domain__ConstraintAssignment_7_3_3 ) ) )
+            // InternalVertigoDsl.g:3338:1: ( ( rule__Domain__ConstraintAssignment_7_3_3 ) )
             {
-            // InternalVertigoDsl.g:3338:1: ( ( rule__Domain__ConstraintAssignment_1_0_2_3 ) )
-            // InternalVertigoDsl.g:3339:2: ( rule__Domain__ConstraintAssignment_1_0_2_3 )
+            // InternalVertigoDsl.g:3338:1: ( ( rule__Domain__ConstraintAssignment_7_3_3 ) )
+            // InternalVertigoDsl.g:3339:2: ( rule__Domain__ConstraintAssignment_7_3_3 )
             {
-             before(grammarAccess.getDomainAccess().getConstraintAssignment_1_0_2_3()); 
-            // InternalVertigoDsl.g:3340:2: ( rule__Domain__ConstraintAssignment_1_0_2_3 )
-            // InternalVertigoDsl.g:3340:3: rule__Domain__ConstraintAssignment_1_0_2_3
+             before(grammarAccess.getDomainAccess().getConstraintAssignment_7_3_3()); 
+            // InternalVertigoDsl.g:3340:2: ( rule__Domain__ConstraintAssignment_7_3_3 )
+            // InternalVertigoDsl.g:3340:3: rule__Domain__ConstraintAssignment_7_3_3
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__ConstraintAssignment_1_0_2_3();
+            rule__Domain__ConstraintAssignment_7_3_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getConstraintAssignment_1_0_2_3()); 
+             after(grammarAccess.getDomainAccess().getConstraintAssignment_7_3_3()); 
 
             }
 
@@ -10156,26 +10156,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__3__Impl"
+    // $ANTLR end "rule__Domain__Group_7_3__3__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__4"
-    // InternalVertigoDsl.g:3348:1: rule__Domain__Group_1_0_2__4 : rule__Domain__Group_1_0_2__4__Impl rule__Domain__Group_1_0_2__5 ;
-    public final void rule__Domain__Group_1_0_2__4() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__4"
+    // InternalVertigoDsl.g:3348:1: rule__Domain__Group_7_3__4 : rule__Domain__Group_7_3__4__Impl rule__Domain__Group_7_3__5 ;
+    public final void rule__Domain__Group_7_3__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3352:1: ( rule__Domain__Group_1_0_2__4__Impl rule__Domain__Group_1_0_2__5 )
-            // InternalVertigoDsl.g:3353:2: rule__Domain__Group_1_0_2__4__Impl rule__Domain__Group_1_0_2__5
+            // InternalVertigoDsl.g:3352:1: ( rule__Domain__Group_7_3__4__Impl rule__Domain__Group_7_3__5 )
+            // InternalVertigoDsl.g:3353:2: rule__Domain__Group_7_3__4__Impl rule__Domain__Group_7_3__5
             {
             pushFollow(FOLLOW_26);
-            rule__Domain__Group_1_0_2__4__Impl();
+            rule__Domain__Group_7_3__4__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_2__5();
+            rule__Domain__Group_7_3__5();
 
             state._fsp--;
 
@@ -10194,24 +10194,24 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__4"
+    // $ANTLR end "rule__Domain__Group_7_3__4"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__4__Impl"
-    // InternalVertigoDsl.g:3360:1: rule__Domain__Group_1_0_2__4__Impl : ( ( rule__Domain__Group_1_0_2_4__0 )* ) ;
-    public final void rule__Domain__Group_1_0_2__4__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__4__Impl"
+    // InternalVertigoDsl.g:3360:1: rule__Domain__Group_7_3__4__Impl : ( ( rule__Domain__Group_7_3_4__0 )* ) ;
+    public final void rule__Domain__Group_7_3__4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3364:1: ( ( ( rule__Domain__Group_1_0_2_4__0 )* ) )
-            // InternalVertigoDsl.g:3365:1: ( ( rule__Domain__Group_1_0_2_4__0 )* )
+            // InternalVertigoDsl.g:3364:1: ( ( ( rule__Domain__Group_7_3_4__0 )* ) )
+            // InternalVertigoDsl.g:3365:1: ( ( rule__Domain__Group_7_3_4__0 )* )
             {
-            // InternalVertigoDsl.g:3365:1: ( ( rule__Domain__Group_1_0_2_4__0 )* )
-            // InternalVertigoDsl.g:3366:2: ( rule__Domain__Group_1_0_2_4__0 )*
+            // InternalVertigoDsl.g:3365:1: ( ( rule__Domain__Group_7_3_4__0 )* )
+            // InternalVertigoDsl.g:3366:2: ( rule__Domain__Group_7_3_4__0 )*
             {
-             before(grammarAccess.getDomainAccess().getGroup_1_0_2_4()); 
-            // InternalVertigoDsl.g:3367:2: ( rule__Domain__Group_1_0_2_4__0 )*
+             before(grammarAccess.getDomainAccess().getGroup_7_3_4()); 
+            // InternalVertigoDsl.g:3367:2: ( rule__Domain__Group_7_3_4__0 )*
             loop15:
             do {
                 int alt15=2;
@@ -10224,10 +10224,10 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                 switch (alt15) {
             	case 1 :
-            	    // InternalVertigoDsl.g:3367:3: rule__Domain__Group_1_0_2_4__0
+            	    // InternalVertigoDsl.g:3367:3: rule__Domain__Group_7_3_4__0
             	    {
             	    pushFollow(FOLLOW_27);
-            	    rule__Domain__Group_1_0_2_4__0();
+            	    rule__Domain__Group_7_3_4__0();
 
             	    state._fsp--;
 
@@ -10240,7 +10240,7 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-             after(grammarAccess.getDomainAccess().getGroup_1_0_2_4()); 
+             after(grammarAccess.getDomainAccess().getGroup_7_3_4()); 
 
             }
 
@@ -10259,21 +10259,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__4__Impl"
+    // $ANTLR end "rule__Domain__Group_7_3__4__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__5"
-    // InternalVertigoDsl.g:3375:1: rule__Domain__Group_1_0_2__5 : rule__Domain__Group_1_0_2__5__Impl ;
-    public final void rule__Domain__Group_1_0_2__5() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__5"
+    // InternalVertigoDsl.g:3375:1: rule__Domain__Group_7_3__5 : rule__Domain__Group_7_3__5__Impl ;
+    public final void rule__Domain__Group_7_3__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3379:1: ( rule__Domain__Group_1_0_2__5__Impl )
-            // InternalVertigoDsl.g:3380:2: rule__Domain__Group_1_0_2__5__Impl
+            // InternalVertigoDsl.g:3379:1: ( rule__Domain__Group_7_3__5__Impl )
+            // InternalVertigoDsl.g:3380:2: rule__Domain__Group_7_3__5__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_2__5__Impl();
+            rule__Domain__Group_7_3__5__Impl();
 
             state._fsp--;
 
@@ -10292,12 +10292,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__5"
+    // $ANTLR end "rule__Domain__Group_7_3__5"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2__5__Impl"
-    // InternalVertigoDsl.g:3386:1: rule__Domain__Group_1_0_2__5__Impl : ( ']' ) ;
-    public final void rule__Domain__Group_1_0_2__5__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3__5__Impl"
+    // InternalVertigoDsl.g:3386:1: rule__Domain__Group_7_3__5__Impl : ( ']' ) ;
+    public final void rule__Domain__Group_7_3__5__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10308,9 +10308,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3391:1: ( ']' )
             // InternalVertigoDsl.g:3392:2: ']'
             {
-             before(grammarAccess.getDomainAccess().getRightSquareBracketKeyword_1_0_2_5()); 
+             before(grammarAccess.getDomainAccess().getRightSquareBracketKeyword_7_3_5()); 
             match(input,52,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getRightSquareBracketKeyword_1_0_2_5()); 
+             after(grammarAccess.getDomainAccess().getRightSquareBracketKeyword_7_3_5()); 
 
             }
 
@@ -10329,26 +10329,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2__5__Impl"
+    // $ANTLR end "rule__Domain__Group_7_3__5__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2_4__0"
-    // InternalVertigoDsl.g:3402:1: rule__Domain__Group_1_0_2_4__0 : rule__Domain__Group_1_0_2_4__0__Impl rule__Domain__Group_1_0_2_4__1 ;
-    public final void rule__Domain__Group_1_0_2_4__0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3_4__0"
+    // InternalVertigoDsl.g:3402:1: rule__Domain__Group_7_3_4__0 : rule__Domain__Group_7_3_4__0__Impl rule__Domain__Group_7_3_4__1 ;
+    public final void rule__Domain__Group_7_3_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3406:1: ( rule__Domain__Group_1_0_2_4__0__Impl rule__Domain__Group_1_0_2_4__1 )
-            // InternalVertigoDsl.g:3407:2: rule__Domain__Group_1_0_2_4__0__Impl rule__Domain__Group_1_0_2_4__1
+            // InternalVertigoDsl.g:3406:1: ( rule__Domain__Group_7_3_4__0__Impl rule__Domain__Group_7_3_4__1 )
+            // InternalVertigoDsl.g:3407:2: rule__Domain__Group_7_3_4__0__Impl rule__Domain__Group_7_3_4__1
             {
             pushFollow(FOLLOW_9);
-            rule__Domain__Group_1_0_2_4__0__Impl();
+            rule__Domain__Group_7_3_4__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_2_4__1();
+            rule__Domain__Group_7_3_4__1();
 
             state._fsp--;
 
@@ -10367,12 +10367,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2_4__0"
+    // $ANTLR end "rule__Domain__Group_7_3_4__0"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2_4__0__Impl"
-    // InternalVertigoDsl.g:3414:1: rule__Domain__Group_1_0_2_4__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
-    public final void rule__Domain__Group_1_0_2_4__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3_4__0__Impl"
+    // InternalVertigoDsl.g:3414:1: rule__Domain__Group_7_3_4__0__Impl : ( ( ( ',' ) ) ( ( ',' )* ) ) ;
+    public final void rule__Domain__Group_7_3_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10386,7 +10386,7 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3420:2: ( ( ',' ) )
             // InternalVertigoDsl.g:3421:3: ( ',' )
             {
-             before(grammarAccess.getDomainAccess().getCommaKeyword_1_0_2_4_0()); 
+             before(grammarAccess.getDomainAccess().getCommaKeyword_7_3_4_0()); 
             // InternalVertigoDsl.g:3422:3: ( ',' )
             // InternalVertigoDsl.g:3422:4: ','
             {
@@ -10394,14 +10394,14 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
             }
 
-             after(grammarAccess.getDomainAccess().getCommaKeyword_1_0_2_4_0()); 
+             after(grammarAccess.getDomainAccess().getCommaKeyword_7_3_4_0()); 
 
             }
 
             // InternalVertigoDsl.g:3425:2: ( ( ',' )* )
             // InternalVertigoDsl.g:3426:3: ( ',' )*
             {
-             before(grammarAccess.getDomainAccess().getCommaKeyword_1_0_2_4_0()); 
+             before(grammarAccess.getDomainAccess().getCommaKeyword_7_3_4_0()); 
             // InternalVertigoDsl.g:3427:3: ( ',' )*
             loop16:
             do {
@@ -10427,7 +10427,7 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                 }
             } while (true);
 
-             after(grammarAccess.getDomainAccess().getCommaKeyword_1_0_2_4_0()); 
+             after(grammarAccess.getDomainAccess().getCommaKeyword_7_3_4_0()); 
 
             }
 
@@ -10449,21 +10449,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2_4__0__Impl"
+    // $ANTLR end "rule__Domain__Group_7_3_4__0__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2_4__1"
-    // InternalVertigoDsl.g:3436:1: rule__Domain__Group_1_0_2_4__1 : rule__Domain__Group_1_0_2_4__1__Impl ;
-    public final void rule__Domain__Group_1_0_2_4__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3_4__1"
+    // InternalVertigoDsl.g:3436:1: rule__Domain__Group_7_3_4__1 : rule__Domain__Group_7_3_4__1__Impl ;
+    public final void rule__Domain__Group_7_3_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3440:1: ( rule__Domain__Group_1_0_2_4__1__Impl )
-            // InternalVertigoDsl.g:3441:2: rule__Domain__Group_1_0_2_4__1__Impl
+            // InternalVertigoDsl.g:3440:1: ( rule__Domain__Group_7_3_4__1__Impl )
+            // InternalVertigoDsl.g:3441:2: rule__Domain__Group_7_3_4__1__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_2_4__1__Impl();
+            rule__Domain__Group_7_3_4__1__Impl();
 
             state._fsp--;
 
@@ -10482,35 +10482,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2_4__1"
+    // $ANTLR end "rule__Domain__Group_7_3_4__1"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_2_4__1__Impl"
-    // InternalVertigoDsl.g:3447:1: rule__Domain__Group_1_0_2_4__1__Impl : ( ( rule__Domain__ConstraintsAssignment_1_0_2_4_1 ) ) ;
-    public final void rule__Domain__Group_1_0_2_4__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_3_4__1__Impl"
+    // InternalVertigoDsl.g:3447:1: rule__Domain__Group_7_3_4__1__Impl : ( ( rule__Domain__ConstraintsAssignment_7_3_4_1 ) ) ;
+    public final void rule__Domain__Group_7_3_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3451:1: ( ( ( rule__Domain__ConstraintsAssignment_1_0_2_4_1 ) ) )
-            // InternalVertigoDsl.g:3452:1: ( ( rule__Domain__ConstraintsAssignment_1_0_2_4_1 ) )
+            // InternalVertigoDsl.g:3451:1: ( ( ( rule__Domain__ConstraintsAssignment_7_3_4_1 ) ) )
+            // InternalVertigoDsl.g:3452:1: ( ( rule__Domain__ConstraintsAssignment_7_3_4_1 ) )
             {
-            // InternalVertigoDsl.g:3452:1: ( ( rule__Domain__ConstraintsAssignment_1_0_2_4_1 ) )
-            // InternalVertigoDsl.g:3453:2: ( rule__Domain__ConstraintsAssignment_1_0_2_4_1 )
+            // InternalVertigoDsl.g:3452:1: ( ( rule__Domain__ConstraintsAssignment_7_3_4_1 ) )
+            // InternalVertigoDsl.g:3453:2: ( rule__Domain__ConstraintsAssignment_7_3_4_1 )
             {
-             before(grammarAccess.getDomainAccess().getConstraintsAssignment_1_0_2_4_1()); 
-            // InternalVertigoDsl.g:3454:2: ( rule__Domain__ConstraintsAssignment_1_0_2_4_1 )
-            // InternalVertigoDsl.g:3454:3: rule__Domain__ConstraintsAssignment_1_0_2_4_1
+             before(grammarAccess.getDomainAccess().getConstraintsAssignment_7_3_4_1()); 
+            // InternalVertigoDsl.g:3454:2: ( rule__Domain__ConstraintsAssignment_7_3_4_1 )
+            // InternalVertigoDsl.g:3454:3: rule__Domain__ConstraintsAssignment_7_3_4_1
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__ConstraintsAssignment_1_0_2_4_1();
+            rule__Domain__ConstraintsAssignment_7_3_4_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getConstraintsAssignment_1_0_2_4_1()); 
+             after(grammarAccess.getDomainAccess().getConstraintsAssignment_7_3_4_1()); 
 
             }
 
@@ -10529,26 +10529,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_2_4__1__Impl"
+    // $ANTLR end "rule__Domain__Group_7_3_4__1__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_3__0"
-    // InternalVertigoDsl.g:3463:1: rule__Domain__Group_1_0_3__0 : rule__Domain__Group_1_0_3__0__Impl rule__Domain__Group_1_0_3__1 ;
-    public final void rule__Domain__Group_1_0_3__0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_4__0"
+    // InternalVertigoDsl.g:3463:1: rule__Domain__Group_7_4__0 : rule__Domain__Group_7_4__0__Impl rule__Domain__Group_7_4__1 ;
+    public final void rule__Domain__Group_7_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3467:1: ( rule__Domain__Group_1_0_3__0__Impl rule__Domain__Group_1_0_3__1 )
-            // InternalVertigoDsl.g:3468:2: rule__Domain__Group_1_0_3__0__Impl rule__Domain__Group_1_0_3__1
+            // InternalVertigoDsl.g:3467:1: ( rule__Domain__Group_7_4__0__Impl rule__Domain__Group_7_4__1 )
+            // InternalVertigoDsl.g:3468:2: rule__Domain__Group_7_4__0__Impl rule__Domain__Group_7_4__1
             {
             pushFollow(FOLLOW_14);
-            rule__Domain__Group_1_0_3__0__Impl();
+            rule__Domain__Group_7_4__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_3__1();
+            rule__Domain__Group_7_4__1();
 
             state._fsp--;
 
@@ -10567,12 +10567,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_3__0"
+    // $ANTLR end "rule__Domain__Group_7_4__0"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_3__0__Impl"
-    // InternalVertigoDsl.g:3475:1: rule__Domain__Group_1_0_3__0__Impl : ( 'multiple' ) ;
-    public final void rule__Domain__Group_1_0_3__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_4__0__Impl"
+    // InternalVertigoDsl.g:3475:1: rule__Domain__Group_7_4__0__Impl : ( 'multiple' ) ;
+    public final void rule__Domain__Group_7_4__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10583,9 +10583,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3480:1: ( 'multiple' )
             // InternalVertigoDsl.g:3481:2: 'multiple'
             {
-             before(grammarAccess.getDomainAccess().getMultipleKeyword_1_0_3_0()); 
+             before(grammarAccess.getDomainAccess().getMultipleKeyword_7_4_0()); 
             match(input,54,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getMultipleKeyword_1_0_3_0()); 
+             after(grammarAccess.getDomainAccess().getMultipleKeyword_7_4_0()); 
 
             }
 
@@ -10604,26 +10604,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_3__0__Impl"
+    // $ANTLR end "rule__Domain__Group_7_4__0__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_3__1"
-    // InternalVertigoDsl.g:3490:1: rule__Domain__Group_1_0_3__1 : rule__Domain__Group_1_0_3__1__Impl rule__Domain__Group_1_0_3__2 ;
-    public final void rule__Domain__Group_1_0_3__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_4__1"
+    // InternalVertigoDsl.g:3490:1: rule__Domain__Group_7_4__1 : rule__Domain__Group_7_4__1__Impl rule__Domain__Group_7_4__2 ;
+    public final void rule__Domain__Group_7_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3494:1: ( rule__Domain__Group_1_0_3__1__Impl rule__Domain__Group_1_0_3__2 )
-            // InternalVertigoDsl.g:3495:2: rule__Domain__Group_1_0_3__1__Impl rule__Domain__Group_1_0_3__2
+            // InternalVertigoDsl.g:3494:1: ( rule__Domain__Group_7_4__1__Impl rule__Domain__Group_7_4__2 )
+            // InternalVertigoDsl.g:3495:2: rule__Domain__Group_7_4__1__Impl rule__Domain__Group_7_4__2
             {
             pushFollow(FOLLOW_28);
-            rule__Domain__Group_1_0_3__1__Impl();
+            rule__Domain__Group_7_4__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_3__2();
+            rule__Domain__Group_7_4__2();
 
             state._fsp--;
 
@@ -10642,12 +10642,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_3__1"
+    // $ANTLR end "rule__Domain__Group_7_4__1"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_3__1__Impl"
-    // InternalVertigoDsl.g:3502:1: rule__Domain__Group_1_0_3__1__Impl : ( ':' ) ;
-    public final void rule__Domain__Group_1_0_3__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_4__1__Impl"
+    // InternalVertigoDsl.g:3502:1: rule__Domain__Group_7_4__1__Impl : ( ':' ) ;
+    public final void rule__Domain__Group_7_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10658,9 +10658,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3507:1: ( ':' )
             // InternalVertigoDsl.g:3508:2: ':'
             {
-             before(grammarAccess.getDomainAccess().getColonKeyword_1_0_3_1()); 
+             before(grammarAccess.getDomainAccess().getColonKeyword_7_4_1()); 
             match(input,39,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getColonKeyword_1_0_3_1()); 
+             after(grammarAccess.getDomainAccess().getColonKeyword_7_4_1()); 
 
             }
 
@@ -10679,21 +10679,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_3__1__Impl"
+    // $ANTLR end "rule__Domain__Group_7_4__1__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_3__2"
-    // InternalVertigoDsl.g:3517:1: rule__Domain__Group_1_0_3__2 : rule__Domain__Group_1_0_3__2__Impl ;
-    public final void rule__Domain__Group_1_0_3__2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_4__2"
+    // InternalVertigoDsl.g:3517:1: rule__Domain__Group_7_4__2 : rule__Domain__Group_7_4__2__Impl ;
+    public final void rule__Domain__Group_7_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3521:1: ( rule__Domain__Group_1_0_3__2__Impl )
-            // InternalVertigoDsl.g:3522:2: rule__Domain__Group_1_0_3__2__Impl
+            // InternalVertigoDsl.g:3521:1: ( rule__Domain__Group_7_4__2__Impl )
+            // InternalVertigoDsl.g:3522:2: rule__Domain__Group_7_4__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_3__2__Impl();
+            rule__Domain__Group_7_4__2__Impl();
 
             state._fsp--;
 
@@ -10712,35 +10712,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_3__2"
+    // $ANTLR end "rule__Domain__Group_7_4__2"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_3__2__Impl"
-    // InternalVertigoDsl.g:3528:1: rule__Domain__Group_1_0_3__2__Impl : ( ( rule__Domain__MultipleAssignment_1_0_3_2 ) ) ;
-    public final void rule__Domain__Group_1_0_3__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_4__2__Impl"
+    // InternalVertigoDsl.g:3528:1: rule__Domain__Group_7_4__2__Impl : ( ( rule__Domain__MultipleAssignment_7_4_2 ) ) ;
+    public final void rule__Domain__Group_7_4__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3532:1: ( ( ( rule__Domain__MultipleAssignment_1_0_3_2 ) ) )
-            // InternalVertigoDsl.g:3533:1: ( ( rule__Domain__MultipleAssignment_1_0_3_2 ) )
+            // InternalVertigoDsl.g:3532:1: ( ( ( rule__Domain__MultipleAssignment_7_4_2 ) ) )
+            // InternalVertigoDsl.g:3533:1: ( ( rule__Domain__MultipleAssignment_7_4_2 ) )
             {
-            // InternalVertigoDsl.g:3533:1: ( ( rule__Domain__MultipleAssignment_1_0_3_2 ) )
-            // InternalVertigoDsl.g:3534:2: ( rule__Domain__MultipleAssignment_1_0_3_2 )
+            // InternalVertigoDsl.g:3533:1: ( ( rule__Domain__MultipleAssignment_7_4_2 ) )
+            // InternalVertigoDsl.g:3534:2: ( rule__Domain__MultipleAssignment_7_4_2 )
             {
-             before(grammarAccess.getDomainAccess().getMultipleAssignment_1_0_3_2()); 
-            // InternalVertigoDsl.g:3535:2: ( rule__Domain__MultipleAssignment_1_0_3_2 )
-            // InternalVertigoDsl.g:3535:3: rule__Domain__MultipleAssignment_1_0_3_2
+             before(grammarAccess.getDomainAccess().getMultipleAssignment_7_4_2()); 
+            // InternalVertigoDsl.g:3535:2: ( rule__Domain__MultipleAssignment_7_4_2 )
+            // InternalVertigoDsl.g:3535:3: rule__Domain__MultipleAssignment_7_4_2
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__MultipleAssignment_1_0_3_2();
+            rule__Domain__MultipleAssignment_7_4_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getMultipleAssignment_1_0_3_2()); 
+             after(grammarAccess.getDomainAccess().getMultipleAssignment_7_4_2()); 
 
             }
 
@@ -10759,26 +10759,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_3__2__Impl"
+    // $ANTLR end "rule__Domain__Group_7_4__2__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_4__0"
-    // InternalVertigoDsl.g:3544:1: rule__Domain__Group_1_0_4__0 : rule__Domain__Group_1_0_4__0__Impl rule__Domain__Group_1_0_4__1 ;
-    public final void rule__Domain__Group_1_0_4__0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_5__0"
+    // InternalVertigoDsl.g:3544:1: rule__Domain__Group_7_5__0 : rule__Domain__Group_7_5__0__Impl rule__Domain__Group_7_5__1 ;
+    public final void rule__Domain__Group_7_5__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3548:1: ( rule__Domain__Group_1_0_4__0__Impl rule__Domain__Group_1_0_4__1 )
-            // InternalVertigoDsl.g:3549:2: rule__Domain__Group_1_0_4__0__Impl rule__Domain__Group_1_0_4__1
+            // InternalVertigoDsl.g:3548:1: ( rule__Domain__Group_7_5__0__Impl rule__Domain__Group_7_5__1 )
+            // InternalVertigoDsl.g:3549:2: rule__Domain__Group_7_5__0__Impl rule__Domain__Group_7_5__1
             {
             pushFollow(FOLLOW_14);
-            rule__Domain__Group_1_0_4__0__Impl();
+            rule__Domain__Group_7_5__0__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_4__1();
+            rule__Domain__Group_7_5__1();
 
             state._fsp--;
 
@@ -10797,12 +10797,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_4__0"
+    // $ANTLR end "rule__Domain__Group_7_5__0"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_4__0__Impl"
-    // InternalVertigoDsl.g:3556:1: rule__Domain__Group_1_0_4__0__Impl : ( 'unit' ) ;
-    public final void rule__Domain__Group_1_0_4__0__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_5__0__Impl"
+    // InternalVertigoDsl.g:3556:1: rule__Domain__Group_7_5__0__Impl : ( 'unit' ) ;
+    public final void rule__Domain__Group_7_5__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10813,9 +10813,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3561:1: ( 'unit' )
             // InternalVertigoDsl.g:3562:2: 'unit'
             {
-             before(grammarAccess.getDomainAccess().getUnitKeyword_1_0_4_0()); 
+             before(grammarAccess.getDomainAccess().getUnitKeyword_7_5_0()); 
             match(input,55,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getUnitKeyword_1_0_4_0()); 
+             after(grammarAccess.getDomainAccess().getUnitKeyword_7_5_0()); 
 
             }
 
@@ -10834,26 +10834,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_4__0__Impl"
+    // $ANTLR end "rule__Domain__Group_7_5__0__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_4__1"
-    // InternalVertigoDsl.g:3571:1: rule__Domain__Group_1_0_4__1 : rule__Domain__Group_1_0_4__1__Impl rule__Domain__Group_1_0_4__2 ;
-    public final void rule__Domain__Group_1_0_4__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_5__1"
+    // InternalVertigoDsl.g:3571:1: rule__Domain__Group_7_5__1 : rule__Domain__Group_7_5__1__Impl rule__Domain__Group_7_5__2 ;
+    public final void rule__Domain__Group_7_5__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3575:1: ( rule__Domain__Group_1_0_4__1__Impl rule__Domain__Group_1_0_4__2 )
-            // InternalVertigoDsl.g:3576:2: rule__Domain__Group_1_0_4__1__Impl rule__Domain__Group_1_0_4__2
+            // InternalVertigoDsl.g:3575:1: ( rule__Domain__Group_7_5__1__Impl rule__Domain__Group_7_5__2 )
+            // InternalVertigoDsl.g:3576:2: rule__Domain__Group_7_5__1__Impl rule__Domain__Group_7_5__2
             {
             pushFollow(FOLLOW_15);
-            rule__Domain__Group_1_0_4__1__Impl();
+            rule__Domain__Group_7_5__1__Impl();
 
             state._fsp--;
 
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_4__2();
+            rule__Domain__Group_7_5__2();
 
             state._fsp--;
 
@@ -10872,12 +10872,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_4__1"
+    // $ANTLR end "rule__Domain__Group_7_5__1"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_4__1__Impl"
-    // InternalVertigoDsl.g:3583:1: rule__Domain__Group_1_0_4__1__Impl : ( ':' ) ;
-    public final void rule__Domain__Group_1_0_4__1__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_5__1__Impl"
+    // InternalVertigoDsl.g:3583:1: rule__Domain__Group_7_5__1__Impl : ( ':' ) ;
+    public final void rule__Domain__Group_7_5__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
@@ -10888,9 +10888,9 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             // InternalVertigoDsl.g:3588:1: ( ':' )
             // InternalVertigoDsl.g:3589:2: ':'
             {
-             before(grammarAccess.getDomainAccess().getColonKeyword_1_0_4_1()); 
+             before(grammarAccess.getDomainAccess().getColonKeyword_7_5_1()); 
             match(input,39,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getColonKeyword_1_0_4_1()); 
+             after(grammarAccess.getDomainAccess().getColonKeyword_7_5_1()); 
 
             }
 
@@ -10909,21 +10909,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_4__1__Impl"
+    // $ANTLR end "rule__Domain__Group_7_5__1__Impl"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_4__2"
-    // InternalVertigoDsl.g:3598:1: rule__Domain__Group_1_0_4__2 : rule__Domain__Group_1_0_4__2__Impl ;
-    public final void rule__Domain__Group_1_0_4__2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_5__2"
+    // InternalVertigoDsl.g:3598:1: rule__Domain__Group_7_5__2 : rule__Domain__Group_7_5__2__Impl ;
+    public final void rule__Domain__Group_7_5__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3602:1: ( rule__Domain__Group_1_0_4__2__Impl )
-            // InternalVertigoDsl.g:3603:2: rule__Domain__Group_1_0_4__2__Impl
+            // InternalVertigoDsl.g:3602:1: ( rule__Domain__Group_7_5__2__Impl )
+            // InternalVertigoDsl.g:3603:2: rule__Domain__Group_7_5__2__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__Group_1_0_4__2__Impl();
+            rule__Domain__Group_7_5__2__Impl();
 
             state._fsp--;
 
@@ -10942,35 +10942,35 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_4__2"
+    // $ANTLR end "rule__Domain__Group_7_5__2"
 
 
-    // $ANTLR start "rule__Domain__Group_1_0_4__2__Impl"
-    // InternalVertigoDsl.g:3609:1: rule__Domain__Group_1_0_4__2__Impl : ( ( rule__Domain__UnitAssignment_1_0_4_2 ) ) ;
-    public final void rule__Domain__Group_1_0_4__2__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__Group_7_5__2__Impl"
+    // InternalVertigoDsl.g:3609:1: rule__Domain__Group_7_5__2__Impl : ( ( rule__Domain__UnitAssignment_7_5_2 ) ) ;
+    public final void rule__Domain__Group_7_5__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:3613:1: ( ( ( rule__Domain__UnitAssignment_1_0_4_2 ) ) )
-            // InternalVertigoDsl.g:3614:1: ( ( rule__Domain__UnitAssignment_1_0_4_2 ) )
+            // InternalVertigoDsl.g:3613:1: ( ( ( rule__Domain__UnitAssignment_7_5_2 ) ) )
+            // InternalVertigoDsl.g:3614:1: ( ( rule__Domain__UnitAssignment_7_5_2 ) )
             {
-            // InternalVertigoDsl.g:3614:1: ( ( rule__Domain__UnitAssignment_1_0_4_2 ) )
-            // InternalVertigoDsl.g:3615:2: ( rule__Domain__UnitAssignment_1_0_4_2 )
+            // InternalVertigoDsl.g:3614:1: ( ( rule__Domain__UnitAssignment_7_5_2 ) )
+            // InternalVertigoDsl.g:3615:2: ( rule__Domain__UnitAssignment_7_5_2 )
             {
-             before(grammarAccess.getDomainAccess().getUnitAssignment_1_0_4_2()); 
-            // InternalVertigoDsl.g:3616:2: ( rule__Domain__UnitAssignment_1_0_4_2 )
-            // InternalVertigoDsl.g:3616:3: rule__Domain__UnitAssignment_1_0_4_2
+             before(grammarAccess.getDomainAccess().getUnitAssignment_7_5_2()); 
+            // InternalVertigoDsl.g:3616:2: ( rule__Domain__UnitAssignment_7_5_2 )
+            // InternalVertigoDsl.g:3616:3: rule__Domain__UnitAssignment_7_5_2
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__UnitAssignment_1_0_4_2();
+            rule__Domain__UnitAssignment_7_5_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getDomainAccess().getUnitAssignment_1_0_4_2()); 
+             after(grammarAccess.getDomainAccess().getUnitAssignment_7_5_2()); 
 
             }
 
@@ -10989,7 +10989,7 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__Group_1_0_4__2__Impl"
+    // $ANTLR end "rule__Domain__Group_7_5__2__Impl"
 
 
     // $ANTLR start "rule__RefToDomainType__Group__0"
@@ -29396,24 +29396,24 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__IndexDefinitionLoaderId__Group__2__Impl"
 
 
-    // $ANTLR start "rule__Domain__UnorderedGroup"
-    // InternalVertigoDsl.g:9815:1: rule__Domain__UnorderedGroup : rule__Domain__UnorderedGroup__0 {...}?;
-    public final void rule__Domain__UnorderedGroup() throws RecognitionException {
+    // $ANTLR start "rule__Domain__UnorderedGroup_7"
+    // InternalVertigoDsl.g:9815:1: rule__Domain__UnorderedGroup_7 : rule__Domain__UnorderedGroup_7__0 {...}?;
+    public final void rule__Domain__UnorderedGroup_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
-        		getUnorderedGroupHelper().enter(grammarAccess.getDomainAccess().getUnorderedGroup());
+        		getUnorderedGroupHelper().enter(grammarAccess.getDomainAccess().getUnorderedGroup_7());
         	
         try {
-            // InternalVertigoDsl.g:9820:1: ( rule__Domain__UnorderedGroup__0 {...}?)
-            // InternalVertigoDsl.g:9821:2: rule__Domain__UnorderedGroup__0 {...}?
+            // InternalVertigoDsl.g:9820:1: ( rule__Domain__UnorderedGroup_7__0 {...}?)
+            // InternalVertigoDsl.g:9821:2: rule__Domain__UnorderedGroup_7__0 {...}?
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__UnorderedGroup__0();
+            rule__Domain__UnorderedGroup_7__0();
 
             state._fsp--;
 
-            if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup()) ) {
-                throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup", "getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup())");
+            if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup_7()) ) {
+                throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_7", "getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup_7())");
             }
 
             }
@@ -29425,35 +29425,47 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         finally {
 
-            	getUnorderedGroupHelper().leave(grammarAccess.getDomainAccess().getUnorderedGroup());
+            	getUnorderedGroupHelper().leave(grammarAccess.getDomainAccess().getUnorderedGroup_7());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__UnorderedGroup"
+    // $ANTLR end "rule__Domain__UnorderedGroup_7"
 
 
-    // $ANTLR start "rule__Domain__UnorderedGroup__Impl"
-    // InternalVertigoDsl.g:9829:1: rule__Domain__UnorderedGroup__Impl : ( ({...}? => ( ( ( rule__Domain__Group_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1__0 ) ) ) ) ) ;
-    public final void rule__Domain__UnorderedGroup__Impl() throws RecognitionException {
+    // $ANTLR start "rule__Domain__UnorderedGroup_7__Impl"
+    // InternalVertigoDsl.g:9829:1: rule__Domain__UnorderedGroup_7__Impl : ( ({...}? => ( ( ( rule__Domain__Group_7_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_5__0 ) ) ) ) ) ;
+    public final void rule__Domain__UnorderedGroup_7__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalVertigoDsl.g:9834:1: ( ( ({...}? => ( ( ( rule__Domain__Group_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1__0 ) ) ) ) ) )
-            // InternalVertigoDsl.g:9835:3: ( ({...}? => ( ( ( rule__Domain__Group_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1__0 ) ) ) ) )
+            // InternalVertigoDsl.g:9834:1: ( ( ({...}? => ( ( ( rule__Domain__Group_7_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_5__0 ) ) ) ) ) )
+            // InternalVertigoDsl.g:9835:3: ( ({...}? => ( ( ( rule__Domain__Group_7_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_5__0 ) ) ) ) )
             {
-            // InternalVertigoDsl.g:9835:3: ( ({...}? => ( ( ( rule__Domain__Group_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1__0 ) ) ) ) )
-            int alt62=2;
+            // InternalVertigoDsl.g:9835:3: ( ({...}? => ( ( ( rule__Domain__Group_7_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_7_5__0 ) ) ) ) )
+            int alt62=6;
             int LA62_0 = input.LA(1);
 
-            if ( LA62_0 >= 14 && LA62_0 <= 15 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 0) ) {
+            if ( LA62_0 == 47 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0) ) {
                 alt62=1;
             }
-            else if ( ( LA62_0 == 40 || LA62_0 >= 48 && LA62_0 <= 50 || LA62_0 >= 54 && LA62_0 <= 55 ) && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 1) ) {
+            else if ( LA62_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1) ) {
                 alt62=2;
+            }
+            else if ( LA62_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2) ) {
+                alt62=3;
+            }
+            else if ( LA62_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3) ) {
+                alt62=4;
+            }
+            else if ( LA62_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4) ) {
+                alt62=5;
+            }
+            else if ( LA62_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5) ) {
+                alt62=6;
             }
             else {
                 NoViableAltException nvae =
@@ -29463,39 +29475,39 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             }
             switch (alt62) {
                 case 1 :
-                    // InternalVertigoDsl.g:9836:3: ({...}? => ( ( ( rule__Domain__Group_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:9836:3: ({...}? => ( ( ( rule__Domain__Group_7_0__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:9836:3: ({...}? => ( ( ( rule__Domain__Group_0__0 ) ) ) )
-                    // InternalVertigoDsl.g:9837:4: {...}? => ( ( ( rule__Domain__Group_0__0 ) ) )
+                    // InternalVertigoDsl.g:9836:3: ({...}? => ( ( ( rule__Domain__Group_7_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:9837:4: {...}? => ( ( ( rule__Domain__Group_7_0__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 0) ) {
-                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 0)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0) ) {
+                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_7__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0)");
                     }
-                    // InternalVertigoDsl.g:9837:100: ( ( ( rule__Domain__Group_0__0 ) ) )
-                    // InternalVertigoDsl.g:9838:5: ( ( rule__Domain__Group_0__0 ) )
+                    // InternalVertigoDsl.g:9837:102: ( ( ( rule__Domain__Group_7_0__0 ) ) )
+                    // InternalVertigoDsl.g:9838:5: ( ( rule__Domain__Group_7_0__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup(), 0);
+                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0);
                     				
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:9844:5: ( ( rule__Domain__Group_0__0 ) )
-                    // InternalVertigoDsl.g:9845:6: ( rule__Domain__Group_0__0 )
+                    // InternalVertigoDsl.g:9844:5: ( ( rule__Domain__Group_7_0__0 ) )
+                    // InternalVertigoDsl.g:9845:6: ( rule__Domain__Group_7_0__0 )
                     {
-                     before(grammarAccess.getDomainAccess().getGroup_0()); 
-                    // InternalVertigoDsl.g:9846:6: ( rule__Domain__Group_0__0 )
-                    // InternalVertigoDsl.g:9846:7: rule__Domain__Group_0__0
+                     before(grammarAccess.getDomainAccess().getGroup_7_0()); 
+                    // InternalVertigoDsl.g:9846:6: ( rule__Domain__Group_7_0__0 )
+                    // InternalVertigoDsl.g:9846:7: rule__Domain__Group_7_0__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Domain__Group_0__0();
+                    rule__Domain__Group_7_0__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getDomainAccess().getGroup_0()); 
+                     after(grammarAccess.getDomainAccess().getGroup_7_0()); 
 
                     }
 
@@ -29509,339 +29521,39 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:9851:3: ({...}? => ( ( ( rule__Domain__Group_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:9851:3: ({...}? => ( ( ( rule__Domain__Group_7_1__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:9851:3: ({...}? => ( ( ( rule__Domain__Group_1__0 ) ) ) )
-                    // InternalVertigoDsl.g:9852:4: {...}? => ( ( ( rule__Domain__Group_1__0 ) ) )
+                    // InternalVertigoDsl.g:9851:3: ({...}? => ( ( ( rule__Domain__Group_7_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:9852:4: {...}? => ( ( ( rule__Domain__Group_7_1__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 1) ) {
-                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 1)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1) ) {
+                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_7__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1)");
                     }
-                    // InternalVertigoDsl.g:9852:100: ( ( ( rule__Domain__Group_1__0 ) ) )
-                    // InternalVertigoDsl.g:9853:5: ( ( rule__Domain__Group_1__0 ) )
+                    // InternalVertigoDsl.g:9852:102: ( ( ( rule__Domain__Group_7_1__0 ) ) )
+                    // InternalVertigoDsl.g:9853:5: ( ( rule__Domain__Group_7_1__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup(), 1);
+                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1);
                     				
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:9859:5: ( ( rule__Domain__Group_1__0 ) )
-                    // InternalVertigoDsl.g:9860:6: ( rule__Domain__Group_1__0 )
+                    // InternalVertigoDsl.g:9859:5: ( ( rule__Domain__Group_7_1__0 ) )
+                    // InternalVertigoDsl.g:9860:6: ( rule__Domain__Group_7_1__0 )
                     {
-                     before(grammarAccess.getDomainAccess().getGroup_1()); 
-                    // InternalVertigoDsl.g:9861:6: ( rule__Domain__Group_1__0 )
-                    // InternalVertigoDsl.g:9861:7: rule__Domain__Group_1__0
+                     before(grammarAccess.getDomainAccess().getGroup_7_1()); 
+                    // InternalVertigoDsl.g:9861:6: ( rule__Domain__Group_7_1__0 )
+                    // InternalVertigoDsl.g:9861:7: rule__Domain__Group_7_1__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Domain__Group_1__0();
+                    rule__Domain__Group_7_1__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getDomainAccess().getGroup_1()); 
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	if (selected)
-            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDomainAccess().getUnorderedGroup());
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__UnorderedGroup__Impl"
-
-
-    // $ANTLR start "rule__Domain__UnorderedGroup__0"
-    // InternalVertigoDsl.g:9874:1: rule__Domain__UnorderedGroup__0 : rule__Domain__UnorderedGroup__Impl ( rule__Domain__UnorderedGroup__1 )? ;
-    public final void rule__Domain__UnorderedGroup__0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:9878:1: ( rule__Domain__UnorderedGroup__Impl ( rule__Domain__UnorderedGroup__1 )? )
-            // InternalVertigoDsl.g:9879:2: rule__Domain__UnorderedGroup__Impl ( rule__Domain__UnorderedGroup__1 )?
-            {
-            pushFollow(FOLLOW_47);
-            rule__Domain__UnorderedGroup__Impl();
-
-            state._fsp--;
-
-            // InternalVertigoDsl.g:9880:2: ( rule__Domain__UnorderedGroup__1 )?
-            int alt63=2;
-            alt63 = dfa63.predict(input);
-            switch (alt63) {
-                case 1 :
-                    // InternalVertigoDsl.g:9880:2: rule__Domain__UnorderedGroup__1
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Domain__UnorderedGroup__1();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__UnorderedGroup__0"
-
-
-    // $ANTLR start "rule__Domain__UnorderedGroup__1"
-    // InternalVertigoDsl.g:9886:1: rule__Domain__UnorderedGroup__1 : rule__Domain__UnorderedGroup__Impl ;
-    public final void rule__Domain__UnorderedGroup__1() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:9890:1: ( rule__Domain__UnorderedGroup__Impl )
-            // InternalVertigoDsl.g:9891:2: rule__Domain__UnorderedGroup__Impl
-            {
-            pushFollow(FOLLOW_2);
-            rule__Domain__UnorderedGroup__Impl();
-
-            state._fsp--;
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__UnorderedGroup__1"
-
-
-    // $ANTLR start "rule__Domain__UnorderedGroup_1_0"
-    // InternalVertigoDsl.g:9898:1: rule__Domain__UnorderedGroup_1_0 : ( rule__Domain__UnorderedGroup_1_0__0 )? ;
-    public final void rule__Domain__UnorderedGroup_1_0() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        		getUnorderedGroupHelper().enter(grammarAccess.getDomainAccess().getUnorderedGroup_1_0());
-        	
-        try {
-            // InternalVertigoDsl.g:9903:1: ( ( rule__Domain__UnorderedGroup_1_0__0 )? )
-            // InternalVertigoDsl.g:9904:2: ( rule__Domain__UnorderedGroup_1_0__0 )?
-            {
-            // InternalVertigoDsl.g:9904:2: ( rule__Domain__UnorderedGroup_1_0__0 )?
-            int alt64=2;
-            int LA64_0 = input.LA(1);
-
-            if ( LA64_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0) ) {
-                alt64=1;
-            }
-            else if ( LA64_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1) ) {
-                alt64=1;
-            }
-            else if ( LA64_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2) ) {
-                alt64=1;
-            }
-            else if ( LA64_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3) ) {
-                alt64=1;
-            }
-            else if ( LA64_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4) ) {
-                alt64=1;
-            }
-            switch (alt64) {
-                case 1 :
-                    // InternalVertigoDsl.g:9904:2: rule__Domain__UnorderedGroup_1_0__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Domain__UnorderedGroup_1_0__0();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	getUnorderedGroupHelper().leave(grammarAccess.getDomainAccess().getUnorderedGroup_1_0());
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__UnorderedGroup_1_0"
-
-
-    // $ANTLR start "rule__Domain__UnorderedGroup_1_0__Impl"
-    // InternalVertigoDsl.g:9912:1: rule__Domain__UnorderedGroup_1_0__Impl : ( ({...}? => ( ( ( rule__Domain__Group_1_0_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_4__0 ) ) ) ) ) ;
-    public final void rule__Domain__UnorderedGroup_1_0__Impl() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        		boolean selected = false;
-        	
-        try {
-            // InternalVertigoDsl.g:9917:1: ( ( ({...}? => ( ( ( rule__Domain__Group_1_0_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_4__0 ) ) ) ) ) )
-            // InternalVertigoDsl.g:9918:3: ( ({...}? => ( ( ( rule__Domain__Group_1_0_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_4__0 ) ) ) ) )
-            {
-            // InternalVertigoDsl.g:9918:3: ( ({...}? => ( ( ( rule__Domain__Group_1_0_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Domain__Group_1_0_4__0 ) ) ) ) )
-            int alt65=5;
-            int LA65_0 = input.LA(1);
-
-            if ( LA65_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0) ) {
-                alt65=1;
-            }
-            else if ( LA65_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1) ) {
-                alt65=2;
-            }
-            else if ( LA65_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2) ) {
-                alt65=3;
-            }
-            else if ( LA65_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3) ) {
-                alt65=4;
-            }
-            else if ( LA65_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4) ) {
-                alt65=5;
-            }
-            else {
-                NoViableAltException nvae =
-                    new NoViableAltException("", 65, 0, input);
-
-                throw nvae;
-            }
-            switch (alt65) {
-                case 1 :
-                    // InternalVertigoDsl.g:9919:3: ({...}? => ( ( ( rule__Domain__Group_1_0_0__0 ) ) ) )
-                    {
-                    // InternalVertigoDsl.g:9919:3: ({...}? => ( ( ( rule__Domain__Group_1_0_0__0 ) ) ) )
-                    // InternalVertigoDsl.g:9920:4: {...}? => ( ( ( rule__Domain__Group_1_0_0__0 ) ) )
-                    {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0) ) {
-                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_1_0__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0)");
-                    }
-                    // InternalVertigoDsl.g:9920:104: ( ( ( rule__Domain__Group_1_0_0__0 ) ) )
-                    // InternalVertigoDsl.g:9921:5: ( ( rule__Domain__Group_1_0_0__0 ) )
-                    {
-
-                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0);
-                    				
-
-                    					selected = true;
-                    				
-                    // InternalVertigoDsl.g:9927:5: ( ( rule__Domain__Group_1_0_0__0 ) )
-                    // InternalVertigoDsl.g:9928:6: ( rule__Domain__Group_1_0_0__0 )
-                    {
-                     before(grammarAccess.getDomainAccess().getGroup_1_0_0()); 
-                    // InternalVertigoDsl.g:9929:6: ( rule__Domain__Group_1_0_0__0 )
-                    // InternalVertigoDsl.g:9929:7: rule__Domain__Group_1_0_0__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Domain__Group_1_0_0__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getDomainAccess().getGroup_1_0_0()); 
-
-                    }
-
-
-                    }
-
-
-                    }
-
-
-                    }
-                    break;
-                case 2 :
-                    // InternalVertigoDsl.g:9934:3: ({...}? => ( ( ( rule__Domain__Group_1_0_1__0 ) ) ) )
-                    {
-                    // InternalVertigoDsl.g:9934:3: ({...}? => ( ( ( rule__Domain__Group_1_0_1__0 ) ) ) )
-                    // InternalVertigoDsl.g:9935:4: {...}? => ( ( ( rule__Domain__Group_1_0_1__0 ) ) )
-                    {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1) ) {
-                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_1_0__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1)");
-                    }
-                    // InternalVertigoDsl.g:9935:104: ( ( ( rule__Domain__Group_1_0_1__0 ) ) )
-                    // InternalVertigoDsl.g:9936:5: ( ( rule__Domain__Group_1_0_1__0 ) )
-                    {
-
-                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1);
-                    				
-
-                    					selected = true;
-                    				
-                    // InternalVertigoDsl.g:9942:5: ( ( rule__Domain__Group_1_0_1__0 ) )
-                    // InternalVertigoDsl.g:9943:6: ( rule__Domain__Group_1_0_1__0 )
-                    {
-                     before(grammarAccess.getDomainAccess().getGroup_1_0_1()); 
-                    // InternalVertigoDsl.g:9944:6: ( rule__Domain__Group_1_0_1__0 )
-                    // InternalVertigoDsl.g:9944:7: rule__Domain__Group_1_0_1__0
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Domain__Group_1_0_1__0();
-
-                    state._fsp--;
-
-
-                    }
-
-                     after(grammarAccess.getDomainAccess().getGroup_1_0_1()); 
+                     after(grammarAccess.getDomainAccess().getGroup_7_1()); 
 
                     }
 
@@ -29855,39 +29567,39 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalVertigoDsl.g:9949:3: ({...}? => ( ( ( rule__Domain__Group_1_0_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:9866:3: ({...}? => ( ( ( rule__Domain__Group_7_2__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:9949:3: ({...}? => ( ( ( rule__Domain__Group_1_0_2__0 ) ) ) )
-                    // InternalVertigoDsl.g:9950:4: {...}? => ( ( ( rule__Domain__Group_1_0_2__0 ) ) )
+                    // InternalVertigoDsl.g:9866:3: ({...}? => ( ( ( rule__Domain__Group_7_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:9867:4: {...}? => ( ( ( rule__Domain__Group_7_2__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2) ) {
-                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_1_0__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2) ) {
+                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_7__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2)");
                     }
-                    // InternalVertigoDsl.g:9950:104: ( ( ( rule__Domain__Group_1_0_2__0 ) ) )
-                    // InternalVertigoDsl.g:9951:5: ( ( rule__Domain__Group_1_0_2__0 ) )
+                    // InternalVertigoDsl.g:9867:102: ( ( ( rule__Domain__Group_7_2__0 ) ) )
+                    // InternalVertigoDsl.g:9868:5: ( ( rule__Domain__Group_7_2__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2);
+                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2);
                     				
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:9957:5: ( ( rule__Domain__Group_1_0_2__0 ) )
-                    // InternalVertigoDsl.g:9958:6: ( rule__Domain__Group_1_0_2__0 )
+                    // InternalVertigoDsl.g:9874:5: ( ( rule__Domain__Group_7_2__0 ) )
+                    // InternalVertigoDsl.g:9875:6: ( rule__Domain__Group_7_2__0 )
                     {
-                     before(grammarAccess.getDomainAccess().getGroup_1_0_2()); 
-                    // InternalVertigoDsl.g:9959:6: ( rule__Domain__Group_1_0_2__0 )
-                    // InternalVertigoDsl.g:9959:7: rule__Domain__Group_1_0_2__0
+                     before(grammarAccess.getDomainAccess().getGroup_7_2()); 
+                    // InternalVertigoDsl.g:9876:6: ( rule__Domain__Group_7_2__0 )
+                    // InternalVertigoDsl.g:9876:7: rule__Domain__Group_7_2__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Domain__Group_1_0_2__0();
+                    rule__Domain__Group_7_2__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getDomainAccess().getGroup_1_0_2()); 
+                     after(grammarAccess.getDomainAccess().getGroup_7_2()); 
 
                     }
 
@@ -29901,39 +29613,39 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // InternalVertigoDsl.g:9964:3: ({...}? => ( ( ( rule__Domain__Group_1_0_3__0 ) ) ) )
+                    // InternalVertigoDsl.g:9881:3: ({...}? => ( ( ( rule__Domain__Group_7_3__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:9964:3: ({...}? => ( ( ( rule__Domain__Group_1_0_3__0 ) ) ) )
-                    // InternalVertigoDsl.g:9965:4: {...}? => ( ( ( rule__Domain__Group_1_0_3__0 ) ) )
+                    // InternalVertigoDsl.g:9881:3: ({...}? => ( ( ( rule__Domain__Group_7_3__0 ) ) ) )
+                    // InternalVertigoDsl.g:9882:4: {...}? => ( ( ( rule__Domain__Group_7_3__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3) ) {
-                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_1_0__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3) ) {
+                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_7__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3)");
                     }
-                    // InternalVertigoDsl.g:9965:104: ( ( ( rule__Domain__Group_1_0_3__0 ) ) )
-                    // InternalVertigoDsl.g:9966:5: ( ( rule__Domain__Group_1_0_3__0 ) )
+                    // InternalVertigoDsl.g:9882:102: ( ( ( rule__Domain__Group_7_3__0 ) ) )
+                    // InternalVertigoDsl.g:9883:5: ( ( rule__Domain__Group_7_3__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3);
+                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3);
                     				
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:9972:5: ( ( rule__Domain__Group_1_0_3__0 ) )
-                    // InternalVertigoDsl.g:9973:6: ( rule__Domain__Group_1_0_3__0 )
+                    // InternalVertigoDsl.g:9889:5: ( ( rule__Domain__Group_7_3__0 ) )
+                    // InternalVertigoDsl.g:9890:6: ( rule__Domain__Group_7_3__0 )
                     {
-                     before(grammarAccess.getDomainAccess().getGroup_1_0_3()); 
-                    // InternalVertigoDsl.g:9974:6: ( rule__Domain__Group_1_0_3__0 )
-                    // InternalVertigoDsl.g:9974:7: rule__Domain__Group_1_0_3__0
+                     before(grammarAccess.getDomainAccess().getGroup_7_3()); 
+                    // InternalVertigoDsl.g:9891:6: ( rule__Domain__Group_7_3__0 )
+                    // InternalVertigoDsl.g:9891:7: rule__Domain__Group_7_3__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Domain__Group_1_0_3__0();
+                    rule__Domain__Group_7_3__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getDomainAccess().getGroup_1_0_3()); 
+                     after(grammarAccess.getDomainAccess().getGroup_7_3()); 
 
                     }
 
@@ -29947,39 +29659,85 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // InternalVertigoDsl.g:9979:3: ({...}? => ( ( ( rule__Domain__Group_1_0_4__0 ) ) ) )
+                    // InternalVertigoDsl.g:9896:3: ({...}? => ( ( ( rule__Domain__Group_7_4__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:9979:3: ({...}? => ( ( ( rule__Domain__Group_1_0_4__0 ) ) ) )
-                    // InternalVertigoDsl.g:9980:4: {...}? => ( ( ( rule__Domain__Group_1_0_4__0 ) ) )
+                    // InternalVertigoDsl.g:9896:3: ({...}? => ( ( ( rule__Domain__Group_7_4__0 ) ) ) )
+                    // InternalVertigoDsl.g:9897:4: {...}? => ( ( ( rule__Domain__Group_7_4__0 ) ) )
                     {
-                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4) ) {
-                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_1_0__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4)");
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4) ) {
+                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_7__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4)");
                     }
-                    // InternalVertigoDsl.g:9980:104: ( ( ( rule__Domain__Group_1_0_4__0 ) ) )
-                    // InternalVertigoDsl.g:9981:5: ( ( rule__Domain__Group_1_0_4__0 ) )
+                    // InternalVertigoDsl.g:9897:102: ( ( ( rule__Domain__Group_7_4__0 ) ) )
+                    // InternalVertigoDsl.g:9898:5: ( ( rule__Domain__Group_7_4__0 ) )
                     {
 
-                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4);
+                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4);
                     				
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:9987:5: ( ( rule__Domain__Group_1_0_4__0 ) )
-                    // InternalVertigoDsl.g:9988:6: ( rule__Domain__Group_1_0_4__0 )
+                    // InternalVertigoDsl.g:9904:5: ( ( rule__Domain__Group_7_4__0 ) )
+                    // InternalVertigoDsl.g:9905:6: ( rule__Domain__Group_7_4__0 )
                     {
-                     before(grammarAccess.getDomainAccess().getGroup_1_0_4()); 
-                    // InternalVertigoDsl.g:9989:6: ( rule__Domain__Group_1_0_4__0 )
-                    // InternalVertigoDsl.g:9989:7: rule__Domain__Group_1_0_4__0
+                     before(grammarAccess.getDomainAccess().getGroup_7_4()); 
+                    // InternalVertigoDsl.g:9906:6: ( rule__Domain__Group_7_4__0 )
+                    // InternalVertigoDsl.g:9906:7: rule__Domain__Group_7_4__0
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Domain__Group_1_0_4__0();
+                    rule__Domain__Group_7_4__0();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getDomainAccess().getGroup_1_0_4()); 
+                     after(grammarAccess.getDomainAccess().getGroup_7_4()); 
+
+                    }
+
+
+                    }
+
+
+                    }
+
+
+                    }
+                    break;
+                case 6 :
+                    // InternalVertigoDsl.g:9911:3: ({...}? => ( ( ( rule__Domain__Group_7_5__0 ) ) ) )
+                    {
+                    // InternalVertigoDsl.g:9911:3: ({...}? => ( ( ( rule__Domain__Group_7_5__0 ) ) ) )
+                    // InternalVertigoDsl.g:9912:4: {...}? => ( ( ( rule__Domain__Group_7_5__0 ) ) )
+                    {
+                    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5) ) {
+                        throw new FailedPredicateException(input, "rule__Domain__UnorderedGroup_7__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5)");
+                    }
+                    // InternalVertigoDsl.g:9912:102: ( ( ( rule__Domain__Group_7_5__0 ) ) )
+                    // InternalVertigoDsl.g:9913:5: ( ( rule__Domain__Group_7_5__0 ) )
+                    {
+
+                    					getUnorderedGroupHelper().select(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5);
+                    				
+
+                    					selected = true;
+                    				
+                    // InternalVertigoDsl.g:9919:5: ( ( rule__Domain__Group_7_5__0 ) )
+                    // InternalVertigoDsl.g:9920:6: ( rule__Domain__Group_7_5__0 )
+                    {
+                     before(grammarAccess.getDomainAccess().getGroup_7_5()); 
+                    // InternalVertigoDsl.g:9921:6: ( rule__Domain__Group_7_5__0 )
+                    // InternalVertigoDsl.g:9921:7: rule__Domain__Group_7_5__0
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Domain__Group_7_5__0();
+
+                    state._fsp--;
+
+
+                    }
+
+                     after(grammarAccess.getDomainAccess().getGroup_7_5()); 
 
                     }
 
@@ -30006,55 +29764,268 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         finally {
 
             	if (selected)
-            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDomainAccess().getUnorderedGroup_1_0());
+            		getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDomainAccess().getUnorderedGroup_7());
             	restoreStackSize(stackSize);
 
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__UnorderedGroup_1_0__Impl"
+    // $ANTLR end "rule__Domain__UnorderedGroup_7__Impl"
 
 
-    // $ANTLR start "rule__Domain__UnorderedGroup_1_0__0"
-    // InternalVertigoDsl.g:10002:1: rule__Domain__UnorderedGroup_1_0__0 : rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__1 )? ;
-    public final void rule__Domain__UnorderedGroup_1_0__0() throws RecognitionException {
+    // $ANTLR start "rule__Domain__UnorderedGroup_7__0"
+    // InternalVertigoDsl.g:9934:1: rule__Domain__UnorderedGroup_7__0 : rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__1 )? ;
+    public final void rule__Domain__UnorderedGroup_7__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10006:1: ( rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__1 )? )
-            // InternalVertigoDsl.g:10007:2: rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__1 )?
+            // InternalVertigoDsl.g:9938:1: ( rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__1 )? )
+            // InternalVertigoDsl.g:9939:2: rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__1 )?
             {
-            pushFollow(FOLLOW_48);
-            rule__Domain__UnorderedGroup_1_0__Impl();
+            pushFollow(FOLLOW_47);
+            rule__Domain__UnorderedGroup_7__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10008:2: ( rule__Domain__UnorderedGroup_1_0__1 )?
+            // InternalVertigoDsl.g:9940:2: ( rule__Domain__UnorderedGroup_7__1 )?
+            int alt63=2;
+            int LA63_0 = input.LA(1);
+
+            if ( LA63_0 == 47 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0) ) {
+                alt63=1;
+            }
+            else if ( LA63_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1) ) {
+                alt63=1;
+            }
+            else if ( LA63_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2) ) {
+                alt63=1;
+            }
+            else if ( LA63_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3) ) {
+                alt63=1;
+            }
+            else if ( LA63_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4) ) {
+                alt63=1;
+            }
+            else if ( LA63_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5) ) {
+                alt63=1;
+            }
+            switch (alt63) {
+                case 1 :
+                    // InternalVertigoDsl.g:9940:2: rule__Domain__UnorderedGroup_7__1
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Domain__UnorderedGroup_7__1();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__UnorderedGroup_7__0"
+
+
+    // $ANTLR start "rule__Domain__UnorderedGroup_7__1"
+    // InternalVertigoDsl.g:9946:1: rule__Domain__UnorderedGroup_7__1 : rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__2 )? ;
+    public final void rule__Domain__UnorderedGroup_7__1() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:9950:1: ( rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__2 )? )
+            // InternalVertigoDsl.g:9951:2: rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__2 )?
+            {
+            pushFollow(FOLLOW_47);
+            rule__Domain__UnorderedGroup_7__Impl();
+
+            state._fsp--;
+
+            // InternalVertigoDsl.g:9952:2: ( rule__Domain__UnorderedGroup_7__2 )?
+            int alt64=2;
+            int LA64_0 = input.LA(1);
+
+            if ( LA64_0 == 47 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0) ) {
+                alt64=1;
+            }
+            else if ( LA64_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1) ) {
+                alt64=1;
+            }
+            else if ( LA64_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2) ) {
+                alt64=1;
+            }
+            else if ( LA64_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3) ) {
+                alt64=1;
+            }
+            else if ( LA64_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4) ) {
+                alt64=1;
+            }
+            else if ( LA64_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5) ) {
+                alt64=1;
+            }
+            switch (alt64) {
+                case 1 :
+                    // InternalVertigoDsl.g:9952:2: rule__Domain__UnorderedGroup_7__2
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Domain__UnorderedGroup_7__2();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__UnorderedGroup_7__1"
+
+
+    // $ANTLR start "rule__Domain__UnorderedGroup_7__2"
+    // InternalVertigoDsl.g:9958:1: rule__Domain__UnorderedGroup_7__2 : rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__3 )? ;
+    public final void rule__Domain__UnorderedGroup_7__2() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:9962:1: ( rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__3 )? )
+            // InternalVertigoDsl.g:9963:2: rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__3 )?
+            {
+            pushFollow(FOLLOW_47);
+            rule__Domain__UnorderedGroup_7__Impl();
+
+            state._fsp--;
+
+            // InternalVertigoDsl.g:9964:2: ( rule__Domain__UnorderedGroup_7__3 )?
+            int alt65=2;
+            int LA65_0 = input.LA(1);
+
+            if ( LA65_0 == 47 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0) ) {
+                alt65=1;
+            }
+            else if ( LA65_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1) ) {
+                alt65=1;
+            }
+            else if ( LA65_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2) ) {
+                alt65=1;
+            }
+            else if ( LA65_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3) ) {
+                alt65=1;
+            }
+            else if ( LA65_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4) ) {
+                alt65=1;
+            }
+            else if ( LA65_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5) ) {
+                alt65=1;
+            }
+            switch (alt65) {
+                case 1 :
+                    // InternalVertigoDsl.g:9964:2: rule__Domain__UnorderedGroup_7__3
+                    {
+                    pushFollow(FOLLOW_2);
+                    rule__Domain__UnorderedGroup_7__3();
+
+                    state._fsp--;
+
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+        }
+        catch (RecognitionException re) {
+            reportError(re);
+            recover(input,re);
+        }
+        finally {
+
+            	restoreStackSize(stackSize);
+
+        }
+        return ;
+    }
+    // $ANTLR end "rule__Domain__UnorderedGroup_7__2"
+
+
+    // $ANTLR start "rule__Domain__UnorderedGroup_7__3"
+    // InternalVertigoDsl.g:9970:1: rule__Domain__UnorderedGroup_7__3 : rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__4 )? ;
+    public final void rule__Domain__UnorderedGroup_7__3() throws RecognitionException {
+
+        		int stackSize = keepStackSize();
+        	
+        try {
+            // InternalVertigoDsl.g:9974:1: ( rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__4 )? )
+            // InternalVertigoDsl.g:9975:2: rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__4 )?
+            {
+            pushFollow(FOLLOW_47);
+            rule__Domain__UnorderedGroup_7__Impl();
+
+            state._fsp--;
+
+            // InternalVertigoDsl.g:9976:2: ( rule__Domain__UnorderedGroup_7__4 )?
             int alt66=2;
             int LA66_0 = input.LA(1);
 
-            if ( LA66_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0) ) {
+            if ( LA66_0 == 47 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0) ) {
                 alt66=1;
             }
-            else if ( LA66_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1) ) {
+            else if ( LA66_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1) ) {
                 alt66=1;
             }
-            else if ( LA66_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2) ) {
+            else if ( LA66_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2) ) {
                 alt66=1;
             }
-            else if ( LA66_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3) ) {
+            else if ( LA66_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3) ) {
                 alt66=1;
             }
-            else if ( LA66_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4) ) {
+            else if ( LA66_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4) ) {
+                alt66=1;
+            }
+            else if ( LA66_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5) ) {
                 alt66=1;
             }
             switch (alt66) {
                 case 1 :
-                    // InternalVertigoDsl.g:10008:2: rule__Domain__UnorderedGroup_1_0__1
+                    // InternalVertigoDsl.g:9976:2: rule__Domain__UnorderedGroup_7__4
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Domain__UnorderedGroup_1_0__1();
+                    rule__Domain__UnorderedGroup_7__4();
 
                     state._fsp--;
 
@@ -30079,49 +30050,52 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__UnorderedGroup_1_0__0"
+    // $ANTLR end "rule__Domain__UnorderedGroup_7__3"
 
 
-    // $ANTLR start "rule__Domain__UnorderedGroup_1_0__1"
-    // InternalVertigoDsl.g:10014:1: rule__Domain__UnorderedGroup_1_0__1 : rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__2 )? ;
-    public final void rule__Domain__UnorderedGroup_1_0__1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__UnorderedGroup_7__4"
+    // InternalVertigoDsl.g:9982:1: rule__Domain__UnorderedGroup_7__4 : rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__5 )? ;
+    public final void rule__Domain__UnorderedGroup_7__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10018:1: ( rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__2 )? )
-            // InternalVertigoDsl.g:10019:2: rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__2 )?
+            // InternalVertigoDsl.g:9986:1: ( rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__5 )? )
+            // InternalVertigoDsl.g:9987:2: rule__Domain__UnorderedGroup_7__Impl ( rule__Domain__UnorderedGroup_7__5 )?
             {
-            pushFollow(FOLLOW_48);
-            rule__Domain__UnorderedGroup_1_0__Impl();
+            pushFollow(FOLLOW_47);
+            rule__Domain__UnorderedGroup_7__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10020:2: ( rule__Domain__UnorderedGroup_1_0__2 )?
+            // InternalVertigoDsl.g:9988:2: ( rule__Domain__UnorderedGroup_7__5 )?
             int alt67=2;
             int LA67_0 = input.LA(1);
 
-            if ( LA67_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0) ) {
+            if ( LA67_0 == 47 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 0) ) {
                 alt67=1;
             }
-            else if ( LA67_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1) ) {
+            else if ( LA67_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 1) ) {
                 alt67=1;
             }
-            else if ( LA67_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2) ) {
+            else if ( LA67_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 2) ) {
                 alt67=1;
             }
-            else if ( LA67_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3) ) {
+            else if ( LA67_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 3) ) {
                 alt67=1;
             }
-            else if ( LA67_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4) ) {
+            else if ( LA67_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 4) ) {
+                alt67=1;
+            }
+            else if ( LA67_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_7(), 5) ) {
                 alt67=1;
             }
             switch (alt67) {
                 case 1 :
-                    // InternalVertigoDsl.g:10020:2: rule__Domain__UnorderedGroup_1_0__2
+                    // InternalVertigoDsl.g:9988:2: rule__Domain__UnorderedGroup_7__5
                     {
                     pushFollow(FOLLOW_2);
-                    rule__Domain__UnorderedGroup_1_0__2();
+                    rule__Domain__UnorderedGroup_7__5();
 
                     state._fsp--;
 
@@ -30146,155 +30120,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__UnorderedGroup_1_0__1"
+    // $ANTLR end "rule__Domain__UnorderedGroup_7__4"
 
 
-    // $ANTLR start "rule__Domain__UnorderedGroup_1_0__2"
-    // InternalVertigoDsl.g:10026:1: rule__Domain__UnorderedGroup_1_0__2 : rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__3 )? ;
-    public final void rule__Domain__UnorderedGroup_1_0__2() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:10030:1: ( rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__3 )? )
-            // InternalVertigoDsl.g:10031:2: rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__3 )?
-            {
-            pushFollow(FOLLOW_48);
-            rule__Domain__UnorderedGroup_1_0__Impl();
-
-            state._fsp--;
-
-            // InternalVertigoDsl.g:10032:2: ( rule__Domain__UnorderedGroup_1_0__3 )?
-            int alt68=2;
-            int LA68_0 = input.LA(1);
-
-            if ( LA68_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0) ) {
-                alt68=1;
-            }
-            else if ( LA68_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1) ) {
-                alt68=1;
-            }
-            else if ( LA68_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2) ) {
-                alt68=1;
-            }
-            else if ( LA68_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3) ) {
-                alt68=1;
-            }
-            else if ( LA68_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4) ) {
-                alt68=1;
-            }
-            switch (alt68) {
-                case 1 :
-                    // InternalVertigoDsl.g:10032:2: rule__Domain__UnorderedGroup_1_0__3
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Domain__UnorderedGroup_1_0__3();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__UnorderedGroup_1_0__2"
-
-
-    // $ANTLR start "rule__Domain__UnorderedGroup_1_0__3"
-    // InternalVertigoDsl.g:10038:1: rule__Domain__UnorderedGroup_1_0__3 : rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__4 )? ;
-    public final void rule__Domain__UnorderedGroup_1_0__3() throws RecognitionException {
+    // $ANTLR start "rule__Domain__UnorderedGroup_7__5"
+    // InternalVertigoDsl.g:9994:1: rule__Domain__UnorderedGroup_7__5 : rule__Domain__UnorderedGroup_7__Impl ;
+    public final void rule__Domain__UnorderedGroup_7__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10042:1: ( rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__4 )? )
-            // InternalVertigoDsl.g:10043:2: rule__Domain__UnorderedGroup_1_0__Impl ( rule__Domain__UnorderedGroup_1_0__4 )?
-            {
-            pushFollow(FOLLOW_48);
-            rule__Domain__UnorderedGroup_1_0__Impl();
-
-            state._fsp--;
-
-            // InternalVertigoDsl.g:10044:2: ( rule__Domain__UnorderedGroup_1_0__4 )?
-            int alt69=2;
-            int LA69_0 = input.LA(1);
-
-            if ( LA69_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 0) ) {
-                alt69=1;
-            }
-            else if ( LA69_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 1) ) {
-                alt69=1;
-            }
-            else if ( LA69_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 2) ) {
-                alt69=1;
-            }
-            else if ( LA69_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 3) ) {
-                alt69=1;
-            }
-            else if ( LA69_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup_1_0(), 4) ) {
-                alt69=1;
-            }
-            switch (alt69) {
-                case 1 :
-                    // InternalVertigoDsl.g:10044:2: rule__Domain__UnorderedGroup_1_0__4
-                    {
-                    pushFollow(FOLLOW_2);
-                    rule__Domain__UnorderedGroup_1_0__4();
-
-                    state._fsp--;
-
-
-                    }
-                    break;
-
-            }
-
-
-            }
-
-        }
-        catch (RecognitionException re) {
-            reportError(re);
-            recover(input,re);
-        }
-        finally {
-
-            	restoreStackSize(stackSize);
-
-        }
-        return ;
-    }
-    // $ANTLR end "rule__Domain__UnorderedGroup_1_0__3"
-
-
-    // $ANTLR start "rule__Domain__UnorderedGroup_1_0__4"
-    // InternalVertigoDsl.g:10050:1: rule__Domain__UnorderedGroup_1_0__4 : rule__Domain__UnorderedGroup_1_0__Impl ;
-    public final void rule__Domain__UnorderedGroup_1_0__4() throws RecognitionException {
-
-        		int stackSize = keepStackSize();
-        	
-        try {
-            // InternalVertigoDsl.g:10054:1: ( rule__Domain__UnorderedGroup_1_0__Impl )
-            // InternalVertigoDsl.g:10055:2: rule__Domain__UnorderedGroup_1_0__Impl
+            // InternalVertigoDsl.g:9998:1: ( rule__Domain__UnorderedGroup_7__Impl )
+            // InternalVertigoDsl.g:9999:2: rule__Domain__UnorderedGroup_7__Impl
             {
             pushFollow(FOLLOW_2);
-            rule__Domain__UnorderedGroup_1_0__Impl();
+            rule__Domain__UnorderedGroup_7__Impl();
 
             state._fsp--;
 
@@ -30313,19 +30153,19 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__UnorderedGroup_1_0__4"
+    // $ANTLR end "rule__Domain__UnorderedGroup_7__5"
 
 
     // $ANTLR start "rule__DtDefinitionIdString__UnorderedGroup_1"
-    // InternalVertigoDsl.g:10062:1: rule__DtDefinitionIdString__UnorderedGroup_1 : rule__DtDefinitionIdString__UnorderedGroup_1__0 {...}?;
+    // InternalVertigoDsl.g:10006:1: rule__DtDefinitionIdString__UnorderedGroup_1 : rule__DtDefinitionIdString__UnorderedGroup_1__0 {...}?;
     public final void rule__DtDefinitionIdString__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalVertigoDsl.g:10067:1: ( rule__DtDefinitionIdString__UnorderedGroup_1__0 {...}?)
-            // InternalVertigoDsl.g:10068:2: rule__DtDefinitionIdString__UnorderedGroup_1__0 {...}?
+            // InternalVertigoDsl.g:10011:1: ( rule__DtDefinitionIdString__UnorderedGroup_1__0 {...}?)
+            // InternalVertigoDsl.g:10012:2: rule__DtDefinitionIdString__UnorderedGroup_1__0 {...}?
             {
             pushFollow(FOLLOW_2);
             rule__DtDefinitionIdString__UnorderedGroup_1__0();
@@ -30355,44 +30195,44 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionIdString__UnorderedGroup_1__Impl"
-    // InternalVertigoDsl.g:10076:1: rule__DtDefinitionIdString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) ) ) ;
+    // InternalVertigoDsl.g:10020:1: rule__DtDefinitionIdString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) ) ) ;
     public final void rule__DtDefinitionIdString__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalVertigoDsl.g:10081:1: ( ( ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) ) ) )
-            // InternalVertigoDsl.g:10082:3: ( ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) ) )
+            // InternalVertigoDsl.g:10025:1: ( ( ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) ) ) )
+            // InternalVertigoDsl.g:10026:3: ( ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) ) )
             {
-            // InternalVertigoDsl.g:10082:3: ( ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) ) )
-            int alt70=2;
-            int LA70_0 = input.LA(1);
+            // InternalVertigoDsl.g:10026:3: ( ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) ) )
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( LA70_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt70=1;
+            if ( LA68_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt68=1;
             }
-            else if ( LA70_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt70=2;
+            else if ( LA68_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt68=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 70, 0, input);
+                    new NoViableAltException("", 68, 0, input);
 
                 throw nvae;
             }
-            switch (alt70) {
+            switch (alt68) {
                 case 1 :
-                    // InternalVertigoDsl.g:10083:3: ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10027:3: ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10083:3: ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) )
-                    // InternalVertigoDsl.g:10084:4: {...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10027:3: ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10028:4: {...}? => ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 0) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionIdString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalVertigoDsl.g:10084:116: ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) )
-                    // InternalVertigoDsl.g:10085:5: ( ( rule__DtDefinitionIdString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10028:116: ( ( ( rule__DtDefinitionIdString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10029:5: ( ( rule__DtDefinitionIdString__Group_1_0__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 0);
@@ -30400,12 +30240,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10091:5: ( ( rule__DtDefinitionIdString__Group_1_0__0 ) )
-                    // InternalVertigoDsl.g:10092:6: ( rule__DtDefinitionIdString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10035:5: ( ( rule__DtDefinitionIdString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10036:6: ( rule__DtDefinitionIdString__Group_1_0__0 )
                     {
                      before(grammarAccess.getDtDefinitionIdStringAccess().getGroup_1_0()); 
-                    // InternalVertigoDsl.g:10093:6: ( rule__DtDefinitionIdString__Group_1_0__0 )
-                    // InternalVertigoDsl.g:10093:7: rule__DtDefinitionIdString__Group_1_0__0
+                    // InternalVertigoDsl.g:10037:6: ( rule__DtDefinitionIdString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10037:7: rule__DtDefinitionIdString__Group_1_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionIdString__Group_1_0__0();
@@ -30429,16 +30269,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:10098:3: ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10042:3: ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10098:3: ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) )
-                    // InternalVertigoDsl.g:10099:4: {...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10042:3: ({...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10043:4: {...}? => ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 1) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionIdString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalVertigoDsl.g:10099:116: ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) )
-                    // InternalVertigoDsl.g:10100:5: ( ( rule__DtDefinitionIdString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10043:116: ( ( ( rule__DtDefinitionIdString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10044:5: ( ( rule__DtDefinitionIdString__Group_1_1__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 1);
@@ -30446,12 +30286,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10106:5: ( ( rule__DtDefinitionIdString__Group_1_1__0 ) )
-                    // InternalVertigoDsl.g:10107:6: ( rule__DtDefinitionIdString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10050:5: ( ( rule__DtDefinitionIdString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10051:6: ( rule__DtDefinitionIdString__Group_1_1__0 )
                     {
                      before(grammarAccess.getDtDefinitionIdStringAccess().getGroup_1_1()); 
-                    // InternalVertigoDsl.g:10108:6: ( rule__DtDefinitionIdString__Group_1_1__0 )
-                    // InternalVertigoDsl.g:10108:7: rule__DtDefinitionIdString__Group_1_1__0
+                    // InternalVertigoDsl.g:10052:6: ( rule__DtDefinitionIdString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10052:7: rule__DtDefinitionIdString__Group_1_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionIdString__Group_1_1__0();
@@ -30498,33 +30338,33 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionIdString__UnorderedGroup_1__0"
-    // InternalVertigoDsl.g:10121:1: rule__DtDefinitionIdString__UnorderedGroup_1__0 : rule__DtDefinitionIdString__UnorderedGroup_1__Impl ( rule__DtDefinitionIdString__UnorderedGroup_1__1 )? ;
+    // InternalVertigoDsl.g:10065:1: rule__DtDefinitionIdString__UnorderedGroup_1__0 : rule__DtDefinitionIdString__UnorderedGroup_1__Impl ( rule__DtDefinitionIdString__UnorderedGroup_1__1 )? ;
     public final void rule__DtDefinitionIdString__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10125:1: ( rule__DtDefinitionIdString__UnorderedGroup_1__Impl ( rule__DtDefinitionIdString__UnorderedGroup_1__1 )? )
-            // InternalVertigoDsl.g:10126:2: rule__DtDefinitionIdString__UnorderedGroup_1__Impl ( rule__DtDefinitionIdString__UnorderedGroup_1__1 )?
+            // InternalVertigoDsl.g:10069:1: ( rule__DtDefinitionIdString__UnorderedGroup_1__Impl ( rule__DtDefinitionIdString__UnorderedGroup_1__1 )? )
+            // InternalVertigoDsl.g:10070:2: rule__DtDefinitionIdString__UnorderedGroup_1__Impl ( rule__DtDefinitionIdString__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_49);
+            pushFollow(FOLLOW_48);
             rule__DtDefinitionIdString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10127:2: ( rule__DtDefinitionIdString__UnorderedGroup_1__1 )?
-            int alt71=2;
-            int LA71_0 = input.LA(1);
+            // InternalVertigoDsl.g:10071:2: ( rule__DtDefinitionIdString__UnorderedGroup_1__1 )?
+            int alt69=2;
+            int LA69_0 = input.LA(1);
 
-            if ( LA71_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt71=1;
+            if ( LA69_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt69=1;
             }
-            else if ( LA71_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt71=1;
+            else if ( LA69_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionIdStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt69=1;
             }
-            switch (alt71) {
+            switch (alt69) {
                 case 1 :
-                    // InternalVertigoDsl.g:10127:2: rule__DtDefinitionIdString__UnorderedGroup_1__1
+                    // InternalVertigoDsl.g:10071:2: rule__DtDefinitionIdString__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionIdString__UnorderedGroup_1__1();
@@ -30556,14 +30396,14 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionIdString__UnorderedGroup_1__1"
-    // InternalVertigoDsl.g:10133:1: rule__DtDefinitionIdString__UnorderedGroup_1__1 : rule__DtDefinitionIdString__UnorderedGroup_1__Impl ;
+    // InternalVertigoDsl.g:10077:1: rule__DtDefinitionIdString__UnorderedGroup_1__1 : rule__DtDefinitionIdString__UnorderedGroup_1__Impl ;
     public final void rule__DtDefinitionIdString__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10137:1: ( rule__DtDefinitionIdString__UnorderedGroup_1__Impl )
-            // InternalVertigoDsl.g:10138:2: rule__DtDefinitionIdString__UnorderedGroup_1__Impl
+            // InternalVertigoDsl.g:10081:1: ( rule__DtDefinitionIdString__UnorderedGroup_1__Impl )
+            // InternalVertigoDsl.g:10082:2: rule__DtDefinitionIdString__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DtDefinitionIdString__UnorderedGroup_1__Impl();
@@ -30589,15 +30429,15 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__UnorderedGroup_1"
-    // InternalVertigoDsl.g:10145:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__0 {...}?;
+    // InternalVertigoDsl.g:10089:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__0 {...}?;
     public final void rule__DtDefinitionDataFieldString__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalVertigoDsl.g:10150:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__0 {...}?)
-            // InternalVertigoDsl.g:10151:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__0 {...}?
+            // InternalVertigoDsl.g:10094:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__0 {...}?)
+            // InternalVertigoDsl.g:10095:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__0 {...}?
             {
             pushFollow(FOLLOW_2);
             rule__DtDefinitionDataFieldString__UnorderedGroup_1__0();
@@ -30627,50 +30467,50 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl"
-    // InternalVertigoDsl.g:10159:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) ) ) ;
+    // InternalVertigoDsl.g:10103:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) ) ) ;
     public final void rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalVertigoDsl.g:10164:1: ( ( ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) ) ) )
-            // InternalVertigoDsl.g:10165:3: ( ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) ) )
+            // InternalVertigoDsl.g:10108:1: ( ( ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) ) ) )
+            // InternalVertigoDsl.g:10109:3: ( ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) ) )
             {
-            // InternalVertigoDsl.g:10165:3: ( ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) ) )
-            int alt72=4;
-            int LA72_0 = input.LA(1);
+            // InternalVertigoDsl.g:10109:3: ( ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) ) )
+            int alt70=4;
+            int LA70_0 = input.LA(1);
 
-            if ( LA72_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt72=1;
+            if ( LA70_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt70=1;
             }
-            else if ( LA72_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt72=2;
+            else if ( LA70_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt70=2;
             }
-            else if ( LA72_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt72=3;
+            else if ( LA70_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt70=3;
             }
-            else if ( LA72_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
-                alt72=4;
+            else if ( LA70_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
+                alt70=4;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 72, 0, input);
+                    new NoViableAltException("", 70, 0, input);
 
                 throw nvae;
             }
-            switch (alt72) {
+            switch (alt70) {
                 case 1 :
-                    // InternalVertigoDsl.g:10166:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10110:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10166:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) )
-                    // InternalVertigoDsl.g:10167:4: {...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10110:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10111:4: {...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalVertigoDsl.g:10167:123: ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) )
-                    // InternalVertigoDsl.g:10168:5: ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10111:123: ( ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10112:5: ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0);
@@ -30678,12 +30518,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10174:5: ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) )
-                    // InternalVertigoDsl.g:10175:6: ( rule__DtDefinitionDataFieldString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10118:5: ( ( rule__DtDefinitionDataFieldString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10119:6: ( rule__DtDefinitionDataFieldString__Group_1_0__0 )
                     {
                      before(grammarAccess.getDtDefinitionDataFieldStringAccess().getGroup_1_0()); 
-                    // InternalVertigoDsl.g:10176:6: ( rule__DtDefinitionDataFieldString__Group_1_0__0 )
-                    // InternalVertigoDsl.g:10176:7: rule__DtDefinitionDataFieldString__Group_1_0__0
+                    // InternalVertigoDsl.g:10120:6: ( rule__DtDefinitionDataFieldString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10120:7: rule__DtDefinitionDataFieldString__Group_1_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionDataFieldString__Group_1_0__0();
@@ -30707,16 +30547,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:10181:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10125:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10181:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) )
-                    // InternalVertigoDsl.g:10182:4: {...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10125:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10126:4: {...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalVertigoDsl.g:10182:123: ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) )
-                    // InternalVertigoDsl.g:10183:5: ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10126:123: ( ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10127:5: ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1);
@@ -30724,12 +30564,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10189:5: ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) )
-                    // InternalVertigoDsl.g:10190:6: ( rule__DtDefinitionDataFieldString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10133:5: ( ( rule__DtDefinitionDataFieldString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10134:6: ( rule__DtDefinitionDataFieldString__Group_1_1__0 )
                     {
                      before(grammarAccess.getDtDefinitionDataFieldStringAccess().getGroup_1_1()); 
-                    // InternalVertigoDsl.g:10191:6: ( rule__DtDefinitionDataFieldString__Group_1_1__0 )
-                    // InternalVertigoDsl.g:10191:7: rule__DtDefinitionDataFieldString__Group_1_1__0
+                    // InternalVertigoDsl.g:10135:6: ( rule__DtDefinitionDataFieldString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10135:7: rule__DtDefinitionDataFieldString__Group_1_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionDataFieldString__Group_1_1__0();
@@ -30753,16 +30593,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalVertigoDsl.g:10196:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:10140:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10196:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) )
-                    // InternalVertigoDsl.g:10197:4: {...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) )
+                    // InternalVertigoDsl.g:10140:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:10141:4: {...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2)");
                     }
-                    // InternalVertigoDsl.g:10197:123: ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) )
-                    // InternalVertigoDsl.g:10198:5: ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) )
+                    // InternalVertigoDsl.g:10141:123: ( ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) ) )
+                    // InternalVertigoDsl.g:10142:5: ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2);
@@ -30770,12 +30610,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10204:5: ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) )
-                    // InternalVertigoDsl.g:10205:6: ( rule__DtDefinitionDataFieldString__Group_1_2__0 )
+                    // InternalVertigoDsl.g:10148:5: ( ( rule__DtDefinitionDataFieldString__Group_1_2__0 ) )
+                    // InternalVertigoDsl.g:10149:6: ( rule__DtDefinitionDataFieldString__Group_1_2__0 )
                     {
                      before(grammarAccess.getDtDefinitionDataFieldStringAccess().getGroup_1_2()); 
-                    // InternalVertigoDsl.g:10206:6: ( rule__DtDefinitionDataFieldString__Group_1_2__0 )
-                    // InternalVertigoDsl.g:10206:7: rule__DtDefinitionDataFieldString__Group_1_2__0
+                    // InternalVertigoDsl.g:10150:6: ( rule__DtDefinitionDataFieldString__Group_1_2__0 )
+                    // InternalVertigoDsl.g:10150:7: rule__DtDefinitionDataFieldString__Group_1_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionDataFieldString__Group_1_2__0();
@@ -30799,16 +30639,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // InternalVertigoDsl.g:10211:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) )
+                    // InternalVertigoDsl.g:10155:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10211:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) )
-                    // InternalVertigoDsl.g:10212:4: {...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) )
+                    // InternalVertigoDsl.g:10155:3: ({...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) ) )
+                    // InternalVertigoDsl.g:10156:4: {...}? => ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3)");
                     }
-                    // InternalVertigoDsl.g:10212:123: ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) )
-                    // InternalVertigoDsl.g:10213:5: ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) )
+                    // InternalVertigoDsl.g:10156:123: ( ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) ) )
+                    // InternalVertigoDsl.g:10157:5: ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3);
@@ -30816,12 +30656,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10219:5: ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) )
-                    // InternalVertigoDsl.g:10220:6: ( rule__DtDefinitionDataFieldString__Group_1_3__0 )
+                    // InternalVertigoDsl.g:10163:5: ( ( rule__DtDefinitionDataFieldString__Group_1_3__0 ) )
+                    // InternalVertigoDsl.g:10164:6: ( rule__DtDefinitionDataFieldString__Group_1_3__0 )
                     {
                      before(grammarAccess.getDtDefinitionDataFieldStringAccess().getGroup_1_3()); 
-                    // InternalVertigoDsl.g:10221:6: ( rule__DtDefinitionDataFieldString__Group_1_3__0 )
-                    // InternalVertigoDsl.g:10221:7: rule__DtDefinitionDataFieldString__Group_1_3__0
+                    // InternalVertigoDsl.g:10165:6: ( rule__DtDefinitionDataFieldString__Group_1_3__0 )
+                    // InternalVertigoDsl.g:10165:7: rule__DtDefinitionDataFieldString__Group_1_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionDataFieldString__Group_1_3__0();
@@ -30868,39 +30708,39 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__UnorderedGroup_1__0"
-    // InternalVertigoDsl.g:10234:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__0 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 )? ;
+    // InternalVertigoDsl.g:10178:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__0 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 )? ;
     public final void rule__DtDefinitionDataFieldString__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10238:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 )? )
-            // InternalVertigoDsl.g:10239:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 )?
+            // InternalVertigoDsl.g:10182:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 )? )
+            // InternalVertigoDsl.g:10183:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_50);
+            pushFollow(FOLLOW_49);
             rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10240:2: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 )?
-            int alt73=2;
-            int LA73_0 = input.LA(1);
+            // InternalVertigoDsl.g:10184:2: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 )?
+            int alt71=2;
+            int LA71_0 = input.LA(1);
 
-            if ( LA73_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt73=1;
+            if ( LA71_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt71=1;
             }
-            else if ( LA73_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt73=1;
+            else if ( LA71_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt71=1;
             }
-            else if ( LA73_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt73=1;
+            else if ( LA71_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt71=1;
             }
-            else if ( LA73_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
-                alt73=1;
+            else if ( LA71_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
+                alt71=1;
             }
-            switch (alt73) {
+            switch (alt71) {
                 case 1 :
-                    // InternalVertigoDsl.g:10240:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__1
+                    // InternalVertigoDsl.g:10184:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionDataFieldString__UnorderedGroup_1__1();
@@ -30932,39 +30772,39 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__UnorderedGroup_1__1"
-    // InternalVertigoDsl.g:10246:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 )? ;
+    // InternalVertigoDsl.g:10190:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__1 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 )? ;
     public final void rule__DtDefinitionDataFieldString__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10250:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 )? )
-            // InternalVertigoDsl.g:10251:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 )?
+            // InternalVertigoDsl.g:10194:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 )? )
+            // InternalVertigoDsl.g:10195:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_50);
+            pushFollow(FOLLOW_49);
             rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10252:2: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 )?
-            int alt74=2;
-            int LA74_0 = input.LA(1);
+            // InternalVertigoDsl.g:10196:2: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 )?
+            int alt72=2;
+            int LA72_0 = input.LA(1);
 
-            if ( LA74_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt74=1;
+            if ( LA72_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt72=1;
             }
-            else if ( LA74_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt74=1;
+            else if ( LA72_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt72=1;
             }
-            else if ( LA74_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt74=1;
+            else if ( LA72_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt72=1;
             }
-            else if ( LA74_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
-                alt74=1;
+            else if ( LA72_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
+                alt72=1;
             }
-            switch (alt74) {
+            switch (alt72) {
                 case 1 :
-                    // InternalVertigoDsl.g:10252:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__2
+                    // InternalVertigoDsl.g:10196:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__2
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionDataFieldString__UnorderedGroup_1__2();
@@ -30996,39 +30836,39 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__UnorderedGroup_1__2"
-    // InternalVertigoDsl.g:10258:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 )? ;
+    // InternalVertigoDsl.g:10202:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__2 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 )? ;
     public final void rule__DtDefinitionDataFieldString__UnorderedGroup_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10262:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 )? )
-            // InternalVertigoDsl.g:10263:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 )?
+            // InternalVertigoDsl.g:10206:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 )? )
+            // InternalVertigoDsl.g:10207:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 )?
             {
-            pushFollow(FOLLOW_50);
+            pushFollow(FOLLOW_49);
             rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10264:2: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 )?
-            int alt75=2;
-            int LA75_0 = input.LA(1);
+            // InternalVertigoDsl.g:10208:2: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 )?
+            int alt73=2;
+            int LA73_0 = input.LA(1);
 
-            if ( LA75_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt75=1;
+            if ( LA73_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt73=1;
             }
-            else if ( LA75_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt75=1;
+            else if ( LA73_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt73=1;
             }
-            else if ( LA75_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt75=1;
+            else if ( LA73_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt73=1;
             }
-            else if ( LA75_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
-                alt75=1;
+            else if ( LA73_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), 3) ) {
+                alt73=1;
             }
-            switch (alt75) {
+            switch (alt73) {
                 case 1 :
-                    // InternalVertigoDsl.g:10264:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__3
+                    // InternalVertigoDsl.g:10208:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__3
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionDataFieldString__UnorderedGroup_1__3();
@@ -31060,14 +30900,14 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__UnorderedGroup_1__3"
-    // InternalVertigoDsl.g:10270:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ;
+    // InternalVertigoDsl.g:10214:1: rule__DtDefinitionDataFieldString__UnorderedGroup_1__3 : rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl ;
     public final void rule__DtDefinitionDataFieldString__UnorderedGroup_1__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10274:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl )
-            // InternalVertigoDsl.g:10275:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl
+            // InternalVertigoDsl.g:10218:1: ( rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl )
+            // InternalVertigoDsl.g:10219:2: rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DtDefinitionDataFieldString__UnorderedGroup_1__Impl();
@@ -31093,15 +30933,15 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedFieldString__UnorderedGroup_1"
-    // InternalVertigoDsl.g:10282:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1 : rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0 {...}?;
+    // InternalVertigoDsl.g:10226:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1 : rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0 {...}?;
     public final void rule__DtDefinitionComputedFieldString__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalVertigoDsl.g:10287:1: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0 {...}?)
-            // InternalVertigoDsl.g:10288:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0 {...}?
+            // InternalVertigoDsl.g:10231:1: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0 {...}?)
+            // InternalVertigoDsl.g:10232:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0 {...}?
             {
             pushFollow(FOLLOW_2);
             rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0();
@@ -31131,47 +30971,47 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl"
-    // InternalVertigoDsl.g:10296:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) ) ) ;
+    // InternalVertigoDsl.g:10240:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) ) ) ;
     public final void rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalVertigoDsl.g:10301:1: ( ( ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) ) ) )
-            // InternalVertigoDsl.g:10302:3: ( ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) ) )
+            // InternalVertigoDsl.g:10245:1: ( ( ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) ) ) )
+            // InternalVertigoDsl.g:10246:3: ( ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) ) )
             {
-            // InternalVertigoDsl.g:10302:3: ( ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) ) )
-            int alt76=3;
-            int LA76_0 = input.LA(1);
+            // InternalVertigoDsl.g:10246:3: ( ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) ) )
+            int alt74=3;
+            int LA74_0 = input.LA(1);
 
-            if ( LA76_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt76=1;
+            if ( LA74_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt74=1;
             }
-            else if ( LA76_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt76=2;
+            else if ( LA74_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt74=2;
             }
-            else if ( LA76_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt76=3;
+            else if ( LA74_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt74=3;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 76, 0, input);
+                    new NoViableAltException("", 74, 0, input);
 
                 throw nvae;
             }
-            switch (alt76) {
+            switch (alt74) {
                 case 1 :
-                    // InternalVertigoDsl.g:10303:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10247:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10303:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) )
-                    // InternalVertigoDsl.g:10304:4: {...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10247:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10248:4: {...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalVertigoDsl.g:10304:127: ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) )
-                    // InternalVertigoDsl.g:10305:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10248:127: ( ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10249:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0);
@@ -31179,12 +31019,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10311:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) )
-                    // InternalVertigoDsl.g:10312:6: ( rule__DtDefinitionComputedFieldString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10255:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10256:6: ( rule__DtDefinitionComputedFieldString__Group_1_0__0 )
                     {
                      before(grammarAccess.getDtDefinitionComputedFieldStringAccess().getGroup_1_0()); 
-                    // InternalVertigoDsl.g:10313:6: ( rule__DtDefinitionComputedFieldString__Group_1_0__0 )
-                    // InternalVertigoDsl.g:10313:7: rule__DtDefinitionComputedFieldString__Group_1_0__0
+                    // InternalVertigoDsl.g:10257:6: ( rule__DtDefinitionComputedFieldString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10257:7: rule__DtDefinitionComputedFieldString__Group_1_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionComputedFieldString__Group_1_0__0();
@@ -31208,16 +31048,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:10318:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10262:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10318:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) )
-                    // InternalVertigoDsl.g:10319:4: {...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10262:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10263:4: {...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalVertigoDsl.g:10319:127: ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) )
-                    // InternalVertigoDsl.g:10320:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10263:127: ( ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10264:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1);
@@ -31225,12 +31065,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10326:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) )
-                    // InternalVertigoDsl.g:10327:6: ( rule__DtDefinitionComputedFieldString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10270:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10271:6: ( rule__DtDefinitionComputedFieldString__Group_1_1__0 )
                     {
                      before(grammarAccess.getDtDefinitionComputedFieldStringAccess().getGroup_1_1()); 
-                    // InternalVertigoDsl.g:10328:6: ( rule__DtDefinitionComputedFieldString__Group_1_1__0 )
-                    // InternalVertigoDsl.g:10328:7: rule__DtDefinitionComputedFieldString__Group_1_1__0
+                    // InternalVertigoDsl.g:10272:6: ( rule__DtDefinitionComputedFieldString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10272:7: rule__DtDefinitionComputedFieldString__Group_1_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionComputedFieldString__Group_1_1__0();
@@ -31254,16 +31094,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalVertigoDsl.g:10333:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:10277:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10333:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) )
-                    // InternalVertigoDsl.g:10334:4: {...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) )
+                    // InternalVertigoDsl.g:10277:3: ({...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:10278:4: {...}? => ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2)");
                     }
-                    // InternalVertigoDsl.g:10334:127: ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) )
-                    // InternalVertigoDsl.g:10335:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) )
+                    // InternalVertigoDsl.g:10278:127: ( ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) ) )
+                    // InternalVertigoDsl.g:10279:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2);
@@ -31271,12 +31111,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10341:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) )
-                    // InternalVertigoDsl.g:10342:6: ( rule__DtDefinitionComputedFieldString__Group_1_2__0 )
+                    // InternalVertigoDsl.g:10285:5: ( ( rule__DtDefinitionComputedFieldString__Group_1_2__0 ) )
+                    // InternalVertigoDsl.g:10286:6: ( rule__DtDefinitionComputedFieldString__Group_1_2__0 )
                     {
                      before(grammarAccess.getDtDefinitionComputedFieldStringAccess().getGroup_1_2()); 
-                    // InternalVertigoDsl.g:10343:6: ( rule__DtDefinitionComputedFieldString__Group_1_2__0 )
-                    // InternalVertigoDsl.g:10343:7: rule__DtDefinitionComputedFieldString__Group_1_2__0
+                    // InternalVertigoDsl.g:10287:6: ( rule__DtDefinitionComputedFieldString__Group_1_2__0 )
+                    // InternalVertigoDsl.g:10287:7: rule__DtDefinitionComputedFieldString__Group_1_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionComputedFieldString__Group_1_2__0();
@@ -31323,36 +31163,36 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0"
-    // InternalVertigoDsl.g:10356:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0 : rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 )? ;
+    // InternalVertigoDsl.g:10300:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0 : rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 )? ;
     public final void rule__DtDefinitionComputedFieldString__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10360:1: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 )? )
-            // InternalVertigoDsl.g:10361:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 )?
+            // InternalVertigoDsl.g:10304:1: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 )? )
+            // InternalVertigoDsl.g:10305:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_51);
+            pushFollow(FOLLOW_50);
             rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10362:2: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 )?
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // InternalVertigoDsl.g:10306:2: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 )?
+            int alt75=2;
+            int LA75_0 = input.LA(1);
 
-            if ( LA77_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt77=1;
+            if ( LA75_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt75=1;
             }
-            else if ( LA77_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt77=1;
+            else if ( LA75_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt75=1;
             }
-            else if ( LA77_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt77=1;
+            else if ( LA75_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt75=1;
             }
-            switch (alt77) {
+            switch (alt75) {
                 case 1 :
-                    // InternalVertigoDsl.g:10362:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1
+                    // InternalVertigoDsl.g:10306:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1();
@@ -31384,36 +31224,36 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1"
-    // InternalVertigoDsl.g:10368:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 : rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 )? ;
+    // InternalVertigoDsl.g:10312:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1 : rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 )? ;
     public final void rule__DtDefinitionComputedFieldString__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10372:1: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 )? )
-            // InternalVertigoDsl.g:10373:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 )?
+            // InternalVertigoDsl.g:10316:1: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 )? )
+            // InternalVertigoDsl.g:10317:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_51);
+            pushFollow(FOLLOW_50);
             rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10374:2: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            // InternalVertigoDsl.g:10318:2: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 )?
+            int alt76=2;
+            int LA76_0 = input.LA(1);
 
-            if ( LA78_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt78=1;
+            if ( LA76_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt76=1;
             }
-            else if ( LA78_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt78=1;
+            else if ( LA76_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt76=1;
             }
-            else if ( LA78_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt78=1;
+            else if ( LA76_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt76=1;
             }
-            switch (alt78) {
+            switch (alt76) {
                 case 1 :
-                    // InternalVertigoDsl.g:10374:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2
+                    // InternalVertigoDsl.g:10318:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2();
@@ -31445,14 +31285,14 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2"
-    // InternalVertigoDsl.g:10380:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 : rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ;
+    // InternalVertigoDsl.g:10324:1: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2 : rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl ;
     public final void rule__DtDefinitionComputedFieldString__UnorderedGroup_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10384:1: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl )
-            // InternalVertigoDsl.g:10385:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl
+            // InternalVertigoDsl.g:10328:1: ( rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl )
+            // InternalVertigoDsl.g:10329:2: rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DtDefinitionComputedFieldString__UnorderedGroup_1__Impl();
@@ -31478,32 +31318,32 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__UnorderedGroup_9"
-    // InternalVertigoDsl.g:10392:1: rule__DtDefinition__UnorderedGroup_9 : ( rule__DtDefinition__UnorderedGroup_9__0 )? ;
+    // InternalVertigoDsl.g:10336:1: rule__DtDefinition__UnorderedGroup_9 : ( rule__DtDefinition__UnorderedGroup_9__0 )? ;
     public final void rule__DtDefinition__UnorderedGroup_9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
         	
         try {
-            // InternalVertigoDsl.g:10397:1: ( ( rule__DtDefinition__UnorderedGroup_9__0 )? )
-            // InternalVertigoDsl.g:10398:2: ( rule__DtDefinition__UnorderedGroup_9__0 )?
+            // InternalVertigoDsl.g:10341:1: ( ( rule__DtDefinition__UnorderedGroup_9__0 )? )
+            // InternalVertigoDsl.g:10342:2: ( rule__DtDefinition__UnorderedGroup_9__0 )?
             {
-            // InternalVertigoDsl.g:10398:2: ( rule__DtDefinition__UnorderedGroup_9__0 )?
-            int alt79=2;
-            int LA79_0 = input.LA(1);
+            // InternalVertigoDsl.g:10342:2: ( rule__DtDefinition__UnorderedGroup_9__0 )?
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-            if ( LA79_0 == 44 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
-                alt79=1;
+            if ( LA77_0 == 44 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
+                alt77=1;
             }
-            else if ( LA79_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
-                alt79=1;
+            else if ( LA77_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
+                alt77=1;
             }
-            else if ( LA79_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
-                alt79=1;
+            else if ( LA77_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
+                alt77=1;
             }
-            switch (alt79) {
+            switch (alt77) {
                 case 1 :
-                    // InternalVertigoDsl.g:10398:2: rule__DtDefinition__UnorderedGroup_9__0
+                    // InternalVertigoDsl.g:10342:2: rule__DtDefinition__UnorderedGroup_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinition__UnorderedGroup_9__0();
@@ -31536,47 +31376,47 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__UnorderedGroup_9__Impl"
-    // InternalVertigoDsl.g:10406:1: rule__DtDefinition__UnorderedGroup_9__Impl : ( ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) ) ) ;
+    // InternalVertigoDsl.g:10350:1: rule__DtDefinition__UnorderedGroup_9__Impl : ( ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) ) ) ;
     public final void rule__DtDefinition__UnorderedGroup_9__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalVertigoDsl.g:10411:1: ( ( ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) ) ) )
-            // InternalVertigoDsl.g:10412:3: ( ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) ) )
+            // InternalVertigoDsl.g:10355:1: ( ( ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) ) ) )
+            // InternalVertigoDsl.g:10356:3: ( ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) ) )
             {
-            // InternalVertigoDsl.g:10412:3: ( ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) ) )
-            int alt80=3;
-            int LA80_0 = input.LA(1);
+            // InternalVertigoDsl.g:10356:3: ( ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) ) | ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) ) )
+            int alt78=3;
+            int LA78_0 = input.LA(1);
 
-            if ( LA80_0 == 44 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
-                alt80=1;
+            if ( LA78_0 == 44 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
+                alt78=1;
             }
-            else if ( LA80_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
-                alt80=2;
+            else if ( LA78_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
+                alt78=2;
             }
-            else if ( LA80_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
-                alt80=3;
+            else if ( LA78_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
+                alt78=3;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 80, 0, input);
+                    new NoViableAltException("", 78, 0, input);
 
                 throw nvae;
             }
-            switch (alt80) {
+            switch (alt78) {
                 case 1 :
-                    // InternalVertigoDsl.g:10413:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) )
+                    // InternalVertigoDsl.g:10357:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10413:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) )
-                    // InternalVertigoDsl.g:10414:4: {...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) )
+                    // InternalVertigoDsl.g:10357:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) ) )
+                    // InternalVertigoDsl.g:10358:4: {...}? => ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinition__UnorderedGroup_9__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0)");
                     }
-                    // InternalVertigoDsl.g:10414:108: ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) )
-                    // InternalVertigoDsl.g:10415:5: ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) )
+                    // InternalVertigoDsl.g:10358:108: ( ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) ) )
+                    // InternalVertigoDsl.g:10359:5: ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0);
@@ -31584,12 +31424,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10421:5: ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) )
-                    // InternalVertigoDsl.g:10422:6: ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 )
+                    // InternalVertigoDsl.g:10365:5: ( ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 ) )
+                    // InternalVertigoDsl.g:10366:6: ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 )
                     {
                      before(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataSpaceAssignment_9_0()); 
-                    // InternalVertigoDsl.g:10423:6: ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 )
-                    // InternalVertigoDsl.g:10423:7: rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0
+                    // InternalVertigoDsl.g:10367:6: ( rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 )
+                    // InternalVertigoDsl.g:10367:7: rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0();
@@ -31613,16 +31453,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:10428:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) )
+                    // InternalVertigoDsl.g:10372:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10428:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) )
-                    // InternalVertigoDsl.g:10429:4: {...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) )
+                    // InternalVertigoDsl.g:10372:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) ) )
+                    // InternalVertigoDsl.g:10373:4: {...}? => ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinition__UnorderedGroup_9__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1)");
                     }
-                    // InternalVertigoDsl.g:10429:108: ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) )
-                    // InternalVertigoDsl.g:10430:5: ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) )
+                    // InternalVertigoDsl.g:10373:108: ( ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) ) )
+                    // InternalVertigoDsl.g:10374:5: ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1);
@@ -31630,12 +31470,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10436:5: ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) )
-                    // InternalVertigoDsl.g:10437:6: ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 )
+                    // InternalVertigoDsl.g:10380:5: ( ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 ) )
+                    // InternalVertigoDsl.g:10381:6: ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 )
                     {
                      before(grammarAccess.getDtDefinitionAccess().getDtDefinitionSortFieldAssignment_9_1()); 
-                    // InternalVertigoDsl.g:10438:6: ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 )
-                    // InternalVertigoDsl.g:10438:7: rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1
+                    // InternalVertigoDsl.g:10382:6: ( rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 )
+                    // InternalVertigoDsl.g:10382:7: rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1();
@@ -31659,16 +31499,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalVertigoDsl.g:10443:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) )
+                    // InternalVertigoDsl.g:10387:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10443:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) )
-                    // InternalVertigoDsl.g:10444:4: {...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) )
+                    // InternalVertigoDsl.g:10387:3: ({...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) ) )
+                    // InternalVertigoDsl.g:10388:4: {...}? => ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
                         throw new FailedPredicateException(input, "rule__DtDefinition__UnorderedGroup_9__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2)");
                     }
-                    // InternalVertigoDsl.g:10444:108: ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) )
-                    // InternalVertigoDsl.g:10445:5: ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) )
+                    // InternalVertigoDsl.g:10388:108: ( ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) ) )
+                    // InternalVertigoDsl.g:10389:5: ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2);
@@ -31676,12 +31516,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10451:5: ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) )
-                    // InternalVertigoDsl.g:10452:6: ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 )
+                    // InternalVertigoDsl.g:10395:5: ( ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 ) )
+                    // InternalVertigoDsl.g:10396:6: ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 )
                     {
                      before(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldAssignment_9_2()); 
-                    // InternalVertigoDsl.g:10453:6: ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 )
-                    // InternalVertigoDsl.g:10453:7: rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2
+                    // InternalVertigoDsl.g:10397:6: ( rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 )
+                    // InternalVertigoDsl.g:10397:7: rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2();
@@ -31728,36 +31568,36 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__UnorderedGroup_9__0"
-    // InternalVertigoDsl.g:10466:1: rule__DtDefinition__UnorderedGroup_9__0 : rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__1 )? ;
+    // InternalVertigoDsl.g:10410:1: rule__DtDefinition__UnorderedGroup_9__0 : rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__1 )? ;
     public final void rule__DtDefinition__UnorderedGroup_9__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10470:1: ( rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__1 )? )
-            // InternalVertigoDsl.g:10471:2: rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__1 )?
+            // InternalVertigoDsl.g:10414:1: ( rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__1 )? )
+            // InternalVertigoDsl.g:10415:2: rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__1 )?
             {
-            pushFollow(FOLLOW_52);
+            pushFollow(FOLLOW_51);
             rule__DtDefinition__UnorderedGroup_9__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10472:2: ( rule__DtDefinition__UnorderedGroup_9__1 )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // InternalVertigoDsl.g:10416:2: ( rule__DtDefinition__UnorderedGroup_9__1 )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( LA81_0 == 44 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
-                alt81=1;
+            if ( LA79_0 == 44 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
+                alt79=1;
             }
-            else if ( LA81_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
-                alt81=1;
+            else if ( LA79_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
+                alt79=1;
             }
-            else if ( LA81_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
-                alt81=1;
+            else if ( LA79_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
+                alt79=1;
             }
-            switch (alt81) {
+            switch (alt79) {
                 case 1 :
-                    // InternalVertigoDsl.g:10472:2: rule__DtDefinition__UnorderedGroup_9__1
+                    // InternalVertigoDsl.g:10416:2: rule__DtDefinition__UnorderedGroup_9__1
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinition__UnorderedGroup_9__1();
@@ -31789,36 +31629,36 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__UnorderedGroup_9__1"
-    // InternalVertigoDsl.g:10478:1: rule__DtDefinition__UnorderedGroup_9__1 : rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__2 )? ;
+    // InternalVertigoDsl.g:10422:1: rule__DtDefinition__UnorderedGroup_9__1 : rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__2 )? ;
     public final void rule__DtDefinition__UnorderedGroup_9__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10482:1: ( rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__2 )? )
-            // InternalVertigoDsl.g:10483:2: rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__2 )?
+            // InternalVertigoDsl.g:10426:1: ( rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__2 )? )
+            // InternalVertigoDsl.g:10427:2: rule__DtDefinition__UnorderedGroup_9__Impl ( rule__DtDefinition__UnorderedGroup_9__2 )?
             {
-            pushFollow(FOLLOW_52);
+            pushFollow(FOLLOW_51);
             rule__DtDefinition__UnorderedGroup_9__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10484:2: ( rule__DtDefinition__UnorderedGroup_9__2 )?
-            int alt82=2;
-            int LA82_0 = input.LA(1);
+            // InternalVertigoDsl.g:10428:2: ( rule__DtDefinition__UnorderedGroup_9__2 )?
+            int alt80=2;
+            int LA80_0 = input.LA(1);
 
-            if ( LA82_0 == 44 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
-                alt82=1;
+            if ( LA80_0 == 44 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
+                alt80=1;
             }
-            else if ( LA82_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
-                alt82=1;
+            else if ( LA80_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
+                alt80=1;
             }
-            else if ( LA82_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
-                alt82=1;
+            else if ( LA80_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
+                alt80=1;
             }
-            switch (alt82) {
+            switch (alt80) {
                 case 1 :
-                    // InternalVertigoDsl.g:10484:2: rule__DtDefinition__UnorderedGroup_9__2
+                    // InternalVertigoDsl.g:10428:2: rule__DtDefinition__UnorderedGroup_9__2
                     {
                     pushFollow(FOLLOW_2);
                     rule__DtDefinition__UnorderedGroup_9__2();
@@ -31850,14 +31690,14 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__UnorderedGroup_9__2"
-    // InternalVertigoDsl.g:10490:1: rule__DtDefinition__UnorderedGroup_9__2 : rule__DtDefinition__UnorderedGroup_9__Impl ;
+    // InternalVertigoDsl.g:10434:1: rule__DtDefinition__UnorderedGroup_9__2 : rule__DtDefinition__UnorderedGroup_9__Impl ;
     public final void rule__DtDefinition__UnorderedGroup_9__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10494:1: ( rule__DtDefinition__UnorderedGroup_9__Impl )
-            // InternalVertigoDsl.g:10495:2: rule__DtDefinition__UnorderedGroup_9__Impl
+            // InternalVertigoDsl.g:10438:1: ( rule__DtDefinition__UnorderedGroup_9__Impl )
+            // InternalVertigoDsl.g:10439:2: rule__DtDefinition__UnorderedGroup_9__Impl
             {
             pushFollow(FOLLOW_2);
             rule__DtDefinition__UnorderedGroup_9__Impl();
@@ -31883,15 +31723,15 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4"
-    // InternalVertigoDsl.g:10502:1: rule__Association__UnorderedGroup_4 : rule__Association__UnorderedGroup_4__0 {...}?;
+    // InternalVertigoDsl.g:10446:1: rule__Association__UnorderedGroup_4 : rule__Association__UnorderedGroup_4__0 {...}?;
     public final void rule__Association__UnorderedGroup_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
         	
         try {
-            // InternalVertigoDsl.g:10507:1: ( rule__Association__UnorderedGroup_4__0 {...}?)
-            // InternalVertigoDsl.g:10508:2: rule__Association__UnorderedGroup_4__0 {...}?
+            // InternalVertigoDsl.g:10451:1: ( rule__Association__UnorderedGroup_4__0 {...}?)
+            // InternalVertigoDsl.g:10452:2: rule__Association__UnorderedGroup_4__0 {...}?
             {
             pushFollow(FOLLOW_2);
             rule__Association__UnorderedGroup_4__0();
@@ -31921,31 +31761,31 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__Impl"
-    // InternalVertigoDsl.g:10516:1: rule__Association__UnorderedGroup_4__Impl : ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) ) ;
+    // InternalVertigoDsl.g:10460:1: rule__Association__UnorderedGroup_4__Impl : ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) ) ;
     public final void rule__Association__UnorderedGroup_4__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalVertigoDsl.g:10521:1: ( ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) ) )
-            // InternalVertigoDsl.g:10522:3: ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) )
+            // InternalVertigoDsl.g:10465:1: ( ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) ) )
+            // InternalVertigoDsl.g:10466:3: ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) )
             {
-            // InternalVertigoDsl.g:10522:3: ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) )
-            int alt83=12;
-            alt83 = dfa83.predict(input);
-            switch (alt83) {
+            // InternalVertigoDsl.g:10466:3: ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) )
+            int alt81=12;
+            alt81 = dfa81.predict(input);
+            switch (alt81) {
                 case 1 :
-                    // InternalVertigoDsl.g:10523:3: ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10467:3: ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10523:3: ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) )
-                    // InternalVertigoDsl.g:10524:4: {...}? => ( ( ( rule__Association__Group_4_0__0 ) ) )
+                    // InternalVertigoDsl.g:10467:3: ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10468:4: {...}? => ( ( ( rule__Association__Group_4_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0)");
                     }
-                    // InternalVertigoDsl.g:10524:107: ( ( ( rule__Association__Group_4_0__0 ) ) )
-                    // InternalVertigoDsl.g:10525:5: ( ( rule__Association__Group_4_0__0 ) )
+                    // InternalVertigoDsl.g:10468:107: ( ( ( rule__Association__Group_4_0__0 ) ) )
+                    // InternalVertigoDsl.g:10469:5: ( ( rule__Association__Group_4_0__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0);
@@ -31953,12 +31793,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10531:5: ( ( rule__Association__Group_4_0__0 ) )
-                    // InternalVertigoDsl.g:10532:6: ( rule__Association__Group_4_0__0 )
+                    // InternalVertigoDsl.g:10475:5: ( ( rule__Association__Group_4_0__0 ) )
+                    // InternalVertigoDsl.g:10476:6: ( rule__Association__Group_4_0__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_0()); 
-                    // InternalVertigoDsl.g:10533:6: ( rule__Association__Group_4_0__0 )
-                    // InternalVertigoDsl.g:10533:7: rule__Association__Group_4_0__0
+                    // InternalVertigoDsl.g:10477:6: ( rule__Association__Group_4_0__0 )
+                    // InternalVertigoDsl.g:10477:7: rule__Association__Group_4_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_0__0();
@@ -31982,16 +31822,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:10538:3: ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10482:3: ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10538:3: ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) )
-                    // InternalVertigoDsl.g:10539:4: {...}? => ( ( ( rule__Association__Group_4_1__0 ) ) )
+                    // InternalVertigoDsl.g:10482:3: ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10483:4: {...}? => ( ( ( rule__Association__Group_4_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1)");
                     }
-                    // InternalVertigoDsl.g:10539:107: ( ( ( rule__Association__Group_4_1__0 ) ) )
-                    // InternalVertigoDsl.g:10540:5: ( ( rule__Association__Group_4_1__0 ) )
+                    // InternalVertigoDsl.g:10483:107: ( ( ( rule__Association__Group_4_1__0 ) ) )
+                    // InternalVertigoDsl.g:10484:5: ( ( rule__Association__Group_4_1__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1);
@@ -31999,12 +31839,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10546:5: ( ( rule__Association__Group_4_1__0 ) )
-                    // InternalVertigoDsl.g:10547:6: ( rule__Association__Group_4_1__0 )
+                    // InternalVertigoDsl.g:10490:5: ( ( rule__Association__Group_4_1__0 ) )
+                    // InternalVertigoDsl.g:10491:6: ( rule__Association__Group_4_1__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_1()); 
-                    // InternalVertigoDsl.g:10548:6: ( rule__Association__Group_4_1__0 )
-                    // InternalVertigoDsl.g:10548:7: rule__Association__Group_4_1__0
+                    // InternalVertigoDsl.g:10492:6: ( rule__Association__Group_4_1__0 )
+                    // InternalVertigoDsl.g:10492:7: rule__Association__Group_4_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_1__0();
@@ -32028,16 +31868,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalVertigoDsl.g:10553:3: ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:10497:3: ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10553:3: ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) )
-                    // InternalVertigoDsl.g:10554:4: {...}? => ( ( ( rule__Association__Group_4_2__0 ) ) )
+                    // InternalVertigoDsl.g:10497:3: ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:10498:4: {...}? => ( ( ( rule__Association__Group_4_2__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2)");
                     }
-                    // InternalVertigoDsl.g:10554:107: ( ( ( rule__Association__Group_4_2__0 ) ) )
-                    // InternalVertigoDsl.g:10555:5: ( ( rule__Association__Group_4_2__0 ) )
+                    // InternalVertigoDsl.g:10498:107: ( ( ( rule__Association__Group_4_2__0 ) ) )
+                    // InternalVertigoDsl.g:10499:5: ( ( rule__Association__Group_4_2__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2);
@@ -32045,12 +31885,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10561:5: ( ( rule__Association__Group_4_2__0 ) )
-                    // InternalVertigoDsl.g:10562:6: ( rule__Association__Group_4_2__0 )
+                    // InternalVertigoDsl.g:10505:5: ( ( rule__Association__Group_4_2__0 ) )
+                    // InternalVertigoDsl.g:10506:6: ( rule__Association__Group_4_2__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_2()); 
-                    // InternalVertigoDsl.g:10563:6: ( rule__Association__Group_4_2__0 )
-                    // InternalVertigoDsl.g:10563:7: rule__Association__Group_4_2__0
+                    // InternalVertigoDsl.g:10507:6: ( rule__Association__Group_4_2__0 )
+                    // InternalVertigoDsl.g:10507:7: rule__Association__Group_4_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_2__0();
@@ -32074,16 +31914,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 4 :
-                    // InternalVertigoDsl.g:10568:3: ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) )
+                    // InternalVertigoDsl.g:10512:3: ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10568:3: ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) )
-                    // InternalVertigoDsl.g:10569:4: {...}? => ( ( ( rule__Association__Group_4_3__0 ) ) )
+                    // InternalVertigoDsl.g:10512:3: ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) )
+                    // InternalVertigoDsl.g:10513:4: {...}? => ( ( ( rule__Association__Group_4_3__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3)");
                     }
-                    // InternalVertigoDsl.g:10569:107: ( ( ( rule__Association__Group_4_3__0 ) ) )
-                    // InternalVertigoDsl.g:10570:5: ( ( rule__Association__Group_4_3__0 ) )
+                    // InternalVertigoDsl.g:10513:107: ( ( ( rule__Association__Group_4_3__0 ) ) )
+                    // InternalVertigoDsl.g:10514:5: ( ( rule__Association__Group_4_3__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3);
@@ -32091,12 +31931,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10576:5: ( ( rule__Association__Group_4_3__0 ) )
-                    // InternalVertigoDsl.g:10577:6: ( rule__Association__Group_4_3__0 )
+                    // InternalVertigoDsl.g:10520:5: ( ( rule__Association__Group_4_3__0 ) )
+                    // InternalVertigoDsl.g:10521:6: ( rule__Association__Group_4_3__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_3()); 
-                    // InternalVertigoDsl.g:10578:6: ( rule__Association__Group_4_3__0 )
-                    // InternalVertigoDsl.g:10578:7: rule__Association__Group_4_3__0
+                    // InternalVertigoDsl.g:10522:6: ( rule__Association__Group_4_3__0 )
+                    // InternalVertigoDsl.g:10522:7: rule__Association__Group_4_3__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_3__0();
@@ -32120,16 +31960,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 5 :
-                    // InternalVertigoDsl.g:10583:3: ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) )
+                    // InternalVertigoDsl.g:10527:3: ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10583:3: ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) )
-                    // InternalVertigoDsl.g:10584:4: {...}? => ( ( ( rule__Association__Group_4_4__0 ) ) )
+                    // InternalVertigoDsl.g:10527:3: ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) )
+                    // InternalVertigoDsl.g:10528:4: {...}? => ( ( ( rule__Association__Group_4_4__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4)");
                     }
-                    // InternalVertigoDsl.g:10584:107: ( ( ( rule__Association__Group_4_4__0 ) ) )
-                    // InternalVertigoDsl.g:10585:5: ( ( rule__Association__Group_4_4__0 ) )
+                    // InternalVertigoDsl.g:10528:107: ( ( ( rule__Association__Group_4_4__0 ) ) )
+                    // InternalVertigoDsl.g:10529:5: ( ( rule__Association__Group_4_4__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4);
@@ -32137,12 +31977,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10591:5: ( ( rule__Association__Group_4_4__0 ) )
-                    // InternalVertigoDsl.g:10592:6: ( rule__Association__Group_4_4__0 )
+                    // InternalVertigoDsl.g:10535:5: ( ( rule__Association__Group_4_4__0 ) )
+                    // InternalVertigoDsl.g:10536:6: ( rule__Association__Group_4_4__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_4()); 
-                    // InternalVertigoDsl.g:10593:6: ( rule__Association__Group_4_4__0 )
-                    // InternalVertigoDsl.g:10593:7: rule__Association__Group_4_4__0
+                    // InternalVertigoDsl.g:10537:6: ( rule__Association__Group_4_4__0 )
+                    // InternalVertigoDsl.g:10537:7: rule__Association__Group_4_4__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_4__0();
@@ -32166,16 +32006,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 6 :
-                    // InternalVertigoDsl.g:10598:3: ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) )
+                    // InternalVertigoDsl.g:10542:3: ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10598:3: ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) )
-                    // InternalVertigoDsl.g:10599:4: {...}? => ( ( ( rule__Association__Group_4_5__0 ) ) )
+                    // InternalVertigoDsl.g:10542:3: ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) )
+                    // InternalVertigoDsl.g:10543:4: {...}? => ( ( ( rule__Association__Group_4_5__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5)");
                     }
-                    // InternalVertigoDsl.g:10599:107: ( ( ( rule__Association__Group_4_5__0 ) ) )
-                    // InternalVertigoDsl.g:10600:5: ( ( rule__Association__Group_4_5__0 ) )
+                    // InternalVertigoDsl.g:10543:107: ( ( ( rule__Association__Group_4_5__0 ) ) )
+                    // InternalVertigoDsl.g:10544:5: ( ( rule__Association__Group_4_5__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5);
@@ -32183,12 +32023,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10606:5: ( ( rule__Association__Group_4_5__0 ) )
-                    // InternalVertigoDsl.g:10607:6: ( rule__Association__Group_4_5__0 )
+                    // InternalVertigoDsl.g:10550:5: ( ( rule__Association__Group_4_5__0 ) )
+                    // InternalVertigoDsl.g:10551:6: ( rule__Association__Group_4_5__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_5()); 
-                    // InternalVertigoDsl.g:10608:6: ( rule__Association__Group_4_5__0 )
-                    // InternalVertigoDsl.g:10608:7: rule__Association__Group_4_5__0
+                    // InternalVertigoDsl.g:10552:6: ( rule__Association__Group_4_5__0 )
+                    // InternalVertigoDsl.g:10552:7: rule__Association__Group_4_5__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_5__0();
@@ -32212,16 +32052,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 7 :
-                    // InternalVertigoDsl.g:10613:3: ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) )
+                    // InternalVertigoDsl.g:10557:3: ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10613:3: ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) )
-                    // InternalVertigoDsl.g:10614:4: {...}? => ( ( ( rule__Association__Group_4_6__0 ) ) )
+                    // InternalVertigoDsl.g:10557:3: ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) )
+                    // InternalVertigoDsl.g:10558:4: {...}? => ( ( ( rule__Association__Group_4_6__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6)");
                     }
-                    // InternalVertigoDsl.g:10614:107: ( ( ( rule__Association__Group_4_6__0 ) ) )
-                    // InternalVertigoDsl.g:10615:5: ( ( rule__Association__Group_4_6__0 ) )
+                    // InternalVertigoDsl.g:10558:107: ( ( ( rule__Association__Group_4_6__0 ) ) )
+                    // InternalVertigoDsl.g:10559:5: ( ( rule__Association__Group_4_6__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6);
@@ -32229,12 +32069,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10621:5: ( ( rule__Association__Group_4_6__0 ) )
-                    // InternalVertigoDsl.g:10622:6: ( rule__Association__Group_4_6__0 )
+                    // InternalVertigoDsl.g:10565:5: ( ( rule__Association__Group_4_6__0 ) )
+                    // InternalVertigoDsl.g:10566:6: ( rule__Association__Group_4_6__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_6()); 
-                    // InternalVertigoDsl.g:10623:6: ( rule__Association__Group_4_6__0 )
-                    // InternalVertigoDsl.g:10623:7: rule__Association__Group_4_6__0
+                    // InternalVertigoDsl.g:10567:6: ( rule__Association__Group_4_6__0 )
+                    // InternalVertigoDsl.g:10567:7: rule__Association__Group_4_6__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_6__0();
@@ -32258,16 +32098,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 8 :
-                    // InternalVertigoDsl.g:10628:3: ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) )
+                    // InternalVertigoDsl.g:10572:3: ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10628:3: ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) )
-                    // InternalVertigoDsl.g:10629:4: {...}? => ( ( ( rule__Association__Group_4_7__0 ) ) )
+                    // InternalVertigoDsl.g:10572:3: ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) )
+                    // InternalVertigoDsl.g:10573:4: {...}? => ( ( ( rule__Association__Group_4_7__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7)");
                     }
-                    // InternalVertigoDsl.g:10629:107: ( ( ( rule__Association__Group_4_7__0 ) ) )
-                    // InternalVertigoDsl.g:10630:5: ( ( rule__Association__Group_4_7__0 ) )
+                    // InternalVertigoDsl.g:10573:107: ( ( ( rule__Association__Group_4_7__0 ) ) )
+                    // InternalVertigoDsl.g:10574:5: ( ( rule__Association__Group_4_7__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7);
@@ -32275,12 +32115,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10636:5: ( ( rule__Association__Group_4_7__0 ) )
-                    // InternalVertigoDsl.g:10637:6: ( rule__Association__Group_4_7__0 )
+                    // InternalVertigoDsl.g:10580:5: ( ( rule__Association__Group_4_7__0 ) )
+                    // InternalVertigoDsl.g:10581:6: ( rule__Association__Group_4_7__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_7()); 
-                    // InternalVertigoDsl.g:10638:6: ( rule__Association__Group_4_7__0 )
-                    // InternalVertigoDsl.g:10638:7: rule__Association__Group_4_7__0
+                    // InternalVertigoDsl.g:10582:6: ( rule__Association__Group_4_7__0 )
+                    // InternalVertigoDsl.g:10582:7: rule__Association__Group_4_7__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_7__0();
@@ -32304,16 +32144,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 9 :
-                    // InternalVertigoDsl.g:10643:3: ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) )
+                    // InternalVertigoDsl.g:10587:3: ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10643:3: ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) )
-                    // InternalVertigoDsl.g:10644:4: {...}? => ( ( ( rule__Association__Group_4_8__0 ) ) )
+                    // InternalVertigoDsl.g:10587:3: ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) )
+                    // InternalVertigoDsl.g:10588:4: {...}? => ( ( ( rule__Association__Group_4_8__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8)");
                     }
-                    // InternalVertigoDsl.g:10644:107: ( ( ( rule__Association__Group_4_8__0 ) ) )
-                    // InternalVertigoDsl.g:10645:5: ( ( rule__Association__Group_4_8__0 ) )
+                    // InternalVertigoDsl.g:10588:107: ( ( ( rule__Association__Group_4_8__0 ) ) )
+                    // InternalVertigoDsl.g:10589:5: ( ( rule__Association__Group_4_8__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8);
@@ -32321,12 +32161,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10651:5: ( ( rule__Association__Group_4_8__0 ) )
-                    // InternalVertigoDsl.g:10652:6: ( rule__Association__Group_4_8__0 )
+                    // InternalVertigoDsl.g:10595:5: ( ( rule__Association__Group_4_8__0 ) )
+                    // InternalVertigoDsl.g:10596:6: ( rule__Association__Group_4_8__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_8()); 
-                    // InternalVertigoDsl.g:10653:6: ( rule__Association__Group_4_8__0 )
-                    // InternalVertigoDsl.g:10653:7: rule__Association__Group_4_8__0
+                    // InternalVertigoDsl.g:10597:6: ( rule__Association__Group_4_8__0 )
+                    // InternalVertigoDsl.g:10597:7: rule__Association__Group_4_8__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_8__0();
@@ -32350,16 +32190,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 10 :
-                    // InternalVertigoDsl.g:10658:3: ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) )
+                    // InternalVertigoDsl.g:10602:3: ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10658:3: ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) )
-                    // InternalVertigoDsl.g:10659:4: {...}? => ( ( ( rule__Association__Group_4_9__0 ) ) )
+                    // InternalVertigoDsl.g:10602:3: ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) )
+                    // InternalVertigoDsl.g:10603:4: {...}? => ( ( ( rule__Association__Group_4_9__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9)");
                     }
-                    // InternalVertigoDsl.g:10659:107: ( ( ( rule__Association__Group_4_9__0 ) ) )
-                    // InternalVertigoDsl.g:10660:5: ( ( rule__Association__Group_4_9__0 ) )
+                    // InternalVertigoDsl.g:10603:107: ( ( ( rule__Association__Group_4_9__0 ) ) )
+                    // InternalVertigoDsl.g:10604:5: ( ( rule__Association__Group_4_9__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9);
@@ -32367,12 +32207,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10666:5: ( ( rule__Association__Group_4_9__0 ) )
-                    // InternalVertigoDsl.g:10667:6: ( rule__Association__Group_4_9__0 )
+                    // InternalVertigoDsl.g:10610:5: ( ( rule__Association__Group_4_9__0 ) )
+                    // InternalVertigoDsl.g:10611:6: ( rule__Association__Group_4_9__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_9()); 
-                    // InternalVertigoDsl.g:10668:6: ( rule__Association__Group_4_9__0 )
-                    // InternalVertigoDsl.g:10668:7: rule__Association__Group_4_9__0
+                    // InternalVertigoDsl.g:10612:6: ( rule__Association__Group_4_9__0 )
+                    // InternalVertigoDsl.g:10612:7: rule__Association__Group_4_9__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_9__0();
@@ -32396,16 +32236,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 11 :
-                    // InternalVertigoDsl.g:10673:3: ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) )
+                    // InternalVertigoDsl.g:10617:3: ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10673:3: ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) )
-                    // InternalVertigoDsl.g:10674:4: {...}? => ( ( ( rule__Association__Group_4_10__0 ) ) )
+                    // InternalVertigoDsl.g:10617:3: ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) )
+                    // InternalVertigoDsl.g:10618:4: {...}? => ( ( ( rule__Association__Group_4_10__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10)");
                     }
-                    // InternalVertigoDsl.g:10674:108: ( ( ( rule__Association__Group_4_10__0 ) ) )
-                    // InternalVertigoDsl.g:10675:5: ( ( rule__Association__Group_4_10__0 ) )
+                    // InternalVertigoDsl.g:10618:108: ( ( ( rule__Association__Group_4_10__0 ) ) )
+                    // InternalVertigoDsl.g:10619:5: ( ( rule__Association__Group_4_10__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10);
@@ -32413,12 +32253,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10681:5: ( ( rule__Association__Group_4_10__0 ) )
-                    // InternalVertigoDsl.g:10682:6: ( rule__Association__Group_4_10__0 )
+                    // InternalVertigoDsl.g:10625:5: ( ( rule__Association__Group_4_10__0 ) )
+                    // InternalVertigoDsl.g:10626:6: ( rule__Association__Group_4_10__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_10()); 
-                    // InternalVertigoDsl.g:10683:6: ( rule__Association__Group_4_10__0 )
-                    // InternalVertigoDsl.g:10683:7: rule__Association__Group_4_10__0
+                    // InternalVertigoDsl.g:10627:6: ( rule__Association__Group_4_10__0 )
+                    // InternalVertigoDsl.g:10627:7: rule__Association__Group_4_10__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_10__0();
@@ -32442,16 +32282,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 12 :
-                    // InternalVertigoDsl.g:10688:3: ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) )
+                    // InternalVertigoDsl.g:10632:3: ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10688:3: ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) )
-                    // InternalVertigoDsl.g:10689:4: {...}? => ( ( ( rule__Association__Group_4_11__0 ) ) )
+                    // InternalVertigoDsl.g:10632:3: ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) )
+                    // InternalVertigoDsl.g:10633:4: {...}? => ( ( ( rule__Association__Group_4_11__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {
                         throw new FailedPredicateException(input, "rule__Association__UnorderedGroup_4__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11)");
                     }
-                    // InternalVertigoDsl.g:10689:108: ( ( ( rule__Association__Group_4_11__0 ) ) )
-                    // InternalVertigoDsl.g:10690:5: ( ( rule__Association__Group_4_11__0 ) )
+                    // InternalVertigoDsl.g:10633:108: ( ( ( rule__Association__Group_4_11__0 ) ) )
+                    // InternalVertigoDsl.g:10634:5: ( ( rule__Association__Group_4_11__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11);
@@ -32459,12 +32299,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10696:5: ( ( rule__Association__Group_4_11__0 ) )
-                    // InternalVertigoDsl.g:10697:6: ( rule__Association__Group_4_11__0 )
+                    // InternalVertigoDsl.g:10640:5: ( ( rule__Association__Group_4_11__0 ) )
+                    // InternalVertigoDsl.g:10641:6: ( rule__Association__Group_4_11__0 )
                     {
                      before(grammarAccess.getAssociationAccess().getGroup_4_11()); 
-                    // InternalVertigoDsl.g:10698:6: ( rule__Association__Group_4_11__0 )
-                    // InternalVertigoDsl.g:10698:7: rule__Association__Group_4_11__0
+                    // InternalVertigoDsl.g:10642:6: ( rule__Association__Group_4_11__0 )
+                    // InternalVertigoDsl.g:10642:7: rule__Association__Group_4_11__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__Group_4_11__0();
@@ -32511,26 +32351,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__0"
-    // InternalVertigoDsl.g:10711:1: rule__Association__UnorderedGroup_4__0 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__1 )? ;
+    // InternalVertigoDsl.g:10655:1: rule__Association__UnorderedGroup_4__0 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__1 )? ;
     public final void rule__Association__UnorderedGroup_4__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10715:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__1 )? )
-            // InternalVertigoDsl.g:10716:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__1 )?
+            // InternalVertigoDsl.g:10659:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__1 )? )
+            // InternalVertigoDsl.g:10660:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__1 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10717:2: ( rule__Association__UnorderedGroup_4__1 )?
-            int alt84=2;
-            alt84 = dfa84.predict(input);
-            switch (alt84) {
+            // InternalVertigoDsl.g:10661:2: ( rule__Association__UnorderedGroup_4__1 )?
+            int alt82=2;
+            alt82 = dfa82.predict(input);
+            switch (alt82) {
                 case 1 :
-                    // InternalVertigoDsl.g:10717:2: rule__Association__UnorderedGroup_4__1
+                    // InternalVertigoDsl.g:10661:2: rule__Association__UnorderedGroup_4__1
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__1();
@@ -32562,26 +32402,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__1"
-    // InternalVertigoDsl.g:10723:1: rule__Association__UnorderedGroup_4__1 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__2 )? ;
+    // InternalVertigoDsl.g:10667:1: rule__Association__UnorderedGroup_4__1 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__2 )? ;
     public final void rule__Association__UnorderedGroup_4__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10727:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__2 )? )
-            // InternalVertigoDsl.g:10728:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__2 )?
+            // InternalVertigoDsl.g:10671:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__2 )? )
+            // InternalVertigoDsl.g:10672:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__2 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10729:2: ( rule__Association__UnorderedGroup_4__2 )?
-            int alt85=2;
-            alt85 = dfa85.predict(input);
-            switch (alt85) {
+            // InternalVertigoDsl.g:10673:2: ( rule__Association__UnorderedGroup_4__2 )?
+            int alt83=2;
+            alt83 = dfa83.predict(input);
+            switch (alt83) {
                 case 1 :
-                    // InternalVertigoDsl.g:10729:2: rule__Association__UnorderedGroup_4__2
+                    // InternalVertigoDsl.g:10673:2: rule__Association__UnorderedGroup_4__2
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__2();
@@ -32613,26 +32453,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__2"
-    // InternalVertigoDsl.g:10735:1: rule__Association__UnorderedGroup_4__2 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__3 )? ;
+    // InternalVertigoDsl.g:10679:1: rule__Association__UnorderedGroup_4__2 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__3 )? ;
     public final void rule__Association__UnorderedGroup_4__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10739:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__3 )? )
-            // InternalVertigoDsl.g:10740:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__3 )?
+            // InternalVertigoDsl.g:10683:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__3 )? )
+            // InternalVertigoDsl.g:10684:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__3 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10741:2: ( rule__Association__UnorderedGroup_4__3 )?
-            int alt86=2;
-            alt86 = dfa86.predict(input);
-            switch (alt86) {
+            // InternalVertigoDsl.g:10685:2: ( rule__Association__UnorderedGroup_4__3 )?
+            int alt84=2;
+            alt84 = dfa84.predict(input);
+            switch (alt84) {
                 case 1 :
-                    // InternalVertigoDsl.g:10741:2: rule__Association__UnorderedGroup_4__3
+                    // InternalVertigoDsl.g:10685:2: rule__Association__UnorderedGroup_4__3
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__3();
@@ -32664,26 +32504,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__3"
-    // InternalVertigoDsl.g:10747:1: rule__Association__UnorderedGroup_4__3 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__4 )? ;
+    // InternalVertigoDsl.g:10691:1: rule__Association__UnorderedGroup_4__3 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__4 )? ;
     public final void rule__Association__UnorderedGroup_4__3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10751:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__4 )? )
-            // InternalVertigoDsl.g:10752:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__4 )?
+            // InternalVertigoDsl.g:10695:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__4 )? )
+            // InternalVertigoDsl.g:10696:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__4 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10753:2: ( rule__Association__UnorderedGroup_4__4 )?
-            int alt87=2;
-            alt87 = dfa87.predict(input);
-            switch (alt87) {
+            // InternalVertigoDsl.g:10697:2: ( rule__Association__UnorderedGroup_4__4 )?
+            int alt85=2;
+            alt85 = dfa85.predict(input);
+            switch (alt85) {
                 case 1 :
-                    // InternalVertigoDsl.g:10753:2: rule__Association__UnorderedGroup_4__4
+                    // InternalVertigoDsl.g:10697:2: rule__Association__UnorderedGroup_4__4
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__4();
@@ -32715,26 +32555,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__4"
-    // InternalVertigoDsl.g:10759:1: rule__Association__UnorderedGroup_4__4 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__5 )? ;
+    // InternalVertigoDsl.g:10703:1: rule__Association__UnorderedGroup_4__4 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__5 )? ;
     public final void rule__Association__UnorderedGroup_4__4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10763:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__5 )? )
-            // InternalVertigoDsl.g:10764:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__5 )?
+            // InternalVertigoDsl.g:10707:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__5 )? )
+            // InternalVertigoDsl.g:10708:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__5 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10765:2: ( rule__Association__UnorderedGroup_4__5 )?
-            int alt88=2;
-            alt88 = dfa88.predict(input);
-            switch (alt88) {
+            // InternalVertigoDsl.g:10709:2: ( rule__Association__UnorderedGroup_4__5 )?
+            int alt86=2;
+            alt86 = dfa86.predict(input);
+            switch (alt86) {
                 case 1 :
-                    // InternalVertigoDsl.g:10765:2: rule__Association__UnorderedGroup_4__5
+                    // InternalVertigoDsl.g:10709:2: rule__Association__UnorderedGroup_4__5
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__5();
@@ -32766,26 +32606,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__5"
-    // InternalVertigoDsl.g:10771:1: rule__Association__UnorderedGroup_4__5 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__6 )? ;
+    // InternalVertigoDsl.g:10715:1: rule__Association__UnorderedGroup_4__5 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__6 )? ;
     public final void rule__Association__UnorderedGroup_4__5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10775:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__6 )? )
-            // InternalVertigoDsl.g:10776:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__6 )?
+            // InternalVertigoDsl.g:10719:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__6 )? )
+            // InternalVertigoDsl.g:10720:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__6 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10777:2: ( rule__Association__UnorderedGroup_4__6 )?
-            int alt89=2;
-            alt89 = dfa89.predict(input);
-            switch (alt89) {
+            // InternalVertigoDsl.g:10721:2: ( rule__Association__UnorderedGroup_4__6 )?
+            int alt87=2;
+            alt87 = dfa87.predict(input);
+            switch (alt87) {
                 case 1 :
-                    // InternalVertigoDsl.g:10777:2: rule__Association__UnorderedGroup_4__6
+                    // InternalVertigoDsl.g:10721:2: rule__Association__UnorderedGroup_4__6
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__6();
@@ -32817,26 +32657,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__6"
-    // InternalVertigoDsl.g:10783:1: rule__Association__UnorderedGroup_4__6 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__7 )? ;
+    // InternalVertigoDsl.g:10727:1: rule__Association__UnorderedGroup_4__6 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__7 )? ;
     public final void rule__Association__UnorderedGroup_4__6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10787:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__7 )? )
-            // InternalVertigoDsl.g:10788:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__7 )?
+            // InternalVertigoDsl.g:10731:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__7 )? )
+            // InternalVertigoDsl.g:10732:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__7 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10789:2: ( rule__Association__UnorderedGroup_4__7 )?
-            int alt90=2;
-            alt90 = dfa90.predict(input);
-            switch (alt90) {
+            // InternalVertigoDsl.g:10733:2: ( rule__Association__UnorderedGroup_4__7 )?
+            int alt88=2;
+            alt88 = dfa88.predict(input);
+            switch (alt88) {
                 case 1 :
-                    // InternalVertigoDsl.g:10789:2: rule__Association__UnorderedGroup_4__7
+                    // InternalVertigoDsl.g:10733:2: rule__Association__UnorderedGroup_4__7
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__7();
@@ -32868,26 +32708,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__7"
-    // InternalVertigoDsl.g:10795:1: rule__Association__UnorderedGroup_4__7 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__8 )? ;
+    // InternalVertigoDsl.g:10739:1: rule__Association__UnorderedGroup_4__7 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__8 )? ;
     public final void rule__Association__UnorderedGroup_4__7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10799:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__8 )? )
-            // InternalVertigoDsl.g:10800:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__8 )?
+            // InternalVertigoDsl.g:10743:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__8 )? )
+            // InternalVertigoDsl.g:10744:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__8 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10801:2: ( rule__Association__UnorderedGroup_4__8 )?
-            int alt91=2;
-            alt91 = dfa91.predict(input);
-            switch (alt91) {
+            // InternalVertigoDsl.g:10745:2: ( rule__Association__UnorderedGroup_4__8 )?
+            int alt89=2;
+            alt89 = dfa89.predict(input);
+            switch (alt89) {
                 case 1 :
-                    // InternalVertigoDsl.g:10801:2: rule__Association__UnorderedGroup_4__8
+                    // InternalVertigoDsl.g:10745:2: rule__Association__UnorderedGroup_4__8
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__8();
@@ -32919,26 +32759,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__8"
-    // InternalVertigoDsl.g:10807:1: rule__Association__UnorderedGroup_4__8 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__9 )? ;
+    // InternalVertigoDsl.g:10751:1: rule__Association__UnorderedGroup_4__8 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__9 )? ;
     public final void rule__Association__UnorderedGroup_4__8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10811:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__9 )? )
-            // InternalVertigoDsl.g:10812:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__9 )?
+            // InternalVertigoDsl.g:10755:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__9 )? )
+            // InternalVertigoDsl.g:10756:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__9 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10813:2: ( rule__Association__UnorderedGroup_4__9 )?
-            int alt92=2;
-            alt92 = dfa92.predict(input);
-            switch (alt92) {
+            // InternalVertigoDsl.g:10757:2: ( rule__Association__UnorderedGroup_4__9 )?
+            int alt90=2;
+            alt90 = dfa90.predict(input);
+            switch (alt90) {
                 case 1 :
-                    // InternalVertigoDsl.g:10813:2: rule__Association__UnorderedGroup_4__9
+                    // InternalVertigoDsl.g:10757:2: rule__Association__UnorderedGroup_4__9
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__9();
@@ -32970,26 +32810,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__9"
-    // InternalVertigoDsl.g:10819:1: rule__Association__UnorderedGroup_4__9 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__10 )? ;
+    // InternalVertigoDsl.g:10763:1: rule__Association__UnorderedGroup_4__9 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__10 )? ;
     public final void rule__Association__UnorderedGroup_4__9() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10823:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__10 )? )
-            // InternalVertigoDsl.g:10824:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__10 )?
+            // InternalVertigoDsl.g:10767:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__10 )? )
+            // InternalVertigoDsl.g:10768:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__10 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10825:2: ( rule__Association__UnorderedGroup_4__10 )?
-            int alt93=2;
-            alt93 = dfa93.predict(input);
-            switch (alt93) {
+            // InternalVertigoDsl.g:10769:2: ( rule__Association__UnorderedGroup_4__10 )?
+            int alt91=2;
+            alt91 = dfa91.predict(input);
+            switch (alt91) {
                 case 1 :
-                    // InternalVertigoDsl.g:10825:2: rule__Association__UnorderedGroup_4__10
+                    // InternalVertigoDsl.g:10769:2: rule__Association__UnorderedGroup_4__10
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__10();
@@ -33021,26 +32861,26 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__10"
-    // InternalVertigoDsl.g:10831:1: rule__Association__UnorderedGroup_4__10 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__11 )? ;
+    // InternalVertigoDsl.g:10775:1: rule__Association__UnorderedGroup_4__10 : rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__11 )? ;
     public final void rule__Association__UnorderedGroup_4__10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10835:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__11 )? )
-            // InternalVertigoDsl.g:10836:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__11 )?
+            // InternalVertigoDsl.g:10779:1: ( rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__11 )? )
+            // InternalVertigoDsl.g:10780:2: rule__Association__UnorderedGroup_4__Impl ( rule__Association__UnorderedGroup_4__11 )?
             {
-            pushFollow(FOLLOW_53);
+            pushFollow(FOLLOW_52);
             rule__Association__UnorderedGroup_4__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10837:2: ( rule__Association__UnorderedGroup_4__11 )?
-            int alt94=2;
-            alt94 = dfa94.predict(input);
-            switch (alt94) {
+            // InternalVertigoDsl.g:10781:2: ( rule__Association__UnorderedGroup_4__11 )?
+            int alt92=2;
+            alt92 = dfa92.predict(input);
+            switch (alt92) {
                 case 1 :
-                    // InternalVertigoDsl.g:10837:2: rule__Association__UnorderedGroup_4__11
+                    // InternalVertigoDsl.g:10781:2: rule__Association__UnorderedGroup_4__11
                     {
                     pushFollow(FOLLOW_2);
                     rule__Association__UnorderedGroup_4__11();
@@ -33072,14 +32912,14 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__UnorderedGroup_4__11"
-    // InternalVertigoDsl.g:10843:1: rule__Association__UnorderedGroup_4__11 : rule__Association__UnorderedGroup_4__Impl ;
+    // InternalVertigoDsl.g:10787:1: rule__Association__UnorderedGroup_4__11 : rule__Association__UnorderedGroup_4__Impl ;
     public final void rule__Association__UnorderedGroup_4__11() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10847:1: ( rule__Association__UnorderedGroup_4__Impl )
-            // InternalVertigoDsl.g:10848:2: rule__Association__UnorderedGroup_4__Impl
+            // InternalVertigoDsl.g:10791:1: ( rule__Association__UnorderedGroup_4__Impl )
+            // InternalVertigoDsl.g:10792:2: rule__Association__UnorderedGroup_4__Impl
             {
             pushFollow(FOLLOW_2);
             rule__Association__UnorderedGroup_4__Impl();
@@ -33105,15 +32945,15 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttributeString__UnorderedGroup_1"
-    // InternalVertigoDsl.g:10855:1: rule__TaskAttributeString__UnorderedGroup_1 : rule__TaskAttributeString__UnorderedGroup_1__0 {...}?;
+    // InternalVertigoDsl.g:10799:1: rule__TaskAttributeString__UnorderedGroup_1 : rule__TaskAttributeString__UnorderedGroup_1__0 {...}?;
     public final void rule__TaskAttributeString__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalVertigoDsl.g:10860:1: ( rule__TaskAttributeString__UnorderedGroup_1__0 {...}?)
-            // InternalVertigoDsl.g:10861:2: rule__TaskAttributeString__UnorderedGroup_1__0 {...}?
+            // InternalVertigoDsl.g:10804:1: ( rule__TaskAttributeString__UnorderedGroup_1__0 {...}?)
+            // InternalVertigoDsl.g:10805:2: rule__TaskAttributeString__UnorderedGroup_1__0 {...}?
             {
             pushFollow(FOLLOW_2);
             rule__TaskAttributeString__UnorderedGroup_1__0();
@@ -33143,47 +32983,47 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttributeString__UnorderedGroup_1__Impl"
-    // InternalVertigoDsl.g:10869:1: rule__TaskAttributeString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) ) ) ;
+    // InternalVertigoDsl.g:10813:1: rule__TaskAttributeString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) ) ) ;
     public final void rule__TaskAttributeString__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalVertigoDsl.g:10874:1: ( ( ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) ) ) )
-            // InternalVertigoDsl.g:10875:3: ( ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) ) )
+            // InternalVertigoDsl.g:10818:1: ( ( ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) ) ) )
+            // InternalVertigoDsl.g:10819:3: ( ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) ) )
             {
-            // InternalVertigoDsl.g:10875:3: ( ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) ) )
-            int alt95=3;
-            int LA95_0 = input.LA(1);
+            // InternalVertigoDsl.g:10819:3: ( ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) ) | ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) ) )
+            int alt93=3;
+            int LA93_0 = input.LA(1);
 
-            if ( LA95_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt95=1;
+            if ( LA93_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt93=1;
             }
-            else if ( LA95_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt95=2;
+            else if ( LA93_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt93=2;
             }
-            else if ( LA95_0 == 78 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt95=3;
+            else if ( LA93_0 == 78 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt93=3;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 95, 0, input);
+                    new NoViableAltException("", 93, 0, input);
 
                 throw nvae;
             }
-            switch (alt95) {
+            switch (alt93) {
                 case 1 :
-                    // InternalVertigoDsl.g:10876:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10820:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10876:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) )
-                    // InternalVertigoDsl.g:10877:4: {...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10820:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10821:4: {...}? => ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
                         throw new FailedPredicateException(input, "rule__TaskAttributeString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalVertigoDsl.g:10877:115: ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) )
-                    // InternalVertigoDsl.g:10878:5: ( ( rule__TaskAttributeString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10821:115: ( ( ( rule__TaskAttributeString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10822:5: ( ( rule__TaskAttributeString__Group_1_0__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0);
@@ -33191,12 +33031,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10884:5: ( ( rule__TaskAttributeString__Group_1_0__0 ) )
-                    // InternalVertigoDsl.g:10885:6: ( rule__TaskAttributeString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10828:5: ( ( rule__TaskAttributeString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10829:6: ( rule__TaskAttributeString__Group_1_0__0 )
                     {
                      before(grammarAccess.getTaskAttributeStringAccess().getGroup_1_0()); 
-                    // InternalVertigoDsl.g:10886:6: ( rule__TaskAttributeString__Group_1_0__0 )
-                    // InternalVertigoDsl.g:10886:7: rule__TaskAttributeString__Group_1_0__0
+                    // InternalVertigoDsl.g:10830:6: ( rule__TaskAttributeString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10830:7: rule__TaskAttributeString__Group_1_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__TaskAttributeString__Group_1_0__0();
@@ -33220,16 +33060,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:10891:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10835:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10891:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) )
-                    // InternalVertigoDsl.g:10892:4: {...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10835:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10836:4: {...}? => ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
                         throw new FailedPredicateException(input, "rule__TaskAttributeString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalVertigoDsl.g:10892:115: ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) )
-                    // InternalVertigoDsl.g:10893:5: ( ( rule__TaskAttributeString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10836:115: ( ( ( rule__TaskAttributeString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10837:5: ( ( rule__TaskAttributeString__Group_1_1__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1);
@@ -33237,12 +33077,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10899:5: ( ( rule__TaskAttributeString__Group_1_1__0 ) )
-                    // InternalVertigoDsl.g:10900:6: ( rule__TaskAttributeString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10843:5: ( ( rule__TaskAttributeString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10844:6: ( rule__TaskAttributeString__Group_1_1__0 )
                     {
                      before(grammarAccess.getTaskAttributeStringAccess().getGroup_1_1()); 
-                    // InternalVertigoDsl.g:10901:6: ( rule__TaskAttributeString__Group_1_1__0 )
-                    // InternalVertigoDsl.g:10901:7: rule__TaskAttributeString__Group_1_1__0
+                    // InternalVertigoDsl.g:10845:6: ( rule__TaskAttributeString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10845:7: rule__TaskAttributeString__Group_1_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__TaskAttributeString__Group_1_1__0();
@@ -33266,16 +33106,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 3 :
-                    // InternalVertigoDsl.g:10906:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:10850:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10906:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) )
-                    // InternalVertigoDsl.g:10907:4: {...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) )
+                    // InternalVertigoDsl.g:10850:3: ({...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) ) )
+                    // InternalVertigoDsl.g:10851:4: {...}? => ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
                         throw new FailedPredicateException(input, "rule__TaskAttributeString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2)");
                     }
-                    // InternalVertigoDsl.g:10907:115: ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) )
-                    // InternalVertigoDsl.g:10908:5: ( ( rule__TaskAttributeString__Group_1_2__0 ) )
+                    // InternalVertigoDsl.g:10851:115: ( ( ( rule__TaskAttributeString__Group_1_2__0 ) ) )
+                    // InternalVertigoDsl.g:10852:5: ( ( rule__TaskAttributeString__Group_1_2__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2);
@@ -33283,12 +33123,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10914:5: ( ( rule__TaskAttributeString__Group_1_2__0 ) )
-                    // InternalVertigoDsl.g:10915:6: ( rule__TaskAttributeString__Group_1_2__0 )
+                    // InternalVertigoDsl.g:10858:5: ( ( rule__TaskAttributeString__Group_1_2__0 ) )
+                    // InternalVertigoDsl.g:10859:6: ( rule__TaskAttributeString__Group_1_2__0 )
                     {
                      before(grammarAccess.getTaskAttributeStringAccess().getGroup_1_2()); 
-                    // InternalVertigoDsl.g:10916:6: ( rule__TaskAttributeString__Group_1_2__0 )
-                    // InternalVertigoDsl.g:10916:7: rule__TaskAttributeString__Group_1_2__0
+                    // InternalVertigoDsl.g:10860:6: ( rule__TaskAttributeString__Group_1_2__0 )
+                    // InternalVertigoDsl.g:10860:7: rule__TaskAttributeString__Group_1_2__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__TaskAttributeString__Group_1_2__0();
@@ -33335,36 +33175,36 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttributeString__UnorderedGroup_1__0"
-    // InternalVertigoDsl.g:10929:1: rule__TaskAttributeString__UnorderedGroup_1__0 : rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__1 )? ;
+    // InternalVertigoDsl.g:10873:1: rule__TaskAttributeString__UnorderedGroup_1__0 : rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__1 )? ;
     public final void rule__TaskAttributeString__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10933:1: ( rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__1 )? )
-            // InternalVertigoDsl.g:10934:2: rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__1 )?
+            // InternalVertigoDsl.g:10877:1: ( rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__1 )? )
+            // InternalVertigoDsl.g:10878:2: rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_54);
+            pushFollow(FOLLOW_53);
             rule__TaskAttributeString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10935:2: ( rule__TaskAttributeString__UnorderedGroup_1__1 )?
-            int alt96=2;
-            int LA96_0 = input.LA(1);
+            // InternalVertigoDsl.g:10879:2: ( rule__TaskAttributeString__UnorderedGroup_1__1 )?
+            int alt94=2;
+            int LA94_0 = input.LA(1);
 
-            if ( LA96_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt96=1;
+            if ( LA94_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt94=1;
             }
-            else if ( LA96_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt96=1;
+            else if ( LA94_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt94=1;
             }
-            else if ( LA96_0 == 78 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt96=1;
+            else if ( LA94_0 == 78 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt94=1;
             }
-            switch (alt96) {
+            switch (alt94) {
                 case 1 :
-                    // InternalVertigoDsl.g:10935:2: rule__TaskAttributeString__UnorderedGroup_1__1
+                    // InternalVertigoDsl.g:10879:2: rule__TaskAttributeString__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
                     rule__TaskAttributeString__UnorderedGroup_1__1();
@@ -33396,36 +33236,36 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttributeString__UnorderedGroup_1__1"
-    // InternalVertigoDsl.g:10941:1: rule__TaskAttributeString__UnorderedGroup_1__1 : rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__2 )? ;
+    // InternalVertigoDsl.g:10885:1: rule__TaskAttributeString__UnorderedGroup_1__1 : rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__2 )? ;
     public final void rule__TaskAttributeString__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10945:1: ( rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__2 )? )
-            // InternalVertigoDsl.g:10946:2: rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__2 )?
+            // InternalVertigoDsl.g:10889:1: ( rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__2 )? )
+            // InternalVertigoDsl.g:10890:2: rule__TaskAttributeString__UnorderedGroup_1__Impl ( rule__TaskAttributeString__UnorderedGroup_1__2 )?
             {
-            pushFollow(FOLLOW_54);
+            pushFollow(FOLLOW_53);
             rule__TaskAttributeString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:10947:2: ( rule__TaskAttributeString__UnorderedGroup_1__2 )?
-            int alt97=2;
-            int LA97_0 = input.LA(1);
+            // InternalVertigoDsl.g:10891:2: ( rule__TaskAttributeString__UnorderedGroup_1__2 )?
+            int alt95=2;
+            int LA95_0 = input.LA(1);
 
-            if ( LA97_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt97=1;
+            if ( LA95_0 == 12 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt95=1;
             }
-            else if ( LA97_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt97=1;
+            else if ( LA95_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt95=1;
             }
-            else if ( LA97_0 == 78 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
-                alt97=1;
+            else if ( LA95_0 == 78 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
+                alt95=1;
             }
-            switch (alt97) {
+            switch (alt95) {
                 case 1 :
-                    // InternalVertigoDsl.g:10947:2: rule__TaskAttributeString__UnorderedGroup_1__2
+                    // InternalVertigoDsl.g:10891:2: rule__TaskAttributeString__UnorderedGroup_1__2
                     {
                     pushFollow(FOLLOW_2);
                     rule__TaskAttributeString__UnorderedGroup_1__2();
@@ -33457,14 +33297,14 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttributeString__UnorderedGroup_1__2"
-    // InternalVertigoDsl.g:10953:1: rule__TaskAttributeString__UnorderedGroup_1__2 : rule__TaskAttributeString__UnorderedGroup_1__Impl ;
+    // InternalVertigoDsl.g:10897:1: rule__TaskAttributeString__UnorderedGroup_1__2 : rule__TaskAttributeString__UnorderedGroup_1__Impl ;
     public final void rule__TaskAttributeString__UnorderedGroup_1__2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:10957:1: ( rule__TaskAttributeString__UnorderedGroup_1__Impl )
-            // InternalVertigoDsl.g:10958:2: rule__TaskAttributeString__UnorderedGroup_1__Impl
+            // InternalVertigoDsl.g:10901:1: ( rule__TaskAttributeString__UnorderedGroup_1__Impl )
+            // InternalVertigoDsl.g:10902:2: rule__TaskAttributeString__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__TaskAttributeString__UnorderedGroup_1__Impl();
@@ -33490,15 +33330,15 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionRangeString__UnorderedGroup_1"
-    // InternalVertigoDsl.g:10965:1: rule__FacetDefinitionRangeString__UnorderedGroup_1 : rule__FacetDefinitionRangeString__UnorderedGroup_1__0 {...}?;
+    // InternalVertigoDsl.g:10909:1: rule__FacetDefinitionRangeString__UnorderedGroup_1 : rule__FacetDefinitionRangeString__UnorderedGroup_1__0 {...}?;
     public final void rule__FacetDefinitionRangeString__UnorderedGroup_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		getUnorderedGroupHelper().enter(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1());
         	
         try {
-            // InternalVertigoDsl.g:10970:1: ( rule__FacetDefinitionRangeString__UnorderedGroup_1__0 {...}?)
-            // InternalVertigoDsl.g:10971:2: rule__FacetDefinitionRangeString__UnorderedGroup_1__0 {...}?
+            // InternalVertigoDsl.g:10914:1: ( rule__FacetDefinitionRangeString__UnorderedGroup_1__0 {...}?)
+            // InternalVertigoDsl.g:10915:2: rule__FacetDefinitionRangeString__UnorderedGroup_1__0 {...}?
             {
             pushFollow(FOLLOW_2);
             rule__FacetDefinitionRangeString__UnorderedGroup_1__0();
@@ -33528,44 +33368,44 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl"
-    // InternalVertigoDsl.g:10979:1: rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) ) ) ;
+    // InternalVertigoDsl.g:10923:1: rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl : ( ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) ) ) ;
     public final void rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         		boolean selected = false;
         	
         try {
-            // InternalVertigoDsl.g:10984:1: ( ( ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) ) ) )
-            // InternalVertigoDsl.g:10985:3: ( ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) ) )
+            // InternalVertigoDsl.g:10928:1: ( ( ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) ) ) )
+            // InternalVertigoDsl.g:10929:3: ( ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) ) )
             {
-            // InternalVertigoDsl.g:10985:3: ( ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) ) )
-            int alt98=2;
-            int LA98_0 = input.LA(1);
+            // InternalVertigoDsl.g:10929:3: ( ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) ) | ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) ) )
+            int alt96=2;
+            int LA96_0 = input.LA(1);
 
-            if ( LA98_0 == 84 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt98=1;
+            if ( LA96_0 == 84 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt96=1;
             }
-            else if ( LA98_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt98=2;
+            else if ( LA96_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt96=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 98, 0, input);
+                    new NoViableAltException("", 96, 0, input);
 
                 throw nvae;
             }
-            switch (alt98) {
+            switch (alt96) {
                 case 1 :
-                    // InternalVertigoDsl.g:10986:3: ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10930:3: ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:10986:3: ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) )
-                    // InternalVertigoDsl.g:10987:4: {...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10930:3: ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) ) )
+                    // InternalVertigoDsl.g:10931:4: {...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
                         throw new FailedPredicateException(input, "rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0)");
                     }
-                    // InternalVertigoDsl.g:10987:122: ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) )
-                    // InternalVertigoDsl.g:10988:5: ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10931:122: ( ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) ) )
+                    // InternalVertigoDsl.g:10932:5: ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0);
@@ -33573,12 +33413,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:10994:5: ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) )
-                    // InternalVertigoDsl.g:10995:6: ( rule__FacetDefinitionRangeString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10938:5: ( ( rule__FacetDefinitionRangeString__Group_1_0__0 ) )
+                    // InternalVertigoDsl.g:10939:6: ( rule__FacetDefinitionRangeString__Group_1_0__0 )
                     {
                      before(grammarAccess.getFacetDefinitionRangeStringAccess().getGroup_1_0()); 
-                    // InternalVertigoDsl.g:10996:6: ( rule__FacetDefinitionRangeString__Group_1_0__0 )
-                    // InternalVertigoDsl.g:10996:7: rule__FacetDefinitionRangeString__Group_1_0__0
+                    // InternalVertigoDsl.g:10940:6: ( rule__FacetDefinitionRangeString__Group_1_0__0 )
+                    // InternalVertigoDsl.g:10940:7: rule__FacetDefinitionRangeString__Group_1_0__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__FacetDefinitionRangeString__Group_1_0__0();
@@ -33602,16 +33442,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:11001:3: ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10945:3: ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) )
                     {
-                    // InternalVertigoDsl.g:11001:3: ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) )
-                    // InternalVertigoDsl.g:11002:4: {...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10945:3: ({...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) ) )
+                    // InternalVertigoDsl.g:10946:4: {...}? => ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) )
                     {
                     if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
                         throw new FailedPredicateException(input, "rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1)");
                     }
-                    // InternalVertigoDsl.g:11002:122: ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) )
-                    // InternalVertigoDsl.g:11003:5: ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10946:122: ( ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) ) )
+                    // InternalVertigoDsl.g:10947:5: ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) )
                     {
 
                     					getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1);
@@ -33619,12 +33459,12 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                     					selected = true;
                     				
-                    // InternalVertigoDsl.g:11009:5: ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) )
-                    // InternalVertigoDsl.g:11010:6: ( rule__FacetDefinitionRangeString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10953:5: ( ( rule__FacetDefinitionRangeString__Group_1_1__0 ) )
+                    // InternalVertigoDsl.g:10954:6: ( rule__FacetDefinitionRangeString__Group_1_1__0 )
                     {
                      before(grammarAccess.getFacetDefinitionRangeStringAccess().getGroup_1_1()); 
-                    // InternalVertigoDsl.g:11011:6: ( rule__FacetDefinitionRangeString__Group_1_1__0 )
-                    // InternalVertigoDsl.g:11011:7: rule__FacetDefinitionRangeString__Group_1_1__0
+                    // InternalVertigoDsl.g:10955:6: ( rule__FacetDefinitionRangeString__Group_1_1__0 )
+                    // InternalVertigoDsl.g:10955:7: rule__FacetDefinitionRangeString__Group_1_1__0
                     {
                     pushFollow(FOLLOW_2);
                     rule__FacetDefinitionRangeString__Group_1_1__0();
@@ -33671,33 +33511,33 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionRangeString__UnorderedGroup_1__0"
-    // InternalVertigoDsl.g:11024:1: rule__FacetDefinitionRangeString__UnorderedGroup_1__0 : rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl ( rule__FacetDefinitionRangeString__UnorderedGroup_1__1 )? ;
+    // InternalVertigoDsl.g:10968:1: rule__FacetDefinitionRangeString__UnorderedGroup_1__0 : rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl ( rule__FacetDefinitionRangeString__UnorderedGroup_1__1 )? ;
     public final void rule__FacetDefinitionRangeString__UnorderedGroup_1__0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11028:1: ( rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl ( rule__FacetDefinitionRangeString__UnorderedGroup_1__1 )? )
-            // InternalVertigoDsl.g:11029:2: rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl ( rule__FacetDefinitionRangeString__UnorderedGroup_1__1 )?
+            // InternalVertigoDsl.g:10972:1: ( rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl ( rule__FacetDefinitionRangeString__UnorderedGroup_1__1 )? )
+            // InternalVertigoDsl.g:10973:2: rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl ( rule__FacetDefinitionRangeString__UnorderedGroup_1__1 )?
             {
-            pushFollow(FOLLOW_55);
+            pushFollow(FOLLOW_54);
             rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl();
 
             state._fsp--;
 
-            // InternalVertigoDsl.g:11030:2: ( rule__FacetDefinitionRangeString__UnorderedGroup_1__1 )?
-            int alt99=2;
-            int LA99_0 = input.LA(1);
+            // InternalVertigoDsl.g:10974:2: ( rule__FacetDefinitionRangeString__UnorderedGroup_1__1 )?
+            int alt97=2;
+            int LA97_0 = input.LA(1);
 
-            if ( LA99_0 == 84 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
-                alt99=1;
+            if ( LA97_0 == 84 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
+                alt97=1;
             }
-            else if ( LA99_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
-                alt99=1;
+            else if ( LA97_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
+                alt97=1;
             }
-            switch (alt99) {
+            switch (alt97) {
                 case 1 :
-                    // InternalVertigoDsl.g:11030:2: rule__FacetDefinitionRangeString__UnorderedGroup_1__1
+                    // InternalVertigoDsl.g:10974:2: rule__FacetDefinitionRangeString__UnorderedGroup_1__1
                     {
                     pushFollow(FOLLOW_2);
                     rule__FacetDefinitionRangeString__UnorderedGroup_1__1();
@@ -33729,14 +33569,14 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionRangeString__UnorderedGroup_1__1"
-    // InternalVertigoDsl.g:11036:1: rule__FacetDefinitionRangeString__UnorderedGroup_1__1 : rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl ;
+    // InternalVertigoDsl.g:10980:1: rule__FacetDefinitionRangeString__UnorderedGroup_1__1 : rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl ;
     public final void rule__FacetDefinitionRangeString__UnorderedGroup_1__1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11040:1: ( rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl )
-            // InternalVertigoDsl.g:11041:2: rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl
+            // InternalVertigoDsl.g:10984:1: ( rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl )
+            // InternalVertigoDsl.g:10985:2: rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl
             {
             pushFollow(FOLLOW_2);
             rule__FacetDefinitionRangeString__UnorderedGroup_1__Impl();
@@ -33762,17 +33602,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Model__PackageStringAssignment_1"
-    // InternalVertigoDsl.g:11048:1: rule__Model__PackageStringAssignment_1 : ( rulePackageString ) ;
+    // InternalVertigoDsl.g:10992:1: rule__Model__PackageStringAssignment_1 : ( rulePackageString ) ;
     public final void rule__Model__PackageStringAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11052:1: ( ( rulePackageString ) )
-            // InternalVertigoDsl.g:11053:2: ( rulePackageString )
+            // InternalVertigoDsl.g:10996:1: ( ( rulePackageString ) )
+            // InternalVertigoDsl.g:10997:2: ( rulePackageString )
             {
-            // InternalVertigoDsl.g:11053:2: ( rulePackageString )
-            // InternalVertigoDsl.g:11054:3: rulePackageString
+            // InternalVertigoDsl.g:10997:2: ( rulePackageString )
+            // InternalVertigoDsl.g:10998:3: rulePackageString
             {
              before(grammarAccess.getModelAccess().getPackageStringPackageStringParserRuleCall_1_0()); 
             pushFollow(FOLLOW_2);
@@ -33803,17 +33643,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Model__ElementsAssignment_2"
-    // InternalVertigoDsl.g:11063:1: rule__Model__ElementsAssignment_2 : ( ruleElement ) ;
+    // InternalVertigoDsl.g:11007:1: rule__Model__ElementsAssignment_2 : ( ruleElement ) ;
     public final void rule__Model__ElementsAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11067:1: ( ( ruleElement ) )
-            // InternalVertigoDsl.g:11068:2: ( ruleElement )
+            // InternalVertigoDsl.g:11011:1: ( ( ruleElement ) )
+            // InternalVertigoDsl.g:11012:2: ( ruleElement )
             {
-            // InternalVertigoDsl.g:11068:2: ( ruleElement )
-            // InternalVertigoDsl.g:11069:3: ruleElement
+            // InternalVertigoDsl.g:11012:2: ( ruleElement )
+            // InternalVertigoDsl.g:11013:3: ruleElement
             {
              before(grammarAccess.getModelAccess().getElementsElementParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -33844,17 +33684,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PackageString__PackageAssignment_0"
-    // InternalVertigoDsl.g:11078:1: rule__PackageString__PackageAssignment_0 : ( ruleKEYWORDID ) ;
+    // InternalVertigoDsl.g:11022:1: rule__PackageString__PackageAssignment_0 : ( ruleKEYWORDID ) ;
     public final void rule__PackageString__PackageAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11082:1: ( ( ruleKEYWORDID ) )
-            // InternalVertigoDsl.g:11083:2: ( ruleKEYWORDID )
+            // InternalVertigoDsl.g:11026:1: ( ( ruleKEYWORDID ) )
+            // InternalVertigoDsl.g:11027:2: ( ruleKEYWORDID )
             {
-            // InternalVertigoDsl.g:11083:2: ( ruleKEYWORDID )
-            // InternalVertigoDsl.g:11084:3: ruleKEYWORDID
+            // InternalVertigoDsl.g:11027:2: ( ruleKEYWORDID )
+            // InternalVertigoDsl.g:11028:3: ruleKEYWORDID
             {
              before(grammarAccess.getPackageStringAccess().getPackageKEYWORDIDParserRuleCall_0_0()); 
             pushFollow(FOLLOW_2);
@@ -33885,17 +33725,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__PackageString__PackagesAssignment_1_1"
-    // InternalVertigoDsl.g:11093:1: rule__PackageString__PackagesAssignment_1_1 : ( ruleKEYWORDID ) ;
+    // InternalVertigoDsl.g:11037:1: rule__PackageString__PackagesAssignment_1_1 : ( ruleKEYWORDID ) ;
     public final void rule__PackageString__PackagesAssignment_1_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11097:1: ( ( ruleKEYWORDID ) )
-            // InternalVertigoDsl.g:11098:2: ( ruleKEYWORDID )
+            // InternalVertigoDsl.g:11041:1: ( ( ruleKEYWORDID ) )
+            // InternalVertigoDsl.g:11042:2: ( ruleKEYWORDID )
             {
-            // InternalVertigoDsl.g:11098:2: ( ruleKEYWORDID )
-            // InternalVertigoDsl.g:11099:3: ruleKEYWORDID
+            // InternalVertigoDsl.g:11042:2: ( ruleKEYWORDID )
+            // InternalVertigoDsl.g:11043:3: ruleKEYWORDID
             {
              before(grammarAccess.getPackageStringAccess().getPackagesKEYWORDIDParserRuleCall_1_1_0()); 
             pushFollow(FOLLOW_2);
@@ -33926,21 +33766,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__KEYWORDID__KeywordIDAssignment"
-    // InternalVertigoDsl.g:11108:1: rule__KEYWORDID__KeywordIDAssignment : ( ( rule__KEYWORDID__KeywordIDAlternatives_0 ) ) ;
+    // InternalVertigoDsl.g:11052:1: rule__KEYWORDID__KeywordIDAssignment : ( ( rule__KEYWORDID__KeywordIDAlternatives_0 ) ) ;
     public final void rule__KEYWORDID__KeywordIDAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11112:1: ( ( ( rule__KEYWORDID__KeywordIDAlternatives_0 ) ) )
-            // InternalVertigoDsl.g:11113:2: ( ( rule__KEYWORDID__KeywordIDAlternatives_0 ) )
+            // InternalVertigoDsl.g:11056:1: ( ( ( rule__KEYWORDID__KeywordIDAlternatives_0 ) ) )
+            // InternalVertigoDsl.g:11057:2: ( ( rule__KEYWORDID__KeywordIDAlternatives_0 ) )
             {
-            // InternalVertigoDsl.g:11113:2: ( ( rule__KEYWORDID__KeywordIDAlternatives_0 ) )
-            // InternalVertigoDsl.g:11114:3: ( rule__KEYWORDID__KeywordIDAlternatives_0 )
+            // InternalVertigoDsl.g:11057:2: ( ( rule__KEYWORDID__KeywordIDAlternatives_0 ) )
+            // InternalVertigoDsl.g:11058:3: ( rule__KEYWORDID__KeywordIDAlternatives_0 )
             {
              before(grammarAccess.getKEYWORDIDAccess().getKeywordIDAlternatives_0()); 
-            // InternalVertigoDsl.g:11115:3: ( rule__KEYWORDID__KeywordIDAlternatives_0 )
-            // InternalVertigoDsl.g:11115:4: rule__KEYWORDID__KeywordIDAlternatives_0
+            // InternalVertigoDsl.g:11059:3: ( rule__KEYWORDID__KeywordIDAlternatives_0 )
+            // InternalVertigoDsl.g:11059:4: rule__KEYWORDID__KeywordIDAlternatives_0
             {
             pushFollow(FOLLOW_2);
             rule__KEYWORDID__KeywordIDAlternatives_0();
@@ -33973,17 +33813,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DeclaredDomain__NameAssignment_2"
-    // InternalVertigoDsl.g:11123:1: rule__DeclaredDomain__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11067:1: rule__DeclaredDomain__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__DeclaredDomain__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11127:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11128:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11071:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11072:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11128:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11129:3: RULE_ID
+            // InternalVertigoDsl.g:11072:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11073:3: RULE_ID
             {
              before(grammarAccess.getDeclaredDomainAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -34010,17 +33850,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DeclaredDtDefinition__NameAssignment_2"
-    // InternalVertigoDsl.g:11138:1: rule__DeclaredDtDefinition__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11082:1: rule__DeclaredDtDefinition__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__DeclaredDtDefinition__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11142:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11143:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11086:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11087:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11143:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11144:3: RULE_ID
+            // InternalVertigoDsl.g:11087:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11088:3: RULE_ID
             {
              before(grammarAccess.getDeclaredDtDefinitionAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -34047,17 +33887,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Constraint__NameAssignment_2"
-    // InternalVertigoDsl.g:11153:1: rule__Constraint__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11097:1: rule__Constraint__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Constraint__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11157:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11158:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11101:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11102:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11158:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11159:3: RULE_ID
+            // InternalVertigoDsl.g:11102:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11103:3: RULE_ID
             {
              before(grammarAccess.getConstraintAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -34084,17 +33924,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Constraint__ClassNameAssignment_6"
-    // InternalVertigoDsl.g:11168:1: rule__Constraint__ClassNameAssignment_6 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11112:1: rule__Constraint__ClassNameAssignment_6 : ( RULE_STRING ) ;
     public final void rule__Constraint__ClassNameAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11172:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11173:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11116:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11117:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11173:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11174:3: RULE_STRING
+            // InternalVertigoDsl.g:11117:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11118:3: RULE_STRING
             {
              before(grammarAccess.getConstraintAccess().getClassNameSTRINGTerminalRuleCall_6_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -34121,17 +33961,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Constraint__ArgsAssignment_7_2"
-    // InternalVertigoDsl.g:11183:1: rule__Constraint__ArgsAssignment_7_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11127:1: rule__Constraint__ArgsAssignment_7_2 : ( RULE_STRING ) ;
     public final void rule__Constraint__ArgsAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11187:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11188:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11131:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11132:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11188:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11189:3: RULE_STRING
+            // InternalVertigoDsl.g:11132:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11133:3: RULE_STRING
             {
              before(grammarAccess.getConstraintAccess().getArgsSTRINGTerminalRuleCall_7_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -34158,17 +33998,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Constraint__MsgAssignment_8_2"
-    // InternalVertigoDsl.g:11198:1: rule__Constraint__MsgAssignment_8_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11142:1: rule__Constraint__MsgAssignment_8_2 : ( RULE_STRING ) ;
     public final void rule__Constraint__MsgAssignment_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11202:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11203:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11146:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11147:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11203:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11204:3: RULE_STRING
+            // InternalVertigoDsl.g:11147:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11148:3: RULE_STRING
             {
              before(grammarAccess.getConstraintAccess().getMsgSTRINGTerminalRuleCall_8_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -34195,17 +34035,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FileInfo__NameAssignment_2"
-    // InternalVertigoDsl.g:11213:1: rule__FileInfo__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11157:1: rule__FileInfo__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__FileInfo__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11217:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11218:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11161:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11162:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11218:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11219:3: RULE_ID
+            // InternalVertigoDsl.g:11162:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11163:3: RULE_ID
             {
              before(grammarAccess.getFileInfoAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -34232,17 +34072,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FileInfo__StoreNameAssignment_6"
-    // InternalVertigoDsl.g:11228:1: rule__FileInfo__StoreNameAssignment_6 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11172:1: rule__FileInfo__StoreNameAssignment_6 : ( RULE_STRING ) ;
     public final void rule__FileInfo__StoreNameAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11232:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11233:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11176:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11177:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11233:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11234:3: RULE_STRING
+            // InternalVertigoDsl.g:11177:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11178:3: RULE_STRING
             {
              before(grammarAccess.getFileInfoAccess().getStoreNameSTRINGTerminalRuleCall_6_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -34269,17 +34109,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formatter__NameAssignment_2"
-    // InternalVertigoDsl.g:11243:1: rule__Formatter__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11187:1: rule__Formatter__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Formatter__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11247:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11248:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11191:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11192:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11248:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11249:3: RULE_ID
+            // InternalVertigoDsl.g:11192:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11193:3: RULE_ID
             {
              before(grammarAccess.getFormatterAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -34306,17 +34146,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formatter__ClassNameAssignment_6"
-    // InternalVertigoDsl.g:11258:1: rule__Formatter__ClassNameAssignment_6 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11202:1: rule__Formatter__ClassNameAssignment_6 : ( RULE_STRING ) ;
     public final void rule__Formatter__ClassNameAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11262:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11263:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11206:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11207:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11263:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11264:3: RULE_STRING
+            // InternalVertigoDsl.g:11207:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11208:3: RULE_STRING
             {
              before(grammarAccess.getFormatterAccess().getClassNameSTRINGTerminalRuleCall_6_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -34343,17 +34183,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Formatter__ArgsAssignment_7_2"
-    // InternalVertigoDsl.g:11273:1: rule__Formatter__ArgsAssignment_7_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11217:1: rule__Formatter__ArgsAssignment_7_2 : ( RULE_STRING ) ;
     public final void rule__Formatter__ArgsAssignment_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11277:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11278:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11221:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11222:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11278:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11279:3: RULE_STRING
+            // InternalVertigoDsl.g:11222:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11223:3: RULE_STRING
             {
              before(grammarAccess.getFormatterAccess().getArgsSTRINGTerminalRuleCall_7_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -34379,22 +34219,22 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
     // $ANTLR end "rule__Formatter__ArgsAssignment_7_2"
 
 
-    // $ANTLR start "rule__Domain__NameAssignment_0_2"
-    // InternalVertigoDsl.g:11288:1: rule__Domain__NameAssignment_0_2 : ( RULE_ID ) ;
-    public final void rule__Domain__NameAssignment_0_2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__NameAssignment_2"
+    // InternalVertigoDsl.g:11232:1: rule__Domain__NameAssignment_2 : ( RULE_ID ) ;
+    public final void rule__Domain__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11292:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11293:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11236:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11237:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11293:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11294:3: RULE_ID
+            // InternalVertigoDsl.g:11237:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11238:3: RULE_ID
             {
-             before(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_2_0()); 
+             before(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_0_2_0()); 
+             after(grammarAccess.getDomainAccess().getNameIDTerminalRuleCall_2_0()); 
 
             }
 
@@ -34413,29 +34253,29 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__NameAssignment_0_2"
+    // $ANTLR end "rule__Domain__NameAssignment_2"
 
 
-    // $ANTLR start "rule__Domain__DataTypeAssignment_0_6"
-    // InternalVertigoDsl.g:11303:1: rule__Domain__DataTypeAssignment_0_6 : ( ruleDataType ) ;
-    public final void rule__Domain__DataTypeAssignment_0_6() throws RecognitionException {
+    // $ANTLR start "rule__Domain__DataTypeAssignment_6"
+    // InternalVertigoDsl.g:11247:1: rule__Domain__DataTypeAssignment_6 : ( ruleDataType ) ;
+    public final void rule__Domain__DataTypeAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11307:1: ( ( ruleDataType ) )
-            // InternalVertigoDsl.g:11308:2: ( ruleDataType )
+            // InternalVertigoDsl.g:11251:1: ( ( ruleDataType ) )
+            // InternalVertigoDsl.g:11252:2: ( ruleDataType )
             {
-            // InternalVertigoDsl.g:11308:2: ( ruleDataType )
-            // InternalVertigoDsl.g:11309:3: ruleDataType
+            // InternalVertigoDsl.g:11252:2: ( ruleDataType )
+            // InternalVertigoDsl.g:11253:3: ruleDataType
             {
-             before(grammarAccess.getDomainAccess().getDataTypeDataTypeEnumRuleCall_0_6_0()); 
+             before(grammarAccess.getDomainAccess().getDataTypeDataTypeEnumRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
             ruleDataType();
 
             state._fsp--;
 
-             after(grammarAccess.getDomainAccess().getDataTypeDataTypeEnumRuleCall_0_6_0()); 
+             after(grammarAccess.getDomainAccess().getDataTypeDataTypeEnumRuleCall_6_0()); 
 
             }
 
@@ -34454,33 +34294,33 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__DataTypeAssignment_0_6"
+    // $ANTLR end "rule__Domain__DataTypeAssignment_6"
 
 
-    // $ANTLR start "rule__Domain__FormatterAssignment_0_9"
-    // InternalVertigoDsl.g:11318:1: rule__Domain__FormatterAssignment_0_9 : ( ( RULE_ID ) ) ;
-    public final void rule__Domain__FormatterAssignment_0_9() throws RecognitionException {
+    // $ANTLR start "rule__Domain__FormatterAssignment_7_0_2"
+    // InternalVertigoDsl.g:11262:1: rule__Domain__FormatterAssignment_7_0_2 : ( ( RULE_ID ) ) ;
+    public final void rule__Domain__FormatterAssignment_7_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11322:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:11323:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11266:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:11267:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:11323:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11324:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11267:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11268:3: ( RULE_ID )
             {
-             before(grammarAccess.getDomainAccess().getFormatterFormatterCrossReference_0_9_0()); 
-            // InternalVertigoDsl.g:11325:3: ( RULE_ID )
-            // InternalVertigoDsl.g:11326:4: RULE_ID
+             before(grammarAccess.getDomainAccess().getFormatterFormatterCrossReference_7_0_2_0()); 
+            // InternalVertigoDsl.g:11269:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11270:4: RULE_ID
             {
-             before(grammarAccess.getDomainAccess().getFormatterFormatterIDTerminalRuleCall_0_9_0_1()); 
+             before(grammarAccess.getDomainAccess().getFormatterFormatterIDTerminalRuleCall_7_0_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getFormatterFormatterIDTerminalRuleCall_0_9_0_1()); 
+             after(grammarAccess.getDomainAccess().getFormatterFormatterIDTerminalRuleCall_7_0_2_0_1()); 
 
             }
 
-             after(grammarAccess.getDomainAccess().getFormatterFormatterCrossReference_0_9_0()); 
+             after(grammarAccess.getDomainAccess().getFormatterFormatterCrossReference_7_0_2_0()); 
 
             }
 
@@ -34499,25 +34339,25 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__FormatterAssignment_0_9"
+    // $ANTLR end "rule__Domain__FormatterAssignment_7_0_2"
 
 
-    // $ANTLR start "rule__Domain__StoreTypeAssignment_1_0_0_2"
-    // InternalVertigoDsl.g:11337:1: rule__Domain__StoreTypeAssignment_1_0_0_2 : ( RULE_STRING ) ;
-    public final void rule__Domain__StoreTypeAssignment_1_0_0_2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__StoreTypeAssignment_7_1_2"
+    // InternalVertigoDsl.g:11281:1: rule__Domain__StoreTypeAssignment_7_1_2 : ( RULE_STRING ) ;
+    public final void rule__Domain__StoreTypeAssignment_7_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11341:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11342:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11285:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11286:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11342:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11343:3: RULE_STRING
+            // InternalVertigoDsl.g:11286:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11287:3: RULE_STRING
             {
-             before(grammarAccess.getDomainAccess().getStoreTypeSTRINGTerminalRuleCall_1_0_0_2_0()); 
+             before(grammarAccess.getDomainAccess().getStoreTypeSTRINGTerminalRuleCall_7_1_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getStoreTypeSTRINGTerminalRuleCall_1_0_0_2_0()); 
+             after(grammarAccess.getDomainAccess().getStoreTypeSTRINGTerminalRuleCall_7_1_2_0()); 
 
             }
 
@@ -34536,25 +34376,25 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__StoreTypeAssignment_1_0_0_2"
+    // $ANTLR end "rule__Domain__StoreTypeAssignment_7_1_2"
 
 
-    // $ANTLR start "rule__Domain__IndexTypeAssignment_1_0_1_2"
-    // InternalVertigoDsl.g:11352:1: rule__Domain__IndexTypeAssignment_1_0_1_2 : ( RULE_STRING ) ;
-    public final void rule__Domain__IndexTypeAssignment_1_0_1_2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__IndexTypeAssignment_7_2_2"
+    // InternalVertigoDsl.g:11296:1: rule__Domain__IndexTypeAssignment_7_2_2 : ( RULE_STRING ) ;
+    public final void rule__Domain__IndexTypeAssignment_7_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11356:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11357:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11300:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11301:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11357:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11358:3: RULE_STRING
+            // InternalVertigoDsl.g:11301:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11302:3: RULE_STRING
             {
-             before(grammarAccess.getDomainAccess().getIndexTypeSTRINGTerminalRuleCall_1_0_1_2_0()); 
+             before(grammarAccess.getDomainAccess().getIndexTypeSTRINGTerminalRuleCall_7_2_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getIndexTypeSTRINGTerminalRuleCall_1_0_1_2_0()); 
+             after(grammarAccess.getDomainAccess().getIndexTypeSTRINGTerminalRuleCall_7_2_2_0()); 
 
             }
 
@@ -34573,33 +34413,33 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__IndexTypeAssignment_1_0_1_2"
+    // $ANTLR end "rule__Domain__IndexTypeAssignment_7_2_2"
 
 
-    // $ANTLR start "rule__Domain__ConstraintAssignment_1_0_2_3"
-    // InternalVertigoDsl.g:11367:1: rule__Domain__ConstraintAssignment_1_0_2_3 : ( ( RULE_ID ) ) ;
-    public final void rule__Domain__ConstraintAssignment_1_0_2_3() throws RecognitionException {
+    // $ANTLR start "rule__Domain__ConstraintAssignment_7_3_3"
+    // InternalVertigoDsl.g:11311:1: rule__Domain__ConstraintAssignment_7_3_3 : ( ( RULE_ID ) ) ;
+    public final void rule__Domain__ConstraintAssignment_7_3_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11371:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:11372:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11315:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:11316:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:11372:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11373:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11316:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11317:3: ( RULE_ID )
             {
-             before(grammarAccess.getDomainAccess().getConstraintConstraintCrossReference_1_0_2_3_0()); 
-            // InternalVertigoDsl.g:11374:3: ( RULE_ID )
-            // InternalVertigoDsl.g:11375:4: RULE_ID
+             before(grammarAccess.getDomainAccess().getConstraintConstraintCrossReference_7_3_3_0()); 
+            // InternalVertigoDsl.g:11318:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11319:4: RULE_ID
             {
-             before(grammarAccess.getDomainAccess().getConstraintConstraintIDTerminalRuleCall_1_0_2_3_0_1()); 
+             before(grammarAccess.getDomainAccess().getConstraintConstraintIDTerminalRuleCall_7_3_3_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getConstraintConstraintIDTerminalRuleCall_1_0_2_3_0_1()); 
+             after(grammarAccess.getDomainAccess().getConstraintConstraintIDTerminalRuleCall_7_3_3_0_1()); 
 
             }
 
-             after(grammarAccess.getDomainAccess().getConstraintConstraintCrossReference_1_0_2_3_0()); 
+             after(grammarAccess.getDomainAccess().getConstraintConstraintCrossReference_7_3_3_0()); 
 
             }
 
@@ -34618,33 +34458,33 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__ConstraintAssignment_1_0_2_3"
+    // $ANTLR end "rule__Domain__ConstraintAssignment_7_3_3"
 
 
-    // $ANTLR start "rule__Domain__ConstraintsAssignment_1_0_2_4_1"
-    // InternalVertigoDsl.g:11386:1: rule__Domain__ConstraintsAssignment_1_0_2_4_1 : ( ( RULE_ID ) ) ;
-    public final void rule__Domain__ConstraintsAssignment_1_0_2_4_1() throws RecognitionException {
+    // $ANTLR start "rule__Domain__ConstraintsAssignment_7_3_4_1"
+    // InternalVertigoDsl.g:11330:1: rule__Domain__ConstraintsAssignment_7_3_4_1 : ( ( RULE_ID ) ) ;
+    public final void rule__Domain__ConstraintsAssignment_7_3_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11390:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:11391:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11334:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:11335:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:11391:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11392:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11335:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11336:3: ( RULE_ID )
             {
-             before(grammarAccess.getDomainAccess().getConstraintsConstraintCrossReference_1_0_2_4_1_0()); 
-            // InternalVertigoDsl.g:11393:3: ( RULE_ID )
-            // InternalVertigoDsl.g:11394:4: RULE_ID
+             before(grammarAccess.getDomainAccess().getConstraintsConstraintCrossReference_7_3_4_1_0()); 
+            // InternalVertigoDsl.g:11337:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11338:4: RULE_ID
             {
-             before(grammarAccess.getDomainAccess().getConstraintsConstraintIDTerminalRuleCall_1_0_2_4_1_0_1()); 
+             before(grammarAccess.getDomainAccess().getConstraintsConstraintIDTerminalRuleCall_7_3_4_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getConstraintsConstraintIDTerminalRuleCall_1_0_2_4_1_0_1()); 
+             after(grammarAccess.getDomainAccess().getConstraintsConstraintIDTerminalRuleCall_7_3_4_1_0_1()); 
 
             }
 
-             after(grammarAccess.getDomainAccess().getConstraintsConstraintCrossReference_1_0_2_4_1_0()); 
+             after(grammarAccess.getDomainAccess().getConstraintsConstraintCrossReference_7_3_4_1_0()); 
 
             }
 
@@ -34663,29 +34503,29 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__ConstraintsAssignment_1_0_2_4_1"
+    // $ANTLR end "rule__Domain__ConstraintsAssignment_7_3_4_1"
 
 
-    // $ANTLR start "rule__Domain__MultipleAssignment_1_0_3_2"
-    // InternalVertigoDsl.g:11405:1: rule__Domain__MultipleAssignment_1_0_3_2 : ( ruleBooleanString ) ;
-    public final void rule__Domain__MultipleAssignment_1_0_3_2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__MultipleAssignment_7_4_2"
+    // InternalVertigoDsl.g:11349:1: rule__Domain__MultipleAssignment_7_4_2 : ( ruleBooleanString ) ;
+    public final void rule__Domain__MultipleAssignment_7_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11409:1: ( ( ruleBooleanString ) )
-            // InternalVertigoDsl.g:11410:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11353:1: ( ( ruleBooleanString ) )
+            // InternalVertigoDsl.g:11354:2: ( ruleBooleanString )
             {
-            // InternalVertigoDsl.g:11410:2: ( ruleBooleanString )
-            // InternalVertigoDsl.g:11411:3: ruleBooleanString
+            // InternalVertigoDsl.g:11354:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11355:3: ruleBooleanString
             {
-             before(grammarAccess.getDomainAccess().getMultipleBooleanStringEnumRuleCall_1_0_3_2_0()); 
+             before(grammarAccess.getDomainAccess().getMultipleBooleanStringEnumRuleCall_7_4_2_0()); 
             pushFollow(FOLLOW_2);
             ruleBooleanString();
 
             state._fsp--;
 
-             after(grammarAccess.getDomainAccess().getMultipleBooleanStringEnumRuleCall_1_0_3_2_0()); 
+             after(grammarAccess.getDomainAccess().getMultipleBooleanStringEnumRuleCall_7_4_2_0()); 
 
             }
 
@@ -34704,25 +34544,25 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__MultipleAssignment_1_0_3_2"
+    // $ANTLR end "rule__Domain__MultipleAssignment_7_4_2"
 
 
-    // $ANTLR start "rule__Domain__UnitAssignment_1_0_4_2"
-    // InternalVertigoDsl.g:11420:1: rule__Domain__UnitAssignment_1_0_4_2 : ( RULE_STRING ) ;
-    public final void rule__Domain__UnitAssignment_1_0_4_2() throws RecognitionException {
+    // $ANTLR start "rule__Domain__UnitAssignment_7_5_2"
+    // InternalVertigoDsl.g:11364:1: rule__Domain__UnitAssignment_7_5_2 : ( RULE_STRING ) ;
+    public final void rule__Domain__UnitAssignment_7_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11424:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11425:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11368:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11369:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11425:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11426:3: RULE_STRING
+            // InternalVertigoDsl.g:11369:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11370:3: RULE_STRING
             {
-             before(grammarAccess.getDomainAccess().getUnitSTRINGTerminalRuleCall_1_0_4_2_0()); 
+             before(grammarAccess.getDomainAccess().getUnitSTRINGTerminalRuleCall_7_5_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
-             after(grammarAccess.getDomainAccess().getUnitSTRINGTerminalRuleCall_1_0_4_2_0()); 
+             after(grammarAccess.getDomainAccess().getUnitSTRINGTerminalRuleCall_7_5_2_0()); 
 
             }
 
@@ -34741,25 +34581,25 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         }
         return ;
     }
-    // $ANTLR end "rule__Domain__UnitAssignment_1_0_4_2"
+    // $ANTLR end "rule__Domain__UnitAssignment_7_5_2"
 
 
     // $ANTLR start "rule__RefToDomainType__RefAssignment_1"
-    // InternalVertigoDsl.g:11435:1: rule__RefToDomainType__RefAssignment_1 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:11379:1: rule__RefToDomainType__RefAssignment_1 : ( ( RULE_ID ) ) ;
     public final void rule__RefToDomainType__RefAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11439:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:11440:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11383:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:11384:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:11440:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11441:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11384:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11385:3: ( RULE_ID )
             {
              before(grammarAccess.getRefToDomainTypeAccess().getRefDomainTypeCrossReference_1_0()); 
-            // InternalVertigoDsl.g:11442:3: ( RULE_ID )
-            // InternalVertigoDsl.g:11443:4: RULE_ID
+            // InternalVertigoDsl.g:11386:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11387:4: RULE_ID
             {
              before(grammarAccess.getRefToDomainTypeAccess().getRefDomainTypeIDTerminalRuleCall_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -34790,17 +34630,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionIdString__RefToDomainTypeAssignment_1_0_2"
-    // InternalVertigoDsl.g:11454:1: rule__DtDefinitionIdString__RefToDomainTypeAssignment_1_0_2 : ( ruleRefToDomainType ) ;
+    // InternalVertigoDsl.g:11398:1: rule__DtDefinitionIdString__RefToDomainTypeAssignment_1_0_2 : ( ruleRefToDomainType ) ;
     public final void rule__DtDefinitionIdString__RefToDomainTypeAssignment_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11458:1: ( ( ruleRefToDomainType ) )
-            // InternalVertigoDsl.g:11459:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:11402:1: ( ( ruleRefToDomainType ) )
+            // InternalVertigoDsl.g:11403:2: ( ruleRefToDomainType )
             {
-            // InternalVertigoDsl.g:11459:2: ( ruleRefToDomainType )
-            // InternalVertigoDsl.g:11460:3: ruleRefToDomainType
+            // InternalVertigoDsl.g:11403:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:11404:3: ruleRefToDomainType
             {
              before(grammarAccess.getDtDefinitionIdStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0()); 
             pushFollow(FOLLOW_2);
@@ -34831,17 +34671,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionIdString__LabelAssignment_1_1_2"
-    // InternalVertigoDsl.g:11469:1: rule__DtDefinitionIdString__LabelAssignment_1_1_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11413:1: rule__DtDefinitionIdString__LabelAssignment_1_1_2 : ( RULE_STRING ) ;
     public final void rule__DtDefinitionIdString__LabelAssignment_1_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11473:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11474:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11417:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11418:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11474:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11475:3: RULE_STRING
+            // InternalVertigoDsl.g:11418:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11419:3: RULE_STRING
             {
              before(grammarAccess.getDtDefinitionIdStringAccess().getLabelSTRINGTerminalRuleCall_1_1_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -34868,17 +34708,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__RefToDomainTypeAssignment_1_0_2"
-    // InternalVertigoDsl.g:11484:1: rule__DtDefinitionDataFieldString__RefToDomainTypeAssignment_1_0_2 : ( ruleRefToDomainType ) ;
+    // InternalVertigoDsl.g:11428:1: rule__DtDefinitionDataFieldString__RefToDomainTypeAssignment_1_0_2 : ( ruleRefToDomainType ) ;
     public final void rule__DtDefinitionDataFieldString__RefToDomainTypeAssignment_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11488:1: ( ( ruleRefToDomainType ) )
-            // InternalVertigoDsl.g:11489:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:11432:1: ( ( ruleRefToDomainType ) )
+            // InternalVertigoDsl.g:11433:2: ( ruleRefToDomainType )
             {
-            // InternalVertigoDsl.g:11489:2: ( ruleRefToDomainType )
-            // InternalVertigoDsl.g:11490:3: ruleRefToDomainType
+            // InternalVertigoDsl.g:11433:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:11434:3: ruleRefToDomainType
             {
              before(grammarAccess.getDtDefinitionDataFieldStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0()); 
             pushFollow(FOLLOW_2);
@@ -34909,17 +34749,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__LabelAssignment_1_1_2"
-    // InternalVertigoDsl.g:11499:1: rule__DtDefinitionDataFieldString__LabelAssignment_1_1_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11443:1: rule__DtDefinitionDataFieldString__LabelAssignment_1_1_2 : ( RULE_STRING ) ;
     public final void rule__DtDefinitionDataFieldString__LabelAssignment_1_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11503:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11504:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11447:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11448:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11504:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11505:3: RULE_STRING
+            // InternalVertigoDsl.g:11448:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11449:3: RULE_STRING
             {
              before(grammarAccess.getDtDefinitionDataFieldStringAccess().getLabelSTRINGTerminalRuleCall_1_1_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -34946,17 +34786,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__RequiredAssignment_1_2_2"
-    // InternalVertigoDsl.g:11514:1: rule__DtDefinitionDataFieldString__RequiredAssignment_1_2_2 : ( ruleBooleanString ) ;
+    // InternalVertigoDsl.g:11458:1: rule__DtDefinitionDataFieldString__RequiredAssignment_1_2_2 : ( ruleBooleanString ) ;
     public final void rule__DtDefinitionDataFieldString__RequiredAssignment_1_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11518:1: ( ( ruleBooleanString ) )
-            // InternalVertigoDsl.g:11519:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11462:1: ( ( ruleBooleanString ) )
+            // InternalVertigoDsl.g:11463:2: ( ruleBooleanString )
             {
-            // InternalVertigoDsl.g:11519:2: ( ruleBooleanString )
-            // InternalVertigoDsl.g:11520:3: ruleBooleanString
+            // InternalVertigoDsl.g:11463:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11464:3: ruleBooleanString
             {
              before(grammarAccess.getDtDefinitionDataFieldStringAccess().getRequiredBooleanStringEnumRuleCall_1_2_2_0()); 
             pushFollow(FOLLOW_2);
@@ -34987,17 +34827,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataFieldString__PersistentAssignment_1_3_2"
-    // InternalVertigoDsl.g:11529:1: rule__DtDefinitionDataFieldString__PersistentAssignment_1_3_2 : ( ruleBooleanString ) ;
+    // InternalVertigoDsl.g:11473:1: rule__DtDefinitionDataFieldString__PersistentAssignment_1_3_2 : ( ruleBooleanString ) ;
     public final void rule__DtDefinitionDataFieldString__PersistentAssignment_1_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11533:1: ( ( ruleBooleanString ) )
-            // InternalVertigoDsl.g:11534:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11477:1: ( ( ruleBooleanString ) )
+            // InternalVertigoDsl.g:11478:2: ( ruleBooleanString )
             {
-            // InternalVertigoDsl.g:11534:2: ( ruleBooleanString )
-            // InternalVertigoDsl.g:11535:3: ruleBooleanString
+            // InternalVertigoDsl.g:11478:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11479:3: ruleBooleanString
             {
              before(grammarAccess.getDtDefinitionDataFieldStringAccess().getPersistentBooleanStringEnumRuleCall_1_3_2_0()); 
             pushFollow(FOLLOW_2);
@@ -35028,17 +34868,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedFieldString__RefToDomainTypeAssignment_1_0_2"
-    // InternalVertigoDsl.g:11544:1: rule__DtDefinitionComputedFieldString__RefToDomainTypeAssignment_1_0_2 : ( ruleRefToDomainType ) ;
+    // InternalVertigoDsl.g:11488:1: rule__DtDefinitionComputedFieldString__RefToDomainTypeAssignment_1_0_2 : ( ruleRefToDomainType ) ;
     public final void rule__DtDefinitionComputedFieldString__RefToDomainTypeAssignment_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11548:1: ( ( ruleRefToDomainType ) )
-            // InternalVertigoDsl.g:11549:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:11492:1: ( ( ruleRefToDomainType ) )
+            // InternalVertigoDsl.g:11493:2: ( ruleRefToDomainType )
             {
-            // InternalVertigoDsl.g:11549:2: ( ruleRefToDomainType )
-            // InternalVertigoDsl.g:11550:3: ruleRefToDomainType
+            // InternalVertigoDsl.g:11493:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:11494:3: ruleRefToDomainType
             {
              before(grammarAccess.getDtDefinitionComputedFieldStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0()); 
             pushFollow(FOLLOW_2);
@@ -35069,17 +34909,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedFieldString__LabelAssignment_1_1_2"
-    // InternalVertigoDsl.g:11559:1: rule__DtDefinitionComputedFieldString__LabelAssignment_1_1_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11503:1: rule__DtDefinitionComputedFieldString__LabelAssignment_1_1_2 : ( RULE_STRING ) ;
     public final void rule__DtDefinitionComputedFieldString__LabelAssignment_1_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11563:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11564:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11507:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11508:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11564:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11565:3: RULE_STRING
+            // InternalVertigoDsl.g:11508:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11509:3: RULE_STRING
             {
              before(grammarAccess.getDtDefinitionComputedFieldStringAccess().getLabelSTRINGTerminalRuleCall_1_1_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -35106,17 +34946,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedFieldString__ExpressionStringAssignment_1_2_2"
-    // InternalVertigoDsl.g:11574:1: rule__DtDefinitionComputedFieldString__ExpressionStringAssignment_1_2_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11518:1: rule__DtDefinitionComputedFieldString__ExpressionStringAssignment_1_2_2 : ( RULE_STRING ) ;
     public final void rule__DtDefinitionComputedFieldString__ExpressionStringAssignment_1_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11578:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11579:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11522:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11523:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11579:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11580:3: RULE_STRING
+            // InternalVertigoDsl.g:11523:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11524:3: RULE_STRING
             {
              before(grammarAccess.getDtDefinitionComputedFieldStringAccess().getExpressionStringSTRINGTerminalRuleCall_1_2_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -35143,17 +34983,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionIdField__NameAssignment_1"
-    // InternalVertigoDsl.g:11589:1: rule__DtDefinitionIdField__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11533:1: rule__DtDefinitionIdField__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__DtDefinitionIdField__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11593:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11594:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11537:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11538:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11594:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11595:3: RULE_ID
+            // InternalVertigoDsl.g:11538:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11539:3: RULE_ID
             {
              before(grammarAccess.getDtDefinitionIdFieldAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -35180,17 +35020,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionIdField__IdStringAssignment_2"
-    // InternalVertigoDsl.g:11604:1: rule__DtDefinitionIdField__IdStringAssignment_2 : ( ruleDtDefinitionIdString ) ;
+    // InternalVertigoDsl.g:11548:1: rule__DtDefinitionIdField__IdStringAssignment_2 : ( ruleDtDefinitionIdString ) ;
     public final void rule__DtDefinitionIdField__IdStringAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11608:1: ( ( ruleDtDefinitionIdString ) )
-            // InternalVertigoDsl.g:11609:2: ( ruleDtDefinitionIdString )
+            // InternalVertigoDsl.g:11552:1: ( ( ruleDtDefinitionIdString ) )
+            // InternalVertigoDsl.g:11553:2: ( ruleDtDefinitionIdString )
             {
-            // InternalVertigoDsl.g:11609:2: ( ruleDtDefinitionIdString )
-            // InternalVertigoDsl.g:11610:3: ruleDtDefinitionIdString
+            // InternalVertigoDsl.g:11553:2: ( ruleDtDefinitionIdString )
+            // InternalVertigoDsl.g:11554:3: ruleDtDefinitionIdString
             {
              before(grammarAccess.getDtDefinitionIdFieldAccess().getIdStringDtDefinitionIdStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -35221,17 +35061,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataField__NameAssignment_1"
-    // InternalVertigoDsl.g:11619:1: rule__DtDefinitionDataField__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11563:1: rule__DtDefinitionDataField__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__DtDefinitionDataField__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11623:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11624:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11567:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11568:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11624:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11625:3: RULE_ID
+            // InternalVertigoDsl.g:11568:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11569:3: RULE_ID
             {
              before(grammarAccess.getDtDefinitionDataFieldAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -35258,17 +35098,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataField__DataFieldStringAssignment_2"
-    // InternalVertigoDsl.g:11634:1: rule__DtDefinitionDataField__DataFieldStringAssignment_2 : ( ruleDtDefinitionDataFieldString ) ;
+    // InternalVertigoDsl.g:11578:1: rule__DtDefinitionDataField__DataFieldStringAssignment_2 : ( ruleDtDefinitionDataFieldString ) ;
     public final void rule__DtDefinitionDataField__DataFieldStringAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11638:1: ( ( ruleDtDefinitionDataFieldString ) )
-            // InternalVertigoDsl.g:11639:2: ( ruleDtDefinitionDataFieldString )
+            // InternalVertigoDsl.g:11582:1: ( ( ruleDtDefinitionDataFieldString ) )
+            // InternalVertigoDsl.g:11583:2: ( ruleDtDefinitionDataFieldString )
             {
-            // InternalVertigoDsl.g:11639:2: ( ruleDtDefinitionDataFieldString )
-            // InternalVertigoDsl.g:11640:3: ruleDtDefinitionDataFieldString
+            // InternalVertigoDsl.g:11583:2: ( ruleDtDefinitionDataFieldString )
+            // InternalVertigoDsl.g:11584:3: ruleDtDefinitionDataFieldString
             {
              before(grammarAccess.getDtDefinitionDataFieldAccess().getDataFieldStringDtDefinitionDataFieldStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -35299,17 +35139,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedField__NameAssignment_1"
-    // InternalVertigoDsl.g:11649:1: rule__DtDefinitionComputedField__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11593:1: rule__DtDefinitionComputedField__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__DtDefinitionComputedField__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11653:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11654:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11597:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11598:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11654:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11655:3: RULE_ID
+            // InternalVertigoDsl.g:11598:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11599:3: RULE_ID
             {
              before(grammarAccess.getDtDefinitionComputedFieldAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -35336,17 +35176,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionComputedField__ComputedFieldStringAssignment_2"
-    // InternalVertigoDsl.g:11664:1: rule__DtDefinitionComputedField__ComputedFieldStringAssignment_2 : ( ruleDtDefinitionComputedFieldString ) ;
+    // InternalVertigoDsl.g:11608:1: rule__DtDefinitionComputedField__ComputedFieldStringAssignment_2 : ( ruleDtDefinitionComputedFieldString ) ;
     public final void rule__DtDefinitionComputedField__ComputedFieldStringAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11668:1: ( ( ruleDtDefinitionComputedFieldString ) )
-            // InternalVertigoDsl.g:11669:2: ( ruleDtDefinitionComputedFieldString )
+            // InternalVertigoDsl.g:11612:1: ( ( ruleDtDefinitionComputedFieldString ) )
+            // InternalVertigoDsl.g:11613:2: ( ruleDtDefinitionComputedFieldString )
             {
-            // InternalVertigoDsl.g:11669:2: ( ruleDtDefinitionComputedFieldString )
-            // InternalVertigoDsl.g:11670:3: ruleDtDefinitionComputedFieldString
+            // InternalVertigoDsl.g:11613:2: ( ruleDtDefinitionComputedFieldString )
+            // InternalVertigoDsl.g:11614:3: ruleDtDefinitionComputedFieldString
             {
              before(grammarAccess.getDtDefinitionComputedFieldAccess().getComputedFieldStringDtDefinitionComputedFieldStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -35377,17 +35217,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionStereotype__StereoTypeAssignment_2"
-    // InternalVertigoDsl.g:11679:1: rule__DtDefinitionStereotype__StereoTypeAssignment_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11623:1: rule__DtDefinitionStereotype__StereoTypeAssignment_2 : ( RULE_STRING ) ;
     public final void rule__DtDefinitionStereotype__StereoTypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11683:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11684:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11627:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11628:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11684:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11685:3: RULE_STRING
+            // InternalVertigoDsl.g:11628:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11629:3: RULE_STRING
             {
              before(grammarAccess.getDtDefinitionStereotypeAccess().getStereoTypeSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -35414,17 +35254,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDataSpace__StoreNameAssignment_2"
-    // InternalVertigoDsl.g:11694:1: rule__DtDefinitionDataSpace__StoreNameAssignment_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11638:1: rule__DtDefinitionDataSpace__StoreNameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__DtDefinitionDataSpace__StoreNameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11698:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11699:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11642:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11643:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11699:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11700:3: RULE_STRING
+            // InternalVertigoDsl.g:11643:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11644:3: RULE_STRING
             {
              before(grammarAccess.getDtDefinitionDataSpaceAccess().getStoreNameSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -35451,17 +35291,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionDisplayField__DisplayFieldAssignment_2"
-    // InternalVertigoDsl.g:11709:1: rule__DtDefinitionDisplayField__DisplayFieldAssignment_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11653:1: rule__DtDefinitionDisplayField__DisplayFieldAssignment_2 : ( RULE_STRING ) ;
     public final void rule__DtDefinitionDisplayField__DisplayFieldAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11713:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11714:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11657:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11658:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11714:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11715:3: RULE_STRING
+            // InternalVertigoDsl.g:11658:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11659:3: RULE_STRING
             {
              before(grammarAccess.getDtDefinitionDisplayFieldAccess().getDisplayFieldSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -35488,17 +35328,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinitionSortField__SortFieldAssignment_2"
-    // InternalVertigoDsl.g:11724:1: rule__DtDefinitionSortField__SortFieldAssignment_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11668:1: rule__DtDefinitionSortField__SortFieldAssignment_2 : ( RULE_STRING ) ;
     public final void rule__DtDefinitionSortField__SortFieldAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11728:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11729:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11672:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11673:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11729:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11730:3: RULE_STRING
+            // InternalVertigoDsl.g:11673:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11674:3: RULE_STRING
             {
              before(grammarAccess.getDtDefinitionSortFieldAccess().getSortFieldSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -35525,17 +35365,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__NameAssignment_3"
-    // InternalVertigoDsl.g:11739:1: rule__DtDefinition__NameAssignment_3 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11683:1: rule__DtDefinition__NameAssignment_3 : ( RULE_ID ) ;
     public final void rule__DtDefinition__NameAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11743:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11744:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11687:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11688:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11744:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11745:3: RULE_ID
+            // InternalVertigoDsl.g:11688:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11689:3: RULE_ID
             {
              before(grammarAccess.getDtDefinitionAccess().getNameIDTerminalRuleCall_3_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -35562,17 +35402,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__DtDefinitionStereotypeAssignment_5"
-    // InternalVertigoDsl.g:11754:1: rule__DtDefinition__DtDefinitionStereotypeAssignment_5 : ( ruleDtDefinitionStereotype ) ;
+    // InternalVertigoDsl.g:11698:1: rule__DtDefinition__DtDefinitionStereotypeAssignment_5 : ( ruleDtDefinitionStereotype ) ;
     public final void rule__DtDefinition__DtDefinitionStereotypeAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11758:1: ( ( ruleDtDefinitionStereotype ) )
-            // InternalVertigoDsl.g:11759:2: ( ruleDtDefinitionStereotype )
+            // InternalVertigoDsl.g:11702:1: ( ( ruleDtDefinitionStereotype ) )
+            // InternalVertigoDsl.g:11703:2: ( ruleDtDefinitionStereotype )
             {
-            // InternalVertigoDsl.g:11759:2: ( ruleDtDefinitionStereotype )
-            // InternalVertigoDsl.g:11760:3: ruleDtDefinitionStereotype
+            // InternalVertigoDsl.g:11703:2: ( ruleDtDefinitionStereotype )
+            // InternalVertigoDsl.g:11704:3: ruleDtDefinitionStereotype
             {
              before(grammarAccess.getDtDefinitionAccess().getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0()); 
             pushFollow(FOLLOW_2);
@@ -35603,17 +35443,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__DtDefinitionIdFieldAssignment_6"
-    // InternalVertigoDsl.g:11769:1: rule__DtDefinition__DtDefinitionIdFieldAssignment_6 : ( ruleDtDefinitionIdField ) ;
+    // InternalVertigoDsl.g:11713:1: rule__DtDefinition__DtDefinitionIdFieldAssignment_6 : ( ruleDtDefinitionIdField ) ;
     public final void rule__DtDefinition__DtDefinitionIdFieldAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11773:1: ( ( ruleDtDefinitionIdField ) )
-            // InternalVertigoDsl.g:11774:2: ( ruleDtDefinitionIdField )
+            // InternalVertigoDsl.g:11717:1: ( ( ruleDtDefinitionIdField ) )
+            // InternalVertigoDsl.g:11718:2: ( ruleDtDefinitionIdField )
             {
-            // InternalVertigoDsl.g:11774:2: ( ruleDtDefinitionIdField )
-            // InternalVertigoDsl.g:11775:3: ruleDtDefinitionIdField
+            // InternalVertigoDsl.g:11718:2: ( ruleDtDefinitionIdField )
+            // InternalVertigoDsl.g:11719:3: ruleDtDefinitionIdField
             {
              before(grammarAccess.getDtDefinitionAccess().getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0()); 
             pushFollow(FOLLOW_2);
@@ -35644,17 +35484,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__DtDefinitionDataFieldsAssignment_7"
-    // InternalVertigoDsl.g:11784:1: rule__DtDefinition__DtDefinitionDataFieldsAssignment_7 : ( ruleDtDefinitionDataField ) ;
+    // InternalVertigoDsl.g:11728:1: rule__DtDefinition__DtDefinitionDataFieldsAssignment_7 : ( ruleDtDefinitionDataField ) ;
     public final void rule__DtDefinition__DtDefinitionDataFieldsAssignment_7() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11788:1: ( ( ruleDtDefinitionDataField ) )
-            // InternalVertigoDsl.g:11789:2: ( ruleDtDefinitionDataField )
+            // InternalVertigoDsl.g:11732:1: ( ( ruleDtDefinitionDataField ) )
+            // InternalVertigoDsl.g:11733:2: ( ruleDtDefinitionDataField )
             {
-            // InternalVertigoDsl.g:11789:2: ( ruleDtDefinitionDataField )
-            // InternalVertigoDsl.g:11790:3: ruleDtDefinitionDataField
+            // InternalVertigoDsl.g:11733:2: ( ruleDtDefinitionDataField )
+            // InternalVertigoDsl.g:11734:3: ruleDtDefinitionDataField
             {
              before(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0()); 
             pushFollow(FOLLOW_2);
@@ -35685,17 +35525,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__DtDefinitionComputedFieldsAssignment_8"
-    // InternalVertigoDsl.g:11799:1: rule__DtDefinition__DtDefinitionComputedFieldsAssignment_8 : ( ruleDtDefinitionComputedField ) ;
+    // InternalVertigoDsl.g:11743:1: rule__DtDefinition__DtDefinitionComputedFieldsAssignment_8 : ( ruleDtDefinitionComputedField ) ;
     public final void rule__DtDefinition__DtDefinitionComputedFieldsAssignment_8() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11803:1: ( ( ruleDtDefinitionComputedField ) )
-            // InternalVertigoDsl.g:11804:2: ( ruleDtDefinitionComputedField )
+            // InternalVertigoDsl.g:11747:1: ( ( ruleDtDefinitionComputedField ) )
+            // InternalVertigoDsl.g:11748:2: ( ruleDtDefinitionComputedField )
             {
-            // InternalVertigoDsl.g:11804:2: ( ruleDtDefinitionComputedField )
-            // InternalVertigoDsl.g:11805:3: ruleDtDefinitionComputedField
+            // InternalVertigoDsl.g:11748:2: ( ruleDtDefinitionComputedField )
+            // InternalVertigoDsl.g:11749:3: ruleDtDefinitionComputedField
             {
              before(grammarAccess.getDtDefinitionAccess().getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0()); 
             pushFollow(FOLLOW_2);
@@ -35726,17 +35566,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0"
-    // InternalVertigoDsl.g:11814:1: rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 : ( ruleDtDefinitionDataSpace ) ;
+    // InternalVertigoDsl.g:11758:1: rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0 : ( ruleDtDefinitionDataSpace ) ;
     public final void rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11818:1: ( ( ruleDtDefinitionDataSpace ) )
-            // InternalVertigoDsl.g:11819:2: ( ruleDtDefinitionDataSpace )
+            // InternalVertigoDsl.g:11762:1: ( ( ruleDtDefinitionDataSpace ) )
+            // InternalVertigoDsl.g:11763:2: ( ruleDtDefinitionDataSpace )
             {
-            // InternalVertigoDsl.g:11819:2: ( ruleDtDefinitionDataSpace )
-            // InternalVertigoDsl.g:11820:3: ruleDtDefinitionDataSpace
+            // InternalVertigoDsl.g:11763:2: ( ruleDtDefinitionDataSpace )
+            // InternalVertigoDsl.g:11764:3: ruleDtDefinitionDataSpace
             {
              before(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0()); 
             pushFollow(FOLLOW_2);
@@ -35767,17 +35607,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1"
-    // InternalVertigoDsl.g:11829:1: rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 : ( ruleDtDefinitionSortField ) ;
+    // InternalVertigoDsl.g:11773:1: rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1 : ( ruleDtDefinitionSortField ) ;
     public final void rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11833:1: ( ( ruleDtDefinitionSortField ) )
-            // InternalVertigoDsl.g:11834:2: ( ruleDtDefinitionSortField )
+            // InternalVertigoDsl.g:11777:1: ( ( ruleDtDefinitionSortField ) )
+            // InternalVertigoDsl.g:11778:2: ( ruleDtDefinitionSortField )
             {
-            // InternalVertigoDsl.g:11834:2: ( ruleDtDefinitionSortField )
-            // InternalVertigoDsl.g:11835:3: ruleDtDefinitionSortField
+            // InternalVertigoDsl.g:11778:2: ( ruleDtDefinitionSortField )
+            // InternalVertigoDsl.g:11779:3: ruleDtDefinitionSortField
             {
              before(grammarAccess.getDtDefinitionAccess().getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0()); 
             pushFollow(FOLLOW_2);
@@ -35808,17 +35648,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2"
-    // InternalVertigoDsl.g:11844:1: rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 : ( ruleDtDefinitionDisplayField ) ;
+    // InternalVertigoDsl.g:11788:1: rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2 : ( ruleDtDefinitionDisplayField ) ;
     public final void rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11848:1: ( ( ruleDtDefinitionDisplayField ) )
-            // InternalVertigoDsl.g:11849:2: ( ruleDtDefinitionDisplayField )
+            // InternalVertigoDsl.g:11792:1: ( ( ruleDtDefinitionDisplayField ) )
+            // InternalVertigoDsl.g:11793:2: ( ruleDtDefinitionDisplayField )
             {
-            // InternalVertigoDsl.g:11849:2: ( ruleDtDefinitionDisplayField )
-            // InternalVertigoDsl.g:11850:3: ruleDtDefinitionDisplayField
+            // InternalVertigoDsl.g:11793:2: ( ruleDtDefinitionDisplayField )
+            // InternalVertigoDsl.g:11794:3: ruleDtDefinitionDisplayField
             {
              before(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0()); 
             pushFollow(FOLLOW_2);
@@ -35849,17 +35689,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__NameAssignment_2"
-    // InternalVertigoDsl.g:11859:1: rule__Association__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:11803:1: rule__Association__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__Association__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11863:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11864:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11807:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11808:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:11864:2: ( RULE_ID )
-            // InternalVertigoDsl.g:11865:3: RULE_ID
+            // InternalVertigoDsl.g:11808:2: ( RULE_ID )
+            // InternalVertigoDsl.g:11809:3: RULE_ID
             {
              before(grammarAccess.getAssociationAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -35886,17 +35726,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__FkFieldNameAssignment_4_0_2"
-    // InternalVertigoDsl.g:11874:1: rule__Association__FkFieldNameAssignment_4_0_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11818:1: rule__Association__FkFieldNameAssignment_4_0_2 : ( RULE_STRING ) ;
     public final void rule__Association__FkFieldNameAssignment_4_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11878:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11879:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11822:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11823:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11879:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11880:3: RULE_STRING
+            // InternalVertigoDsl.g:11823:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11824:3: RULE_STRING
             {
              before(grammarAccess.getAssociationAccess().getFkFieldNameSTRINGTerminalRuleCall_4_0_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -35923,21 +35763,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__DtDefinitionAAssignment_4_1_2"
-    // InternalVertigoDsl.g:11889:1: rule__Association__DtDefinitionAAssignment_4_1_2 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:11833:1: rule__Association__DtDefinitionAAssignment_4_1_2 : ( ( RULE_ID ) ) ;
     public final void rule__Association__DtDefinitionAAssignment_4_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11893:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:11894:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11837:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:11838:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:11894:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11895:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11838:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11839:3: ( RULE_ID )
             {
              before(grammarAccess.getAssociationAccess().getDtDefinitionADtDefinitionTypeCrossReference_4_1_2_0()); 
-            // InternalVertigoDsl.g:11896:3: ( RULE_ID )
-            // InternalVertigoDsl.g:11897:4: RULE_ID
+            // InternalVertigoDsl.g:11840:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11841:4: RULE_ID
             {
              before(grammarAccess.getAssociationAccess().getDtDefinitionADtDefinitionTypeIDTerminalRuleCall_4_1_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -35968,21 +35808,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__DtDefinitionBAssignment_4_2_2"
-    // InternalVertigoDsl.g:11908:1: rule__Association__DtDefinitionBAssignment_4_2_2 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:11852:1: rule__Association__DtDefinitionBAssignment_4_2_2 : ( ( RULE_ID ) ) ;
     public final void rule__Association__DtDefinitionBAssignment_4_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11912:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:11913:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11856:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:11857:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:11913:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:11914:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11857:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:11858:3: ( RULE_ID )
             {
              before(grammarAccess.getAssociationAccess().getDtDefinitionBDtDefinitionTypeCrossReference_4_2_2_0()); 
-            // InternalVertigoDsl.g:11915:3: ( RULE_ID )
-            // InternalVertigoDsl.g:11916:4: RULE_ID
+            // InternalVertigoDsl.g:11859:3: ( RULE_ID )
+            // InternalVertigoDsl.g:11860:4: RULE_ID
             {
              before(grammarAccess.getAssociationAccess().getDtDefinitionBDtDefinitionTypeIDTerminalRuleCall_4_2_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -36013,17 +35853,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__NavigabilityAAssignment_4_3_2"
-    // InternalVertigoDsl.g:11927:1: rule__Association__NavigabilityAAssignment_4_3_2 : ( ruleBooleanString ) ;
+    // InternalVertigoDsl.g:11871:1: rule__Association__NavigabilityAAssignment_4_3_2 : ( ruleBooleanString ) ;
     public final void rule__Association__NavigabilityAAssignment_4_3_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11931:1: ( ( ruleBooleanString ) )
-            // InternalVertigoDsl.g:11932:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11875:1: ( ( ruleBooleanString ) )
+            // InternalVertigoDsl.g:11876:2: ( ruleBooleanString )
             {
-            // InternalVertigoDsl.g:11932:2: ( ruleBooleanString )
-            // InternalVertigoDsl.g:11933:3: ruleBooleanString
+            // InternalVertigoDsl.g:11876:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11877:3: ruleBooleanString
             {
              before(grammarAccess.getAssociationAccess().getNavigabilityABooleanStringEnumRuleCall_4_3_2_0()); 
             pushFollow(FOLLOW_2);
@@ -36054,17 +35894,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__NavigabilityBAssignment_4_4_2"
-    // InternalVertigoDsl.g:11942:1: rule__Association__NavigabilityBAssignment_4_4_2 : ( ruleBooleanString ) ;
+    // InternalVertigoDsl.g:11886:1: rule__Association__NavigabilityBAssignment_4_4_2 : ( ruleBooleanString ) ;
     public final void rule__Association__NavigabilityBAssignment_4_4_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11946:1: ( ( ruleBooleanString ) )
-            // InternalVertigoDsl.g:11947:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11890:1: ( ( ruleBooleanString ) )
+            // InternalVertigoDsl.g:11891:2: ( ruleBooleanString )
             {
-            // InternalVertigoDsl.g:11947:2: ( ruleBooleanString )
-            // InternalVertigoDsl.g:11948:3: ruleBooleanString
+            // InternalVertigoDsl.g:11891:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:11892:3: ruleBooleanString
             {
              before(grammarAccess.getAssociationAccess().getNavigabilityBBooleanStringEnumRuleCall_4_4_2_0()); 
             pushFollow(FOLLOW_2);
@@ -36095,17 +35935,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__MultiplicityAAssignment_4_5_2"
-    // InternalVertigoDsl.g:11957:1: rule__Association__MultiplicityAAssignment_4_5_2 : ( ruleMultiplicityString ) ;
+    // InternalVertigoDsl.g:11901:1: rule__Association__MultiplicityAAssignment_4_5_2 : ( ruleMultiplicityString ) ;
     public final void rule__Association__MultiplicityAAssignment_4_5_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11961:1: ( ( ruleMultiplicityString ) )
-            // InternalVertigoDsl.g:11962:2: ( ruleMultiplicityString )
+            // InternalVertigoDsl.g:11905:1: ( ( ruleMultiplicityString ) )
+            // InternalVertigoDsl.g:11906:2: ( ruleMultiplicityString )
             {
-            // InternalVertigoDsl.g:11962:2: ( ruleMultiplicityString )
-            // InternalVertigoDsl.g:11963:3: ruleMultiplicityString
+            // InternalVertigoDsl.g:11906:2: ( ruleMultiplicityString )
+            // InternalVertigoDsl.g:11907:3: ruleMultiplicityString
             {
              before(grammarAccess.getAssociationAccess().getMultiplicityAMultiplicityStringEnumRuleCall_4_5_2_0()); 
             pushFollow(FOLLOW_2);
@@ -36136,17 +35976,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__MultiplicityBAssignment_4_6_2"
-    // InternalVertigoDsl.g:11972:1: rule__Association__MultiplicityBAssignment_4_6_2 : ( ruleMultiplicityString ) ;
+    // InternalVertigoDsl.g:11916:1: rule__Association__MultiplicityBAssignment_4_6_2 : ( ruleMultiplicityString ) ;
     public final void rule__Association__MultiplicityBAssignment_4_6_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11976:1: ( ( ruleMultiplicityString ) )
-            // InternalVertigoDsl.g:11977:2: ( ruleMultiplicityString )
+            // InternalVertigoDsl.g:11920:1: ( ( ruleMultiplicityString ) )
+            // InternalVertigoDsl.g:11921:2: ( ruleMultiplicityString )
             {
-            // InternalVertigoDsl.g:11977:2: ( ruleMultiplicityString )
-            // InternalVertigoDsl.g:11978:3: ruleMultiplicityString
+            // InternalVertigoDsl.g:11921:2: ( ruleMultiplicityString )
+            // InternalVertigoDsl.g:11922:3: ruleMultiplicityString
             {
              before(grammarAccess.getAssociationAccess().getMultiplicityBMultiplicityStringEnumRuleCall_4_6_2_0()); 
             pushFollow(FOLLOW_2);
@@ -36177,17 +36017,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__LabelAAssignment_4_7_2"
-    // InternalVertigoDsl.g:11987:1: rule__Association__LabelAAssignment_4_7_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11931:1: rule__Association__LabelAAssignment_4_7_2 : ( RULE_STRING ) ;
     public final void rule__Association__LabelAAssignment_4_7_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:11991:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:11992:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11935:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11936:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:11992:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:11993:3: RULE_STRING
+            // InternalVertigoDsl.g:11936:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11937:3: RULE_STRING
             {
              before(grammarAccess.getAssociationAccess().getLabelASTRINGTerminalRuleCall_4_7_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36214,17 +36054,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__LabelBAssignment_4_8_2"
-    // InternalVertigoDsl.g:12002:1: rule__Association__LabelBAssignment_4_8_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11946:1: rule__Association__LabelBAssignment_4_8_2 : ( RULE_STRING ) ;
     public final void rule__Association__LabelBAssignment_4_8_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12006:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12007:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11950:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11951:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12007:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12008:3: RULE_STRING
+            // InternalVertigoDsl.g:11951:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11952:3: RULE_STRING
             {
              before(grammarAccess.getAssociationAccess().getLabelBSTRINGTerminalRuleCall_4_8_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36251,17 +36091,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__RoleAAssignment_4_9_2"
-    // InternalVertigoDsl.g:12017:1: rule__Association__RoleAAssignment_4_9_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11961:1: rule__Association__RoleAAssignment_4_9_2 : ( RULE_STRING ) ;
     public final void rule__Association__RoleAAssignment_4_9_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12021:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12022:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11965:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11966:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12022:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12023:3: RULE_STRING
+            // InternalVertigoDsl.g:11966:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11967:3: RULE_STRING
             {
              before(grammarAccess.getAssociationAccess().getRoleASTRINGTerminalRuleCall_4_9_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36288,17 +36128,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__RoleBAssignment_4_10_2"
-    // InternalVertigoDsl.g:12032:1: rule__Association__RoleBAssignment_4_10_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11976:1: rule__Association__RoleBAssignment_4_10_2 : ( RULE_STRING ) ;
     public final void rule__Association__RoleBAssignment_4_10_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12036:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12037:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11980:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11981:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12037:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12038:3: RULE_STRING
+            // InternalVertigoDsl.g:11981:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11982:3: RULE_STRING
             {
              before(grammarAccess.getAssociationAccess().getRoleBSTRINGTerminalRuleCall_4_10_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36325,17 +36165,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__Association__TypeAssignment_4_11_2"
-    // InternalVertigoDsl.g:12047:1: rule__Association__TypeAssignment_4_11_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:11991:1: rule__Association__TypeAssignment_4_11_2 : ( RULE_STRING ) ;
     public final void rule__Association__TypeAssignment_4_11_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12051:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12052:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11995:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:11996:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12052:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12053:3: RULE_STRING
+            // InternalVertigoDsl.g:11996:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:11997:3: RULE_STRING
             {
              before(grammarAccess.getAssociationAccess().getTypeSTRINGTerminalRuleCall_4_11_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36362,17 +36202,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttributeString__RefToDomainTypeAssignment_1_0_2"
-    // InternalVertigoDsl.g:12062:1: rule__TaskAttributeString__RefToDomainTypeAssignment_1_0_2 : ( ruleRefToDomainType ) ;
+    // InternalVertigoDsl.g:12006:1: rule__TaskAttributeString__RefToDomainTypeAssignment_1_0_2 : ( ruleRefToDomainType ) ;
     public final void rule__TaskAttributeString__RefToDomainTypeAssignment_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12066:1: ( ( ruleRefToDomainType ) )
-            // InternalVertigoDsl.g:12067:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:12010:1: ( ( ruleRefToDomainType ) )
+            // InternalVertigoDsl.g:12011:2: ( ruleRefToDomainType )
             {
-            // InternalVertigoDsl.g:12067:2: ( ruleRefToDomainType )
-            // InternalVertigoDsl.g:12068:3: ruleRefToDomainType
+            // InternalVertigoDsl.g:12011:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:12012:3: ruleRefToDomainType
             {
              before(grammarAccess.getTaskAttributeStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0()); 
             pushFollow(FOLLOW_2);
@@ -36403,17 +36243,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttributeString__RequiredAssignment_1_1_2"
-    // InternalVertigoDsl.g:12077:1: rule__TaskAttributeString__RequiredAssignment_1_1_2 : ( ruleBooleanString ) ;
+    // InternalVertigoDsl.g:12021:1: rule__TaskAttributeString__RequiredAssignment_1_1_2 : ( ruleBooleanString ) ;
     public final void rule__TaskAttributeString__RequiredAssignment_1_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12081:1: ( ( ruleBooleanString ) )
-            // InternalVertigoDsl.g:12082:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:12025:1: ( ( ruleBooleanString ) )
+            // InternalVertigoDsl.g:12026:2: ( ruleBooleanString )
             {
-            // InternalVertigoDsl.g:12082:2: ( ruleBooleanString )
-            // InternalVertigoDsl.g:12083:3: ruleBooleanString
+            // InternalVertigoDsl.g:12026:2: ( ruleBooleanString )
+            // InternalVertigoDsl.g:12027:3: ruleBooleanString
             {
              before(grammarAccess.getTaskAttributeStringAccess().getRequiredBooleanStringEnumRuleCall_1_1_2_0()); 
             pushFollow(FOLLOW_2);
@@ -36444,17 +36284,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttributeString__InoutAssignment_1_2_2"
-    // InternalVertigoDsl.g:12092:1: rule__TaskAttributeString__InoutAssignment_1_2_2 : ( ruleInOutString ) ;
+    // InternalVertigoDsl.g:12036:1: rule__TaskAttributeString__InoutAssignment_1_2_2 : ( ruleInOutString ) ;
     public final void rule__TaskAttributeString__InoutAssignment_1_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12096:1: ( ( ruleInOutString ) )
-            // InternalVertigoDsl.g:12097:2: ( ruleInOutString )
+            // InternalVertigoDsl.g:12040:1: ( ( ruleInOutString ) )
+            // InternalVertigoDsl.g:12041:2: ( ruleInOutString )
             {
-            // InternalVertigoDsl.g:12097:2: ( ruleInOutString )
-            // InternalVertigoDsl.g:12098:3: ruleInOutString
+            // InternalVertigoDsl.g:12041:2: ( ruleInOutString )
+            // InternalVertigoDsl.g:12042:3: ruleInOutString
             {
              before(grammarAccess.getTaskAttributeStringAccess().getInoutInOutStringEnumRuleCall_1_2_2_0()); 
             pushFollow(FOLLOW_2);
@@ -36485,17 +36325,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttribute__NameAssignment_1"
-    // InternalVertigoDsl.g:12107:1: rule__TaskAttribute__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:12051:1: rule__TaskAttribute__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__TaskAttribute__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12111:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12112:2: ( RULE_ID )
+            // InternalVertigoDsl.g:12055:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12056:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:12112:2: ( RULE_ID )
-            // InternalVertigoDsl.g:12113:3: RULE_ID
+            // InternalVertigoDsl.g:12056:2: ( RULE_ID )
+            // InternalVertigoDsl.g:12057:3: RULE_ID
             {
              before(grammarAccess.getTaskAttributeAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -36522,17 +36362,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskAttribute__TaskAttributeStringAssignment_2"
-    // InternalVertigoDsl.g:12122:1: rule__TaskAttribute__TaskAttributeStringAssignment_2 : ( ruleTaskAttributeString ) ;
+    // InternalVertigoDsl.g:12066:1: rule__TaskAttribute__TaskAttributeStringAssignment_2 : ( ruleTaskAttributeString ) ;
     public final void rule__TaskAttribute__TaskAttributeStringAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12126:1: ( ( ruleTaskAttributeString ) )
-            // InternalVertigoDsl.g:12127:2: ( ruleTaskAttributeString )
+            // InternalVertigoDsl.g:12070:1: ( ( ruleTaskAttributeString ) )
+            // InternalVertigoDsl.g:12071:2: ( ruleTaskAttributeString )
             {
-            // InternalVertigoDsl.g:12127:2: ( ruleTaskAttributeString )
-            // InternalVertigoDsl.g:12128:3: ruleTaskAttributeString
+            // InternalVertigoDsl.g:12071:2: ( ruleTaskAttributeString )
+            // InternalVertigoDsl.g:12072:3: ruleTaskAttributeString
             {
              before(grammarAccess.getTaskAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -36563,17 +36403,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskDataSpace__StoreNameAssignment_2"
-    // InternalVertigoDsl.g:12137:1: rule__TaskDataSpace__StoreNameAssignment_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12081:1: rule__TaskDataSpace__StoreNameAssignment_2 : ( RULE_STRING ) ;
     public final void rule__TaskDataSpace__StoreNameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12141:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12142:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12085:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12086:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12142:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12143:3: RULE_STRING
+            // InternalVertigoDsl.g:12086:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12087:3: RULE_STRING
             {
              before(grammarAccess.getTaskDataSpaceAccess().getStoreNameSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36600,17 +36440,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskRequestString__StringAssignment"
-    // InternalVertigoDsl.g:12152:1: rule__TaskRequestString__StringAssignment : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12096:1: rule__TaskRequestString__StringAssignment : ( RULE_STRING ) ;
     public final void rule__TaskRequestString__StringAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12156:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12157:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12100:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12101:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12157:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12158:3: RULE_STRING
+            // InternalVertigoDsl.g:12101:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12102:3: RULE_STRING
             {
              before(grammarAccess.getTaskRequestStringAccess().getStringSTRINGTerminalRuleCall_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36637,17 +36477,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskDefinition__NameAssignment_2"
-    // InternalVertigoDsl.g:12167:1: rule__TaskDefinition__NameAssignment_2 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:12111:1: rule__TaskDefinition__NameAssignment_2 : ( RULE_ID ) ;
     public final void rule__TaskDefinition__NameAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12171:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12172:2: ( RULE_ID )
+            // InternalVertigoDsl.g:12115:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12116:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:12172:2: ( RULE_ID )
-            // InternalVertigoDsl.g:12173:3: RULE_ID
+            // InternalVertigoDsl.g:12116:2: ( RULE_ID )
+            // InternalVertigoDsl.g:12117:3: RULE_ID
             {
              before(grammarAccess.getTaskDefinitionAccess().getNameIDTerminalRuleCall_2_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -36674,17 +36514,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskDefinition__ClassnameAssignment_6"
-    // InternalVertigoDsl.g:12182:1: rule__TaskDefinition__ClassnameAssignment_6 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12126:1: rule__TaskDefinition__ClassnameAssignment_6 : ( RULE_STRING ) ;
     public final void rule__TaskDefinition__ClassnameAssignment_6() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12186:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12187:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12130:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12131:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12187:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12188:3: RULE_STRING
+            // InternalVertigoDsl.g:12131:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12132:3: RULE_STRING
             {
              before(grammarAccess.getTaskDefinitionAccess().getClassnameSTRINGTerminalRuleCall_6_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36711,17 +36551,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskDefinition__RequestAssignment_10"
-    // InternalVertigoDsl.g:12197:1: rule__TaskDefinition__RequestAssignment_10 : ( ruleTaskRequestString ) ;
+    // InternalVertigoDsl.g:12141:1: rule__TaskDefinition__RequestAssignment_10 : ( ruleTaskRequestString ) ;
     public final void rule__TaskDefinition__RequestAssignment_10() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12201:1: ( ( ruleTaskRequestString ) )
-            // InternalVertigoDsl.g:12202:2: ( ruleTaskRequestString )
+            // InternalVertigoDsl.g:12145:1: ( ( ruleTaskRequestString ) )
+            // InternalVertigoDsl.g:12146:2: ( ruleTaskRequestString )
             {
-            // InternalVertigoDsl.g:12202:2: ( ruleTaskRequestString )
-            // InternalVertigoDsl.g:12203:3: ruleTaskRequestString
+            // InternalVertigoDsl.g:12146:2: ( ruleTaskRequestString )
+            // InternalVertigoDsl.g:12147:3: ruleTaskRequestString
             {
              before(grammarAccess.getTaskDefinitionAccess().getRequestTaskRequestStringParserRuleCall_10_0()); 
             pushFollow(FOLLOW_2);
@@ -36752,17 +36592,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskDefinition__TaskAttributesAssignment_12"
-    // InternalVertigoDsl.g:12212:1: rule__TaskDefinition__TaskAttributesAssignment_12 : ( ruleTaskAttribute ) ;
+    // InternalVertigoDsl.g:12156:1: rule__TaskDefinition__TaskAttributesAssignment_12 : ( ruleTaskAttribute ) ;
     public final void rule__TaskDefinition__TaskAttributesAssignment_12() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12216:1: ( ( ruleTaskAttribute ) )
-            // InternalVertigoDsl.g:12217:2: ( ruleTaskAttribute )
+            // InternalVertigoDsl.g:12160:1: ( ( ruleTaskAttribute ) )
+            // InternalVertigoDsl.g:12161:2: ( ruleTaskAttribute )
             {
-            // InternalVertigoDsl.g:12217:2: ( ruleTaskAttribute )
-            // InternalVertigoDsl.g:12218:3: ruleTaskAttribute
+            // InternalVertigoDsl.g:12161:2: ( ruleTaskAttribute )
+            // InternalVertigoDsl.g:12162:3: ruleTaskAttribute
             {
              before(grammarAccess.getTaskDefinitionAccess().getTaskAttributesTaskAttributeParserRuleCall_12_0()); 
             pushFollow(FOLLOW_2);
@@ -36793,17 +36633,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__TaskDefinition__TaskDataSpaceAssignment_13"
-    // InternalVertigoDsl.g:12227:1: rule__TaskDefinition__TaskDataSpaceAssignment_13 : ( ruleTaskDataSpace ) ;
+    // InternalVertigoDsl.g:12171:1: rule__TaskDefinition__TaskDataSpaceAssignment_13 : ( ruleTaskDataSpace ) ;
     public final void rule__TaskDefinition__TaskDataSpaceAssignment_13() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12231:1: ( ( ruleTaskDataSpace ) )
-            // InternalVertigoDsl.g:12232:2: ( ruleTaskDataSpace )
+            // InternalVertigoDsl.g:12175:1: ( ( ruleTaskDataSpace ) )
+            // InternalVertigoDsl.g:12176:2: ( ruleTaskDataSpace )
             {
-            // InternalVertigoDsl.g:12232:2: ( ruleTaskDataSpace )
-            // InternalVertigoDsl.g:12233:3: ruleTaskDataSpace
+            // InternalVertigoDsl.g:12176:2: ( ruleTaskDataSpace )
+            // InternalVertigoDsl.g:12177:3: ruleTaskDataSpace
             {
              before(grammarAccess.getTaskDefinitionAccess().getTaskDataSpaceTaskDataSpaceParserRuleCall_13_0()); 
             pushFollow(FOLLOW_2);
@@ -36834,21 +36674,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionDtDefinition__DtDefinitionAssignment_2"
-    // InternalVertigoDsl.g:12242:1: rule__FacetDefinitionDtDefinition__DtDefinitionAssignment_2 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:12186:1: rule__FacetDefinitionDtDefinition__DtDefinitionAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__FacetDefinitionDtDefinition__DtDefinitionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12246:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:12247:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12190:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:12191:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:12247:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12248:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12191:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12192:3: ( RULE_ID )
             {
              before(grammarAccess.getFacetDefinitionDtDefinitionAccess().getDtDefinitionDtDefinitionTypeCrossReference_2_0()); 
-            // InternalVertigoDsl.g:12249:3: ( RULE_ID )
-            // InternalVertigoDsl.g:12250:4: RULE_ID
+            // InternalVertigoDsl.g:12193:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12194:4: RULE_ID
             {
              before(grammarAccess.getFacetDefinitionDtDefinitionAccess().getDtDefinitionDtDefinitionTypeIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -36879,17 +36719,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionFieldName__StringAssignment_2"
-    // InternalVertigoDsl.g:12261:1: rule__FacetDefinitionFieldName__StringAssignment_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12205:1: rule__FacetDefinitionFieldName__StringAssignment_2 : ( RULE_STRING ) ;
     public final void rule__FacetDefinitionFieldName__StringAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12265:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12266:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12209:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12210:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12266:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12267:3: RULE_STRING
+            // InternalVertigoDsl.g:12210:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12211:3: RULE_STRING
             {
              before(grammarAccess.getFacetDefinitionFieldNameAccess().getStringSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36916,17 +36756,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionLabel__StringAssignment_2"
-    // InternalVertigoDsl.g:12276:1: rule__FacetDefinitionLabel__StringAssignment_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12220:1: rule__FacetDefinitionLabel__StringAssignment_2 : ( RULE_STRING ) ;
     public final void rule__FacetDefinitionLabel__StringAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12280:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12281:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12224:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12225:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12281:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12282:3: RULE_STRING
+            // InternalVertigoDsl.g:12225:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12226:3: RULE_STRING
             {
              before(grammarAccess.getFacetDefinitionLabelAccess().getStringSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36953,17 +36793,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionRangeString__FilterStringAssignment_1_0_2"
-    // InternalVertigoDsl.g:12291:1: rule__FacetDefinitionRangeString__FilterStringAssignment_1_0_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12235:1: rule__FacetDefinitionRangeString__FilterStringAssignment_1_0_2 : ( RULE_STRING ) ;
     public final void rule__FacetDefinitionRangeString__FilterStringAssignment_1_0_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12295:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12296:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12239:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12240:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12296:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12297:3: RULE_STRING
+            // InternalVertigoDsl.g:12240:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12241:3: RULE_STRING
             {
              before(grammarAccess.getFacetDefinitionRangeStringAccess().getFilterStringSTRINGTerminalRuleCall_1_0_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -36990,17 +36830,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetDefinitionRangeString__LabelStringAssignment_1_1_2"
-    // InternalVertigoDsl.g:12306:1: rule__FacetDefinitionRangeString__LabelStringAssignment_1_1_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12250:1: rule__FacetDefinitionRangeString__LabelStringAssignment_1_1_2 : ( RULE_STRING ) ;
     public final void rule__FacetDefinitionRangeString__LabelStringAssignment_1_1_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12310:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12311:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12254:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12255:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12311:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12312:3: RULE_STRING
+            // InternalVertigoDsl.g:12255:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12256:3: RULE_STRING
             {
              before(grammarAccess.getFacetDefinitionRangeStringAccess().getLabelStringSTRINGTerminalRuleCall_1_1_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -37027,21 +36867,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetedQueryDefinitionKeyConcept__DtDefinitionAssignment_2"
-    // InternalVertigoDsl.g:12321:1: rule__FacetedQueryDefinitionKeyConcept__DtDefinitionAssignment_2 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:12265:1: rule__FacetedQueryDefinitionKeyConcept__DtDefinitionAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__FacetedQueryDefinitionKeyConcept__DtDefinitionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12325:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:12326:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12269:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:12270:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:12326:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12327:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12270:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12271:3: ( RULE_ID )
             {
              before(grammarAccess.getFacetedQueryDefinitionKeyConceptAccess().getDtDefinitionDtDefinitionTypeCrossReference_2_0()); 
-            // InternalVertigoDsl.g:12328:3: ( RULE_ID )
-            // InternalVertigoDsl.g:12329:4: RULE_ID
+            // InternalVertigoDsl.g:12272:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12273:4: RULE_ID
             {
              before(grammarAccess.getFacetedQueryDefinitionKeyConceptAccess().getDtDefinitionDtDefinitionTypeIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -37072,17 +36912,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetedQueryDefinitionDomainCriteria__RefToDomainTypeAssignment_2"
-    // InternalVertigoDsl.g:12340:1: rule__FacetedQueryDefinitionDomainCriteria__RefToDomainTypeAssignment_2 : ( ruleRefToDomainType ) ;
+    // InternalVertigoDsl.g:12284:1: rule__FacetedQueryDefinitionDomainCriteria__RefToDomainTypeAssignment_2 : ( ruleRefToDomainType ) ;
     public final void rule__FacetedQueryDefinitionDomainCriteria__RefToDomainTypeAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12344:1: ( ( ruleRefToDomainType ) )
-            // InternalVertigoDsl.g:12345:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:12288:1: ( ( ruleRefToDomainType ) )
+            // InternalVertigoDsl.g:12289:2: ( ruleRefToDomainType )
             {
-            // InternalVertigoDsl.g:12345:2: ( ruleRefToDomainType )
-            // InternalVertigoDsl.g:12346:3: ruleRefToDomainType
+            // InternalVertigoDsl.g:12289:2: ( ruleRefToDomainType )
+            // InternalVertigoDsl.g:12290:3: ruleRefToDomainType
             {
              before(grammarAccess.getFacetedQueryDefinitionDomainCriteriaAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -37113,17 +36953,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetedQueryDefinitionListFilterBuilderQuery__StringAssignment"
-    // InternalVertigoDsl.g:12355:1: rule__FacetedQueryDefinitionListFilterBuilderQuery__StringAssignment : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12299:1: rule__FacetedQueryDefinitionListFilterBuilderQuery__StringAssignment : ( RULE_STRING ) ;
     public final void rule__FacetedQueryDefinitionListFilterBuilderQuery__StringAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12359:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12360:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12303:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12304:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12360:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12361:3: RULE_STRING
+            // InternalVertigoDsl.g:12304:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12305:3: RULE_STRING
             {
              before(grammarAccess.getFacetedQueryDefinitionListFilterBuilderQueryAccess().getStringSTRINGTerminalRuleCall_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -37150,17 +36990,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetedQueryDefinitionListFilterBuilderClass__StringAssignment"
-    // InternalVertigoDsl.g:12370:1: rule__FacetedQueryDefinitionListFilterBuilderClass__StringAssignment : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12314:1: rule__FacetedQueryDefinitionListFilterBuilderClass__StringAssignment : ( RULE_STRING ) ;
     public final void rule__FacetedQueryDefinitionListFilterBuilderClass__StringAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12374:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12375:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12318:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12319:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12375:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12376:3: RULE_STRING
+            // InternalVertigoDsl.g:12319:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12320:3: RULE_STRING
             {
              before(grammarAccess.getFacetedQueryDefinitionListFilterBuilderClassAccess().getStringSTRINGTerminalRuleCall_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -37187,21 +37027,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetedQueryDefinitionFacets__FacetDefinitionAssignment_3"
-    // InternalVertigoDsl.g:12385:1: rule__FacetedQueryDefinitionFacets__FacetDefinitionAssignment_3 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:12329:1: rule__FacetedQueryDefinitionFacets__FacetDefinitionAssignment_3 : ( ( RULE_ID ) ) ;
     public final void rule__FacetedQueryDefinitionFacets__FacetDefinitionAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12389:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:12390:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12333:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:12334:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:12390:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12391:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12334:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12335:3: ( RULE_ID )
             {
              before(grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetDefinitionFacetDefinitionCrossReference_3_0()); 
-            // InternalVertigoDsl.g:12392:3: ( RULE_ID )
-            // InternalVertigoDsl.g:12393:4: RULE_ID
+            // InternalVertigoDsl.g:12336:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12337:4: RULE_ID
             {
              before(grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetDefinitionFacetDefinitionIDTerminalRuleCall_3_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -37232,21 +37072,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__FacetedQueryDefinitionFacets__FacetsAssignment_4_1"
-    // InternalVertigoDsl.g:12404:1: rule__FacetedQueryDefinitionFacets__FacetsAssignment_4_1 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:12348:1: rule__FacetedQueryDefinitionFacets__FacetsAssignment_4_1 : ( ( RULE_ID ) ) ;
     public final void rule__FacetedQueryDefinitionFacets__FacetsAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12408:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:12409:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12352:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:12353:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:12409:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12410:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12353:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12354:3: ( RULE_ID )
             {
              before(grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetsFacetDefinitionCrossReference_4_1_0()); 
-            // InternalVertigoDsl.g:12411:3: ( RULE_ID )
-            // InternalVertigoDsl.g:12412:4: RULE_ID
+            // InternalVertigoDsl.g:12355:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12356:4: RULE_ID
             {
              before(grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetsFacetDefinitionIDTerminalRuleCall_4_1_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -37277,21 +37117,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexDefinitionKeyConcept__DtDefinitionAssignment_2"
-    // InternalVertigoDsl.g:12423:1: rule__IndexDefinitionKeyConcept__DtDefinitionAssignment_2 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:12367:1: rule__IndexDefinitionKeyConcept__DtDefinitionAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__IndexDefinitionKeyConcept__DtDefinitionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12427:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:12428:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12371:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:12372:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:12428:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12429:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12372:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12373:3: ( RULE_ID )
             {
              before(grammarAccess.getIndexDefinitionKeyConceptAccess().getDtDefinitionDtDefinitionTypeCrossReference_2_0()); 
-            // InternalVertigoDsl.g:12430:3: ( RULE_ID )
-            // InternalVertigoDsl.g:12431:4: RULE_ID
+            // InternalVertigoDsl.g:12374:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12375:4: RULE_ID
             {
              before(grammarAccess.getIndexDefinitionKeyConceptAccess().getDtDefinitionDtDefinitionTypeIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -37322,21 +37162,21 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexDefinitionDtIndex__DtDefinitionAssignment_2"
-    // InternalVertigoDsl.g:12442:1: rule__IndexDefinitionDtIndex__DtDefinitionAssignment_2 : ( ( RULE_ID ) ) ;
+    // InternalVertigoDsl.g:12386:1: rule__IndexDefinitionDtIndex__DtDefinitionAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__IndexDefinitionDtIndex__DtDefinitionAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12446:1: ( ( ( RULE_ID ) ) )
-            // InternalVertigoDsl.g:12447:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12390:1: ( ( ( RULE_ID ) ) )
+            // InternalVertigoDsl.g:12391:2: ( ( RULE_ID ) )
             {
-            // InternalVertigoDsl.g:12447:2: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12448:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12391:2: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12392:3: ( RULE_ID )
             {
              before(grammarAccess.getIndexDefinitionDtIndexAccess().getDtDefinitionDtDefinitionTypeCrossReference_2_0()); 
-            // InternalVertigoDsl.g:12449:3: ( RULE_ID )
-            // InternalVertigoDsl.g:12450:4: RULE_ID
+            // InternalVertigoDsl.g:12393:3: ( RULE_ID )
+            // InternalVertigoDsl.g:12394:4: RULE_ID
             {
              before(grammarAccess.getIndexDefinitionDtIndexAccess().getDtDefinitionDtDefinitionTypeIDTerminalRuleCall_2_0_1()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -37367,17 +37207,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexDefinitionIndexCopyToString__StringAssignment_3"
-    // InternalVertigoDsl.g:12461:1: rule__IndexDefinitionIndexCopyToString__StringAssignment_3 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12405:1: rule__IndexDefinitionIndexCopyToString__StringAssignment_3 : ( RULE_STRING ) ;
     public final void rule__IndexDefinitionIndexCopyToString__StringAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12465:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12466:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12409:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12410:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12466:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12467:3: RULE_STRING
+            // InternalVertigoDsl.g:12410:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12411:3: RULE_STRING
             {
              before(grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getStringSTRINGTerminalRuleCall_3_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -37404,17 +37244,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexDefinitionIndexCopyTo__NameAssignment_1"
-    // InternalVertigoDsl.g:12476:1: rule__IndexDefinitionIndexCopyTo__NameAssignment_1 : ( RULE_ID ) ;
+    // InternalVertigoDsl.g:12420:1: rule__IndexDefinitionIndexCopyTo__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__IndexDefinitionIndexCopyTo__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12480:1: ( ( RULE_ID ) )
-            // InternalVertigoDsl.g:12481:2: ( RULE_ID )
+            // InternalVertigoDsl.g:12424:1: ( ( RULE_ID ) )
+            // InternalVertigoDsl.g:12425:2: ( RULE_ID )
             {
-            // InternalVertigoDsl.g:12481:2: ( RULE_ID )
-            // InternalVertigoDsl.g:12482:3: RULE_ID
+            // InternalVertigoDsl.g:12425:2: ( RULE_ID )
+            // InternalVertigoDsl.g:12426:3: RULE_ID
             {
              before(grammarAccess.getIndexDefinitionIndexCopyToAccess().getNameIDTerminalRuleCall_1_0()); 
             match(input,RULE_ID,FOLLOW_2); 
@@ -37441,17 +37281,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexDefinitionIndexCopyTo__IndexDefinitionIndexCopyToStringAssignment_2"
-    // InternalVertigoDsl.g:12491:1: rule__IndexDefinitionIndexCopyTo__IndexDefinitionIndexCopyToStringAssignment_2 : ( ruleIndexDefinitionIndexCopyToString ) ;
+    // InternalVertigoDsl.g:12435:1: rule__IndexDefinitionIndexCopyTo__IndexDefinitionIndexCopyToStringAssignment_2 : ( ruleIndexDefinitionIndexCopyToString ) ;
     public final void rule__IndexDefinitionIndexCopyTo__IndexDefinitionIndexCopyToStringAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12495:1: ( ( ruleIndexDefinitionIndexCopyToString ) )
-            // InternalVertigoDsl.g:12496:2: ( ruleIndexDefinitionIndexCopyToString )
+            // InternalVertigoDsl.g:12439:1: ( ( ruleIndexDefinitionIndexCopyToString ) )
+            // InternalVertigoDsl.g:12440:2: ( ruleIndexDefinitionIndexCopyToString )
             {
-            // InternalVertigoDsl.g:12496:2: ( ruleIndexDefinitionIndexCopyToString )
-            // InternalVertigoDsl.g:12497:3: ruleIndexDefinitionIndexCopyToString
+            // InternalVertigoDsl.g:12440:2: ( ruleIndexDefinitionIndexCopyToString )
+            // InternalVertigoDsl.g:12441:3: ruleIndexDefinitionIndexCopyToString
             {
              before(grammarAccess.getIndexDefinitionIndexCopyToAccess().getIndexDefinitionIndexCopyToStringIndexDefinitionIndexCopyToStringParserRuleCall_2_0()); 
             pushFollow(FOLLOW_2);
@@ -37482,17 +37322,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     // $ANTLR start "rule__IndexDefinitionLoaderId__LoaderIdStringAssignment_2"
-    // InternalVertigoDsl.g:12506:1: rule__IndexDefinitionLoaderId__LoaderIdStringAssignment_2 : ( RULE_STRING ) ;
+    // InternalVertigoDsl.g:12450:1: rule__IndexDefinitionLoaderId__LoaderIdStringAssignment_2 : ( RULE_STRING ) ;
     public final void rule__IndexDefinitionLoaderId__LoaderIdStringAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
         	
         try {
-            // InternalVertigoDsl.g:12510:1: ( ( RULE_STRING ) )
-            // InternalVertigoDsl.g:12511:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12454:1: ( ( RULE_STRING ) )
+            // InternalVertigoDsl.g:12455:2: ( RULE_STRING )
             {
-            // InternalVertigoDsl.g:12511:2: ( RULE_STRING )
-            // InternalVertigoDsl.g:12512:3: RULE_STRING
+            // InternalVertigoDsl.g:12455:2: ( RULE_STRING )
+            // InternalVertigoDsl.g:12456:3: RULE_STRING
             {
              before(grammarAccess.getIndexDefinitionLoaderIdAccess().getLoaderIdStringSTRINGTerminalRuleCall_2_0()); 
             match(input,RULE_STRING,FOLLOW_2); 
@@ -37521,7 +37361,8 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
 
     protected DFA2 dfa2 = new DFA2(this);
-    protected DFA63 dfa63 = new DFA63(this);
+    protected DFA81 dfa81 = new DFA81(this);
+    protected DFA82 dfa82 = new DFA82(this);
     protected DFA83 dfa83 = new DFA83(this);
     protected DFA84 dfa84 = new DFA84(this);
     protected DFA85 dfa85 = new DFA85(this);
@@ -37532,19 +37373,17 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
     protected DFA90 dfa90 = new DFA90(this);
     protected DFA91 dfa91 = new DFA91(this);
     protected DFA92 dfa92 = new DFA92(this);
-    protected DFA93 dfa93 = new DFA93(this);
-    protected DFA94 dfa94 = new DFA94(this);
     static final String dfa_1s = "\15\uffff";
-    static final String dfa_2s = "\1\16\2\42\1\uffff\1\42\10\uffff";
-    static final String dfa_3s = "\1\67\1\120\1\43\1\uffff\1\43\10\uffff";
-    static final String dfa_4s = "\3\uffff\1\3\1\uffff\1\2\1\4\1\10\1\6\1\1\1\11\1\5\1\7";
+    static final String dfa_2s = "\1\16\3\42\11\uffff";
+    static final String dfa_3s = "\1\41\1\120\2\43\11\uffff";
+    static final String dfa_4s = "\4\uffff\1\1\1\11\1\2\1\4\1\6\1\10\1\3\1\5\1\7";
     static final String dfa_5s = "\15\uffff}>";
     static final String[] dfa_6s = {
-            "\1\1\1\2\21\uffff\1\4\6\uffff\1\3\7\uffff\3\3\3\uffff\2\3",
-            "\1\3\1\10\1\11\6\uffff\1\6\1\uffff\1\5\23\uffff\1\7\16\uffff\1\12",
-            "\1\3\1\10",
-            "",
+            "\1\1\1\2\21\uffff\1\3",
+            "\1\12\1\10\1\4\6\uffff\1\7\1\uffff\1\6\23\uffff\1\11\16\uffff\1\5",
+            "\1\12\1\10",
             "\1\13\1\14",
+            "",
             "",
             "",
             "",
@@ -37579,213 +37418,11 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             return "1193:1: rule__Element__Alternatives : ( ( ruleConstraint ) | ( ruleFormatter ) | ( ruleDomain ) | ( ruleFileInfo ) | ( ruleDeclaredDomain ) | ( ruleDtDefinition ) | ( ruleDeclaredDtDefinition ) | ( ruleAssociation ) | ( ruleTaskDefinition ) );";
         }
     }
-    static final String dfa_7s = "\u0080\uffff";
-    static final String dfa_8s = "\1\11\177\uffff";
-    static final String dfa_9s = "\1\16\2\42\5\47\1\0\1\uffff\1\4\2\5\1\63\1\31\1\5\1\uffff\1\45\2\50\1\4\3\50\1\56\5\47\1\64\1\47\2\5\1\63\1\31\1\5\1\4\1\50\1\20\2\50\1\4\3\50\1\4\1\64\11\57\5\47\1\64\1\47\2\5\1\63\1\31\1\5\1\4\1\50\1\4\2\50\1\4\3\50\1\4\1\64\1\0\5\47\1\64\2\5\1\63\1\31\1\5\1\4\3\50\1\4\3\50\1\4\1\64\5\47\1\64\2\5\1\63\1\31\1\5\1\4\3\50\1\4\3\50\1\4\2\64\1\4\1\50\1\4\1\64";
-    static final String dfa_10s = "\1\67\1\120\1\43\5\47\1\0\1\uffff\1\4\2\5\1\63\1\32\1\5\1\uffff\1\45\2\67\1\4\3\67\1\56\5\47\1\65\1\47\2\5\1\63\1\32\1\5\1\65\1\67\1\30\2\67\1\4\3\67\2\65\11\57\5\47\1\65\1\47\2\5\1\63\1\32\1\5\1\65\1\67\1\4\2\67\1\4\3\67\2\65\1\0\5\47\1\65\2\5\1\63\1\32\1\5\1\65\3\67\1\4\3\67\2\65\5\47\1\65\2\5\1\63\1\32\1\5\1\65\1\67\2\50\1\4\3\50\4\65\1\50\2\65";
-    static final String dfa_11s = "\11\uffff\1\2\6\uffff\1\1\157\uffff";
-    static final String dfa_12s = "\10\uffff\1\0\107\uffff\1\1\57\uffff}>";
-    static final String[] dfa_13s = {
-            "\1\1\1\2\21\uffff\1\11\6\uffff\1\10\7\uffff\1\3\1\4\1\5\3\uffff\1\6\1\7",
-            "\1\12\2\11\6\uffff\1\11\1\uffff\1\11\23\uffff\1\11\16\uffff\1\11",
-            "\1\12\1\11",
-            "\1\13",
-            "\1\14",
-            "\1\15",
-            "\1\16",
-            "\1\17",
-            "\1\uffff",
-            "",
-            "\1\21",
-            "\1\22",
-            "\1\23",
-            "\1\24",
-            "\1\25\1\26",
-            "\1\27",
-            "",
-            "\1\30",
-            "\1\10\7\uffff\1\31\1\32\1\33\3\uffff\1\34\1\35",
-            "\1\10\7\uffff\1\31\1\32\1\33\3\uffff\1\34\1\35",
-            "\1\36",
-            "\1\10\7\uffff\1\31\1\32\1\33\3\uffff\1\34\1\35",
-            "\1\10\7\uffff\1\31\1\32\1\33\3\uffff\1\34\1\35",
-            "\1\10\7\uffff\1\31\1\32\1\33\3\uffff\1\34\1\35",
-            "\1\37",
-            "\1\40",
-            "\1\41",
-            "\1\42",
-            "\1\43",
-            "\1\44",
-            "\1\46\1\45",
-            "\1\47",
-            "\1\50",
-            "\1\51",
-            "\1\52",
-            "\1\53\1\54",
-            "\1\55",
-            "\1\57\60\uffff\1\56",
-            "\1\10\7\uffff\1\31\1\32\1\33\3\uffff\1\34\1\35",
-            "\1\60\1\61\1\62\1\63\1\64\1\65\1\66\1\67\1\70",
-            "\1\10\7\uffff\1\71\1\72\1\73\3\uffff\1\74\1\75",
-            "\1\10\7\uffff\1\71\1\72\1\73\3\uffff\1\74\1\75",
-            "\1\76",
-            "\1\10\7\uffff\1\71\1\72\1\73\3\uffff\1\74\1\75",
-            "\1\10\7\uffff\1\71\1\72\1\73\3\uffff\1\74\1\75",
-            "\1\10\7\uffff\1\71\1\72\1\73\3\uffff\1\74\1\75",
-            "\1\57\60\uffff\1\56",
-            "\1\46\1\45",
-            "\1\77",
-            "\1\77",
-            "\1\77",
-            "\1\77",
-            "\1\77",
-            "\1\77",
-            "\1\77",
-            "\1\77",
-            "\1\77",
-            "\1\100",
-            "\1\101",
-            "\1\102",
-            "\1\103",
-            "\1\104",
-            "\1\106\1\105",
-            "\1\107",
-            "\1\110",
-            "\1\111",
-            "\1\112",
-            "\1\113\1\114",
-            "\1\115",
-            "\1\117\60\uffff\1\116",
-            "\1\10\7\uffff\1\71\1\72\1\73\3\uffff\1\74\1\75",
-            "\1\120",
-            "\1\10\7\uffff\1\121\1\122\1\123\3\uffff\1\124\1\125",
-            "\1\10\7\uffff\1\121\1\122\1\123\3\uffff\1\124\1\125",
-            "\1\126",
-            "\1\10\7\uffff\1\121\1\122\1\123\3\uffff\1\124\1\125",
-            "\1\10\7\uffff\1\121\1\122\1\123\3\uffff\1\124\1\125",
-            "\1\10\7\uffff\1\121\1\122\1\123\3\uffff\1\124\1\125",
-            "\1\117\60\uffff\1\116",
-            "\1\106\1\105",
-            "\1\uffff",
-            "\1\127",
-            "\1\130",
-            "\1\131",
-            "\1\132",
-            "\1\133",
-            "\1\135\1\134",
-            "\1\136",
-            "\1\137",
-            "\1\140",
-            "\1\141\1\142",
-            "\1\143",
-            "\1\145\60\uffff\1\144",
-            "\1\10\7\uffff\1\121\1\122\1\123\3\uffff\1\124\1\125",
-            "\1\10\7\uffff\1\146\1\147\1\150\3\uffff\1\151\1\152",
-            "\1\10\7\uffff\1\146\1\147\1\150\3\uffff\1\151\1\152",
-            "\1\153",
-            "\1\10\7\uffff\1\146\1\147\1\150\3\uffff\1\151\1\152",
-            "\1\10\7\uffff\1\146\1\147\1\150\3\uffff\1\151\1\152",
-            "\1\10\7\uffff\1\146\1\147\1\150\3\uffff\1\151\1\152",
-            "\1\145\60\uffff\1\144",
-            "\1\135\1\134",
-            "\1\154",
-            "\1\155",
-            "\1\156",
-            "\1\157",
-            "\1\160",
-            "\1\162\1\161",
-            "\1\163",
-            "\1\164",
-            "\1\165",
-            "\1\166\1\167",
-            "\1\170",
-            "\1\172\60\uffff\1\171",
-            "\1\10\7\uffff\1\146\1\147\1\150\3\uffff\1\151\1\152",
-            "\1\10",
-            "\1\10",
-            "\1\173",
-            "\1\10",
-            "\1\10",
-            "\1\10",
-            "\1\172\60\uffff\1\171",
-            "\1\162\1\161",
-            "\1\175\1\174",
-            "\1\177\60\uffff\1\176",
-            "\1\10",
-            "\1\177\60\uffff\1\176",
-            "\1\175\1\174"
-    };
-
-    static final short[] dfa_7 = DFA.unpackEncodedString(dfa_7s);
-    static final short[] dfa_8 = DFA.unpackEncodedString(dfa_8s);
-    static final char[] dfa_9 = DFA.unpackEncodedStringToUnsignedChars(dfa_9s);
-    static final char[] dfa_10 = DFA.unpackEncodedStringToUnsignedChars(dfa_10s);
-    static final short[] dfa_11 = DFA.unpackEncodedString(dfa_11s);
-    static final short[] dfa_12 = DFA.unpackEncodedString(dfa_12s);
-    static final short[][] dfa_13 = unpackEncodedStringArray(dfa_13s);
-
-    class DFA63 extends DFA {
-
-        public DFA63(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 63;
-            this.eot = dfa_7;
-            this.eof = dfa_8;
-            this.min = dfa_9;
-            this.max = dfa_10;
-            this.accept = dfa_11;
-            this.special = dfa_12;
-            this.transition = dfa_13;
-        }
-        public String getDescription() {
-            return "9880:2: ( rule__Domain__UnorderedGroup__1 )?";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA63_8 = input.LA(1);
-
-                         
-                        int index63_8 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 1) ) {s = 16;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup()) ) {s = 9;}
-
-                         
-                        input.seek(index63_8);
-                        if ( s>=0 ) return s;
-                        break;
-                    case 1 : 
-                        int LA63_80 = input.LA(1);
-
-                         
-                        int index63_80 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( getUnorderedGroupHelper().canSelect(grammarAccess.getDomainAccess().getUnorderedGroup(), 0) ) {s = 16;}
-
-                        else if ( getUnorderedGroupHelper().canLeave(grammarAccess.getDomainAccess().getUnorderedGroup()) ) {s = 9;}
-
-                         
-                        input.seek(index63_80);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 63, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
-    static final String dfa_14s = "\1\102\14\uffff";
-    static final String dfa_15s = "\1\115\14\uffff";
-    static final String dfa_16s = "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14";
-    static final String dfa_17s = "\1\0\14\uffff}>";
-    static final String[] dfa_18s = {
+    static final String dfa_7s = "\1\102\14\uffff";
+    static final String dfa_8s = "\1\115\14\uffff";
+    static final String dfa_9s = "\1\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14";
+    static final String dfa_10s = "\1\0\14\uffff}>";
+    static final String[] dfa_11s = {
             "\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
             "",
             "",
@@ -37800,27 +37437,183 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             "",
             ""
     };
+    static final char[] dfa_7 = DFA.unpackEncodedStringToUnsignedChars(dfa_7s);
+    static final char[] dfa_8 = DFA.unpackEncodedStringToUnsignedChars(dfa_8s);
+    static final short[] dfa_9 = DFA.unpackEncodedString(dfa_9s);
+    static final short[] dfa_10 = DFA.unpackEncodedString(dfa_10s);
+    static final short[][] dfa_11 = unpackEncodedStringArray(dfa_11s);
+
+    class DFA81 extends DFA {
+
+        public DFA81(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 81;
+            this.eot = dfa_1;
+            this.eof = dfa_1;
+            this.min = dfa_7;
+            this.max = dfa_8;
+            this.accept = dfa_9;
+            this.special = dfa_10;
+            this.transition = dfa_11;
+        }
+        public String getDescription() {
+            return "10466:3: ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) )";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA81_0 = input.LA(1);
+
+                         
+                        int index81_0 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( LA81_0 == 66 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0) ) {s = 1;}
+
+                        else if ( LA81_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1) ) {s = 2;}
+
+                        else if ( LA81_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2) ) {s = 3;}
+
+                        else if ( LA81_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3) ) {s = 4;}
+
+                        else if ( LA81_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4) ) {s = 5;}
+
+                        else if ( LA81_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5) ) {s = 6;}
+
+                        else if ( LA81_0 == 72 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6) ) {s = 7;}
+
+                        else if ( LA81_0 == 73 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7) ) {s = 8;}
+
+                        else if ( LA81_0 == 74 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8) ) {s = 9;}
+
+                        else if ( LA81_0 == 75 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9) ) {s = 10;}
+
+                        else if ( LA81_0 == 76 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10) ) {s = 11;}
+
+                        else if ( LA81_0 == 77 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {s = 12;}
+
+                         
+                        input.seek(index81_0);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 81, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
+    static final String dfa_12s = "\16\uffff";
+    static final String dfa_13s = "\1\50\15\uffff";
+    static final String dfa_14s = "\1\115\15\uffff";
+    static final String dfa_15s = "\1\uffff\14\1\1\2";
+    static final String dfa_16s = "\1\0\15\uffff}>";
+    static final String[] dfa_17s = {
+            "\1\15\31\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+    };
+
+    static final short[] dfa_12 = DFA.unpackEncodedString(dfa_12s);
+    static final char[] dfa_13 = DFA.unpackEncodedStringToUnsignedChars(dfa_13s);
     static final char[] dfa_14 = DFA.unpackEncodedStringToUnsignedChars(dfa_14s);
-    static final char[] dfa_15 = DFA.unpackEncodedStringToUnsignedChars(dfa_15s);
+    static final short[] dfa_15 = DFA.unpackEncodedString(dfa_15s);
     static final short[] dfa_16 = DFA.unpackEncodedString(dfa_16s);
-    static final short[] dfa_17 = DFA.unpackEncodedString(dfa_17s);
-    static final short[][] dfa_18 = unpackEncodedStringArray(dfa_18s);
+    static final short[][] dfa_17 = unpackEncodedStringArray(dfa_17s);
+
+    class DFA82 extends DFA {
+
+        public DFA82(BaseRecognizer recognizer) {
+            this.recognizer = recognizer;
+            this.decisionNumber = 82;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
+        }
+        public String getDescription() {
+            return "10661:2: ( rule__Association__UnorderedGroup_4__1 )?";
+        }
+        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
+            TokenStream input = (TokenStream)_input;
+        	int _s = s;
+            switch ( s ) {
+                    case 0 : 
+                        int LA82_0 = input.LA(1);
+
+                         
+                        int index82_0 = input.index();
+                        input.rewind();
+                        s = -1;
+                        if ( LA82_0 == 66 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0) ) {s = 1;}
+
+                        else if ( LA82_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1) ) {s = 2;}
+
+                        else if ( LA82_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2) ) {s = 3;}
+
+                        else if ( LA82_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3) ) {s = 4;}
+
+                        else if ( LA82_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4) ) {s = 5;}
+
+                        else if ( LA82_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5) ) {s = 6;}
+
+                        else if ( LA82_0 == 72 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6) ) {s = 7;}
+
+                        else if ( LA82_0 == 73 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7) ) {s = 8;}
+
+                        else if ( LA82_0 == 74 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8) ) {s = 9;}
+
+                        else if ( LA82_0 == 75 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9) ) {s = 10;}
+
+                        else if ( LA82_0 == 76 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10) ) {s = 11;}
+
+                        else if ( LA82_0 == 77 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {s = 12;}
+
+                        else if ( (LA82_0==40) ) {s = 13;}
+
+                         
+                        input.seek(index82_0);
+                        if ( s>=0 ) return s;
+                        break;
+            }
+            NoViableAltException nvae =
+                new NoViableAltException(getDescription(), 82, _s, input);
+            error(nvae);
+            throw nvae;
+        }
+    }
 
     class DFA83 extends DFA {
 
         public DFA83(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 83;
-            this.eot = dfa_1;
-            this.eof = dfa_1;
-            this.min = dfa_14;
-            this.max = dfa_15;
-            this.accept = dfa_16;
-            this.special = dfa_17;
-            this.transition = dfa_18;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10522:3: ( ({...}? => ( ( ( rule__Association__Group_4_0__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_1__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_2__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_3__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_4__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_5__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_6__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_7__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_8__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_9__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_10__0 ) ) ) ) | ({...}? => ( ( ( rule__Association__Group_4_11__0 ) ) ) ) )";
+            return "10673:2: ( rule__Association__UnorderedGroup_4__2 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -37857,6 +37650,8 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
 
                         else if ( LA83_0 == 77 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {s = 12;}
 
+                        else if ( (LA83_0==40) ) {s = 13;}
+
                          
                         input.seek(index83_0);
                         if ( s>=0 ) return s;
@@ -37868,50 +37663,22 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             throw nvae;
         }
     }
-    static final String dfa_19s = "\16\uffff";
-    static final String dfa_20s = "\1\50\15\uffff";
-    static final String dfa_21s = "\1\115\15\uffff";
-    static final String dfa_22s = "\1\uffff\14\1\1\2";
-    static final String dfa_23s = "\1\0\15\uffff}>";
-    static final String[] dfa_24s = {
-            "\1\15\31\uffff\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
-    };
-
-    static final short[] dfa_19 = DFA.unpackEncodedString(dfa_19s);
-    static final char[] dfa_20 = DFA.unpackEncodedStringToUnsignedChars(dfa_20s);
-    static final char[] dfa_21 = DFA.unpackEncodedStringToUnsignedChars(dfa_21s);
-    static final short[] dfa_22 = DFA.unpackEncodedString(dfa_22s);
-    static final short[] dfa_23 = DFA.unpackEncodedString(dfa_23s);
-    static final short[][] dfa_24 = unpackEncodedStringArray(dfa_24s);
 
     class DFA84 extends DFA {
 
         public DFA84(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 84;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10717:2: ( rule__Association__UnorderedGroup_4__1 )?";
+            return "10685:2: ( rule__Association__UnorderedGroup_4__3 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -37967,16 +37734,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         public DFA85(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 85;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10729:2: ( rule__Association__UnorderedGroup_4__2 )?";
+            return "10697:2: ( rule__Association__UnorderedGroup_4__4 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38032,16 +37799,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         public DFA86(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 86;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10741:2: ( rule__Association__UnorderedGroup_4__3 )?";
+            return "10709:2: ( rule__Association__UnorderedGroup_4__5 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38097,16 +37864,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         public DFA87(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 87;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10753:2: ( rule__Association__UnorderedGroup_4__4 )?";
+            return "10721:2: ( rule__Association__UnorderedGroup_4__6 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38162,16 +37929,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         public DFA88(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 88;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10765:2: ( rule__Association__UnorderedGroup_4__5 )?";
+            return "10733:2: ( rule__Association__UnorderedGroup_4__7 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38227,16 +37994,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         public DFA89(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 89;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10777:2: ( rule__Association__UnorderedGroup_4__6 )?";
+            return "10745:2: ( rule__Association__UnorderedGroup_4__8 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38292,16 +38059,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         public DFA90(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 90;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10789:2: ( rule__Association__UnorderedGroup_4__7 )?";
+            return "10757:2: ( rule__Association__UnorderedGroup_4__9 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38357,16 +38124,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         public DFA91(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 91;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10801:2: ( rule__Association__UnorderedGroup_4__8 )?";
+            return "10769:2: ( rule__Association__UnorderedGroup_4__10 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38422,16 +38189,16 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
         public DFA92(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
             this.decisionNumber = 92;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
+            this.eot = dfa_12;
+            this.eof = dfa_12;
+            this.min = dfa_13;
+            this.max = dfa_14;
+            this.accept = dfa_15;
+            this.special = dfa_16;
+            this.transition = dfa_17;
         }
         public String getDescription() {
-            return "10813:2: ( rule__Association__UnorderedGroup_4__9 )?";
+            return "10781:2: ( rule__Association__UnorderedGroup_4__11 )?";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
@@ -38481,143 +38248,13 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
             throw nvae;
         }
     }
-
-    class DFA93 extends DFA {
-
-        public DFA93(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 93;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
-        }
-        public String getDescription() {
-            return "10825:2: ( rule__Association__UnorderedGroup_4__10 )?";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA93_0 = input.LA(1);
-
-                         
-                        int index93_0 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( LA93_0 == 66 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0) ) {s = 1;}
-
-                        else if ( LA93_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1) ) {s = 2;}
-
-                        else if ( LA93_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2) ) {s = 3;}
-
-                        else if ( LA93_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3) ) {s = 4;}
-
-                        else if ( LA93_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4) ) {s = 5;}
-
-                        else if ( LA93_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5) ) {s = 6;}
-
-                        else if ( LA93_0 == 72 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6) ) {s = 7;}
-
-                        else if ( LA93_0 == 73 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7) ) {s = 8;}
-
-                        else if ( LA93_0 == 74 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8) ) {s = 9;}
-
-                        else if ( LA93_0 == 75 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9) ) {s = 10;}
-
-                        else if ( LA93_0 == 76 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10) ) {s = 11;}
-
-                        else if ( LA93_0 == 77 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {s = 12;}
-
-                        else if ( (LA93_0==40) ) {s = 13;}
-
-                         
-                        input.seek(index93_0);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 93, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
-
-    class DFA94 extends DFA {
-
-        public DFA94(BaseRecognizer recognizer) {
-            this.recognizer = recognizer;
-            this.decisionNumber = 94;
-            this.eot = dfa_19;
-            this.eof = dfa_19;
-            this.min = dfa_20;
-            this.max = dfa_21;
-            this.accept = dfa_22;
-            this.special = dfa_23;
-            this.transition = dfa_24;
-        }
-        public String getDescription() {
-            return "10837:2: ( rule__Association__UnorderedGroup_4__11 )?";
-        }
-        public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
-            TokenStream input = (TokenStream)_input;
-        	int _s = s;
-            switch ( s ) {
-                    case 0 : 
-                        int LA94_0 = input.LA(1);
-
-                         
-                        int index94_0 = input.index();
-                        input.rewind();
-                        s = -1;
-                        if ( LA94_0 == 66 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0) ) {s = 1;}
-
-                        else if ( LA94_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1) ) {s = 2;}
-
-                        else if ( LA94_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2) ) {s = 3;}
-
-                        else if ( LA94_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3) ) {s = 4;}
-
-                        else if ( LA94_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4) ) {s = 5;}
-
-                        else if ( LA94_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5) ) {s = 6;}
-
-                        else if ( LA94_0 == 72 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6) ) {s = 7;}
-
-                        else if ( LA94_0 == 73 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7) ) {s = 8;}
-
-                        else if ( LA94_0 == 74 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8) ) {s = 9;}
-
-                        else if ( LA94_0 == 75 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9) ) {s = 10;}
-
-                        else if ( LA94_0 == 76 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10) ) {s = 11;}
-
-                        else if ( LA94_0 == 77 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {s = 12;}
-
-                        else if ( (LA94_0==40) ) {s = 13;}
-
-                         
-                        input.seek(index94_0);
-                        if ( s>=0 ) return s;
-                        break;
-            }
-            NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 94, _s, input);
-            error(nvae);
-            throw nvae;
-        }
-    }
  
 
     public static final BitSet FOLLOW_1 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_2 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_3 = new BitSet(new long[]{0x0000000000003010L});
-    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x00C700020000C000L});
-    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x00C700020000C002L});
+    public static final BitSet FOLLOW_4 = new BitSet(new long[]{0x000000020000C000L});
+    public static final BitSet FOLLOW_5 = new BitSet(new long[]{0x000000020000C002L});
     public static final BitSet FOLLOW_6 = new BitSet(new long[]{0x0000000100000000L});
     public static final BitSet FOLLOW_7 = new BitSet(new long[]{0x0000000100000002L});
     public static final BitSet FOLLOW_8 = new BitSet(new long[]{0x0000000400000000L});
@@ -38636,7 +38273,7 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x0000030000000000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000400000000000L});
     public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000001FF0000L});
-    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000800000000000L});
+    public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x00C7800000000000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0008000000000000L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0030000000000000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0020000000000002L});
@@ -38659,14 +38296,13 @@ public class InternalVertigoDslParser extends AbstractInternalContentAssistParse
     public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0000000000000002L,0x0000000000008000L});
     public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0100000000000000L,0x0000000000100000L});
     public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x0000000000000000L,0x0000000002000000L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x00C700000000C002L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x00C7000000000002L});
-    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0100000000001002L});
-    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0700000000001002L});
-    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0900000000001002L});
-    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x8000100000000002L,0x0000000000000001L});
-    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000002L,0x0000000000003FFCL});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0200000000001002L,0x0000000000004000L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0100000000000002L,0x0000000000100000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x00C7800000000002L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x0100000000001002L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0700000000001002L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0900000000001002L});
+    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x8000100000000002L,0x0000000000000001L});
+    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000000000000002L,0x0000000000003FFCL});
+    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0200000000001002L,0x0000000000004000L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0100000000000002L,0x0000000000100000L});
 
 }

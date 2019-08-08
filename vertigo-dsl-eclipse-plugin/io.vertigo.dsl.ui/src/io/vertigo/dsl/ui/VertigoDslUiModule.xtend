@@ -14,7 +14,6 @@ import org.eclipse.xtext.ide.editor.syntaxcoloring.ISemanticHighlightingCalculat
 class VertigoDslUiModule extends AbstractVertigoDslUiModule {
 	
 	def Class<? extends ISemanticHighlightingCalculator> bindISemanticHighlightingCalculator() {
-		System.out.println("binding binding binding");
 		return VertigoUISemanticHighlightingCalculator;
 	}
 	

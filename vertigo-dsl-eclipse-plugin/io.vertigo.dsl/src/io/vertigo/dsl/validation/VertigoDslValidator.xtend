@@ -3,6 +3,12 @@
  */
 package io.vertigo.dsl.validation
 
+import io.vertigo.dsl.vertigoDsl.Domain
+import io.vertigo.dsl.vertigoDsl.DomainType
+import org.eclipse.xtext.validation.Check
+import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
+import io.vertigo.dsl.vertigoDsl.DeclaredDomain
+
 /**
  * This class contains custom validation rules. 
  *
@@ -10,22 +16,21 @@ package io.vertigo.dsl.validation
  */
 class VertigoDslValidator extends AbstractVertigoDslValidator {
 	
+	private static val ISSUE_CODE_DOMAIN_PREFIX = "io.vertigo.dsl.issues.domain";
+	
 	public static val INVALID_NAME = 'invalidName'
 
-
-//	@Check
-//	def checkDomain(Domain domain) {
-//		System.out.println(domain.name);
-//		if (domain.name.startsWith("Do") && domain.name.endsWith("Dtc")) {
-//				System.out.println("encore ici");
-//		}
-//	}
-//	
-//	@Check
-//	def checkDomain(DomainType domainType) {
-//		System.out.println(domainType.toString());
-//		
-//	}
+	@Check
+	def checkDomain(Domain domain) {
+		if (!Character.isUpperCase(domain.name.charAt(0))) {
+				error("A domain name should start with a capital letter", VertigoDslPackage.Literals.DOMAIN__NAME);
+		}
+	}
 	
-	
+	@Check
+	def checkDeclaredDomain(DeclaredDomain declaredDomainType) {
+		if (!Character.isUpperCase(declaredDomainType.name.charAt(0))) {
+				error("A domain name should start with a capital letter", VertigoDslPackage.Literals.DECLARED_DOMAIN__NAME);
+		}
+	}
 }

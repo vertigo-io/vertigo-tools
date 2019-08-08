@@ -6,6 +6,7 @@ package io.vertigo.dsl.scoping
 import com.google.inject.Inject
 import io.vertigo.dsl.vertigoDsl.VertigoDslFactory
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
+import io.vertigo.dsl.vertigoDsl.impl.DtDefinitionActionImpl
 import java.util.ArrayList
 import java.util.HashSet
 import java.util.List
@@ -31,40 +32,65 @@ class VertigoDslScopeProvider extends AbstractVertigoDslScopeProvider {
 	@Inject
 	ResourceDescriptionsProvider provider;
 
-	Set<String> addedDomains = new HashSet<String>();
-	IResourceDescriptions descriptions;
-
 	override getScope(EObject context, EReference reference) {
-	
-		descriptions  = provider.createPersistedResourceDescriptions();
+		
+		// we only need to generate domains when the editor tries to resolve scope for a domain		
 		if (reference == VertigoDslPackage.Literals.REF_TO_DOMAIN_TYPE__REF) {
-			val List<IEObjectDescription> scope = new ArrayList
-			for (IResourceDescription resDescription : descriptions.getAllResourceDescriptions()) {
-				val listOfDtDefinitionDescriptions = resDescription.getExportedObjectsByType(VertigoDslPackage.eINSTANCE.getDtDefinition());
-				val listOfDeclaredDtDefinitionDescriptions = resDescription.getExportedObjectsByType(VertigoDslPackage.eINSTANCE.getDeclaredDtDefinition());
-				
+			val Set<String> addedDomains = new HashSet<String>();
 			
-				for(definition : listOfDtDefinitionDescriptions) {
-					addedDomains.add("Do"+ definition.getName().toString()+"Dto");
-					addedDomains.add("Do"+ definition.getName().toString()+"Dtc");
-				}
-			
-				for(definition : listOfDeclaredDtDefinitionDescriptions) {
-					addedDomains.add("Do"+ definition.getName().toString()+"Dto");
-					addedDomains.add("Do"+ definition.getName().toString()+"Dtc");
-				}
-			
-			}
+			// get live DtDefinitions for current file
+			var	topContainer = context.eContainer
 
+			if (topContainer !== null)
+			{
+				while (topContainer.eContainer !== null) {
+					topContainer = topContainer.eContainer
+					for (item : topContainer.eContents) {
+						if (item instanceof DtDefinitionActionImpl) {
+							if (item.getName() !== null) {
+								addedDomains.add("Do"+ item.getName().toString()+"Dto");
+								addedDomains.add("Do"+ item.getName().toString()+"Dtc");
+							}
+						}
+					}
+				}
+			}
+			
+			// get DtDefinitions from all resources
+			var IResourceDescriptions descriptions  = provider.createPersistedResourceDescriptions();
+			try {
+				descriptions.empty
+			} catch (Exception e) {
+				descriptions = null
+			}
+		
+			if (descriptions !== null) {
+				for (IResourceDescription resDescription :  descriptions.getAllResourceDescriptions()) {
+					val listOfDtDefinitionDescriptions = resDescription.getExportedObjectsByType(VertigoDslPackage.eINSTANCE.getDtDefinition());
+					val listOfDeclaredDtDefinitionDescriptions = resDescription.getExportedObjectsByType(VertigoDslPackage.eINSTANCE.getDeclaredDtDefinition());
+					
+					for(definition : listOfDtDefinitionDescriptions) {
+						addedDomains.add("Do"+ definition.getName().toString()+"Dto");
+						addedDomains.add("Do"+ definition.getName().toString()+"Dtc");
+					}
+				
+					for(definition : listOfDeclaredDtDefinitionDescriptions) {
+						addedDomains.add("Do"+ definition.getName().toString()+"Dto");
+						addedDomains.add("Do"+ definition.getName().toString()+"Dtc");
+					}
+				}
+			}
+			
+			val List<IEObjectDescription> scope = new ArrayList
+			
 			for (item : addedDomains) {
 				val EObject someObject = VertigoDslFactory.eINSTANCE.create(VertigoDslPackage.Literals.DECLARED_DOMAIN)
 				val QualifiedName name = QualifiedName.create(item)
 				scope.add(EObjectDescription.create(name, someObject))
 				reference.eResource.contents.add(someObject)
 			}
-			return (new SimpleScope(super.getScope(context, reference), scope))	
+			return (new SimpleScope(super.getScope(context, reference), scope))
 		}
-			
 		return super.getScope(context, reference);
 	}
 }

@@ -3,8 +3,15 @@
  */
 package io.vertigo.dsl
 
+import io.vertigo.dsl.converting.VertigoSTRINGValueConverter
+import org.eclipse.xtext.conversion.impl.STRINGValueConverter
+
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 class VertigoDslRuntimeModule extends AbstractVertigoDslRuntimeModule {
+	 def Class<? extends STRINGValueConverter> bindSTRINGValueConverter() {
+	 	println("binding string value converter")
+    	return VertigoSTRINGValueConverter;
+    }
 }

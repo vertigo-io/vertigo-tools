@@ -5,9 +5,11 @@ package io.vertigo.dsl.tests
 
 import com.google.common.collect.Lists
 import com.google.inject.Inject
+import com.google.inject.Provider
 import io.vertigo.dsl.services.VertigoDslGrammarAccess
 import io.vertigo.dsl.vertigoDsl.Model
 import java.io.StringReader
+import org.eclipse.emf.ecore.resource.ResourceSet
 import org.eclipse.xtext.GrammarUtil
 import org.eclipse.xtext.ParserRule
 import org.eclipse.xtext.nodemodel.INode
@@ -16,6 +18,7 @@ import org.eclipse.xtext.parser.IParser
 import org.eclipse.xtext.testing.InjectWith
 import org.eclipse.xtext.testing.extensions.InjectionExtension
 import org.eclipse.xtext.testing.util.ParseHelper
+import org.eclipse.xtext.testing.validation.ValidationTestHelper
 import org.junit.jupiter.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.^extension.ExtendWith
@@ -24,18 +27,371 @@ import org.junit.jupiter.api.^extension.ExtendWith
 @InjectWith(VertigoDslInjectorProvider)
 class VertigoDslParsingTest {
 	@Inject
-	ParseHelper<Model> parseHelper
+	extension ParseHelper<Model>
 
+	@Inject
+	extension ValidationTestHelper
+	
 	@Inject
 	VertigoDslGrammarAccess access;
 
+	@Inject Provider<ResourceSet> resourceSetProvider
 
 	@Inject
 	IParser parser;
 	
+    @Test 
+    def void checkSmallDslFile() {
+    	val resourceSet = resourceSetProvider.get
+    	
+        '''
+            package fouah
+            
+            declare Domain DoId
+            
+            create DtDefinition DtBase {
+            	stereotype: "KeyConcept"
+            	id baseId {domain: DoId label: "aaaa"}
+            }
+		'''.parse(resourceSet).assertNoErrors
+    }
+    
+    
+    @Test 
+    def void checkEntireDslFile() {
+    	val resourceSet = resourceSetProvider.get
+    	
+    	val domaines = '''
+    		package io.mars
+    		
+    		create FileInfo FiFileInfoStd {
+    			storeName : "main"
+    		}
+    		
+    		create FileInfo FiFileInfoTmp {
+    			storeName : "temp"
+    		}
+    		
+    		
+    		/**************************************************************************************************/
+    		/********************************* Formatters *****************************************************/
+    		/**************************************************************************************************/
+    		create Formatter FmtDefault{
+    			className : "io.vertigo.dynamox.domain.formatter.FormatterDefault"
+    		}
+    		
+    		create Formatter FmtId{
+    			className : "io.vertigo.ui.formatter.FormatterId"
+    		}
+    		
+    		
+    		create Formatter FmtDate {
+    		     className :"io.vertigo.dynamox.domain.formatter.FormatterDate"
+    		     args : "dd/MM/yyyy"
+    		}
+    		
+    		create Formatter FmtDateHeure {
+    		     className :"io.vertigo.dynamox.domain.formatter.FormatterDate"
+    		     args : "dd/MM/yyyy 'ï¿½' HH'h'mm"
+    		}
+    		
+    		create Formatter FmtTags {
+    			className : "io.vertigo.dynamox.domain.formatter.FormatterDefault"
+    			/* TODO implement tags formatter */
+    		}
+    		
+    		create Formatter FmtCurrency {
+    			className : "io.vertigo.dynamox.domain.formatter.FormatterDefault"
+    			/* TODO implement currency formatter */
+    		}
+    		
+    		
+    		/**************************************************************************************************/
+    		/********************************* Constraints ****************************************************/
+    		/**************************************************************************************************/
+    		
+    		create Constraint CkEmail {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintRegex"
+    			args : "^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*(\.[a-zA-Z0-9-]{2,3})+$"
+    			msg : "L'email n'est pas valide"
+    		}
+    		
+    		create Constraint CkMaxLength20 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
+    			args :"20"
+    		}
+    		
+    		create Constraint CkMaxLength32 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
+    			args :"32"
+    		}
+    		
+    		create Constraint CkMaxLength50 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
+    			args :"50"
+    		}
+    		
+    		create Constraint CkMaxLength100 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
+    			args :"100"
+    		}
+    		
+    		create Constraint CkMaxLength150 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
+    			args :"150"
+    		}
+    		
+    		create Constraint CkMaxLength250 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
+    			args :"250"
+    		}
+    		
+    		create Constraint CkMaxLength350 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
+    			args :"350"
+    		}
+    		
+    		create Constraint CkMaxLength3000 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
+    			args :"3000"
+    		}
+    		
+    		create Constraint CkMinHealthValue0 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintNumberMinimum"
+    			args :"0"
+    		}
+    		
+    		create Constraint CkMaxHealthValue100 {
+    			className: "io.vertigo.dynamox.domain.constraint.ConstraintNumberMaximum"
+    			args :"100"
+    		}
+    		
+    		
+    		/**************************************************************************************************/
+    		/********************************* Domains ********************************************************/
+    		/**************************************************************************************************/
+    		
+    		create Domain DoLongs {  
+    		    dataType : Long
+    		    multiple : "true"
+    		    formatter : FmtDefault
+    		}
+    		
+    		create Domain DoId {
+    			dataType : Long
+    			formatter : FmtId
+    			storeType : "NUMERIC"
+    		}
+    		
+    		create Domain DoMultipleIds {
+    			dataType : String
+    			formatter : FmtDefault
+    		    storeType : "TEXT"
+    		}
+    		
+    		create Domain DoInstant {
+    			dataType : Instant
+    			formatter : FmtDateHeure
+    			storeType : "TIMESTAMP"
+    		}
+    		
+    		create Domain DoLocaldate {
+    			dataType : LocalDate
+    			formatter : FmtDate
+    			storeType : "DATE"
+    		}
+    		
+    		
+    		create Domain DoCurrency {
+    			dataType : BigDecimal
+    			formatter : FmtCurrency
+    			unit : "$"
+    			storeType: "NUMERIC(12,2)"
+    		}
+    		
+    		
+    		create Domain DoHealth {
+    			dataType: Integer
+    			formatter : FmtDefault
+    			constraint : [CkMinHealthValue0, CkMaxHealthValue100]
+    			storeType : "NUMERIC"
+    		}
+    		
+    		create Domain DoLabel {
+    			dataType : String
+    			formatter : FmtDefault
+    			constraint : [CkMaxLength100]
+    			storeType : "VARCHAR(100)"
+    			indexType : "text_fr:sortable"
+    		}
+    		
+    		create Domain DoDescription {
+    			dataType : String
+    			formatter : FmtDefault
+    			constraint : [CkMaxLength350]
+    			storeType : "VARCHAR(350)"
+    			indexType : "text_fr"
+    		}
+    		
+    		create Domain DoEmail {
+    			dataType : String
+    			formatter : FmtDefault
+    			constraint : [CkEmail, CkMaxLength150]
+    			storeType : "VARCHAR(150)"
+    		}
+    		
+    		create Domain DoUrl {
+    			dataType : String
+    			formatter : FmtDefault
+    			storeType : "TEXT"
+    		}
+    		
+    		create Domain DoCode {
+    			dataType : String
+    			formatter : FmtDefault
+    			constraint : [CkMaxLength100]
+    			storeType : "VARCHAR(100)"
+    			indexType : "code:keyword"
+    		}
+    		
+    		
+    		create Domain DoPassword {
+    			dataType : String
+    			formatter : FmtDefault
+    			constraint : [CkMaxLength32]
+    			storeType : "VARCHAR(32)"
+    		}
+    		
+    		create Domain DoText {
+    			dataType : String
+    			formatter : FmtDefault
+    			storeType : "TEXT"
+    		}
+    		
+    		create Domain DoFilePath {
+    			dataType : String
+    			formatter : FmtDefault
+    			storeType : "VARCHAR(500)"
+    		}
+    		
+    		create Domain DoFileData {
+    			dataType : DataStream
+    			formatter : FmtDefault
+    			storeType : "bytea"
+    		}
+    		
+    		create Domain DoTags {
+    			dataType : String
+    			formatter : FmtTags
+    			storeType : "TEXT"
+    			indexType : "multiple_code:facetable"
+    		}
+    		
+    		create Domain DoYesNo {
+    			dataType : Boolean
+    			formatter : FmtDefault
+    			storeType : "bool"
+    		}
+    		
+    		
+    		create Domain DoSize {
+    			dataType : Long
+    			formatter : FmtDefault
+    			storeType : "NUMERIC"
+    		}
+    		
+    		create Domain DoCount {
+    			dataType : Long
+    			formatter : FmtDefault
+    			storeType : "NUMERIC"
+    		}
+    	'''.parse(resourceSet)
+    	
+    	domaines.assertNoErrors;
+    	
+    	
+        '''
+            package io.mars.hr.domain
+            
+            create DtDefinition DtPerson {
+            	id personId {domain: DoId label:"Id"}
+            	field firstName {domain: DoLabel label: "First Name" required:"false"}
+            	field lastName {domain: DoLabel label: "Last Name" required:"false"}
+            	field email {domain: DoEmail label:"E-mail" required: "false"}
+            	field picturefileId {domain: DoId label:"Picture" required:"false"}
+            	field picturefileIdTmp {domain: DoLabel label:"Picture" required:"false" persistent:"false"}
+            	field tags {domain: DoMultipleIds label: "Tags" required:"false"}
+            	field dateHired {domain: DoLocaldate label: "Date hired" required:"false"}
+            	computed fullName {domain : DoLabel, label:"Full name"
+                    expression:"return getFirstName() + \" \" + getLastName();"
+                }
+            }
+            
+            create DtDefinition DtGroups {
+            	id groupId {domain: DoId label:"Id"}
+            	field name {domain: DoLabel label: "Name" required:"false"}
+            }
+            
+            create DtDefinition DtMission {
+            	id missionId {domain: DoId label:"Id"}
+            	field role {domain: DoCode label:"Role" required:"false"}
+            }
+            
+            create DtDefinition DtMissionDisplay {
+            	field missionId {domain: DoId label:"Id" required:"false"}
+            	field role {domain: DoCode label:"Role" required:"false"}
+            	field baseName {domain: DoLabel label:"Base" required:"false"}
+            	field businessName {domain: DoLabel label:"Business" required:"false"}
+            }
+            
+            
+            /* Associations */
+            
+            create Association APersonMission {
+            	fkFieldName : "personId"
+                
+             	dtDefinitionA : DtMission
+             	type : "*>?"
+            	dtDefinitionB : DtPerson
+            			
+            	labelB : "Person"
+            }
+            
+            create Association APersonGroups {
+            	fkFieldName : "groupId"
+                
+             	dtDefinitionA : DtPerson
+             	type : "*>?"
+            	dtDefinitionB : DtGroups
+            	
+            	labelB : "Group"
+            }
+		'''.parse(resourceSet).assertNoErrors
+    }
+
+
+
+	@Test
+	def void checkParsingDomainWithConstraint() {
+		
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "Domain") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			create Domain DO_HEALTH { 
+				dataType: Integer
+				formatter : FMT_DEFAULT
+				constraint : [CK_MIN_HEALTH_VALUE_0, CK_MAX_HEALTH_VALUE_100]
+				storeType : "NUMERIC"
+			}
+		'''))
+		Assertions.assertNotNull(result)
+		
+		assertNoSyntaxError(result, parserRule)
+	}
+	
+	
 	@Test
 	def void checkParsingDeclaredDomain() {
-		
 		
 		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "DeclaredDomain") as ParserRule
 	
@@ -45,24 +401,116 @@ class VertigoDslParsingTest {
 		Assertions.assertNotNull(result)
 		
 		assertNoSyntaxError(result, parserRule)
-
 	}
 	
 	@Test
 	def void checkParsingDomain() {
 		
 		
-		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "DeclaredDomain") as ParserRule
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "Domain") as ParserRule
 	
 		val result = parser.parse(parserRule, new StringReader('''
-			declare Domain Toto
+			create Domain DoLongs {  
+			    dataType : Long
+			    multiple : "true"
+			    formatter : FmtDefault
+			}
+		'''))
+		Assertions.assertNotNull(result)
+
+		assertNoSyntaxError(result, parserRule)
+	}
+	
+	@Test
+	def void checkParsingDtDefinition() {
+		
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "DtDefinition") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			create DtDefinition DtBase {
+				stereotype: "KeyConcept"
+				id baseId {domain: DoId label: "Id"}
+				field code {domain: DoCode label: "Code" required:"false"}
+				field name {domain: DoLabel label: "Name" required:"false"}
+				field healthLevel {domain: DoHealth label: "Health Level" required: "false"}	
+				field creationDate {domain: DoLocaldate label: "Creation Date" required:"false"}
+				field description {domain: DoDescription label: "Description" required:"false"}
+				field geoLocation {domain: DoLabel label:"Geographic Location" required:"false"}
+				field assetsValue {domain: DoCurrency label:"Current base assets value" required:"false"}
+				field rentingFee {domain: DoCurrency label: "Renting Fee" required:"false"}
+				field tags {domain: DoMultipleIds label: "Tags" required:"false"}
+			}
 		'''))
 		Assertions.assertNotNull(result)
 
 		assertNoSyntaxError(result, parserRule)
 
 	}
+	
+	@Test
+	def void checkParsingDtDefinitionAlter() {
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "DtDefinition") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			alter DtDefinition DtBaseType {
+				sortField : "label"
+			 	displayField : "label"
+			}
+		'''))
+		Assertions.assertNotNull(result)
+
+		assertNoSyntaxError(result, parserRule)
+	}
+	
+	@Test
+	def void checkParsingAssociation() {
 		
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "Association") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			create Association AMissionBase {
+				fkFieldName : "baseId"
+			    
+			 	dtDefinitionA : DtMission
+			 	type : "*>?"
+				dtDefinitionB : DtBase
+				
+				labelB : "Base"
+			}
+		'''))
+		Assertions.assertNotNull(result)
+
+		assertNoSyntaxError(result, parserRule)
+
+	}
+
+	@Test
+	def void checkParsingAssociationOldStyle() {
+		
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "Association") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			create Association tdtertet {
+				dtDefinitionA: tato
+				dtDefinitionB: DtPerson 
+				fkFieldName: "fkFieldName"
+				labelA: "labelA"
+				labelB: "labelB"
+				multiplicityA: "0..*"
+				multiplicityB: "0..1"
+				navigabilityA: "false" 
+				navigabilityB: "false"
+				roleA: "roleA"
+				roleB: "roleB"
+				type: "dsd"
+			}
+		'''))
+		Assertions.assertNotNull(result)
+
+		assertNoSyntaxError(result, parserRule)
+
+	}
+
 	private def void assertNoSyntaxError(IParseResult result, ParserRule parserRule) {
 		val errors = Lists.newArrayList();
         val errMsg = Lists.newArrayList();
@@ -72,6 +520,8 @@ class VertigoDslParsingTest {
             errMsg.add(err.getSyntaxErrorMessage().getMessage());
         }
 		
-		Assertions.assertTrue(errors.isEmpty, '''Parsing of text for rule «parserRule.name» failed with errors: «errMsg» \n\n"''')
+		Assertions.assertTrue(errors.isEmpty, '''Parsing of text for rule Â«parserRule.nameÂ» failed with errors: Â«errMsgÂ» \n\n"''')
+
 	}
+	
 }

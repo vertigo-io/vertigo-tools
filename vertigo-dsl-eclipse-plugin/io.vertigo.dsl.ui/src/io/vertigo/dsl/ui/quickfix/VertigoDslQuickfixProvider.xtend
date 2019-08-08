@@ -4,6 +4,8 @@
 package io.vertigo.dsl.ui.quickfix
 
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider
+import org.eclipse.xtext.ui.editor.quickfix.Fix
+import io.vertigo.dsl.validation.VertigoDslValidator
 
 /**
  * Custom quickfixes.
@@ -21,4 +23,7 @@ class VertigoDslQuickfixProvider extends DefaultQuickfixProvider {
 //			xtextDocument.replace(issue.offset, 1, firstLetter.toUpperCase)
 //		]
 //	}
+
+
+//	@Fix(VertigoDslValidator.)
 }
