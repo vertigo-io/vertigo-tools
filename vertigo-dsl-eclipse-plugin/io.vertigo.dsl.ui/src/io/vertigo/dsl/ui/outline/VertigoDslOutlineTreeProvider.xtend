@@ -4,11 +4,19 @@
 package io.vertigo.dsl.ui.outline
 
 import com.google.inject.Inject
+import io.vertigo.dsl.vertigoDsl.Constraint
+import io.vertigo.dsl.vertigoDsl.DeclaredDomain
+import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition
+import io.vertigo.dsl.vertigoDsl.Domain
+import io.vertigo.dsl.vertigoDsl.DtDefinitionAction
+import io.vertigo.dsl.vertigoDsl.Formatter
 import io.vertigo.dsl.vertigoDsl.Model
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
 import org.eclipse.xtext.ui.IImageHelper
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
 import org.eclipse.xtext.ui.editor.outline.impl.DocumentRootNode
+import io.vertigo.dsl.vertigoDsl.Association
+import io.vertigo.dsl.vertigoDsl.TaskDefinition
 
 /**
  * Customization of the default outline structure.
@@ -20,56 +28,49 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	@Inject
 	IImageHelper imageHelper;
 	
+	def _isLeaf(DtDefinitionAction dtDefinitionAction) {
+		true
+	}
+	
+	def _isLeaf(DeclaredDtDefinition declaredDtDefinition) {
+		true
+	}
+	
+	def _isLeaf(Domain domain) {
+		true
+	}
+	
+	def _isLeaf(DeclaredDomain declaredDomain) {
+		true
+	}
+	
+	def _isLeaf(Formatter formatter) {
+		true
+	}
+	
+	def _isLeaf(Constraint constraint) {
+		true
+	}
+	
+	def _isLeaf(Association association) {
+		true
+	}
+	
+	def _isLeaf(TaskDefinition taskDefinition) {
+		true
+	}
+	
 	def protected _createChildren(DocumentRootNode parentNode, Model model) {
-		println(model.toString)
-		
-		
 		
 		// create feature groups
-		val dtDefinitionOutlineNode = createEStructuralFeatureNode(parentNode, 
-    		model, 
-    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
-    		imageHelper.getImage("cog.png"), 
-    		"DtDefinitions", 
-    		true);
-    	
-    	val domainOutlineNode = createEStructuralFeatureNode(parentNode, 
-    		model, 
-    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
-    		imageHelper.getImage("cog.png"), 
-    		"Domains", 
-    		true);
+		val dtDefinitionOutlineNode = new VirtualOutlineNode(parentNode, null,"DtDefinitions Group", false)
+		val domainOutlineNode = new VirtualOutlineNode(parentNode, null,"Domains Group", false)
+		val constraintOutlineNode 	= new VirtualOutlineNode(parentNode, null,"Constraints Group", false)
+		val formatterOutlineNode = new VirtualOutlineNode(parentNode, null,"Formatter Group", false)
+		val associationOutlineNode = new VirtualOutlineNode(parentNode, null,"Associations Group", false)
+		val taskOutlineNode = new VirtualOutlineNode(parentNode, null,"Tasks Group", false)
 		
-		val constraintOutlineNode = createEStructuralFeatureNode(parentNode, 
-    		model, 
-    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
-    		imageHelper.getImage("cog.png"), 
-    		"Constraints", 
-    		true);
-		
-		
-		val formatterOutlineNode = createEStructuralFeatureNode(parentNode, 
-    		model, 
-    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
-    		imageHelper.getImage("cog.png"), 
-    		"Formatters", 
-    		true);
-		
-		val associationOutlineNode = createEStructuralFeatureNode(parentNode, 
-    		model, 
-    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
-    		imageHelper.getImage("cog.png"), 
-    		"Associations", 
-    		true);
-    		
-    	val taskOutlineNode = createEStructuralFeatureNode(parentNode, 
-    		model, 
-    		VertigoDslPackage.Literals.MODEL__ELEMENTS,
-    		imageHelper.getImage("cog.png"), 
-    		"Tasks", 
-    		true);
-		
-		
+		// add elements to each feature node		
 		model.elements.forEach[element | 
 			if(element.eClass == VertigoDslPackage.Literals.DOMAIN || element.eClass == VertigoDslPackage.Literals.DECLARED_DOMAIN) {
 				_createNode(domainOutlineNode, element); 
@@ -86,5 +87,6 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 			}
 		]
 		
+	
 	}
 }
