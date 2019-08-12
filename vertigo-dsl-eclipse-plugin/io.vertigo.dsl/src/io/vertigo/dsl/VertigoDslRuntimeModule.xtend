@@ -4,7 +4,9 @@
 package io.vertigo.dsl
 
 import io.vertigo.dsl.converting.VertigoSTRINGValueConverter
+import io.vertigo.dsl.errorhandling.VertigoDslSyntaxErrorMessageProvider
 import org.eclipse.xtext.conversion.impl.STRINGValueConverter
+import org.eclipse.xtext.parser.antlr.ISyntaxErrorMessageProvider
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
@@ -13,5 +15,10 @@ class VertigoDslRuntimeModule extends AbstractVertigoDslRuntimeModule {
 	 def Class<? extends STRINGValueConverter> bindSTRINGValueConverter() {
 	 	println("binding string value converter")
     	return VertigoSTRINGValueConverter;
+    }
+    
+    def Class<? extends ISyntaxErrorMessageProvider> bindISyntaxErrorMessageProvider() {
+        println("binding syntax error message provider")
+        return VertigoDslSyntaxErrorMessageProvider
     }
 }
