@@ -63,12 +63,12 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	def protected _createChildren(DocumentRootNode parentNode, Model model) {
 		
 		// create feature groups
-		val dtDefinitionOutlineNode = new VirtualOutlineNode(parentNode, null,"DtDefinitions Group", false)
-		val domainOutlineNode = new VirtualOutlineNode(parentNode, null,"Domains Group", false)
-		val constraintOutlineNode 	= new VirtualOutlineNode(parentNode, null,"Constraints Group", false)
-		val formatterOutlineNode = new VirtualOutlineNode(parentNode, null,"Formatter Group", false)
-		val associationOutlineNode = new VirtualOutlineNode(parentNode, null,"Associations Group", false)
-		val taskOutlineNode = new VirtualOutlineNode(parentNode, null,"Tasks Group", false)
+		val dtDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("dtdefinition.png"),"DtDefinitions Group", false)
+		val domainOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("domain.png"),"Domains Group", false)
+		val constraintOutlineNode 	= new VirtualOutlineNode(parentNode, imageHelper.getImage("link.png"),"Constraints Group", false)
+		val formatterOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("formatter.png"),"Formatter Group", false)
+		val associationOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("assoc.png"),"Associations Group", false)
+		val taskOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("gear.png"),"Tasks Group", false)
 		
 		// add elements to each feature node		
 		model.elements.forEach[element | 
@@ -86,6 +86,7 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 				_createNode(taskOutlineNode, element); 
 			}
 		]
+		
 		
 	
 	}
