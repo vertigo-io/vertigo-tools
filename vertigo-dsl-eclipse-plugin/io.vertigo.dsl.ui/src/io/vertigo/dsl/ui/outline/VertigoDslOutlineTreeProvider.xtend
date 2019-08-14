@@ -4,19 +4,21 @@
 package io.vertigo.dsl.ui.outline
 
 import com.google.inject.Inject
+import io.vertigo.dsl.vertigoDsl.Association
 import io.vertigo.dsl.vertigoDsl.Constraint
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain
 import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition
 import io.vertigo.dsl.vertigoDsl.Domain
 import io.vertigo.dsl.vertigoDsl.DtDefinitionAction
+import io.vertigo.dsl.vertigoDsl.FileInfo
 import io.vertigo.dsl.vertigoDsl.Formatter
 import io.vertigo.dsl.vertigoDsl.Model
+import io.vertigo.dsl.vertigoDsl.TaskDefinition
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
+import org.eclipse.jface.viewers.StyledString
 import org.eclipse.xtext.ui.IImageHelper
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
 import org.eclipse.xtext.ui.editor.outline.impl.DocumentRootNode
-import io.vertigo.dsl.vertigoDsl.Association
-import io.vertigo.dsl.vertigoDsl.TaskDefinition
 
 /**
  * Customization of the default outline structure.
@@ -28,6 +30,7 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	@Inject
 	IImageHelper imageHelper;
 	
+	// Declare elements as terminal in the outline tree
 	def _isLeaf(DtDefinitionAction dtDefinitionAction) {
 		true
 	}
@@ -60,6 +63,11 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		true
 	}
 	
+	def _isLeaf(FileInfo fileInfo) {
+		true
+	}
+	
+	// create categories for outline nodes
 	def protected _createChildren(DocumentRootNode parentNode, Model model) {
 		
 		// create feature groups
@@ -69,6 +77,7 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		val formatterOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("formatter.png"),"Formatter Group", false)
 		val associationOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("assoc.png"),"Associations Group", false)
 		val taskOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("gear.png"),"Tasks Group", false)
+		val fileInfoOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"FileInfo Group", false)
 		
 		// add elements to each feature node		
 		model.elements.forEach[element | 
@@ -84,10 +93,24 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 				_createNode(formatterOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.TASK_DEFINITION) {
 				_createNode(taskOutlineNode, element); 
+			} else if (element.eClass == VertigoDslPackage.Literals.FILE_INFO) {
+				_createNode(fileInfoOutlineNode, element);
 			}
 		]
-		
-		
-	
 	}
+	/*
+	def Object _text(DtDefinitionAction dtDefinitionAction) {
+		if (dtDefinitionAction.dtDefinitionStereotype !== null)
+		{
+			val StyledString res = new StyledString();
+			res.append(dtDefinitionAction.getName());
+			res.append(" (" + dtDefinitionAction.dtDefinitionStereotype. + ")", 
+				StyledString.DECORATIONS_STYLER);
+			return res;
+ 		} else {
+ 			return super._text(dtDefinitionAction)
+ 		}
+	}
+	* 
+	*/
 }

@@ -8,7 +8,7 @@
 			contributorClass="org.eclipse.ui.editors.text.TextEditorActionContributor"
 			default="true"
 			extensions="ksp"
-			icon="icons/sitemaps16.png"
+			icon="icons/vertigo.png"
 			id="io.vertigo.dsl.VertigoDsl"
 			name="VertigoDsl Editor">
 		</editor>

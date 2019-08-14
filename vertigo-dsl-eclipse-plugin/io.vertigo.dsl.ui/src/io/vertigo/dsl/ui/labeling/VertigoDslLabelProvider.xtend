@@ -6,6 +6,7 @@ package io.vertigo.dsl.ui.labeling
 import com.google.inject.Inject
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider
+import io.vertigo.dsl.vertigoDsl.DtDefinitionAction
 
 /**
  * Provides labels for EObjects.
@@ -18,6 +19,7 @@ class VertigoDslLabelProvider extends DefaultEObjectLabelProvider {
 	new(AdapterFactoryLabelProvider delegate) {
 		super(delegate);
 	}
+
 
 	// Labels and icons can be computed like this:
 	
