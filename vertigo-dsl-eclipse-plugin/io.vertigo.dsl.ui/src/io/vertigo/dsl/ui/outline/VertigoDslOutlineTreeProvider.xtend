@@ -15,7 +15,6 @@ import io.vertigo.dsl.vertigoDsl.Formatter
 import io.vertigo.dsl.vertigoDsl.Model
 import io.vertigo.dsl.vertigoDsl.TaskDefinition
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
-import org.eclipse.jface.viewers.StyledString
 import org.eclipse.xtext.ui.IImageHelper
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
 import org.eclipse.xtext.ui.editor.outline.impl.DocumentRootNode

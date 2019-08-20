@@ -3,7 +3,6 @@
  */
 package io.vertigo.dsl.vertigoDsl;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface FacetedQueryDefinition extends EObject
+public interface FacetedQueryDefinition extends Element
 {
 } // FacetedQueryDefinition

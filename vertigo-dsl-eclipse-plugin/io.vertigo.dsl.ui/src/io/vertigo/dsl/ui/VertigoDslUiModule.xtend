@@ -4,8 +4,10 @@
 package io.vertigo.dsl.ui
 
 import io.vertigo.dsl.ui.highlighting.VertigoUISemanticHighlightingCalculator
+import io.vertigo.dsl.ui.hyperlinking.VertigoDslHyperlinkHelper
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
 import org.eclipse.xtext.ide.editor.syntaxcoloring.ISemanticHighlightingCalculator
+import org.eclipse.xtext.ui.editor.hyperlinking.IHyperlinkHelper
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
@@ -15,6 +17,18 @@ class VertigoDslUiModule extends AbstractVertigoDslUiModule {
 	
 	def Class<? extends ISemanticHighlightingCalculator> bindISemanticHighlightingCalculator() {
 		return VertigoUISemanticHighlightingCalculator;
+	}
+	
+	/*
+	override Class<? extends IHyperlinkHelper> bindIHyperlinkDetector() {
+		return VertigoDslHyperlinkDetector;
+	}
+	* 
+	* 
+	*/
+	
+	def Class<? extends IHyperlinkHelper> bindIHyperlinkHelper() {
+		return VertigoDslHyperlinkHelper
 	}
 	
 }

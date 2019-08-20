@@ -29,8 +29,8 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl#getIndexDefinitionKeyConcept <em>Index Definition Key Concept</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl#getIndexDefinitionDtIndex <em>Index Definition Dt Index</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl#getIndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl#getIndexDefinitionLoaderId <em>Index Definition Loader Id</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.IndexDefinitionActionImpl#getIndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}</li>
  * </ul>
  *
  * @generated
@@ -78,16 +78,6 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
   protected IndexDefinitionDtIndex indexDefinitionDtIndex;
 
   /**
-   * The cached value of the '{@link #getIndexDefinitionIndexCopyTo() <em>Index Definition Index Copy To</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getIndexDefinitionIndexCopyTo()
-   * @generated
-   * @ordered
-   */
-  protected IndexDefinitionIndexCopyTo indexDefinitionIndexCopyTo;
-
-  /**
    * The cached value of the '{@link #getIndexDefinitionLoaderId() <em>Index Definition Loader Id</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -96,6 +86,16 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
    * @ordered
    */
   protected IndexDefinitionLoaderId indexDefinitionLoaderId;
+
+  /**
+   * The cached value of the '{@link #getIndexDefinitionIndexCopyTo() <em>Index Definition Index Copy To</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getIndexDefinitionIndexCopyTo()
+   * @generated
+   * @ordered
+   */
+  protected IndexDefinitionIndexCopyTo indexDefinitionIndexCopyTo;
 
   /**
    * <!-- begin-user-doc -->
@@ -249,56 +249,6 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
    * @generated
    */
   @Override
-  public IndexDefinitionIndexCopyTo getIndexDefinitionIndexCopyTo()
-  {
-    return indexDefinitionIndexCopyTo;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo newIndexDefinitionIndexCopyTo, NotificationChain msgs)
-  {
-    IndexDefinitionIndexCopyTo oldIndexDefinitionIndexCopyTo = indexDefinitionIndexCopyTo;
-    indexDefinitionIndexCopyTo = newIndexDefinitionIndexCopyTo;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO, oldIndexDefinitionIndexCopyTo, newIndexDefinitionIndexCopyTo);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo newIndexDefinitionIndexCopyTo)
-  {
-    if (newIndexDefinitionIndexCopyTo != indexDefinitionIndexCopyTo)
-    {
-      NotificationChain msgs = null;
-      if (indexDefinitionIndexCopyTo != null)
-        msgs = ((InternalEObject)indexDefinitionIndexCopyTo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO, null, msgs);
-      if (newIndexDefinitionIndexCopyTo != null)
-        msgs = ((InternalEObject)newIndexDefinitionIndexCopyTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO, null, msgs);
-      msgs = basicSetIndexDefinitionIndexCopyTo(newIndexDefinitionIndexCopyTo, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO, newIndexDefinitionIndexCopyTo, newIndexDefinitionIndexCopyTo));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public IndexDefinitionLoaderId getIndexDefinitionLoaderId()
   {
     return indexDefinitionLoaderId;
@@ -349,6 +299,56 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
    * @generated
    */
   @Override
+  public IndexDefinitionIndexCopyTo getIndexDefinitionIndexCopyTo()
+  {
+    return indexDefinitionIndexCopyTo;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo newIndexDefinitionIndexCopyTo, NotificationChain msgs)
+  {
+    IndexDefinitionIndexCopyTo oldIndexDefinitionIndexCopyTo = indexDefinitionIndexCopyTo;
+    indexDefinitionIndexCopyTo = newIndexDefinitionIndexCopyTo;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO, oldIndexDefinitionIndexCopyTo, newIndexDefinitionIndexCopyTo);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo newIndexDefinitionIndexCopyTo)
+  {
+    if (newIndexDefinitionIndexCopyTo != indexDefinitionIndexCopyTo)
+    {
+      NotificationChain msgs = null;
+      if (indexDefinitionIndexCopyTo != null)
+        msgs = ((InternalEObject)indexDefinitionIndexCopyTo).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO, null, msgs);
+      if (newIndexDefinitionIndexCopyTo != null)
+        msgs = ((InternalEObject)newIndexDefinitionIndexCopyTo).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO, null, msgs);
+      msgs = basicSetIndexDefinitionIndexCopyTo(newIndexDefinitionIndexCopyTo, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO, newIndexDefinitionIndexCopyTo, newIndexDefinitionIndexCopyTo));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -357,10 +357,10 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
         return basicSetIndexDefinitionKeyConcept(null, msgs);
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_DT_INDEX:
         return basicSetIndexDefinitionDtIndex(null, msgs);
-      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
-        return basicSetIndexDefinitionIndexCopyTo(null, msgs);
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_LOADER_ID:
         return basicSetIndexDefinitionLoaderId(null, msgs);
+      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
+        return basicSetIndexDefinitionIndexCopyTo(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -381,10 +381,10 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
         return getIndexDefinitionKeyConcept();
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_DT_INDEX:
         return getIndexDefinitionDtIndex();
-      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
-        return getIndexDefinitionIndexCopyTo();
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_LOADER_ID:
         return getIndexDefinitionLoaderId();
+      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
+        return getIndexDefinitionIndexCopyTo();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -408,11 +408,11 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_DT_INDEX:
         setIndexDefinitionDtIndex((IndexDefinitionDtIndex)newValue);
         return;
-      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
-        setIndexDefinitionIndexCopyTo((IndexDefinitionIndexCopyTo)newValue);
-        return;
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_LOADER_ID:
         setIndexDefinitionLoaderId((IndexDefinitionLoaderId)newValue);
+        return;
+      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
+        setIndexDefinitionIndexCopyTo((IndexDefinitionIndexCopyTo)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -437,11 +437,11 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_DT_INDEX:
         setIndexDefinitionDtIndex((IndexDefinitionDtIndex)null);
         return;
-      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
-        setIndexDefinitionIndexCopyTo((IndexDefinitionIndexCopyTo)null);
-        return;
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_LOADER_ID:
         setIndexDefinitionLoaderId((IndexDefinitionLoaderId)null);
+        return;
+      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
+        setIndexDefinitionIndexCopyTo((IndexDefinitionIndexCopyTo)null);
         return;
     }
     super.eUnset(featureID);
@@ -463,10 +463,10 @@ public class IndexDefinitionActionImpl extends IndexDefinitionImpl implements In
         return indexDefinitionKeyConcept != null;
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_DT_INDEX:
         return indexDefinitionDtIndex != null;
-      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
-        return indexDefinitionIndexCopyTo != null;
       case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_LOADER_ID:
         return indexDefinitionLoaderId != null;
+      case VertigoDslPackage.INDEX_DEFINITION_ACTION__INDEX_DEFINITION_INDEX_COPY_TO:
+        return indexDefinitionIndexCopyTo != null;
     }
     return super.eIsSet(featureID);
   }

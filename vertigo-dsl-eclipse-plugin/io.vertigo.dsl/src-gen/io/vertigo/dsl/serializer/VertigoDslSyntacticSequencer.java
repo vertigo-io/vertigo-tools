@@ -52,11 +52,22 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_DtDefinitionStereotype_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionType_CommaKeyword_1_1_q;
 	protected AbstractElementAlias match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0;
+	protected AbstractElementAlias match_FacetDefinitionDtDefinition_CommaKeyword_3_q;
+	protected AbstractElementAlias match_FacetDefinitionFieldName_CommaKeyword_3_q;
+	protected AbstractElementAlias match_FacetDefinitionLabel_CommaKeyword_3_q;
 	protected AbstractElementAlias match_FacetDefinitionRangeString_CommaKeyword_1_0_3_q;
 	protected AbstractElementAlias match_FacetDefinitionRangeString_CommaKeyword_1_1_3_q;
 	protected AbstractElementAlias match_FacetDefinitionRange_CommaKeyword_3_q;
+	protected AbstractElementAlias match_FacetedQueryDefinitionDomainCriteria_CommaKeyword_3_q;
 	protected AbstractElementAlias match_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p;
+	protected AbstractElementAlias match_FacetedQueryDefinitionFacets_CommaKeyword_6_q;
+	protected AbstractElementAlias match_FacetedQueryDefinitionKeyConcept_CommaKeyword_3_q;
+	protected AbstractElementAlias match_FacetedQueryDefinitionListFilterBuilderClass_CommaKeyword_3_q;
+	protected AbstractElementAlias match_FacetedQueryDefinitionListFilterBuilderQuery_CommaKeyword_3_q;
+	protected AbstractElementAlias match_IndexDefinitionDtIndex_CommaKeyword_3_q;
 	protected AbstractElementAlias match_IndexDefinitionIndexCopyTo_CommaKeyword_3_q;
+	protected AbstractElementAlias match_IndexDefinitionKeyConcept_CommaKeyword_3_q;
+	protected AbstractElementAlias match_IndexDefinitionLoaderId_CommaKeyword_3_q;
 	protected AbstractElementAlias match_PackageString_FullStopKeyword_1_0_p;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_0_3_q;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_1_3_q;
@@ -100,11 +111,22 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_DtDefinitionStereotype_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionStereotypeAccess().getCommaKeyword_3());
 		match_DtDefinitionType_CommaKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionTypeAccess().getCommaKeyword_1_1());
 		match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getAlterKeyword_0_1()), new TokenAlias(false, false, grammarAccess.getDtDefinitionAccess().getCreateKeyword_0_0()));
+		match_FacetDefinitionDtDefinition_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionDtDefinitionAccess().getCommaKeyword_3());
+		match_FacetDefinitionFieldName_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionFieldNameAccess().getCommaKeyword_3());
+		match_FacetDefinitionLabel_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionLabelAccess().getCommaKeyword_3());
 		match_FacetDefinitionRangeString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionRangeStringAccess().getCommaKeyword_1_0_3());
 		match_FacetDefinitionRangeString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionRangeStringAccess().getCommaKeyword_1_1_3());
 		match_FacetDefinitionRange_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionRangeAccess().getCommaKeyword_3());
+		match_FacetedQueryDefinitionDomainCriteria_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetedQueryDefinitionDomainCriteriaAccess().getCommaKeyword_3());
 		match_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p = new TokenAlias(true, false, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getCommaKeyword_4_0());
+		match_FacetedQueryDefinitionFacets_CommaKeyword_6_q = new TokenAlias(false, true, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getCommaKeyword_6());
+		match_FacetedQueryDefinitionKeyConcept_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetedQueryDefinitionKeyConceptAccess().getCommaKeyword_3());
+		match_FacetedQueryDefinitionListFilterBuilderClass_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetedQueryDefinitionListFilterBuilderClassAccess().getCommaKeyword_3());
+		match_FacetedQueryDefinitionListFilterBuilderQuery_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetedQueryDefinitionListFilterBuilderQueryAccess().getCommaKeyword_3());
+		match_IndexDefinitionDtIndex_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getIndexDefinitionDtIndexAccess().getCommaKeyword_3());
 		match_IndexDefinitionIndexCopyTo_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getIndexDefinitionIndexCopyToAccess().getCommaKeyword_3());
+		match_IndexDefinitionKeyConcept_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getIndexDefinitionKeyConceptAccess().getCommaKeyword_3());
+		match_IndexDefinitionLoaderId_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getIndexDefinitionLoaderIdAccess().getCommaKeyword_3());
 		match_PackageString_FullStopKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getPackageStringAccess().getFullStopKeyword_1_0());
 		match_TaskAttributeString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_0_3());
 		match_TaskAttributeString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_1_3());
@@ -189,16 +211,38 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_DtDefinitionType_CommaKeyword_1_1_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0.equals(syntax))
 				emit_DtDefinition_AlterKeyword_0_1_or_CreateKeyword_0_0(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetDefinitionDtDefinition_CommaKeyword_3_q.equals(syntax))
+				emit_FacetDefinitionDtDefinition_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetDefinitionFieldName_CommaKeyword_3_q.equals(syntax))
+				emit_FacetDefinitionFieldName_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetDefinitionLabel_CommaKeyword_3_q.equals(syntax))
+				emit_FacetDefinitionLabel_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_FacetDefinitionRangeString_CommaKeyword_1_0_3_q.equals(syntax))
 				emit_FacetDefinitionRangeString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_FacetDefinitionRangeString_CommaKeyword_1_1_3_q.equals(syntax))
 				emit_FacetDefinitionRangeString_CommaKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_FacetDefinitionRange_CommaKeyword_3_q.equals(syntax))
 				emit_FacetDefinitionRange_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetedQueryDefinitionDomainCriteria_CommaKeyword_3_q.equals(syntax))
+				emit_FacetedQueryDefinitionDomainCriteria_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p.equals(syntax))
 				emit_FacetedQueryDefinitionFacets_CommaKeyword_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetedQueryDefinitionFacets_CommaKeyword_6_q.equals(syntax))
+				emit_FacetedQueryDefinitionFacets_CommaKeyword_6_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetedQueryDefinitionKeyConcept_CommaKeyword_3_q.equals(syntax))
+				emit_FacetedQueryDefinitionKeyConcept_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetedQueryDefinitionListFilterBuilderClass_CommaKeyword_3_q.equals(syntax))
+				emit_FacetedQueryDefinitionListFilterBuilderClass_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_FacetedQueryDefinitionListFilterBuilderQuery_CommaKeyword_3_q.equals(syntax))
+				emit_FacetedQueryDefinitionListFilterBuilderQuery_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_IndexDefinitionDtIndex_CommaKeyword_3_q.equals(syntax))
+				emit_IndexDefinitionDtIndex_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_IndexDefinitionIndexCopyTo_CommaKeyword_3_q.equals(syntax))
 				emit_IndexDefinitionIndexCopyTo_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_IndexDefinitionKeyConcept_CommaKeyword_3_q.equals(syntax))
+				emit_IndexDefinitionKeyConcept_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_IndexDefinitionLoaderId_CommaKeyword_3_q.equals(syntax))
+				emit_IndexDefinitionLoaderId_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_PackageString_FullStopKeyword_1_0_p.equals(syntax))
 				emit_PackageString_FullStopKeyword_1_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskAttributeString_CommaKeyword_1_0_3_q.equals(syntax))
@@ -727,6 +771,39 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     dtDefinition=[DtDefinitionType|ID] (ambiguity) (rule end)
+	 */
+	protected void emit_FacetDefinitionDtDefinition_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     string=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_FacetDefinitionFieldName_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     string=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_FacetDefinitionLabel_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
 	 *     filterString=STRING (ambiguity) 'filter' ':' filterString=STRING
 	 *     filterString=STRING (ambiguity) 'label' ':' labelString=STRING
 	 *     filterString=STRING (ambiguity) '}' (rule end)
@@ -761,6 +838,17 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	/**
 	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     refToDomainType=RefToDomainType (ambiguity) (rule end)
+	 */
+	protected void emit_FacetedQueryDefinitionDomainCriteria_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
 	 *     ','+
 	 *
 	 * This ambiguous syntax occurs at:
@@ -776,9 +864,87 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     facetDefinition+=[FacetDefinition|ID] ']' (ambiguity) (rule end)
+	 *     facets+=[FacetDefinition|ID] ']' (ambiguity) (rule end)
+	 */
+	protected void emit_FacetedQueryDefinitionFacets_CommaKeyword_6_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     dtDefinition=[DtDefinitionType|ID] (ambiguity) (rule end)
+	 */
+	protected void emit_FacetedQueryDefinitionKeyConcept_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     string=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_FacetedQueryDefinitionListFilterBuilderClass_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     string=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_FacetedQueryDefinitionListFilterBuilderQuery_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     dtDefinition=[DtDefinitionType|ID] (ambiguity) (rule end)
+	 */
+	protected void emit_IndexDefinitionDtIndex_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
 	 *     indexDefinitionIndexCopyToString=IndexDefinitionIndexCopyToString (ambiguity) (rule end)
 	 */
 	protected void emit_IndexDefinitionIndexCopyTo_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     dtDefinition=[DtDefinitionType|ID] (ambiguity) (rule end)
+	 */
+	protected void emit_IndexDefinitionKeyConcept_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     loaderIdString=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_IndexDefinitionLoaderId_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

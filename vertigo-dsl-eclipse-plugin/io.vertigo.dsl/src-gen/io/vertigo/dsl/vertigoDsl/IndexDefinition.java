@@ -3,7 +3,6 @@
  */
 package io.vertigo.dsl.vertigoDsl;
 
-import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
@@ -15,6 +14,6 @@ import org.eclipse.emf.ecore.EObject;
  * @model
  * @generated
  */
-public interface IndexDefinition extends EObject
+public interface IndexDefinition extends Element
 {
 } // IndexDefinition

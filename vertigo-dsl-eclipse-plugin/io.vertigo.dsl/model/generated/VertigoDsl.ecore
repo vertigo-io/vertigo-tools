@@ -94,7 +94,8 @@
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionDataField">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="name" eType="#//KEYWORDID"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dataFieldString" eType="#//DtDefinitionDataFieldString"
         containment="true"/>
   </eClassifiers>
@@ -185,14 +186,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="facetDefinitionRangeString"
         eType="#//FacetDefinitionRangeString" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FacetDefinition">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="facetDefinitionDtDefinition"
-        eType="#//FacetDefinitionDtDefinition" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="facetDefinitionFieldName"
-        eType="#//FacetDefinitionFieldName" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="facetDefinitonLabel" eType="#//FacetDefinitionLabel"
-        containment="true"/>
-  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FacetDefinition" eSuperTypes="#//Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="FacetedQueryDefinitionKeyConcept">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinition" eType="#//DtDefinitionType"/>
   </eClassifiers>
@@ -212,7 +206,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="facets" unique="false"
         upperBound="-1" eType="#//FacetDefinition"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="FacetedQueryDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FacetedQueryDefinition" eSuperTypes="#//Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="IndexDefinitionKeyConcept">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinition" eType="#//DtDefinitionType"/>
   </eClassifiers>
@@ -230,7 +224,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="IndexDefinitionLoaderId">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="loaderIdString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="IndexDefinition"/>
+  <eClassifiers xsi:type="ecore:EClass" name="IndexDefinition" eSuperTypes="#//Element"/>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionAction" eSuperTypes="#//DtDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionStereotype"
@@ -247,6 +241,17 @@
         eType="#//DtDefinitionSortField" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDisplayField"
         eType="#//DtDefinitionDisplayField" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FacetDefinitionAction" eSuperTypes="#//FacetDefinition">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facetDefinitionDtDefinition"
+        eType="#//FacetDefinitionDtDefinition" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facetDefinitionFieldName"
+        eType="#//FacetDefinitionFieldName" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facetDefinitonLabel" eType="#//FacetDefinitionLabel"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="facetDefinitionRange" upperBound="-1"
+        eType="#//FacetDefinitionRange" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FacetedQueryDefinitionAction" eSuperTypes="#//FacetedQueryDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -267,9 +272,9 @@
         eType="#//IndexDefinitionKeyConcept" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="indexDefinitionDtIndex"
         eType="#//IndexDefinitionDtIndex" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="indexDefinitionIndexCopyTo"
-        eType="#//IndexDefinitionIndexCopyTo" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="indexDefinitionLoaderId"
         eType="#//IndexDefinitionLoaderId" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="indexDefinitionIndexCopyTo"
+        eType="#//IndexDefinitionIndexCopyTo" containment="true"/>
   </eClassifiers>
 </ecore:EPackage>

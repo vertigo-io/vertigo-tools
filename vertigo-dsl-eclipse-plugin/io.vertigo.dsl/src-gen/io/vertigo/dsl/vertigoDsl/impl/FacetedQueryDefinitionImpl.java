@@ -8,8 +8,6 @@ import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Faceted Query Definition</b></em>'.
@@ -17,7 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class FacetedQueryDefinitionImpl extends MinimalEObjectImpl.Container implements FacetedQueryDefinition
+public class FacetedQueryDefinitionImpl extends ElementImpl implements FacetedQueryDefinition
 {
   /**
    * <!-- begin-user-doc -->

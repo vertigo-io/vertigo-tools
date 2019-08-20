@@ -13,6 +13,7 @@ import java.util.List
 import java.util.Set
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
+import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.resource.EObjectDescription
 import org.eclipse.xtext.resource.IEObjectDescription
@@ -31,7 +32,7 @@ class VertigoDslScopeProvider extends AbstractVertigoDslScopeProvider {
 
 	@Inject
 	ResourceDescriptionsProvider provider;
-
+	
 	override getScope(EObject context, EReference reference) {
 		
 		// we only need to generate domains when the editor tries to resolve scope for a domain		

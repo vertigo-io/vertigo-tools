@@ -5,6 +5,7 @@ package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString;
+import io.vertigo.dsl.vertigoDsl.KEYWORDID;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -33,24 +34,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class DtDefinitionDataFieldImpl extends MinimalEObjectImpl.Container implements DtDefinitionDataField
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected KEYWORDID name;
 
   /**
    * The cached value of the '{@link #getDataFieldString() <em>Data Field String</em>}' containment reference.
@@ -89,7 +80,7 @@ public class DtDefinitionDataFieldImpl extends MinimalEObjectImpl.Container impl
    * @generated
    */
   @Override
-  public String getName()
+  public KEYWORDID getName()
   {
     return name;
   }
@@ -99,13 +90,38 @@ public class DtDefinitionDataFieldImpl extends MinimalEObjectImpl.Container impl
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setName(String newName)
+  public NotificationChain basicSetName(KEYWORDID newName, NotificationChain msgs)
   {
-    String oldName = name;
+    KEYWORDID oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME, oldName, name));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME, oldName, newName);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setName(KEYWORDID newName)
+  {
+    if (newName != name)
+    {
+      NotificationChain msgs = null;
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME, newName, newName));
   }
 
   /**
@@ -168,6 +184,8 @@ public class DtDefinitionDataFieldImpl extends MinimalEObjectImpl.Container impl
   {
     switch (featureID)
     {
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME:
+        return basicSetName(null, msgs);
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD__DATA_FIELD_STRING:
         return basicSetDataFieldString(null, msgs);
     }
@@ -203,7 +221,7 @@ public class DtDefinitionDataFieldImpl extends MinimalEObjectImpl.Container impl
     switch (featureID)
     {
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME:
-        setName((String)newValue);
+        setName((KEYWORDID)newValue);
         return;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD__DATA_FIELD_STRING:
         setDataFieldString((DtDefinitionDataFieldString)newValue);
@@ -223,7 +241,7 @@ public class DtDefinitionDataFieldImpl extends MinimalEObjectImpl.Container impl
     switch (featureID)
     {
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME:
-        setName(NAME_EDEFAULT);
+        setName((KEYWORDID)null);
         return;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD__DATA_FIELD_STRING:
         setDataFieldString((DtDefinitionDataFieldString)null);
@@ -243,28 +261,11 @@ public class DtDefinitionDataFieldImpl extends MinimalEObjectImpl.Container impl
     switch (featureID)
     {
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        return name != null;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD__DATA_FIELD_STRING:
         return dataFieldString != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //DtDefinitionDataFieldImpl

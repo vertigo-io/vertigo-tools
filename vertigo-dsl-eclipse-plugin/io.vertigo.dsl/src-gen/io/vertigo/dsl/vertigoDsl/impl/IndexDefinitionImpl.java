@@ -8,8 +8,6 @@ import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
  * An implementation of the model object '<em><b>Index Definition</b></em>'.
@@ -17,7 +15,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class IndexDefinitionImpl extends MinimalEObjectImpl.Container implements IndexDefinition
+public class IndexDefinitionImpl extends ElementImpl implements IndexDefinition
 {
   /**
    * <!-- begin-user-doc -->

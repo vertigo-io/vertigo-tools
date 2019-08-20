@@ -15,7 +15,7 @@ PackageString:
 ;
 
 KEYWORDID:
-	keywordID = (ID | 'domain' | 'id');
+	keywordID = (ID | 'domain' | 'id' | 'label');
 
 
 terminal fragment ESCAPED_CHAR:
@@ -27,7 +27,7 @@ terminal STRING:
     "'" ( ESCAPED_CHAR | !('\\'|"'") )* "'";
 
 Element:
-	Constraint | Formatter | Domain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | Association | TaskDefinition;
+	Constraint | Formatter | Domain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
 
 DeclaredDomain:
 	'declare' 'Domain' name = ID;
@@ -104,7 +104,7 @@ DtDefinitionIdField:
 	'id' name=ID idString=DtDefinitionIdString ','? ; 
 
 DtDefinitionDataField:
-	'field' name=ID dataFieldString=DtDefinitionDataFieldString ','? ;
+	'field' name=KEYWORDID dataFieldString=DtDefinitionDataFieldString ','? ;
 
 DtDefinitionComputedField:
 	'computed' name=ID computedFieldString=DtDefinitionComputedFieldString ','? ;
@@ -191,15 +191,16 @@ TaskDefinition:
 
 
 FacetDefinitionDtDefinition:
-	'dtDefinition' ':' dtDefinition=[DtDefinitionType];
+	'dtDefinition' ':' dtDefinition=[DtDefinitionType] ','?
+;
 
 FacetDefinitionFieldName:
-	'fieldName' ':' string = STRING
+	'fieldName' ':' string = STRING ','?
 ;
 
 
 FacetDefinitionLabel:
-	'label' ':' string = STRING
+	'label' ':' string = STRING ','?
 ;
 
 FacetDefinitionRangeString:
@@ -211,27 +212,33 @@ FacetDefinitionRange:
 
 
 FacetDefinition:
-	facetDefinitionDtDefinition = FacetDefinitionDtDefinition
-	facetDefinitionFieldName = FacetDefinitionFieldName
-	facetDefinitonLabel = FacetDefinitionLabel
-;
+	'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{'
+		facetDefinitionDtDefinition = FacetDefinitionDtDefinition
+		facetDefinitionFieldName = FacetDefinitionFieldName
+		facetDefinitonLabel = FacetDefinitionLabel
+		facetDefinitionRange += FacetDefinitionRange*
+	'}';
 
 
 
 FacetedQueryDefinitionKeyConcept:
-	'keyConcept' ':' dtDefinition=[DtDefinitionType];
+	'keyConcept' ':' dtDefinition=[DtDefinitionType] ','?
+;
 
 FacetedQueryDefinitionDomainCriteria:
-	'domainCriteria' ':' refToDomainType=RefToDomainType;
+	'domainCriteria' ':' refToDomainType=RefToDomainType ','?
+;
 
 FacetedQueryDefinitionListFilterBuilderQuery:
-	string = STRING;
+	'listFilterBuilderClass' ':' string = STRING ','?
+;
 
 FacetedQueryDefinitionListFilterBuilderClass:
-	string = STRING;
+	'listFilterBuilderQuery' ':' string = STRING ','?
+;
 
 FacetedQueryDefinitionFacets:
-	'facets' ':' '[' facetDefinition+=[FacetDefinition] (','+ facets+=[FacetDefinition])* ']'
+	'facets' ':' '[' facetDefinition+=[FacetDefinition] (','+ facets+=[FacetDefinition])* ']' ','?
 ;
 
 
@@ -245,10 +252,12 @@ FacetedQueryDefinition:
 	'}';
 
 IndexDefinitionKeyConcept:
-	'keyConcept' ':' dtDefinition=[DtDefinitionType];
+	'keyConcept' ':' dtDefinition=[DtDefinitionType] ','?
+;
 
 IndexDefinitionDtIndex:
-	'dtIndex' ':' dtDefinition=[DtDefinitionType];
+	'dtIndex' ':' dtDefinition=[DtDefinitionType] ','?
+;
 
 // TODO : voir si on ne peut pas ici restreindre les �l�ments du STRING aux filters, soit en autocompl�tion soit en validation
 IndexDefinitionIndexCopyToString:
@@ -259,13 +268,13 @@ IndexDefinitionIndexCopyTo:
 ;
 
 IndexDefinitionLoaderId:
-	'loaderId' ':' loaderIdString=STRING
+	'loaderId' ':' loaderIdString=STRING ','?
 ;
 
 IndexDefinition:
 	'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{'
 		indexDefinitionKeyConcept=IndexDefinitionKeyConcept
 		indexDefinitionDtIndex=IndexDefinitionDtIndex
-		indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo
 		indexDefinitionLoaderId=IndexDefinitionLoaderId
+		indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo?
 	'}';

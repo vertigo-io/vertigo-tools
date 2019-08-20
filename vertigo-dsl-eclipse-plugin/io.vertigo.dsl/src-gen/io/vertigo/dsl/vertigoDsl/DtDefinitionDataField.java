@@ -25,26 +25,26 @@ import org.eclipse.emf.ecore.EObject;
 public interface DtDefinitionDataField extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Name</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
+   * @return the value of the '<em>Name</em>' containment reference.
+   * @see #setName(KEYWORDID)
    * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinitionDataField_Name()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  String getName();
+  KEYWORDID getName();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataField#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataField#getName <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
+   * @param value the new value of the '<em>Name</em>' containment reference.
    * @see #getName()
    * @generated
    */
-  void setName(String value);
+  void setName(KEYWORDID value);
 
   /**
    * Returns the value of the '<em><b>Data Field String</b></em>' containment reference.

@@ -16,8 +16,8 @@ package io.vertigo.dsl.vertigoDsl;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionKeyConcept <em>Index Definition Key Concept</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionDtIndex <em>Index Definition Dt Index</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionLoaderId <em>Index Definition Loader Id</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}</li>
  * </ul>
  *
  * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getIndexDefinitionAction()
@@ -93,28 +93,6 @@ public interface IndexDefinitionAction extends IndexDefinition
   void setIndexDefinitionDtIndex(IndexDefinitionDtIndex value);
 
   /**
-   * Returns the value of the '<em><b>Index Definition Index Copy To</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Index Definition Index Copy To</em>' containment reference.
-   * @see #setIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getIndexDefinitionAction_IndexDefinitionIndexCopyTo()
-   * @model containment="true"
-   * @generated
-   */
-  IndexDefinitionIndexCopyTo getIndexDefinitionIndexCopyTo();
-
-  /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Index Definition Index Copy To</em>' containment reference.
-   * @see #getIndexDefinitionIndexCopyTo()
-   * @generated
-   */
-  void setIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo value);
-
-  /**
    * Returns the value of the '<em><b>Index Definition Loader Id</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -135,5 +113,27 @@ public interface IndexDefinitionAction extends IndexDefinition
    * @generated
    */
   void setIndexDefinitionLoaderId(IndexDefinitionLoaderId value);
+
+  /**
+   * Returns the value of the '<em><b>Index Definition Index Copy To</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Index Definition Index Copy To</em>' containment reference.
+   * @see #setIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getIndexDefinitionAction_IndexDefinitionIndexCopyTo()
+   * @model containment="true"
+   * @generated
+   */
+  IndexDefinitionIndexCopyTo getIndexDefinitionIndexCopyTo();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.IndexDefinitionAction#getIndexDefinitionIndexCopyTo <em>Index Definition Index Copy To</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Index Definition Index Copy To</em>' containment reference.
+   * @see #getIndexDefinitionIndexCopyTo()
+   * @generated
+   */
+  void setIndexDefinitionIndexCopyTo(IndexDefinitionIndexCopyTo value);
 
 } // IndexDefinitionAction

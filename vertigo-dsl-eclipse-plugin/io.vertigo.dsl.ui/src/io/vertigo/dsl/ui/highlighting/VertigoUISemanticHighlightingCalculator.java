@@ -110,35 +110,35 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 	private VertigoDslGrammarAccess grammarAccess;	
 	
 	@Override
-	public void provideHighlightingFor(XtextResource resource, IHighlightedPositionAcceptor acceptor,
-			CancelIndicator cancelIndicator) {
+	public void provideHighlightingFor(XtextResource resource, IHighlightedPositionAcceptor acceptor, CancelIndicator cancelIndicator) {
 
 		if(resource == null || resource.getParseResult() == null) {
-	         return;
-	      }
-	      
-	      INode root = resource.getParseResult().getRootNode();
-	      for(INode node : root.getAsTreeIterable()) {
-	         EObject grammarElement = node.getGrammarElement(); 
-	    	 if (grammarElement != null) {
-	    		 if(grammarElement instanceof Keyword){
-	    			 if (grammarAccess.getKEYWORDIDAccess().getKeywordIDDomainKeyword_0_1().equals(grammarElement)) {
-		    			 acceptor.addPosition(node.getOffset(), node.getLength(), DefaultHighlightingConfiguration.DEFAULT_ID);
-		    		 }
-	    		 }
-	    		 if(grammarElement instanceof RuleCall) {
-	    			 AbstractRule ruleCall = ((RuleCall) grammarElement).getRule();
-	    			 if (ruleCall.getName().equals("TaskRequestString")) {
-	    				 String text = node.getText();
-	    				 Map<Integer, Integer> keywordPositionMap = getKeywordPositionMap(text, SQL_KEYWORDS); 
-	    				 for (Entry<Integer, Integer> mapEntry : keywordPositionMap.entrySet()) {
-	    					 acceptor.addPosition(node.getOffset() + mapEntry.getKey() - 2, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
-	    				 }
+			return;
+		}
 
-	    			 }
-	    		 }
-	    	 }
-	      }
+		INode root = resource.getParseResult().getRootNode();
+		for(INode node : root.getAsTreeIterable()) {
+			EObject grammarElement = node.getGrammarElement(); 
+			
+			if (grammarElement != null) {
+				if(grammarElement instanceof Keyword){
+					if (grammarAccess.getKEYWORDIDAccess().getKeywordIDDomainKeyword_0_1().equals(grammarElement)) {
+						acceptor.addPosition(node.getOffset(), node.getLength(), DefaultHighlightingConfiguration.DEFAULT_ID);
+					}
+				}
+				
+				if(grammarElement instanceof RuleCall) {
+					AbstractRule ruleCall = ((RuleCall) grammarElement).getRule();
+					if (ruleCall.getName().equals("TaskRequestString")) {
+						String text = node.getText();
+						Map<Integer, Integer> sqlKeywordPositionMap = getKeywordPositionMap(text, SQL_KEYWORDS); 
+						for (Entry<Integer, Integer> mapEntry : sqlKeywordPositionMap.entrySet()) {
+							acceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
+						}
+					}
+				}
+			}
+		}
 	}
 
 	private static Map<Integer, Integer> getKeywordPositionMap(String stringToparse, List<String> keywordsToFind) {

@@ -335,6 +335,7 @@ public class VertigoDslSwitch<T> extends Switch<T>
       {
         FacetDefinition facetDefinition = (FacetDefinition)theEObject;
         T result = caseFacetDefinition(facetDefinition);
+        if (result == null) result = caseElement(facetDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -377,6 +378,7 @@ public class VertigoDslSwitch<T> extends Switch<T>
       {
         FacetedQueryDefinition facetedQueryDefinition = (FacetedQueryDefinition)theEObject;
         T result = caseFacetedQueryDefinition(facetedQueryDefinition);
+        if (result == null) result = caseElement(facetedQueryDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -419,6 +421,7 @@ public class VertigoDslSwitch<T> extends Switch<T>
       {
         IndexDefinition indexDefinition = (IndexDefinition)theEObject;
         T result = caseIndexDefinition(indexDefinition);
+        if (result == null) result = caseElement(indexDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -432,11 +435,21 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.FACET_DEFINITION_ACTION:
+      {
+        FacetDefinitionAction facetDefinitionAction = (FacetDefinitionAction)theEObject;
+        T result = caseFacetDefinitionAction(facetDefinitionAction);
+        if (result == null) result = caseFacetDefinition(facetDefinitionAction);
+        if (result == null) result = caseElement(facetDefinitionAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION:
       {
         FacetedQueryDefinitionAction facetedQueryDefinitionAction = (FacetedQueryDefinitionAction)theEObject;
         T result = caseFacetedQueryDefinitionAction(facetedQueryDefinitionAction);
         if (result == null) result = caseFacetedQueryDefinition(facetedQueryDefinitionAction);
+        if (result == null) result = caseElement(facetedQueryDefinitionAction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -445,6 +458,7 @@ public class VertigoDslSwitch<T> extends Switch<T>
         IndexDefinitionAction indexDefinitionAction = (IndexDefinitionAction)theEObject;
         T result = caseIndexDefinitionAction(indexDefinitionAction);
         if (result == null) result = caseIndexDefinition(indexDefinitionAction);
+        if (result == null) result = caseElement(indexDefinitionAction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1232,6 +1246,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDtDefinitionAction(DtDefinitionAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinitionAction(FacetDefinitionAction object)
   {
     return null;
   }
