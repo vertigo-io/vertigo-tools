@@ -152,6 +152,14 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.ALTER_DOMAIN:
+      {
+        AlterDomain alterDomain = (AlterDomain)theEObject;
+        T result = caseAlterDomain(alterDomain);
+        if (result == null) result = caseElement(alterDomain);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.DOMAIN_TYPE:
       {
         DomainType domainType = (DomainType)theEObject;
@@ -249,6 +257,14 @@ public class VertigoDslSwitch<T> extends Switch<T>
         T result = caseDtDefinition(dtDefinition);
         if (result == null) result = caseElement(dtDefinition);
         if (result == null) result = caseDtDefinitionType(dtDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.ALTER_DT_DEFINITION:
+      {
+        AlterDtDefinition alterDtDefinition = (AlterDtDefinition)theEObject;
+        T result = caseAlterDtDefinition(alterDtDefinition);
+        if (result == null) result = caseElement(alterDtDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -432,6 +448,15 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = caseDtDefinition(dtDefinitionAction);
         if (result == null) result = caseElement(dtDefinitionAction);
         if (result == null) result = caseDtDefinitionType(dtDefinitionAction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.DT_DEFINITION_ALTER_ACTION:
+      {
+        DtDefinitionAlterAction dtDefinitionAlterAction = (DtDefinitionAlterAction)theEObject;
+        T result = caseDtDefinitionAlterAction(dtDefinitionAlterAction);
+        if (result == null) result = caseAlterDtDefinition(dtDefinitionAlterAction);
+        if (result == null) result = caseElement(dtDefinitionAlterAction);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -622,6 +647,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDomain(Domain object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Alter Domain</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Alter Domain</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAlterDomain(AlterDomain object)
   {
     return null;
   }
@@ -846,6 +887,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDtDefinition(DtDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Alter Dt Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Alter Dt Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAlterDtDefinition(AlterDtDefinition object)
   {
     return null;
   }
@@ -1246,6 +1303,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDtDefinitionAction(DtDefinitionAction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Alter Action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Alter Action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionAlterAction(DtDefinitionAlterAction object)
   {
     return null;
   }

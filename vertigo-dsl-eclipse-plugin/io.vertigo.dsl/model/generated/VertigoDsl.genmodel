@@ -73,6 +73,17 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//Domain/multiple"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//Domain/unit"/>
     </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//AlterDomain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//AlterDomain/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//AlterDomain/dataType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//AlterDomain/formatter"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//AlterDomain/storeType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//AlterDomain/indexType"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//AlterDomain/constraint"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//AlterDomain/constraints"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//AlterDomain/multiple"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//AlterDomain/unit"/>
+    </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//DomainType"/>
     <genClasses ecoreClass="VertigoDsl.ecore#//RefToDomainType">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//RefToDomainType/ref"/>
@@ -93,7 +104,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionComputedFieldString/expressionString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionIdField">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionIdField/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionIdField/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionIdField/idString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionDataField">
@@ -101,7 +112,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionDataField/dataFieldString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionComputedField">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionComputedField/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionComputedField/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionComputedField/computedFieldString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionStereotype">
@@ -118,6 +129,7 @@
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionType"/>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinition"/>
+    <genClasses ecoreClass="VertigoDsl.ecore#//AlterDtDefinition"/>
     <genClasses ecoreClass="VertigoDsl.ecore#//Association">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//Association/name"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//Association/fkFieldName"/>
@@ -169,7 +181,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionRangeString/labelString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinitionRange">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionRange/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetDefinitionRange/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//FacetDefinitionRange/facetDefinitionRangeString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinition"/>
@@ -200,7 +212,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//IndexDefinitionIndexCopyToString/string"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinitionIndexCopyTo">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//IndexDefinitionIndexCopyTo/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionIndexCopyTo/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//IndexDefinitionIndexCopyTo/indexDefinitionIndexCopyToString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//IndexDefinitionLoaderId">
@@ -216,6 +228,16 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionDataSpace"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionSortField"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionDisplayField"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionAlterAction">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionAlterAction/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAlterAction/dtDefinitionStereotype"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAlterAction/dtDefinitionIdField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAlterAction/dtDefinitionDataFields"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAlterAction/dtDefinitionComputedFields"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAlterAction/dtDefinitionDataSpace"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAlterAction/dtDefinitionSortField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAlterAction/dtDefinitionDisplayField"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinitionAction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionAction/name"/>

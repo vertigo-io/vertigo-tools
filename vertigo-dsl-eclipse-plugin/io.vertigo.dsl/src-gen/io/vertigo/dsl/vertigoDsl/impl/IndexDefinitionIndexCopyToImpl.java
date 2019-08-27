@@ -5,6 +5,7 @@ package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo;
 import io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyToString;
+import io.vertigo.dsl.vertigoDsl.KEYWORDID;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -33,24 +34,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class IndexDefinitionIndexCopyToImpl extends MinimalEObjectImpl.Container implements IndexDefinitionIndexCopyTo
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getName() <em>Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getName()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected KEYWORDID name;
 
   /**
    * The cached value of the '{@link #getIndexDefinitionIndexCopyToString() <em>Index Definition Index Copy To String</em>}' containment reference.
@@ -89,7 +80,7 @@ public class IndexDefinitionIndexCopyToImpl extends MinimalEObjectImpl.Container
    * @generated
    */
   @Override
-  public String getName()
+  public KEYWORDID getName()
   {
     return name;
   }
@@ -99,13 +90,38 @@ public class IndexDefinitionIndexCopyToImpl extends MinimalEObjectImpl.Container
    * <!-- end-user-doc -->
    * @generated
    */
-  @Override
-  public void setName(String newName)
+  public NotificationChain basicSetName(KEYWORDID newName, NotificationChain msgs)
   {
-    String oldName = name;
+    KEYWORDID oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME, oldName, name));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME, oldName, newName);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setName(KEYWORDID newName)
+  {
+    if (newName != name)
+    {
+      NotificationChain msgs = null;
+      if (name != null)
+        msgs = ((InternalEObject)name).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME, null, msgs);
+      if (newName != null)
+        msgs = ((InternalEObject)newName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME, null, msgs);
+      msgs = basicSetName(newName, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME, newName, newName));
   }
 
   /**
@@ -168,6 +184,8 @@ public class IndexDefinitionIndexCopyToImpl extends MinimalEObjectImpl.Container
   {
     switch (featureID)
     {
+      case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME:
+        return basicSetName(null, msgs);
       case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__INDEX_DEFINITION_INDEX_COPY_TO_STRING:
         return basicSetIndexDefinitionIndexCopyToString(null, msgs);
     }
@@ -203,7 +221,7 @@ public class IndexDefinitionIndexCopyToImpl extends MinimalEObjectImpl.Container
     switch (featureID)
     {
       case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME:
-        setName((String)newValue);
+        setName((KEYWORDID)newValue);
         return;
       case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__INDEX_DEFINITION_INDEX_COPY_TO_STRING:
         setIndexDefinitionIndexCopyToString((IndexDefinitionIndexCopyToString)newValue);
@@ -223,7 +241,7 @@ public class IndexDefinitionIndexCopyToImpl extends MinimalEObjectImpl.Container
     switch (featureID)
     {
       case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME:
-        setName(NAME_EDEFAULT);
+        setName((KEYWORDID)null);
         return;
       case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__INDEX_DEFINITION_INDEX_COPY_TO_STRING:
         setIndexDefinitionIndexCopyToString((IndexDefinitionIndexCopyToString)null);
@@ -243,28 +261,11 @@ public class IndexDefinitionIndexCopyToImpl extends MinimalEObjectImpl.Container
     switch (featureID)
     {
       case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+        return name != null;
       case VertigoDslPackage.INDEX_DEFINITION_INDEX_COPY_TO__INDEX_DEFINITION_INDEX_COPY_TO_STRING:
         return indexDefinitionIndexCopyToString != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //IndexDefinitionIndexCopyToImpl

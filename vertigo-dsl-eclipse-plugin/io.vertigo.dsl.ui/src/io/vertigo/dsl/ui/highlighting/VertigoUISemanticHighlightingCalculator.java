@@ -9,6 +9,7 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import org.eclipse.core.runtime.Assert;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.AbstractRule;
 import org.eclipse.xtext.Keyword;
@@ -130,28 +131,71 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 				if(grammarElement instanceof RuleCall) {
 					AbstractRule ruleCall = ((RuleCall) grammarElement).getRule();
 					if (ruleCall.getName().equals("TaskRequestString")) {
-						String text = node.getText();
-						Map<Integer, Integer> sqlKeywordPositionMap = getKeywordPositionMap(text, SQL_KEYWORDS); 
-						for (Entry<Integer, Integer> mapEntry : sqlKeywordPositionMap.entrySet()) {
-							acceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
-						}
+						highlightSqlInNode(acceptor, node);
+						highlightVertigoParameterInNode(acceptor, node);
 					}
 				}
 			}
 		}
 	}
 
-	private static Map<Integer, Integer> getKeywordPositionMap(String stringToparse, List<String> keywordsToFind) {
+	private void highlightSqlInNode(IHighlightedPositionAcceptor positionAcceptor, INode node) {
+		Assert.isNotNull(node);
+		Assert.isNotNull(positionAcceptor);
+		
+		String text = node.getText();
+		Map<Integer, Integer> sqlKeywordPositionMap = getKeywordPositionMap(text, SQL_KEYWORDS); 
+		for (Entry<Integer, Integer> mapEntry : sqlKeywordPositionMap.entrySet()) {
+			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
+		}
+	}
+	
+	private void highlightVertigoParameterInNode(IHighlightedPositionAcceptor positionAcceptor, INode node) {
+		Assert.isNotNull(node);
+		Assert.isNotNull(positionAcceptor);
+		
+		String text = node.getText();
+		Map<Integer, Integer> parameterPositionMap = getParameterPositionMap(text); 
+		for (Entry<Integer, Integer> mapEntry : parameterPositionMap.entrySet()) {
+			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.TASK_ID);
+		}
+		
+	}
+	
+//	private void highlightVertigoTagsInQuer(IHighlightedPositionAcceptor positionAcceptor, INode node) {
+//		String text = node.getText();
+//		Map<Integer, Integer> sqlKeywordPositionMap = getKeywordPositionMap(text, SQL_KEYWORDS); 
+//		for (Entry<Integer, Integer> mapEntry : sqlKeywordPositionMap.entrySet()) {
+//			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
+//		}
+//	}
+	
+	
+	
+
+	private static Map<Integer, Integer> getKeywordPositionMap(String stringToParse, List<String> keywordsToFind) {
 		Map<Integer,Integer> keywordOffsetsAndLength = new HashMap<Integer, Integer>();
 		for (String keyword : keywordsToFind) {
 			String wholeWordPattern = "\\b" + keyword + "\\b";
 			Pattern pattern = Pattern.compile(wholeWordPattern,Pattern.CASE_INSENSITIVE);
-			Matcher matcher = pattern.matcher(stringToparse);
+			Matcher matcher = pattern.matcher(stringToParse);
 			while (matcher.find()) {
 				keywordOffsetsAndLength.put(matcher.start(), keyword.length());
 			}
 			
 		}
+		return keywordOffsetsAndLength;
+	}
+	
+	private static Map<Integer, Integer> getParameterPositionMap(String stringToParse) {
+		Map<Integer,Integer> keywordOffsetsAndLength = new HashMap<Integer, Integer>();
+		String parameterPattern = "#*#";
+		Pattern pattern = Pattern.compile(parameterPattern,Pattern.CASE_INSENSITIVE);
+		Matcher matcher = pattern.matcher(stringToParse);
+		while (matcher.find()) {
+			keywordOffsetsAndLength.put(matcher.start(), matcher.end() - matcher.start());
+		}
+			
 		return keywordOffsetsAndLength;
 	}
 }

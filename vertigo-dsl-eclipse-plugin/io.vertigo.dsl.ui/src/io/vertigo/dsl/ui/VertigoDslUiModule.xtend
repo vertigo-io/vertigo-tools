@@ -19,14 +19,6 @@ class VertigoDslUiModule extends AbstractVertigoDslUiModule {
 		return VertigoUISemanticHighlightingCalculator;
 	}
 	
-	/*
-	override Class<? extends IHyperlinkHelper> bindIHyperlinkDetector() {
-		return VertigoDslHyperlinkDetector;
-	}
-	* 
-	* 
-	*/
-	
 	def Class<? extends IHyperlinkHelper> bindIHyperlinkHelper() {
 		return VertigoDslHyperlinkHelper
 	}

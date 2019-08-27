@@ -76,6 +76,7 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.FILE_INFO: return createFileInfo();
       case VertigoDslPackage.FORMATTER: return createFormatter();
       case VertigoDslPackage.DOMAIN: return createDomain();
+      case VertigoDslPackage.ALTER_DOMAIN: return createAlterDomain();
       case VertigoDslPackage.DOMAIN_TYPE: return createDomainType();
       case VertigoDslPackage.REF_TO_DOMAIN_TYPE: return createRefToDomainType();
       case VertigoDslPackage.DT_DEFINITION_ID_STRING: return createDtDefinitionIdString();
@@ -90,6 +91,7 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.DT_DEFINITION_SORT_FIELD: return createDtDefinitionSortField();
       case VertigoDslPackage.DT_DEFINITION_TYPE: return createDtDefinitionType();
       case VertigoDslPackage.DT_DEFINITION: return createDtDefinition();
+      case VertigoDslPackage.ALTER_DT_DEFINITION: return createAlterDtDefinition();
       case VertigoDslPackage.ASSOCIATION: return createAssociation();
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING: return createTaskAttributeString();
       case VertigoDslPackage.TASK_ATTRIBUTE: return createTaskAttribute();
@@ -115,6 +117,7 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.INDEX_DEFINITION_LOADER_ID: return createIndexDefinitionLoaderId();
       case VertigoDslPackage.INDEX_DEFINITION: return createIndexDefinition();
       case VertigoDslPackage.DT_DEFINITION_ACTION: return createDtDefinitionAction();
+      case VertigoDslPackage.DT_DEFINITION_ALTER_ACTION: return createDtDefinitionAlterAction();
       case VertigoDslPackage.FACET_DEFINITION_ACTION: return createFacetDefinitionAction();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION: return createFacetedQueryDefinitionAction();
       case VertigoDslPackage.INDEX_DEFINITION_ACTION: return createIndexDefinitionAction();
@@ -295,6 +298,18 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   @Override
+  public AlterDomain createAlterDomain()
+  {
+    AlterDomainImpl alterDomain = new AlterDomainImpl();
+    return alterDomain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public DomainType createDomainType()
   {
     DomainTypeImpl domainType = new DomainTypeImpl();
@@ -455,6 +470,18 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     DtDefinitionImpl dtDefinition = new DtDefinitionImpl();
     return dtDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AlterDtDefinition createAlterDtDefinition()
+  {
+    AlterDtDefinitionImpl alterDtDefinition = new AlterDtDefinitionImpl();
+    return alterDtDefinition;
   }
 
   /**
@@ -755,6 +782,18 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     DtDefinitionActionImpl dtDefinitionAction = new DtDefinitionActionImpl();
     return dtDefinitionAction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DtDefinitionAlterAction createDtDefinitionAlterAction()
+  {
+    DtDefinitionAlterActionImpl dtDefinitionAlterAction = new DtDefinitionAlterActionImpl();
+    return dtDefinitionAlterAction;
   }
 
   /**

@@ -27,7 +27,7 @@ terminal STRING:
     "'" ( ESCAPED_CHAR | !('\\'|"'") )* "'";
 
 Element:
-	Constraint | Formatter | Domain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
+	Constraint | Formatter | Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition | Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
 
 DeclaredDomain:
 	'declare' 'Domain' name = ID;
@@ -73,7 +73,7 @@ enum BooleanString:
 	FALSE='\"false\"';
 
 Domain:
-	('create' | 'alter') 'Domain' name=ID '{'
+	'create' 'Domain' name=ID '{'
 		'dataType' ':'  dataType=DataType
 		(('formatter' ':' formatter=[Formatter]) &
 		('storeType' ':' storeType=STRING)? &
@@ -82,6 +82,19 @@ Domain:
 		('multiple' ':' multiple=BooleanString)? &
 		('unit' ':' unit=STRING)?)
 	'}';
+	
+AlterDomain:
+	'alter' 'Domain' name=ID '{'
+		'dataType' ':'  dataType=DataType
+		(('formatter' ':' formatter=[Formatter]) &
+		('storeType' ':' storeType=STRING)? &
+		('indexType' ':' indexType=STRING)? &
+		('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
+		('multiple' ':' multiple=BooleanString)? &
+		('unit' ':' unit=STRING)?)
+	'}';
+	
+
 
 DomainType:
 	Domain | DeclaredDomain
@@ -101,13 +114,13 @@ DtDefinitionComputedFieldString:
 	'{' ('domain' ':' refToDomainType=RefToDomainType  ','? & 'label' ':' label=STRING ','? & 'expression' ':' expressionString=STRING ','? ) '}';
 
 DtDefinitionIdField:
-	'id' name=ID idString=DtDefinitionIdString ','? ; 
+	'id' name=KEYWORDID idString=DtDefinitionIdString ','? ; 
 
 DtDefinitionDataField:
 	'field' name=KEYWORDID dataFieldString=DtDefinitionDataFieldString ','? ;
 
 DtDefinitionComputedField:
-	'computed' name=ID computedFieldString=DtDefinitionComputedFieldString ','? ;
+	'computed' name=KEYWORDID computedFieldString=DtDefinitionComputedFieldString ','? ;
 
 DtDefinitionStereotype:
  	'stereotype' ':' stereoType=STRING ','?
@@ -130,7 +143,7 @@ DtDefinitionType:
 ;
 
 DtDefinition:
-	('create' | 'alter') 'DtDefinition' {DtDefinitionAction} name=ID '{'
+	'create' 'DtDefinition' {DtDefinitionAction} name=ID '{'
 		dtDefinitionStereotype=DtDefinitionStereotype?
 		dtDefinitionIdField=DtDefinitionIdField?
 		dtDefinitionDataFields+=DtDefinitionDataField*
@@ -139,6 +152,18 @@ DtDefinition:
 		(dtDefinitionSortField=DtDefinitionSortField?) &
 		(dtDefinitionDisplayField=DtDefinitionDisplayField?))
 	'}';
+
+AlterDtDefinition:
+	'alter' 'DtDefinition' {DtDefinitionAlterAction} name=ID '{'
+		dtDefinitionStereotype=DtDefinitionStereotype?
+		dtDefinitionIdField=DtDefinitionIdField?
+		dtDefinitionDataFields+=DtDefinitionDataField*
+		dtDefinitionComputedFields+=DtDefinitionComputedField*
+		((dtDefinitionDataSpace=DtDefinitionDataSpace?) &
+		(dtDefinitionSortField=DtDefinitionSortField?) &
+		(dtDefinitionDisplayField=DtDefinitionDisplayField?))
+	'}';
+
 
 enum MultiplicityString:
 	ZERO_ONE='\"0..1\"' |
@@ -207,16 +232,16 @@ FacetDefinitionRangeString:
 	'{' ('filter' ':' filterString=STRING ','? & 'label' ':' labelString=STRING ','?) '}';
 
 FacetDefinitionRange:
-	'range' name = ID facetDefinitionRangeString=FacetDefinitionRangeString ','?
+	'range' name = KEYWORDID facetDefinitionRangeString=FacetDefinitionRangeString ','?
 ;
 
 
 FacetDefinition:
 	'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{'
-		facetDefinitionDtDefinition = FacetDefinitionDtDefinition
-		facetDefinitionFieldName = FacetDefinitionFieldName
-		facetDefinitonLabel = FacetDefinitionLabel
-		facetDefinitionRange += FacetDefinitionRange*
+		(facetDefinitionDtDefinition = FacetDefinitionDtDefinition &
+		facetDefinitionFieldName = FacetDefinitionFieldName &
+		facetDefinitonLabel = FacetDefinitionLabel &
+		(facetDefinitionRange += FacetDefinitionRange*))
 	'}';
 
 
@@ -264,7 +289,7 @@ IndexDefinitionIndexCopyToString:
 	'{' 'from' ':' string=STRING '}';
 
 IndexDefinitionIndexCopyTo:
-	'indexCopyTo' name = ID indexDefinitionIndexCopyToString=IndexDefinitionIndexCopyToString ','?
+	'indexCopyTo' name = KEYWORDID indexDefinitionIndexCopyToString=IndexDefinitionIndexCopyToString ','?
 ;
 
 IndexDefinitionLoaderId:
@@ -273,8 +298,8 @@ IndexDefinitionLoaderId:
 
 IndexDefinition:
 	'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{'
-		indexDefinitionKeyConcept=IndexDefinitionKeyConcept
-		indexDefinitionDtIndex=IndexDefinitionDtIndex
-		indexDefinitionLoaderId=IndexDefinitionLoaderId
-		indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo?
+		(indexDefinitionKeyConcept=IndexDefinitionKeyConcept &
+		indexDefinitionDtIndex=IndexDefinitionDtIndex &
+		indexDefinitionLoaderId=IndexDefinitionLoaderId &
+		(indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo)?)
 	'}';

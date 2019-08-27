@@ -114,6 +114,15 @@ public interface VertigoDslFactory extends EFactory
   Domain createDomain();
 
   /**
+   * Returns a new object of class '<em>Alter Domain</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Alter Domain</em>'.
+   * @generated
+   */
+  AlterDomain createAlterDomain();
+
+  /**
    * Returns a new object of class '<em>Domain Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -238,6 +247,15 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   DtDefinition createDtDefinition();
+
+  /**
+   * Returns a new object of class '<em>Alter Dt Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Alter Dt Definition</em>'.
+   * @generated
+   */
+  AlterDtDefinition createAlterDtDefinition();
 
   /**
    * Returns a new object of class '<em>Association</em>'.
@@ -463,6 +481,15 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   DtDefinitionAction createDtDefinitionAction();
+
+  /**
+   * Returns a new object of class '<em>Dt Definition Alter Action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Alter Action</em>'.
+   * @generated
+   */
+  DtDefinitionAlterAction createDtDefinitionAlterAction();
 
   /**
    * Returns a new object of class '<em>Facet Definition Action</em>'.

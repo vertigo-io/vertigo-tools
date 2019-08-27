@@ -70,13 +70,16 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	def protected _createChildren(DocumentRootNode parentNode, Model model) {
 		
 		// create feature groups
-		val dtDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("dtdefinition.png"),"DtDefinitions Group", false)
-		val domainOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("domain.png"),"Domains Group", false)
-		val constraintOutlineNode 	= new VirtualOutlineNode(parentNode, imageHelper.getImage("link.png"),"Constraints Group", false)
-		val formatterOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("formatter.png"),"Formatter Group", false)
-		val associationOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("assoc.png"),"Associations Group", false)
-		val taskOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("gear.png"),"Tasks Group", false)
-		val fileInfoOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"FileInfo Group", false)
+		val dtDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("dtdefinition.png"),"Dt Definitions", false)
+		val domainOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("domain.png"),"Domains", false)
+		val constraintOutlineNode 	= new VirtualOutlineNode(parentNode, imageHelper.getImage("link.png"),"Constraints", false)
+		val formatterOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("formatter.png"),"Formatters", false)
+		val associationOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("assoc.png"),"Associations", false)
+		val taskOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("gear.png"),"Tasks", false)
+		val fileInfoOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"File Infos", false)
+		val facetDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Facet Definitions", false)
+		val facetedQueryDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Faceted Query Definitions", false)
+		val indexDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Index Definitions", false)
 		
 		// add elements to each feature node		
 		model.elements.forEach[element | 
@@ -94,6 +97,12 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 				_createNode(taskOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.FILE_INFO) {
 				_createNode(fileInfoOutlineNode, element);
+			} else if (element.eClass == VertigoDslPackage.Literals.FACET_DEFINITION_ACTION) {
+				_createNode(facetDefinitionOutlineNode, element);
+			} else if (element.eClass == VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION) {
+				_createNode(facetedQueryDefinitionOutlineNode, element);
+			} else if (element.eClass == VertigoDslPackage.Literals.INDEX_DEFINITION_ACTION) {
+				_createNode(indexDefinitionOutlineNode, element);
 			}
 		]
 	}

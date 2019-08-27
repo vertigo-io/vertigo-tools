@@ -24,13 +24,14 @@ class VertigoDslHyperlinkHelper extends  HyperlinkHelper {
 
 		if (eObject !== null) {
 			if (eObject instanceof DtDefinitionAction) {
-
 				val INode node = NodeModelUtils.findActualNodeFor(eObject)
 				if (node !== null) {
 					val INode leaf = NodeModelUtils.findLeafNodeAtOffset(node, offset)
-					if (leaf.grammarElement.eClass == VertigoDslPackage.Literals.DT_DEFINITION_ACTION__NAME) {
-						val VertigoDslDtDefinitionHyperlink result = new VertigoDslDtDefinitionHyperlink(new Region(leaf.offset, leaf.length))
-						acceptor.accept(result) 
+					if (leaf !== null) {
+						if (leaf.grammarElement.eClass == VertigoDslPackage.Literals.DT_DEFINITION_ACTION__NAME) {
+							val VertigoDslDtDefinitionHyperlink result = new VertigoDslDtDefinitionHyperlink(new Region(leaf.offset, leaf.length))
+							acceptor.accept(result) 
+						}
 					}
 				}
 				

@@ -126,6 +126,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createDomainAdapter();
       }
       @Override
+      public Adapter caseAlterDomain(AlterDomain object)
+      {
+        return createAlterDomainAdapter();
+      }
+      @Override
       public Adapter caseDomainType(DomainType object)
       {
         return createDomainTypeAdapter();
@@ -194,6 +199,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDtDefinition(DtDefinition object)
       {
         return createDtDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseAlterDtDefinition(AlterDtDefinition object)
+      {
+        return createAlterDtDefinitionAdapter();
       }
       @Override
       public Adapter caseAssociation(Association object)
@@ -319,6 +329,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseDtDefinitionAction(DtDefinitionAction object)
       {
         return createDtDefinitionActionAdapter();
+      }
+      @Override
+      public Adapter caseDtDefinitionAlterAction(DtDefinitionAlterAction object)
+      {
+        return createDtDefinitionAlterActionAdapter();
       }
       @Override
       public Adapter caseFacetDefinitionAction(FacetDefinitionAction object)
@@ -503,6 +518,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDomainAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.AlterDomain <em>Alter Domain</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.AlterDomain
+   * @generated
+   */
+  public Adapter createAlterDomainAdapter()
   {
     return null;
   }
@@ -713,6 +743,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDtDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition <em>Alter Dt Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.AlterDtDefinition
+   * @generated
+   */
+  public Adapter createAlterDtDefinitionAdapter()
   {
     return null;
   }
@@ -1088,6 +1133,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDtDefinitionActionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAlterAction <em>Dt Definition Alter Action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionAlterAction
+   * @generated
+   */
+  public Adapter createDtDefinitionAlterActionAdapter()
   {
     return null;
   }

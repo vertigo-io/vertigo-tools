@@ -28,14 +28,16 @@ public class VertigoDslHyperlinkHelper extends HyperlinkHelper {
         final INode node = NodeModelUtils.findActualNodeFor(eObject);
         if ((node != null)) {
           final INode leaf = NodeModelUtils.findLeafNodeAtOffset(node, offset);
-          EClass _eClass = leaf.getGrammarElement().eClass();
-          boolean _equals = Objects.equal(_eClass, VertigoDslPackage.Literals.DT_DEFINITION_ACTION__NAME);
-          if (_equals) {
-            int _offset = leaf.getOffset();
-            int _length = leaf.getLength();
-            Region _region = new Region(_offset, _length);
-            final VertigoDslDtDefinitionHyperlink result = new VertigoDslDtDefinitionHyperlink(_region);
-            acceptor.accept(result);
+          if ((leaf != null)) {
+            EClass _eClass = leaf.getGrammarElement().eClass();
+            boolean _equals = Objects.equal(_eClass, VertigoDslPackage.Literals.DT_DEFINITION_ACTION__NAME);
+            if (_equals) {
+              int _offset = leaf.getOffset();
+              int _length = leaf.getLength();
+              Region _region = new Region(_offset, _length);
+              final VertigoDslDtDefinitionHyperlink result = new VertigoDslDtDefinitionHyperlink(_region);
+              acceptor.accept(result);
+            }
           }
         }
       }
