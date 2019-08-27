@@ -39,26 +39,8 @@ class VertigoDslScopeProvider extends AbstractVertigoDslScopeProvider {
 		if (reference == VertigoDslPackage.Literals.REF_TO_DOMAIN_TYPE__REF) {
 			val Set<String> addedDomains = new HashSet<String>();
 			
-			// get live DtDefinitions for current file
-			var	topContainer = context.eContainer
-
-			if (topContainer !== null)
-			{
-				while (topContainer.eContainer !== null) {
-					topContainer = topContainer.eContainer
-					for (item : topContainer.eContents) {
-						if (item instanceof DtDefinitionActionImpl) {
-							if (item.getName() !== null) {
-								addedDomains.add("Do"+ item.getName().toString()+"Dto");
-								addedDomains.add("Do"+ item.getName().toString()+"Dtc");
-							}
-						}
-					}
-				}
-			}
-			
 			// get DtDefinitions from all resources
-			var IResourceDescriptions descriptions  = provider.createPersistedResourceDescriptions();
+			var IResourceDescriptions descriptions  = provider.createResourceDescriptions();
 			try {
 				descriptions.empty
 			} catch (Exception e) {
