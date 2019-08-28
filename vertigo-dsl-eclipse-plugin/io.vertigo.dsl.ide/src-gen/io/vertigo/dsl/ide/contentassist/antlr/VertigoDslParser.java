@@ -155,7 +155,7 @@ public class VertigoDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDomainAccess().getConstraintsAssignment_7_3_4_1(), "rule__Domain__ConstraintsAssignment_7_3_4_1");
 			builder.put(grammarAccess.getDomainAccess().getMultipleAssignment_7_4_2(), "rule__Domain__MultipleAssignment_7_4_2");
 			builder.put(grammarAccess.getDomainAccess().getUnitAssignment_7_5_2(), "rule__Domain__UnitAssignment_7_5_2");
-			builder.put(grammarAccess.getAlterDomainAccess().getNameAssignment_2(), "rule__AlterDomain__NameAssignment_2");
+			builder.put(grammarAccess.getAlterDomainAccess().getDomainAssignment_2(), "rule__AlterDomain__DomainAssignment_2");
 			builder.put(grammarAccess.getAlterDomainAccess().getDataTypeAssignment_6(), "rule__AlterDomain__DataTypeAssignment_6");
 			builder.put(grammarAccess.getAlterDomainAccess().getFormatterAssignment_7_0_2(), "rule__AlterDomain__FormatterAssignment_7_0_2");
 			builder.put(grammarAccess.getAlterDomainAccess().getStoreTypeAssignment_7_1_2(), "rule__AlterDomain__StoreTypeAssignment_7_1_2");
@@ -192,14 +192,14 @@ public class VertigoDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataSpaceAssignment_9_0(), "rule__DtDefinition__DtDefinitionDataSpaceAssignment_9_0");
 			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionSortFieldAssignment_9_1(), "rule__DtDefinition__DtDefinitionSortFieldAssignment_9_1");
 			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldAssignment_9_2(), "rule__DtDefinition__DtDefinitionDisplayFieldAssignment_9_2");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getNameAssignment_3(), "rule__AlterDtDefinition__NameAssignment_3");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionStereotypeAssignment_5(), "rule__AlterDtDefinition__DtDefinitionStereotypeAssignment_5");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionIdFieldAssignment_6(), "rule__AlterDtDefinition__DtDefinitionIdFieldAssignment_6");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDataFieldsAssignment_7(), "rule__AlterDtDefinition__DtDefinitionDataFieldsAssignment_7");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionComputedFieldsAssignment_8(), "rule__AlterDtDefinition__DtDefinitionComputedFieldsAssignment_8");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDataSpaceAssignment_9_0(), "rule__AlterDtDefinition__DtDefinitionDataSpaceAssignment_9_0");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionSortFieldAssignment_9_1(), "rule__AlterDtDefinition__DtDefinitionSortFieldAssignment_9_1");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDisplayFieldAssignment_9_2(), "rule__AlterDtDefinition__DtDefinitionDisplayFieldAssignment_9_2");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitioneAssignment_2(), "rule__AlterDtDefinition__DtDefinitioneAssignment_2");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionStereotypeAssignment_4(), "rule__AlterDtDefinition__DtDefinitionStereotypeAssignment_4");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionIdFieldAssignment_5(), "rule__AlterDtDefinition__DtDefinitionIdFieldAssignment_5");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDataFieldsAssignment_6(), "rule__AlterDtDefinition__DtDefinitionDataFieldsAssignment_6");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionComputedFieldsAssignment_7(), "rule__AlterDtDefinition__DtDefinitionComputedFieldsAssignment_7");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDataSpaceAssignment_8_0(), "rule__AlterDtDefinition__DtDefinitionDataSpaceAssignment_8_0");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionSortFieldAssignment_8_1(), "rule__AlterDtDefinition__DtDefinitionSortFieldAssignment_8_1");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDisplayFieldAssignment_8_2(), "rule__AlterDtDefinition__DtDefinitionDisplayFieldAssignment_8_2");
 			builder.put(grammarAccess.getAssociationAccess().getNameAssignment_2(), "rule__Association__NameAssignment_2");
 			builder.put(grammarAccess.getAssociationAccess().getFkFieldNameAssignment_4_0_2(), "rule__Association__FkFieldNameAssignment_4_0_2");
 			builder.put(grammarAccess.getAssociationAccess().getDtDefinitionAAssignment_4_1_2(), "rule__Association__DtDefinitionAAssignment_4_1_2");
@@ -244,11 +244,11 @@ public class VertigoDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetDefinitionAssignment_3(), "rule__FacetedQueryDefinitionFacets__FacetDefinitionAssignment_3");
 			builder.put(grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetsAssignment_4_1(), "rule__FacetedQueryDefinitionFacets__FacetsAssignment_4_1");
 			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getNameAssignment_3(), "rule__FacetedQueryDefinition__NameAssignment_3");
-			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionKeyConceptAssignment_5(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionKeyConceptAssignment_5");
-			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionDomainCriteriaAssignment_6(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionDomainCriteriaAssignment_6");
-			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionListFilterBuilderQueryAssignment_7(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionListFilterBuilderQueryAssignment_7");
-			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionListFilterBuilderClassAssignment_8(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionListFilterBuilderClassAssignment_8");
-			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionFacetsAssignment_9(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionFacetsAssignment_9");
+			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionKeyConceptAssignment_5_0(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionKeyConceptAssignment_5_0");
+			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionDomainCriteriaAssignment_5_1(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionDomainCriteriaAssignment_5_1");
+			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionListFilterBuilderQueryAssignment_5_2(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionListFilterBuilderQueryAssignment_5_2");
+			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionListFilterBuilderClassAssignment_5_3");
+			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionFacetsAssignment_5_4(), "rule__FacetedQueryDefinition__FacetedQueryDefinitionFacetsAssignment_5_4");
 			builder.put(grammarAccess.getIndexDefinitionKeyConceptAccess().getDtDefinitionAssignment_2(), "rule__IndexDefinitionKeyConcept__DtDefinitionAssignment_2");
 			builder.put(grammarAccess.getIndexDefinitionDtIndexAccess().getDtDefinitionAssignment_2(), "rule__IndexDefinitionDtIndex__DtDefinitionAssignment_2");
 			builder.put(grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getStringAssignment_3(), "rule__IndexDefinitionIndexCopyToString__StringAssignment_3");
@@ -266,11 +266,12 @@ public class VertigoDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDtDefinitionDataFieldStringAccess().getUnorderedGroup_1(), "rule__DtDefinitionDataFieldString__UnorderedGroup_1");
 			builder.put(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), "rule__DtDefinitionComputedFieldString__UnorderedGroup_1");
 			builder.put(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), "rule__DtDefinition__UnorderedGroup_9");
-			builder.put(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_9(), "rule__AlterDtDefinition__UnorderedGroup_9");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), "rule__AlterDtDefinition__UnorderedGroup_8");
 			builder.put(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), "rule__Association__UnorderedGroup_4");
 			builder.put(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), "rule__TaskAttributeString__UnorderedGroup_1");
 			builder.put(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), "rule__FacetDefinitionRangeString__UnorderedGroup_1");
 			builder.put(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), "rule__FacetDefinition__UnorderedGroup_5");
+			builder.put(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), "rule__FacetedQueryDefinition__UnorderedGroup_5");
 			builder.put(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), "rule__IndexDefinition__UnorderedGroup_5");
 		}
 	}

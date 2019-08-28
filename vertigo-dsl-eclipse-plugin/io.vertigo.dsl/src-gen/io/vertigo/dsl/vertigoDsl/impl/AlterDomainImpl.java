@@ -7,6 +7,7 @@ import io.vertigo.dsl.vertigoDsl.AlterDomain;
 import io.vertigo.dsl.vertigoDsl.BooleanString;
 import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DataType;
+import io.vertigo.dsl.vertigoDsl.DomainType;
 import io.vertigo.dsl.vertigoDsl.Formatter;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
@@ -31,7 +32,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getName <em>Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getDomain <em>Domain</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getDataType <em>Data Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getFormatter <em>Formatter</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getStoreType <em>Store Type</em>}</li>
@@ -47,24 +48,14 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 public class AlterDomainImpl extends ElementImpl implements AlterDomain
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getDomain() <em>Domain</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getDomain()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected DomainType domain;
 
   /**
    * The default value of the '{@link #getDataType() <em>Data Type</em>}' attribute.
@@ -223,9 +214,29 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public String getName()
+  public DomainType getDomain()
   {
-    return name;
+    if (domain != null && domain.eIsProxy())
+    {
+      InternalEObject oldDomain = (InternalEObject)domain;
+      domain = (DomainType)eResolveProxy(oldDomain);
+      if (domain != oldDomain)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VertigoDslPackage.ALTER_DOMAIN__DOMAIN, oldDomain, domain));
+      }
+    }
+    return domain;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public DomainType basicGetDomain()
+  {
+    return domain;
   }
 
   /**
@@ -234,12 +245,12 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setDomain(DomainType newDomain)
   {
-    String oldName = name;
-    name = newName;
+    DomainType oldDomain = domain;
+    domain = newDomain;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__DOMAIN, oldDomain, domain));
   }
 
   /**
@@ -452,8 +463,9 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.ALTER_DOMAIN__NAME:
-        return getName();
+      case VertigoDslPackage.ALTER_DOMAIN__DOMAIN:
+        if (resolve) return getDomain();
+        return basicGetDomain();
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         return getDataType();
       case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
@@ -486,8 +498,8 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.ALTER_DOMAIN__NAME:
-        setName((String)newValue);
+      case VertigoDslPackage.ALTER_DOMAIN__DOMAIN:
+        setDomain((DomainType)newValue);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         setDataType((DataType)newValue);
@@ -529,8 +541,8 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.ALTER_DOMAIN__NAME:
-        setName(NAME_EDEFAULT);
+      case VertigoDslPackage.ALTER_DOMAIN__DOMAIN:
+        setDomain((DomainType)null);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         setDataType(DATA_TYPE_EDEFAULT);
@@ -570,8 +582,8 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
   {
     switch (featureID)
     {
-      case VertigoDslPackage.ALTER_DOMAIN__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case VertigoDslPackage.ALTER_DOMAIN__DOMAIN:
+        return domain != null;
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         return dataType != DATA_TYPE_EDEFAULT;
       case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
@@ -603,9 +615,7 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(", dataType: ");
+    result.append(" (dataType: ");
     result.append(dataType);
     result.append(", storeType: ");
     result.append(storeType);

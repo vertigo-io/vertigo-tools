@@ -15,7 +15,6 @@ import io.vertigo.dsl.vertigoDsl.Domain;
 import io.vertigo.dsl.vertigoDsl.DomainType;
 import io.vertigo.dsl.vertigoDsl.DtDefinition;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionAction;
-import io.vertigo.dsl.vertigoDsl.DtDefinitionAlterAction;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataField;
@@ -436,13 +435,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   private EClass dtDefinitionActionEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass dtDefinitionAlterActionEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -958,9 +950,9 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EAttribute getAlterDomain_Name()
+  public EReference getAlterDomain_Domain()
   {
-    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(0);
+    return (EReference)alterDomainEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -1434,6 +1426,94 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   public EClass getAlterDtDefinition()
   {
     return alterDtDefinitionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitione()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitionStereotype()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitionIdField()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitionDataFields()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitionComputedFields()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitionDataSpace()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitionSortField()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitionDisplayField()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -2289,105 +2369,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EClass getDtDefinitionAlterAction()
-  {
-    return dtDefinitionAlterActionEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getDtDefinitionAlterAction_Name()
-  {
-    return (EAttribute)dtDefinitionAlterActionEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDtDefinitionAlterAction_DtDefinitionStereotype()
-  {
-    return (EReference)dtDefinitionAlterActionEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDtDefinitionAlterAction_DtDefinitionIdField()
-  {
-    return (EReference)dtDefinitionAlterActionEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDtDefinitionAlterAction_DtDefinitionDataFields()
-  {
-    return (EReference)dtDefinitionAlterActionEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDtDefinitionAlterAction_DtDefinitionComputedFields()
-  {
-    return (EReference)dtDefinitionAlterActionEClass.getEStructuralFeatures().get(4);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDtDefinitionAlterAction_DtDefinitionDataSpace()
-  {
-    return (EReference)dtDefinitionAlterActionEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDtDefinitionAlterAction_DtDefinitionSortField()
-  {
-    return (EReference)dtDefinitionAlterActionEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDtDefinitionAlterAction_DtDefinitionDisplayField()
-  {
-    return (EReference)dtDefinitionAlterActionEClass.getEStructuralFeatures().get(7);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getFacetDefinitionAction()
   {
     return facetDefinitionActionEClass;
@@ -2712,7 +2693,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEAttribute(domainEClass, DOMAIN__UNIT);
 
     alterDomainEClass = createEClass(ALTER_DOMAIN);
-    createEAttribute(alterDomainEClass, ALTER_DOMAIN__NAME);
+    createEReference(alterDomainEClass, ALTER_DOMAIN__DOMAIN);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__DATA_TYPE);
     createEReference(alterDomainEClass, ALTER_DOMAIN__FORMATTER);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__STORE_TYPE);
@@ -2771,6 +2752,14 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     dtDefinitionEClass = createEClass(DT_DEFINITION);
 
     alterDtDefinitionEClass = createEClass(ALTER_DT_DEFINITION);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITIONE);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_STEREOTYPE);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_ID_FIELD);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_DATA_FIELDS);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_COMPUTED_FIELDS);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_DATA_SPACE);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD);
 
     associationEClass = createEClass(ASSOCIATION);
     createEAttribute(associationEClass, ASSOCIATION__NAME);
@@ -2874,16 +2863,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_SORT_FIELD);
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD);
 
-    dtDefinitionAlterActionEClass = createEClass(DT_DEFINITION_ALTER_ACTION);
-    createEAttribute(dtDefinitionAlterActionEClass, DT_DEFINITION_ALTER_ACTION__NAME);
-    createEReference(dtDefinitionAlterActionEClass, DT_DEFINITION_ALTER_ACTION__DT_DEFINITION_STEREOTYPE);
-    createEReference(dtDefinitionAlterActionEClass, DT_DEFINITION_ALTER_ACTION__DT_DEFINITION_ID_FIELD);
-    createEReference(dtDefinitionAlterActionEClass, DT_DEFINITION_ALTER_ACTION__DT_DEFINITION_DATA_FIELDS);
-    createEReference(dtDefinitionAlterActionEClass, DT_DEFINITION_ALTER_ACTION__DT_DEFINITION_COMPUTED_FIELDS);
-    createEReference(dtDefinitionAlterActionEClass, DT_DEFINITION_ALTER_ACTION__DT_DEFINITION_DATA_SPACE);
-    createEReference(dtDefinitionAlterActionEClass, DT_DEFINITION_ALTER_ACTION__DT_DEFINITION_SORT_FIELD);
-    createEReference(dtDefinitionAlterActionEClass, DT_DEFINITION_ALTER_ACTION__DT_DEFINITION_DISPLAY_FIELD);
-
     facetDefinitionActionEClass = createEClass(FACET_DEFINITION_ACTION);
     createEAttribute(facetDefinitionActionEClass, FACET_DEFINITION_ACTION__NAME);
     createEReference(facetDefinitionActionEClass, FACET_DEFINITION_ACTION__FACET_DEFINITION_DT_DEFINITION);
@@ -2961,7 +2940,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     facetedQueryDefinitionEClass.getESuperTypes().add(this.getElement());
     indexDefinitionEClass.getESuperTypes().add(this.getElement());
     dtDefinitionActionEClass.getESuperTypes().add(this.getDtDefinition());
-    dtDefinitionAlterActionEClass.getESuperTypes().add(this.getAlterDtDefinition());
     facetDefinitionActionEClass.getESuperTypes().add(this.getFacetDefinition());
     facetedQueryDefinitionActionEClass.getESuperTypes().add(this.getFacetedQueryDefinition());
     indexDefinitionActionEClass.getESuperTypes().add(this.getIndexDefinition());
@@ -3013,7 +2991,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEAttribute(getDomain_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(alterDomainEClass, AlterDomain.class, "AlterDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getAlterDomain_Name(), ecorePackage.getEString(), "name", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDomain_Domain(), this.getDomainType(), null, "domain", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlterDomain_DataType(), this.getDataType(), "dataType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAlterDomain_Formatter(), this.getFormatter(), null, "formatter", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlterDomain_StoreType(), ecorePackage.getEString(), "storeType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3072,6 +3050,14 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEClass(dtDefinitionEClass, DtDefinition.class, "DtDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(alterDtDefinitionEClass, AlterDtDefinition.class, "AlterDtDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getAlterDtDefinition_DtDefinitione(), this.getDtDefinitionType(), null, "dtDefinitione", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDtDefinition_DtDefinitionStereotype(), this.getDtDefinitionStereotype(), null, "dtDefinitionStereotype", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDtDefinition_DtDefinitionIdField(), this.getDtDefinitionIdField(), null, "dtDefinitionIdField", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDtDefinition_DtDefinitionDataFields(), this.getDtDefinitionDataField(), null, "dtDefinitionDataFields", null, 0, -1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDtDefinition_DtDefinitionComputedFields(), this.getDtDefinitionComputedField(), null, "dtDefinitionComputedFields", null, 0, -1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDtDefinition_DtDefinitionDataSpace(), this.getDtDefinitionDataSpace(), null, "dtDefinitionDataSpace", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDtDefinition_DtDefinitionSortField(), this.getDtDefinitionSortField(), null, "dtDefinitionSortField", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDtDefinition_DtDefinitionDisplayField(), this.getDtDefinitionDisplayField(), null, "dtDefinitionDisplayField", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAssociation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3174,16 +3160,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEReference(getDtDefinitionAction_DtDefinitionDataSpace(), this.getDtDefinitionDataSpace(), null, "dtDefinitionDataSpace", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDtDefinitionAction_DtDefinitionSortField(), this.getDtDefinitionSortField(), null, "dtDefinitionSortField", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDtDefinitionAction_DtDefinitionDisplayField(), this.getDtDefinitionDisplayField(), null, "dtDefinitionDisplayField", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(dtDefinitionAlterActionEClass, DtDefinitionAlterAction.class, "DtDefinitionAlterAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getDtDefinitionAlterAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, DtDefinitionAlterAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDtDefinitionAlterAction_DtDefinitionStereotype(), this.getDtDefinitionStereotype(), null, "dtDefinitionStereotype", null, 0, 1, DtDefinitionAlterAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDtDefinitionAlterAction_DtDefinitionIdField(), this.getDtDefinitionIdField(), null, "dtDefinitionIdField", null, 0, 1, DtDefinitionAlterAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDtDefinitionAlterAction_DtDefinitionDataFields(), this.getDtDefinitionDataField(), null, "dtDefinitionDataFields", null, 0, -1, DtDefinitionAlterAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDtDefinitionAlterAction_DtDefinitionComputedFields(), this.getDtDefinitionComputedField(), null, "dtDefinitionComputedFields", null, 0, -1, DtDefinitionAlterAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDtDefinitionAlterAction_DtDefinitionDataSpace(), this.getDtDefinitionDataSpace(), null, "dtDefinitionDataSpace", null, 0, 1, DtDefinitionAlterAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDtDefinitionAlterAction_DtDefinitionSortField(), this.getDtDefinitionSortField(), null, "dtDefinitionSortField", null, 0, 1, DtDefinitionAlterAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDtDefinitionAlterAction_DtDefinitionDisplayField(), this.getDtDefinitionDisplayField(), null, "dtDefinitionDisplayField", null, 0, 1, DtDefinitionAlterAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(facetDefinitionActionEClass, FacetDefinitionAction.class, "FacetDefinitionAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFacetDefinitionAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, FacetDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

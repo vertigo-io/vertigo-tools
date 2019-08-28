@@ -449,7 +449,7 @@ class VertigoDslParsingTest {
 	
 	@Test
 	def void checkParsingDtDefinitionAlter() {
-		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "DtDefinition") as ParserRule
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "AlterDtDefinition") as ParserRule
 	
 		val result = parser.parse(parserRule, new StringReader('''
 			alter DtDefinition DtBaseType {

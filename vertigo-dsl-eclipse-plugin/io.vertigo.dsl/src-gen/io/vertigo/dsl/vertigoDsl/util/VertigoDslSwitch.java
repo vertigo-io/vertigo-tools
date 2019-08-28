@@ -451,15 +451,6 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case VertigoDslPackage.DT_DEFINITION_ALTER_ACTION:
-      {
-        DtDefinitionAlterAction dtDefinitionAlterAction = (DtDefinitionAlterAction)theEObject;
-        T result = caseDtDefinitionAlterAction(dtDefinitionAlterAction);
-        if (result == null) result = caseAlterDtDefinition(dtDefinitionAlterAction);
-        if (result == null) result = caseElement(dtDefinitionAlterAction);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case VertigoDslPackage.FACET_DEFINITION_ACTION:
       {
         FacetDefinitionAction facetDefinitionAction = (FacetDefinitionAction)theEObject;
@@ -1303,22 +1294,6 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDtDefinitionAction(DtDefinitionAction object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Alter Action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Dt Definition Alter Action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseDtDefinitionAlterAction(DtDefinitionAlterAction object)
   {
     return null;
   }

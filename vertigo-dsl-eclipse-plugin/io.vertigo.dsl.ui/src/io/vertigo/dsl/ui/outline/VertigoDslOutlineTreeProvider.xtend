@@ -15,6 +15,8 @@ import io.vertigo.dsl.vertigoDsl.Formatter
 import io.vertigo.dsl.vertigoDsl.Model
 import io.vertigo.dsl.vertigoDsl.TaskDefinition
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
+import java.util.ArrayList
+import java.util.List
 import org.eclipse.xtext.ui.IImageHelper
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
 import org.eclipse.xtext.ui.editor.outline.impl.DocumentRootNode
@@ -68,6 +70,8 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	
 	// create categories for outline nodes
 	def protected _createChildren(DocumentRootNode parentNode, Model model) {
+		val List<VirtualOutlineNode> outlineNodes = new ArrayList<VirtualOutlineNode>()
+		
 		
 		// create feature groups
 		val dtDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("dtdefinition.png"),"Dt Definitions", false)
@@ -84,26 +88,30 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 		// add elements to each feature node		
 		model.elements.forEach[element | 
 			if(element.eClass == VertigoDslPackage.Literals.DOMAIN || element.eClass == VertigoDslPackage.Literals.DECLARED_DOMAIN) {
-				_createNode(domainOutlineNode, element); 
+				createNode(domainOutlineNode, element);
 			} else if (element.eClass == VertigoDslPackage.Literals.DT_DEFINITION_ACTION || element.eClass == VertigoDslPackage.Literals.DECLARED_DT_DEFINITION) {
-				_createNode(dtDefinitionOutlineNode, element); 
+				createNode(dtDefinitionOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.ASSOCIATION) {
-				_createNode(associationOutlineNode, element); 
+				createNode(associationOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.CONSTRAINT) {
-				_createNode(constraintOutlineNode, element); 
+				createNode(constraintOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.FORMATTER) {
-				_createNode(formatterOutlineNode, element); 
+				createNode(formatterOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.TASK_DEFINITION) {
-				_createNode(taskOutlineNode, element); 
+				createNode(taskOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.FILE_INFO) {
-				_createNode(fileInfoOutlineNode, element);
+				createNode(fileInfoOutlineNode, element);
 			} else if (element.eClass == VertigoDslPackage.Literals.FACET_DEFINITION_ACTION) {
-				_createNode(facetDefinitionOutlineNode, element);
+				createNode(facetDefinitionOutlineNode, element);
 			} else if (element.eClass == VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION) {
-				_createNode(facetedQueryDefinitionOutlineNode, element);
+				createNode(facetedQueryDefinitionOutlineNode, element);
 			} else if (element.eClass == VertigoDslPackage.Literals.INDEX_DEFINITION_ACTION) {
-				_createNode(indexDefinitionOutlineNode, element);
+				createNode(indexDefinitionOutlineNode, element);
 			}
+		]
+		
+		outlineNodes.forEach[outlineNode |
+			
 		]
 	}
 	/*

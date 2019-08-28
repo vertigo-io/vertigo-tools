@@ -483,15 +483,6 @@ public interface VertigoDslFactory extends EFactory
   DtDefinitionAction createDtDefinitionAction();
 
   /**
-   * Returns a new object of class '<em>Dt Definition Alter Action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Dt Definition Alter Action</em>'.
-   * @generated
-   */
-  DtDefinitionAlterAction createDtDefinitionAlterAction();
-
-  /**
    * Returns a new object of class '<em>Facet Definition Action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

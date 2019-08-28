@@ -14,7 +14,7 @@ import org.eclipse.emf.common.util.EList;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getName <em>Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getDomain <em>Domain</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getDataType <em>Data Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getFormatter <em>Formatter</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getStoreType <em>Store Type</em>}</li>
@@ -32,26 +32,26 @@ import org.eclipse.emf.common.util.EList;
 public interface AlterDomain extends Element
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Domain</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterDomain_Name()
+   * @return the value of the '<em>Domain</em>' reference.
+   * @see #setDomain(DomainType)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterDomain_Domain()
    * @model
    * @generated
    */
-  String getName();
+  DomainType getDomain();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getDomain <em>Domain</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Domain</em>' reference.
+   * @see #getDomain()
    * @generated
    */
-  void setName(String value);
+  void setDomain(DomainType value);
 
   /**
    * Returns the value of the '<em><b>Data Type</b></em>' attribute.

@@ -692,8 +692,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAlterKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cDomainKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Assignment cDomainAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cDomainDomainTypeCrossReference_2_0 = (CrossReference)cDomainAssignment_2.eContents().get(0);
+		private final RuleCall cDomainDomainTypeIDTerminalRuleCall_2_0_1 = (RuleCall)cDomainDomainTypeCrossReference_2_0.eContents().get(1);
 		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Keyword cDataTypeKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
@@ -742,16 +743,17 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//AlterDomain:
-		//	'alter' 'Domain' name=ID '{'
+		//	'alter' 'Domain' domain=[DomainType] '{'
 		//	'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? &
 		//	('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
 		//	constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit' ':' unit=STRING)?)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'alter' 'Domain' name=ID '{' 'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] & ('storeType' ':'
-		//storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
-		//constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit' ':' unit=STRING)?) '}'
+		//'alter' 'Domain' domain=[DomainType] '{' 'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] &
+		//('storeType' ':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':' '['
+		//constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit'
+		//':' unit=STRING)?) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'alter'
@@ -760,11 +762,14 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'Domain'
 		public Keyword getDomainKeyword_1() { return cDomainKeyword_1; }
 		
-		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		//domain=[DomainType]
+		public Assignment getDomainAssignment_2() { return cDomainAssignment_2; }
+		
+		//[DomainType]
+		public CrossReference getDomainDomainTypeCrossReference_2_0() { return cDomainDomainTypeCrossReference_2_0; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getDomainDomainTypeIDTerminalRuleCall_2_0_1() { return cDomainDomainTypeIDTerminalRuleCall_2_0_1; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
@@ -1613,29 +1618,29 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Keyword cAlterKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Keyword cDtDefinitionKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Action cDtDefinitionAlterActionAction_2 = (Action)cGroup.eContents().get(2);
-		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cDtDefinitionStereotypeAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0 = (RuleCall)cDtDefinitionStereotypeAssignment_5.eContents().get(0);
-		private final Assignment cDtDefinitionIdFieldAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0 = (RuleCall)cDtDefinitionIdFieldAssignment_6.eContents().get(0);
-		private final Assignment cDtDefinitionDataFieldsAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0 = (RuleCall)cDtDefinitionDataFieldsAssignment_7.eContents().get(0);
-		private final Assignment cDtDefinitionComputedFieldsAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0 = (RuleCall)cDtDefinitionComputedFieldsAssignment_8.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_9 = (UnorderedGroup)cGroup.eContents().get(9);
-		private final Assignment cDtDefinitionDataSpaceAssignment_9_0 = (Assignment)cUnorderedGroup_9.eContents().get(0);
-		private final RuleCall cDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0 = (RuleCall)cDtDefinitionDataSpaceAssignment_9_0.eContents().get(0);
-		private final Assignment cDtDefinitionSortFieldAssignment_9_1 = (Assignment)cUnorderedGroup_9.eContents().get(1);
-		private final RuleCall cDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0 = (RuleCall)cDtDefinitionSortFieldAssignment_9_1.eContents().get(0);
-		private final Assignment cDtDefinitionDisplayFieldAssignment_9_2 = (Assignment)cUnorderedGroup_9.eContents().get(2);
-		private final RuleCall cDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0 = (RuleCall)cDtDefinitionDisplayFieldAssignment_9_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final Assignment cDtDefinitioneAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cDtDefinitioneDtDefinitionTypeCrossReference_2_0 = (CrossReference)cDtDefinitioneAssignment_2.eContents().get(0);
+		private final RuleCall cDtDefinitioneDtDefinitionTypeIDTerminalRuleCall_2_0_1 = (RuleCall)cDtDefinitioneDtDefinitionTypeCrossReference_2_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cDtDefinitionStereotypeAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0 = (RuleCall)cDtDefinitionStereotypeAssignment_4.eContents().get(0);
+		private final Assignment cDtDefinitionIdFieldAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_5_0 = (RuleCall)cDtDefinitionIdFieldAssignment_5.eContents().get(0);
+		private final Assignment cDtDefinitionDataFieldsAssignment_6 = (Assignment)cGroup.eContents().get(6);
+		private final RuleCall cDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_6_0 = (RuleCall)cDtDefinitionDataFieldsAssignment_6.eContents().get(0);
+		private final Assignment cDtDefinitionComputedFieldsAssignment_7 = (Assignment)cGroup.eContents().get(7);
+		private final RuleCall cDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_7_0 = (RuleCall)cDtDefinitionComputedFieldsAssignment_7.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_8 = (UnorderedGroup)cGroup.eContents().get(8);
+		private final Assignment cDtDefinitionDataSpaceAssignment_8_0 = (Assignment)cUnorderedGroup_8.eContents().get(0);
+		private final RuleCall cDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_8_0_0 = (RuleCall)cDtDefinitionDataSpaceAssignment_8_0.eContents().get(0);
+		private final Assignment cDtDefinitionSortFieldAssignment_8_1 = (Assignment)cUnorderedGroup_8.eContents().get(1);
+		private final RuleCall cDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_8_1_0 = (RuleCall)cDtDefinitionSortFieldAssignment_8_1.eContents().get(0);
+		private final Assignment cDtDefinitionDisplayFieldAssignment_8_2 = (Assignment)cUnorderedGroup_8.eContents().get(2);
+		private final RuleCall cDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0 = (RuleCall)cDtDefinitionDisplayFieldAssignment_8_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//AlterDtDefinition:
-		//	'alter' 'DtDefinition' {DtDefinitionAlterAction} name=ID '{'
+		//	'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{'
 		//	dtDefinitionStereotype=DtDefinitionStereotype?
 		//	dtDefinitionIdField=DtDefinitionIdField?
 		//	dtDefinitionDataFields+=DtDefinitionDataField*
@@ -1644,7 +1649,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'alter' 'DtDefinition' {DtDefinitionAlterAction} name=ID '{' dtDefinitionStereotype=DtDefinitionStereotype?
+		//'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{' dtDefinitionStereotype=DtDefinitionStereotype?
 		//dtDefinitionIdField=DtDefinitionIdField? dtDefinitionDataFields+=DtDefinitionDataField*
 		//dtDefinitionComputedFields+=DtDefinitionComputedField* (dtDefinitionDataSpace=DtDefinitionDataSpace? &
 		//dtDefinitionSortField=DtDefinitionSortField? & dtDefinitionDisplayField=DtDefinitionDisplayField?) '}'
@@ -1656,66 +1661,66 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'DtDefinition'
 		public Keyword getDtDefinitionKeyword_1() { return cDtDefinitionKeyword_1; }
 		
-		//{DtDefinitionAlterAction}
-		public Action getDtDefinitionAlterActionAction_2() { return cDtDefinitionAlterActionAction_2; }
+		//dtDefinitione=[DtDefinitionType]
+		public Assignment getDtDefinitioneAssignment_2() { return cDtDefinitioneAssignment_2; }
 		
-		//name=ID
-		public Assignment getNameAssignment_3() { return cNameAssignment_3; }
+		//[DtDefinitionType]
+		public CrossReference getDtDefinitioneDtDefinitionTypeCrossReference_2_0() { return cDtDefinitioneDtDefinitionTypeCrossReference_2_0; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_3_0() { return cNameIDTerminalRuleCall_3_0; }
+		public RuleCall getDtDefinitioneDtDefinitionTypeIDTerminalRuleCall_2_0_1() { return cDtDefinitioneDtDefinitionTypeIDTerminalRuleCall_2_0_1; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
 		//dtDefinitionStereotype=DtDefinitionStereotype?
-		public Assignment getDtDefinitionStereotypeAssignment_5() { return cDtDefinitionStereotypeAssignment_5; }
+		public Assignment getDtDefinitionStereotypeAssignment_4() { return cDtDefinitionStereotypeAssignment_4; }
 		
 		//DtDefinitionStereotype
-		public RuleCall getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0() { return cDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0; }
+		public RuleCall getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0() { return cDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0; }
 		
 		//dtDefinitionIdField=DtDefinitionIdField?
-		public Assignment getDtDefinitionIdFieldAssignment_6() { return cDtDefinitionIdFieldAssignment_6; }
+		public Assignment getDtDefinitionIdFieldAssignment_5() { return cDtDefinitionIdFieldAssignment_5; }
 		
 		//DtDefinitionIdField
-		public RuleCall getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0() { return cDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0; }
+		public RuleCall getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_5_0() { return cDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_5_0; }
 		
 		//dtDefinitionDataFields+=DtDefinitionDataField*
-		public Assignment getDtDefinitionDataFieldsAssignment_7() { return cDtDefinitionDataFieldsAssignment_7; }
+		public Assignment getDtDefinitionDataFieldsAssignment_6() { return cDtDefinitionDataFieldsAssignment_6; }
 		
 		//DtDefinitionDataField
-		public RuleCall getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0() { return cDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0; }
+		public RuleCall getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_6_0() { return cDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_6_0; }
 		
 		//dtDefinitionComputedFields+=DtDefinitionComputedField*
-		public Assignment getDtDefinitionComputedFieldsAssignment_8() { return cDtDefinitionComputedFieldsAssignment_8; }
+		public Assignment getDtDefinitionComputedFieldsAssignment_7() { return cDtDefinitionComputedFieldsAssignment_7; }
 		
 		//DtDefinitionComputedField
-		public RuleCall getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0() { return cDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0; }
+		public RuleCall getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_7_0() { return cDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_7_0; }
 		
 		//dtDefinitionDataSpace=DtDefinitionDataSpace? & dtDefinitionSortField=DtDefinitionSortField? &
 		//dtDefinitionDisplayField=DtDefinitionDisplayField?
-		public UnorderedGroup getUnorderedGroup_9() { return cUnorderedGroup_9; }
+		public UnorderedGroup getUnorderedGroup_8() { return cUnorderedGroup_8; }
 		
 		//dtDefinitionDataSpace=DtDefinitionDataSpace?
-		public Assignment getDtDefinitionDataSpaceAssignment_9_0() { return cDtDefinitionDataSpaceAssignment_9_0; }
+		public Assignment getDtDefinitionDataSpaceAssignment_8_0() { return cDtDefinitionDataSpaceAssignment_8_0; }
 		
 		//DtDefinitionDataSpace
-		public RuleCall getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0() { return cDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0; }
+		public RuleCall getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_8_0_0() { return cDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_8_0_0; }
 		
 		//dtDefinitionSortField=DtDefinitionSortField?
-		public Assignment getDtDefinitionSortFieldAssignment_9_1() { return cDtDefinitionSortFieldAssignment_9_1; }
+		public Assignment getDtDefinitionSortFieldAssignment_8_1() { return cDtDefinitionSortFieldAssignment_8_1; }
 		
 		//DtDefinitionSortField
-		public RuleCall getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0() { return cDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0; }
+		public RuleCall getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_8_1_0() { return cDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_8_1_0; }
 		
 		//dtDefinitionDisplayField=DtDefinitionDisplayField?
-		public Assignment getDtDefinitionDisplayFieldAssignment_9_2() { return cDtDefinitionDisplayFieldAssignment_9_2; }
+		public Assignment getDtDefinitionDisplayFieldAssignment_8_2() { return cDtDefinitionDisplayFieldAssignment_8_2; }
 		
 		//DtDefinitionDisplayField
-		public RuleCall getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0() { return cDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0; }
+		public RuleCall getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0() { return cDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class AssociationElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.Association");
@@ -2823,34 +2828,35 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cNameAssignment_3 = (Assignment)cGroup.eContents().get(3);
 		private final RuleCall cNameIDTerminalRuleCall_3_0 = (RuleCall)cNameAssignment_3.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Assignment cFacetedQueryDefinitionKeyConceptAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cFacetedQueryDefinitionKeyConceptFacetedQueryDefinitionKeyConceptParserRuleCall_5_0 = (RuleCall)cFacetedQueryDefinitionKeyConceptAssignment_5.eContents().get(0);
-		private final Assignment cFacetedQueryDefinitionDomainCriteriaAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_6_0 = (RuleCall)cFacetedQueryDefinitionDomainCriteriaAssignment_6.eContents().get(0);
-		private final Assignment cFacetedQueryDefinitionListFilterBuilderQueryAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_7_0 = (RuleCall)cFacetedQueryDefinitionListFilterBuilderQueryAssignment_7.eContents().get(0);
-		private final Assignment cFacetedQueryDefinitionListFilterBuilderClassAssignment_8 = (Assignment)cGroup.eContents().get(8);
-		private final RuleCall cFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_8_0 = (RuleCall)cFacetedQueryDefinitionListFilterBuilderClassAssignment_8.eContents().get(0);
-		private final Assignment cFacetedQueryDefinitionFacetsAssignment_9 = (Assignment)cGroup.eContents().get(9);
-		private final RuleCall cFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_9_0 = (RuleCall)cFacetedQueryDefinitionFacetsAssignment_9.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
+		private final UnorderedGroup cUnorderedGroup_5 = (UnorderedGroup)cGroup.eContents().get(5);
+		private final Assignment cFacetedQueryDefinitionKeyConceptAssignment_5_0 = (Assignment)cUnorderedGroup_5.eContents().get(0);
+		private final RuleCall cFacetedQueryDefinitionKeyConceptFacetedQueryDefinitionKeyConceptParserRuleCall_5_0_0 = (RuleCall)cFacetedQueryDefinitionKeyConceptAssignment_5_0.eContents().get(0);
+		private final Assignment cFacetedQueryDefinitionDomainCriteriaAssignment_5_1 = (Assignment)cUnorderedGroup_5.eContents().get(1);
+		private final RuleCall cFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_5_1_0 = (RuleCall)cFacetedQueryDefinitionDomainCriteriaAssignment_5_1.eContents().get(0);
+		private final Assignment cFacetedQueryDefinitionListFilterBuilderQueryAssignment_5_2 = (Assignment)cUnorderedGroup_5.eContents().get(2);
+		private final RuleCall cFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_5_2_0 = (RuleCall)cFacetedQueryDefinitionListFilterBuilderQueryAssignment_5_2.eContents().get(0);
+		private final Assignment cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3 = (Assignment)cUnorderedGroup_5.eContents().get(3);
+		private final RuleCall cFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_3_0 = (RuleCall)cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3.eContents().get(0);
+		private final Assignment cFacetedQueryDefinitionFacetsAssignment_5_4 = (Assignment)cUnorderedGroup_5.eContents().get(4);
+		private final RuleCall cFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_4_0 = (RuleCall)cFacetedQueryDefinitionFacetsAssignment_5_4.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//FacetedQueryDefinition:
 		//	'create' 'FacetedQueryDefinition' {FacetedQueryDefinitionAction} name=ID '{'
-		//	facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept
-		//	facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria
-		//	facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery
-		//	facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass
-		//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
+		//	(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
+		//	facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
+		//	facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+		//	facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
+		//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'FacetedQueryDefinition' {FacetedQueryDefinitionAction} name=ID '{'
-		//facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept
-		//facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria
-		//facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery
-		//facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass
-		//facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets '}'
+		//(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
+		//facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
+		//facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+		//facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
+		//facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'create'
@@ -2871,38 +2877,45 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 		
+		//facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
+		//facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
+		//facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+		//facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
+		//facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
+		public UnorderedGroup getUnorderedGroup_5() { return cUnorderedGroup_5; }
+		
 		//facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept
-		public Assignment getFacetedQueryDefinitionKeyConceptAssignment_5() { return cFacetedQueryDefinitionKeyConceptAssignment_5; }
+		public Assignment getFacetedQueryDefinitionKeyConceptAssignment_5_0() { return cFacetedQueryDefinitionKeyConceptAssignment_5_0; }
 		
 		//FacetedQueryDefinitionKeyConcept
-		public RuleCall getFacetedQueryDefinitionKeyConceptFacetedQueryDefinitionKeyConceptParserRuleCall_5_0() { return cFacetedQueryDefinitionKeyConceptFacetedQueryDefinitionKeyConceptParserRuleCall_5_0; }
+		public RuleCall getFacetedQueryDefinitionKeyConceptFacetedQueryDefinitionKeyConceptParserRuleCall_5_0_0() { return cFacetedQueryDefinitionKeyConceptFacetedQueryDefinitionKeyConceptParserRuleCall_5_0_0; }
 		
 		//facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria
-		public Assignment getFacetedQueryDefinitionDomainCriteriaAssignment_6() { return cFacetedQueryDefinitionDomainCriteriaAssignment_6; }
+		public Assignment getFacetedQueryDefinitionDomainCriteriaAssignment_5_1() { return cFacetedQueryDefinitionDomainCriteriaAssignment_5_1; }
 		
 		//FacetedQueryDefinitionDomainCriteria
-		public RuleCall getFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_6_0() { return cFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_6_0; }
+		public RuleCall getFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_5_1_0() { return cFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_5_1_0; }
 		
 		//facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery
-		public Assignment getFacetedQueryDefinitionListFilterBuilderQueryAssignment_7() { return cFacetedQueryDefinitionListFilterBuilderQueryAssignment_7; }
+		public Assignment getFacetedQueryDefinitionListFilterBuilderQueryAssignment_5_2() { return cFacetedQueryDefinitionListFilterBuilderQueryAssignment_5_2; }
 		
 		//FacetedQueryDefinitionListFilterBuilderQuery
-		public RuleCall getFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_7_0() { return cFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_7_0; }
+		public RuleCall getFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_5_2_0() { return cFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_5_2_0; }
 		
 		//facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass
-		public Assignment getFacetedQueryDefinitionListFilterBuilderClassAssignment_8() { return cFacetedQueryDefinitionListFilterBuilderClassAssignment_8; }
+		public Assignment getFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3() { return cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3; }
 		
 		//FacetedQueryDefinitionListFilterBuilderClass
-		public RuleCall getFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_8_0() { return cFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_8_0; }
+		public RuleCall getFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_3_0() { return cFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_3_0; }
 		
 		//facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
-		public Assignment getFacetedQueryDefinitionFacetsAssignment_9() { return cFacetedQueryDefinitionFacetsAssignment_9; }
+		public Assignment getFacetedQueryDefinitionFacetsAssignment_5_4() { return cFacetedQueryDefinitionFacetsAssignment_5_4; }
 		
 		//FacetedQueryDefinitionFacets
-		public RuleCall getFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_9_0() { return cFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_9_0; }
+		public RuleCall getFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_4_0() { return cFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_4_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_10() { return cRightCurlyBracketKeyword_10; }
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
 	}
 	public class IndexDefinitionKeyConceptElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.IndexDefinitionKeyConcept");
@@ -3642,7 +3655,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AlterDomain:
-	//	'alter' 'Domain' name=ID '{'
+	//	'alter' 'Domain' domain=[DomainType] '{'
 	//	'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? &
 	//	('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
 	//	constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit' ':' unit=STRING)?)
@@ -3804,7 +3817,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AlterDtDefinition:
-	//	'alter' 'DtDefinition' {DtDefinitionAlterAction} name=ID '{'
+	//	'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{'
 	//	dtDefinitionStereotype=DtDefinitionStereotype?
 	//	dtDefinitionIdField=DtDefinitionIdField?
 	//	dtDefinitionDataFields+=DtDefinitionDataField*
@@ -4028,11 +4041,11 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//FacetedQueryDefinition:
 	//	'create' 'FacetedQueryDefinition' {FacetedQueryDefinitionAction} name=ID '{'
-	//	facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept
-	//	facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria
-	//	facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery
-	//	facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass
-	//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
+	//	(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
+	//	facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
+	//	facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+	//	facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
+	//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
 	//	'}';
 	public FacetedQueryDefinitionElements getFacetedQueryDefinitionAccess() {
 		return pFacetedQueryDefinition;

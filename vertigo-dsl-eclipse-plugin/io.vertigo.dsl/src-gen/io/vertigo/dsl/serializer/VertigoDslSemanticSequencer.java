@@ -6,13 +6,13 @@ package io.vertigo.dsl.serializer;
 import com.google.inject.Inject;
 import io.vertigo.dsl.services.VertigoDslGrammarAccess;
 import io.vertigo.dsl.vertigoDsl.AlterDomain;
+import io.vertigo.dsl.vertigoDsl.AlterDtDefinition;
 import io.vertigo.dsl.vertigoDsl.Association;
 import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
 import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition;
 import io.vertigo.dsl.vertigoDsl.Domain;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionAction;
-import io.vertigo.dsl.vertigoDsl.DtDefinitionAlterAction;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataField;
@@ -81,6 +81,9 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case VertigoDslPackage.ALTER_DOMAIN:
 				sequence_AlterDomain(context, (AlterDomain) semanticObject); 
 				return; 
+			case VertigoDslPackage.ALTER_DT_DEFINITION:
+				sequence_AlterDtDefinition(context, (AlterDtDefinition) semanticObject); 
+				return; 
 			case VertigoDslPackage.ASSOCIATION:
 				sequence_Association(context, (Association) semanticObject); 
 				return; 
@@ -98,9 +101,6 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case VertigoDslPackage.DT_DEFINITION_ACTION:
 				sequence_DtDefinition(context, (DtDefinitionAction) semanticObject); 
-				return; 
-			case VertigoDslPackage.DT_DEFINITION_ALTER_ACTION:
-				sequence_AlterDtDefinition(context, (DtDefinitionAlterAction) semanticObject); 
 				return; 
 			case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD:
 				sequence_DtDefinitionComputedField(context, (DtDefinitionComputedField) semanticObject); 
@@ -231,7 +231,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=ID 
+	 *         domain=[DomainType|ID] 
 	 *         dataType=DataType 
 	 *         (
 	 *             (formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | multiple=BooleanString | unit=STRING)? 
@@ -246,12 +246,12 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Element returns DtDefinitionAlterAction
-	 *     AlterDtDefinition returns DtDefinitionAlterAction
+	 *     Element returns AlterDtDefinition
+	 *     AlterDtDefinition returns AlterDtDefinition
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=ID 
+	 *         dtDefinitione=[DtDefinitionType|ID] 
 	 *         dtDefinitionStereotype=DtDefinitionStereotype? 
 	 *         dtDefinitionIdField=DtDefinitionIdField? 
 	 *         dtDefinitionDataFields+=DtDefinitionDataField* 
@@ -259,7 +259,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *         (dtDefinitionDataSpace=DtDefinitionDataSpace | dtDefinitionSortField=DtDefinitionSortField | dtDefinitionDisplayField=DtDefinitionDisplayField)*
 	 *     )
 	 */
-	protected void sequence_AlterDtDefinition(ISerializationContext context, DtDefinitionAlterAction semanticObject) {
+	protected void sequence_AlterDtDefinition(ISerializationContext context, AlterDtDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -759,36 +759,17 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 * Constraint:
 	 *     (
 	 *         name=ID 
-	 *         facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept 
-	 *         facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria 
-	 *         facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery 
-	 *         facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass 
-	 *         facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
+	 *         (
+	 *             facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept | 
+	 *             facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria | 
+	 *             facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery | 
+	 *             facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass | 
+	 *             facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
+	 *         )+
 	 *     )
 	 */
 	protected void sequence_FacetedQueryDefinition(ISerializationContext context, FacetedQueryDefinitionAction semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__NAME));
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_KEY_CONCEPT) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_KEY_CONCEPT));
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA));
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY));
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS));
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getFacetedQueryDefinitionAccess().getNameIDTerminalRuleCall_3_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionKeyConceptFacetedQueryDefinitionKeyConceptParserRuleCall_5_0(), semanticObject.getFacetedQueryDefinitionKeyConcept());
-		feeder.accept(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_6_0(), semanticObject.getFacetedQueryDefinitionDomainCriteria());
-		feeder.accept(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_7_0(), semanticObject.getFacetedQueryDefinitionListFilterBuilderQuery());
-		feeder.accept(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_8_0(), semanticObject.getFacetedQueryDefinitionListFilterBuilderClass());
-		feeder.accept(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_9_0(), semanticObject.getFacetedQueryDefinitionFacets());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

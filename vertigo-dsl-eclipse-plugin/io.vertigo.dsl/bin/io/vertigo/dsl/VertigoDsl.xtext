@@ -84,7 +84,7 @@ Domain:
 	'}';
 	
 AlterDomain:
-	'alter' 'Domain' name=ID '{'
+	'alter' 'Domain' domain=[DomainType] '{'
 		'dataType' ':'  dataType=DataType
 		(('formatter' ':' formatter=[Formatter]) &
 		('storeType' ':' storeType=STRING)? &
@@ -154,7 +154,7 @@ DtDefinition:
 	'}';
 
 AlterDtDefinition:
-	'alter' 'DtDefinition' {DtDefinitionAlterAction} name=ID '{'
+	'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{'
 		dtDefinitionStereotype=DtDefinitionStereotype?
 		dtDefinitionIdField=DtDefinitionIdField?
 		dtDefinitionDataFields+=DtDefinitionDataField*
@@ -269,11 +269,11 @@ FacetedQueryDefinitionFacets:
 
 FacetedQueryDefinition:
 	'create' 'FacetedQueryDefinition' {FacetedQueryDefinitionAction} name=ID '{'
-		facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept
-		facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria
-		facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery
-		facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass
-		facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
+		(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
+		facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
+		facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+		facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
+		facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
 	'}';
 
 IndexDefinitionKeyConcept:

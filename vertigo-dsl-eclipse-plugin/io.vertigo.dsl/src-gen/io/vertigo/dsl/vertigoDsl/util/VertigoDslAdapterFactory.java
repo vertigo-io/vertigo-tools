@@ -331,11 +331,6 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createDtDefinitionActionAdapter();
       }
       @Override
-      public Adapter caseDtDefinitionAlterAction(DtDefinitionAlterAction object)
-      {
-        return createDtDefinitionAlterActionAdapter();
-      }
-      @Override
       public Adapter caseFacetDefinitionAction(FacetDefinitionAction object)
       {
         return createFacetDefinitionActionAdapter();
@@ -1133,21 +1128,6 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDtDefinitionActionAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAlterAction <em>Dt Definition Alter Action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionAlterAction
-   * @generated
-   */
-  public Adapter createDtDefinitionAlterActionAdapter()
   {
     return null;
   }
