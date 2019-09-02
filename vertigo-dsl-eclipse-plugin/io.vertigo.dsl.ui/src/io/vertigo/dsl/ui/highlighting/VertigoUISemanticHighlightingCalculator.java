@@ -23,6 +23,7 @@ import org.eclipse.xtext.util.CancelIndicator;
 
 import com.google.inject.Inject;
 
+import io.vertigo.dsl.serializer.VertigoDslSyntacticSequencer;
 import io.vertigo.dsl.services.VertigoDslGrammarAccess;
 
 
@@ -132,6 +133,7 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 					AbstractRule ruleCall = ((RuleCall) grammarElement).getRule();
 					if (ruleCall.getName().equals("TaskRequestString")) {
 						highlightSqlInNode(acceptor, node);
+						highlightSqlTableFieldsInNode(acceptor, node);
 						highlightVertigoParameterInNode(acceptor, node);
 					}
 				}
@@ -146,7 +148,7 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 		String text = node.getText();
 		Map<Integer, Integer> sqlKeywordPositionMap = getKeywordPositionMap(text, SQL_KEYWORDS); 
 		for (Entry<Integer, Integer> mapEntry : sqlKeywordPositionMap.entrySet()) {
-			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
+			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), VertigoDslHighlightingConfiguration.SQL_KEYWORD_ID);
 		}
 	}
 	
@@ -157,22 +159,22 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 		String text = node.getText();
 		Map<Integer, Integer> parameterPositionMap = getParameterPositionMap(text); 
 		for (Entry<Integer, Integer> mapEntry : parameterPositionMap.entrySet()) {
-			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.TASK_ID);
+			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), VertigoDslHighlightingConfiguration.SQL_PARAMETER_ID);
 		}
 		
 	}
 	
-//	private void highlightVertigoTagsInQuer(IHighlightedPositionAcceptor positionAcceptor, INode node) {
-//		String text = node.getText();
-//		Map<Integer, Integer> sqlKeywordPositionMap = getKeywordPositionMap(text, SQL_KEYWORDS); 
-//		for (Entry<Integer, Integer> mapEntry : sqlKeywordPositionMap.entrySet()) {
-//			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), DefaultHighlightingConfiguration.KEYWORD_ID);
-//		}
-//	}
+	private void highlightSqlTableFieldsInNode(IHighlightedPositionAcceptor positionAcceptor, INode node) {
+		Assert.isNotNull(node);
+		Assert.isNotNull(positionAcceptor);
+		
+		String text = node.getText();
+		Map<Integer, Integer> parameterPositionMap = getSqlTableFieldPositionMap(text); 
+		for (Entry<Integer, Integer> mapEntry : parameterPositionMap.entrySet()) {
+			positionAcceptor.addPosition(node.getOffset() + mapEntry.getKey() - 1, mapEntry.getValue(), VertigoDslHighlightingConfiguration.SQL_TABLE_FIELD_ID);
+		}
+	}
 	
-	
-	
-
 	private static Map<Integer, Integer> getKeywordPositionMap(String stringToParse, List<String> keywordsToFind) {
 		Map<Integer,Integer> keywordOffsetsAndLength = new HashMap<Integer, Integer>();
 		for (String keyword : keywordsToFind) {
@@ -189,7 +191,7 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 	
 	private static Map<Integer, Integer> getParameterPositionMap(String stringToParse) {
 		Map<Integer,Integer> keywordOffsetsAndLength = new HashMap<Integer, Integer>();
-		String parameterPattern = "#*#";
+		String parameterPattern = "#[0-9a-zA-Z\\._]*#";
 		Pattern pattern = Pattern.compile(parameterPattern,Pattern.CASE_INSENSITIVE);
 		Matcher matcher = pattern.matcher(stringToParse);
 		while (matcher.find()) {
@@ -198,4 +200,18 @@ public class VertigoUISemanticHighlightingCalculator implements ISemanticHighlig
 			
 		return keywordOffsetsAndLength;
 	}
+	
+	// 
+	private static Map<Integer, Integer> getSqlTableFieldPositionMap(String stringToParse) {
+		Map<Integer,Integer> keywordOffsetsAndLength = new HashMap<Integer, Integer>();
+		String parameterPattern = "\\.(\\w)*\\b";
+		Pattern pattern = Pattern.compile(parameterPattern,Pattern.CASE_INSENSITIVE);
+		Matcher matcher = pattern.matcher(stringToParse);
+		while (matcher.find()) {
+			keywordOffsetsAndLength.put(matcher.start() + 1, matcher.end() - matcher.start() - 1);
+		}
+			
+		return keywordOffsetsAndLength;
+	}
+	
 }

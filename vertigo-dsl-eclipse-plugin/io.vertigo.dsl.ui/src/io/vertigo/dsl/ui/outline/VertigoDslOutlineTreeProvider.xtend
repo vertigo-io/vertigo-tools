@@ -15,8 +15,6 @@ import io.vertigo.dsl.vertigoDsl.Formatter
 import io.vertigo.dsl.vertigoDsl.Model
 import io.vertigo.dsl.vertigoDsl.TaskDefinition
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
-import java.util.ArrayList
-import java.util.List
 import org.eclipse.xtext.ui.IImageHelper
 import org.eclipse.xtext.ui.editor.outline.impl.DefaultOutlineTreeProvider
 import org.eclipse.xtext.ui.editor.outline.impl.DocumentRootNode
@@ -70,50 +68,80 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	
 	// create categories for outline nodes
 	def protected _createChildren(DocumentRootNode parentNode, Model model) {
-		val List<VirtualOutlineNode> outlineNodes = new ArrayList<VirtualOutlineNode>()
+		//val List<VirtualOutlineNode> outlineNodes = new ArrayList<VirtualOutlineNode>()
 		
 		
 		// create feature groups
-		val dtDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("dtdefinition.png"),"Dt Definitions", false)
-		val domainOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("domain.png"),"Domains", false)
-		val constraintOutlineNode 	= new VirtualOutlineNode(parentNode, imageHelper.getImage("link.png"),"Constraints", false)
-		val formatterOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("formatter.png"),"Formatters", false)
-		val associationOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("assoc.png"),"Associations", false)
-		val taskOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("gear.png"),"Tasks", false)
-		val fileInfoOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"File Infos", false)
-		val facetDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Facet Definitions", false)
-		val facetedQueryDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Faceted Query Definitions", false)
-		val indexDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Index Definitions", false)
+		var VirtualOutlineNode domainOutlineNode = null
+		var VirtualOutlineNode dtDefinitionOutlineNode = null
+		var VirtualOutlineNode associationOutlineNode = null
+		var VirtualOutlineNode constraintOutlineNode 	= null
+		var VirtualOutlineNode formatterOutlineNode = null
+		var VirtualOutlineNode taskOutlineNode = null
+		var VirtualOutlineNode fileInfoOutlineNode = null
+		var VirtualOutlineNode facetDefinitionOutlineNode = null
+		var VirtualOutlineNode facetedQueryDefinitionOutlineNode = null
+		var VirtualOutlineNode indexDefinitionOutlineNode = null
 		
-		// add elements to each feature node		
-		model.elements.forEach[element | 
+		for (element : model.elements) {
 			if(element.eClass == VertigoDslPackage.Literals.DOMAIN || element.eClass == VertigoDslPackage.Literals.DECLARED_DOMAIN) {
+				if (domainOutlineNode === null) {
+					domainOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("domain.png"),"Domains", false)
+				}
 				createNode(domainOutlineNode, element);
 			} else if (element.eClass == VertigoDslPackage.Literals.DT_DEFINITION_ACTION || element.eClass == VertigoDslPackage.Literals.DECLARED_DT_DEFINITION) {
+				if (dtDefinitionOutlineNode === null) {
+					dtDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("dtdefinition.png"),"Dt Definitions", false)					
+				}
 				createNode(dtDefinitionOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.ASSOCIATION) {
+				if (associationOutlineNode === null) {
+					associationOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("assoc.png"),"Associations", false)		
+				}
 				createNode(associationOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.CONSTRAINT) {
+				if (constraintOutlineNode === null) {
+					constraintOutlineNode 	= new VirtualOutlineNode(parentNode, imageHelper.getImage("link.png"),"Constraints", false)		
+				}
 				createNode(constraintOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.FORMATTER) {
+				if (formatterOutlineNode === null) {
+					formatterOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("formatter.png"),"Formatters", false)		
+				}
 				createNode(formatterOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.TASK_DEFINITION) {
+				if (taskOutlineNode === null) {
+					taskOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("gear.png"),"Tasks", false)		
+				}
 				createNode(taskOutlineNode, element); 
 			} else if (element.eClass == VertigoDslPackage.Literals.FILE_INFO) {
+				if (fileInfoOutlineNode === null) {
+					fileInfoOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"File Infos", false)		
+				}
 				createNode(fileInfoOutlineNode, element);
 			} else if (element.eClass == VertigoDslPackage.Literals.FACET_DEFINITION_ACTION) {
+				if (facetDefinitionOutlineNode === null) {
+					facetDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Facet Definitions", false)			
+				}
 				createNode(facetDefinitionOutlineNode, element);
 			} else if (element.eClass == VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION) {
+				if (facetedQueryDefinitionOutlineNode === null) {
+					facetedQueryDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Faceted Query Definitions", false)					
+				}
 				createNode(facetedQueryDefinitionOutlineNode, element);
 			} else if (element.eClass == VertigoDslPackage.Literals.INDEX_DEFINITION_ACTION) {
+				if (indexDefinitionOutlineNode === null) {
+					indexDefinitionOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("file.png"),"Index Definitions", false)					
+				}
 				createNode(indexDefinitionOutlineNode, element);
 			}
-		]
+		}
 		
-		outlineNodes.forEach[outlineNode |
-			
-		]
+	
+		
 	}
+
+	
 	/*
 	def Object _text(DtDefinitionAction dtDefinitionAction) {
 		if (dtDefinitionAction.dtDefinitionStereotype !== null)

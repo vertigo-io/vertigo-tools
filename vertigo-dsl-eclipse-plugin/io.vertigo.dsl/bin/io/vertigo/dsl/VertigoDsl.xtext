@@ -171,7 +171,7 @@ enum MultiplicityString:
 
 Association:
 	'create' 'Association' name=ID '{'
-		(('fkFieldName' ':' fkFieldName=STRING ','? ) &
+		(('fkFieldName' ':' fkFieldName=STRING ','? )? &
 		('dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','?) &
 		('dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? ) &
 		('navigabilityA' ':' navigabilityA=BooleanString ','? )? &
@@ -298,8 +298,8 @@ IndexDefinitionLoaderId:
 
 IndexDefinition:
 	'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{'
-		(indexDefinitionKeyConcept=IndexDefinitionKeyConcept &
-		indexDefinitionDtIndex=IndexDefinitionDtIndex &
-		indexDefinitionLoaderId=IndexDefinitionLoaderId &
+		((indexDefinitionKeyConcept=IndexDefinitionKeyConcept) &
+		(indexDefinitionDtIndex=IndexDefinitionDtIndex) &
+		(indexDefinitionLoaderId=IndexDefinitionLoaderId) &
 		(indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo)?)
 	'}';

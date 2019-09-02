@@ -1807,7 +1807,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		
 		//Association:
-		//	'create' 'Association' name=ID '{' ('fkFieldName' ':' fkFieldName=STRING ','? & 'dtDefinitionA' ':'
+		//	'create' 'Association' name=ID '{' (('fkFieldName' ':' fkFieldName=STRING ','?)? & 'dtDefinitionA' ':'
 		//	dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
 		//	':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('multiplicityA'
 		//	':' multiplicityA=MultiplicityString ','?)? & ('multiplicityB' ':' multiplicityB=MultiplicityString ','?)? &
@@ -1816,7 +1816,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'create' 'Association' name=ID '{' ('fkFieldName' ':' fkFieldName=STRING ','? & 'dtDefinitionA' ':'
+		//'create' 'Association' name=ID '{' (('fkFieldName' ':' fkFieldName=STRING ','?)? & 'dtDefinitionA' ':'
 		//dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
 		//':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('multiplicityA'
 		//':' multiplicityA=MultiplicityString ','?)? & ('multiplicityB' ':' multiplicityB=MultiplicityString ','?)? & ('labelA'
@@ -1839,14 +1839,14 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
 		
-		//'fkFieldName' ':' fkFieldName=STRING ','? & 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB'
-		//':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA' ':' navigabilityA=BooleanString ','?)? & ('navigabilityB'
-		//':' navigabilityB=BooleanString ','?)? & ('multiplicityA' ':' multiplicityA=MultiplicityString ','?)? &
-		//('multiplicityB' ':' multiplicityB=MultiplicityString ','?)? & ('labelA' ':' labelA=STRING ','?)? & ('labelB' ':'
+		//('fkFieldName' ':' fkFieldName=STRING ','?)? & 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','? &
+		//'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA' ':' navigabilityA=BooleanString ','?)? &
+		//('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('multiplicityA' ':' multiplicityA=MultiplicityString ','?)?
+		//& ('multiplicityB' ':' multiplicityB=MultiplicityString ','?)? & ('labelA' ':' labelA=STRING ','?)? & ('labelB' ':'
 		//labelB=STRING ','?)? & ('roleA' ':' roleA=STRING ','?)? & ('roleB' ':' roleB=STRING ','?)? & 'type' ':' type=STRING
 		public UnorderedGroup getUnorderedGroup_4() { return cUnorderedGroup_4; }
 		
-		//'fkFieldName' ':' fkFieldName=STRING ','?
+		//('fkFieldName' ':' fkFieldName=STRING ','?)?
 		public Group getGroup_4_0() { return cGroup_4_0; }
 		
 		//'fkFieldName'
@@ -3109,6 +3109,21 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cIndexDefinitionIndexCopyToIndexDefinitionIndexCopyToParserRuleCall_5_3_0 = (RuleCall)cIndexDefinitionIndexCopyToAssignment_5_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
+		////Association:
+		////	'create' 'Association' name=ID '{'
+		////		(('fkFieldName' ':' fkFieldName=STRING ','? )? &
+		////		('dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','?) &
+		////		('dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? ) &
+		////		('navigabilityA' ':' navigabilityA=BooleanString ','? )? &
+		////		('navigabilityB' ':' navigabilityB=BooleanString ','? )? &
+		////		('multiplicityA' ':' multiplicityA=MultiplicityString ','? )? &
+		////		('multiplicityB' ':' multiplicityB=MultiplicityString ','? )? &
+		////		('labelA' ':' labelA=STRING ','? )? &
+		////		('labelB' ':' labelB=STRING ','? )? &
+		////		('roleA' ':' roleA=STRING ','? )? &
+		////		('roleB' ':' roleB=STRING ','? )? &
+		////		('type' ':' type=STRING))
+		////	'}'; 
 		//IndexDefinition:
 		//	'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{' (indexDefinitionKeyConcept=IndexDefinitionKeyConcept &
 		//	indexDefinitionDtIndex=IndexDefinitionDtIndex & indexDefinitionLoaderId=IndexDefinitionLoaderId &
@@ -3844,7 +3859,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Association:
-	//	'create' 'Association' name=ID '{' ('fkFieldName' ':' fkFieldName=STRING ','? & 'dtDefinitionA' ':'
+	//	'create' 'Association' name=ID '{' (('fkFieldName' ':' fkFieldName=STRING ','?)? & 'dtDefinitionA' ':'
 	//	dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
 	//	':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('multiplicityA'
 	//	':' multiplicityA=MultiplicityString ','?)? & ('multiplicityB' ':' multiplicityB=MultiplicityString ','?)? &
@@ -4106,6 +4121,21 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getIndexDefinitionLoaderIdAccess().getRule();
 	}
 	
+	////Association:
+	////	'create' 'Association' name=ID '{'
+	////		(('fkFieldName' ':' fkFieldName=STRING ','? )? &
+	////		('dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','?) &
+	////		('dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? ) &
+	////		('navigabilityA' ':' navigabilityA=BooleanString ','? )? &
+	////		('navigabilityB' ':' navigabilityB=BooleanString ','? )? &
+	////		('multiplicityA' ':' multiplicityA=MultiplicityString ','? )? &
+	////		('multiplicityB' ':' multiplicityB=MultiplicityString ','? )? &
+	////		('labelA' ':' labelA=STRING ','? )? &
+	////		('labelB' ':' labelB=STRING ','? )? &
+	////		('roleA' ':' roleA=STRING ','? )? &
+	////		('roleB' ':' roleB=STRING ','? )? &
+	////		('type' ':' type=STRING))
+	////	'}'; 
 	//IndexDefinition:
 	//	'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{' (indexDefinitionKeyConcept=IndexDefinitionKeyConcept &
 	//	indexDefinitionDtIndex=IndexDefinitionDtIndex & indexDefinitionLoaderId=IndexDefinitionLoaderId &
