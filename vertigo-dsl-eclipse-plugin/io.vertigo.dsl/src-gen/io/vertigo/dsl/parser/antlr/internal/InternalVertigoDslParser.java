@@ -22,7 +22,7 @@ import java.util.ArrayList;
 @SuppressWarnings("all")
 public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final String[] tokenNames = new String[] {
-        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_ESCAPED_CHAR", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'.'", "'domain'", "'id'", "'label'", "'declare'", "'Domain'", "'DtDefinition'", "'create'", "'Constraint'", "'{'", "'className'", "':'", "'args'", "'msg'", "'}'", "'FileInfo'", "'storeName'", "'Formatter'", "'dataType'", "'formatter'", "'storeType'", "'indexType'", "'constraint'", "'['", "','", "']'", "'multiple'", "'unit'", "'alter'", "'required'", "'persistent'", "'expression'", "'field'", "'computed'", "'stereotype'", "'displayField'", "'sortField'", "'Association'", "'fkFieldName'", "'dtDefinitionA'", "'dtDefinitionB'", "'navigabilityA'", "'navigabilityB'", "'multiplicityA'", "'multiplicityB'", "'labelA'", "'labelB'", "'roleA'", "'roleB'", "'type'", "'inOut'", "'attribute'", "'Task'", "'request'", "'dtDefinition'", "'fieldName'", "'filter'", "'range'", "'FacetDefinition'", "'keyConcept'", "'domainCriteria'", "'listFilterBuilderClass'", "'listFilterBuilderQuery'", "'facets'", "'FacetedQueryDefinition'", "'dtIndex'", "'from'", "'indexCopyTo'", "'loaderId'", "'IndexDefinition'", "'Integer'", "'Double'", "'Boolean'", "'String'", "'LocalDate'", "'Instant'", "'BigDecimal'", "'Long'", "'DataStream'", "'\"true\"'", "'\"false\"'", "'\"0..1\"'", "'\"0..*\"'", "'\"in\"'", "'\"out\"'"
+        "<invalid>", "<EOR>", "<DOWN>", "<UP>", "RULE_ID", "RULE_STRING", "RULE_ESCAPED_CHAR", "RULE_INT", "RULE_ML_COMMENT", "RULE_SL_COMMENT", "RULE_WS", "RULE_ANY_OTHER", "'package'", "'.'", "'domain'", "'id'", "'label'", "'declare'", "'Domain'", "'DtDefinition'", "'create'", "'Constraint'", "'{'", "'className'", "':'", "'args'", "'msg'", "'}'", "'FileInfo'", "'storeName'", "'Formatter'", "'dataType'", "'formatter'", "'storeType'", "'indexType'", "'constraint'", "'['", "','", "']'", "'multiple'", "'unit'", "'alter'", "'required'", "'persistent'", "'expression'", "'field'", "'computed'", "'stereotype'", "'displayField'", "'sortField'", "'handleField'", "'Association'", "'fkFieldName'", "'dtDefinitionA'", "'dtDefinitionB'", "'navigabilityA'", "'navigabilityB'", "'multiplicityA'", "'multiplicityB'", "'labelA'", "'labelB'", "'roleA'", "'roleB'", "'type'", "'inOut'", "'attribute'", "'Task'", "'request'", "'dtDefinition'", "'fieldName'", "'filter'", "'range'", "'FacetDefinition'", "'keyConcept'", "'domainCriteria'", "'listFilterBuilderClass'", "'listFilterBuilderQuery'", "'facets'", "'FacetedQueryDefinition'", "'dtIndex'", "'from'", "'indexCopyTo'", "'loaderId'", "'IndexDefinition'", "'Integer'", "'Double'", "'Boolean'", "'String'", "'LocalDate'", "'Instant'", "'BigDecimal'", "'Long'", "'DataStream'", "'\"true\"'", "'\"false\"'", "'\"0..1\"'", "'\"0..*\"'", "'\"1..1\"'", "'\"in\"'", "'\"out\"'"
     };
     public static final int T__50=50;
     public static final int T__59=59;
@@ -78,12 +78,14 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final int T__16=16;
     public static final int T__17=17;
     public static final int T__18=18;
+    public static final int T__99=99;
     public static final int T__12=12;
     public static final int T__13=13;
     public static final int T__14=14;
     public static final int T__95=95;
     public static final int T__96=96;
     public static final int T__97=97;
+    public static final int T__98=98;
     public static final int T__26=26;
     public static final int T__27=27;
     public static final int T__28=28;
@@ -5991,8 +5993,141 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     // $ANTLR end "ruleDtDefinitionSortField"
 
 
+    // $ANTLR start "entryRuleDtDefinitionHandleField"
+    // InternalVertigoDsl.g:2447:1: entryRuleDtDefinitionHandleField returns [EObject current=null] : iv_ruleDtDefinitionHandleField= ruleDtDefinitionHandleField EOF ;
+    public final EObject entryRuleDtDefinitionHandleField() throws RecognitionException {
+        EObject current = null;
+
+        EObject iv_ruleDtDefinitionHandleField = null;
+
+
+        try {
+            // InternalVertigoDsl.g:2447:64: (iv_ruleDtDefinitionHandleField= ruleDtDefinitionHandleField EOF )
+            // InternalVertigoDsl.g:2448:2: iv_ruleDtDefinitionHandleField= ruleDtDefinitionHandleField EOF
+            {
+             newCompositeNode(grammarAccess.getDtDefinitionHandleFieldRule()); 
+            pushFollow(FOLLOW_1);
+            iv_ruleDtDefinitionHandleField=ruleDtDefinitionHandleField();
+
+            state._fsp--;
+
+             current =iv_ruleDtDefinitionHandleField; 
+            match(input,EOF,FOLLOW_2); 
+
+            }
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "entryRuleDtDefinitionHandleField"
+
+
+    // $ANTLR start "ruleDtDefinitionHandleField"
+    // InternalVertigoDsl.g:2454:1: ruleDtDefinitionHandleField returns [EObject current=null] : (otherlv_0= 'handleField' otherlv_1= ':' ( (lv_handleField_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
+    public final EObject ruleDtDefinitionHandleField() throws RecognitionException {
+        EObject current = null;
+
+        Token otherlv_0=null;
+        Token otherlv_1=null;
+        Token lv_handleField_2_0=null;
+        Token otherlv_3=null;
+
+
+        	enterRule();
+
+        try {
+            // InternalVertigoDsl.g:2460:2: ( (otherlv_0= 'handleField' otherlv_1= ':' ( (lv_handleField_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:2461:2: (otherlv_0= 'handleField' otherlv_1= ':' ( (lv_handleField_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            {
+            // InternalVertigoDsl.g:2461:2: (otherlv_0= 'handleField' otherlv_1= ':' ( (lv_handleField_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:2462:3: otherlv_0= 'handleField' otherlv_1= ':' ( (lv_handleField_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
+            {
+            otherlv_0=(Token)match(input,50,FOLLOW_13); 
+
+            			newLeafNode(otherlv_0, grammarAccess.getDtDefinitionHandleFieldAccess().getHandleFieldKeyword_0());
+            		
+            otherlv_1=(Token)match(input,24,FOLLOW_14); 
+
+            			newLeafNode(otherlv_1, grammarAccess.getDtDefinitionHandleFieldAccess().getColonKeyword_1());
+            		
+            // InternalVertigoDsl.g:2470:3: ( (lv_handleField_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:2471:4: (lv_handleField_2_0= RULE_STRING )
+            {
+            // InternalVertigoDsl.g:2471:4: (lv_handleField_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:2472:5: lv_handleField_2_0= RULE_STRING
+            {
+            lv_handleField_2_0=(Token)match(input,RULE_STRING,FOLLOW_39); 
+
+            					newLeafNode(lv_handleField_2_0, grammarAccess.getDtDefinitionHandleFieldAccess().getHandleFieldSTRINGTerminalRuleCall_2_0());
+            				
+
+            					if (current==null) {
+            						current = createModelElement(grammarAccess.getDtDefinitionHandleFieldRule());
+            					}
+            					setWithLastConsumed(
+            						current,
+            						"handleField",
+            						lv_handleField_2_0,
+            						"io.vertigo.dsl.VertigoDsl.STRING");
+            				
+
+            }
+
+
+            }
+
+            // InternalVertigoDsl.g:2488:3: (otherlv_3= ',' )?
+            int alt34=2;
+            int LA34_0 = input.LA(1);
+
+            if ( (LA34_0==37) ) {
+                alt34=1;
+            }
+            switch (alt34) {
+                case 1 :
+                    // InternalVertigoDsl.g:2489:4: otherlv_3= ','
+                    {
+                    otherlv_3=(Token)match(input,37,FOLLOW_2); 
+
+                    				newLeafNode(otherlv_3, grammarAccess.getDtDefinitionHandleFieldAccess().getCommaKeyword_3());
+                    			
+
+                    }
+                    break;
+
+            }
+
+
+            }
+
+
+            }
+
+
+            	leaveRule();
+
+        }
+
+            catch (RecognitionException re) {
+                recover(input,re);
+                appendSkippedTokens();
+            }
+        finally {
+        }
+        return current;
+    }
+    // $ANTLR end "ruleDtDefinitionHandleField"
+
+
     // $ANTLR start "entryRuleDtDefinition"
-    // InternalVertigoDsl.g:2447:1: entryRuleDtDefinition returns [EObject current=null] : iv_ruleDtDefinition= ruleDtDefinition EOF ;
+    // InternalVertigoDsl.g:2498:1: entryRuleDtDefinition returns [EObject current=null] : iv_ruleDtDefinition= ruleDtDefinition EOF ;
     public final EObject entryRuleDtDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -6000,8 +6135,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:2447:53: (iv_ruleDtDefinition= ruleDtDefinition EOF )
-            // InternalVertigoDsl.g:2448:2: iv_ruleDtDefinition= ruleDtDefinition EOF
+            // InternalVertigoDsl.g:2498:53: (iv_ruleDtDefinition= ruleDtDefinition EOF )
+            // InternalVertigoDsl.g:2499:2: iv_ruleDtDefinition= ruleDtDefinition EOF
             {
              newCompositeNode(grammarAccess.getDtDefinitionRule()); 
             pushFollow(FOLLOW_1);
@@ -6028,7 +6163,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDtDefinition"
-    // InternalVertigoDsl.g:2454:1: ruleDtDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}' ) ;
+    // InternalVertigoDsl.g:2505:1: ruleDtDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_14= '}' ) ;
     public final EObject ruleDtDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -6036,7 +6171,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token lv_name_3_0=null;
         Token otherlv_4=null;
-        Token otherlv_13=null;
+        Token otherlv_14=null;
         EObject lv_dtDefinitionStereotype_5_0 = null;
 
         EObject lv_dtDefinitionIdField_6_0 = null;
@@ -6049,18 +6184,20 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
         EObject lv_dtDefinitionSortField_11_0 = null;
 
-        EObject lv_dtDefinitionDisplayField_12_0 = null;
+        EObject lv_dtDefinitionHandleField_12_0 = null;
+
+        EObject lv_dtDefinitionDisplayField_13_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:2460:2: ( (otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}' ) )
-            // InternalVertigoDsl.g:2461:2: (otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}' )
+            // InternalVertigoDsl.g:2511:2: ( (otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_14= '}' ) )
+            // InternalVertigoDsl.g:2512:2: (otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_14= '}' )
             {
-            // InternalVertigoDsl.g:2461:2: (otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}' )
-            // InternalVertigoDsl.g:2462:3: otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}'
+            // InternalVertigoDsl.g:2512:2: (otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_14= '}' )
+            // InternalVertigoDsl.g:2513:3: otherlv_0= 'create' otherlv_1= 'DtDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_14= '}'
             {
             otherlv_0=(Token)match(input,20,FOLLOW_9); 
 
@@ -6070,8 +6207,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getDtDefinitionAccess().getDtDefinitionKeyword_1());
             		
-            // InternalVertigoDsl.g:2470:3: ()
-            // InternalVertigoDsl.g:2471:4: 
+            // InternalVertigoDsl.g:2521:3: ()
+            // InternalVertigoDsl.g:2522:4: 
             {
 
             				current = forceCreateModelElement(
@@ -6081,11 +6218,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:2477:3: ( (lv_name_3_0= RULE_ID ) )
-            // InternalVertigoDsl.g:2478:4: (lv_name_3_0= RULE_ID )
+            // InternalVertigoDsl.g:2528:3: ( (lv_name_3_0= RULE_ID ) )
+            // InternalVertigoDsl.g:2529:4: (lv_name_3_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:2478:4: (lv_name_3_0= RULE_ID )
-            // InternalVertigoDsl.g:2479:5: lv_name_3_0= RULE_ID
+            // InternalVertigoDsl.g:2529:4: (lv_name_3_0= RULE_ID )
+            // InternalVertigoDsl.g:2530:5: lv_name_3_0= RULE_ID
             {
             lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -6111,19 +6248,19 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getDtDefinitionAccess().getLeftCurlyBracketKeyword_4());
             		
-            // InternalVertigoDsl.g:2499:3: ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )?
-            int alt34=2;
-            int LA34_0 = input.LA(1);
+            // InternalVertigoDsl.g:2550:3: ( (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype ) )?
+            int alt35=2;
+            int LA35_0 = input.LA(1);
 
-            if ( (LA34_0==47) ) {
-                alt34=1;
+            if ( (LA35_0==47) ) {
+                alt35=1;
             }
-            switch (alt34) {
+            switch (alt35) {
                 case 1 :
-                    // InternalVertigoDsl.g:2500:4: (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype )
+                    // InternalVertigoDsl.g:2551:4: (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype )
                     {
-                    // InternalVertigoDsl.g:2500:4: (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype )
-                    // InternalVertigoDsl.g:2501:5: lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype
+                    // InternalVertigoDsl.g:2551:4: (lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype )
+                    // InternalVertigoDsl.g:2552:5: lv_dtDefinitionStereotype_5_0= ruleDtDefinitionStereotype
                     {
 
                     					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_5_0());
@@ -6153,19 +6290,19 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:2518:3: ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )?
-            int alt35=2;
-            int LA35_0 = input.LA(1);
+            // InternalVertigoDsl.g:2569:3: ( (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField ) )?
+            int alt36=2;
+            int LA36_0 = input.LA(1);
 
-            if ( (LA35_0==15) ) {
-                alt35=1;
+            if ( (LA36_0==15) ) {
+                alt36=1;
             }
-            switch (alt35) {
+            switch (alt36) {
                 case 1 :
-                    // InternalVertigoDsl.g:2519:4: (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField )
+                    // InternalVertigoDsl.g:2570:4: (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField )
                     {
-                    // InternalVertigoDsl.g:2519:4: (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField )
-                    // InternalVertigoDsl.g:2520:5: lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField
+                    // InternalVertigoDsl.g:2570:4: (lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField )
+                    // InternalVertigoDsl.g:2571:5: lv_dtDefinitionIdField_6_0= ruleDtDefinitionIdField
                     {
 
                     					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_6_0());
@@ -6195,23 +6332,23 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:2537:3: ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )*
-            loop36:
+            // InternalVertigoDsl.g:2588:3: ( (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField ) )*
+            loop37:
             do {
-                int alt36=2;
-                int LA36_0 = input.LA(1);
+                int alt37=2;
+                int LA37_0 = input.LA(1);
 
-                if ( (LA36_0==45) ) {
-                    alt36=1;
+                if ( (LA37_0==45) ) {
+                    alt37=1;
                 }
 
 
-                switch (alt36) {
+                switch (alt37) {
             	case 1 :
-            	    // InternalVertigoDsl.g:2538:4: (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField )
+            	    // InternalVertigoDsl.g:2589:4: (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField )
             	    {
-            	    // InternalVertigoDsl.g:2538:4: (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField )
-            	    // InternalVertigoDsl.g:2539:5: lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField
+            	    // InternalVertigoDsl.g:2589:4: (lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField )
+            	    // InternalVertigoDsl.g:2590:5: lv_dtDefinitionDataFields_7_0= ruleDtDefinitionDataField
             	    {
 
             	    					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_7_0());
@@ -6240,27 +6377,27 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop36;
+            	    break loop37;
                 }
             } while (true);
 
-            // InternalVertigoDsl.g:2556:3: ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )*
-            loop37:
+            // InternalVertigoDsl.g:2607:3: ( (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField ) )*
+            loop38:
             do {
-                int alt37=2;
-                int LA37_0 = input.LA(1);
+                int alt38=2;
+                int LA38_0 = input.LA(1);
 
-                if ( (LA37_0==46) ) {
-                    alt37=1;
+                if ( (LA38_0==46) ) {
+                    alt38=1;
                 }
 
 
-                switch (alt37) {
+                switch (alt38) {
             	case 1 :
-            	    // InternalVertigoDsl.g:2557:4: (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField )
+            	    // InternalVertigoDsl.g:2608:4: (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField )
             	    {
-            	    // InternalVertigoDsl.g:2557:4: (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField )
-            	    // InternalVertigoDsl.g:2558:5: lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField
+            	    // InternalVertigoDsl.g:2608:4: (lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField )
+            	    // InternalVertigoDsl.g:2609:5: lv_dtDefinitionComputedFields_8_0= ruleDtDefinitionComputedField
             	    {
 
             	    					newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_8_0());
@@ -6289,66 +6426,69 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop37;
+            	    break loop38;
                 }
             } while (true);
 
-            // InternalVertigoDsl.g:2575:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) )
-            // InternalVertigoDsl.g:2576:4: ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) )
+            // InternalVertigoDsl.g:2626:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) )
+            // InternalVertigoDsl.g:2627:4: ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) )
             {
-            // InternalVertigoDsl.g:2576:4: ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) )
-            // InternalVertigoDsl.g:2577:5: ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* )
+            // InternalVertigoDsl.g:2627:4: ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) )
+            // InternalVertigoDsl.g:2628:5: ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* )
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
             				
-            // InternalVertigoDsl.g:2580:5: ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* )
-            // InternalVertigoDsl.g:2581:6: ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )*
+            // InternalVertigoDsl.g:2631:5: ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* )
+            // InternalVertigoDsl.g:2632:6: ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )*
             {
-            // InternalVertigoDsl.g:2581:6: ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )*
-            loop38:
+            // InternalVertigoDsl.g:2632:6: ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) ) )*
+            loop39:
             do {
-                int alt38=4;
-                int LA38_0 = input.LA(1);
+                int alt39=5;
+                int LA39_0 = input.LA(1);
 
-                if ( LA38_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
-                    alt38=1;
+                if ( LA39_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
+                    alt39=1;
                 }
-                else if ( LA38_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
-                    alt38=2;
+                else if ( LA39_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
+                    alt39=2;
                 }
-                else if ( LA38_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
-                    alt38=3;
+                else if ( LA39_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
+                    alt39=3;
+                }
+                else if ( LA39_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 3) ) {
+                    alt39=4;
                 }
 
 
-                switch (alt38) {
+                switch (alt39) {
             	case 1 :
-            	    // InternalVertigoDsl.g:2582:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) )
+            	    // InternalVertigoDsl.g:2633:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2582:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) )
-            	    // InternalVertigoDsl.g:2583:5: {...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) )
+            	    // InternalVertigoDsl.g:2633:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) ) )
+            	    // InternalVertigoDsl.g:2634:5: {...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleDtDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:2583:109: ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) )
-            	    // InternalVertigoDsl.g:2584:6: ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) )
+            	    // InternalVertigoDsl.g:2634:109: ( ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) ) )
+            	    // InternalVertigoDsl.g:2635:6: ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 0);
             	    					
-            	    // InternalVertigoDsl.g:2587:9: ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) )
-            	    // InternalVertigoDsl.g:2587:10: {...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) )
+            	    // InternalVertigoDsl.g:2638:9: ({...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) ) )
+            	    // InternalVertigoDsl.g:2638:10: {...}? => ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleDtDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:2587:19: ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) )
-            	    // InternalVertigoDsl.g:2587:20: (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace )
+            	    // InternalVertigoDsl.g:2638:19: ( (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace ) )
+            	    // InternalVertigoDsl.g:2638:20: (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace )
             	    {
-            	    // InternalVertigoDsl.g:2587:20: (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace )
-            	    // InternalVertigoDsl.g:2588:10: lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace
+            	    // InternalVertigoDsl.g:2638:20: (lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace )
+            	    // InternalVertigoDsl.g:2639:10: lv_dtDefinitionDataSpace_10_0= ruleDtDefinitionDataSpace
             	    {
 
             	    										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_9_0_0());
@@ -6391,31 +6531,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:2610:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2661:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2610:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) )
-            	    // InternalVertigoDsl.g:2611:5: {...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) )
+            	    // InternalVertigoDsl.g:2661:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2662:5: {...}? => ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleDtDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:2611:109: ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) )
-            	    // InternalVertigoDsl.g:2612:6: ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) )
+            	    // InternalVertigoDsl.g:2662:109: ( ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) ) )
+            	    // InternalVertigoDsl.g:2663:6: ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 1);
             	    					
-            	    // InternalVertigoDsl.g:2615:9: ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) )
-            	    // InternalVertigoDsl.g:2615:10: {...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) )
+            	    // InternalVertigoDsl.g:2666:9: ({...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) ) )
+            	    // InternalVertigoDsl.g:2666:10: {...}? => ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleDtDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:2615:19: ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) )
-            	    // InternalVertigoDsl.g:2615:20: (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField )
+            	    // InternalVertigoDsl.g:2666:19: ( (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField ) )
+            	    // InternalVertigoDsl.g:2666:20: (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField )
             	    {
-            	    // InternalVertigoDsl.g:2615:20: (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField )
-            	    // InternalVertigoDsl.g:2616:10: lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField
+            	    // InternalVertigoDsl.g:2666:20: (lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField )
+            	    // InternalVertigoDsl.g:2667:10: lv_dtDefinitionSortField_11_0= ruleDtDefinitionSortField
             	    {
 
             	    										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_9_1_0());
@@ -6458,37 +6598,104 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalVertigoDsl.g:2638:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2689:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2638:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) )
-            	    // InternalVertigoDsl.g:2639:5: {...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) )
+            	    // InternalVertigoDsl.g:2689:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2690:5: {...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleDtDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2)");
             	    }
-            	    // InternalVertigoDsl.g:2639:109: ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) )
-            	    // InternalVertigoDsl.g:2640:6: ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) )
+            	    // InternalVertigoDsl.g:2690:109: ( ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) ) )
+            	    // InternalVertigoDsl.g:2691:6: ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 2);
             	    					
-            	    // InternalVertigoDsl.g:2643:9: ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) )
-            	    // InternalVertigoDsl.g:2643:10: {...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) )
+            	    // InternalVertigoDsl.g:2694:9: ({...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) ) )
+            	    // InternalVertigoDsl.g:2694:10: {...}? => ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleDtDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:2643:19: ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) )
-            	    // InternalVertigoDsl.g:2643:20: (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField )
+            	    // InternalVertigoDsl.g:2694:19: ( (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField ) )
+            	    // InternalVertigoDsl.g:2694:20: (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField )
             	    {
-            	    // InternalVertigoDsl.g:2643:20: (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField )
-            	    // InternalVertigoDsl.g:2644:10: lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField
+            	    // InternalVertigoDsl.g:2694:20: (lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField )
+            	    // InternalVertigoDsl.g:2695:10: lv_dtDefinitionHandleField_12_0= ruleDtDefinitionHandleField
             	    {
 
-            	    										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0());
+            	    										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionHandleFieldDtDefinitionHandleFieldParserRuleCall_9_2_0());
             	    									
             	    pushFollow(FOLLOW_44);
-            	    lv_dtDefinitionDisplayField_12_0=ruleDtDefinitionDisplayField();
+            	    lv_dtDefinitionHandleField_12_0=ruleDtDefinitionHandleField();
+
+            	    state._fsp--;
+
+
+            	    										if (current==null) {
+            	    											current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
+            	    										}
+            	    										set(
+            	    											current,
+            	    											"dtDefinitionHandleField",
+            	    											lv_dtDefinitionHandleField_12_0,
+            	    											"io.vertigo.dsl.VertigoDsl.DtDefinitionHandleField");
+            	    										afterParserOrEnumRuleCall();
+            	    									
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+
+            	     
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
+            	    					
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 4 :
+            	    // InternalVertigoDsl.g:2717:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) )
+            	    {
+            	    // InternalVertigoDsl.g:2717:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2718:5: {...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) )
+            	    {
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 3) ) {
+            	        throw new FailedPredicateException(input, "ruleDtDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 3)");
+            	    }
+            	    // InternalVertigoDsl.g:2718:109: ( ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) ) )
+            	    // InternalVertigoDsl.g:2719:6: ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) )
+            	    {
+
+            	    						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 3);
+            	    					
+            	    // InternalVertigoDsl.g:2722:9: ({...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) ) )
+            	    // InternalVertigoDsl.g:2722:10: {...}? => ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) )
+            	    {
+            	    if ( !((true)) ) {
+            	        throw new FailedPredicateException(input, "ruleDtDefinition", "true");
+            	    }
+            	    // InternalVertigoDsl.g:2722:19: ( (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField ) )
+            	    // InternalVertigoDsl.g:2722:20: (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField )
+            	    {
+            	    // InternalVertigoDsl.g:2722:20: (lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField )
+            	    // InternalVertigoDsl.g:2723:10: lv_dtDefinitionDisplayField_13_0= ruleDtDefinitionDisplayField
+            	    {
+
+            	    										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_3_0());
+            	    									
+            	    pushFollow(FOLLOW_44);
+            	    lv_dtDefinitionDisplayField_13_0=ruleDtDefinitionDisplayField();
 
             	    state._fsp--;
 
@@ -6499,7 +6706,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    										set(
             	    											current,
             	    											"dtDefinitionDisplayField",
-            	    											lv_dtDefinitionDisplayField_12_0,
+            	    											lv_dtDefinitionDisplayField_13_0,
             	    											"io.vertigo.dsl.VertigoDsl.DtDefinitionDisplayField");
             	    										afterParserOrEnumRuleCall();
             	    									
@@ -6526,7 +6733,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop38;
+            	    break loop39;
                 }
             } while (true);
 
@@ -6542,9 +6749,9 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_13=(Token)match(input,27,FOLLOW_2); 
+            otherlv_14=(Token)match(input,27,FOLLOW_2); 
 
-            			newLeafNode(otherlv_13, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_10());
+            			newLeafNode(otherlv_14, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_10());
             		
 
             }
@@ -6569,7 +6776,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAlterDtDefinition"
-    // InternalVertigoDsl.g:2681:1: entryRuleAlterDtDefinition returns [EObject current=null] : iv_ruleAlterDtDefinition= ruleAlterDtDefinition EOF ;
+    // InternalVertigoDsl.g:2760:1: entryRuleAlterDtDefinition returns [EObject current=null] : iv_ruleAlterDtDefinition= ruleAlterDtDefinition EOF ;
     public final EObject entryRuleAlterDtDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -6577,8 +6784,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:2681:58: (iv_ruleAlterDtDefinition= ruleAlterDtDefinition EOF )
-            // InternalVertigoDsl.g:2682:2: iv_ruleAlterDtDefinition= ruleAlterDtDefinition EOF
+            // InternalVertigoDsl.g:2760:58: (iv_ruleAlterDtDefinition= ruleAlterDtDefinition EOF )
+            // InternalVertigoDsl.g:2761:2: iv_ruleAlterDtDefinition= ruleAlterDtDefinition EOF
             {
              newCompositeNode(grammarAccess.getAlterDtDefinitionRule()); 
             pushFollow(FOLLOW_1);
@@ -6605,7 +6812,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAlterDtDefinition"
-    // InternalVertigoDsl.g:2688:1: ruleAlterDtDefinition returns [EObject current=null] : (otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_12= '}' ) ;
+    // InternalVertigoDsl.g:2767:1: ruleAlterDtDefinition returns [EObject current=null] : (otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}' ) ;
     public final EObject ruleAlterDtDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -6613,7 +6820,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         Token otherlv_1=null;
         Token otherlv_2=null;
         Token otherlv_3=null;
-        Token otherlv_12=null;
+        Token otherlv_13=null;
         EObject lv_dtDefinitionStereotype_4_0 = null;
 
         EObject lv_dtDefinitionIdField_5_0 = null;
@@ -6626,18 +6833,20 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
         EObject lv_dtDefinitionSortField_10_0 = null;
 
-        EObject lv_dtDefinitionDisplayField_11_0 = null;
+        EObject lv_dtDefinitionHandleField_11_0 = null;
+
+        EObject lv_dtDefinitionDisplayField_12_0 = null;
 
 
 
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:2694:2: ( (otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_12= '}' ) )
-            // InternalVertigoDsl.g:2695:2: (otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_12= '}' )
+            // InternalVertigoDsl.g:2773:2: ( (otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}' ) )
+            // InternalVertigoDsl.g:2774:2: (otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}' )
             {
-            // InternalVertigoDsl.g:2695:2: (otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_12= '}' )
-            // InternalVertigoDsl.g:2696:3: otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_12= '}'
+            // InternalVertigoDsl.g:2774:2: (otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}' )
+            // InternalVertigoDsl.g:2775:3: otherlv_0= 'alter' otherlv_1= 'DtDefinition' ( (otherlv_2= RULE_ID ) ) otherlv_3= '{' ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )? ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )? ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )* ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )* ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) ) otherlv_13= '}'
             {
             otherlv_0=(Token)match(input,41,FOLLOW_9); 
 
@@ -6647,11 +6856,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionKeyword_1());
             		
-            // InternalVertigoDsl.g:2704:3: ( (otherlv_2= RULE_ID ) )
-            // InternalVertigoDsl.g:2705:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:2783:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:2784:4: (otherlv_2= RULE_ID )
             {
-            // InternalVertigoDsl.g:2705:4: (otherlv_2= RULE_ID )
-            // InternalVertigoDsl.g:2706:5: otherlv_2= RULE_ID
+            // InternalVertigoDsl.g:2784:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:2785:5: otherlv_2= RULE_ID
             {
 
             					if (current==null) {
@@ -6672,19 +6881,19 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getAlterDtDefinitionAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalVertigoDsl.g:2721:3: ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )?
-            int alt39=2;
-            int LA39_0 = input.LA(1);
+            // InternalVertigoDsl.g:2800:3: ( (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype ) )?
+            int alt40=2;
+            int LA40_0 = input.LA(1);
 
-            if ( (LA39_0==47) ) {
-                alt39=1;
+            if ( (LA40_0==47) ) {
+                alt40=1;
             }
-            switch (alt39) {
+            switch (alt40) {
                 case 1 :
-                    // InternalVertigoDsl.g:2722:4: (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype )
+                    // InternalVertigoDsl.g:2801:4: (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype )
                     {
-                    // InternalVertigoDsl.g:2722:4: (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype )
-                    // InternalVertigoDsl.g:2723:5: lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype
+                    // InternalVertigoDsl.g:2801:4: (lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype )
+                    // InternalVertigoDsl.g:2802:5: lv_dtDefinitionStereotype_4_0= ruleDtDefinitionStereotype
                     {
 
                     					newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionStereotypeDtDefinitionStereotypeParserRuleCall_4_0());
@@ -6714,19 +6923,19 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:2740:3: ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )?
-            int alt40=2;
-            int LA40_0 = input.LA(1);
+            // InternalVertigoDsl.g:2819:3: ( (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField ) )?
+            int alt41=2;
+            int LA41_0 = input.LA(1);
 
-            if ( (LA40_0==15) ) {
-                alt40=1;
+            if ( (LA41_0==15) ) {
+                alt41=1;
             }
-            switch (alt40) {
+            switch (alt41) {
                 case 1 :
-                    // InternalVertigoDsl.g:2741:4: (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField )
+                    // InternalVertigoDsl.g:2820:4: (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField )
                     {
-                    // InternalVertigoDsl.g:2741:4: (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField )
-                    // InternalVertigoDsl.g:2742:5: lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField
+                    // InternalVertigoDsl.g:2820:4: (lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField )
+                    // InternalVertigoDsl.g:2821:5: lv_dtDefinitionIdField_5_0= ruleDtDefinitionIdField
                     {
 
                     					newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionIdFieldDtDefinitionIdFieldParserRuleCall_5_0());
@@ -6756,23 +6965,23 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:2759:3: ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )*
-            loop41:
+            // InternalVertigoDsl.g:2838:3: ( (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField ) )*
+            loop42:
             do {
-                int alt41=2;
-                int LA41_0 = input.LA(1);
+                int alt42=2;
+                int LA42_0 = input.LA(1);
 
-                if ( (LA41_0==45) ) {
-                    alt41=1;
+                if ( (LA42_0==45) ) {
+                    alt42=1;
                 }
 
 
-                switch (alt41) {
+                switch (alt42) {
             	case 1 :
-            	    // InternalVertigoDsl.g:2760:4: (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField )
+            	    // InternalVertigoDsl.g:2839:4: (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField )
             	    {
-            	    // InternalVertigoDsl.g:2760:4: (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField )
-            	    // InternalVertigoDsl.g:2761:5: lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField
+            	    // InternalVertigoDsl.g:2839:4: (lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField )
+            	    // InternalVertigoDsl.g:2840:5: lv_dtDefinitionDataFields_6_0= ruleDtDefinitionDataField
             	    {
 
             	    					newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDataFieldsDtDefinitionDataFieldParserRuleCall_6_0());
@@ -6801,27 +7010,27 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop41;
+            	    break loop42;
                 }
             } while (true);
 
-            // InternalVertigoDsl.g:2778:3: ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )*
-            loop42:
+            // InternalVertigoDsl.g:2857:3: ( (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField ) )*
+            loop43:
             do {
-                int alt42=2;
-                int LA42_0 = input.LA(1);
+                int alt43=2;
+                int LA43_0 = input.LA(1);
 
-                if ( (LA42_0==46) ) {
-                    alt42=1;
+                if ( (LA43_0==46) ) {
+                    alt43=1;
                 }
 
 
-                switch (alt42) {
+                switch (alt43) {
             	case 1 :
-            	    // InternalVertigoDsl.g:2779:4: (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField )
+            	    // InternalVertigoDsl.g:2858:4: (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField )
             	    {
-            	    // InternalVertigoDsl.g:2779:4: (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField )
-            	    // InternalVertigoDsl.g:2780:5: lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField
+            	    // InternalVertigoDsl.g:2858:4: (lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField )
+            	    // InternalVertigoDsl.g:2859:5: lv_dtDefinitionComputedFields_7_0= ruleDtDefinitionComputedField
             	    {
 
             	    					newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionComputedFieldsDtDefinitionComputedFieldParserRuleCall_7_0());
@@ -6850,66 +7059,69 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop42;
+            	    break loop43;
                 }
             } while (true);
 
-            // InternalVertigoDsl.g:2797:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) )
-            // InternalVertigoDsl.g:2798:4: ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) )
+            // InternalVertigoDsl.g:2876:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) ) )
+            // InternalVertigoDsl.g:2877:4: ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) )
             {
-            // InternalVertigoDsl.g:2798:4: ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) )
-            // InternalVertigoDsl.g:2799:5: ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* )
+            // InternalVertigoDsl.g:2877:4: ( ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* ) )
+            // InternalVertigoDsl.g:2878:5: ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* )
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8());
             				
-            // InternalVertigoDsl.g:2802:5: ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* )
-            // InternalVertigoDsl.g:2803:6: ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )*
+            // InternalVertigoDsl.g:2881:5: ( ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )* )
+            // InternalVertigoDsl.g:2882:6: ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )*
             {
-            // InternalVertigoDsl.g:2803:6: ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) ) )*
-            loop43:
+            // InternalVertigoDsl.g:2882:6: ( ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) ) )*
+            loop44:
             do {
-                int alt43=4;
-                int LA43_0 = input.LA(1);
+                int alt44=5;
+                int LA44_0 = input.LA(1);
 
-                if ( LA43_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 0) ) {
-                    alt43=1;
+                if ( LA44_0 == 29 && getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 0) ) {
+                    alt44=1;
                 }
-                else if ( LA43_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 1) ) {
-                    alt43=2;
+                else if ( LA44_0 == 49 && getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 1) ) {
+                    alt44=2;
                 }
-                else if ( LA43_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 2) ) {
-                    alt43=3;
+                else if ( LA44_0 == 50 && getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 2) ) {
+                    alt44=3;
+                }
+                else if ( LA44_0 == 48 && getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 3) ) {
+                    alt44=4;
                 }
 
 
-                switch (alt43) {
+                switch (alt44) {
             	case 1 :
-            	    // InternalVertigoDsl.g:2804:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) )
+            	    // InternalVertigoDsl.g:2883:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2804:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) )
-            	    // InternalVertigoDsl.g:2805:5: {...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) )
+            	    // InternalVertigoDsl.g:2883:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) ) )
+            	    // InternalVertigoDsl.g:2884:5: {...}? => ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleAlterDtDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:2805:114: ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) )
-            	    // InternalVertigoDsl.g:2806:6: ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) )
+            	    // InternalVertigoDsl.g:2884:114: ( ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) ) )
+            	    // InternalVertigoDsl.g:2885:6: ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 0);
             	    					
-            	    // InternalVertigoDsl.g:2809:9: ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) )
-            	    // InternalVertigoDsl.g:2809:10: {...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) )
+            	    // InternalVertigoDsl.g:2888:9: ({...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) ) )
+            	    // InternalVertigoDsl.g:2888:10: {...}? => ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAlterDtDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:2809:19: ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) )
-            	    // InternalVertigoDsl.g:2809:20: (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace )
+            	    // InternalVertigoDsl.g:2888:19: ( (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace ) )
+            	    // InternalVertigoDsl.g:2888:20: (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace )
             	    {
-            	    // InternalVertigoDsl.g:2809:20: (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace )
-            	    // InternalVertigoDsl.g:2810:10: lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace
+            	    // InternalVertigoDsl.g:2888:20: (lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace )
+            	    // InternalVertigoDsl.g:2889:10: lv_dtDefinitionDataSpace_9_0= ruleDtDefinitionDataSpace
             	    {
 
             	    										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDataSpaceDtDefinitionDataSpaceParserRuleCall_8_0_0());
@@ -6952,31 +7164,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:2832:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2911:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2832:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) )
-            	    // InternalVertigoDsl.g:2833:5: {...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) )
+            	    // InternalVertigoDsl.g:2911:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2912:5: {...}? => ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleAlterDtDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:2833:114: ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) )
-            	    // InternalVertigoDsl.g:2834:6: ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) )
+            	    // InternalVertigoDsl.g:2912:114: ( ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) ) )
+            	    // InternalVertigoDsl.g:2913:6: ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 1);
             	    					
-            	    // InternalVertigoDsl.g:2837:9: ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) )
-            	    // InternalVertigoDsl.g:2837:10: {...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) )
+            	    // InternalVertigoDsl.g:2916:9: ({...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) ) )
+            	    // InternalVertigoDsl.g:2916:10: {...}? => ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAlterDtDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:2837:19: ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) )
-            	    // InternalVertigoDsl.g:2837:20: (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField )
+            	    // InternalVertigoDsl.g:2916:19: ( (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField ) )
+            	    // InternalVertigoDsl.g:2916:20: (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField )
             	    {
-            	    // InternalVertigoDsl.g:2837:20: (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField )
-            	    // InternalVertigoDsl.g:2838:10: lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField
+            	    // InternalVertigoDsl.g:2916:20: (lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField )
+            	    // InternalVertigoDsl.g:2917:10: lv_dtDefinitionSortField_10_0= ruleDtDefinitionSortField
             	    {
 
             	    										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionSortFieldDtDefinitionSortFieldParserRuleCall_8_1_0());
@@ -7019,37 +7231,104 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalVertigoDsl.g:2860:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2939:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2860:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) ) )
-            	    // InternalVertigoDsl.g:2861:5: {...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) )
+            	    // InternalVertigoDsl.g:2939:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2940:5: {...}? => ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleAlterDtDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 2)");
             	    }
-            	    // InternalVertigoDsl.g:2861:114: ( ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) ) )
-            	    // InternalVertigoDsl.g:2862:6: ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) )
+            	    // InternalVertigoDsl.g:2940:114: ( ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) ) )
+            	    // InternalVertigoDsl.g:2941:6: ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 2);
             	    					
-            	    // InternalVertigoDsl.g:2865:9: ({...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) ) )
-            	    // InternalVertigoDsl.g:2865:10: {...}? => ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) )
+            	    // InternalVertigoDsl.g:2944:9: ({...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) ) )
+            	    // InternalVertigoDsl.g:2944:10: {...}? => ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAlterDtDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:2865:19: ( (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField ) )
-            	    // InternalVertigoDsl.g:2865:20: (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField )
+            	    // InternalVertigoDsl.g:2944:19: ( (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField ) )
+            	    // InternalVertigoDsl.g:2944:20: (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField )
             	    {
-            	    // InternalVertigoDsl.g:2865:20: (lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField )
-            	    // InternalVertigoDsl.g:2866:10: lv_dtDefinitionDisplayField_11_0= ruleDtDefinitionDisplayField
+            	    // InternalVertigoDsl.g:2944:20: (lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField )
+            	    // InternalVertigoDsl.g:2945:10: lv_dtDefinitionHandleField_11_0= ruleDtDefinitionHandleField
             	    {
 
-            	    										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0());
+            	    										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionHandleFieldDtDefinitionHandleFieldParserRuleCall_8_2_0());
             	    									
             	    pushFollow(FOLLOW_44);
-            	    lv_dtDefinitionDisplayField_11_0=ruleDtDefinitionDisplayField();
+            	    lv_dtDefinitionHandleField_11_0=ruleDtDefinitionHandleField();
+
+            	    state._fsp--;
+
+
+            	    										if (current==null) {
+            	    											current = createModelElementForParent(grammarAccess.getAlterDtDefinitionRule());
+            	    										}
+            	    										set(
+            	    											current,
+            	    											"dtDefinitionHandleField",
+            	    											lv_dtDefinitionHandleField_11_0,
+            	    											"io.vertigo.dsl.VertigoDsl.DtDefinitionHandleField");
+            	    										afterParserOrEnumRuleCall();
+            	    									
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+
+            	     
+            	    						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8());
+            	    					
+
+            	    }
+
+
+            	    }
+
+
+            	    }
+            	    break;
+            	case 4 :
+            	    // InternalVertigoDsl.g:2967:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) )
+            	    {
+            	    // InternalVertigoDsl.g:2967:4: ({...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) ) )
+            	    // InternalVertigoDsl.g:2968:5: {...}? => ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) )
+            	    {
+            	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 3) ) {
+            	        throw new FailedPredicateException(input, "ruleAlterDtDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 3)");
+            	    }
+            	    // InternalVertigoDsl.g:2968:114: ( ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) ) )
+            	    // InternalVertigoDsl.g:2969:6: ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) )
+            	    {
+
+            	    						getUnorderedGroupHelper().select(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 3);
+            	    					
+            	    // InternalVertigoDsl.g:2972:9: ({...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) ) )
+            	    // InternalVertigoDsl.g:2972:10: {...}? => ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) )
+            	    {
+            	    if ( !((true)) ) {
+            	        throw new FailedPredicateException(input, "ruleAlterDtDefinition", "true");
+            	    }
+            	    // InternalVertigoDsl.g:2972:19: ( (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField ) )
+            	    // InternalVertigoDsl.g:2972:20: (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField )
+            	    {
+            	    // InternalVertigoDsl.g:2972:20: (lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField )
+            	    // InternalVertigoDsl.g:2973:10: lv_dtDefinitionDisplayField_12_0= ruleDtDefinitionDisplayField
+            	    {
+
+            	    										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_3_0());
+            	    									
+            	    pushFollow(FOLLOW_44);
+            	    lv_dtDefinitionDisplayField_12_0=ruleDtDefinitionDisplayField();
 
             	    state._fsp--;
 
@@ -7060,7 +7339,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    										set(
             	    											current,
             	    											"dtDefinitionDisplayField",
-            	    											lv_dtDefinitionDisplayField_11_0,
+            	    											lv_dtDefinitionDisplayField_12_0,
             	    											"io.vertigo.dsl.VertigoDsl.DtDefinitionDisplayField");
             	    										afterParserOrEnumRuleCall();
             	    									
@@ -7087,7 +7366,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop43;
+            	    break loop44;
                 }
             } while (true);
 
@@ -7103,9 +7382,9 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_12=(Token)match(input,27,FOLLOW_2); 
+            otherlv_13=(Token)match(input,27,FOLLOW_2); 
 
-            			newLeafNode(otherlv_12, grammarAccess.getAlterDtDefinitionAccess().getRightCurlyBracketKeyword_9());
+            			newLeafNode(otherlv_13, grammarAccess.getAlterDtDefinitionAccess().getRightCurlyBracketKeyword_9());
             		
 
             }
@@ -7130,7 +7409,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleAssociation"
-    // InternalVertigoDsl.g:2903:1: entryRuleAssociation returns [EObject current=null] : iv_ruleAssociation= ruleAssociation EOF ;
+    // InternalVertigoDsl.g:3010:1: entryRuleAssociation returns [EObject current=null] : iv_ruleAssociation= ruleAssociation EOF ;
     public final EObject entryRuleAssociation() throws RecognitionException {
         EObject current = null;
 
@@ -7138,8 +7417,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:2903:52: (iv_ruleAssociation= ruleAssociation EOF )
-            // InternalVertigoDsl.g:2904:2: iv_ruleAssociation= ruleAssociation EOF
+            // InternalVertigoDsl.g:3010:52: (iv_ruleAssociation= ruleAssociation EOF )
+            // InternalVertigoDsl.g:3011:2: iv_ruleAssociation= ruleAssociation EOF
             {
              newCompositeNode(grammarAccess.getAssociationRule()); 
             pushFollow(FOLLOW_1);
@@ -7166,7 +7445,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleAssociation"
-    // InternalVertigoDsl.g:2910:1: ruleAssociation returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}' ) ;
+    // InternalVertigoDsl.g:3017:1: ruleAssociation returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}' ) ;
     public final EObject ruleAssociation() throws RecognitionException {
         EObject current = null;
 
@@ -7231,25 +7510,25 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:2916:2: ( (otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}' ) )
-            // InternalVertigoDsl.g:2917:2: (otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}' )
+            // InternalVertigoDsl.g:3023:2: ( (otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}' ) )
+            // InternalVertigoDsl.g:3024:2: (otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}' )
             {
-            // InternalVertigoDsl.g:2917:2: (otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}' )
-            // InternalVertigoDsl.g:2918:3: otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}'
+            // InternalVertigoDsl.g:3024:2: (otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}' )
+            // InternalVertigoDsl.g:3025:3: otherlv_0= 'create' otherlv_1= 'Association' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) ) otherlv_52= '}'
             {
             otherlv_0=(Token)match(input,20,FOLLOW_45); 
 
             			newLeafNode(otherlv_0, grammarAccess.getAssociationAccess().getCreateKeyword_0());
             		
-            otherlv_1=(Token)match(input,50,FOLLOW_8); 
+            otherlv_1=(Token)match(input,51,FOLLOW_8); 
 
             			newLeafNode(otherlv_1, grammarAccess.getAssociationAccess().getAssociationKeyword_1());
             		
-            // InternalVertigoDsl.g:2926:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalVertigoDsl.g:2927:4: (lv_name_2_0= RULE_ID )
+            // InternalVertigoDsl.g:3033:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalVertigoDsl.g:3034:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:2927:4: (lv_name_2_0= RULE_ID )
-            // InternalVertigoDsl.g:2928:5: lv_name_2_0= RULE_ID
+            // InternalVertigoDsl.g:3034:4: (lv_name_2_0= RULE_ID )
+            // InternalVertigoDsl.g:3035:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -7275,50 +7554,50 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_3, grammarAccess.getAssociationAccess().getLeftCurlyBracketKeyword_3());
             		
-            // InternalVertigoDsl.g:2948:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) )
-            // InternalVertigoDsl.g:2949:4: ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:3055:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) ) )
+            // InternalVertigoDsl.g:3056:4: ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) )
             {
-            // InternalVertigoDsl.g:2949:4: ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) )
-            // InternalVertigoDsl.g:2950:5: ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:3056:4: ( ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:3057:5: ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?)
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getAssociationAccess().getUnorderedGroup_4());
             				
-            // InternalVertigoDsl.g:2953:5: ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?)
-            // InternalVertigoDsl.g:2954:6: ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?
+            // InternalVertigoDsl.g:3060:5: ( ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:3061:6: ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+ {...}?
             {
-            // InternalVertigoDsl.g:2954:6: ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+
-            int cnt55=0;
-            loop55:
+            // InternalVertigoDsl.g:3061:6: ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+
+            int cnt56=0;
+            loop56:
             do {
-                int alt55=13;
-                alt55 = dfa55.predict(input);
-                switch (alt55) {
+                int alt56=13;
+                alt56 = dfa56.predict(input);
+                switch (alt56) {
             	case 1 :
-            	    // InternalVertigoDsl.g:2955:4: ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3062:4: ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2955:4: ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:2956:5: {...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3062:4: ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3063:5: {...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:2956:108: ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:2957:6: ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) )
+            	    // InternalVertigoDsl.g:3063:108: ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3064:6: ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0);
             	    					
-            	    // InternalVertigoDsl.g:2960:9: ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) )
-            	    // InternalVertigoDsl.g:2960:10: {...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? )
+            	    // InternalVertigoDsl.g:3067:9: ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) )
+            	    // InternalVertigoDsl.g:3067:10: {...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:2960:19: (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? )
-            	    // InternalVertigoDsl.g:2960:20: otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )?
+            	    // InternalVertigoDsl.g:3067:19: (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? )
+            	    // InternalVertigoDsl.g:3067:20: otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )?
             	    {
-            	    otherlv_5=(Token)match(input,51,FOLLOW_13); 
+            	    otherlv_5=(Token)match(input,52,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_5, grammarAccess.getAssociationAccess().getFkFieldNameKeyword_4_0_0());
             	    								
@@ -7326,11 +7605,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_6, grammarAccess.getAssociationAccess().getColonKeyword_4_0_1());
             	    								
-            	    // InternalVertigoDsl.g:2968:9: ( (lv_fkFieldName_7_0= RULE_STRING ) )
-            	    // InternalVertigoDsl.g:2969:10: (lv_fkFieldName_7_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3075:9: ( (lv_fkFieldName_7_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3076:10: (lv_fkFieldName_7_0= RULE_STRING )
             	    {
-            	    // InternalVertigoDsl.g:2969:10: (lv_fkFieldName_7_0= RULE_STRING )
-            	    // InternalVertigoDsl.g:2970:11: lv_fkFieldName_7_0= RULE_STRING
+            	    // InternalVertigoDsl.g:3076:10: (lv_fkFieldName_7_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3077:11: lv_fkFieldName_7_0= RULE_STRING
             	    {
             	    lv_fkFieldName_7_0=(Token)match(input,RULE_STRING,FOLLOW_47); 
 
@@ -7352,16 +7631,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:2986:9: (otherlv_8= ',' )?
-            	    int alt44=2;
-            	    int LA44_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3093:9: (otherlv_8= ',' )?
+            	    int alt45=2;
+            	    int LA45_0 = input.LA(1);
 
-            	    if ( (LA44_0==37) ) {
-            	        alt44=1;
+            	    if ( (LA45_0==37) ) {
+            	        alt45=1;
             	    }
-            	    switch (alt44) {
+            	    switch (alt45) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:2987:10: otherlv_8= ','
+            	            // InternalVertigoDsl.g:3094:10: otherlv_8= ','
             	            {
             	            otherlv_8=(Token)match(input,37,FOLLOW_48); 
 
@@ -7392,30 +7671,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:2998:4: ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3105:4: ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:2998:4: ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:2999:5: {...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3105:4: ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3106:5: {...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:2999:108: ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3000:6: ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) )
+            	    // InternalVertigoDsl.g:3106:108: ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3107:6: ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1);
             	    					
-            	    // InternalVertigoDsl.g:3003:9: ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) )
-            	    // InternalVertigoDsl.g:3003:10: {...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? )
+            	    // InternalVertigoDsl.g:3110:9: ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) )
+            	    // InternalVertigoDsl.g:3110:10: {...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3003:19: (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? )
-            	    // InternalVertigoDsl.g:3003:20: otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )?
+            	    // InternalVertigoDsl.g:3110:19: (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? )
+            	    // InternalVertigoDsl.g:3110:20: otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )?
             	    {
-            	    otherlv_9=(Token)match(input,52,FOLLOW_13); 
+            	    otherlv_9=(Token)match(input,53,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_9, grammarAccess.getAssociationAccess().getDtDefinitionAKeyword_4_1_0());
             	    								
@@ -7423,11 +7702,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_10, grammarAccess.getAssociationAccess().getColonKeyword_4_1_1());
             	    								
-            	    // InternalVertigoDsl.g:3011:9: ( (otherlv_11= RULE_ID ) )
-            	    // InternalVertigoDsl.g:3012:10: (otherlv_11= RULE_ID )
+            	    // InternalVertigoDsl.g:3118:9: ( (otherlv_11= RULE_ID ) )
+            	    // InternalVertigoDsl.g:3119:10: (otherlv_11= RULE_ID )
             	    {
-            	    // InternalVertigoDsl.g:3012:10: (otherlv_11= RULE_ID )
-            	    // InternalVertigoDsl.g:3013:11: otherlv_11= RULE_ID
+            	    // InternalVertigoDsl.g:3119:10: (otherlv_11= RULE_ID )
+            	    // InternalVertigoDsl.g:3120:11: otherlv_11= RULE_ID
             	    {
 
             	    											if (current==null) {
@@ -7444,16 +7723,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3024:9: (otherlv_12= ',' )?
-            	    int alt45=2;
-            	    int LA45_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3131:9: (otherlv_12= ',' )?
+            	    int alt46=2;
+            	    int LA46_0 = input.LA(1);
 
-            	    if ( (LA45_0==37) ) {
-            	        alt45=1;
+            	    if ( (LA46_0==37) ) {
+            	        alt46=1;
             	    }
-            	    switch (alt45) {
+            	    switch (alt46) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3025:10: otherlv_12= ','
+            	            // InternalVertigoDsl.g:3132:10: otherlv_12= ','
             	            {
             	            otherlv_12=(Token)match(input,37,FOLLOW_48); 
 
@@ -7484,30 +7763,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalVertigoDsl.g:3036:4: ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3143:4: ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3036:4: ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3037:5: {...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3143:4: ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3144:5: {...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2)");
             	    }
-            	    // InternalVertigoDsl.g:3037:108: ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3038:6: ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) )
+            	    // InternalVertigoDsl.g:3144:108: ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3145:6: ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2);
             	    					
-            	    // InternalVertigoDsl.g:3041:9: ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) )
-            	    // InternalVertigoDsl.g:3041:10: {...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? )
+            	    // InternalVertigoDsl.g:3148:9: ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) )
+            	    // InternalVertigoDsl.g:3148:10: {...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3041:19: (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? )
-            	    // InternalVertigoDsl.g:3041:20: otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )?
+            	    // InternalVertigoDsl.g:3148:19: (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? )
+            	    // InternalVertigoDsl.g:3148:20: otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )?
             	    {
-            	    otherlv_13=(Token)match(input,53,FOLLOW_13); 
+            	    otherlv_13=(Token)match(input,54,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_13, grammarAccess.getAssociationAccess().getDtDefinitionBKeyword_4_2_0());
             	    								
@@ -7515,11 +7794,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_14, grammarAccess.getAssociationAccess().getColonKeyword_4_2_1());
             	    								
-            	    // InternalVertigoDsl.g:3049:9: ( (otherlv_15= RULE_ID ) )
-            	    // InternalVertigoDsl.g:3050:10: (otherlv_15= RULE_ID )
+            	    // InternalVertigoDsl.g:3156:9: ( (otherlv_15= RULE_ID ) )
+            	    // InternalVertigoDsl.g:3157:10: (otherlv_15= RULE_ID )
             	    {
-            	    // InternalVertigoDsl.g:3050:10: (otherlv_15= RULE_ID )
-            	    // InternalVertigoDsl.g:3051:11: otherlv_15= RULE_ID
+            	    // InternalVertigoDsl.g:3157:10: (otherlv_15= RULE_ID )
+            	    // InternalVertigoDsl.g:3158:11: otherlv_15= RULE_ID
             	    {
 
             	    											if (current==null) {
@@ -7536,16 +7815,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3062:9: (otherlv_16= ',' )?
-            	    int alt46=2;
-            	    int LA46_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3169:9: (otherlv_16= ',' )?
+            	    int alt47=2;
+            	    int LA47_0 = input.LA(1);
 
-            	    if ( (LA46_0==37) ) {
-            	        alt46=1;
+            	    if ( (LA47_0==37) ) {
+            	        alt47=1;
             	    }
-            	    switch (alt46) {
+            	    switch (alt47) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3063:10: otherlv_16= ','
+            	            // InternalVertigoDsl.g:3170:10: otherlv_16= ','
             	            {
             	            otherlv_16=(Token)match(input,37,FOLLOW_48); 
 
@@ -7576,30 +7855,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // InternalVertigoDsl.g:3074:4: ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3181:4: ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3074:4: ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3075:5: {...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3181:4: ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3182:5: {...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3)");
             	    }
-            	    // InternalVertigoDsl.g:3075:108: ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3076:6: ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) )
+            	    // InternalVertigoDsl.g:3182:108: ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3183:6: ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3);
             	    					
-            	    // InternalVertigoDsl.g:3079:9: ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) )
-            	    // InternalVertigoDsl.g:3079:10: {...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? )
+            	    // InternalVertigoDsl.g:3186:9: ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) )
+            	    // InternalVertigoDsl.g:3186:10: {...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3079:19: (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? )
-            	    // InternalVertigoDsl.g:3079:20: otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )?
+            	    // InternalVertigoDsl.g:3186:19: (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? )
+            	    // InternalVertigoDsl.g:3186:20: otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )?
             	    {
-            	    otherlv_17=(Token)match(input,54,FOLLOW_13); 
+            	    otherlv_17=(Token)match(input,55,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_17, grammarAccess.getAssociationAccess().getNavigabilityAKeyword_4_3_0());
             	    								
@@ -7607,11 +7886,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_18, grammarAccess.getAssociationAccess().getColonKeyword_4_3_1());
             	    								
-            	    // InternalVertigoDsl.g:3087:9: ( (lv_navigabilityA_19_0= ruleBooleanString ) )
-            	    // InternalVertigoDsl.g:3088:10: (lv_navigabilityA_19_0= ruleBooleanString )
+            	    // InternalVertigoDsl.g:3194:9: ( (lv_navigabilityA_19_0= ruleBooleanString ) )
+            	    // InternalVertigoDsl.g:3195:10: (lv_navigabilityA_19_0= ruleBooleanString )
             	    {
-            	    // InternalVertigoDsl.g:3088:10: (lv_navigabilityA_19_0= ruleBooleanString )
-            	    // InternalVertigoDsl.g:3089:11: lv_navigabilityA_19_0= ruleBooleanString
+            	    // InternalVertigoDsl.g:3195:10: (lv_navigabilityA_19_0= ruleBooleanString )
+            	    // InternalVertigoDsl.g:3196:11: lv_navigabilityA_19_0= ruleBooleanString
             	    {
 
             	    											newCompositeNode(grammarAccess.getAssociationAccess().getNavigabilityABooleanStringEnumRuleCall_4_3_2_0());
@@ -7638,16 +7917,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3106:9: (otherlv_20= ',' )?
-            	    int alt47=2;
-            	    int LA47_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3213:9: (otherlv_20= ',' )?
+            	    int alt48=2;
+            	    int LA48_0 = input.LA(1);
 
-            	    if ( (LA47_0==37) ) {
-            	        alt47=1;
+            	    if ( (LA48_0==37) ) {
+            	        alt48=1;
             	    }
-            	    switch (alt47) {
+            	    switch (alt48) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3107:10: otherlv_20= ','
+            	            // InternalVertigoDsl.g:3214:10: otherlv_20= ','
             	            {
             	            otherlv_20=(Token)match(input,37,FOLLOW_48); 
 
@@ -7678,30 +7957,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // InternalVertigoDsl.g:3118:4: ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3225:4: ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3118:4: ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3119:5: {...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3225:4: ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3226:5: {...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4)");
             	    }
-            	    // InternalVertigoDsl.g:3119:108: ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3120:6: ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) )
+            	    // InternalVertigoDsl.g:3226:108: ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3227:6: ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4);
             	    					
-            	    // InternalVertigoDsl.g:3123:9: ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) )
-            	    // InternalVertigoDsl.g:3123:10: {...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? )
+            	    // InternalVertigoDsl.g:3230:9: ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) )
+            	    // InternalVertigoDsl.g:3230:10: {...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3123:19: (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? )
-            	    // InternalVertigoDsl.g:3123:20: otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )?
+            	    // InternalVertigoDsl.g:3230:19: (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? )
+            	    // InternalVertigoDsl.g:3230:20: otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )?
             	    {
-            	    otherlv_21=(Token)match(input,55,FOLLOW_13); 
+            	    otherlv_21=(Token)match(input,56,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_21, grammarAccess.getAssociationAccess().getNavigabilityBKeyword_4_4_0());
             	    								
@@ -7709,11 +7988,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_22, grammarAccess.getAssociationAccess().getColonKeyword_4_4_1());
             	    								
-            	    // InternalVertigoDsl.g:3131:9: ( (lv_navigabilityB_23_0= ruleBooleanString ) )
-            	    // InternalVertigoDsl.g:3132:10: (lv_navigabilityB_23_0= ruleBooleanString )
+            	    // InternalVertigoDsl.g:3238:9: ( (lv_navigabilityB_23_0= ruleBooleanString ) )
+            	    // InternalVertigoDsl.g:3239:10: (lv_navigabilityB_23_0= ruleBooleanString )
             	    {
-            	    // InternalVertigoDsl.g:3132:10: (lv_navigabilityB_23_0= ruleBooleanString )
-            	    // InternalVertigoDsl.g:3133:11: lv_navigabilityB_23_0= ruleBooleanString
+            	    // InternalVertigoDsl.g:3239:10: (lv_navigabilityB_23_0= ruleBooleanString )
+            	    // InternalVertigoDsl.g:3240:11: lv_navigabilityB_23_0= ruleBooleanString
             	    {
 
             	    											newCompositeNode(grammarAccess.getAssociationAccess().getNavigabilityBBooleanStringEnumRuleCall_4_4_2_0());
@@ -7740,16 +8019,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3150:9: (otherlv_24= ',' )?
-            	    int alt48=2;
-            	    int LA48_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3257:9: (otherlv_24= ',' )?
+            	    int alt49=2;
+            	    int LA49_0 = input.LA(1);
 
-            	    if ( (LA48_0==37) ) {
-            	        alt48=1;
+            	    if ( (LA49_0==37) ) {
+            	        alt49=1;
             	    }
-            	    switch (alt48) {
+            	    switch (alt49) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3151:10: otherlv_24= ','
+            	            // InternalVertigoDsl.g:3258:10: otherlv_24= ','
             	            {
             	            otherlv_24=(Token)match(input,37,FOLLOW_48); 
 
@@ -7780,30 +8059,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 6 :
-            	    // InternalVertigoDsl.g:3162:4: ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3269:4: ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3162:4: ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3163:5: {...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3269:4: ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3270:5: {...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5)");
             	    }
-            	    // InternalVertigoDsl.g:3163:108: ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3164:6: ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) )
+            	    // InternalVertigoDsl.g:3270:108: ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3271:6: ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5);
             	    					
-            	    // InternalVertigoDsl.g:3167:9: ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) )
-            	    // InternalVertigoDsl.g:3167:10: {...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? )
+            	    // InternalVertigoDsl.g:3274:9: ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) )
+            	    // InternalVertigoDsl.g:3274:10: {...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3167:19: (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? )
-            	    // InternalVertigoDsl.g:3167:20: otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )?
+            	    // InternalVertigoDsl.g:3274:19: (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? )
+            	    // InternalVertigoDsl.g:3274:20: otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )?
             	    {
-            	    otherlv_25=(Token)match(input,56,FOLLOW_13); 
+            	    otherlv_25=(Token)match(input,57,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_25, grammarAccess.getAssociationAccess().getMultiplicityAKeyword_4_5_0());
             	    								
@@ -7811,11 +8090,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_26, grammarAccess.getAssociationAccess().getColonKeyword_4_5_1());
             	    								
-            	    // InternalVertigoDsl.g:3175:9: ( (lv_multiplicityA_27_0= ruleMultiplicityString ) )
-            	    // InternalVertigoDsl.g:3176:10: (lv_multiplicityA_27_0= ruleMultiplicityString )
+            	    // InternalVertigoDsl.g:3282:9: ( (lv_multiplicityA_27_0= ruleMultiplicityString ) )
+            	    // InternalVertigoDsl.g:3283:10: (lv_multiplicityA_27_0= ruleMultiplicityString )
             	    {
-            	    // InternalVertigoDsl.g:3176:10: (lv_multiplicityA_27_0= ruleMultiplicityString )
-            	    // InternalVertigoDsl.g:3177:11: lv_multiplicityA_27_0= ruleMultiplicityString
+            	    // InternalVertigoDsl.g:3283:10: (lv_multiplicityA_27_0= ruleMultiplicityString )
+            	    // InternalVertigoDsl.g:3284:11: lv_multiplicityA_27_0= ruleMultiplicityString
             	    {
 
             	    											newCompositeNode(grammarAccess.getAssociationAccess().getMultiplicityAMultiplicityStringEnumRuleCall_4_5_2_0());
@@ -7842,16 +8121,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3194:9: (otherlv_28= ',' )?
-            	    int alt49=2;
-            	    int LA49_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3301:9: (otherlv_28= ',' )?
+            	    int alt50=2;
+            	    int LA50_0 = input.LA(1);
 
-            	    if ( (LA49_0==37) ) {
-            	        alt49=1;
+            	    if ( (LA50_0==37) ) {
+            	        alt50=1;
             	    }
-            	    switch (alt49) {
+            	    switch (alt50) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3195:10: otherlv_28= ','
+            	            // InternalVertigoDsl.g:3302:10: otherlv_28= ','
             	            {
             	            otherlv_28=(Token)match(input,37,FOLLOW_48); 
 
@@ -7882,30 +8161,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 7 :
-            	    // InternalVertigoDsl.g:3206:4: ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3313:4: ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3206:4: ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3207:5: {...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3313:4: ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3314:5: {...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6)");
             	    }
-            	    // InternalVertigoDsl.g:3207:108: ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3208:6: ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) )
+            	    // InternalVertigoDsl.g:3314:108: ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3315:6: ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6);
             	    					
-            	    // InternalVertigoDsl.g:3211:9: ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) )
-            	    // InternalVertigoDsl.g:3211:10: {...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? )
+            	    // InternalVertigoDsl.g:3318:9: ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) )
+            	    // InternalVertigoDsl.g:3318:10: {...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3211:19: (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? )
-            	    // InternalVertigoDsl.g:3211:20: otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )?
+            	    // InternalVertigoDsl.g:3318:19: (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? )
+            	    // InternalVertigoDsl.g:3318:20: otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )?
             	    {
-            	    otherlv_29=(Token)match(input,57,FOLLOW_13); 
+            	    otherlv_29=(Token)match(input,58,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_29, grammarAccess.getAssociationAccess().getMultiplicityBKeyword_4_6_0());
             	    								
@@ -7913,11 +8192,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_30, grammarAccess.getAssociationAccess().getColonKeyword_4_6_1());
             	    								
-            	    // InternalVertigoDsl.g:3219:9: ( (lv_multiplicityB_31_0= ruleMultiplicityString ) )
-            	    // InternalVertigoDsl.g:3220:10: (lv_multiplicityB_31_0= ruleMultiplicityString )
+            	    // InternalVertigoDsl.g:3326:9: ( (lv_multiplicityB_31_0= ruleMultiplicityString ) )
+            	    // InternalVertigoDsl.g:3327:10: (lv_multiplicityB_31_0= ruleMultiplicityString )
             	    {
-            	    // InternalVertigoDsl.g:3220:10: (lv_multiplicityB_31_0= ruleMultiplicityString )
-            	    // InternalVertigoDsl.g:3221:11: lv_multiplicityB_31_0= ruleMultiplicityString
+            	    // InternalVertigoDsl.g:3327:10: (lv_multiplicityB_31_0= ruleMultiplicityString )
+            	    // InternalVertigoDsl.g:3328:11: lv_multiplicityB_31_0= ruleMultiplicityString
             	    {
 
             	    											newCompositeNode(grammarAccess.getAssociationAccess().getMultiplicityBMultiplicityStringEnumRuleCall_4_6_2_0());
@@ -7944,16 +8223,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3238:9: (otherlv_32= ',' )?
-            	    int alt50=2;
-            	    int LA50_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3345:9: (otherlv_32= ',' )?
+            	    int alt51=2;
+            	    int LA51_0 = input.LA(1);
 
-            	    if ( (LA50_0==37) ) {
-            	        alt50=1;
+            	    if ( (LA51_0==37) ) {
+            	        alt51=1;
             	    }
-            	    switch (alt50) {
+            	    switch (alt51) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3239:10: otherlv_32= ','
+            	            // InternalVertigoDsl.g:3346:10: otherlv_32= ','
             	            {
             	            otherlv_32=(Token)match(input,37,FOLLOW_48); 
 
@@ -7984,30 +8263,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 8 :
-            	    // InternalVertigoDsl.g:3250:4: ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3357:4: ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3250:4: ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3251:5: {...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3357:4: ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3358:5: {...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7)");
             	    }
-            	    // InternalVertigoDsl.g:3251:108: ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3252:6: ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) )
+            	    // InternalVertigoDsl.g:3358:108: ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3359:6: ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7);
             	    					
-            	    // InternalVertigoDsl.g:3255:9: ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) )
-            	    // InternalVertigoDsl.g:3255:10: {...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? )
+            	    // InternalVertigoDsl.g:3362:9: ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) )
+            	    // InternalVertigoDsl.g:3362:10: {...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3255:19: (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? )
-            	    // InternalVertigoDsl.g:3255:20: otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )?
+            	    // InternalVertigoDsl.g:3362:19: (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? )
+            	    // InternalVertigoDsl.g:3362:20: otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )?
             	    {
-            	    otherlv_33=(Token)match(input,58,FOLLOW_13); 
+            	    otherlv_33=(Token)match(input,59,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_33, grammarAccess.getAssociationAccess().getLabelAKeyword_4_7_0());
             	    								
@@ -8015,11 +8294,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_34, grammarAccess.getAssociationAccess().getColonKeyword_4_7_1());
             	    								
-            	    // InternalVertigoDsl.g:3263:9: ( (lv_labelA_35_0= RULE_STRING ) )
-            	    // InternalVertigoDsl.g:3264:10: (lv_labelA_35_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3370:9: ( (lv_labelA_35_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3371:10: (lv_labelA_35_0= RULE_STRING )
             	    {
-            	    // InternalVertigoDsl.g:3264:10: (lv_labelA_35_0= RULE_STRING )
-            	    // InternalVertigoDsl.g:3265:11: lv_labelA_35_0= RULE_STRING
+            	    // InternalVertigoDsl.g:3371:10: (lv_labelA_35_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3372:11: lv_labelA_35_0= RULE_STRING
             	    {
             	    lv_labelA_35_0=(Token)match(input,RULE_STRING,FOLLOW_47); 
 
@@ -8041,16 +8320,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3281:9: (otherlv_36= ',' )?
-            	    int alt51=2;
-            	    int LA51_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3388:9: (otherlv_36= ',' )?
+            	    int alt52=2;
+            	    int LA52_0 = input.LA(1);
 
-            	    if ( (LA51_0==37) ) {
-            	        alt51=1;
+            	    if ( (LA52_0==37) ) {
+            	        alt52=1;
             	    }
-            	    switch (alt51) {
+            	    switch (alt52) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3282:10: otherlv_36= ','
+            	            // InternalVertigoDsl.g:3389:10: otherlv_36= ','
             	            {
             	            otherlv_36=(Token)match(input,37,FOLLOW_48); 
 
@@ -8081,30 +8360,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 9 :
-            	    // InternalVertigoDsl.g:3293:4: ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3400:4: ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3293:4: ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3294:5: {...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3400:4: ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3401:5: {...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8)");
             	    }
-            	    // InternalVertigoDsl.g:3294:108: ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3295:6: ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) )
+            	    // InternalVertigoDsl.g:3401:108: ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3402:6: ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8);
             	    					
-            	    // InternalVertigoDsl.g:3298:9: ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) )
-            	    // InternalVertigoDsl.g:3298:10: {...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? )
+            	    // InternalVertigoDsl.g:3405:9: ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) )
+            	    // InternalVertigoDsl.g:3405:10: {...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3298:19: (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? )
-            	    // InternalVertigoDsl.g:3298:20: otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )?
+            	    // InternalVertigoDsl.g:3405:19: (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? )
+            	    // InternalVertigoDsl.g:3405:20: otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )?
             	    {
-            	    otherlv_37=(Token)match(input,59,FOLLOW_13); 
+            	    otherlv_37=(Token)match(input,60,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_37, grammarAccess.getAssociationAccess().getLabelBKeyword_4_8_0());
             	    								
@@ -8112,11 +8391,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_38, grammarAccess.getAssociationAccess().getColonKeyword_4_8_1());
             	    								
-            	    // InternalVertigoDsl.g:3306:9: ( (lv_labelB_39_0= RULE_STRING ) )
-            	    // InternalVertigoDsl.g:3307:10: (lv_labelB_39_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3413:9: ( (lv_labelB_39_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3414:10: (lv_labelB_39_0= RULE_STRING )
             	    {
-            	    // InternalVertigoDsl.g:3307:10: (lv_labelB_39_0= RULE_STRING )
-            	    // InternalVertigoDsl.g:3308:11: lv_labelB_39_0= RULE_STRING
+            	    // InternalVertigoDsl.g:3414:10: (lv_labelB_39_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3415:11: lv_labelB_39_0= RULE_STRING
             	    {
             	    lv_labelB_39_0=(Token)match(input,RULE_STRING,FOLLOW_47); 
 
@@ -8138,16 +8417,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3324:9: (otherlv_40= ',' )?
-            	    int alt52=2;
-            	    int LA52_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3431:9: (otherlv_40= ',' )?
+            	    int alt53=2;
+            	    int LA53_0 = input.LA(1);
 
-            	    if ( (LA52_0==37) ) {
-            	        alt52=1;
+            	    if ( (LA53_0==37) ) {
+            	        alt53=1;
             	    }
-            	    switch (alt52) {
+            	    switch (alt53) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3325:10: otherlv_40= ','
+            	            // InternalVertigoDsl.g:3432:10: otherlv_40= ','
             	            {
             	            otherlv_40=(Token)match(input,37,FOLLOW_48); 
 
@@ -8178,30 +8457,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 10 :
-            	    // InternalVertigoDsl.g:3336:4: ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3443:4: ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3336:4: ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3337:5: {...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3443:4: ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3444:5: {...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9)");
             	    }
-            	    // InternalVertigoDsl.g:3337:108: ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3338:6: ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) )
+            	    // InternalVertigoDsl.g:3444:108: ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3445:6: ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9);
             	    					
-            	    // InternalVertigoDsl.g:3341:9: ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) )
-            	    // InternalVertigoDsl.g:3341:10: {...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? )
+            	    // InternalVertigoDsl.g:3448:9: ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) )
+            	    // InternalVertigoDsl.g:3448:10: {...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3341:19: (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? )
-            	    // InternalVertigoDsl.g:3341:20: otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )?
+            	    // InternalVertigoDsl.g:3448:19: (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? )
+            	    // InternalVertigoDsl.g:3448:20: otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )?
             	    {
-            	    otherlv_41=(Token)match(input,60,FOLLOW_13); 
+            	    otherlv_41=(Token)match(input,61,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_41, grammarAccess.getAssociationAccess().getRoleAKeyword_4_9_0());
             	    								
@@ -8209,11 +8488,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_42, grammarAccess.getAssociationAccess().getColonKeyword_4_9_1());
             	    								
-            	    // InternalVertigoDsl.g:3349:9: ( (lv_roleA_43_0= RULE_STRING ) )
-            	    // InternalVertigoDsl.g:3350:10: (lv_roleA_43_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3456:9: ( (lv_roleA_43_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3457:10: (lv_roleA_43_0= RULE_STRING )
             	    {
-            	    // InternalVertigoDsl.g:3350:10: (lv_roleA_43_0= RULE_STRING )
-            	    // InternalVertigoDsl.g:3351:11: lv_roleA_43_0= RULE_STRING
+            	    // InternalVertigoDsl.g:3457:10: (lv_roleA_43_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3458:11: lv_roleA_43_0= RULE_STRING
             	    {
             	    lv_roleA_43_0=(Token)match(input,RULE_STRING,FOLLOW_47); 
 
@@ -8235,16 +8514,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3367:9: (otherlv_44= ',' )?
-            	    int alt53=2;
-            	    int LA53_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3474:9: (otherlv_44= ',' )?
+            	    int alt54=2;
+            	    int LA54_0 = input.LA(1);
 
-            	    if ( (LA53_0==37) ) {
-            	        alt53=1;
+            	    if ( (LA54_0==37) ) {
+            	        alt54=1;
             	    }
-            	    switch (alt53) {
+            	    switch (alt54) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3368:10: otherlv_44= ','
+            	            // InternalVertigoDsl.g:3475:10: otherlv_44= ','
             	            {
             	            otherlv_44=(Token)match(input,37,FOLLOW_48); 
 
@@ -8275,30 +8554,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 11 :
-            	    // InternalVertigoDsl.g:3379:4: ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3486:4: ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3379:4: ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3380:5: {...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3486:4: ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3487:5: {...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10)");
             	    }
-            	    // InternalVertigoDsl.g:3380:109: ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3381:6: ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) )
+            	    // InternalVertigoDsl.g:3487:109: ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3488:6: ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10);
             	    					
-            	    // InternalVertigoDsl.g:3384:9: ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) )
-            	    // InternalVertigoDsl.g:3384:10: {...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? )
+            	    // InternalVertigoDsl.g:3491:9: ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) )
+            	    // InternalVertigoDsl.g:3491:10: {...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3384:19: (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? )
-            	    // InternalVertigoDsl.g:3384:20: otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )?
+            	    // InternalVertigoDsl.g:3491:19: (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? )
+            	    // InternalVertigoDsl.g:3491:20: otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )?
             	    {
-            	    otherlv_45=(Token)match(input,61,FOLLOW_13); 
+            	    otherlv_45=(Token)match(input,62,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_45, grammarAccess.getAssociationAccess().getRoleBKeyword_4_10_0());
             	    								
@@ -8306,11 +8585,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_46, grammarAccess.getAssociationAccess().getColonKeyword_4_10_1());
             	    								
-            	    // InternalVertigoDsl.g:3392:9: ( (lv_roleB_47_0= RULE_STRING ) )
-            	    // InternalVertigoDsl.g:3393:10: (lv_roleB_47_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3499:9: ( (lv_roleB_47_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3500:10: (lv_roleB_47_0= RULE_STRING )
             	    {
-            	    // InternalVertigoDsl.g:3393:10: (lv_roleB_47_0= RULE_STRING )
-            	    // InternalVertigoDsl.g:3394:11: lv_roleB_47_0= RULE_STRING
+            	    // InternalVertigoDsl.g:3500:10: (lv_roleB_47_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3501:11: lv_roleB_47_0= RULE_STRING
             	    {
             	    lv_roleB_47_0=(Token)match(input,RULE_STRING,FOLLOW_47); 
 
@@ -8332,16 +8611,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3410:9: (otherlv_48= ',' )?
-            	    int alt54=2;
-            	    int LA54_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3517:9: (otherlv_48= ',' )?
+            	    int alt55=2;
+            	    int LA55_0 = input.LA(1);
 
-            	    if ( (LA54_0==37) ) {
-            	        alt54=1;
+            	    if ( (LA55_0==37) ) {
+            	        alt55=1;
             	    }
-            	    switch (alt54) {
+            	    switch (alt55) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3411:10: otherlv_48= ','
+            	            // InternalVertigoDsl.g:3518:10: otherlv_48= ','
             	            {
             	            otherlv_48=(Token)match(input,37,FOLLOW_48); 
 
@@ -8372,30 +8651,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 12 :
-            	    // InternalVertigoDsl.g:3422:4: ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) )
+            	    // InternalVertigoDsl.g:3529:4: ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3422:4: ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) )
-            	    // InternalVertigoDsl.g:3423:5: {...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) )
+            	    // InternalVertigoDsl.g:3529:4: ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) )
+            	    // InternalVertigoDsl.g:3530:5: {...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11)");
             	    }
-            	    // InternalVertigoDsl.g:3423:109: ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) )
-            	    // InternalVertigoDsl.g:3424:6: ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) )
+            	    // InternalVertigoDsl.g:3530:109: ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) )
+            	    // InternalVertigoDsl.g:3531:6: ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11);
             	    					
-            	    // InternalVertigoDsl.g:3427:9: ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) )
-            	    // InternalVertigoDsl.g:3427:10: {...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) )
+            	    // InternalVertigoDsl.g:3534:9: ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) )
+            	    // InternalVertigoDsl.g:3534:10: {...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleAssociation", "true");
             	    }
-            	    // InternalVertigoDsl.g:3427:19: (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) )
-            	    // InternalVertigoDsl.g:3427:20: otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3534:19: (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) )
+            	    // InternalVertigoDsl.g:3534:20: otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) )
             	    {
-            	    otherlv_49=(Token)match(input,62,FOLLOW_13); 
+            	    otherlv_49=(Token)match(input,63,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_49, grammarAccess.getAssociationAccess().getTypeKeyword_4_11_0());
             	    								
@@ -8403,11 +8682,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_50, grammarAccess.getAssociationAccess().getColonKeyword_4_11_1());
             	    								
-            	    // InternalVertigoDsl.g:3435:9: ( (lv_type_51_0= RULE_STRING ) )
-            	    // InternalVertigoDsl.g:3436:10: (lv_type_51_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3542:9: ( (lv_type_51_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:3543:10: (lv_type_51_0= RULE_STRING )
             	    {
-            	    // InternalVertigoDsl.g:3436:10: (lv_type_51_0= RULE_STRING )
-            	    // InternalVertigoDsl.g:3437:11: lv_type_51_0= RULE_STRING
+            	    // InternalVertigoDsl.g:3543:10: (lv_type_51_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:3544:11: lv_type_51_0= RULE_STRING
             	    {
             	    lv_type_51_0=(Token)match(input,RULE_STRING,FOLLOW_48); 
 
@@ -8449,12 +8728,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt55 >= 1 ) break loop55;
+            	    if ( cnt56 >= 1 ) break loop56;
                         EarlyExitException eee =
-                            new EarlyExitException(55, input);
+                            new EarlyExitException(56, input);
                         throw eee;
                 }
-                cnt55++;
+                cnt56++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getAssociationAccess().getUnorderedGroup_4()) ) {
@@ -8499,7 +8778,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskAttributeString"
-    // InternalVertigoDsl.g:3475:1: entryRuleTaskAttributeString returns [EObject current=null] : iv_ruleTaskAttributeString= ruleTaskAttributeString EOF ;
+    // InternalVertigoDsl.g:3582:1: entryRuleTaskAttributeString returns [EObject current=null] : iv_ruleTaskAttributeString= ruleTaskAttributeString EOF ;
     public final EObject entryRuleTaskAttributeString() throws RecognitionException {
         EObject current = null;
 
@@ -8507,8 +8786,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3475:60: (iv_ruleTaskAttributeString= ruleTaskAttributeString EOF )
-            // InternalVertigoDsl.g:3476:2: iv_ruleTaskAttributeString= ruleTaskAttributeString EOF
+            // InternalVertigoDsl.g:3582:60: (iv_ruleTaskAttributeString= ruleTaskAttributeString EOF )
+            // InternalVertigoDsl.g:3583:2: iv_ruleTaskAttributeString= ruleTaskAttributeString EOF
             {
              newCompositeNode(grammarAccess.getTaskAttributeStringRule()); 
             pushFollow(FOLLOW_1);
@@ -8535,7 +8814,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskAttributeString"
-    // InternalVertigoDsl.g:3482:1: ruleTaskAttributeString returns [EObject current=null] : (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' ) ;
+    // InternalVertigoDsl.g:3589:1: ruleTaskAttributeString returns [EObject current=null] : (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' ) ;
     public final EObject ruleTaskAttributeString() throws RecognitionException {
         EObject current = null;
 
@@ -8561,70 +8840,70 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3488:2: ( (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' ) )
-            // InternalVertigoDsl.g:3489:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' )
+            // InternalVertigoDsl.g:3595:2: ( (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' ) )
+            // InternalVertigoDsl.g:3596:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' )
             {
-            // InternalVertigoDsl.g:3489:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' )
-            // InternalVertigoDsl.g:3490:3: otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}'
+            // InternalVertigoDsl.g:3596:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}' )
+            // InternalVertigoDsl.g:3597:3: otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_14= '}'
             {
             otherlv_0=(Token)match(input,22,FOLLOW_50); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTaskAttributeStringAccess().getLeftCurlyBracketKeyword_0());
             		
-            // InternalVertigoDsl.g:3494:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) )
-            // InternalVertigoDsl.g:3495:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:3601:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) ) )
+            // InternalVertigoDsl.g:3602:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) )
             {
-            // InternalVertigoDsl.g:3495:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) )
-            // InternalVertigoDsl.g:3496:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:3602:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:3603:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?)
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1());
             				
-            // InternalVertigoDsl.g:3499:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?)
-            // InternalVertigoDsl.g:3500:6: ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?
+            // InternalVertigoDsl.g:3606:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:3607:6: ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+ {...}?
             {
-            // InternalVertigoDsl.g:3500:6: ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+
-            int cnt59=0;
-            loop59:
+            // InternalVertigoDsl.g:3607:6: ( ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) ) )+
+            int cnt60=0;
+            loop60:
             do {
-                int alt59=4;
-                int LA59_0 = input.LA(1);
+                int alt60=4;
+                int LA60_0 = input.LA(1);
 
-                if ( LA59_0 == 14 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
-                    alt59=1;
+                if ( LA60_0 == 14 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
+                    alt60=1;
                 }
-                else if ( LA59_0 == 42 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
-                    alt59=2;
+                else if ( LA60_0 == 42 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
+                    alt60=2;
                 }
-                else if ( LA59_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
-                    alt59=3;
+                else if ( LA60_0 == 64 && getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
+                    alt60=3;
                 }
 
 
-                switch (alt59) {
+                switch (alt60) {
             	case 1 :
-            	    // InternalVertigoDsl.g:3501:4: ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3608:4: ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3501:4: ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3502:5: {...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3608:4: ({...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3609:5: {...}? => ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:3502:116: ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3503:6: ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) )
+            	    // InternalVertigoDsl.g:3609:116: ( ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3610:6: ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 0);
             	    					
-            	    // InternalVertigoDsl.g:3506:9: ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) )
-            	    // InternalVertigoDsl.g:3506:10: {...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? )
+            	    // InternalVertigoDsl.g:3613:9: ({...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? ) )
+            	    // InternalVertigoDsl.g:3613:10: {...}? => (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "true");
             	    }
-            	    // InternalVertigoDsl.g:3506:19: (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? )
-            	    // InternalVertigoDsl.g:3506:20: otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )?
+            	    // InternalVertigoDsl.g:3613:19: (otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )? )
+            	    // InternalVertigoDsl.g:3613:20: otherlv_2= 'domain' otherlv_3= ':' ( (lv_refToDomainType_4_0= ruleRefToDomainType ) ) (otherlv_5= ',' )?
             	    {
             	    otherlv_2=(Token)match(input,14,FOLLOW_13); 
 
@@ -8634,11 +8913,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_3, grammarAccess.getTaskAttributeStringAccess().getColonKeyword_1_0_1());
             	    								
-            	    // InternalVertigoDsl.g:3514:9: ( (lv_refToDomainType_4_0= ruleRefToDomainType ) )
-            	    // InternalVertigoDsl.g:3515:10: (lv_refToDomainType_4_0= ruleRefToDomainType )
+            	    // InternalVertigoDsl.g:3621:9: ( (lv_refToDomainType_4_0= ruleRefToDomainType ) )
+            	    // InternalVertigoDsl.g:3622:10: (lv_refToDomainType_4_0= ruleRefToDomainType )
             	    {
-            	    // InternalVertigoDsl.g:3515:10: (lv_refToDomainType_4_0= ruleRefToDomainType )
-            	    // InternalVertigoDsl.g:3516:11: lv_refToDomainType_4_0= ruleRefToDomainType
+            	    // InternalVertigoDsl.g:3622:10: (lv_refToDomainType_4_0= ruleRefToDomainType )
+            	    // InternalVertigoDsl.g:3623:11: lv_refToDomainType_4_0= ruleRefToDomainType
             	    {
 
             	    											newCompositeNode(grammarAccess.getTaskAttributeStringAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0());
@@ -8665,16 +8944,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3533:9: (otherlv_5= ',' )?
-            	    int alt56=2;
-            	    int LA56_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3640:9: (otherlv_5= ',' )?
+            	    int alt57=2;
+            	    int LA57_0 = input.LA(1);
 
-            	    if ( (LA56_0==37) ) {
-            	        alt56=1;
+            	    if ( (LA57_0==37) ) {
+            	        alt57=1;
             	    }
-            	    switch (alt56) {
+            	    switch (alt57) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3534:10: otherlv_5= ','
+            	            // InternalVertigoDsl.g:3641:10: otherlv_5= ','
             	            {
             	            otherlv_5=(Token)match(input,37,FOLLOW_52); 
 
@@ -8705,28 +8984,28 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:3545:4: ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3652:4: ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3545:4: ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3546:5: {...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3652:4: ({...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3653:5: {...}? => ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:3546:116: ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3547:6: ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) )
+            	    // InternalVertigoDsl.g:3653:116: ( ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3654:6: ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 1);
             	    					
-            	    // InternalVertigoDsl.g:3550:9: ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) )
-            	    // InternalVertigoDsl.g:3550:10: {...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? )
+            	    // InternalVertigoDsl.g:3657:9: ({...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? ) )
+            	    // InternalVertigoDsl.g:3657:10: {...}? => (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "true");
             	    }
-            	    // InternalVertigoDsl.g:3550:19: (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? )
-            	    // InternalVertigoDsl.g:3550:20: otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )?
+            	    // InternalVertigoDsl.g:3657:19: (otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )? )
+            	    // InternalVertigoDsl.g:3657:20: otherlv_6= 'required' otherlv_7= ':' ( (lv_required_8_0= ruleBooleanString ) ) (otherlv_9= ',' )?
             	    {
             	    otherlv_6=(Token)match(input,42,FOLLOW_13); 
 
@@ -8736,11 +9015,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_7, grammarAccess.getTaskAttributeStringAccess().getColonKeyword_1_1_1());
             	    								
-            	    // InternalVertigoDsl.g:3558:9: ( (lv_required_8_0= ruleBooleanString ) )
-            	    // InternalVertigoDsl.g:3559:10: (lv_required_8_0= ruleBooleanString )
+            	    // InternalVertigoDsl.g:3665:9: ( (lv_required_8_0= ruleBooleanString ) )
+            	    // InternalVertigoDsl.g:3666:10: (lv_required_8_0= ruleBooleanString )
             	    {
-            	    // InternalVertigoDsl.g:3559:10: (lv_required_8_0= ruleBooleanString )
-            	    // InternalVertigoDsl.g:3560:11: lv_required_8_0= ruleBooleanString
+            	    // InternalVertigoDsl.g:3666:10: (lv_required_8_0= ruleBooleanString )
+            	    // InternalVertigoDsl.g:3667:11: lv_required_8_0= ruleBooleanString
             	    {
 
             	    											newCompositeNode(grammarAccess.getTaskAttributeStringAccess().getRequiredBooleanStringEnumRuleCall_1_1_2_0());
@@ -8767,16 +9046,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3577:9: (otherlv_9= ',' )?
-            	    int alt57=2;
-            	    int LA57_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3684:9: (otherlv_9= ',' )?
+            	    int alt58=2;
+            	    int LA58_0 = input.LA(1);
 
-            	    if ( (LA57_0==37) ) {
-            	        alt57=1;
+            	    if ( (LA58_0==37) ) {
+            	        alt58=1;
             	    }
-            	    switch (alt57) {
+            	    switch (alt58) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3578:10: otherlv_9= ','
+            	            // InternalVertigoDsl.g:3685:10: otherlv_9= ','
             	            {
             	            otherlv_9=(Token)match(input,37,FOLLOW_52); 
 
@@ -8807,30 +9086,30 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalVertigoDsl.g:3589:4: ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3696:4: ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:3589:4: ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:3590:5: {...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3696:4: ({...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:3697:5: {...}? => ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2)");
             	    }
-            	    // InternalVertigoDsl.g:3590:116: ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:3591:6: ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) )
+            	    // InternalVertigoDsl.g:3697:116: ( ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:3698:6: ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1(), 2);
             	    					
-            	    // InternalVertigoDsl.g:3594:9: ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) )
-            	    // InternalVertigoDsl.g:3594:10: {...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? )
+            	    // InternalVertigoDsl.g:3701:9: ({...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? ) )
+            	    // InternalVertigoDsl.g:3701:10: {...}? => (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleTaskAttributeString", "true");
             	    }
-            	    // InternalVertigoDsl.g:3594:19: (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? )
-            	    // InternalVertigoDsl.g:3594:20: otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )?
+            	    // InternalVertigoDsl.g:3701:19: (otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )? )
+            	    // InternalVertigoDsl.g:3701:20: otherlv_10= 'inOut' otherlv_11= ':' ( (lv_inout_12_0= ruleInOutString ) ) (otherlv_13= ',' )?
             	    {
-            	    otherlv_10=(Token)match(input,63,FOLLOW_13); 
+            	    otherlv_10=(Token)match(input,64,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_10, grammarAccess.getTaskAttributeStringAccess().getInOutKeyword_1_2_0());
             	    								
@@ -8838,11 +9117,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_11, grammarAccess.getTaskAttributeStringAccess().getColonKeyword_1_2_1());
             	    								
-            	    // InternalVertigoDsl.g:3602:9: ( (lv_inout_12_0= ruleInOutString ) )
-            	    // InternalVertigoDsl.g:3603:10: (lv_inout_12_0= ruleInOutString )
+            	    // InternalVertigoDsl.g:3709:9: ( (lv_inout_12_0= ruleInOutString ) )
+            	    // InternalVertigoDsl.g:3710:10: (lv_inout_12_0= ruleInOutString )
             	    {
-            	    // InternalVertigoDsl.g:3603:10: (lv_inout_12_0= ruleInOutString )
-            	    // InternalVertigoDsl.g:3604:11: lv_inout_12_0= ruleInOutString
+            	    // InternalVertigoDsl.g:3710:10: (lv_inout_12_0= ruleInOutString )
+            	    // InternalVertigoDsl.g:3711:11: lv_inout_12_0= ruleInOutString
             	    {
 
             	    											newCompositeNode(grammarAccess.getTaskAttributeStringAccess().getInoutInOutStringEnumRuleCall_1_2_2_0());
@@ -8869,16 +9148,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:3621:9: (otherlv_13= ',' )?
-            	    int alt58=2;
-            	    int LA58_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:3728:9: (otherlv_13= ',' )?
+            	    int alt59=2;
+            	    int LA59_0 = input.LA(1);
 
-            	    if ( (LA58_0==37) ) {
-            	        alt58=1;
+            	    if ( (LA59_0==37) ) {
+            	        alt59=1;
             	    }
-            	    switch (alt58) {
+            	    switch (alt59) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:3622:10: otherlv_13= ','
+            	            // InternalVertigoDsl.g:3729:10: otherlv_13= ','
             	            {
             	            otherlv_13=(Token)match(input,37,FOLLOW_52); 
 
@@ -8910,12 +9189,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt59 >= 1 ) break loop59;
+            	    if ( cnt60 >= 1 ) break loop60;
                         EarlyExitException eee =
-                            new EarlyExitException(59, input);
+                            new EarlyExitException(60, input);
                         throw eee;
                 }
-                cnt59++;
+                cnt60++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getTaskAttributeStringAccess().getUnorderedGroup_1()) ) {
@@ -8960,7 +9239,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskAttribute"
-    // InternalVertigoDsl.g:3649:1: entryRuleTaskAttribute returns [EObject current=null] : iv_ruleTaskAttribute= ruleTaskAttribute EOF ;
+    // InternalVertigoDsl.g:3756:1: entryRuleTaskAttribute returns [EObject current=null] : iv_ruleTaskAttribute= ruleTaskAttribute EOF ;
     public final EObject entryRuleTaskAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -8968,8 +9247,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3649:54: (iv_ruleTaskAttribute= ruleTaskAttribute EOF )
-            // InternalVertigoDsl.g:3650:2: iv_ruleTaskAttribute= ruleTaskAttribute EOF
+            // InternalVertigoDsl.g:3756:54: (iv_ruleTaskAttribute= ruleTaskAttribute EOF )
+            // InternalVertigoDsl.g:3757:2: iv_ruleTaskAttribute= ruleTaskAttribute EOF
             {
              newCompositeNode(grammarAccess.getTaskAttributeRule()); 
             pushFollow(FOLLOW_1);
@@ -8996,7 +9275,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskAttribute"
-    // InternalVertigoDsl.g:3656:1: ruleTaskAttribute returns [EObject current=null] : (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:3763:1: ruleTaskAttribute returns [EObject current=null] : (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleTaskAttribute() throws RecognitionException {
         EObject current = null;
 
@@ -9010,21 +9289,21 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3662:2: ( (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:3663:2: (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:3769:2: ( (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:3770:2: (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:3663:2: (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:3664:3: otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:3770:2: (otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:3771:3: otherlv_0= 'attribute' ( (lv_name_1_0= RULE_ID ) ) ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,64,FOLLOW_8); 
+            otherlv_0=(Token)match(input,65,FOLLOW_8); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTaskAttributeAccess().getAttributeKeyword_0());
             		
-            // InternalVertigoDsl.g:3668:3: ( (lv_name_1_0= RULE_ID ) )
-            // InternalVertigoDsl.g:3669:4: (lv_name_1_0= RULE_ID )
+            // InternalVertigoDsl.g:3775:3: ( (lv_name_1_0= RULE_ID ) )
+            // InternalVertigoDsl.g:3776:4: (lv_name_1_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:3669:4: (lv_name_1_0= RULE_ID )
-            // InternalVertigoDsl.g:3670:5: lv_name_1_0= RULE_ID
+            // InternalVertigoDsl.g:3776:4: (lv_name_1_0= RULE_ID )
+            // InternalVertigoDsl.g:3777:5: lv_name_1_0= RULE_ID
             {
             lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -9046,11 +9325,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3686:3: ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) )
-            // InternalVertigoDsl.g:3687:4: (lv_taskAttributeString_2_0= ruleTaskAttributeString )
+            // InternalVertigoDsl.g:3793:3: ( (lv_taskAttributeString_2_0= ruleTaskAttributeString ) )
+            // InternalVertigoDsl.g:3794:4: (lv_taskAttributeString_2_0= ruleTaskAttributeString )
             {
-            // InternalVertigoDsl.g:3687:4: (lv_taskAttributeString_2_0= ruleTaskAttributeString )
-            // InternalVertigoDsl.g:3688:5: lv_taskAttributeString_2_0= ruleTaskAttributeString
+            // InternalVertigoDsl.g:3794:4: (lv_taskAttributeString_2_0= ruleTaskAttributeString )
+            // InternalVertigoDsl.g:3795:5: lv_taskAttributeString_2_0= ruleTaskAttributeString
             {
 
             					newCompositeNode(grammarAccess.getTaskAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0());
@@ -9077,16 +9356,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3705:3: (otherlv_3= ',' )?
-            int alt60=2;
-            int LA60_0 = input.LA(1);
+            // InternalVertigoDsl.g:3812:3: (otherlv_3= ',' )?
+            int alt61=2;
+            int LA61_0 = input.LA(1);
 
-            if ( (LA60_0==37) ) {
-                alt60=1;
+            if ( (LA61_0==37) ) {
+                alt61=1;
             }
-            switch (alt60) {
+            switch (alt61) {
                 case 1 :
-                    // InternalVertigoDsl.g:3706:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:3813:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -9121,7 +9400,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskDataSpace"
-    // InternalVertigoDsl.g:3715:1: entryRuleTaskDataSpace returns [EObject current=null] : iv_ruleTaskDataSpace= ruleTaskDataSpace EOF ;
+    // InternalVertigoDsl.g:3822:1: entryRuleTaskDataSpace returns [EObject current=null] : iv_ruleTaskDataSpace= ruleTaskDataSpace EOF ;
     public final EObject entryRuleTaskDataSpace() throws RecognitionException {
         EObject current = null;
 
@@ -9129,8 +9408,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3715:54: (iv_ruleTaskDataSpace= ruleTaskDataSpace EOF )
-            // InternalVertigoDsl.g:3716:2: iv_ruleTaskDataSpace= ruleTaskDataSpace EOF
+            // InternalVertigoDsl.g:3822:54: (iv_ruleTaskDataSpace= ruleTaskDataSpace EOF )
+            // InternalVertigoDsl.g:3823:2: iv_ruleTaskDataSpace= ruleTaskDataSpace EOF
             {
              newCompositeNode(grammarAccess.getTaskDataSpaceRule()); 
             pushFollow(FOLLOW_1);
@@ -9157,7 +9436,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskDataSpace"
-    // InternalVertigoDsl.g:3722:1: ruleTaskDataSpace returns [EObject current=null] : (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:3829:1: ruleTaskDataSpace returns [EObject current=null] : (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleTaskDataSpace() throws RecognitionException {
         EObject current = null;
 
@@ -9170,11 +9449,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3728:2: ( (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:3729:2: (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:3835:2: ( (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:3836:2: (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:3729:2: (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:3730:3: otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:3836:2: (otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:3837:3: otherlv_0= 'storeName' otherlv_1= ':' ( (lv_storeName_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
             {
             otherlv_0=(Token)match(input,29,FOLLOW_13); 
 
@@ -9184,11 +9463,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getTaskDataSpaceAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:3738:3: ( (lv_storeName_2_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:3739:4: (lv_storeName_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:3845:3: ( (lv_storeName_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3846:4: (lv_storeName_2_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:3739:4: (lv_storeName_2_0= RULE_STRING )
-            // InternalVertigoDsl.g:3740:5: lv_storeName_2_0= RULE_STRING
+            // InternalVertigoDsl.g:3846:4: (lv_storeName_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:3847:5: lv_storeName_2_0= RULE_STRING
             {
             lv_storeName_2_0=(Token)match(input,RULE_STRING,FOLLOW_39); 
 
@@ -9210,16 +9489,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3756:3: (otherlv_3= ',' )?
-            int alt61=2;
-            int LA61_0 = input.LA(1);
+            // InternalVertigoDsl.g:3863:3: (otherlv_3= ',' )?
+            int alt62=2;
+            int LA62_0 = input.LA(1);
 
-            if ( (LA61_0==37) ) {
-                alt61=1;
+            if ( (LA62_0==37) ) {
+                alt62=1;
             }
-            switch (alt61) {
+            switch (alt62) {
                 case 1 :
-                    // InternalVertigoDsl.g:3757:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:3864:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -9254,7 +9533,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskRequestString"
-    // InternalVertigoDsl.g:3766:1: entryRuleTaskRequestString returns [EObject current=null] : iv_ruleTaskRequestString= ruleTaskRequestString EOF ;
+    // InternalVertigoDsl.g:3873:1: entryRuleTaskRequestString returns [EObject current=null] : iv_ruleTaskRequestString= ruleTaskRequestString EOF ;
     public final EObject entryRuleTaskRequestString() throws RecognitionException {
         EObject current = null;
 
@@ -9262,8 +9541,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3766:58: (iv_ruleTaskRequestString= ruleTaskRequestString EOF )
-            // InternalVertigoDsl.g:3767:2: iv_ruleTaskRequestString= ruleTaskRequestString EOF
+            // InternalVertigoDsl.g:3873:58: (iv_ruleTaskRequestString= ruleTaskRequestString EOF )
+            // InternalVertigoDsl.g:3874:2: iv_ruleTaskRequestString= ruleTaskRequestString EOF
             {
              newCompositeNode(grammarAccess.getTaskRequestStringRule()); 
             pushFollow(FOLLOW_1);
@@ -9290,7 +9569,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskRequestString"
-    // InternalVertigoDsl.g:3773:1: ruleTaskRequestString returns [EObject current=null] : ( (lv_string_0_0= RULE_STRING ) ) ;
+    // InternalVertigoDsl.g:3880:1: ruleTaskRequestString returns [EObject current=null] : ( (lv_string_0_0= RULE_STRING ) ) ;
     public final EObject ruleTaskRequestString() throws RecognitionException {
         EObject current = null;
 
@@ -9300,14 +9579,14 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3779:2: ( ( (lv_string_0_0= RULE_STRING ) ) )
-            // InternalVertigoDsl.g:3780:2: ( (lv_string_0_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3886:2: ( ( (lv_string_0_0= RULE_STRING ) ) )
+            // InternalVertigoDsl.g:3887:2: ( (lv_string_0_0= RULE_STRING ) )
             {
-            // InternalVertigoDsl.g:3780:2: ( (lv_string_0_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:3781:3: (lv_string_0_0= RULE_STRING )
+            // InternalVertigoDsl.g:3887:2: ( (lv_string_0_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3888:3: (lv_string_0_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:3781:3: (lv_string_0_0= RULE_STRING )
-            // InternalVertigoDsl.g:3782:4: lv_string_0_0= RULE_STRING
+            // InternalVertigoDsl.g:3888:3: (lv_string_0_0= RULE_STRING )
+            // InternalVertigoDsl.g:3889:4: lv_string_0_0= RULE_STRING
             {
             lv_string_0_0=(Token)match(input,RULE_STRING,FOLLOW_2); 
 
@@ -9349,7 +9628,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleTaskDefinition"
-    // InternalVertigoDsl.g:3801:1: entryRuleTaskDefinition returns [EObject current=null] : iv_ruleTaskDefinition= ruleTaskDefinition EOF ;
+    // InternalVertigoDsl.g:3908:1: entryRuleTaskDefinition returns [EObject current=null] : iv_ruleTaskDefinition= ruleTaskDefinition EOF ;
     public final EObject entryRuleTaskDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -9357,8 +9636,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3801:55: (iv_ruleTaskDefinition= ruleTaskDefinition EOF )
-            // InternalVertigoDsl.g:3802:2: iv_ruleTaskDefinition= ruleTaskDefinition EOF
+            // InternalVertigoDsl.g:3908:55: (iv_ruleTaskDefinition= ruleTaskDefinition EOF )
+            // InternalVertigoDsl.g:3909:2: iv_ruleTaskDefinition= ruleTaskDefinition EOF
             {
              newCompositeNode(grammarAccess.getTaskDefinitionRule()); 
             pushFollow(FOLLOW_1);
@@ -9385,7 +9664,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleTaskDefinition"
-    // InternalVertigoDsl.g:3808:1: ruleTaskDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' ) ;
+    // InternalVertigoDsl.g:3915:1: ruleTaskDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' ) ;
     public final EObject ruleTaskDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -9412,25 +9691,25 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3814:2: ( (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' ) )
-            // InternalVertigoDsl.g:3815:2: (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' )
+            // InternalVertigoDsl.g:3921:2: ( (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' ) )
+            // InternalVertigoDsl.g:3922:2: (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' )
             {
-            // InternalVertigoDsl.g:3815:2: (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' )
-            // InternalVertigoDsl.g:3816:3: otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}'
+            // InternalVertigoDsl.g:3922:2: (otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}' )
+            // InternalVertigoDsl.g:3923:3: otherlv_0= 'create' otherlv_1= 'Task' ( (lv_name_2_0= RULE_ID ) ) otherlv_3= '{' otherlv_4= 'className' otherlv_5= ':' ( (lv_classname_6_0= RULE_STRING ) ) (otherlv_7= ',' )? otherlv_8= 'request' otherlv_9= ':' ( (lv_request_10_0= ruleTaskRequestString ) ) (otherlv_11= ',' )? ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )* ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )? otherlv_14= '}'
             {
             otherlv_0=(Token)match(input,20,FOLLOW_54); 
 
             			newLeafNode(otherlv_0, grammarAccess.getTaskDefinitionAccess().getCreateKeyword_0());
             		
-            otherlv_1=(Token)match(input,65,FOLLOW_8); 
+            otherlv_1=(Token)match(input,66,FOLLOW_8); 
 
             			newLeafNode(otherlv_1, grammarAccess.getTaskDefinitionAccess().getTaskKeyword_1());
             		
-            // InternalVertigoDsl.g:3824:3: ( (lv_name_2_0= RULE_ID ) )
-            // InternalVertigoDsl.g:3825:4: (lv_name_2_0= RULE_ID )
+            // InternalVertigoDsl.g:3931:3: ( (lv_name_2_0= RULE_ID ) )
+            // InternalVertigoDsl.g:3932:4: (lv_name_2_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:3825:4: (lv_name_2_0= RULE_ID )
-            // InternalVertigoDsl.g:3826:5: lv_name_2_0= RULE_ID
+            // InternalVertigoDsl.g:3932:4: (lv_name_2_0= RULE_ID )
+            // InternalVertigoDsl.g:3933:5: lv_name_2_0= RULE_ID
             {
             lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -9464,11 +9743,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_5, grammarAccess.getTaskDefinitionAccess().getColonKeyword_5());
             		
-            // InternalVertigoDsl.g:3854:3: ( (lv_classname_6_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:3855:4: (lv_classname_6_0= RULE_STRING )
+            // InternalVertigoDsl.g:3961:3: ( (lv_classname_6_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:3962:4: (lv_classname_6_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:3855:4: (lv_classname_6_0= RULE_STRING )
-            // InternalVertigoDsl.g:3856:5: lv_classname_6_0= RULE_STRING
+            // InternalVertigoDsl.g:3962:4: (lv_classname_6_0= RULE_STRING )
+            // InternalVertigoDsl.g:3963:5: lv_classname_6_0= RULE_STRING
             {
             lv_classname_6_0=(Token)match(input,RULE_STRING,FOLLOW_55); 
 
@@ -9490,16 +9769,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3872:3: (otherlv_7= ',' )?
-            int alt62=2;
-            int LA62_0 = input.LA(1);
+            // InternalVertigoDsl.g:3979:3: (otherlv_7= ',' )?
+            int alt63=2;
+            int LA63_0 = input.LA(1);
 
-            if ( (LA62_0==37) ) {
-                alt62=1;
+            if ( (LA63_0==37) ) {
+                alt63=1;
             }
-            switch (alt62) {
+            switch (alt63) {
                 case 1 :
-                    // InternalVertigoDsl.g:3873:4: otherlv_7= ','
+                    // InternalVertigoDsl.g:3980:4: otherlv_7= ','
                     {
                     otherlv_7=(Token)match(input,37,FOLLOW_56); 
 
@@ -9511,7 +9790,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            otherlv_8=(Token)match(input,66,FOLLOW_13); 
+            otherlv_8=(Token)match(input,67,FOLLOW_13); 
 
             			newLeafNode(otherlv_8, grammarAccess.getTaskDefinitionAccess().getRequestKeyword_8());
             		
@@ -9519,11 +9798,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_9, grammarAccess.getTaskDefinitionAccess().getColonKeyword_9());
             		
-            // InternalVertigoDsl.g:3886:3: ( (lv_request_10_0= ruleTaskRequestString ) )
-            // InternalVertigoDsl.g:3887:4: (lv_request_10_0= ruleTaskRequestString )
+            // InternalVertigoDsl.g:3993:3: ( (lv_request_10_0= ruleTaskRequestString ) )
+            // InternalVertigoDsl.g:3994:4: (lv_request_10_0= ruleTaskRequestString )
             {
-            // InternalVertigoDsl.g:3887:4: (lv_request_10_0= ruleTaskRequestString )
-            // InternalVertigoDsl.g:3888:5: lv_request_10_0= ruleTaskRequestString
+            // InternalVertigoDsl.g:3994:4: (lv_request_10_0= ruleTaskRequestString )
+            // InternalVertigoDsl.g:3995:5: lv_request_10_0= ruleTaskRequestString
             {
 
             					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getRequestTaskRequestStringParserRuleCall_10_0());
@@ -9550,16 +9829,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3905:3: (otherlv_11= ',' )?
-            int alt63=2;
-            int LA63_0 = input.LA(1);
+            // InternalVertigoDsl.g:4012:3: (otherlv_11= ',' )?
+            int alt64=2;
+            int LA64_0 = input.LA(1);
 
-            if ( (LA63_0==37) ) {
-                alt63=1;
+            if ( (LA64_0==37) ) {
+                alt64=1;
             }
-            switch (alt63) {
+            switch (alt64) {
                 case 1 :
-                    // InternalVertigoDsl.g:3906:4: otherlv_11= ','
+                    // InternalVertigoDsl.g:4013:4: otherlv_11= ','
                     {
                     otherlv_11=(Token)match(input,37,FOLLOW_58); 
 
@@ -9571,23 +9850,23 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3911:3: ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )*
-            loop64:
+            // InternalVertigoDsl.g:4018:3: ( (lv_taskAttributes_12_0= ruleTaskAttribute ) )*
+            loop65:
             do {
-                int alt64=2;
-                int LA64_0 = input.LA(1);
+                int alt65=2;
+                int LA65_0 = input.LA(1);
 
-                if ( (LA64_0==64) ) {
-                    alt64=1;
+                if ( (LA65_0==65) ) {
+                    alt65=1;
                 }
 
 
-                switch (alt64) {
+                switch (alt65) {
             	case 1 :
-            	    // InternalVertigoDsl.g:3912:4: (lv_taskAttributes_12_0= ruleTaskAttribute )
+            	    // InternalVertigoDsl.g:4019:4: (lv_taskAttributes_12_0= ruleTaskAttribute )
             	    {
-            	    // InternalVertigoDsl.g:3912:4: (lv_taskAttributes_12_0= ruleTaskAttribute )
-            	    // InternalVertigoDsl.g:3913:5: lv_taskAttributes_12_0= ruleTaskAttribute
+            	    // InternalVertigoDsl.g:4019:4: (lv_taskAttributes_12_0= ruleTaskAttribute )
+            	    // InternalVertigoDsl.g:4020:5: lv_taskAttributes_12_0= ruleTaskAttribute
             	    {
 
             	    					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getTaskAttributesTaskAttributeParserRuleCall_12_0());
@@ -9616,23 +9895,23 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop64;
+            	    break loop65;
                 }
             } while (true);
 
-            // InternalVertigoDsl.g:3930:3: ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )?
-            int alt65=2;
-            int LA65_0 = input.LA(1);
+            // InternalVertigoDsl.g:4037:3: ( (lv_taskDataSpace_13_0= ruleTaskDataSpace ) )?
+            int alt66=2;
+            int LA66_0 = input.LA(1);
 
-            if ( (LA65_0==29) ) {
-                alt65=1;
+            if ( (LA66_0==29) ) {
+                alt66=1;
             }
-            switch (alt65) {
+            switch (alt66) {
                 case 1 :
-                    // InternalVertigoDsl.g:3931:4: (lv_taskDataSpace_13_0= ruleTaskDataSpace )
+                    // InternalVertigoDsl.g:4038:4: (lv_taskDataSpace_13_0= ruleTaskDataSpace )
                     {
-                    // InternalVertigoDsl.g:3931:4: (lv_taskDataSpace_13_0= ruleTaskDataSpace )
-                    // InternalVertigoDsl.g:3932:5: lv_taskDataSpace_13_0= ruleTaskDataSpace
+                    // InternalVertigoDsl.g:4038:4: (lv_taskDataSpace_13_0= ruleTaskDataSpace )
+                    // InternalVertigoDsl.g:4039:5: lv_taskDataSpace_13_0= ruleTaskDataSpace
                     {
 
                     					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getTaskDataSpaceTaskDataSpaceParserRuleCall_13_0());
@@ -9689,7 +9968,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetDefinitionDtDefinition"
-    // InternalVertigoDsl.g:3957:1: entryRuleFacetDefinitionDtDefinition returns [EObject current=null] : iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF ;
+    // InternalVertigoDsl.g:4064:1: entryRuleFacetDefinitionDtDefinition returns [EObject current=null] : iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF ;
     public final EObject entryRuleFacetDefinitionDtDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -9697,8 +9976,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:3957:68: (iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF )
-            // InternalVertigoDsl.g:3958:2: iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF
+            // InternalVertigoDsl.g:4064:68: (iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF )
+            // InternalVertigoDsl.g:4065:2: iv_ruleFacetDefinitionDtDefinition= ruleFacetDefinitionDtDefinition EOF
             {
              newCompositeNode(grammarAccess.getFacetDefinitionDtDefinitionRule()); 
             pushFollow(FOLLOW_1);
@@ -9725,7 +10004,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetDefinitionDtDefinition"
-    // InternalVertigoDsl.g:3964:1: ruleFacetDefinitionDtDefinition returns [EObject current=null] : (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:4071:1: ruleFacetDefinitionDtDefinition returns [EObject current=null] : (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleFacetDefinitionDtDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -9738,13 +10017,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:3970:2: ( (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:3971:2: (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4077:2: ( (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4078:2: (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:3971:2: (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:3972:3: otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:4078:2: (otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4079:3: otherlv_0= 'dtDefinition' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,67,FOLLOW_13); 
+            otherlv_0=(Token)match(input,68,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionDtDefinitionAccess().getDtDefinitionKeyword_0());
             		
@@ -9752,11 +10031,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetDefinitionDtDefinitionAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:3980:3: ( (otherlv_2= RULE_ID ) )
-            // InternalVertigoDsl.g:3981:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:4087:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:4088:4: (otherlv_2= RULE_ID )
             {
-            // InternalVertigoDsl.g:3981:4: (otherlv_2= RULE_ID )
-            // InternalVertigoDsl.g:3982:5: otherlv_2= RULE_ID
+            // InternalVertigoDsl.g:4088:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:4089:5: otherlv_2= RULE_ID
             {
 
             					if (current==null) {
@@ -9773,16 +10052,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:3993:3: (otherlv_3= ',' )?
-            int alt66=2;
-            int LA66_0 = input.LA(1);
+            // InternalVertigoDsl.g:4100:3: (otherlv_3= ',' )?
+            int alt67=2;
+            int LA67_0 = input.LA(1);
 
-            if ( (LA66_0==37) ) {
-                alt66=1;
+            if ( (LA67_0==37) ) {
+                alt67=1;
             }
-            switch (alt66) {
+            switch (alt67) {
                 case 1 :
-                    // InternalVertigoDsl.g:3994:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:4101:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -9817,7 +10096,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetDefinitionFieldName"
-    // InternalVertigoDsl.g:4003:1: entryRuleFacetDefinitionFieldName returns [EObject current=null] : iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF ;
+    // InternalVertigoDsl.g:4110:1: entryRuleFacetDefinitionFieldName returns [EObject current=null] : iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF ;
     public final EObject entryRuleFacetDefinitionFieldName() throws RecognitionException {
         EObject current = null;
 
@@ -9825,8 +10104,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4003:65: (iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF )
-            // InternalVertigoDsl.g:4004:2: iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF
+            // InternalVertigoDsl.g:4110:65: (iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF )
+            // InternalVertigoDsl.g:4111:2: iv_ruleFacetDefinitionFieldName= ruleFacetDefinitionFieldName EOF
             {
              newCompositeNode(grammarAccess.getFacetDefinitionFieldNameRule()); 
             pushFollow(FOLLOW_1);
@@ -9853,7 +10132,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetDefinitionFieldName"
-    // InternalVertigoDsl.g:4010:1: ruleFacetDefinitionFieldName returns [EObject current=null] : (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:4117:1: ruleFacetDefinitionFieldName returns [EObject current=null] : (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleFacetDefinitionFieldName() throws RecognitionException {
         EObject current = null;
 
@@ -9866,13 +10145,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4016:2: ( (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:4017:2: (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4123:2: ( (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4124:2: (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:4017:2: (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:4018:3: otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:4124:2: (otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4125:3: otherlv_0= 'fieldName' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,68,FOLLOW_13); 
+            otherlv_0=(Token)match(input,69,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionFieldNameAccess().getFieldNameKeyword_0());
             		
@@ -9880,11 +10159,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetDefinitionFieldNameAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:4026:3: ( (lv_string_2_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:4027:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4133:3: ( (lv_string_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:4134:4: (lv_string_2_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:4027:4: (lv_string_2_0= RULE_STRING )
-            // InternalVertigoDsl.g:4028:5: lv_string_2_0= RULE_STRING
+            // InternalVertigoDsl.g:4134:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4135:5: lv_string_2_0= RULE_STRING
             {
             lv_string_2_0=(Token)match(input,RULE_STRING,FOLLOW_39); 
 
@@ -9906,16 +10185,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4044:3: (otherlv_3= ',' )?
-            int alt67=2;
-            int LA67_0 = input.LA(1);
+            // InternalVertigoDsl.g:4151:3: (otherlv_3= ',' )?
+            int alt68=2;
+            int LA68_0 = input.LA(1);
 
-            if ( (LA67_0==37) ) {
-                alt67=1;
+            if ( (LA68_0==37) ) {
+                alt68=1;
             }
-            switch (alt67) {
+            switch (alt68) {
                 case 1 :
-                    // InternalVertigoDsl.g:4045:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:4152:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -9950,7 +10229,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetDefinitionLabel"
-    // InternalVertigoDsl.g:4054:1: entryRuleFacetDefinitionLabel returns [EObject current=null] : iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF ;
+    // InternalVertigoDsl.g:4161:1: entryRuleFacetDefinitionLabel returns [EObject current=null] : iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF ;
     public final EObject entryRuleFacetDefinitionLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9958,8 +10237,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4054:61: (iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF )
-            // InternalVertigoDsl.g:4055:2: iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF
+            // InternalVertigoDsl.g:4161:61: (iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF )
+            // InternalVertigoDsl.g:4162:2: iv_ruleFacetDefinitionLabel= ruleFacetDefinitionLabel EOF
             {
              newCompositeNode(grammarAccess.getFacetDefinitionLabelRule()); 
             pushFollow(FOLLOW_1);
@@ -9986,7 +10265,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetDefinitionLabel"
-    // InternalVertigoDsl.g:4061:1: ruleFacetDefinitionLabel returns [EObject current=null] : (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:4168:1: ruleFacetDefinitionLabel returns [EObject current=null] : (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleFacetDefinitionLabel() throws RecognitionException {
         EObject current = null;
 
@@ -9999,11 +10278,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4067:2: ( (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:4068:2: (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4174:2: ( (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4175:2: (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:4068:2: (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:4069:3: otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:4175:2: (otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4176:3: otherlv_0= 'label' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
             {
             otherlv_0=(Token)match(input,16,FOLLOW_13); 
 
@@ -10013,11 +10292,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetDefinitionLabelAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:4077:3: ( (lv_string_2_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:4078:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4184:3: ( (lv_string_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:4185:4: (lv_string_2_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:4078:4: (lv_string_2_0= RULE_STRING )
-            // InternalVertigoDsl.g:4079:5: lv_string_2_0= RULE_STRING
+            // InternalVertigoDsl.g:4185:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4186:5: lv_string_2_0= RULE_STRING
             {
             lv_string_2_0=(Token)match(input,RULE_STRING,FOLLOW_39); 
 
@@ -10039,16 +10318,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4095:3: (otherlv_3= ',' )?
-            int alt68=2;
-            int LA68_0 = input.LA(1);
+            // InternalVertigoDsl.g:4202:3: (otherlv_3= ',' )?
+            int alt69=2;
+            int LA69_0 = input.LA(1);
 
-            if ( (LA68_0==37) ) {
-                alt68=1;
+            if ( (LA69_0==37) ) {
+                alt69=1;
             }
-            switch (alt68) {
+            switch (alt69) {
                 case 1 :
-                    // InternalVertigoDsl.g:4096:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:4203:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -10083,7 +10362,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetDefinitionRangeString"
-    // InternalVertigoDsl.g:4105:1: entryRuleFacetDefinitionRangeString returns [EObject current=null] : iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF ;
+    // InternalVertigoDsl.g:4212:1: entryRuleFacetDefinitionRangeString returns [EObject current=null] : iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF ;
     public final EObject entryRuleFacetDefinitionRangeString() throws RecognitionException {
         EObject current = null;
 
@@ -10091,8 +10370,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4105:67: (iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF )
-            // InternalVertigoDsl.g:4106:2: iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF
+            // InternalVertigoDsl.g:4212:67: (iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF )
+            // InternalVertigoDsl.g:4213:2: iv_ruleFacetDefinitionRangeString= ruleFacetDefinitionRangeString EOF
             {
              newCompositeNode(grammarAccess.getFacetDefinitionRangeStringRule()); 
             pushFollow(FOLLOW_1);
@@ -10119,7 +10398,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetDefinitionRangeString"
-    // InternalVertigoDsl.g:4112:1: ruleFacetDefinitionRangeString returns [EObject current=null] : (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) ;
+    // InternalVertigoDsl.g:4219:1: ruleFacetDefinitionRangeString returns [EObject current=null] : (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) ;
     public final EObject ruleFacetDefinitionRangeString() throws RecognitionException {
         EObject current = null;
 
@@ -10138,69 +10417,69 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4118:2: ( (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) )
-            // InternalVertigoDsl.g:4119:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
+            // InternalVertigoDsl.g:4225:2: ( (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) )
+            // InternalVertigoDsl.g:4226:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
             {
-            // InternalVertigoDsl.g:4119:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
-            // InternalVertigoDsl.g:4120:3: otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}'
+            // InternalVertigoDsl.g:4226:2: (otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
+            // InternalVertigoDsl.g:4227:3: otherlv_0= '{' ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) ) otherlv_10= '}'
             {
             otherlv_0=(Token)match(input,22,FOLLOW_59); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionRangeStringAccess().getLeftCurlyBracketKeyword_0());
             		
-            // InternalVertigoDsl.g:4124:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) )
-            // InternalVertigoDsl.g:4125:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:4231:3: ( ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) ) )
+            // InternalVertigoDsl.g:4232:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) )
             {
-            // InternalVertigoDsl.g:4125:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) )
-            // InternalVertigoDsl.g:4126:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:4232:4: ( ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:4233:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?)
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1());
             				
-            // InternalVertigoDsl.g:4129:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?)
-            // InternalVertigoDsl.g:4130:6: ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?
+            // InternalVertigoDsl.g:4236:5: ( ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:4237:6: ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+ {...}?
             {
-            // InternalVertigoDsl.g:4130:6: ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+
-            int cnt71=0;
-            loop71:
+            // InternalVertigoDsl.g:4237:6: ( ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) ) )+
+            int cnt72=0;
+            loop72:
             do {
-                int alt71=3;
-                int LA71_0 = input.LA(1);
+                int alt72=3;
+                int LA72_0 = input.LA(1);
 
-                if ( LA71_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
-                    alt71=1;
+                if ( LA72_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
+                    alt72=1;
                 }
-                else if ( LA71_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
-                    alt71=2;
+                else if ( LA72_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
+                    alt72=2;
                 }
 
 
-                switch (alt71) {
+                switch (alt72) {
             	case 1 :
-            	    // InternalVertigoDsl.g:4131:4: ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:4238:4: ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4131:4: ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:4132:5: {...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:4238:4: ({...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:4239:5: {...}? => ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:4132:123: ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:4133:6: ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) )
+            	    // InternalVertigoDsl.g:4239:123: ( ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:4240:6: ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 0);
             	    					
-            	    // InternalVertigoDsl.g:4136:9: ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) )
-            	    // InternalVertigoDsl.g:4136:10: {...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? )
+            	    // InternalVertigoDsl.g:4243:9: ({...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? ) )
+            	    // InternalVertigoDsl.g:4243:10: {...}? => (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "true");
             	    }
-            	    // InternalVertigoDsl.g:4136:19: (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? )
-            	    // InternalVertigoDsl.g:4136:20: otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )?
+            	    // InternalVertigoDsl.g:4243:19: (otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )? )
+            	    // InternalVertigoDsl.g:4243:20: otherlv_2= 'filter' otherlv_3= ':' ( (lv_filterString_4_0= RULE_STRING ) ) (otherlv_5= ',' )?
             	    {
-            	    otherlv_2=(Token)match(input,69,FOLLOW_13); 
+            	    otherlv_2=(Token)match(input,70,FOLLOW_13); 
 
             	    									newLeafNode(otherlv_2, grammarAccess.getFacetDefinitionRangeStringAccess().getFilterKeyword_1_0_0());
             	    								
@@ -10208,11 +10487,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_3, grammarAccess.getFacetDefinitionRangeStringAccess().getColonKeyword_1_0_1());
             	    								
-            	    // InternalVertigoDsl.g:4144:9: ( (lv_filterString_4_0= RULE_STRING ) )
-            	    // InternalVertigoDsl.g:4145:10: (lv_filterString_4_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:4251:9: ( (lv_filterString_4_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:4252:10: (lv_filterString_4_0= RULE_STRING )
             	    {
-            	    // InternalVertigoDsl.g:4145:10: (lv_filterString_4_0= RULE_STRING )
-            	    // InternalVertigoDsl.g:4146:11: lv_filterString_4_0= RULE_STRING
+            	    // InternalVertigoDsl.g:4252:10: (lv_filterString_4_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:4253:11: lv_filterString_4_0= RULE_STRING
             	    {
             	    lv_filterString_4_0=(Token)match(input,RULE_STRING,FOLLOW_60); 
 
@@ -10234,16 +10513,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:4162:9: (otherlv_5= ',' )?
-            	    int alt69=2;
-            	    int LA69_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:4269:9: (otherlv_5= ',' )?
+            	    int alt70=2;
+            	    int LA70_0 = input.LA(1);
 
-            	    if ( (LA69_0==37) ) {
-            	        alt69=1;
+            	    if ( (LA70_0==37) ) {
+            	        alt70=1;
             	    }
-            	    switch (alt69) {
+            	    switch (alt70) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:4163:10: otherlv_5= ','
+            	            // InternalVertigoDsl.g:4270:10: otherlv_5= ','
             	            {
             	            otherlv_5=(Token)match(input,37,FOLLOW_61); 
 
@@ -10274,28 +10553,28 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:4174:4: ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:4281:4: ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4174:4: ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) )
-            	    // InternalVertigoDsl.g:4175:5: {...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:4281:4: ({...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) ) )
+            	    // InternalVertigoDsl.g:4282:5: {...}? => ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:4175:123: ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) )
-            	    // InternalVertigoDsl.g:4176:6: ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) )
+            	    // InternalVertigoDsl.g:4282:123: ( ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) ) )
+            	    // InternalVertigoDsl.g:4283:6: ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1(), 1);
             	    					
-            	    // InternalVertigoDsl.g:4179:9: ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) )
-            	    // InternalVertigoDsl.g:4179:10: {...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? )
+            	    // InternalVertigoDsl.g:4286:9: ({...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? ) )
+            	    // InternalVertigoDsl.g:4286:10: {...}? => (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinitionRangeString", "true");
             	    }
-            	    // InternalVertigoDsl.g:4179:19: (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? )
-            	    // InternalVertigoDsl.g:4179:20: otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )?
+            	    // InternalVertigoDsl.g:4286:19: (otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )? )
+            	    // InternalVertigoDsl.g:4286:20: otherlv_6= 'label' otherlv_7= ':' ( (lv_labelString_8_0= RULE_STRING ) ) (otherlv_9= ',' )?
             	    {
             	    otherlv_6=(Token)match(input,16,FOLLOW_13); 
 
@@ -10305,11 +10584,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    									newLeafNode(otherlv_7, grammarAccess.getFacetDefinitionRangeStringAccess().getColonKeyword_1_1_1());
             	    								
-            	    // InternalVertigoDsl.g:4187:9: ( (lv_labelString_8_0= RULE_STRING ) )
-            	    // InternalVertigoDsl.g:4188:10: (lv_labelString_8_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:4294:9: ( (lv_labelString_8_0= RULE_STRING ) )
+            	    // InternalVertigoDsl.g:4295:10: (lv_labelString_8_0= RULE_STRING )
             	    {
-            	    // InternalVertigoDsl.g:4188:10: (lv_labelString_8_0= RULE_STRING )
-            	    // InternalVertigoDsl.g:4189:11: lv_labelString_8_0= RULE_STRING
+            	    // InternalVertigoDsl.g:4295:10: (lv_labelString_8_0= RULE_STRING )
+            	    // InternalVertigoDsl.g:4296:11: lv_labelString_8_0= RULE_STRING
             	    {
             	    lv_labelString_8_0=(Token)match(input,RULE_STRING,FOLLOW_60); 
 
@@ -10331,16 +10610,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             	    }
 
-            	    // InternalVertigoDsl.g:4205:9: (otherlv_9= ',' )?
-            	    int alt70=2;
-            	    int LA70_0 = input.LA(1);
+            	    // InternalVertigoDsl.g:4312:9: (otherlv_9= ',' )?
+            	    int alt71=2;
+            	    int LA71_0 = input.LA(1);
 
-            	    if ( (LA70_0==37) ) {
-            	        alt70=1;
+            	    if ( (LA71_0==37) ) {
+            	        alt71=1;
             	    }
-            	    switch (alt70) {
+            	    switch (alt71) {
             	        case 1 :
-            	            // InternalVertigoDsl.g:4206:10: otherlv_9= ','
+            	            // InternalVertigoDsl.g:4313:10: otherlv_9= ','
             	            {
             	            otherlv_9=(Token)match(input,37,FOLLOW_61); 
 
@@ -10372,12 +10651,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt71 >= 1 ) break loop71;
+            	    if ( cnt72 >= 1 ) break loop72;
                         EarlyExitException eee =
-                            new EarlyExitException(71, input);
+                            new EarlyExitException(72, input);
                         throw eee;
                 }
-                cnt71++;
+                cnt72++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getFacetDefinitionRangeStringAccess().getUnorderedGroup_1()) ) {
@@ -10422,7 +10701,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetDefinitionRange"
-    // InternalVertigoDsl.g:4233:1: entryRuleFacetDefinitionRange returns [EObject current=null] : iv_ruleFacetDefinitionRange= ruleFacetDefinitionRange EOF ;
+    // InternalVertigoDsl.g:4340:1: entryRuleFacetDefinitionRange returns [EObject current=null] : iv_ruleFacetDefinitionRange= ruleFacetDefinitionRange EOF ;
     public final EObject entryRuleFacetDefinitionRange() throws RecognitionException {
         EObject current = null;
 
@@ -10430,8 +10709,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4233:61: (iv_ruleFacetDefinitionRange= ruleFacetDefinitionRange EOF )
-            // InternalVertigoDsl.g:4234:2: iv_ruleFacetDefinitionRange= ruleFacetDefinitionRange EOF
+            // InternalVertigoDsl.g:4340:61: (iv_ruleFacetDefinitionRange= ruleFacetDefinitionRange EOF )
+            // InternalVertigoDsl.g:4341:2: iv_ruleFacetDefinitionRange= ruleFacetDefinitionRange EOF
             {
              newCompositeNode(grammarAccess.getFacetDefinitionRangeRule()); 
             pushFollow(FOLLOW_1);
@@ -10458,7 +10737,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetDefinitionRange"
-    // InternalVertigoDsl.g:4240:1: ruleFacetDefinitionRange returns [EObject current=null] : (otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:4347:1: ruleFacetDefinitionRange returns [EObject current=null] : (otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleFacetDefinitionRange() throws RecognitionException {
         EObject current = null;
 
@@ -10473,21 +10752,21 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4246:2: ( (otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:4247:2: (otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4353:2: ( (otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4354:2: (otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:4247:2: (otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:4248:3: otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:4354:2: (otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4355:3: otherlv_0= 'range' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,70,FOLLOW_3); 
+            otherlv_0=(Token)match(input,71,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionRangeAccess().getRangeKeyword_0());
             		
-            // InternalVertigoDsl.g:4252:3: ( (lv_name_1_0= ruleKEYWORDID ) )
-            // InternalVertigoDsl.g:4253:4: (lv_name_1_0= ruleKEYWORDID )
+            // InternalVertigoDsl.g:4359:3: ( (lv_name_1_0= ruleKEYWORDID ) )
+            // InternalVertigoDsl.g:4360:4: (lv_name_1_0= ruleKEYWORDID )
             {
-            // InternalVertigoDsl.g:4253:4: (lv_name_1_0= ruleKEYWORDID )
-            // InternalVertigoDsl.g:4254:5: lv_name_1_0= ruleKEYWORDID
+            // InternalVertigoDsl.g:4360:4: (lv_name_1_0= ruleKEYWORDID )
+            // InternalVertigoDsl.g:4361:5: lv_name_1_0= ruleKEYWORDID
             {
 
             					newCompositeNode(grammarAccess.getFacetDefinitionRangeAccess().getNameKEYWORDIDParserRuleCall_1_0());
@@ -10514,11 +10793,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4271:3: ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) )
-            // InternalVertigoDsl.g:4272:4: (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString )
+            // InternalVertigoDsl.g:4378:3: ( (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString ) )
+            // InternalVertigoDsl.g:4379:4: (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString )
             {
-            // InternalVertigoDsl.g:4272:4: (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString )
-            // InternalVertigoDsl.g:4273:5: lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString
+            // InternalVertigoDsl.g:4379:4: (lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString )
+            // InternalVertigoDsl.g:4380:5: lv_facetDefinitionRangeString_2_0= ruleFacetDefinitionRangeString
             {
 
             					newCompositeNode(grammarAccess.getFacetDefinitionRangeAccess().getFacetDefinitionRangeStringFacetDefinitionRangeStringParserRuleCall_2_0());
@@ -10545,16 +10824,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4290:3: (otherlv_3= ',' )?
-            int alt72=2;
-            int LA72_0 = input.LA(1);
+            // InternalVertigoDsl.g:4397:3: (otherlv_3= ',' )?
+            int alt73=2;
+            int LA73_0 = input.LA(1);
 
-            if ( (LA72_0==37) ) {
-                alt72=1;
+            if ( (LA73_0==37) ) {
+                alt73=1;
             }
-            switch (alt72) {
+            switch (alt73) {
                 case 1 :
-                    // InternalVertigoDsl.g:4291:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:4398:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -10589,7 +10868,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetDefinition"
-    // InternalVertigoDsl.g:4300:1: entryRuleFacetDefinition returns [EObject current=null] : iv_ruleFacetDefinition= ruleFacetDefinition EOF ;
+    // InternalVertigoDsl.g:4407:1: entryRuleFacetDefinition returns [EObject current=null] : iv_ruleFacetDefinition= ruleFacetDefinition EOF ;
     public final EObject entryRuleFacetDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -10597,8 +10876,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4300:56: (iv_ruleFacetDefinition= ruleFacetDefinition EOF )
-            // InternalVertigoDsl.g:4301:2: iv_ruleFacetDefinition= ruleFacetDefinition EOF
+            // InternalVertigoDsl.g:4407:56: (iv_ruleFacetDefinition= ruleFacetDefinition EOF )
+            // InternalVertigoDsl.g:4408:2: iv_ruleFacetDefinition= ruleFacetDefinition EOF
             {
              newCompositeNode(grammarAccess.getFacetDefinitionRule()); 
             pushFollow(FOLLOW_1);
@@ -10625,7 +10904,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetDefinition"
-    // InternalVertigoDsl.g:4307:1: ruleFacetDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}' ) ;
+    // InternalVertigoDsl.g:4414:1: ruleFacetDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}' ) ;
     public final EObject ruleFacetDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -10647,22 +10926,22 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4313:2: ( (otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}' ) )
-            // InternalVertigoDsl.g:4314:2: (otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}' )
+            // InternalVertigoDsl.g:4420:2: ( (otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}' ) )
+            // InternalVertigoDsl.g:4421:2: (otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}' )
             {
-            // InternalVertigoDsl.g:4314:2: (otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}' )
-            // InternalVertigoDsl.g:4315:3: otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}'
+            // InternalVertigoDsl.g:4421:2: (otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}' )
+            // InternalVertigoDsl.g:4422:3: otherlv_0= 'create' otherlv_1= 'FacetDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) ) otherlv_10= '}'
             {
             otherlv_0=(Token)match(input,20,FOLLOW_62); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetDefinitionAccess().getCreateKeyword_0());
             		
-            otherlv_1=(Token)match(input,71,FOLLOW_8); 
+            otherlv_1=(Token)match(input,72,FOLLOW_8); 
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetDefinitionAccess().getFacetDefinitionKeyword_1());
             		
-            // InternalVertigoDsl.g:4323:3: ()
-            // InternalVertigoDsl.g:4324:4: 
+            // InternalVertigoDsl.g:4430:3: ()
+            // InternalVertigoDsl.g:4431:4: 
             {
 
             				current = forceCreateModelElement(
@@ -10672,11 +10951,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4330:3: ( (lv_name_3_0= RULE_ID ) )
-            // InternalVertigoDsl.g:4331:4: (lv_name_3_0= RULE_ID )
+            // InternalVertigoDsl.g:4437:3: ( (lv_name_3_0= RULE_ID ) )
+            // InternalVertigoDsl.g:4438:4: (lv_name_3_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:4331:4: (lv_name_3_0= RULE_ID )
-            // InternalVertigoDsl.g:4332:5: lv_name_3_0= RULE_ID
+            // InternalVertigoDsl.g:4438:4: (lv_name_3_0= RULE_ID )
+            // InternalVertigoDsl.g:4439:5: lv_name_3_0= RULE_ID
             {
             lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -10702,66 +10981,66 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getFacetDefinitionAccess().getLeftCurlyBracketKeyword_4());
             		
-            // InternalVertigoDsl.g:4352:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) )
-            // InternalVertigoDsl.g:4353:4: ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:4459:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) ) )
+            // InternalVertigoDsl.g:4460:4: ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) )
             {
-            // InternalVertigoDsl.g:4353:4: ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) )
-            // InternalVertigoDsl.g:4354:5: ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?)
+            // InternalVertigoDsl.g:4460:4: ( ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:4461:5: ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?)
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5());
             				
-            // InternalVertigoDsl.g:4357:5: ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?)
-            // InternalVertigoDsl.g:4358:6: ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?
+            // InternalVertigoDsl.g:4464:5: ( ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?)
+            // InternalVertigoDsl.g:4465:6: ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+ {...}?
             {
-            // InternalVertigoDsl.g:4358:6: ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+
-            int cnt74=0;
-            loop74:
+            // InternalVertigoDsl.g:4465:6: ( ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) ) )+
+            int cnt75=0;
+            loop75:
             do {
-                int alt74=5;
-                int LA74_0 = input.LA(1);
+                int alt75=5;
+                int LA75_0 = input.LA(1);
 
-                if ( LA74_0 == 67 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 0) ) {
-                    alt74=1;
+                if ( LA75_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 0) ) {
+                    alt75=1;
                 }
-                else if ( LA74_0 == 68 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 1) ) {
-                    alt74=2;
+                else if ( LA75_0 == 69 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 1) ) {
+                    alt75=2;
                 }
-                else if ( LA74_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 2) ) {
-                    alt74=3;
+                else if ( LA75_0 == 16 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 2) ) {
+                    alt75=3;
                 }
-                else if ( LA74_0 == 70 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 3) ) {
-                    alt74=4;
+                else if ( LA75_0 == 71 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 3) ) {
+                    alt75=4;
                 }
 
 
-                switch (alt74) {
+                switch (alt75) {
             	case 1 :
-            	    // InternalVertigoDsl.g:4359:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) )
+            	    // InternalVertigoDsl.g:4466:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4359:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) )
-            	    // InternalVertigoDsl.g:4360:5: {...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) )
+            	    // InternalVertigoDsl.g:4466:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) ) )
+            	    // InternalVertigoDsl.g:4467:5: {...}? => ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:4360:112: ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) )
-            	    // InternalVertigoDsl.g:4361:6: ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) )
+            	    // InternalVertigoDsl.g:4467:112: ( ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) ) )
+            	    // InternalVertigoDsl.g:4468:6: ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 0);
             	    					
-            	    // InternalVertigoDsl.g:4364:9: ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) )
-            	    // InternalVertigoDsl.g:4364:10: {...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) )
+            	    // InternalVertigoDsl.g:4471:9: ({...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) ) )
+            	    // InternalVertigoDsl.g:4471:10: {...}? => ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:4364:19: ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) )
-            	    // InternalVertigoDsl.g:4364:20: (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition )
+            	    // InternalVertigoDsl.g:4471:19: ( (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition ) )
+            	    // InternalVertigoDsl.g:4471:20: (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition )
             	    {
-            	    // InternalVertigoDsl.g:4364:20: (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition )
-            	    // InternalVertigoDsl.g:4365:10: lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition
+            	    // InternalVertigoDsl.g:4471:20: (lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition )
+            	    // InternalVertigoDsl.g:4472:10: lv_facetDefinitionDtDefinition_6_0= ruleFacetDefinitionDtDefinition
             	    {
 
             	    										newCompositeNode(grammarAccess.getFacetDefinitionAccess().getFacetDefinitionDtDefinitionFacetDefinitionDtDefinitionParserRuleCall_5_0_0());
@@ -10804,31 +11083,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:4387:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) )
+            	    // InternalVertigoDsl.g:4494:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4387:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) )
-            	    // InternalVertigoDsl.g:4388:5: {...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) )
+            	    // InternalVertigoDsl.g:4494:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) ) )
+            	    // InternalVertigoDsl.g:4495:5: {...}? => ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:4388:112: ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) )
-            	    // InternalVertigoDsl.g:4389:6: ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) )
+            	    // InternalVertigoDsl.g:4495:112: ( ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) ) )
+            	    // InternalVertigoDsl.g:4496:6: ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 1);
             	    					
-            	    // InternalVertigoDsl.g:4392:9: ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) )
-            	    // InternalVertigoDsl.g:4392:10: {...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) )
+            	    // InternalVertigoDsl.g:4499:9: ({...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) ) )
+            	    // InternalVertigoDsl.g:4499:10: {...}? => ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:4392:19: ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) )
-            	    // InternalVertigoDsl.g:4392:20: (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName )
+            	    // InternalVertigoDsl.g:4499:19: ( (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName ) )
+            	    // InternalVertigoDsl.g:4499:20: (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName )
             	    {
-            	    // InternalVertigoDsl.g:4392:20: (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName )
-            	    // InternalVertigoDsl.g:4393:10: lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName
+            	    // InternalVertigoDsl.g:4499:20: (lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName )
+            	    // InternalVertigoDsl.g:4500:10: lv_facetDefinitionFieldName_7_0= ruleFacetDefinitionFieldName
             	    {
 
             	    										newCompositeNode(grammarAccess.getFacetDefinitionAccess().getFacetDefinitionFieldNameFacetDefinitionFieldNameParserRuleCall_5_1_0());
@@ -10871,31 +11150,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalVertigoDsl.g:4415:4: ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) )
+            	    // InternalVertigoDsl.g:4522:4: ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4415:4: ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) )
-            	    // InternalVertigoDsl.g:4416:5: {...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) )
+            	    // InternalVertigoDsl.g:4522:4: ({...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) ) )
+            	    // InternalVertigoDsl.g:4523:5: {...}? => ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 2)");
             	    }
-            	    // InternalVertigoDsl.g:4416:112: ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) )
-            	    // InternalVertigoDsl.g:4417:6: ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) )
+            	    // InternalVertigoDsl.g:4523:112: ( ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) ) )
+            	    // InternalVertigoDsl.g:4524:6: ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 2);
             	    					
-            	    // InternalVertigoDsl.g:4420:9: ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) )
-            	    // InternalVertigoDsl.g:4420:10: {...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) )
+            	    // InternalVertigoDsl.g:4527:9: ({...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) ) )
+            	    // InternalVertigoDsl.g:4527:10: {...}? => ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:4420:19: ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) )
-            	    // InternalVertigoDsl.g:4420:20: (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel )
+            	    // InternalVertigoDsl.g:4527:19: ( (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel ) )
+            	    // InternalVertigoDsl.g:4527:20: (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel )
             	    {
-            	    // InternalVertigoDsl.g:4420:20: (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel )
-            	    // InternalVertigoDsl.g:4421:10: lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel
+            	    // InternalVertigoDsl.g:4527:20: (lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel )
+            	    // InternalVertigoDsl.g:4528:10: lv_facetDefinitonLabel_8_0= ruleFacetDefinitionLabel
             	    {
 
             	    										newCompositeNode(grammarAccess.getFacetDefinitionAccess().getFacetDefinitonLabelFacetDefinitionLabelParserRuleCall_5_2_0());
@@ -10938,50 +11217,50 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // InternalVertigoDsl.g:4443:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) )
+            	    // InternalVertigoDsl.g:4550:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) )
             	    {
-            	    // InternalVertigoDsl.g:4443:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) )
-            	    // InternalVertigoDsl.g:4444:5: {...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ )
+            	    // InternalVertigoDsl.g:4550:4: ({...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ ) )
+            	    // InternalVertigoDsl.g:4551:5: {...}? => ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 3) ) {
             	        throw new FailedPredicateException(input, "ruleFacetDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 3)");
             	    }
-            	    // InternalVertigoDsl.g:4444:112: ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ )
-            	    // InternalVertigoDsl.g:4445:6: ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+
+            	    // InternalVertigoDsl.g:4551:112: ( ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+ )
+            	    // InternalVertigoDsl.g:4552:6: ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5(), 3);
             	    					
-            	    // InternalVertigoDsl.g:4448:9: ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+
-            	    int cnt73=0;
-            	    loop73:
+            	    // InternalVertigoDsl.g:4555:9: ({...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) ) )+
+            	    int cnt74=0;
+            	    loop74:
             	    do {
-            	        int alt73=2;
-            	        int LA73_0 = input.LA(1);
+            	        int alt74=2;
+            	        int LA74_0 = input.LA(1);
 
-            	        if ( (LA73_0==70) ) {
-            	            int LA73_2 = input.LA(2);
+            	        if ( (LA74_0==71) ) {
+            	            int LA74_2 = input.LA(2);
 
             	            if ( ((true)) ) {
-            	                alt73=1;
+            	                alt74=1;
             	            }
 
 
             	        }
 
 
-            	        switch (alt73) {
+            	        switch (alt74) {
             	    	case 1 :
-            	    	    // InternalVertigoDsl.g:4448:10: {...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) )
+            	    	    // InternalVertigoDsl.g:4555:10: {...}? => ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) )
             	    	    {
             	    	    if ( !((true)) ) {
             	    	        throw new FailedPredicateException(input, "ruleFacetDefinition", "true");
             	    	    }
-            	    	    // InternalVertigoDsl.g:4448:19: ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) )
-            	    	    // InternalVertigoDsl.g:4448:20: (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange )
+            	    	    // InternalVertigoDsl.g:4555:19: ( (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange ) )
+            	    	    // InternalVertigoDsl.g:4555:20: (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange )
             	    	    {
-            	    	    // InternalVertigoDsl.g:4448:20: (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange )
-            	    	    // InternalVertigoDsl.g:4449:10: lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange
+            	    	    // InternalVertigoDsl.g:4555:20: (lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange )
+            	    	    // InternalVertigoDsl.g:4556:10: lv_facetDefinitionRange_9_0= ruleFacetDefinitionRange
             	    	    {
 
             	    	    										newCompositeNode(grammarAccess.getFacetDefinitionAccess().getFacetDefinitionRangeFacetDefinitionRangeParserRuleCall_5_3_0());
@@ -11013,12 +11292,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    	    break;
 
             	    	default :
-            	    	    if ( cnt73 >= 1 ) break loop73;
+            	    	    if ( cnt74 >= 1 ) break loop74;
             	                EarlyExitException eee =
-            	                    new EarlyExitException(73, input);
+            	                    new EarlyExitException(74, input);
             	                throw eee;
             	        }
-            	        cnt73++;
+            	        cnt74++;
             	    } while (true);
 
             	     
@@ -11035,12 +11314,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt74 >= 1 ) break loop74;
+            	    if ( cnt75 >= 1 ) break loop75;
                         EarlyExitException eee =
-                            new EarlyExitException(74, input);
+                            new EarlyExitException(75, input);
                         throw eee;
                 }
-                cnt74++;
+                cnt75++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getFacetDefinitionAccess().getUnorderedGroup_5()) ) {
@@ -11085,7 +11364,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetedQueryDefinitionKeyConcept"
-    // InternalVertigoDsl.g:4487:1: entryRuleFacetedQueryDefinitionKeyConcept returns [EObject current=null] : iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF ;
+    // InternalVertigoDsl.g:4594:1: entryRuleFacetedQueryDefinitionKeyConcept returns [EObject current=null] : iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF ;
     public final EObject entryRuleFacetedQueryDefinitionKeyConcept() throws RecognitionException {
         EObject current = null;
 
@@ -11093,8 +11372,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4487:73: (iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF )
-            // InternalVertigoDsl.g:4488:2: iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF
+            // InternalVertigoDsl.g:4594:73: (iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF )
+            // InternalVertigoDsl.g:4595:2: iv_ruleFacetedQueryDefinitionKeyConcept= ruleFacetedQueryDefinitionKeyConcept EOF
             {
              newCompositeNode(grammarAccess.getFacetedQueryDefinitionKeyConceptRule()); 
             pushFollow(FOLLOW_1);
@@ -11121,7 +11400,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetedQueryDefinitionKeyConcept"
-    // InternalVertigoDsl.g:4494:1: ruleFacetedQueryDefinitionKeyConcept returns [EObject current=null] : (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:4601:1: ruleFacetedQueryDefinitionKeyConcept returns [EObject current=null] : (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleFacetedQueryDefinitionKeyConcept() throws RecognitionException {
         EObject current = null;
 
@@ -11134,13 +11413,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4500:2: ( (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:4501:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4607:2: ( (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4608:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:4501:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:4502:3: otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:4608:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4609:3: otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,72,FOLLOW_13); 
+            otherlv_0=(Token)match(input,73,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionKeyConceptAccess().getKeyConceptKeyword_0());
             		
@@ -11148,11 +11427,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetedQueryDefinitionKeyConceptAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:4510:3: ( (otherlv_2= RULE_ID ) )
-            // InternalVertigoDsl.g:4511:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:4617:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:4618:4: (otherlv_2= RULE_ID )
             {
-            // InternalVertigoDsl.g:4511:4: (otherlv_2= RULE_ID )
-            // InternalVertigoDsl.g:4512:5: otherlv_2= RULE_ID
+            // InternalVertigoDsl.g:4618:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:4619:5: otherlv_2= RULE_ID
             {
 
             					if (current==null) {
@@ -11169,16 +11448,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4523:3: (otherlv_3= ',' )?
-            int alt75=2;
-            int LA75_0 = input.LA(1);
+            // InternalVertigoDsl.g:4630:3: (otherlv_3= ',' )?
+            int alt76=2;
+            int LA76_0 = input.LA(1);
 
-            if ( (LA75_0==37) ) {
-                alt75=1;
+            if ( (LA76_0==37) ) {
+                alt76=1;
             }
-            switch (alt75) {
+            switch (alt76) {
                 case 1 :
-                    // InternalVertigoDsl.g:4524:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:4631:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -11213,7 +11492,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetedQueryDefinitionDomainCriteria"
-    // InternalVertigoDsl.g:4533:1: entryRuleFacetedQueryDefinitionDomainCriteria returns [EObject current=null] : iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF ;
+    // InternalVertigoDsl.g:4640:1: entryRuleFacetedQueryDefinitionDomainCriteria returns [EObject current=null] : iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF ;
     public final EObject entryRuleFacetedQueryDefinitionDomainCriteria() throws RecognitionException {
         EObject current = null;
 
@@ -11221,8 +11500,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4533:77: (iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF )
-            // InternalVertigoDsl.g:4534:2: iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF
+            // InternalVertigoDsl.g:4640:77: (iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF )
+            // InternalVertigoDsl.g:4641:2: iv_ruleFacetedQueryDefinitionDomainCriteria= ruleFacetedQueryDefinitionDomainCriteria EOF
             {
              newCompositeNode(grammarAccess.getFacetedQueryDefinitionDomainCriteriaRule()); 
             pushFollow(FOLLOW_1);
@@ -11249,7 +11528,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetedQueryDefinitionDomainCriteria"
-    // InternalVertigoDsl.g:4540:1: ruleFacetedQueryDefinitionDomainCriteria returns [EObject current=null] : (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:4647:1: ruleFacetedQueryDefinitionDomainCriteria returns [EObject current=null] : (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleFacetedQueryDefinitionDomainCriteria() throws RecognitionException {
         EObject current = null;
 
@@ -11263,13 +11542,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4546:2: ( (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:4547:2: (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4653:2: ( (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4654:2: (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:4547:2: (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:4548:3: otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:4654:2: (otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4655:3: otherlv_0= 'domainCriteria' otherlv_1= ':' ( (lv_refToDomainType_2_0= ruleRefToDomainType ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,73,FOLLOW_13); 
+            otherlv_0=(Token)match(input,74,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionDomainCriteriaAccess().getDomainCriteriaKeyword_0());
             		
@@ -11277,11 +11556,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetedQueryDefinitionDomainCriteriaAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:4556:3: ( (lv_refToDomainType_2_0= ruleRefToDomainType ) )
-            // InternalVertigoDsl.g:4557:4: (lv_refToDomainType_2_0= ruleRefToDomainType )
+            // InternalVertigoDsl.g:4663:3: ( (lv_refToDomainType_2_0= ruleRefToDomainType ) )
+            // InternalVertigoDsl.g:4664:4: (lv_refToDomainType_2_0= ruleRefToDomainType )
             {
-            // InternalVertigoDsl.g:4557:4: (lv_refToDomainType_2_0= ruleRefToDomainType )
-            // InternalVertigoDsl.g:4558:5: lv_refToDomainType_2_0= ruleRefToDomainType
+            // InternalVertigoDsl.g:4664:4: (lv_refToDomainType_2_0= ruleRefToDomainType )
+            // InternalVertigoDsl.g:4665:5: lv_refToDomainType_2_0= ruleRefToDomainType
             {
 
             					newCompositeNode(grammarAccess.getFacetedQueryDefinitionDomainCriteriaAccess().getRefToDomainTypeRefToDomainTypeParserRuleCall_2_0());
@@ -11308,16 +11587,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4575:3: (otherlv_3= ',' )?
-            int alt76=2;
-            int LA76_0 = input.LA(1);
+            // InternalVertigoDsl.g:4682:3: (otherlv_3= ',' )?
+            int alt77=2;
+            int LA77_0 = input.LA(1);
 
-            if ( (LA76_0==37) ) {
-                alt76=1;
+            if ( (LA77_0==37) ) {
+                alt77=1;
             }
-            switch (alt76) {
+            switch (alt77) {
                 case 1 :
-                    // InternalVertigoDsl.g:4576:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:4683:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -11352,7 +11631,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetedQueryDefinitionListFilterBuilderQuery"
-    // InternalVertigoDsl.g:4585:1: entryRuleFacetedQueryDefinitionListFilterBuilderQuery returns [EObject current=null] : iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF ;
+    // InternalVertigoDsl.g:4692:1: entryRuleFacetedQueryDefinitionListFilterBuilderQuery returns [EObject current=null] : iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF ;
     public final EObject entryRuleFacetedQueryDefinitionListFilterBuilderQuery() throws RecognitionException {
         EObject current = null;
 
@@ -11360,8 +11639,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4585:85: (iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF )
-            // InternalVertigoDsl.g:4586:2: iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF
+            // InternalVertigoDsl.g:4692:85: (iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF )
+            // InternalVertigoDsl.g:4693:2: iv_ruleFacetedQueryDefinitionListFilterBuilderQuery= ruleFacetedQueryDefinitionListFilterBuilderQuery EOF
             {
              newCompositeNode(grammarAccess.getFacetedQueryDefinitionListFilterBuilderQueryRule()); 
             pushFollow(FOLLOW_1);
@@ -11388,7 +11667,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetedQueryDefinitionListFilterBuilderQuery"
-    // InternalVertigoDsl.g:4592:1: ruleFacetedQueryDefinitionListFilterBuilderQuery returns [EObject current=null] : (otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:4699:1: ruleFacetedQueryDefinitionListFilterBuilderQuery returns [EObject current=null] : (otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleFacetedQueryDefinitionListFilterBuilderQuery() throws RecognitionException {
         EObject current = null;
 
@@ -11401,13 +11680,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4598:2: ( (otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:4599:2: (otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4705:2: ( (otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4706:2: (otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:4599:2: (otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:4600:3: otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:4706:2: (otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4707:3: otherlv_0= 'listFilterBuilderClass' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,74,FOLLOW_13); 
+            otherlv_0=(Token)match(input,75,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionListFilterBuilderQueryAccess().getListFilterBuilderClassKeyword_0());
             		
@@ -11415,11 +11694,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetedQueryDefinitionListFilterBuilderQueryAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:4608:3: ( (lv_string_2_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:4609:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4715:3: ( (lv_string_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:4716:4: (lv_string_2_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:4609:4: (lv_string_2_0= RULE_STRING )
-            // InternalVertigoDsl.g:4610:5: lv_string_2_0= RULE_STRING
+            // InternalVertigoDsl.g:4716:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4717:5: lv_string_2_0= RULE_STRING
             {
             lv_string_2_0=(Token)match(input,RULE_STRING,FOLLOW_39); 
 
@@ -11441,16 +11720,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4626:3: (otherlv_3= ',' )?
-            int alt77=2;
-            int LA77_0 = input.LA(1);
+            // InternalVertigoDsl.g:4733:3: (otherlv_3= ',' )?
+            int alt78=2;
+            int LA78_0 = input.LA(1);
 
-            if ( (LA77_0==37) ) {
-                alt77=1;
+            if ( (LA78_0==37) ) {
+                alt78=1;
             }
-            switch (alt77) {
+            switch (alt78) {
                 case 1 :
-                    // InternalVertigoDsl.g:4627:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:4734:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -11485,7 +11764,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetedQueryDefinitionListFilterBuilderClass"
-    // InternalVertigoDsl.g:4636:1: entryRuleFacetedQueryDefinitionListFilterBuilderClass returns [EObject current=null] : iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF ;
+    // InternalVertigoDsl.g:4743:1: entryRuleFacetedQueryDefinitionListFilterBuilderClass returns [EObject current=null] : iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF ;
     public final EObject entryRuleFacetedQueryDefinitionListFilterBuilderClass() throws RecognitionException {
         EObject current = null;
 
@@ -11493,8 +11772,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4636:85: (iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF )
-            // InternalVertigoDsl.g:4637:2: iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF
+            // InternalVertigoDsl.g:4743:85: (iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF )
+            // InternalVertigoDsl.g:4744:2: iv_ruleFacetedQueryDefinitionListFilterBuilderClass= ruleFacetedQueryDefinitionListFilterBuilderClass EOF
             {
              newCompositeNode(grammarAccess.getFacetedQueryDefinitionListFilterBuilderClassRule()); 
             pushFollow(FOLLOW_1);
@@ -11521,7 +11800,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetedQueryDefinitionListFilterBuilderClass"
-    // InternalVertigoDsl.g:4643:1: ruleFacetedQueryDefinitionListFilterBuilderClass returns [EObject current=null] : (otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:4750:1: ruleFacetedQueryDefinitionListFilterBuilderClass returns [EObject current=null] : (otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleFacetedQueryDefinitionListFilterBuilderClass() throws RecognitionException {
         EObject current = null;
 
@@ -11534,13 +11813,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4649:2: ( (otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:4650:2: (otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4756:2: ( (otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:4757:2: (otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:4650:2: (otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:4651:3: otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:4757:2: (otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:4758:3: otherlv_0= 'listFilterBuilderQuery' otherlv_1= ':' ( (lv_string_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,75,FOLLOW_13); 
+            otherlv_0=(Token)match(input,76,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionListFilterBuilderClassAccess().getListFilterBuilderQueryKeyword_0());
             		
@@ -11548,11 +11827,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetedQueryDefinitionListFilterBuilderClassAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:4659:3: ( (lv_string_2_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:4660:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4766:3: ( (lv_string_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:4767:4: (lv_string_2_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:4660:4: (lv_string_2_0= RULE_STRING )
-            // InternalVertigoDsl.g:4661:5: lv_string_2_0= RULE_STRING
+            // InternalVertigoDsl.g:4767:4: (lv_string_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:4768:5: lv_string_2_0= RULE_STRING
             {
             lv_string_2_0=(Token)match(input,RULE_STRING,FOLLOW_39); 
 
@@ -11574,16 +11853,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4677:3: (otherlv_3= ',' )?
-            int alt78=2;
-            int LA78_0 = input.LA(1);
+            // InternalVertigoDsl.g:4784:3: (otherlv_3= ',' )?
+            int alt79=2;
+            int LA79_0 = input.LA(1);
 
-            if ( (LA78_0==37) ) {
-                alt78=1;
+            if ( (LA79_0==37) ) {
+                alt79=1;
             }
-            switch (alt78) {
+            switch (alt79) {
                 case 1 :
-                    // InternalVertigoDsl.g:4678:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:4785:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -11618,7 +11897,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetedQueryDefinitionFacets"
-    // InternalVertigoDsl.g:4687:1: entryRuleFacetedQueryDefinitionFacets returns [EObject current=null] : iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF ;
+    // InternalVertigoDsl.g:4794:1: entryRuleFacetedQueryDefinitionFacets returns [EObject current=null] : iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF ;
     public final EObject entryRuleFacetedQueryDefinitionFacets() throws RecognitionException {
         EObject current = null;
 
@@ -11626,8 +11905,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4687:69: (iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF )
-            // InternalVertigoDsl.g:4688:2: iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF
+            // InternalVertigoDsl.g:4794:69: (iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF )
+            // InternalVertigoDsl.g:4795:2: iv_ruleFacetedQueryDefinitionFacets= ruleFacetedQueryDefinitionFacets EOF
             {
              newCompositeNode(grammarAccess.getFacetedQueryDefinitionFacetsRule()); 
             pushFollow(FOLLOW_1);
@@ -11654,7 +11933,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetedQueryDefinitionFacets"
-    // InternalVertigoDsl.g:4694:1: ruleFacetedQueryDefinitionFacets returns [EObject current=null] : (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )? ) ;
+    // InternalVertigoDsl.g:4801:1: ruleFacetedQueryDefinitionFacets returns [EObject current=null] : (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )? ) ;
     public final EObject ruleFacetedQueryDefinitionFacets() throws RecognitionException {
         EObject current = null;
 
@@ -11671,13 +11950,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4700:2: ( (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )? ) )
-            // InternalVertigoDsl.g:4701:2: (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )? )
+            // InternalVertigoDsl.g:4807:2: ( (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )? ) )
+            // InternalVertigoDsl.g:4808:2: (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )? )
             {
-            // InternalVertigoDsl.g:4701:2: (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )? )
-            // InternalVertigoDsl.g:4702:3: otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )?
+            // InternalVertigoDsl.g:4808:2: (otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )? )
+            // InternalVertigoDsl.g:4809:3: otherlv_0= 'facets' otherlv_1= ':' otherlv_2= '[' ( (otherlv_3= RULE_ID ) ) ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )* otherlv_6= ']' (otherlv_7= ',' )?
             {
-            otherlv_0=(Token)match(input,76,FOLLOW_13); 
+            otherlv_0=(Token)match(input,77,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getFacetsKeyword_0());
             		
@@ -11689,11 +11968,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getLeftSquareBracketKeyword_2());
             		
-            // InternalVertigoDsl.g:4714:3: ( (otherlv_3= RULE_ID ) )
-            // InternalVertigoDsl.g:4715:4: (otherlv_3= RULE_ID )
+            // InternalVertigoDsl.g:4821:3: ( (otherlv_3= RULE_ID ) )
+            // InternalVertigoDsl.g:4822:4: (otherlv_3= RULE_ID )
             {
-            // InternalVertigoDsl.g:4715:4: (otherlv_3= RULE_ID )
-            // InternalVertigoDsl.g:4716:5: otherlv_3= RULE_ID
+            // InternalVertigoDsl.g:4822:4: (otherlv_3= RULE_ID )
+            // InternalVertigoDsl.g:4823:5: otherlv_3= RULE_ID
             {
 
             					if (current==null) {
@@ -11710,36 +11989,36 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4727:3: ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )*
-            loop80:
+            // InternalVertigoDsl.g:4834:3: ( (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) ) )*
+            loop81:
             do {
-                int alt80=2;
-                int LA80_0 = input.LA(1);
+                int alt81=2;
+                int LA81_0 = input.LA(1);
 
-                if ( (LA80_0==37) ) {
-                    alt80=1;
+                if ( (LA81_0==37) ) {
+                    alt81=1;
                 }
 
 
-                switch (alt80) {
+                switch (alt81) {
             	case 1 :
-            	    // InternalVertigoDsl.g:4728:4: (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) )
+            	    // InternalVertigoDsl.g:4835:4: (otherlv_4= ',' )+ ( (otherlv_5= RULE_ID ) )
             	    {
-            	    // InternalVertigoDsl.g:4728:4: (otherlv_4= ',' )+
-            	    int cnt79=0;
-            	    loop79:
+            	    // InternalVertigoDsl.g:4835:4: (otherlv_4= ',' )+
+            	    int cnt80=0;
+            	    loop80:
             	    do {
-            	        int alt79=2;
-            	        int LA79_0 = input.LA(1);
+            	        int alt80=2;
+            	        int LA80_0 = input.LA(1);
 
-            	        if ( (LA79_0==37) ) {
-            	            alt79=1;
+            	        if ( (LA80_0==37) ) {
+            	            alt80=1;
             	        }
 
 
-            	        switch (alt79) {
+            	        switch (alt80) {
             	    	case 1 :
-            	    	    // InternalVertigoDsl.g:4729:5: otherlv_4= ','
+            	    	    // InternalVertigoDsl.g:4836:5: otherlv_4= ','
             	    	    {
             	    	    otherlv_4=(Token)match(input,37,FOLLOW_28); 
 
@@ -11750,19 +12029,19 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    	    break;
 
             	    	default :
-            	    	    if ( cnt79 >= 1 ) break loop79;
+            	    	    if ( cnt80 >= 1 ) break loop80;
             	                EarlyExitException eee =
-            	                    new EarlyExitException(79, input);
+            	                    new EarlyExitException(80, input);
             	                throw eee;
             	        }
-            	        cnt79++;
+            	        cnt80++;
             	    } while (true);
 
-            	    // InternalVertigoDsl.g:4734:4: ( (otherlv_5= RULE_ID ) )
-            	    // InternalVertigoDsl.g:4735:5: (otherlv_5= RULE_ID )
+            	    // InternalVertigoDsl.g:4841:4: ( (otherlv_5= RULE_ID ) )
+            	    // InternalVertigoDsl.g:4842:5: (otherlv_5= RULE_ID )
             	    {
-            	    // InternalVertigoDsl.g:4735:5: (otherlv_5= RULE_ID )
-            	    // InternalVertigoDsl.g:4736:6: otherlv_5= RULE_ID
+            	    // InternalVertigoDsl.g:4842:5: (otherlv_5= RULE_ID )
+            	    // InternalVertigoDsl.g:4843:6: otherlv_5= RULE_ID
             	    {
 
             	    						if (current==null) {
@@ -11784,7 +12063,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    break loop80;
+            	    break loop81;
                 }
             } while (true);
 
@@ -11792,16 +12071,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_6, grammarAccess.getFacetedQueryDefinitionFacetsAccess().getRightSquareBracketKeyword_5());
             		
-            // InternalVertigoDsl.g:4752:3: (otherlv_7= ',' )?
-            int alt81=2;
-            int LA81_0 = input.LA(1);
+            // InternalVertigoDsl.g:4859:3: (otherlv_7= ',' )?
+            int alt82=2;
+            int LA82_0 = input.LA(1);
 
-            if ( (LA81_0==37) ) {
-                alt81=1;
+            if ( (LA82_0==37) ) {
+                alt82=1;
             }
-            switch (alt81) {
+            switch (alt82) {
                 case 1 :
-                    // InternalVertigoDsl.g:4753:4: otherlv_7= ','
+                    // InternalVertigoDsl.g:4860:4: otherlv_7= ','
                     {
                     otherlv_7=(Token)match(input,37,FOLLOW_2); 
 
@@ -11836,7 +12115,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleFacetedQueryDefinition"
-    // InternalVertigoDsl.g:4762:1: entryRuleFacetedQueryDefinition returns [EObject current=null] : iv_ruleFacetedQueryDefinition= ruleFacetedQueryDefinition EOF ;
+    // InternalVertigoDsl.g:4869:1: entryRuleFacetedQueryDefinition returns [EObject current=null] : iv_ruleFacetedQueryDefinition= ruleFacetedQueryDefinition EOF ;
     public final EObject entryRuleFacetedQueryDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -11844,8 +12123,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4762:63: (iv_ruleFacetedQueryDefinition= ruleFacetedQueryDefinition EOF )
-            // InternalVertigoDsl.g:4763:2: iv_ruleFacetedQueryDefinition= ruleFacetedQueryDefinition EOF
+            // InternalVertigoDsl.g:4869:63: (iv_ruleFacetedQueryDefinition= ruleFacetedQueryDefinition EOF )
+            // InternalVertigoDsl.g:4870:2: iv_ruleFacetedQueryDefinition= ruleFacetedQueryDefinition EOF
             {
              newCompositeNode(grammarAccess.getFacetedQueryDefinitionRule()); 
             pushFollow(FOLLOW_1);
@@ -11872,7 +12151,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleFacetedQueryDefinition"
-    // InternalVertigoDsl.g:4769:1: ruleFacetedQueryDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}' ) ;
+    // InternalVertigoDsl.g:4876:1: ruleFacetedQueryDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}' ) ;
     public final EObject ruleFacetedQueryDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -11896,22 +12175,22 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4775:2: ( (otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}' ) )
-            // InternalVertigoDsl.g:4776:2: (otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}' )
+            // InternalVertigoDsl.g:4882:2: ( (otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}' ) )
+            // InternalVertigoDsl.g:4883:2: (otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}' )
             {
-            // InternalVertigoDsl.g:4776:2: (otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}' )
-            // InternalVertigoDsl.g:4777:3: otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}'
+            // InternalVertigoDsl.g:4883:2: (otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}' )
+            // InternalVertigoDsl.g:4884:3: otherlv_0= 'create' otherlv_1= 'FacetedQueryDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) ) otherlv_11= '}'
             {
             otherlv_0=(Token)match(input,20,FOLLOW_65); 
 
             			newLeafNode(otherlv_0, grammarAccess.getFacetedQueryDefinitionAccess().getCreateKeyword_0());
             		
-            otherlv_1=(Token)match(input,77,FOLLOW_8); 
+            otherlv_1=(Token)match(input,78,FOLLOW_8); 
 
             			newLeafNode(otherlv_1, grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionKeyword_1());
             		
-            // InternalVertigoDsl.g:4785:3: ()
-            // InternalVertigoDsl.g:4786:4: 
+            // InternalVertigoDsl.g:4892:3: ()
+            // InternalVertigoDsl.g:4893:4: 
             {
 
             				current = forceCreateModelElement(
@@ -11921,11 +12200,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:4792:3: ( (lv_name_3_0= RULE_ID ) )
-            // InternalVertigoDsl.g:4793:4: (lv_name_3_0= RULE_ID )
+            // InternalVertigoDsl.g:4899:3: ( (lv_name_3_0= RULE_ID ) )
+            // InternalVertigoDsl.g:4900:4: (lv_name_3_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:4793:4: (lv_name_3_0= RULE_ID )
-            // InternalVertigoDsl.g:4794:5: lv_name_3_0= RULE_ID
+            // InternalVertigoDsl.g:4900:4: (lv_name_3_0= RULE_ID )
+            // InternalVertigoDsl.g:4901:5: lv_name_3_0= RULE_ID
             {
             lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -11951,69 +12230,69 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getFacetedQueryDefinitionAccess().getLeftCurlyBracketKeyword_4());
             		
-            // InternalVertigoDsl.g:4814:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) )
-            // InternalVertigoDsl.g:4815:4: ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:4921:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) ) )
+            // InternalVertigoDsl.g:4922:4: ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) )
             {
-            // InternalVertigoDsl.g:4815:4: ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) )
-            // InternalVertigoDsl.g:4816:5: ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:4922:4: ( ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:4923:5: ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?)
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5());
             				
-            // InternalVertigoDsl.g:4819:5: ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?)
-            // InternalVertigoDsl.g:4820:6: ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?
+            // InternalVertigoDsl.g:4926:5: ( ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:4927:6: ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+ {...}?
             {
-            // InternalVertigoDsl.g:4820:6: ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+
-            int cnt82=0;
-            loop82:
+            // InternalVertigoDsl.g:4927:6: ( ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) ) )+
+            int cnt83=0;
+            loop83:
             do {
-                int alt82=6;
-                int LA82_0 = input.LA(1);
+                int alt83=6;
+                int LA83_0 = input.LA(1);
 
-                if ( LA82_0 == 72 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 0) ) {
-                    alt82=1;
+                if ( LA83_0 == 73 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 0) ) {
+                    alt83=1;
                 }
-                else if ( LA82_0 == 73 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 1) ) {
-                    alt82=2;
+                else if ( LA83_0 == 74 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 1) ) {
+                    alt83=2;
                 }
-                else if ( LA82_0 == 74 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 2) ) {
-                    alt82=3;
+                else if ( LA83_0 == 75 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 2) ) {
+                    alt83=3;
                 }
-                else if ( LA82_0 == 75 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 3) ) {
-                    alt82=4;
+                else if ( LA83_0 == 76 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 3) ) {
+                    alt83=4;
                 }
-                else if ( LA82_0 == 76 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 4) ) {
-                    alt82=5;
+                else if ( LA83_0 == 77 && getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 4) ) {
+                    alt83=5;
                 }
 
 
-                switch (alt82) {
+                switch (alt83) {
             	case 1 :
-            	    // InternalVertigoDsl.g:4821:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) )
+            	    // InternalVertigoDsl.g:4928:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4821:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) )
-            	    // InternalVertigoDsl.g:4822:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) )
+            	    // InternalVertigoDsl.g:4928:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) ) )
+            	    // InternalVertigoDsl.g:4929:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:4822:119: ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) )
-            	    // InternalVertigoDsl.g:4823:6: ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) )
+            	    // InternalVertigoDsl.g:4929:119: ( ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) ) )
+            	    // InternalVertigoDsl.g:4930:6: ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 0);
             	    					
-            	    // InternalVertigoDsl.g:4826:9: ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) )
-            	    // InternalVertigoDsl.g:4826:10: {...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) )
+            	    // InternalVertigoDsl.g:4933:9: ({...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) ) )
+            	    // InternalVertigoDsl.g:4933:10: {...}? => ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:4826:19: ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) )
-            	    // InternalVertigoDsl.g:4826:20: (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept )
+            	    // InternalVertigoDsl.g:4933:19: ( (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept ) )
+            	    // InternalVertigoDsl.g:4933:20: (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept )
             	    {
-            	    // InternalVertigoDsl.g:4826:20: (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept )
-            	    // InternalVertigoDsl.g:4827:10: lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept
+            	    // InternalVertigoDsl.g:4933:20: (lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept )
+            	    // InternalVertigoDsl.g:4934:10: lv_facetedQueryDefinitionKeyConcept_6_0= ruleFacetedQueryDefinitionKeyConcept
             	    {
 
             	    										newCompositeNode(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionKeyConceptFacetedQueryDefinitionKeyConceptParserRuleCall_5_0_0());
@@ -12056,31 +12335,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:4849:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) )
+            	    // InternalVertigoDsl.g:4956:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4849:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) )
-            	    // InternalVertigoDsl.g:4850:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) )
+            	    // InternalVertigoDsl.g:4956:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) ) )
+            	    // InternalVertigoDsl.g:4957:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:4850:119: ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) )
-            	    // InternalVertigoDsl.g:4851:6: ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) )
+            	    // InternalVertigoDsl.g:4957:119: ( ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) ) )
+            	    // InternalVertigoDsl.g:4958:6: ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 1);
             	    					
-            	    // InternalVertigoDsl.g:4854:9: ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) )
-            	    // InternalVertigoDsl.g:4854:10: {...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) )
+            	    // InternalVertigoDsl.g:4961:9: ({...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) ) )
+            	    // InternalVertigoDsl.g:4961:10: {...}? => ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:4854:19: ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) )
-            	    // InternalVertigoDsl.g:4854:20: (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria )
+            	    // InternalVertigoDsl.g:4961:19: ( (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria ) )
+            	    // InternalVertigoDsl.g:4961:20: (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria )
             	    {
-            	    // InternalVertigoDsl.g:4854:20: (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria )
-            	    // InternalVertigoDsl.g:4855:10: lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria
+            	    // InternalVertigoDsl.g:4961:20: (lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria )
+            	    // InternalVertigoDsl.g:4962:10: lv_facetedQueryDefinitionDomainCriteria_7_0= ruleFacetedQueryDefinitionDomainCriteria
             	    {
 
             	    										newCompositeNode(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_5_1_0());
@@ -12123,31 +12402,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalVertigoDsl.g:4877:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) )
+            	    // InternalVertigoDsl.g:4984:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4877:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) )
-            	    // InternalVertigoDsl.g:4878:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) )
+            	    // InternalVertigoDsl.g:4984:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) ) )
+            	    // InternalVertigoDsl.g:4985:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 2)");
             	    }
-            	    // InternalVertigoDsl.g:4878:119: ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) )
-            	    // InternalVertigoDsl.g:4879:6: ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) )
+            	    // InternalVertigoDsl.g:4985:119: ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) ) )
+            	    // InternalVertigoDsl.g:4986:6: ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 2);
             	    					
-            	    // InternalVertigoDsl.g:4882:9: ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) )
-            	    // InternalVertigoDsl.g:4882:10: {...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) )
+            	    // InternalVertigoDsl.g:4989:9: ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) ) )
+            	    // InternalVertigoDsl.g:4989:10: {...}? => ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:4882:19: ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) )
-            	    // InternalVertigoDsl.g:4882:20: (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery )
+            	    // InternalVertigoDsl.g:4989:19: ( (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery ) )
+            	    // InternalVertigoDsl.g:4989:20: (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery )
             	    {
-            	    // InternalVertigoDsl.g:4882:20: (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery )
-            	    // InternalVertigoDsl.g:4883:10: lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery
+            	    // InternalVertigoDsl.g:4989:20: (lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery )
+            	    // InternalVertigoDsl.g:4990:10: lv_facetedQueryDefinitionListFilterBuilderQuery_8_0= ruleFacetedQueryDefinitionListFilterBuilderQuery
             	    {
 
             	    										newCompositeNode(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_5_2_0());
@@ -12190,31 +12469,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // InternalVertigoDsl.g:4905:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) )
+            	    // InternalVertigoDsl.g:5012:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4905:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) )
-            	    // InternalVertigoDsl.g:4906:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) )
+            	    // InternalVertigoDsl.g:5012:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) ) )
+            	    // InternalVertigoDsl.g:5013:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 3) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 3)");
             	    }
-            	    // InternalVertigoDsl.g:4906:119: ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) )
-            	    // InternalVertigoDsl.g:4907:6: ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) )
+            	    // InternalVertigoDsl.g:5013:119: ( ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) ) )
+            	    // InternalVertigoDsl.g:5014:6: ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 3);
             	    					
-            	    // InternalVertigoDsl.g:4910:9: ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) )
-            	    // InternalVertigoDsl.g:4910:10: {...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) )
+            	    // InternalVertigoDsl.g:5017:9: ({...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) ) )
+            	    // InternalVertigoDsl.g:5017:10: {...}? => ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:4910:19: ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) )
-            	    // InternalVertigoDsl.g:4910:20: (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass )
+            	    // InternalVertigoDsl.g:5017:19: ( (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass ) )
+            	    // InternalVertigoDsl.g:5017:20: (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass )
             	    {
-            	    // InternalVertigoDsl.g:4910:20: (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass )
-            	    // InternalVertigoDsl.g:4911:10: lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass
+            	    // InternalVertigoDsl.g:5017:20: (lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass )
+            	    // InternalVertigoDsl.g:5018:10: lv_facetedQueryDefinitionListFilterBuilderClass_9_0= ruleFacetedQueryDefinitionListFilterBuilderClass
             	    {
 
             	    										newCompositeNode(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_3_0());
@@ -12257,31 +12536,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 5 :
-            	    // InternalVertigoDsl.g:4933:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) )
+            	    // InternalVertigoDsl.g:5040:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:4933:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) )
-            	    // InternalVertigoDsl.g:4934:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) )
+            	    // InternalVertigoDsl.g:5040:4: ({...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) ) )
+            	    // InternalVertigoDsl.g:5041:5: {...}? => ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 4) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 4)");
             	    }
-            	    // InternalVertigoDsl.g:4934:119: ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) )
-            	    // InternalVertigoDsl.g:4935:6: ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) )
+            	    // InternalVertigoDsl.g:5041:119: ( ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) ) )
+            	    // InternalVertigoDsl.g:5042:6: ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5(), 4);
             	    					
-            	    // InternalVertigoDsl.g:4938:9: ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) )
-            	    // InternalVertigoDsl.g:4938:10: {...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) )
+            	    // InternalVertigoDsl.g:5045:9: ({...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) ) )
+            	    // InternalVertigoDsl.g:5045:10: {...}? => ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleFacetedQueryDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:4938:19: ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) )
-            	    // InternalVertigoDsl.g:4938:20: (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets )
+            	    // InternalVertigoDsl.g:5045:19: ( (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets ) )
+            	    // InternalVertigoDsl.g:5045:20: (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets )
             	    {
-            	    // InternalVertigoDsl.g:4938:20: (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets )
-            	    // InternalVertigoDsl.g:4939:10: lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets
+            	    // InternalVertigoDsl.g:5045:20: (lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets )
+            	    // InternalVertigoDsl.g:5046:10: lv_facetedQueryDefinitionFacets_10_0= ruleFacetedQueryDefinitionFacets
             	    {
 
             	    										newCompositeNode(grammarAccess.getFacetedQueryDefinitionAccess().getFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_4_0());
@@ -12325,12 +12604,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt82 >= 1 ) break loop82;
+            	    if ( cnt83 >= 1 ) break loop83;
                         EarlyExitException eee =
-                            new EarlyExitException(82, input);
+                            new EarlyExitException(83, input);
                         throw eee;
                 }
-                cnt82++;
+                cnt83++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getFacetedQueryDefinitionAccess().getUnorderedGroup_5()) ) {
@@ -12375,7 +12654,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIndexDefinitionKeyConcept"
-    // InternalVertigoDsl.g:4977:1: entryRuleIndexDefinitionKeyConcept returns [EObject current=null] : iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF ;
+    // InternalVertigoDsl.g:5084:1: entryRuleIndexDefinitionKeyConcept returns [EObject current=null] : iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF ;
     public final EObject entryRuleIndexDefinitionKeyConcept() throws RecognitionException {
         EObject current = null;
 
@@ -12383,8 +12662,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:4977:66: (iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF )
-            // InternalVertigoDsl.g:4978:2: iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF
+            // InternalVertigoDsl.g:5084:66: (iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF )
+            // InternalVertigoDsl.g:5085:2: iv_ruleIndexDefinitionKeyConcept= ruleIndexDefinitionKeyConcept EOF
             {
              newCompositeNode(grammarAccess.getIndexDefinitionKeyConceptRule()); 
             pushFollow(FOLLOW_1);
@@ -12411,7 +12690,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndexDefinitionKeyConcept"
-    // InternalVertigoDsl.g:4984:1: ruleIndexDefinitionKeyConcept returns [EObject current=null] : (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:5091:1: ruleIndexDefinitionKeyConcept returns [EObject current=null] : (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleIndexDefinitionKeyConcept() throws RecognitionException {
         EObject current = null;
 
@@ -12424,13 +12703,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:4990:2: ( (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:4991:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:5097:2: ( (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:5098:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:4991:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:4992:3: otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:5098:2: (otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:5099:3: otherlv_0= 'keyConcept' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,72,FOLLOW_13); 
+            otherlv_0=(Token)match(input,73,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionKeyConceptAccess().getKeyConceptKeyword_0());
             		
@@ -12438,11 +12717,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionKeyConceptAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:5000:3: ( (otherlv_2= RULE_ID ) )
-            // InternalVertigoDsl.g:5001:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:5107:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:5108:4: (otherlv_2= RULE_ID )
             {
-            // InternalVertigoDsl.g:5001:4: (otherlv_2= RULE_ID )
-            // InternalVertigoDsl.g:5002:5: otherlv_2= RULE_ID
+            // InternalVertigoDsl.g:5108:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:5109:5: otherlv_2= RULE_ID
             {
 
             					if (current==null) {
@@ -12459,16 +12738,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:5013:3: (otherlv_3= ',' )?
-            int alt83=2;
-            int LA83_0 = input.LA(1);
+            // InternalVertigoDsl.g:5120:3: (otherlv_3= ',' )?
+            int alt84=2;
+            int LA84_0 = input.LA(1);
 
-            if ( (LA83_0==37) ) {
-                alt83=1;
+            if ( (LA84_0==37) ) {
+                alt84=1;
             }
-            switch (alt83) {
+            switch (alt84) {
                 case 1 :
-                    // InternalVertigoDsl.g:5014:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:5121:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -12503,7 +12782,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIndexDefinitionDtIndex"
-    // InternalVertigoDsl.g:5023:1: entryRuleIndexDefinitionDtIndex returns [EObject current=null] : iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF ;
+    // InternalVertigoDsl.g:5130:1: entryRuleIndexDefinitionDtIndex returns [EObject current=null] : iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF ;
     public final EObject entryRuleIndexDefinitionDtIndex() throws RecognitionException {
         EObject current = null;
 
@@ -12511,8 +12790,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:5023:63: (iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF )
-            // InternalVertigoDsl.g:5024:2: iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF
+            // InternalVertigoDsl.g:5130:63: (iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF )
+            // InternalVertigoDsl.g:5131:2: iv_ruleIndexDefinitionDtIndex= ruleIndexDefinitionDtIndex EOF
             {
              newCompositeNode(grammarAccess.getIndexDefinitionDtIndexRule()); 
             pushFollow(FOLLOW_1);
@@ -12539,7 +12818,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndexDefinitionDtIndex"
-    // InternalVertigoDsl.g:5030:1: ruleIndexDefinitionDtIndex returns [EObject current=null] : (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:5137:1: ruleIndexDefinitionDtIndex returns [EObject current=null] : (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleIndexDefinitionDtIndex() throws RecognitionException {
         EObject current = null;
 
@@ -12552,13 +12831,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5036:2: ( (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:5037:2: (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:5143:2: ( (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:5144:2: (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:5037:2: (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:5038:3: otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:5144:2: (otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:5145:3: otherlv_0= 'dtIndex' otherlv_1= ':' ( (otherlv_2= RULE_ID ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,78,FOLLOW_13); 
+            otherlv_0=(Token)match(input,79,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionDtIndexAccess().getDtIndexKeyword_0());
             		
@@ -12566,11 +12845,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionDtIndexAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:5046:3: ( (otherlv_2= RULE_ID ) )
-            // InternalVertigoDsl.g:5047:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:5153:3: ( (otherlv_2= RULE_ID ) )
+            // InternalVertigoDsl.g:5154:4: (otherlv_2= RULE_ID )
             {
-            // InternalVertigoDsl.g:5047:4: (otherlv_2= RULE_ID )
-            // InternalVertigoDsl.g:5048:5: otherlv_2= RULE_ID
+            // InternalVertigoDsl.g:5154:4: (otherlv_2= RULE_ID )
+            // InternalVertigoDsl.g:5155:5: otherlv_2= RULE_ID
             {
 
             					if (current==null) {
@@ -12587,16 +12866,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:5059:3: (otherlv_3= ',' )?
-            int alt84=2;
-            int LA84_0 = input.LA(1);
+            // InternalVertigoDsl.g:5166:3: (otherlv_3= ',' )?
+            int alt85=2;
+            int LA85_0 = input.LA(1);
 
-            if ( (LA84_0==37) ) {
-                alt84=1;
+            if ( (LA85_0==37) ) {
+                alt85=1;
             }
-            switch (alt84) {
+            switch (alt85) {
                 case 1 :
-                    // InternalVertigoDsl.g:5060:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:5167:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -12631,7 +12910,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIndexDefinitionIndexCopyToString"
-    // InternalVertigoDsl.g:5069:1: entryRuleIndexDefinitionIndexCopyToString returns [EObject current=null] : iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF ;
+    // InternalVertigoDsl.g:5176:1: entryRuleIndexDefinitionIndexCopyToString returns [EObject current=null] : iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF ;
     public final EObject entryRuleIndexDefinitionIndexCopyToString() throws RecognitionException {
         EObject current = null;
 
@@ -12639,8 +12918,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:5069:73: (iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF )
-            // InternalVertigoDsl.g:5070:2: iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF
+            // InternalVertigoDsl.g:5176:73: (iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF )
+            // InternalVertigoDsl.g:5177:2: iv_ruleIndexDefinitionIndexCopyToString= ruleIndexDefinitionIndexCopyToString EOF
             {
              newCompositeNode(grammarAccess.getIndexDefinitionIndexCopyToStringRule()); 
             pushFollow(FOLLOW_1);
@@ -12667,7 +12946,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndexDefinitionIndexCopyToString"
-    // InternalVertigoDsl.g:5076:1: ruleIndexDefinitionIndexCopyToString returns [EObject current=null] : (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' ) ;
+    // InternalVertigoDsl.g:5183:1: ruleIndexDefinitionIndexCopyToString returns [EObject current=null] : (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' ) ;
     public final EObject ruleIndexDefinitionIndexCopyToString() throws RecognitionException {
         EObject current = null;
 
@@ -12681,17 +12960,17 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5082:2: ( (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' ) )
-            // InternalVertigoDsl.g:5083:2: (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' )
+            // InternalVertigoDsl.g:5189:2: ( (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' ) )
+            // InternalVertigoDsl.g:5190:2: (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' )
             {
-            // InternalVertigoDsl.g:5083:2: (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' )
-            // InternalVertigoDsl.g:5084:3: otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}'
+            // InternalVertigoDsl.g:5190:2: (otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}' )
+            // InternalVertigoDsl.g:5191:3: otherlv_0= '{' otherlv_1= 'from' otherlv_2= ':' ( (lv_string_3_0= RULE_STRING ) ) otherlv_4= '}'
             {
             otherlv_0=(Token)match(input,22,FOLLOW_68); 
 
             			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getLeftCurlyBracketKeyword_0());
             		
-            otherlv_1=(Token)match(input,79,FOLLOW_13); 
+            otherlv_1=(Token)match(input,80,FOLLOW_13); 
 
             			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getFromKeyword_1());
             		
@@ -12699,11 +12978,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_2, grammarAccess.getIndexDefinitionIndexCopyToStringAccess().getColonKeyword_2());
             		
-            // InternalVertigoDsl.g:5096:3: ( (lv_string_3_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:5097:4: (lv_string_3_0= RULE_STRING )
+            // InternalVertigoDsl.g:5203:3: ( (lv_string_3_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:5204:4: (lv_string_3_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:5097:4: (lv_string_3_0= RULE_STRING )
-            // InternalVertigoDsl.g:5098:5: lv_string_3_0= RULE_STRING
+            // InternalVertigoDsl.g:5204:4: (lv_string_3_0= RULE_STRING )
+            // InternalVertigoDsl.g:5205:5: lv_string_3_0= RULE_STRING
             {
             lv_string_3_0=(Token)match(input,RULE_STRING,FOLLOW_17); 
 
@@ -12752,7 +13031,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIndexDefinitionIndexCopyTo"
-    // InternalVertigoDsl.g:5122:1: entryRuleIndexDefinitionIndexCopyTo returns [EObject current=null] : iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF ;
+    // InternalVertigoDsl.g:5229:1: entryRuleIndexDefinitionIndexCopyTo returns [EObject current=null] : iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF ;
     public final EObject entryRuleIndexDefinitionIndexCopyTo() throws RecognitionException {
         EObject current = null;
 
@@ -12760,8 +13039,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:5122:67: (iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF )
-            // InternalVertigoDsl.g:5123:2: iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF
+            // InternalVertigoDsl.g:5229:67: (iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF )
+            // InternalVertigoDsl.g:5230:2: iv_ruleIndexDefinitionIndexCopyTo= ruleIndexDefinitionIndexCopyTo EOF
             {
              newCompositeNode(grammarAccess.getIndexDefinitionIndexCopyToRule()); 
             pushFollow(FOLLOW_1);
@@ -12788,7 +13067,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndexDefinitionIndexCopyTo"
-    // InternalVertigoDsl.g:5129:1: ruleIndexDefinitionIndexCopyTo returns [EObject current=null] : (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:5236:1: ruleIndexDefinitionIndexCopyTo returns [EObject current=null] : (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleIndexDefinitionIndexCopyTo() throws RecognitionException {
         EObject current = null;
 
@@ -12803,21 +13082,21 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5135:2: ( (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:5136:2: (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:5242:2: ( (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:5243:2: (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:5136:2: (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:5137:3: otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:5243:2: (otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:5244:3: otherlv_0= 'indexCopyTo' ( (lv_name_1_0= ruleKEYWORDID ) ) ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,80,FOLLOW_3); 
+            otherlv_0=(Token)match(input,81,FOLLOW_3); 
 
             			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionIndexCopyToAccess().getIndexCopyToKeyword_0());
             		
-            // InternalVertigoDsl.g:5141:3: ( (lv_name_1_0= ruleKEYWORDID ) )
-            // InternalVertigoDsl.g:5142:4: (lv_name_1_0= ruleKEYWORDID )
+            // InternalVertigoDsl.g:5248:3: ( (lv_name_1_0= ruleKEYWORDID ) )
+            // InternalVertigoDsl.g:5249:4: (lv_name_1_0= ruleKEYWORDID )
             {
-            // InternalVertigoDsl.g:5142:4: (lv_name_1_0= ruleKEYWORDID )
-            // InternalVertigoDsl.g:5143:5: lv_name_1_0= ruleKEYWORDID
+            // InternalVertigoDsl.g:5249:4: (lv_name_1_0= ruleKEYWORDID )
+            // InternalVertigoDsl.g:5250:5: lv_name_1_0= ruleKEYWORDID
             {
 
             					newCompositeNode(grammarAccess.getIndexDefinitionIndexCopyToAccess().getNameKEYWORDIDParserRuleCall_1_0());
@@ -12844,11 +13123,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:5160:3: ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) )
-            // InternalVertigoDsl.g:5161:4: (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString )
+            // InternalVertigoDsl.g:5267:3: ( (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString ) )
+            // InternalVertigoDsl.g:5268:4: (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString )
             {
-            // InternalVertigoDsl.g:5161:4: (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString )
-            // InternalVertigoDsl.g:5162:5: lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString
+            // InternalVertigoDsl.g:5268:4: (lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString )
+            // InternalVertigoDsl.g:5269:5: lv_indexDefinitionIndexCopyToString_2_0= ruleIndexDefinitionIndexCopyToString
             {
 
             					newCompositeNode(grammarAccess.getIndexDefinitionIndexCopyToAccess().getIndexDefinitionIndexCopyToStringIndexDefinitionIndexCopyToStringParserRuleCall_2_0());
@@ -12875,16 +13154,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:5179:3: (otherlv_3= ',' )?
-            int alt85=2;
-            int LA85_0 = input.LA(1);
+            // InternalVertigoDsl.g:5286:3: (otherlv_3= ',' )?
+            int alt86=2;
+            int LA86_0 = input.LA(1);
 
-            if ( (LA85_0==37) ) {
-                alt85=1;
+            if ( (LA86_0==37) ) {
+                alt86=1;
             }
-            switch (alt85) {
+            switch (alt86) {
                 case 1 :
-                    // InternalVertigoDsl.g:5180:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:5287:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -12919,7 +13198,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIndexDefinitionLoaderId"
-    // InternalVertigoDsl.g:5189:1: entryRuleIndexDefinitionLoaderId returns [EObject current=null] : iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF ;
+    // InternalVertigoDsl.g:5296:1: entryRuleIndexDefinitionLoaderId returns [EObject current=null] : iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF ;
     public final EObject entryRuleIndexDefinitionLoaderId() throws RecognitionException {
         EObject current = null;
 
@@ -12927,8 +13206,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:5189:64: (iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF )
-            // InternalVertigoDsl.g:5190:2: iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF
+            // InternalVertigoDsl.g:5296:64: (iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF )
+            // InternalVertigoDsl.g:5297:2: iv_ruleIndexDefinitionLoaderId= ruleIndexDefinitionLoaderId EOF
             {
              newCompositeNode(grammarAccess.getIndexDefinitionLoaderIdRule()); 
             pushFollow(FOLLOW_1);
@@ -12955,7 +13234,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndexDefinitionLoaderId"
-    // InternalVertigoDsl.g:5196:1: ruleIndexDefinitionLoaderId returns [EObject current=null] : (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
+    // InternalVertigoDsl.g:5303:1: ruleIndexDefinitionLoaderId returns [EObject current=null] : (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) ;
     public final EObject ruleIndexDefinitionLoaderId() throws RecognitionException {
         EObject current = null;
 
@@ -12968,13 +13247,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5202:2: ( (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
-            // InternalVertigoDsl.g:5203:2: (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:5309:2: ( (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )? ) )
+            // InternalVertigoDsl.g:5310:2: (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
             {
-            // InternalVertigoDsl.g:5203:2: (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
-            // InternalVertigoDsl.g:5204:3: otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
+            // InternalVertigoDsl.g:5310:2: (otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )? )
+            // InternalVertigoDsl.g:5311:3: otherlv_0= 'loaderId' otherlv_1= ':' ( (lv_loaderIdString_2_0= RULE_STRING ) ) (otherlv_3= ',' )?
             {
-            otherlv_0=(Token)match(input,81,FOLLOW_13); 
+            otherlv_0=(Token)match(input,82,FOLLOW_13); 
 
             			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionLoaderIdAccess().getLoaderIdKeyword_0());
             		
@@ -12982,11 +13261,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionLoaderIdAccess().getColonKeyword_1());
             		
-            // InternalVertigoDsl.g:5212:3: ( (lv_loaderIdString_2_0= RULE_STRING ) )
-            // InternalVertigoDsl.g:5213:4: (lv_loaderIdString_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:5319:3: ( (lv_loaderIdString_2_0= RULE_STRING ) )
+            // InternalVertigoDsl.g:5320:4: (lv_loaderIdString_2_0= RULE_STRING )
             {
-            // InternalVertigoDsl.g:5213:4: (lv_loaderIdString_2_0= RULE_STRING )
-            // InternalVertigoDsl.g:5214:5: lv_loaderIdString_2_0= RULE_STRING
+            // InternalVertigoDsl.g:5320:4: (lv_loaderIdString_2_0= RULE_STRING )
+            // InternalVertigoDsl.g:5321:5: lv_loaderIdString_2_0= RULE_STRING
             {
             lv_loaderIdString_2_0=(Token)match(input,RULE_STRING,FOLLOW_39); 
 
@@ -13008,16 +13287,16 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:5230:3: (otherlv_3= ',' )?
-            int alt86=2;
-            int LA86_0 = input.LA(1);
+            // InternalVertigoDsl.g:5337:3: (otherlv_3= ',' )?
+            int alt87=2;
+            int LA87_0 = input.LA(1);
 
-            if ( (LA86_0==37) ) {
-                alt86=1;
+            if ( (LA87_0==37) ) {
+                alt87=1;
             }
-            switch (alt86) {
+            switch (alt87) {
                 case 1 :
-                    // InternalVertigoDsl.g:5231:4: otherlv_3= ','
+                    // InternalVertigoDsl.g:5338:4: otherlv_3= ','
                     {
                     otherlv_3=(Token)match(input,37,FOLLOW_2); 
 
@@ -13052,7 +13331,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "entryRuleIndexDefinition"
-    // InternalVertigoDsl.g:5240:1: entryRuleIndexDefinition returns [EObject current=null] : iv_ruleIndexDefinition= ruleIndexDefinition EOF ;
+    // InternalVertigoDsl.g:5347:1: entryRuleIndexDefinition returns [EObject current=null] : iv_ruleIndexDefinition= ruleIndexDefinition EOF ;
     public final EObject entryRuleIndexDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -13060,8 +13339,8 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
         try {
-            // InternalVertigoDsl.g:5240:56: (iv_ruleIndexDefinition= ruleIndexDefinition EOF )
-            // InternalVertigoDsl.g:5241:2: iv_ruleIndexDefinition= ruleIndexDefinition EOF
+            // InternalVertigoDsl.g:5347:56: (iv_ruleIndexDefinition= ruleIndexDefinition EOF )
+            // InternalVertigoDsl.g:5348:2: iv_ruleIndexDefinition= ruleIndexDefinition EOF
             {
              newCompositeNode(grammarAccess.getIndexDefinitionRule()); 
             pushFollow(FOLLOW_1);
@@ -13088,7 +13367,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleIndexDefinition"
-    // InternalVertigoDsl.g:5247:1: ruleIndexDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) ;
+    // InternalVertigoDsl.g:5354:1: ruleIndexDefinition returns [EObject current=null] : (otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) ;
     public final EObject ruleIndexDefinition() throws RecognitionException {
         EObject current = null;
 
@@ -13110,22 +13389,22 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5253:2: ( (otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) )
-            // InternalVertigoDsl.g:5254:2: (otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
+            // InternalVertigoDsl.g:5360:2: ( (otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' ) )
+            // InternalVertigoDsl.g:5361:2: (otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
             {
-            // InternalVertigoDsl.g:5254:2: (otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
-            // InternalVertigoDsl.g:5255:3: otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}'
+            // InternalVertigoDsl.g:5361:2: (otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}' )
+            // InternalVertigoDsl.g:5362:3: otherlv_0= 'create' otherlv_1= 'IndexDefinition' () ( (lv_name_3_0= RULE_ID ) ) otherlv_4= '{' ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) ) otherlv_10= '}'
             {
             otherlv_0=(Token)match(input,20,FOLLOW_69); 
 
             			newLeafNode(otherlv_0, grammarAccess.getIndexDefinitionAccess().getCreateKeyword_0());
             		
-            otherlv_1=(Token)match(input,82,FOLLOW_8); 
+            otherlv_1=(Token)match(input,83,FOLLOW_8); 
 
             			newLeafNode(otherlv_1, grammarAccess.getIndexDefinitionAccess().getIndexDefinitionKeyword_1());
             		
-            // InternalVertigoDsl.g:5263:3: ()
-            // InternalVertigoDsl.g:5264:4: 
+            // InternalVertigoDsl.g:5370:3: ()
+            // InternalVertigoDsl.g:5371:4: 
             {
 
             				current = forceCreateModelElement(
@@ -13135,11 +13414,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             }
 
-            // InternalVertigoDsl.g:5270:3: ( (lv_name_3_0= RULE_ID ) )
-            // InternalVertigoDsl.g:5271:4: (lv_name_3_0= RULE_ID )
+            // InternalVertigoDsl.g:5377:3: ( (lv_name_3_0= RULE_ID ) )
+            // InternalVertigoDsl.g:5378:4: (lv_name_3_0= RULE_ID )
             {
-            // InternalVertigoDsl.g:5271:4: (lv_name_3_0= RULE_ID )
-            // InternalVertigoDsl.g:5272:5: lv_name_3_0= RULE_ID
+            // InternalVertigoDsl.g:5378:4: (lv_name_3_0= RULE_ID )
+            // InternalVertigoDsl.g:5379:5: lv_name_3_0= RULE_ID
             {
             lv_name_3_0=(Token)match(input,RULE_ID,FOLLOW_11); 
 
@@ -13165,66 +13444,66 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
             			newLeafNode(otherlv_4, grammarAccess.getIndexDefinitionAccess().getLeftCurlyBracketKeyword_4());
             		
-            // InternalVertigoDsl.g:5292:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) )
-            // InternalVertigoDsl.g:5293:4: ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:5399:3: ( ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) ) )
+            // InternalVertigoDsl.g:5400:4: ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) )
             {
-            // InternalVertigoDsl.g:5293:4: ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) )
-            // InternalVertigoDsl.g:5294:5: ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:5400:4: ( ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?) )
+            // InternalVertigoDsl.g:5401:5: ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?)
             {
              
             				  getUnorderedGroupHelper().enter(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5());
             				
-            // InternalVertigoDsl.g:5297:5: ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?)
-            // InternalVertigoDsl.g:5298:6: ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?
+            // InternalVertigoDsl.g:5404:5: ( ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?)
+            // InternalVertigoDsl.g:5405:6: ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+ {...}?
             {
-            // InternalVertigoDsl.g:5298:6: ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+
-            int cnt87=0;
-            loop87:
+            // InternalVertigoDsl.g:5405:6: ( ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) ) | ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) ) )+
+            int cnt88=0;
+            loop88:
             do {
-                int alt87=5;
-                int LA87_0 = input.LA(1);
+                int alt88=5;
+                int LA88_0 = input.LA(1);
 
-                if ( LA87_0 == 72 && getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 0) ) {
-                    alt87=1;
+                if ( LA88_0 == 73 && getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 0) ) {
+                    alt88=1;
                 }
-                else if ( LA87_0 == 78 && getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 1) ) {
-                    alt87=2;
+                else if ( LA88_0 == 79 && getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 1) ) {
+                    alt88=2;
                 }
-                else if ( LA87_0 == 81 && getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 2) ) {
-                    alt87=3;
+                else if ( LA88_0 == 82 && getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 2) ) {
+                    alt88=3;
                 }
-                else if ( LA87_0 == 80 && getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 3) ) {
-                    alt87=4;
+                else if ( LA88_0 == 81 && getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 3) ) {
+                    alt88=4;
                 }
 
 
-                switch (alt87) {
+                switch (alt88) {
             	case 1 :
-            	    // InternalVertigoDsl.g:5299:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) )
+            	    // InternalVertigoDsl.g:5406:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:5299:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) )
-            	    // InternalVertigoDsl.g:5300:5: {...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) )
+            	    // InternalVertigoDsl.g:5406:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) ) )
+            	    // InternalVertigoDsl.g:5407:5: {...}? => ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 0) ) {
             	        throw new FailedPredicateException(input, "ruleIndexDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 0)");
             	    }
-            	    // InternalVertigoDsl.g:5300:112: ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) )
-            	    // InternalVertigoDsl.g:5301:6: ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) )
+            	    // InternalVertigoDsl.g:5407:112: ( ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) ) )
+            	    // InternalVertigoDsl.g:5408:6: ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 0);
             	    					
-            	    // InternalVertigoDsl.g:5304:9: ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) )
-            	    // InternalVertigoDsl.g:5304:10: {...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) )
+            	    // InternalVertigoDsl.g:5411:9: ({...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) ) )
+            	    // InternalVertigoDsl.g:5411:10: {...}? => ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleIndexDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:5304:19: ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) )
-            	    // InternalVertigoDsl.g:5304:20: (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept )
+            	    // InternalVertigoDsl.g:5411:19: ( (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept ) )
+            	    // InternalVertigoDsl.g:5411:20: (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept )
             	    {
-            	    // InternalVertigoDsl.g:5304:20: (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept )
-            	    // InternalVertigoDsl.g:5305:10: lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept
+            	    // InternalVertigoDsl.g:5411:20: (lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept )
+            	    // InternalVertigoDsl.g:5412:10: lv_indexDefinitionKeyConcept_6_0= ruleIndexDefinitionKeyConcept
             	    {
 
             	    										newCompositeNode(grammarAccess.getIndexDefinitionAccess().getIndexDefinitionKeyConceptIndexDefinitionKeyConceptParserRuleCall_5_0_0());
@@ -13267,31 +13546,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 2 :
-            	    // InternalVertigoDsl.g:5327:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) )
+            	    // InternalVertigoDsl.g:5434:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:5327:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) )
-            	    // InternalVertigoDsl.g:5328:5: {...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) )
+            	    // InternalVertigoDsl.g:5434:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) ) )
+            	    // InternalVertigoDsl.g:5435:5: {...}? => ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 1) ) {
             	        throw new FailedPredicateException(input, "ruleIndexDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 1)");
             	    }
-            	    // InternalVertigoDsl.g:5328:112: ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) )
-            	    // InternalVertigoDsl.g:5329:6: ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) )
+            	    // InternalVertigoDsl.g:5435:112: ( ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) ) )
+            	    // InternalVertigoDsl.g:5436:6: ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 1);
             	    					
-            	    // InternalVertigoDsl.g:5332:9: ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) )
-            	    // InternalVertigoDsl.g:5332:10: {...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) )
+            	    // InternalVertigoDsl.g:5439:9: ({...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) ) )
+            	    // InternalVertigoDsl.g:5439:10: {...}? => ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleIndexDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:5332:19: ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) )
-            	    // InternalVertigoDsl.g:5332:20: (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex )
+            	    // InternalVertigoDsl.g:5439:19: ( (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex ) )
+            	    // InternalVertigoDsl.g:5439:20: (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex )
             	    {
-            	    // InternalVertigoDsl.g:5332:20: (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex )
-            	    // InternalVertigoDsl.g:5333:10: lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex
+            	    // InternalVertigoDsl.g:5439:20: (lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex )
+            	    // InternalVertigoDsl.g:5440:10: lv_indexDefinitionDtIndex_7_0= ruleIndexDefinitionDtIndex
             	    {
 
             	    										newCompositeNode(grammarAccess.getIndexDefinitionAccess().getIndexDefinitionDtIndexIndexDefinitionDtIndexParserRuleCall_5_1_0());
@@ -13334,31 +13613,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 3 :
-            	    // InternalVertigoDsl.g:5355:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) )
+            	    // InternalVertigoDsl.g:5462:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:5355:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) )
-            	    // InternalVertigoDsl.g:5356:5: {...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) )
+            	    // InternalVertigoDsl.g:5462:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) ) )
+            	    // InternalVertigoDsl.g:5463:5: {...}? => ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 2) ) {
             	        throw new FailedPredicateException(input, "ruleIndexDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 2)");
             	    }
-            	    // InternalVertigoDsl.g:5356:112: ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) )
-            	    // InternalVertigoDsl.g:5357:6: ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) )
+            	    // InternalVertigoDsl.g:5463:112: ( ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) ) )
+            	    // InternalVertigoDsl.g:5464:6: ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 2);
             	    					
-            	    // InternalVertigoDsl.g:5360:9: ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) )
-            	    // InternalVertigoDsl.g:5360:10: {...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) )
+            	    // InternalVertigoDsl.g:5467:9: ({...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) ) )
+            	    // InternalVertigoDsl.g:5467:10: {...}? => ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleIndexDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:5360:19: ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) )
-            	    // InternalVertigoDsl.g:5360:20: (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId )
+            	    // InternalVertigoDsl.g:5467:19: ( (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId ) )
+            	    // InternalVertigoDsl.g:5467:20: (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId )
             	    {
-            	    // InternalVertigoDsl.g:5360:20: (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId )
-            	    // InternalVertigoDsl.g:5361:10: lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId
+            	    // InternalVertigoDsl.g:5467:20: (lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId )
+            	    // InternalVertigoDsl.g:5468:10: lv_indexDefinitionLoaderId_8_0= ruleIndexDefinitionLoaderId
             	    {
 
             	    										newCompositeNode(grammarAccess.getIndexDefinitionAccess().getIndexDefinitionLoaderIdIndexDefinitionLoaderIdParserRuleCall_5_2_0());
@@ -13401,31 +13680,31 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    }
             	    break;
             	case 4 :
-            	    // InternalVertigoDsl.g:5383:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) )
+            	    // InternalVertigoDsl.g:5490:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) )
             	    {
-            	    // InternalVertigoDsl.g:5383:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) )
-            	    // InternalVertigoDsl.g:5384:5: {...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) )
+            	    // InternalVertigoDsl.g:5490:4: ({...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) ) )
+            	    // InternalVertigoDsl.g:5491:5: {...}? => ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) )
             	    {
             	    if ( ! getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 3) ) {
             	        throw new FailedPredicateException(input, "ruleIndexDefinition", "getUnorderedGroupHelper().canSelect(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 3)");
             	    }
-            	    // InternalVertigoDsl.g:5384:112: ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) )
-            	    // InternalVertigoDsl.g:5385:6: ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) )
+            	    // InternalVertigoDsl.g:5491:112: ( ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) ) )
+            	    // InternalVertigoDsl.g:5492:6: ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) )
             	    {
 
             	    						getUnorderedGroupHelper().select(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5(), 3);
             	    					
-            	    // InternalVertigoDsl.g:5388:9: ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) )
-            	    // InternalVertigoDsl.g:5388:10: {...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) )
+            	    // InternalVertigoDsl.g:5495:9: ({...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) ) )
+            	    // InternalVertigoDsl.g:5495:10: {...}? => ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) )
             	    {
             	    if ( !((true)) ) {
             	        throw new FailedPredicateException(input, "ruleIndexDefinition", "true");
             	    }
-            	    // InternalVertigoDsl.g:5388:19: ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) )
-            	    // InternalVertigoDsl.g:5388:20: (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo )
+            	    // InternalVertigoDsl.g:5495:19: ( (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo ) )
+            	    // InternalVertigoDsl.g:5495:20: (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo )
             	    {
-            	    // InternalVertigoDsl.g:5388:20: (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo )
-            	    // InternalVertigoDsl.g:5389:10: lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo
+            	    // InternalVertigoDsl.g:5495:20: (lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo )
+            	    // InternalVertigoDsl.g:5496:10: lv_indexDefinitionIndexCopyTo_9_0= ruleIndexDefinitionIndexCopyTo
             	    {
 
             	    										newCompositeNode(grammarAccess.getIndexDefinitionAccess().getIndexDefinitionIndexCopyToIndexDefinitionIndexCopyToParserRuleCall_5_3_0());
@@ -13469,12 +13748,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             	    break;
 
             	default :
-            	    if ( cnt87 >= 1 ) break loop87;
+            	    if ( cnt88 >= 1 ) break loop88;
                         EarlyExitException eee =
-                            new EarlyExitException(87, input);
+                            new EarlyExitException(88, input);
                         throw eee;
                 }
-                cnt87++;
+                cnt88++;
             } while (true);
 
             if ( ! getUnorderedGroupHelper().canLeave(grammarAccess.getIndexDefinitionAccess().getUnorderedGroup_5()) ) {
@@ -13519,7 +13798,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleDataType"
-    // InternalVertigoDsl.g:5427:1: ruleDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) ) ;
+    // InternalVertigoDsl.g:5534:1: ruleDataType returns [Enumerator current=null] : ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) ) ;
     public final Enumerator ruleDataType() throws RecognitionException {
         Enumerator current = null;
 
@@ -13537,72 +13816,72 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5433:2: ( ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) ) )
-            // InternalVertigoDsl.g:5434:2: ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) )
+            // InternalVertigoDsl.g:5540:2: ( ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) ) )
+            // InternalVertigoDsl.g:5541:2: ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) )
             {
-            // InternalVertigoDsl.g:5434:2: ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) )
-            int alt88=9;
+            // InternalVertigoDsl.g:5541:2: ( (enumLiteral_0= 'Integer' ) | (enumLiteral_1= 'Double' ) | (enumLiteral_2= 'Boolean' ) | (enumLiteral_3= 'String' ) | (enumLiteral_4= 'LocalDate' ) | (enumLiteral_5= 'Instant' ) | (enumLiteral_6= 'BigDecimal' ) | (enumLiteral_7= 'Long' ) | (enumLiteral_8= 'DataStream' ) )
+            int alt89=9;
             switch ( input.LA(1) ) {
-            case 83:
-                {
-                alt88=1;
-                }
-                break;
             case 84:
                 {
-                alt88=2;
+                alt89=1;
                 }
                 break;
             case 85:
                 {
-                alt88=3;
+                alt89=2;
                 }
                 break;
             case 86:
                 {
-                alt88=4;
+                alt89=3;
                 }
                 break;
             case 87:
                 {
-                alt88=5;
+                alt89=4;
                 }
                 break;
             case 88:
                 {
-                alt88=6;
+                alt89=5;
                 }
                 break;
             case 89:
                 {
-                alt88=7;
+                alt89=6;
                 }
                 break;
             case 90:
                 {
-                alt88=8;
+                alt89=7;
                 }
                 break;
             case 91:
                 {
-                alt88=9;
+                alt89=8;
+                }
+                break;
+            case 92:
+                {
+                alt89=9;
                 }
                 break;
             default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 88, 0, input);
+                    new NoViableAltException("", 89, 0, input);
 
                 throw nvae;
             }
 
-            switch (alt88) {
+            switch (alt89) {
                 case 1 :
-                    // InternalVertigoDsl.g:5435:3: (enumLiteral_0= 'Integer' )
+                    // InternalVertigoDsl.g:5542:3: (enumLiteral_0= 'Integer' )
                     {
-                    // InternalVertigoDsl.g:5435:3: (enumLiteral_0= 'Integer' )
-                    // InternalVertigoDsl.g:5436:4: enumLiteral_0= 'Integer'
+                    // InternalVertigoDsl.g:5542:3: (enumLiteral_0= 'Integer' )
+                    // InternalVertigoDsl.g:5543:4: enumLiteral_0= 'Integer'
                     {
-                    enumLiteral_0=(Token)match(input,83,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,84,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getINTEGEREnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getDataTypeAccess().getINTEGEREnumLiteralDeclaration_0());
@@ -13614,12 +13893,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:5443:3: (enumLiteral_1= 'Double' )
+                    // InternalVertigoDsl.g:5550:3: (enumLiteral_1= 'Double' )
                     {
-                    // InternalVertigoDsl.g:5443:3: (enumLiteral_1= 'Double' )
-                    // InternalVertigoDsl.g:5444:4: enumLiteral_1= 'Double'
+                    // InternalVertigoDsl.g:5550:3: (enumLiteral_1= 'Double' )
+                    // InternalVertigoDsl.g:5551:4: enumLiteral_1= 'Double'
                     {
-                    enumLiteral_1=(Token)match(input,84,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,85,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getDOUBLEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getDataTypeAccess().getDOUBLEEnumLiteralDeclaration_1());
@@ -13631,12 +13910,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 3 :
-                    // InternalVertigoDsl.g:5451:3: (enumLiteral_2= 'Boolean' )
+                    // InternalVertigoDsl.g:5558:3: (enumLiteral_2= 'Boolean' )
                     {
-                    // InternalVertigoDsl.g:5451:3: (enumLiteral_2= 'Boolean' )
-                    // InternalVertigoDsl.g:5452:4: enumLiteral_2= 'Boolean'
+                    // InternalVertigoDsl.g:5558:3: (enumLiteral_2= 'Boolean' )
+                    // InternalVertigoDsl.g:5559:4: enumLiteral_2= 'Boolean'
                     {
-                    enumLiteral_2=(Token)match(input,85,FOLLOW_2); 
+                    enumLiteral_2=(Token)match(input,86,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getBOOLEANEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_2, grammarAccess.getDataTypeAccess().getBOOLEANEnumLiteralDeclaration_2());
@@ -13648,12 +13927,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 4 :
-                    // InternalVertigoDsl.g:5459:3: (enumLiteral_3= 'String' )
+                    // InternalVertigoDsl.g:5566:3: (enumLiteral_3= 'String' )
                     {
-                    // InternalVertigoDsl.g:5459:3: (enumLiteral_3= 'String' )
-                    // InternalVertigoDsl.g:5460:4: enumLiteral_3= 'String'
+                    // InternalVertigoDsl.g:5566:3: (enumLiteral_3= 'String' )
+                    // InternalVertigoDsl.g:5567:4: enumLiteral_3= 'String'
                     {
-                    enumLiteral_3=(Token)match(input,86,FOLLOW_2); 
+                    enumLiteral_3=(Token)match(input,87,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getSTRINGEnumLiteralDeclaration_3().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_3, grammarAccess.getDataTypeAccess().getSTRINGEnumLiteralDeclaration_3());
@@ -13665,12 +13944,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 5 :
-                    // InternalVertigoDsl.g:5467:3: (enumLiteral_4= 'LocalDate' )
+                    // InternalVertigoDsl.g:5574:3: (enumLiteral_4= 'LocalDate' )
                     {
-                    // InternalVertigoDsl.g:5467:3: (enumLiteral_4= 'LocalDate' )
-                    // InternalVertigoDsl.g:5468:4: enumLiteral_4= 'LocalDate'
+                    // InternalVertigoDsl.g:5574:3: (enumLiteral_4= 'LocalDate' )
+                    // InternalVertigoDsl.g:5575:4: enumLiteral_4= 'LocalDate'
                     {
-                    enumLiteral_4=(Token)match(input,87,FOLLOW_2); 
+                    enumLiteral_4=(Token)match(input,88,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getLOCAL_DATEEnumLiteralDeclaration_4().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_4, grammarAccess.getDataTypeAccess().getLOCAL_DATEEnumLiteralDeclaration_4());
@@ -13682,12 +13961,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 6 :
-                    // InternalVertigoDsl.g:5475:3: (enumLiteral_5= 'Instant' )
+                    // InternalVertigoDsl.g:5582:3: (enumLiteral_5= 'Instant' )
                     {
-                    // InternalVertigoDsl.g:5475:3: (enumLiteral_5= 'Instant' )
-                    // InternalVertigoDsl.g:5476:4: enumLiteral_5= 'Instant'
+                    // InternalVertigoDsl.g:5582:3: (enumLiteral_5= 'Instant' )
+                    // InternalVertigoDsl.g:5583:4: enumLiteral_5= 'Instant'
                     {
-                    enumLiteral_5=(Token)match(input,88,FOLLOW_2); 
+                    enumLiteral_5=(Token)match(input,89,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getINSTANTEnumLiteralDeclaration_5().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_5, grammarAccess.getDataTypeAccess().getINSTANTEnumLiteralDeclaration_5());
@@ -13699,12 +13978,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 7 :
-                    // InternalVertigoDsl.g:5483:3: (enumLiteral_6= 'BigDecimal' )
+                    // InternalVertigoDsl.g:5590:3: (enumLiteral_6= 'BigDecimal' )
                     {
-                    // InternalVertigoDsl.g:5483:3: (enumLiteral_6= 'BigDecimal' )
-                    // InternalVertigoDsl.g:5484:4: enumLiteral_6= 'BigDecimal'
+                    // InternalVertigoDsl.g:5590:3: (enumLiteral_6= 'BigDecimal' )
+                    // InternalVertigoDsl.g:5591:4: enumLiteral_6= 'BigDecimal'
                     {
-                    enumLiteral_6=(Token)match(input,89,FOLLOW_2); 
+                    enumLiteral_6=(Token)match(input,90,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getBIG_DECIMALEnumLiteralDeclaration_6().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_6, grammarAccess.getDataTypeAccess().getBIG_DECIMALEnumLiteralDeclaration_6());
@@ -13716,12 +13995,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 8 :
-                    // InternalVertigoDsl.g:5491:3: (enumLiteral_7= 'Long' )
+                    // InternalVertigoDsl.g:5598:3: (enumLiteral_7= 'Long' )
                     {
-                    // InternalVertigoDsl.g:5491:3: (enumLiteral_7= 'Long' )
-                    // InternalVertigoDsl.g:5492:4: enumLiteral_7= 'Long'
+                    // InternalVertigoDsl.g:5598:3: (enumLiteral_7= 'Long' )
+                    // InternalVertigoDsl.g:5599:4: enumLiteral_7= 'Long'
                     {
-                    enumLiteral_7=(Token)match(input,90,FOLLOW_2); 
+                    enumLiteral_7=(Token)match(input,91,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getLONGEnumLiteralDeclaration_7().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_7, grammarAccess.getDataTypeAccess().getLONGEnumLiteralDeclaration_7());
@@ -13733,12 +14012,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 9 :
-                    // InternalVertigoDsl.g:5499:3: (enumLiteral_8= 'DataStream' )
+                    // InternalVertigoDsl.g:5606:3: (enumLiteral_8= 'DataStream' )
                     {
-                    // InternalVertigoDsl.g:5499:3: (enumLiteral_8= 'DataStream' )
-                    // InternalVertigoDsl.g:5500:4: enumLiteral_8= 'DataStream'
+                    // InternalVertigoDsl.g:5606:3: (enumLiteral_8= 'DataStream' )
+                    // InternalVertigoDsl.g:5607:4: enumLiteral_8= 'DataStream'
                     {
-                    enumLiteral_8=(Token)match(input,91,FOLLOW_2); 
+                    enumLiteral_8=(Token)match(input,92,FOLLOW_2); 
 
                     				current = grammarAccess.getDataTypeAccess().getDATA_STREAMEnumLiteralDeclaration_8().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_8, grammarAccess.getDataTypeAccess().getDATA_STREAMEnumLiteralDeclaration_8());
@@ -13772,7 +14051,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleBooleanString"
-    // InternalVertigoDsl.g:5510:1: ruleBooleanString returns [Enumerator current=null] : ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) ;
+    // InternalVertigoDsl.g:5617:1: ruleBooleanString returns [Enumerator current=null] : ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) ;
     public final Enumerator ruleBooleanString() throws RecognitionException {
         Enumerator current = null;
 
@@ -13783,33 +14062,33 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5516:2: ( ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) )
-            // InternalVertigoDsl.g:5517:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
+            // InternalVertigoDsl.g:5623:2: ( ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) ) )
+            // InternalVertigoDsl.g:5624:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
             {
-            // InternalVertigoDsl.g:5517:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
-            int alt89=2;
-            int LA89_0 = input.LA(1);
+            // InternalVertigoDsl.g:5624:2: ( (enumLiteral_0= '\"true\"' ) | (enumLiteral_1= '\"false\"' ) )
+            int alt90=2;
+            int LA90_0 = input.LA(1);
 
-            if ( (LA89_0==92) ) {
-                alt89=1;
+            if ( (LA90_0==93) ) {
+                alt90=1;
             }
-            else if ( (LA89_0==93) ) {
-                alt89=2;
+            else if ( (LA90_0==94) ) {
+                alt90=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 89, 0, input);
+                    new NoViableAltException("", 90, 0, input);
 
                 throw nvae;
             }
-            switch (alt89) {
+            switch (alt90) {
                 case 1 :
-                    // InternalVertigoDsl.g:5518:3: (enumLiteral_0= '\"true\"' )
+                    // InternalVertigoDsl.g:5625:3: (enumLiteral_0= '\"true\"' )
                     {
-                    // InternalVertigoDsl.g:5518:3: (enumLiteral_0= '\"true\"' )
-                    // InternalVertigoDsl.g:5519:4: enumLiteral_0= '\"true\"'
+                    // InternalVertigoDsl.g:5625:3: (enumLiteral_0= '\"true\"' )
+                    // InternalVertigoDsl.g:5626:4: enumLiteral_0= '\"true\"'
                     {
-                    enumLiteral_0=(Token)match(input,92,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,93,FOLLOW_2); 
 
                     				current = grammarAccess.getBooleanStringAccess().getTRUEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getBooleanStringAccess().getTRUEEnumLiteralDeclaration_0());
@@ -13821,12 +14100,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:5526:3: (enumLiteral_1= '\"false\"' )
+                    // InternalVertigoDsl.g:5633:3: (enumLiteral_1= '\"false\"' )
                     {
-                    // InternalVertigoDsl.g:5526:3: (enumLiteral_1= '\"false\"' )
-                    // InternalVertigoDsl.g:5527:4: enumLiteral_1= '\"false\"'
+                    // InternalVertigoDsl.g:5633:3: (enumLiteral_1= '\"false\"' )
+                    // InternalVertigoDsl.g:5634:4: enumLiteral_1= '\"false\"'
                     {
-                    enumLiteral_1=(Token)match(input,93,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,94,FOLLOW_2); 
 
                     				current = grammarAccess.getBooleanStringAccess().getFALSEEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getBooleanStringAccess().getFALSEEnumLiteralDeclaration_1());
@@ -13860,44 +14139,54 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleMultiplicityString"
-    // InternalVertigoDsl.g:5537:1: ruleMultiplicityString returns [Enumerator current=null] : ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) ) ;
+    // InternalVertigoDsl.g:5644:1: ruleMultiplicityString returns [Enumerator current=null] : ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) | (enumLiteral_2= '\"1..1\"' ) ) ;
     public final Enumerator ruleMultiplicityString() throws RecognitionException {
         Enumerator current = null;
 
         Token enumLiteral_0=null;
         Token enumLiteral_1=null;
+        Token enumLiteral_2=null;
 
 
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5543:2: ( ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) ) )
-            // InternalVertigoDsl.g:5544:2: ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) )
+            // InternalVertigoDsl.g:5650:2: ( ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) | (enumLiteral_2= '\"1..1\"' ) ) )
+            // InternalVertigoDsl.g:5651:2: ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) | (enumLiteral_2= '\"1..1\"' ) )
             {
-            // InternalVertigoDsl.g:5544:2: ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) )
-            int alt90=2;
-            int LA90_0 = input.LA(1);
-
-            if ( (LA90_0==94) ) {
-                alt90=1;
-            }
-            else if ( (LA90_0==95) ) {
-                alt90=2;
-            }
-            else {
+            // InternalVertigoDsl.g:5651:2: ( (enumLiteral_0= '\"0..1\"' ) | (enumLiteral_1= '\"0..*\"' ) | (enumLiteral_2= '\"1..1\"' ) )
+            int alt91=3;
+            switch ( input.LA(1) ) {
+            case 95:
+                {
+                alt91=1;
+                }
+                break;
+            case 96:
+                {
+                alt91=2;
+                }
+                break;
+            case 97:
+                {
+                alt91=3;
+                }
+                break;
+            default:
                 NoViableAltException nvae =
-                    new NoViableAltException("", 90, 0, input);
+                    new NoViableAltException("", 91, 0, input);
 
                 throw nvae;
             }
-            switch (alt90) {
+
+            switch (alt91) {
                 case 1 :
-                    // InternalVertigoDsl.g:5545:3: (enumLiteral_0= '\"0..1\"' )
+                    // InternalVertigoDsl.g:5652:3: (enumLiteral_0= '\"0..1\"' )
                     {
-                    // InternalVertigoDsl.g:5545:3: (enumLiteral_0= '\"0..1\"' )
-                    // InternalVertigoDsl.g:5546:4: enumLiteral_0= '\"0..1\"'
+                    // InternalVertigoDsl.g:5652:3: (enumLiteral_0= '\"0..1\"' )
+                    // InternalVertigoDsl.g:5653:4: enumLiteral_0= '\"0..1\"'
                     {
-                    enumLiteral_0=(Token)match(input,94,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,95,FOLLOW_2); 
 
                     				current = grammarAccess.getMultiplicityStringAccess().getZERO_ONEEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getMultiplicityStringAccess().getZERO_ONEEnumLiteralDeclaration_0());
@@ -13909,15 +14198,32 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:5553:3: (enumLiteral_1= '\"0..*\"' )
+                    // InternalVertigoDsl.g:5660:3: (enumLiteral_1= '\"0..*\"' )
                     {
-                    // InternalVertigoDsl.g:5553:3: (enumLiteral_1= '\"0..*\"' )
-                    // InternalVertigoDsl.g:5554:4: enumLiteral_1= '\"0..*\"'
+                    // InternalVertigoDsl.g:5660:3: (enumLiteral_1= '\"0..*\"' )
+                    // InternalVertigoDsl.g:5661:4: enumLiteral_1= '\"0..*\"'
                     {
-                    enumLiteral_1=(Token)match(input,95,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,96,FOLLOW_2); 
 
                     				current = grammarAccess.getMultiplicityStringAccess().getZERO_NEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getMultiplicityStringAccess().getZERO_NEnumLiteralDeclaration_1());
+                    			
+
+                    }
+
+
+                    }
+                    break;
+                case 3 :
+                    // InternalVertigoDsl.g:5668:3: (enumLiteral_2= '\"1..1\"' )
+                    {
+                    // InternalVertigoDsl.g:5668:3: (enumLiteral_2= '\"1..1\"' )
+                    // InternalVertigoDsl.g:5669:4: enumLiteral_2= '\"1..1\"'
+                    {
+                    enumLiteral_2=(Token)match(input,97,FOLLOW_2); 
+
+                    				current = grammarAccess.getMultiplicityStringAccess().getONE_ONEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+                    				newLeafNode(enumLiteral_2, grammarAccess.getMultiplicityStringAccess().getONE_ONEEnumLiteralDeclaration_2());
                     			
 
                     }
@@ -13948,7 +14254,7 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     // $ANTLR start "ruleInOutString"
-    // InternalVertigoDsl.g:5564:1: ruleInOutString returns [Enumerator current=null] : ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) ) ;
+    // InternalVertigoDsl.g:5679:1: ruleInOutString returns [Enumerator current=null] : ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) ) ;
     public final Enumerator ruleInOutString() throws RecognitionException {
         Enumerator current = null;
 
@@ -13959,33 +14265,33 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
         	enterRule();
 
         try {
-            // InternalVertigoDsl.g:5570:2: ( ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) ) )
-            // InternalVertigoDsl.g:5571:2: ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) )
+            // InternalVertigoDsl.g:5685:2: ( ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) ) )
+            // InternalVertigoDsl.g:5686:2: ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) )
             {
-            // InternalVertigoDsl.g:5571:2: ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) )
-            int alt91=2;
-            int LA91_0 = input.LA(1);
+            // InternalVertigoDsl.g:5686:2: ( (enumLiteral_0= '\"in\"' ) | (enumLiteral_1= '\"out\"' ) )
+            int alt92=2;
+            int LA92_0 = input.LA(1);
 
-            if ( (LA91_0==96) ) {
-                alt91=1;
+            if ( (LA92_0==98) ) {
+                alt92=1;
             }
-            else if ( (LA91_0==97) ) {
-                alt91=2;
+            else if ( (LA92_0==99) ) {
+                alt92=2;
             }
             else {
                 NoViableAltException nvae =
-                    new NoViableAltException("", 91, 0, input);
+                    new NoViableAltException("", 92, 0, input);
 
                 throw nvae;
             }
-            switch (alt91) {
+            switch (alt92) {
                 case 1 :
-                    // InternalVertigoDsl.g:5572:3: (enumLiteral_0= '\"in\"' )
+                    // InternalVertigoDsl.g:5687:3: (enumLiteral_0= '\"in\"' )
                     {
-                    // InternalVertigoDsl.g:5572:3: (enumLiteral_0= '\"in\"' )
-                    // InternalVertigoDsl.g:5573:4: enumLiteral_0= '\"in\"'
+                    // InternalVertigoDsl.g:5687:3: (enumLiteral_0= '\"in\"' )
+                    // InternalVertigoDsl.g:5688:4: enumLiteral_0= '\"in\"'
                     {
-                    enumLiteral_0=(Token)match(input,96,FOLLOW_2); 
+                    enumLiteral_0=(Token)match(input,98,FOLLOW_2); 
 
                     				current = grammarAccess.getInOutStringAccess().getINOUT_INEnumLiteralDeclaration_0().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_0, grammarAccess.getInOutStringAccess().getINOUT_INEnumLiteralDeclaration_0());
@@ -13997,12 +14303,12 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
                     }
                     break;
                 case 2 :
-                    // InternalVertigoDsl.g:5580:3: (enumLiteral_1= '\"out\"' )
+                    // InternalVertigoDsl.g:5695:3: (enumLiteral_1= '\"out\"' )
                     {
-                    // InternalVertigoDsl.g:5580:3: (enumLiteral_1= '\"out\"' )
-                    // InternalVertigoDsl.g:5581:4: enumLiteral_1= '\"out\"'
+                    // InternalVertigoDsl.g:5695:3: (enumLiteral_1= '\"out\"' )
+                    // InternalVertigoDsl.g:5696:4: enumLiteral_1= '\"out\"'
                     {
-                    enumLiteral_1=(Token)match(input,97,FOLLOW_2); 
+                    enumLiteral_1=(Token)match(input,99,FOLLOW_2); 
 
                     				current = grammarAccess.getInOutStringAccess().getINOUT_OUTEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
                     				newLeafNode(enumLiteral_1, grammarAccess.getInOutStringAccess().getINOUT_OUTEnumLiteralDeclaration_1());
@@ -14038,17 +14344,17 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
 
 
     protected DFA5 dfa5 = new DFA5(this);
-    protected DFA55 dfa55 = new DFA55(this);
+    protected DFA56 dfa56 = new DFA56(this);
     static final String dfa_1s = "\22\uffff";
     static final String dfa_2s = "\1\21\3\22\16\uffff";
-    static final String dfa_3s = "\1\51\1\122\2\23\16\uffff";
-    static final String dfa_4s = "\4\uffff\1\16\1\7\1\12\1\1\1\14\1\3\1\15\1\2\1\5\1\13\1\11\1\4\1\6\1\10";
+    static final String dfa_3s = "\1\51\1\123\2\23\16\uffff";
+    static final String dfa_4s = "\4\uffff\1\3\1\2\1\5\1\13\1\16\1\12\1\14\1\15\1\1\1\7\1\4\1\11\1\10\1\6";
     static final String dfa_5s = "\22\uffff}>";
     static final String[] dfa_6s = {
             "\1\3\2\uffff\1\1\24\uffff\1\2",
-            "\1\11\1\5\1\uffff\1\7\6\uffff\1\14\1\uffff\1\13\23\uffff\1\6\16\uffff\1\15\5\uffff\1\10\5\uffff\1\4\4\uffff\1\12",
-            "\1\17\1\16",
-            "\1\20\1\21",
+            "\1\4\1\15\1\uffff\1\14\6\uffff\1\6\1\uffff\1\5\24\uffff\1\11\16\uffff\1\7\5\uffff\1\12\5\uffff\1\10\4\uffff\1\13",
+            "\1\16\1\17",
+            "\1\21\1\20",
             "",
             "",
             "",
@@ -14091,11 +14397,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     }
     static final String dfa_7s = "\16\uffff";
     static final String dfa_8s = "\1\33\15\uffff";
-    static final String dfa_9s = "\1\76\15\uffff";
+    static final String dfa_9s = "\1\77\15\uffff";
     static final String dfa_10s = "\1\uffff\1\15\1\1\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14";
     static final String dfa_11s = "\1\0\15\uffff}>";
     static final String[] dfa_12s = {
-            "\1\1\27\uffff\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15",
+            "\1\1\30\uffff\1\2\1\3\1\4\1\5\1\6\1\7\1\10\1\11\1\12\1\13\1\14\1\15",
             "",
             "",
             "",
@@ -14118,11 +14424,11 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     static final short[] dfa_11 = DFA.unpackEncodedString(dfa_11s);
     static final short[][] dfa_12 = unpackEncodedStringArray(dfa_12s);
 
-    class DFA55 extends DFA {
+    class DFA56 extends DFA {
 
-        public DFA55(BaseRecognizer recognizer) {
+        public DFA56(BaseRecognizer recognizer) {
             this.recognizer = recognizer;
-            this.decisionNumber = 55;
+            this.decisionNumber = 56;
             this.eot = dfa_7;
             this.eof = dfa_7;
             this.min = dfa_8;
@@ -14132,52 +14438,52 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
             this.transition = dfa_12;
         }
         public String getDescription() {
-            return "()+ loopback of 2954:6: ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+";
+            return "()+ loopback of 3061:6: ( ({...}? => ( ({...}? => (otherlv_5= 'fkFieldName' otherlv_6= ':' ( (lv_fkFieldName_7_0= RULE_STRING ) ) (otherlv_8= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_9= 'dtDefinitionA' otherlv_10= ':' ( (otherlv_11= RULE_ID ) ) (otherlv_12= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_13= 'dtDefinitionB' otherlv_14= ':' ( (otherlv_15= RULE_ID ) ) (otherlv_16= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_17= 'navigabilityA' otherlv_18= ':' ( (lv_navigabilityA_19_0= ruleBooleanString ) ) (otherlv_20= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_21= 'navigabilityB' otherlv_22= ':' ( (lv_navigabilityB_23_0= ruleBooleanString ) ) (otherlv_24= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_25= 'multiplicityA' otherlv_26= ':' ( (lv_multiplicityA_27_0= ruleMultiplicityString ) ) (otherlv_28= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_29= 'multiplicityB' otherlv_30= ':' ( (lv_multiplicityB_31_0= ruleMultiplicityString ) ) (otherlv_32= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_33= 'labelA' otherlv_34= ':' ( (lv_labelA_35_0= RULE_STRING ) ) (otherlv_36= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_37= 'labelB' otherlv_38= ':' ( (lv_labelB_39_0= RULE_STRING ) ) (otherlv_40= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_41= 'roleA' otherlv_42= ':' ( (lv_roleA_43_0= RULE_STRING ) ) (otherlv_44= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_45= 'roleB' otherlv_46= ':' ( (lv_roleB_47_0= RULE_STRING ) ) (otherlv_48= ',' )? ) ) ) ) | ({...}? => ( ({...}? => (otherlv_49= 'type' otherlv_50= ':' ( (lv_type_51_0= RULE_STRING ) ) ) ) ) ) )+";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             TokenStream input = (TokenStream)_input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA55_0 = input.LA(1);
+                        int LA56_0 = input.LA(1);
 
                          
-                        int index55_0 = input.index();
+                        int index56_0 = input.index();
                         input.rewind();
                         s = -1;
-                        if ( (LA55_0==27) ) {s = 1;}
+                        if ( (LA56_0==27) ) {s = 1;}
 
-                        else if ( LA55_0 == 51 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0) ) {s = 2;}
+                        else if ( LA56_0 == 52 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 0) ) {s = 2;}
 
-                        else if ( LA55_0 == 52 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1) ) {s = 3;}
+                        else if ( LA56_0 == 53 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 1) ) {s = 3;}
 
-                        else if ( LA55_0 == 53 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2) ) {s = 4;}
+                        else if ( LA56_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 2) ) {s = 4;}
 
-                        else if ( LA55_0 == 54 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3) ) {s = 5;}
+                        else if ( LA56_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 3) ) {s = 5;}
 
-                        else if ( LA55_0 == 55 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4) ) {s = 6;}
+                        else if ( LA56_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 4) ) {s = 6;}
 
-                        else if ( LA55_0 == 56 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5) ) {s = 7;}
+                        else if ( LA56_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 5) ) {s = 7;}
 
-                        else if ( LA55_0 == 57 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6) ) {s = 8;}
+                        else if ( LA56_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 6) ) {s = 8;}
 
-                        else if ( LA55_0 == 58 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7) ) {s = 9;}
+                        else if ( LA56_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 7) ) {s = 9;}
 
-                        else if ( LA55_0 == 59 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8) ) {s = 10;}
+                        else if ( LA56_0 == 60 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 8) ) {s = 10;}
 
-                        else if ( LA55_0 == 60 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9) ) {s = 11;}
+                        else if ( LA56_0 == 61 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 9) ) {s = 11;}
 
-                        else if ( LA55_0 == 61 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10) ) {s = 12;}
+                        else if ( LA56_0 == 62 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 10) ) {s = 12;}
 
-                        else if ( LA55_0 == 62 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {s = 13;}
+                        else if ( LA56_0 == 63 && getUnorderedGroupHelper().canSelect(grammarAccess.getAssociationAccess().getUnorderedGroup_4(), 11) ) {s = 13;}
 
                          
-                        input.seek(index55_0);
+                        input.seek(index56_0);
                         if ( s>=0 ) return s;
                         break;
             }
             NoViableAltException nvae =
-                new NoViableAltException(getDescription(), 55, _s, input);
+                new NoViableAltException(getDescription(), 56, _s, input);
             error(nvae);
             throw nvae;
         }
@@ -14206,13 +14512,13 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_20 = new BitSet(new long[]{0x0000000040000000L});
     public static final BitSet FOLLOW_21 = new BitSet(new long[]{0x000000000A000000L});
     public static final BitSet FOLLOW_22 = new BitSet(new long[]{0x0000000080000000L});
-    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000000L,0x000000000FF80000L});
+    public static final BitSet FOLLOW_23 = new BitSet(new long[]{0x0000000000000000L,0x000000001FF00000L});
     public static final BitSet FOLLOW_24 = new BitSet(new long[]{0x0000018F00000000L});
     public static final BitSet FOLLOW_25 = new BitSet(new long[]{0x0000018F08000000L});
     public static final BitSet FOLLOW_26 = new BitSet(new long[]{0x0000001000000000L});
     public static final BitSet FOLLOW_27 = new BitSet(new long[]{0x0000006000000000L});
     public static final BitSet FOLLOW_28 = new BitSet(new long[]{0x0000002000000010L});
-    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0x0000000030000000L});
+    public static final BitSet FOLLOW_29 = new BitSet(new long[]{0x0000000000000000L,0x0000000060000000L});
     public static final BitSet FOLLOW_30 = new BitSet(new long[]{0x0000000000014000L});
     public static final BitSet FOLLOW_31 = new BitSet(new long[]{0x0000002008014000L});
     public static final BitSet FOLLOW_32 = new BitSet(new long[]{0x0000000008014000L});
@@ -14223,37 +14529,37 @@ public class InternalVertigoDslParser extends AbstractInternalAntlrParser {
     public static final BitSet FOLLOW_37 = new BitSet(new long[]{0x0000102008014000L});
     public static final BitSet FOLLOW_38 = new BitSet(new long[]{0x0000100008014000L});
     public static final BitSet FOLLOW_39 = new BitSet(new long[]{0x0000002000000002L});
-    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0003E00028008000L});
-    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0003600028008000L});
-    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0003600028000000L});
-    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0003400028000000L});
-    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0003000028000000L});
-    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0004000000000000L});
-    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0x7FF8000000000000L});
-    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0x7FF8002008000000L});
-    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0x7FF8000008000000L});
-    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x00000000C0000000L});
-    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x8000040000004000L});
-    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x8000042008004000L});
-    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x8000040008004000L});
-    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000000L,0x0000000300000000L});
-    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000002L});
-    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000002000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
-    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000002028000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000028000000L,0x0000000000000001L});
-    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000010000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000002008010000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000000008010000L,0x0000000000000020L});
-    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000080L});
-    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000000010000L,0x0000000000000058L});
-    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000008010000L,0x0000000000000058L});
-    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000000L,0x0000000000002000L});
-    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000000000000000L,0x0000000000001F00L});
-    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000008000000L,0x0000000000001F00L});
-    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000000L,0x0000000000008000L});
-    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000000L,0x0000000000040000L});
-    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x0000000000034100L});
-    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000008000000L,0x0000000000034100L});
+    public static final BitSet FOLLOW_40 = new BitSet(new long[]{0x0007E00028008000L});
+    public static final BitSet FOLLOW_41 = new BitSet(new long[]{0x0007600028008000L});
+    public static final BitSet FOLLOW_42 = new BitSet(new long[]{0x0007600028000000L});
+    public static final BitSet FOLLOW_43 = new BitSet(new long[]{0x0007400028000000L});
+    public static final BitSet FOLLOW_44 = new BitSet(new long[]{0x0007000028000000L});
+    public static final BitSet FOLLOW_45 = new BitSet(new long[]{0x0008000000000000L});
+    public static final BitSet FOLLOW_46 = new BitSet(new long[]{0xFFF0000000000000L});
+    public static final BitSet FOLLOW_47 = new BitSet(new long[]{0xFFF0002008000000L});
+    public static final BitSet FOLLOW_48 = new BitSet(new long[]{0xFFF0000008000000L});
+    public static final BitSet FOLLOW_49 = new BitSet(new long[]{0x0000000000000000L,0x0000000380000000L});
+    public static final BitSet FOLLOW_50 = new BitSet(new long[]{0x0000040000004000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_51 = new BitSet(new long[]{0x0000042008004000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_52 = new BitSet(new long[]{0x0000040008004000L,0x0000000000000001L});
+    public static final BitSet FOLLOW_53 = new BitSet(new long[]{0x0000000000000000L,0x0000000C00000000L});
+    public static final BitSet FOLLOW_54 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000004L});
+    public static final BitSet FOLLOW_55 = new BitSet(new long[]{0x0000002000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_56 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000008L});
+    public static final BitSet FOLLOW_57 = new BitSet(new long[]{0x0000002028000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_58 = new BitSet(new long[]{0x0000000028000000L,0x0000000000000002L});
+    public static final BitSet FOLLOW_59 = new BitSet(new long[]{0x0000000000010000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_60 = new BitSet(new long[]{0x0000002008010000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_61 = new BitSet(new long[]{0x0000000008010000L,0x0000000000000040L});
+    public static final BitSet FOLLOW_62 = new BitSet(new long[]{0x0000000000000000L,0x0000000000000100L});
+    public static final BitSet FOLLOW_63 = new BitSet(new long[]{0x0000000000010000L,0x00000000000000B0L});
+    public static final BitSet FOLLOW_64 = new BitSet(new long[]{0x0000000008010000L,0x00000000000000B0L});
+    public static final BitSet FOLLOW_65 = new BitSet(new long[]{0x0000000000000000L,0x0000000000004000L});
+    public static final BitSet FOLLOW_66 = new BitSet(new long[]{0x0000000000000000L,0x0000000000003E00L});
+    public static final BitSet FOLLOW_67 = new BitSet(new long[]{0x0000000008000000L,0x0000000000003E00L});
+    public static final BitSet FOLLOW_68 = new BitSet(new long[]{0x0000000000000000L,0x0000000000010000L});
+    public static final BitSet FOLLOW_69 = new BitSet(new long[]{0x0000000000000000L,0x0000000000080000L});
+    public static final BitSet FOLLOW_70 = new BitSet(new long[]{0x0000000000000000L,0x0000000000068200L});
+    public static final BitSet FOLLOW_71 = new BitSet(new long[]{0x0000000008000000L,0x0000000000068200L});
 
 }

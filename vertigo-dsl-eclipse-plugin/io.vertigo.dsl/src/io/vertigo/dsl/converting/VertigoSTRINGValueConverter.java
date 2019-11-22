@@ -2,10 +2,8 @@ package io.vertigo.dsl.converting;
 
 import org.eclipse.xtext.conversion.ValueConverterException;
 import org.eclipse.xtext.conversion.ValueConverterWithValueException;
-import org.eclipse.xtext.conversion.impl.AbstractLexerBasedConverter;
 import org.eclipse.xtext.conversion.impl.STRINGValueConverter;
 import org.eclipse.xtext.nodemodel.INode;
-import org.eclipse.xtext.util.JavaStringConverter;
 import org.eclipse.xtext.util.Strings;
 
 public class VertigoSTRINGValueConverter extends STRINGValueConverter {

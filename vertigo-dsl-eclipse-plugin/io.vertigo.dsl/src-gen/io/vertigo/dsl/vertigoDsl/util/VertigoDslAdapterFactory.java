@@ -191,6 +191,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createDtDefinitionSortFieldAdapter();
       }
       @Override
+      public Adapter caseDtDefinitionHandleField(DtDefinitionHandleField object)
+      {
+        return createDtDefinitionHandleFieldAdapter();
+      }
+      @Override
       public Adapter caseDtDefinitionType(DtDefinitionType object)
       {
         return createDtDefinitionTypeAdapter();
@@ -708,6 +713,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createDtDefinitionSortFieldAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField <em>Dt Definition Handle Field</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField
+   * @generated
+   */
+  public Adapter createDtDefinitionHandleFieldAdapter()
   {
     return null;
   }

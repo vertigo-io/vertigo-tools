@@ -131,6 +131,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionSortField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="sortField" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionHandleField">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="handleField" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionType"/>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinition" eSuperTypes="#//Element #//DtDefinitionType"/>
   <eClassifiers xsi:type="ecore:EClass" name="AlterDtDefinition" eSuperTypes="#//Element">
@@ -147,12 +150,15 @@
         eType="#//DtDefinitionDataSpace" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionSortField"
         eType="#//DtDefinitionSortField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionHandleField"
+        eType="#//DtDefinitionHandleField" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDisplayField"
         eType="#//DtDefinitionDisplayField" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MultiplicityString">
     <eLiterals name="ZERO_ONE" literal="&quot;0..1&quot;"/>
     <eLiterals name="ZERO_N" value="1" literal="&quot;0..*&quot;"/>
+    <eLiterals name="ONE_ONE" value="2" literal="&quot;1..1&quot;"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Association" eSuperTypes="#//Element">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -273,6 +279,8 @@
         eType="#//DtDefinitionDataSpace" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionSortField"
         eType="#//DtDefinitionSortField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionHandleField"
+        eType="#//DtDefinitionHandleField" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDisplayField"
         eType="#//DtDefinitionDisplayField" containment="true"/>
   </eClassifiers>

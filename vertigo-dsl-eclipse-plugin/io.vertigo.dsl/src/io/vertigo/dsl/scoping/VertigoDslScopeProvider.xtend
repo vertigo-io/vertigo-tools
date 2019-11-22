@@ -6,14 +6,12 @@ package io.vertigo.dsl.scoping
 import com.google.inject.Inject
 import io.vertigo.dsl.vertigoDsl.VertigoDslFactory
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
-import io.vertigo.dsl.vertigoDsl.impl.DtDefinitionActionImpl
 import java.util.ArrayList
 import java.util.HashSet
 import java.util.List
 import java.util.Set
 import org.eclipse.emf.ecore.EObject
 import org.eclipse.emf.ecore.EReference
-import org.eclipse.emf.ecore.util.EcoreUtil
 import org.eclipse.xtext.naming.QualifiedName
 import org.eclipse.xtext.resource.EObjectDescription
 import org.eclipse.xtext.resource.IEObjectDescription

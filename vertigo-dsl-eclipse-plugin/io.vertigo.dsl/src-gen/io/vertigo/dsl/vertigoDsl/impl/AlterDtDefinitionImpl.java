@@ -8,6 +8,7 @@ import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataSpace;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDisplayField;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionIdField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionSortField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionStereotype;
@@ -44,6 +45,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDtDefinitionImpl#getDtDefinitionComputedFields <em>Dt Definition Computed Fields</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDtDefinitionImpl#getDtDefinitionDataSpace <em>Dt Definition Data Space</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDtDefinitionImpl#getDtDefinitionSortField <em>Dt Definition Sort Field</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDtDefinitionImpl#getDtDefinitionHandleField <em>Dt Definition Handle Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDtDefinitionImpl#getDtDefinitionDisplayField <em>Dt Definition Display Field</em>}</li>
  * </ul>
  *
@@ -120,6 +122,16 @@ public class AlterDtDefinitionImpl extends ElementImpl implements AlterDtDefinit
    * @ordered
    */
   protected DtDefinitionSortField dtDefinitionSortField;
+
+  /**
+   * The cached value of the '{@link #getDtDefinitionHandleField() <em>Dt Definition Handle Field</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDtDefinitionHandleField()
+   * @generated
+   * @ordered
+   */
+  protected DtDefinitionHandleField dtDefinitionHandleField;
 
   /**
    * The cached value of the '{@link #getDtDefinitionDisplayField() <em>Dt Definition Display Field</em>}' containment reference.
@@ -433,6 +445,56 @@ public class AlterDtDefinitionImpl extends ElementImpl implements AlterDtDefinit
    * @generated
    */
   @Override
+  public DtDefinitionHandleField getDtDefinitionHandleField()
+  {
+    return dtDefinitionHandleField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDtDefinitionHandleField(DtDefinitionHandleField newDtDefinitionHandleField, NotificationChain msgs)
+  {
+    DtDefinitionHandleField oldDtDefinitionHandleField = dtDefinitionHandleField;
+    dtDefinitionHandleField = newDtDefinitionHandleField;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD, oldDtDefinitionHandleField, newDtDefinitionHandleField);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDtDefinitionHandleField(DtDefinitionHandleField newDtDefinitionHandleField)
+  {
+    if (newDtDefinitionHandleField != dtDefinitionHandleField)
+    {
+      NotificationChain msgs = null;
+      if (dtDefinitionHandleField != null)
+        msgs = ((InternalEObject)dtDefinitionHandleField).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD, null, msgs);
+      if (newDtDefinitionHandleField != null)
+        msgs = ((InternalEObject)newDtDefinitionHandleField).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD, null, msgs);
+      msgs = basicSetDtDefinitionHandleField(newDtDefinitionHandleField, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD, newDtDefinitionHandleField, newDtDefinitionHandleField));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public DtDefinitionDisplayField getDtDefinitionDisplayField()
   {
     return dtDefinitionDisplayField;
@@ -499,6 +561,8 @@ public class AlterDtDefinitionImpl extends ElementImpl implements AlterDtDefinit
         return basicSetDtDefinitionDataSpace(null, msgs);
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD:
         return basicSetDtDefinitionSortField(null, msgs);
+      case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD:
+        return basicSetDtDefinitionHandleField(null, msgs);
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD:
         return basicSetDtDefinitionDisplayField(null, msgs);
     }
@@ -530,6 +594,8 @@ public class AlterDtDefinitionImpl extends ElementImpl implements AlterDtDefinit
         return getDtDefinitionDataSpace();
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD:
         return getDtDefinitionSortField();
+      case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD:
+        return getDtDefinitionHandleField();
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD:
         return getDtDefinitionDisplayField();
     }
@@ -570,6 +636,9 @@ public class AlterDtDefinitionImpl extends ElementImpl implements AlterDtDefinit
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD:
         setDtDefinitionSortField((DtDefinitionSortField)newValue);
         return;
+      case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD:
+        setDtDefinitionHandleField((DtDefinitionHandleField)newValue);
+        return;
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD:
         setDtDefinitionDisplayField((DtDefinitionDisplayField)newValue);
         return;
@@ -608,6 +677,9 @@ public class AlterDtDefinitionImpl extends ElementImpl implements AlterDtDefinit
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD:
         setDtDefinitionSortField((DtDefinitionSortField)null);
         return;
+      case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD:
+        setDtDefinitionHandleField((DtDefinitionHandleField)null);
+        return;
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD:
         setDtDefinitionDisplayField((DtDefinitionDisplayField)null);
         return;
@@ -639,6 +711,8 @@ public class AlterDtDefinitionImpl extends ElementImpl implements AlterDtDefinit
         return dtDefinitionDataSpace != null;
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD:
         return dtDefinitionSortField != null;
+      case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD:
+        return dtDefinitionHandleField != null;
       case VertigoDslPackage.ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD:
         return dtDefinitionDisplayField != null;
     }

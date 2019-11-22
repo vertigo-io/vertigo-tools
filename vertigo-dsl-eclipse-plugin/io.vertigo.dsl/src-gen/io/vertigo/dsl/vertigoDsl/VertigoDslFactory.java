@@ -231,6 +231,15 @@ public interface VertigoDslFactory extends EFactory
   DtDefinitionSortField createDtDefinitionSortField();
 
   /**
+   * Returns a new object of class '<em>Dt Definition Handle Field</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Handle Field</em>'.
+   * @generated
+   */
+  DtDefinitionHandleField createDtDefinitionHandleField();
+
+  /**
    * Returns a new object of class '<em>Dt Definition Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

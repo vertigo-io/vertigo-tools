@@ -3,11 +3,10 @@
  */
 package io.vertigo.dsl.validation
 
-import io.vertigo.dsl.vertigoDsl.Domain
-import io.vertigo.dsl.vertigoDsl.DomainType
-import org.eclipse.xtext.validation.Check
-import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain
+import io.vertigo.dsl.vertigoDsl.Domain
+import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
+import org.eclipse.xtext.validation.Check
 
 /**
  * This class contains custom validation rules. 
@@ -16,7 +15,7 @@ import io.vertigo.dsl.vertigoDsl.DeclaredDomain
  */
 class VertigoDslValidator extends AbstractVertigoDslValidator {
 	
-	private static val ISSUE_CODE_DOMAIN_PREFIX = "io.vertigo.dsl.issues.domain";
+	//static val ISSUE_CODE_DOMAIN_PREFIX = "io.vertigo.dsl.issues.domain";
 	
 	public static val INVALID_NAME = 'invalidName'
 

@@ -982,6 +982,34 @@ public interface VertigoDslPackage extends EPackage
   int DT_DEFINITION_SORT_FIELD_FEATURE_COUNT = 1;
 
   /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionHandleFieldImpl <em>Dt Definition Handle Field</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.DtDefinitionHandleFieldImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDtDefinitionHandleField()
+   * @generated
+   */
+  int DT_DEFINITION_HANDLE_FIELD = 23;
+
+  /**
+   * The feature id for the '<em><b>Handle Field</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DT_DEFINITION_HANDLE_FIELD__HANDLE_FIELD = 0;
+
+  /**
+   * The number of structural features of the '<em>Dt Definition Handle Field</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DT_DEFINITION_HANDLE_FIELD_FEATURE_COUNT = 1;
+
+  /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionTypeImpl <em>Dt Definition Type</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -989,7 +1017,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDtDefinitionType()
    * @generated
    */
-  int DT_DEFINITION_TYPE = 23;
+  int DT_DEFINITION_TYPE = 24;
 
   /**
    * The number of structural features of the '<em>Dt Definition Type</em>' class.
@@ -1008,7 +1036,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDtDefinition()
    * @generated
    */
-  int DT_DEFINITION = 24;
+  int DT_DEFINITION = 25;
 
   /**
    * The number of structural features of the '<em>Dt Definition</em>' class.
@@ -1027,7 +1055,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getAlterDtDefinition()
    * @generated
    */
-  int ALTER_DT_DEFINITION = 25;
+  int ALTER_DT_DEFINITION = 26;
 
   /**
    * The feature id for the '<em><b>Dt Definitione</b></em>' reference.
@@ -1093,13 +1121,22 @@ public interface VertigoDslPackage extends EPackage
   int ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD = ELEMENT_FEATURE_COUNT + 6;
 
   /**
+   * The feature id for the '<em><b>Dt Definition Handle Field</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD = ELEMENT_FEATURE_COUNT + 7;
+
+  /**
    * The feature id for the '<em><b>Dt Definition Display Field</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD = ELEMENT_FEATURE_COUNT + 7;
+  int ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD = ELEMENT_FEATURE_COUNT + 8;
 
   /**
    * The number of structural features of the '<em>Alter Dt Definition</em>' class.
@@ -1108,7 +1145,7 @@ public interface VertigoDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int ALTER_DT_DEFINITION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 8;
+  int ALTER_DT_DEFINITION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 9;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.AssociationImpl <em>Association</em>}' class.
@@ -1118,7 +1155,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getAssociation()
    * @generated
    */
-  int ASSOCIATION = 26;
+  int ASSOCIATION = 27;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1254,7 +1291,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskAttributeString()
    * @generated
    */
-  int TASK_ATTRIBUTE_STRING = 27;
+  int TASK_ATTRIBUTE_STRING = 28;
 
   /**
    * The feature id for the '<em><b>Ref To Domain Type</b></em>' containment reference.
@@ -1300,7 +1337,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskAttribute()
    * @generated
    */
-  int TASK_ATTRIBUTE = 28;
+  int TASK_ATTRIBUTE = 29;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1337,7 +1374,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskDataSpace()
    * @generated
    */
-  int TASK_DATA_SPACE = 29;
+  int TASK_DATA_SPACE = 30;
 
   /**
    * The feature id for the '<em><b>Store Name</b></em>' attribute.
@@ -1365,7 +1402,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskRequestString()
    * @generated
    */
-  int TASK_REQUEST_STRING = 30;
+  int TASK_REQUEST_STRING = 31;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1393,7 +1430,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskDefinition()
    * @generated
    */
-  int TASK_DEFINITION = 31;
+  int TASK_DEFINITION = 32;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1457,7 +1494,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionDtDefinition()
    * @generated
    */
-  int FACET_DEFINITION_DT_DEFINITION = 32;
+  int FACET_DEFINITION_DT_DEFINITION = 33;
 
   /**
    * The feature id for the '<em><b>Dt Definition</b></em>' reference.
@@ -1485,7 +1522,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionFieldName()
    * @generated
    */
-  int FACET_DEFINITION_FIELD_NAME = 33;
+  int FACET_DEFINITION_FIELD_NAME = 34;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1513,7 +1550,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionLabel()
    * @generated
    */
-  int FACET_DEFINITION_LABEL = 34;
+  int FACET_DEFINITION_LABEL = 35;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1541,7 +1578,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionRangeString()
    * @generated
    */
-  int FACET_DEFINITION_RANGE_STRING = 35;
+  int FACET_DEFINITION_RANGE_STRING = 36;
 
   /**
    * The feature id for the '<em><b>Filter String</b></em>' attribute.
@@ -1578,7 +1615,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionRange()
    * @generated
    */
-  int FACET_DEFINITION_RANGE = 36;
+  int FACET_DEFINITION_RANGE = 37;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -1615,7 +1652,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinition()
    * @generated
    */
-  int FACET_DEFINITION = 37;
+  int FACET_DEFINITION = 38;
 
   /**
    * The number of structural features of the '<em>Facet Definition</em>' class.
@@ -1634,7 +1671,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionKeyConcept()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_KEY_CONCEPT = 38;
+  int FACETED_QUERY_DEFINITION_KEY_CONCEPT = 39;
 
   /**
    * The feature id for the '<em><b>Dt Definition</b></em>' reference.
@@ -1662,7 +1699,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionDomainCriteria()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA = 39;
+  int FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA = 40;
 
   /**
    * The feature id for the '<em><b>Ref To Domain Type</b></em>' containment reference.
@@ -1690,7 +1727,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionListFilterBuilderQuery()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY = 40;
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY = 41;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1718,7 +1755,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionListFilterBuilderClass()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS = 41;
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS = 42;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1746,7 +1783,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionFacets()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_FACETS = 42;
+  int FACETED_QUERY_DEFINITION_FACETS = 43;
 
   /**
    * The feature id for the '<em><b>Facet Definition</b></em>' reference list.
@@ -1783,7 +1820,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinition()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION = 43;
+  int FACETED_QUERY_DEFINITION = 44;
 
   /**
    * The number of structural features of the '<em>Faceted Query Definition</em>' class.
@@ -1802,7 +1839,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionKeyConcept()
    * @generated
    */
-  int INDEX_DEFINITION_KEY_CONCEPT = 44;
+  int INDEX_DEFINITION_KEY_CONCEPT = 45;
 
   /**
    * The feature id for the '<em><b>Dt Definition</b></em>' reference.
@@ -1830,7 +1867,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionDtIndex()
    * @generated
    */
-  int INDEX_DEFINITION_DT_INDEX = 45;
+  int INDEX_DEFINITION_DT_INDEX = 46;
 
   /**
    * The feature id for the '<em><b>Dt Definition</b></em>' reference.
@@ -1858,7 +1895,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionIndexCopyToString()
    * @generated
    */
-  int INDEX_DEFINITION_INDEX_COPY_TO_STRING = 46;
+  int INDEX_DEFINITION_INDEX_COPY_TO_STRING = 47;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1886,7 +1923,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionIndexCopyTo()
    * @generated
    */
-  int INDEX_DEFINITION_INDEX_COPY_TO = 47;
+  int INDEX_DEFINITION_INDEX_COPY_TO = 48;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -1923,7 +1960,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionLoaderId()
    * @generated
    */
-  int INDEX_DEFINITION_LOADER_ID = 48;
+  int INDEX_DEFINITION_LOADER_ID = 49;
 
   /**
    * The feature id for the '<em><b>Loader Id String</b></em>' attribute.
@@ -1951,7 +1988,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinition()
    * @generated
    */
-  int INDEX_DEFINITION = 49;
+  int INDEX_DEFINITION = 50;
 
   /**
    * The number of structural features of the '<em>Index Definition</em>' class.
@@ -1970,7 +2007,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDtDefinitionAction()
    * @generated
    */
-  int DT_DEFINITION_ACTION = 50;
+  int DT_DEFINITION_ACTION = 51;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2036,13 +2073,22 @@ public interface VertigoDslPackage extends EPackage
   int DT_DEFINITION_ACTION__DT_DEFINITION_SORT_FIELD = DT_DEFINITION_FEATURE_COUNT + 6;
 
   /**
+   * The feature id for the '<em><b>Dt Definition Handle Field</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int DT_DEFINITION_ACTION__DT_DEFINITION_HANDLE_FIELD = DT_DEFINITION_FEATURE_COUNT + 7;
+
+  /**
    * The feature id for the '<em><b>Dt Definition Display Field</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD = DT_DEFINITION_FEATURE_COUNT + 7;
+  int DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD = DT_DEFINITION_FEATURE_COUNT + 8;
 
   /**
    * The number of structural features of the '<em>Dt Definition Action</em>' class.
@@ -2051,7 +2097,7 @@ public interface VertigoDslPackage extends EPackage
    * @generated
    * @ordered
    */
-  int DT_DEFINITION_ACTION_FEATURE_COUNT = DT_DEFINITION_FEATURE_COUNT + 8;
+  int DT_DEFINITION_ACTION_FEATURE_COUNT = DT_DEFINITION_FEATURE_COUNT + 9;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionActionImpl <em>Facet Definition Action</em>}' class.
@@ -2061,7 +2107,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionAction()
    * @generated
    */
-  int FACET_DEFINITION_ACTION = 51;
+  int FACET_DEFINITION_ACTION = 52;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2125,7 +2171,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionAction()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_ACTION = 52;
+  int FACETED_QUERY_DEFINITION_ACTION = 53;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2198,7 +2244,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionAction()
    * @generated
    */
-  int INDEX_DEFINITION_ACTION = 53;
+  int INDEX_DEFINITION_ACTION = 54;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2262,7 +2308,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 54;
+  int DATA_TYPE = 55;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.BooleanString <em>Boolean String</em>}' enum.
@@ -2272,7 +2318,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getBooleanString()
    * @generated
    */
-  int BOOLEAN_STRING = 55;
+  int BOOLEAN_STRING = 56;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.MultiplicityString <em>Multiplicity String</em>}' enum.
@@ -2282,7 +2328,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getMultiplicityString()
    * @generated
    */
-  int MULTIPLICITY_STRING = 56;
+  int MULTIPLICITY_STRING = 57;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.InOutString <em>In Out String</em>}' enum.
@@ -2292,7 +2338,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getInOutString()
    * @generated
    */
-  int IN_OUT_STRING = 57;
+  int IN_OUT_STRING = 58;
 
 
   /**
@@ -3120,6 +3166,27 @@ public interface VertigoDslPackage extends EPackage
   EAttribute getDtDefinitionSortField_SortField();
 
   /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField <em>Dt Definition Handle Field</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Dt Definition Handle Field</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField
+   * @generated
+   */
+  EClass getDtDefinitionHandleField();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField#getHandleField <em>Handle Field</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Handle Field</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField#getHandleField()
+   * @see #getDtDefinitionHandleField()
+   * @generated
+   */
+  EAttribute getDtDefinitionHandleField_HandleField();
+
+  /**
    * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionType <em>Dt Definition Type</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -3225,6 +3292,17 @@ public interface VertigoDslPackage extends EPackage
    * @generated
    */
   EReference getAlterDtDefinition_DtDefinitionSortField();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionHandleField <em>Dt Definition Handle Field</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Dt Definition Handle Field</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionHandleField()
+   * @see #getAlterDtDefinition()
+   * @generated
+   */
+  EReference getAlterDtDefinition_DtDefinitionHandleField();
 
   /**
    * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDisplayField <em>Dt Definition Display Field</em>}'.
@@ -4047,6 +4125,17 @@ public interface VertigoDslPackage extends EPackage
    * @generated
    */
   EReference getDtDefinitionAction_DtDefinitionSortField();
+
+  /**
+   * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction#getDtDefinitionHandleField <em>Dt Definition Handle Field</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the containment reference '<em>Dt Definition Handle Field</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.DtDefinitionAction#getDtDefinitionHandleField()
+   * @see #getDtDefinitionAction()
+   * @generated
+   */
+  EReference getDtDefinitionAction_DtDefinitionHandleField();
 
   /**
    * Returns the meta object for the containment reference '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction#getDtDefinitionDisplayField <em>Dt Definition Display Field</em>}'.
@@ -4991,6 +5080,24 @@ public interface VertigoDslPackage extends EPackage
     EAttribute DT_DEFINITION_SORT_FIELD__SORT_FIELD = eINSTANCE.getDtDefinitionSortField_SortField();
 
     /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionHandleFieldImpl <em>Dt Definition Handle Field</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.DtDefinitionHandleFieldImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDtDefinitionHandleField()
+     * @generated
+     */
+    EClass DT_DEFINITION_HANDLE_FIELD = eINSTANCE.getDtDefinitionHandleField();
+
+    /**
+     * The meta object literal for the '<em><b>Handle Field</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute DT_DEFINITION_HANDLE_FIELD__HANDLE_FIELD = eINSTANCE.getDtDefinitionHandleField_HandleField();
+
+    /**
      * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionTypeImpl <em>Dt Definition Type</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -5075,6 +5182,14 @@ public interface VertigoDslPackage extends EPackage
      * @generated
      */
     EReference ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD = eINSTANCE.getAlterDtDefinition_DtDefinitionSortField();
+
+    /**
+     * The meta object literal for the '<em><b>Dt Definition Handle Field</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD = eINSTANCE.getAlterDtDefinition_DtDefinitionHandleField();
 
     /**
      * The meta object literal for the '<em><b>Dt Definition Display Field</b></em>' containment reference feature.
@@ -5741,6 +5856,14 @@ public interface VertigoDslPackage extends EPackage
      * @generated
      */
     EReference DT_DEFINITION_ACTION__DT_DEFINITION_SORT_FIELD = eINSTANCE.getDtDefinitionAction_DtDefinitionSortField();
+
+    /**
+     * The meta object literal for the '<em><b>Dt Definition Handle Field</b></em>' containment reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference DT_DEFINITION_ACTION__DT_DEFINITION_HANDLE_FIELD = eINSTANCE.getDtDefinitionAction_DtDefinitionHandleField();
 
     /**
      * The meta object literal for the '<em><b>Dt Definition Display Field</b></em>' containment reference feature.

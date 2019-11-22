@@ -2443,6 +2443,57 @@ ruleDtDefinitionSortField returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleDtDefinitionHandleField
+entryRuleDtDefinitionHandleField returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDtDefinitionHandleFieldRule()); }
+	iv_ruleDtDefinitionHandleField=ruleDtDefinitionHandleField
+	{ $current=$iv_ruleDtDefinitionHandleField.current; }
+	EOF;
+
+// Rule DtDefinitionHandleField
+ruleDtDefinitionHandleField returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='handleField'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDtDefinitionHandleFieldAccess().getHandleFieldKeyword_0());
+		}
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDtDefinitionHandleFieldAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_handleField_2_0=RULE_STRING
+				{
+					newLeafNode(lv_handleField_2_0, grammarAccess.getDtDefinitionHandleFieldAccess().getHandleFieldSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDtDefinitionHandleFieldRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"handleField",
+						lv_handleField_2_0,
+						"io.vertigo.dsl.VertigoDsl.STRING");
+				}
+			)
+		)
+		(
+			otherlv_3=','
+			{
+				newLeafNode(otherlv_3, grammarAccess.getDtDefinitionHandleFieldAccess().getCommaKeyword_3());
+			}
+		)?
+	)
+;
+
 // Entry rule entryRuleDtDefinition
 entryRuleDtDefinition returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getDtDefinitionRule()); }
@@ -2642,9 +2693,37 @@ ruleDtDefinition returns [EObject current=null]
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_2_0());
+										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionHandleFieldDtDefinitionHandleFieldParserRuleCall_9_2_0());
 									}
-									lv_dtDefinitionDisplayField_12_0=ruleDtDefinitionDisplayField
+									lv_dtDefinitionHandleField_12_0=ruleDtDefinitionHandleField
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
+										}
+										set(
+											$current,
+											"dtDefinitionHandleField",
+											lv_dtDefinitionHandleField_12_0,
+											"io.vertigo.dsl.VertigoDsl.DtDefinitionHandleField");
+										afterParserOrEnumRuleCall();
+									}
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 3)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9(), 3);
+					}
+								({true}?=>((
+									{
+										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_9_3_0());
+									}
+									lv_dtDefinitionDisplayField_13_0=ruleDtDefinitionDisplayField
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
@@ -2652,7 +2731,7 @@ ruleDtDefinition returns [EObject current=null]
 										set(
 											$current,
 											"dtDefinitionDisplayField",
-											lv_dtDefinitionDisplayField_12_0,
+											lv_dtDefinitionDisplayField_13_0,
 											"io.vertigo.dsl.VertigoDsl.DtDefinitionDisplayField");
 										afterParserOrEnumRuleCall();
 									}
@@ -2670,9 +2749,9 @@ ruleDtDefinition returns [EObject current=null]
 				  getUnorderedGroupHelper().leave(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_9());
 				}
 		)
-		otherlv_13='}'
+		otherlv_14='}'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_10());
+			newLeafNode(otherlv_14, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_10());
 		}
 	)
 ;
@@ -2864,9 +2943,37 @@ ruleAlterDtDefinition returns [EObject current=null]
 					}
 								({true}?=>((
 									{
-										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_2_0());
+										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionHandleFieldDtDefinitionHandleFieldParserRuleCall_8_2_0());
 									}
-									lv_dtDefinitionDisplayField_11_0=ruleDtDefinitionDisplayField
+									lv_dtDefinitionHandleField_11_0=ruleDtDefinitionHandleField
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getAlterDtDefinitionRule());
+										}
+										set(
+											$current,
+											"dtDefinitionHandleField",
+											lv_dtDefinitionHandleField_11_0,
+											"io.vertigo.dsl.VertigoDsl.DtDefinitionHandleField");
+										afterParserOrEnumRuleCall();
+									}
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 3)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8(), 3);
+					}
+								({true}?=>((
+									{
+										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDisplayFieldDtDefinitionDisplayFieldParserRuleCall_8_3_0());
+									}
+									lv_dtDefinitionDisplayField_12_0=ruleDtDefinitionDisplayField
 									{
 										if ($current==null) {
 											$current = createModelElementForParent(grammarAccess.getAlterDtDefinitionRule());
@@ -2874,7 +2981,7 @@ ruleAlterDtDefinition returns [EObject current=null]
 										set(
 											$current,
 											"dtDefinitionDisplayField",
-											lv_dtDefinitionDisplayField_11_0,
+											lv_dtDefinitionDisplayField_12_0,
 											"io.vertigo.dsl.VertigoDsl.DtDefinitionDisplayField");
 										afterParserOrEnumRuleCall();
 									}
@@ -2892,9 +2999,9 @@ ruleAlterDtDefinition returns [EObject current=null]
 				  getUnorderedGroupHelper().leave(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_8());
 				}
 		)
-		otherlv_12='}'
+		otherlv_13='}'
 		{
-			newLeafNode(otherlv_12, grammarAccess.getAlterDtDefinitionAccess().getRightCurlyBracketKeyword_9());
+			newLeafNode(otherlv_13, grammarAccess.getAlterDtDefinitionAccess().getRightCurlyBracketKeyword_9());
 		}
 	)
 ;
@@ -5555,6 +5662,14 @@ ruleMultiplicityString returns [Enumerator current=null]
 			{
 				$current = grammarAccess.getMultiplicityStringAccess().getZERO_NEnumLiteralDeclaration_1().getEnumLiteral().getInstance();
 				newLeafNode(enumLiteral_1, grammarAccess.getMultiplicityStringAccess().getZERO_NEnumLiteralDeclaration_1());
+			}
+		)
+		    |
+		(
+			enumLiteral_2='"1..1"'
+			{
+				$current = grammarAccess.getMultiplicityStringAccess().getONE_ONEEnumLiteralDeclaration_2().getEnumLiteral().getInstance();
+				newLeafNode(enumLiteral_2, grammarAccess.getMultiplicityStringAccess().getONE_ONEEnumLiteralDeclaration_2());
 			}
 		)
 	)

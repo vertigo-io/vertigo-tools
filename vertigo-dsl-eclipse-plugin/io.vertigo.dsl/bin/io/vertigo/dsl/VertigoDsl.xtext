@@ -1,14 +1,19 @@
+//grammar io.vertigo.dsl.VertigoDsl with org.eclipse.xtext.common.Terminals
+
 grammar io.vertigo.dsl.VertigoDsl with org.eclipse.xtext.common.Terminals
 
 generate vertigoDsl "http://www.vertigo.io/dsl/VertigoDsl"
 
 import "http://www.eclipse.org/xtext/common/JavaVMTypes" as jvmTypes
 
+
+
+
+
 Model:
 	'package' packageString=PackageString 
 	elements+=Element*
 ;
-
 
 PackageString:
 	package+=KEYWORDID ("."+ packages+=KEYWORDID)*	
@@ -138,6 +143,10 @@ DtDefinitionSortField:
 	'sortField' ':' sortField=STRING ','?
 ;
 
+DtDefinitionHandleField:
+	'handleField' ':' handleField=STRING ','?
+;
+
 DtDefinitionType:
 	DtDefinition | DeclaredDtDefinition ','?
 ;
@@ -150,6 +159,7 @@ DtDefinition:
 		dtDefinitionComputedFields+=DtDefinitionComputedField*
 		((dtDefinitionDataSpace=DtDefinitionDataSpace?) &
 		(dtDefinitionSortField=DtDefinitionSortField?) &
+		(dtDefinitionHandleField=DtDefinitionHandleField?) &
 		(dtDefinitionDisplayField=DtDefinitionDisplayField?))
 	'}';
 
@@ -161,13 +171,15 @@ AlterDtDefinition:
 		dtDefinitionComputedFields+=DtDefinitionComputedField*
 		((dtDefinitionDataSpace=DtDefinitionDataSpace?) &
 		(dtDefinitionSortField=DtDefinitionSortField?) &
+		(dtDefinitionHandleField=DtDefinitionHandleField?) &
 		(dtDefinitionDisplayField=DtDefinitionDisplayField?))
 	'}';
 
 
 enum MultiplicityString:
 	ZERO_ONE='\"0..1\"' |
-	ZERO_N='\"0..*\"';
+	ZERO_N='\"0..*\"' | 
+	ONE_ONE='\"1..1\"';
 
 Association:
 	'create' 'Association' name=ID '{'

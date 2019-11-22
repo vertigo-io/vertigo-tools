@@ -44,6 +44,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_DtDefinitionDataField_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionDataSpace_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionDisplayField_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionHandleField_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionIdField_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionIdString_CommaKeyword_1_0_3_q;
 	protected AbstractElementAlias match_DtDefinitionIdString_CommaKeyword_1_1_3_q;
@@ -102,6 +103,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_DtDefinitionDataField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDataFieldAccess().getCommaKeyword_3());
 		match_DtDefinitionDataSpace_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDataSpaceAccess().getCommaKeyword_3());
 		match_DtDefinitionDisplayField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionDisplayFieldAccess().getCommaKeyword_3());
+		match_DtDefinitionHandleField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionHandleFieldAccess().getCommaKeyword_3());
 		match_DtDefinitionIdField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionIdFieldAccess().getCommaKeyword_3());
 		match_DtDefinitionIdString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionIdStringAccess().getCommaKeyword_1_0_3());
 		match_DtDefinitionIdString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionIdStringAccess().getCommaKeyword_1_1_3());
@@ -194,6 +196,8 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_DtDefinitionDataSpace_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionDisplayField_CommaKeyword_3_q.equals(syntax))
 				emit_DtDefinitionDisplayField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionHandleField_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionHandleField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionIdField_CommaKeyword_3_q.equals(syntax))
 				emit_DtDefinitionIdField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionIdString_CommaKeyword_1_0_3_q.equals(syntax))
@@ -678,6 +682,17 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     displayField=STRING (ambiguity) (rule end)
 	 */
 	protected void emit_DtDefinitionDisplayField_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     handleField=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionHandleField_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

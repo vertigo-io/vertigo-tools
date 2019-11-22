@@ -23,7 +23,6 @@ import org.eclipse.xtext.util.CancelIndicator;
 
 import com.google.inject.Inject;
 
-import io.vertigo.dsl.serializer.VertigoDslSyntacticSequencer;
 import io.vertigo.dsl.services.VertigoDslGrammarAccess;
 
 

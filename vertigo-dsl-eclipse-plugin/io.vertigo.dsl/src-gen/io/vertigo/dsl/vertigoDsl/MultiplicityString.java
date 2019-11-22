@@ -38,7 +38,17 @@ public enum MultiplicityString implements Enumerator
    * @generated
    * @ordered
    */
-  ZERO_N(1, "ZERO_N", "\"0..*\"");
+  ZERO_N(1, "ZERO_N", "\"0..*\""),
+
+  /**
+   * The '<em><b>ONE ONE</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ONE_ONE_VALUE
+   * @generated
+   * @ordered
+   */
+  ONE_ONE(2, "ONE_ONE", "\"1..1\"");
 
   /**
    * The '<em><b>ZERO ONE</b></em>' literal value.
@@ -63,6 +73,17 @@ public enum MultiplicityString implements Enumerator
   public static final int ZERO_N_VALUE = 1;
 
   /**
+   * The '<em><b>ONE ONE</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #ONE_ONE
+   * @model literal="\"1..1\""
+   * @generated
+   * @ordered
+   */
+  public static final int ONE_ONE_VALUE = 2;
+
+  /**
    * An array of all the '<em><b>Multiplicity String</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -73,6 +94,7 @@ public enum MultiplicityString implements Enumerator
     {
       ZERO_ONE,
       ZERO_N,
+      ONE_ONE,
     };
 
   /**
@@ -139,6 +161,7 @@ public enum MultiplicityString implements Enumerator
     {
       case ZERO_ONE_VALUE: return ZERO_ONE;
       case ZERO_N_VALUE: return ZERO_N;
+      case ONE_ONE_VALUE: return ONE_ONE;
     }
     return null;
   }

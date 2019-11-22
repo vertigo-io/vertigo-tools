@@ -19,6 +19,7 @@ import io.vertigo.dsl.vertigoDsl.DtDefinitionDataField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataSpace;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDisplayField;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionIdField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionIdString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionSortField;
@@ -119,6 +120,9 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case VertigoDslPackage.DT_DEFINITION_DISPLAY_FIELD:
 				sequence_DtDefinitionDisplayField(context, (DtDefinitionDisplayField) semanticObject); 
+				return; 
+			case VertigoDslPackage.DT_DEFINITION_HANDLE_FIELD:
+				sequence_DtDefinitionHandleField(context, (DtDefinitionHandleField) semanticObject); 
 				return; 
 			case VertigoDslPackage.DT_DEFINITION_ID_FIELD:
 				sequence_DtDefinitionIdField(context, (DtDefinitionIdField) semanticObject); 
@@ -256,7 +260,12 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *         dtDefinitionIdField=DtDefinitionIdField? 
 	 *         dtDefinitionDataFields+=DtDefinitionDataField* 
 	 *         dtDefinitionComputedFields+=DtDefinitionComputedField* 
-	 *         (dtDefinitionDataSpace=DtDefinitionDataSpace | dtDefinitionSortField=DtDefinitionSortField | dtDefinitionDisplayField=DtDefinitionDisplayField)*
+	 *         (
+	 *             dtDefinitionDataSpace=DtDefinitionDataSpace | 
+	 *             dtDefinitionSortField=DtDefinitionSortField | 
+	 *             dtDefinitionHandleField=DtDefinitionHandleField | 
+	 *             dtDefinitionDisplayField=DtDefinitionDisplayField
+	 *         )*
 	 *     )
 	 */
 	protected void sequence_AlterDtDefinition(ISerializationContext context, AlterDtDefinition semanticObject) {
@@ -471,6 +480,24 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     DtDefinitionHandleField returns DtDefinitionHandleField
+	 *
+	 * Constraint:
+	 *     handleField=STRING
+	 */
+	protected void sequence_DtDefinitionHandleField(ISerializationContext context, DtDefinitionHandleField semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_HANDLE_FIELD__HANDLE_FIELD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.DT_DEFINITION_HANDLE_FIELD__HANDLE_FIELD));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getDtDefinitionHandleFieldAccess().getHandleFieldSTRINGTerminalRuleCall_2_0(), semanticObject.getHandleField());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     DtDefinitionIdField returns DtDefinitionIdField
 	 *
 	 * Constraint:
@@ -551,7 +578,12 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *         dtDefinitionIdField=DtDefinitionIdField? 
 	 *         dtDefinitionDataFields+=DtDefinitionDataField* 
 	 *         dtDefinitionComputedFields+=DtDefinitionComputedField* 
-	 *         (dtDefinitionDataSpace=DtDefinitionDataSpace | dtDefinitionSortField=DtDefinitionSortField | dtDefinitionDisplayField=DtDefinitionDisplayField)*
+	 *         (
+	 *             dtDefinitionDataSpace=DtDefinitionDataSpace | 
+	 *             dtDefinitionSortField=DtDefinitionSortField | 
+	 *             dtDefinitionHandleField=DtDefinitionHandleField | 
+	 *             dtDefinitionDisplayField=DtDefinitionDisplayField
+	 *         )*
 	 *     )
 	 */
 	protected void sequence_DtDefinition(ISerializationContext context, DtDefinitionAction semanticObject) {

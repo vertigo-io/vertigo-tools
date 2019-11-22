@@ -6,7 +6,6 @@ package io.vertigo.dsl.ui.labeling
 import com.google.inject.Inject
 import org.eclipse.emf.edit.ui.provider.AdapterFactoryLabelProvider
 import org.eclipse.xtext.ui.label.DefaultEObjectLabelProvider
-import io.vertigo.dsl.vertigoDsl.DtDefinitionAction
 
 /**
  * Provides labels for EObjects.

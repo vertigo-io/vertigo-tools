@@ -21,4 +21,5 @@ class VertigoDslRuntimeModule extends AbstractVertigoDslRuntimeModule {
         println("binding syntax error message provider")
         return VertigoDslSyntaxErrorMessageProvider
     }
+    
 }

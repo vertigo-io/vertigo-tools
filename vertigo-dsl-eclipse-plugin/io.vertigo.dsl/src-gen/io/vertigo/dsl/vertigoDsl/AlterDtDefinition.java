@@ -21,6 +21,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionComputedFields <em>Dt Definition Computed Fields</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDataSpace <em>Dt Definition Data Space</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionSortField <em>Dt Definition Sort Field</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionHandleField <em>Dt Definition Handle Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDisplayField <em>Dt Definition Display Field</em>}</li>
  * </ul>
  *
@@ -163,6 +164,28 @@ public interface AlterDtDefinition extends Element
    * @generated
    */
   void setDtDefinitionSortField(DtDefinitionSortField value);
+
+  /**
+   * Returns the value of the '<em><b>Dt Definition Handle Field</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Dt Definition Handle Field</em>' containment reference.
+   * @see #setDtDefinitionHandleField(DtDefinitionHandleField)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterDtDefinition_DtDefinitionHandleField()
+   * @model containment="true"
+   * @generated
+   */
+  DtDefinitionHandleField getDtDefinitionHandleField();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionHandleField <em>Dt Definition Handle Field</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Dt Definition Handle Field</em>' containment reference.
+   * @see #getDtDefinitionHandleField()
+   * @generated
+   */
+  void setDtDefinitionHandleField(DtDefinitionHandleField value);
 
   /**
    * Returns the value of the '<em><b>Dt Definition Display Field</b></em>' containment reference.

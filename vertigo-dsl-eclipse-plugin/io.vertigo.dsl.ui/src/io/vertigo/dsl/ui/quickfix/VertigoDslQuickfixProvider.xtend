@@ -4,8 +4,6 @@
 package io.vertigo.dsl.ui.quickfix
 
 import org.eclipse.xtext.ui.editor.quickfix.DefaultQuickfixProvider
-import org.eclipse.xtext.ui.editor.quickfix.Fix
-import io.vertigo.dsl.validation.VertigoDslValidator
 
 /**
  * Custom quickfixes.
