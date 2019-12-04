@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/io.vertigo.dsl.feature_2.0.2.jar" id="io.vertigo.dsl.feature" version="2.0.2">
+      <category name="main"/>
+   </feature>
+   <category-def name="main" label="main"/>
+</site>

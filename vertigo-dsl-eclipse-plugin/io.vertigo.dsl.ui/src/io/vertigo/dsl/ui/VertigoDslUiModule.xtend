@@ -3,13 +3,13 @@
  */
 package io.vertigo.dsl.ui
 
+import io.vertigo.dsl.ui.highlighting.VertigoDslHighlightingConfiguration
 import io.vertigo.dsl.ui.highlighting.VertigoUISemanticHighlightingCalculator
 import io.vertigo.dsl.ui.hyperlinking.VertigoDslHyperlinkHelper
 import org.eclipse.xtend.lib.annotations.FinalFieldsConstructor
 import org.eclipse.xtext.ide.editor.syntaxcoloring.ISemanticHighlightingCalculator
 import org.eclipse.xtext.ui.editor.hyperlinking.IHyperlinkHelper
 import org.eclipse.xtext.ui.editor.syntaxcoloring.IHighlightingConfiguration
-import io.vertigo.dsl.ui.highlighting.VertigoDslHighlightingConfiguration
 
 /**
  * Use this class to register components to be used within the Eclipse IDE.
@@ -27,7 +27,6 @@ class VertigoDslUiModule extends AbstractVertigoDslUiModule {
 	
 	def Class<? extends IHighlightingConfiguration>	bindVertigoDslHighlightingConfiguration() {
 		return VertigoDslHighlightingConfiguration
-	}
-	
+	}	
 }
 	

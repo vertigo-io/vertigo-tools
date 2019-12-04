@@ -5,14 +5,19 @@ package io.vertigo.dsl
 
 import io.vertigo.dsl.converting.VertigoSTRINGValueConverter
 import io.vertigo.dsl.errorhandling.VertigoDslSyntaxErrorMessageProvider
+import io.vertigo.dsl.resource.VertigoDslDerivedStateComputer
 import org.eclipse.xtext.conversion.impl.STRINGValueConverter
 import org.eclipse.xtext.parser.antlr.ISyntaxErrorMessageProvider
+import org.eclipse.xtext.resource.DerivedStateAwareResource
+import org.eclipse.xtext.resource.DerivedStateAwareResourceDescriptionManager
+import org.eclipse.xtext.resource.IDerivedStateComputer
+import org.eclipse.xtext.resource.IResourceDescription
 
 /**
  * Use this class to register components to be used at runtime / without the Equinox extension registry.
  */
 class VertigoDslRuntimeModule extends AbstractVertigoDslRuntimeModule {
-	 def Class<? extends STRINGValueConverter> bindSTRINGValueConverter() {
+	def Class<? extends STRINGValueConverter> bindSTRINGValueConverter() {
 	 	println("binding string value converter")
     	return VertigoSTRINGValueConverter;
     }
@@ -22,4 +27,16 @@ class VertigoDslRuntimeModule extends AbstractVertigoDslRuntimeModule {
         return VertigoDslSyntaxErrorMessageProvider
     }
     
+    override bindXtextResource() {
+		return DerivedStateAwareResource
+	}
+	
+	def Class<? extends IDerivedStateComputer> bindIDerivedStateComputer() {
+		return VertigoDslDerivedStateComputer
+	}
+	
+	def Class<? extends IResourceDescription.Manager>
+		bindIResourceDescriptionManager() {
+		return DerivedStateAwareResourceDescriptionManager
+	}
 }

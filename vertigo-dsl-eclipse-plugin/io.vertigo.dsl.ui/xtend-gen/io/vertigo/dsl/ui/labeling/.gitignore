@@ -4,3 +4,5 @@
 /.VertigoDslLabelProvider.xtendbin
 /VertigoDslDescriptionLabelProvider.java
 /VertigoDslLabelProvider.java
+/.VertigoEventListener.java._trace
+/.VertigoDirtyStateEditorSupport.java._trace

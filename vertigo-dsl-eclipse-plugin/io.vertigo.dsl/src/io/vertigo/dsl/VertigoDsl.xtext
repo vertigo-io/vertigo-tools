@@ -7,9 +7,6 @@ generate vertigoDsl "http://www.vertigo.io/dsl/VertigoDsl"
 import "http://www.eclipse.org/xtext/common/JavaVMTypes" as jvmTypes
 
 
-
-
-
 Model:
 	'package' packageString=PackageString 
 	elements+=Element*
