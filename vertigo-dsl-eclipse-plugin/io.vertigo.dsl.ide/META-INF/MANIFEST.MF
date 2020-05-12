@@ -2,14 +2,14 @@ Manifest-Version: 1.0
 Automatic-Module-Name: io.vertigo.dsl.ide
 Bundle-ManifestVersion: 2
 Bundle-Name: io.vertigo.dsl.ide
-Bundle-Vendor: My Company
-Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: Vertigo.io
+Bundle-Version: 2.0.4.qualifier
 Bundle-SymbolicName: io.vertigo.dsl.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: io.vertigo.dsl,
  org.eclipse.xtext.ide,
  org.eclipse.xtext.xbase.ide,
  org.antlr.runtime;bundle-version="[3.2.0,3.2.1)"
-Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Bundle-RequiredExecutionEnvironment: JavaSE-11
 Export-Package: io.vertigo.dsl.ide.contentassist.antlr.internal,
  io.vertigo.dsl.ide.contentassist.antlr

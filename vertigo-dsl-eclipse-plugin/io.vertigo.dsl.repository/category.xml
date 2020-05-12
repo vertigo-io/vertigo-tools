@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <site>
-   <feature url="features/io.vertigo.dsl.feature_2.0.2.jar" id="io.vertigo.dsl.feature" version="2.0.2">
-      <category name="main"/>
-   </feature>
-   <category-def name="main" label="main"/>
+	<feature id="io.vertigo.dsl.feature" version="0.0.0">
+		<category name="main"/>
+	</feature>
+	<feature id="io.vertigo.dsl.feature.source" version="0.0.0">
+		<category name="main.source"/>
+	</feature>
+	<category-def name="main" label="VertigoDsl"/>
+	<category-def name="main.source" label="VertigoDsl (Sources)"/>
 </site>
