@@ -3,7 +3,7 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.BooleanString;
+import io.vertigo.dsl.vertigoDsl.CardinalityString;
 import io.vertigo.dsl.vertigoDsl.InOutString;
 import io.vertigo.dsl.vertigoDsl.RefToDomainType;
 import io.vertigo.dsl.vertigoDsl.TaskAttributeString;
@@ -27,7 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * </p>
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getRefToDomainType <em>Ref To Domain Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getRequired <em>Required</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getCardinality <em>Cardinality</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getInout <em>Inout</em>}</li>
  * </ul>
  *
@@ -46,24 +46,24 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
   protected RefToDomainType refToDomainType;
 
   /**
-   * The default value of the '{@link #getRequired() <em>Required</em>}' attribute.
+   * The default value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRequired()
+   * @see #getCardinality()
    * @generated
    * @ordered
    */
-  protected static final BooleanString REQUIRED_EDEFAULT = BooleanString.TRUE;
+  protected static final CardinalityString CARDINALITY_EDEFAULT = CardinalityString.ONE;
 
   /**
-   * The cached value of the '{@link #getRequired() <em>Required</em>}' attribute.
+   * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRequired()
+   * @see #getCardinality()
    * @generated
    * @ordered
    */
-  protected BooleanString required = REQUIRED_EDEFAULT;
+  protected CardinalityString cardinality = CARDINALITY_EDEFAULT;
 
   /**
    * The default value of the '{@link #getInout() <em>Inout</em>}' attribute.
@@ -162,9 +162,9 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
    * @generated
    */
   @Override
-  public BooleanString getRequired()
+  public CardinalityString getCardinality()
   {
-    return required;
+    return cardinality;
   }
 
   /**
@@ -173,12 +173,12 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
    * @generated
    */
   @Override
-  public void setRequired(BooleanString newRequired)
+  public void setCardinality(CardinalityString newCardinality)
   {
-    BooleanString oldRequired = required;
-    required = newRequired == null ? REQUIRED_EDEFAULT : newRequired;
+    CardinalityString oldCardinality = cardinality;
+    cardinality = newCardinality == null ? CARDINALITY_EDEFAULT : newCardinality;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED, oldRequired, required));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY, oldCardinality, cardinality));
   }
 
   /**
@@ -234,8 +234,8 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
     {
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
         return getRefToDomainType();
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED:
-        return getRequired();
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY:
+        return getCardinality();
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
         return getInout();
     }
@@ -255,8 +255,8 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
         setRefToDomainType((RefToDomainType)newValue);
         return;
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED:
-        setRequired((BooleanString)newValue);
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY:
+        setCardinality((CardinalityString)newValue);
         return;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
         setInout((InOutString)newValue);
@@ -278,8 +278,8 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
         setRefToDomainType((RefToDomainType)null);
         return;
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED:
-        setRequired(REQUIRED_EDEFAULT);
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY:
+        setCardinality(CARDINALITY_EDEFAULT);
         return;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
         setInout(INOUT_EDEFAULT);
@@ -300,8 +300,8 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
     {
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE:
         return refToDomainType != null;
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__REQUIRED:
-        return required != REQUIRED_EDEFAULT;
+      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY:
+        return cardinality != CARDINALITY_EDEFAULT;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
         return inout != INOUT_EDEFAULT;
     }
@@ -319,8 +319,8 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
     if (eIsProxy()) return super.toString();
 
     StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (required: ");
-    result.append(required);
+    result.append(" (cardinality: ");
+    result.append(cardinality);
     result.append(", inout: ");
     result.append(inout);
     result.append(')');

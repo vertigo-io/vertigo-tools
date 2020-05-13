@@ -19,8 +19,7 @@ class VertigoDslDerivedStateComputer implements IDerivedStateComputer {
 			
 		for (EObject obj : resource.allContents.toIterable) {
 			if (obj instanceof DtDefinitionAction) {
-				addedDomains.add("Do"+ obj.getName().toString()+"Dto");
-				addedDomains.add("Do"+ obj.getName().toString()+"Dtc");
+				addedDomains.add("Do"+ obj.getName().toString());
 			}
 		}
 
@@ -43,8 +42,7 @@ class VertigoDslDerivedStateComputer implements IDerivedStateComputer {
 		
 		for (EObject obj : resource.allContents.toIterable) {
 			if (obj instanceof DtDefinitionAction) {
-				addedDomains.add("Do"+ obj.getName().toString()+"Dto");
-				addedDomains.add("Do"+ obj.getName().toString()+"Dtc");
+				addedDomains.add("Do"+ obj.getName().toString());
 			}
 		}
 		

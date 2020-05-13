@@ -6,6 +6,7 @@ package io.vertigo.dsl.vertigoDsl.impl;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionGeoSearchQuery;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl#getFacetedQueryDefinitionKeyConcept <em>Faceted Query Definition Key Concept</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl#getFacetedQueryDefinitionDomainCriteria <em>Faceted Query Definition Domain Criteria</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl#getFacetedQueryDefinitionListFilterBuilderQuery <em>Faceted Query Definition List Filter Builder Query</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl#getFacetedQueryDefinitionGeoSearchQuery <em>Faceted Query Definition Geo Search Query</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl#getFacetedQueryDefinitionListFilterBuilderClass <em>Faceted Query Definition List Filter Builder Class</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetedQueryDefinitionActionImpl#getFacetedQueryDefinitionFacets <em>Faceted Query Definition Facets</em>}</li>
  * </ul>
@@ -88,6 +90,16 @@ public class FacetedQueryDefinitionActionImpl extends FacetedQueryDefinitionImpl
    * @ordered
    */
   protected FacetedQueryDefinitionListFilterBuilderQuery facetedQueryDefinitionListFilterBuilderQuery;
+
+  /**
+   * The cached value of the '{@link #getFacetedQueryDefinitionGeoSearchQuery() <em>Faceted Query Definition Geo Search Query</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFacetedQueryDefinitionGeoSearchQuery()
+   * @generated
+   * @ordered
+   */
+  protected FacetedQueryDefinitionGeoSearchQuery facetedQueryDefinitionGeoSearchQuery;
 
   /**
    * The cached value of the '{@link #getFacetedQueryDefinitionListFilterBuilderClass() <em>Faceted Query Definition List Filter Builder Class</em>}' containment reference.
@@ -311,6 +323,56 @@ public class FacetedQueryDefinitionActionImpl extends FacetedQueryDefinitionImpl
    * @generated
    */
   @Override
+  public FacetedQueryDefinitionGeoSearchQuery getFacetedQueryDefinitionGeoSearchQuery()
+  {
+    return facetedQueryDefinitionGeoSearchQuery;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetFacetedQueryDefinitionGeoSearchQuery(FacetedQueryDefinitionGeoSearchQuery newFacetedQueryDefinitionGeoSearchQuery, NotificationChain msgs)
+  {
+    FacetedQueryDefinitionGeoSearchQuery oldFacetedQueryDefinitionGeoSearchQuery = facetedQueryDefinitionGeoSearchQuery;
+    facetedQueryDefinitionGeoSearchQuery = newFacetedQueryDefinitionGeoSearchQuery;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY, oldFacetedQueryDefinitionGeoSearchQuery, newFacetedQueryDefinitionGeoSearchQuery);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setFacetedQueryDefinitionGeoSearchQuery(FacetedQueryDefinitionGeoSearchQuery newFacetedQueryDefinitionGeoSearchQuery)
+  {
+    if (newFacetedQueryDefinitionGeoSearchQuery != facetedQueryDefinitionGeoSearchQuery)
+    {
+      NotificationChain msgs = null;
+      if (facetedQueryDefinitionGeoSearchQuery != null)
+        msgs = ((InternalEObject)facetedQueryDefinitionGeoSearchQuery).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY, null, msgs);
+      if (newFacetedQueryDefinitionGeoSearchQuery != null)
+        msgs = ((InternalEObject)newFacetedQueryDefinitionGeoSearchQuery).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY, null, msgs);
+      msgs = basicSetFacetedQueryDefinitionGeoSearchQuery(newFacetedQueryDefinitionGeoSearchQuery, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY, newFacetedQueryDefinitionGeoSearchQuery, newFacetedQueryDefinitionGeoSearchQuery));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public FacetedQueryDefinitionListFilterBuilderClass getFacetedQueryDefinitionListFilterBuilderClass()
   {
     return facetedQueryDefinitionListFilterBuilderClass;
@@ -421,6 +483,8 @@ public class FacetedQueryDefinitionActionImpl extends FacetedQueryDefinitionImpl
         return basicSetFacetedQueryDefinitionDomainCriteria(null, msgs);
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY:
         return basicSetFacetedQueryDefinitionListFilterBuilderQuery(null, msgs);
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY:
+        return basicSetFacetedQueryDefinitionGeoSearchQuery(null, msgs);
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS:
         return basicSetFacetedQueryDefinitionListFilterBuilderClass(null, msgs);
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS:
@@ -447,6 +511,8 @@ public class FacetedQueryDefinitionActionImpl extends FacetedQueryDefinitionImpl
         return getFacetedQueryDefinitionDomainCriteria();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY:
         return getFacetedQueryDefinitionListFilterBuilderQuery();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY:
+        return getFacetedQueryDefinitionGeoSearchQuery();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS:
         return getFacetedQueryDefinitionListFilterBuilderClass();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS:
@@ -476,6 +542,9 @@ public class FacetedQueryDefinitionActionImpl extends FacetedQueryDefinitionImpl
         return;
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY:
         setFacetedQueryDefinitionListFilterBuilderQuery((FacetedQueryDefinitionListFilterBuilderQuery)newValue);
+        return;
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY:
+        setFacetedQueryDefinitionGeoSearchQuery((FacetedQueryDefinitionGeoSearchQuery)newValue);
         return;
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS:
         setFacetedQueryDefinitionListFilterBuilderClass((FacetedQueryDefinitionListFilterBuilderClass)newValue);
@@ -509,6 +578,9 @@ public class FacetedQueryDefinitionActionImpl extends FacetedQueryDefinitionImpl
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY:
         setFacetedQueryDefinitionListFilterBuilderQuery((FacetedQueryDefinitionListFilterBuilderQuery)null);
         return;
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY:
+        setFacetedQueryDefinitionGeoSearchQuery((FacetedQueryDefinitionGeoSearchQuery)null);
+        return;
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS:
         setFacetedQueryDefinitionListFilterBuilderClass((FacetedQueryDefinitionListFilterBuilderClass)null);
         return;
@@ -537,6 +609,8 @@ public class FacetedQueryDefinitionActionImpl extends FacetedQueryDefinitionImpl
         return facetedQueryDefinitionDomainCriteria != null;
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY:
         return facetedQueryDefinitionListFilterBuilderQuery != null;
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY:
+        return facetedQueryDefinitionGeoSearchQuery != null;
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS:
         return facetedQueryDefinitionListFilterBuilderClass != null;
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS:

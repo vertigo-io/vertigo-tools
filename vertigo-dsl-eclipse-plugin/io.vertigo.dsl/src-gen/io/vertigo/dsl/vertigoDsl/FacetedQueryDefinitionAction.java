@@ -17,6 +17,7 @@ package io.vertigo.dsl.vertigoDsl;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionKeyConcept <em>Faceted Query Definition Key Concept</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionDomainCriteria <em>Faceted Query Definition Domain Criteria</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionListFilterBuilderQuery <em>Faceted Query Definition List Filter Builder Query</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionGeoSearchQuery <em>Faceted Query Definition Geo Search Query</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionListFilterBuilderClass <em>Faceted Query Definition List Filter Builder Class</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionFacets <em>Faceted Query Definition Facets</em>}</li>
  * </ul>
@@ -114,6 +115,28 @@ public interface FacetedQueryDefinitionAction extends FacetedQueryDefinition
    * @generated
    */
   void setFacetedQueryDefinitionListFilterBuilderQuery(FacetedQueryDefinitionListFilterBuilderQuery value);
+
+  /**
+   * Returns the value of the '<em><b>Faceted Query Definition Geo Search Query</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Faceted Query Definition Geo Search Query</em>' containment reference.
+   * @see #setFacetedQueryDefinitionGeoSearchQuery(FacetedQueryDefinitionGeoSearchQuery)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getFacetedQueryDefinitionAction_FacetedQueryDefinitionGeoSearchQuery()
+   * @model containment="true"
+   * @generated
+   */
+  FacetedQueryDefinitionGeoSearchQuery getFacetedQueryDefinitionGeoSearchQuery();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction#getFacetedQueryDefinitionGeoSearchQuery <em>Faceted Query Definition Geo Search Query</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Faceted Query Definition Geo Search Query</em>' containment reference.
+   * @see #getFacetedQueryDefinitionGeoSearchQuery()
+   * @generated
+   */
+  void setFacetedQueryDefinitionGeoSearchQuery(FacetedQueryDefinitionGeoSearchQuery value);
 
   /**
    * Returns the value of the '<em><b>Faceted Query Definition List Filter Builder Class</b></em>' containment reference.

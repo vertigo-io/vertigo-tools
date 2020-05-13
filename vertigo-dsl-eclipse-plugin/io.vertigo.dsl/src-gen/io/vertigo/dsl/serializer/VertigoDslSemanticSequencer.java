@@ -28,11 +28,14 @@ import io.vertigo.dsl.vertigoDsl.FacetDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionParam;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionParamString;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionRange;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionGeoSearchQuery;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery;
@@ -148,6 +151,12 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case VertigoDslPackage.FACET_DEFINITION_LABEL:
 				sequence_FacetDefinitionLabel(context, (FacetDefinitionLabel) semanticObject); 
 				return; 
+			case VertigoDslPackage.FACET_DEFINITION_PARAM:
+				sequence_FacetDefinitionParam(context, (FacetDefinitionParam) semanticObject); 
+				return; 
+			case VertigoDslPackage.FACET_DEFINITION_PARAM_STRING:
+				sequence_FacetDefinitionParamString(context, (FacetDefinitionParamString) semanticObject); 
+				return; 
 			case VertigoDslPackage.FACET_DEFINITION_RANGE:
 				sequence_FacetDefinitionRange(context, (FacetDefinitionRange) semanticObject); 
 				return; 
@@ -162,6 +171,9 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case VertigoDslPackage.FACETED_QUERY_DEFINITION_FACETS:
 				sequence_FacetedQueryDefinitionFacets(context, (FacetedQueryDefinitionFacets) semanticObject); 
+				return; 
+			case VertigoDslPackage.FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY:
+				sequence_FacetedQueryDefinitionGeoSearchQuery(context, (FacetedQueryDefinitionGeoSearchQuery) semanticObject); 
 				return; 
 			case VertigoDslPackage.FACETED_QUERY_DEFINITION_KEY_CONCEPT:
 				sequence_FacetedQueryDefinitionKeyConcept(context, (FacetedQueryDefinitionKeyConcept) semanticObject); 
@@ -235,13 +247,10 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *
 	 * Constraint:
 	 *     (
-	 *         domain=[DomainType|ID] 
-	 *         dataType=DataType 
-	 *         (
-	 *             (formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | multiple=BooleanString | unit=STRING)? 
-	 *             (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)?
-	 *         )+
-	 *     )
+	 *         (type=STRING | formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | unit=STRING)? 
+	 *         (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)? 
+	 *         (domain=[DomainType|ID] dataType=DataType)?
+	 *     )+
 	 */
 	protected void sequence_AlterDomain(ISerializationContext context, AlterDomain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -363,13 +372,10 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *
 	 * Constraint:
 	 *     (
-	 *         name=ID 
-	 *         dataType=DataType 
-	 *         (
-	 *             (formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | multiple=BooleanString | unit=STRING)? 
-	 *             (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)?
-	 *         )+
-	 *     )
+	 *         (type=STRING | formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | unit=STRING)? 
+	 *         (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)? 
+	 *         (name=ID dataType=DataType)?
+	 *     )+
 	 */
 	protected void sequence_Domain(ISerializationContext context, Domain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -414,7 +420,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     DtDefinitionDataFieldString returns DtDefinitionDataFieldString
 	 *
 	 * Constraint:
-	 *     (refToDomainType=RefToDomainType | label=STRING | required=BooleanString | persistent=BooleanString)+
+	 *     (refToDomainType=RefToDomainType | label=STRING | cardinality=CardinalityString | persistent=BooleanString)+
 	 */
 	protected void sequence_DtDefinitionDataFieldString(ISerializationContext context, DtDefinitionDataFieldString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -647,6 +653,45 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
+	 *     FacetDefinitionParamString returns FacetDefinitionParamString
+	 *
+	 * Constraint:
+	 *     paramValueString=STRING
+	 */
+	protected void sequence_FacetDefinitionParamString(ISerializationContext context, FacetDefinitionParamString semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACET_DEFINITION_PARAM_STRING__PARAM_VALUE_STRING) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACET_DEFINITION_PARAM_STRING__PARAM_VALUE_STRING));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFacetDefinitionParamStringAccess().getParamValueStringSTRINGTerminalRuleCall_1_2_0(), semanticObject.getParamValueString());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FacetDefinitionParam returns FacetDefinitionParam
+	 *
+	 * Constraint:
+	 *     (name=KEYWORDID facetDefinitionParamString=FacetDefinitionParamString)
+	 */
+	protected void sequence_FacetDefinitionParam(ISerializationContext context, FacetDefinitionParam semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACET_DEFINITION_PARAM__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACET_DEFINITION_PARAM__NAME));
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACET_DEFINITION_PARAM__FACET_DEFINITION_PARAM_STRING) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACET_DEFINITION_PARAM__FACET_DEFINITION_PARAM_STRING));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFacetDefinitionParamAccess().getNameKEYWORDIDParserRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getFacetDefinitionParamAccess().getFacetDefinitionParamStringFacetDefinitionParamStringParserRuleCall_2_0(), semanticObject.getFacetDefinitionParamString());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
 	 *     FacetDefinitionRangeString returns FacetDefinitionRangeString
 	 *
 	 * Constraint:
@@ -690,7 +735,8 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *             facetDefinitionDtDefinition=FacetDefinitionDtDefinition | 
 	 *             facetDefinitionFieldName=FacetDefinitionFieldName | 
 	 *             facetDefinitonLabel=FacetDefinitionLabel | 
-	 *             facetDefinitionRange+=FacetDefinitionRange
+	 *             facetDefinitionRange+=FacetDefinitionRange | 
+	 *             facetDefinitionParam+=FacetDefinitionParam
 	 *         )*
 	 *     )
 	 */
@@ -726,6 +772,24 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 */
 	protected void sequence_FacetedQueryDefinitionFacets(ISerializationContext context, FacetedQueryDefinitionFacets semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     FacetedQueryDefinitionGeoSearchQuery returns FacetedQueryDefinitionGeoSearchQuery
+	 *
+	 * Constraint:
+	 *     string=STRING
+	 */
+	protected void sequence_FacetedQueryDefinitionGeoSearchQuery(ISerializationContext context, FacetedQueryDefinitionGeoSearchQuery semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY__STRING) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY__STRING));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getFacetedQueryDefinitionGeoSearchQueryAccess().getStringSTRINGTerminalRuleCall_2_0(), semanticObject.getString());
+		feeder.finish();
 	}
 	
 	
@@ -795,9 +859,10 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *             facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept | 
 	 *             facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria | 
 	 *             facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery | 
+	 *             facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery | 
 	 *             facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass | 
 	 *             facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
-	 *         )+
+	 *         )*
 	 *     )
 	 */
 	protected void sequence_FacetedQueryDefinition(ISerializationContext context, FacetedQueryDefinitionAction semanticObject) {
@@ -1013,7 +1078,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     TaskAttributeString returns TaskAttributeString
 	 *
 	 * Constraint:
-	 *     (refToDomainType=RefToDomainType | required=BooleanString | inout=InOutString)+
+	 *     (refToDomainType=RefToDomainType | cardinality=CardinalityString | inout=InOutString)+
 	 */
 	protected void sequence_TaskAttributeString(ISerializationContext context, TaskAttributeString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

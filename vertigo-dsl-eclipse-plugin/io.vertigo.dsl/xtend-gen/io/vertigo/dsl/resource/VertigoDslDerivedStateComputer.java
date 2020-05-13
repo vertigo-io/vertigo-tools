@@ -28,12 +28,7 @@ public class VertigoDslDerivedStateComputer implements IDerivedStateComputer {
       if ((obj instanceof DtDefinitionAction)) {
         String _string = ((DtDefinitionAction)obj).getName().toString();
         String _plus = ("Do" + _string);
-        String _plus_1 = (_plus + "Dto");
-        addedDomains.add(_plus_1);
-        String _string_1 = ((DtDefinitionAction)obj).getName().toString();
-        String _plus_2 = ("Do" + _string_1);
-        String _plus_3 = (_plus_2 + "Dtc");
-        addedDomains.add(_plus_3);
+        addedDomains.add(_plus);
       }
     }
     final List<EObject> derived = CollectionLiterals.<EObject>newArrayList();
@@ -62,12 +57,7 @@ public class VertigoDslDerivedStateComputer implements IDerivedStateComputer {
       if ((obj instanceof DtDefinitionAction)) {
         String _string = ((DtDefinitionAction)obj).getName().toString();
         String _plus = ("Do" + _string);
-        String _plus_1 = (_plus + "Dto");
-        addedDomains.add(_plus_1);
-        String _string_1 = ((DtDefinitionAction)obj).getName().toString();
-        String _plus_2 = ("Do" + _string_1);
-        String _plus_3 = (_plus_2 + "Dtc");
-        addedDomains.add(_plus_3);
+        addedDomains.add(_plus);
       }
     }
     EObject _get = resource.getContents().get(0);

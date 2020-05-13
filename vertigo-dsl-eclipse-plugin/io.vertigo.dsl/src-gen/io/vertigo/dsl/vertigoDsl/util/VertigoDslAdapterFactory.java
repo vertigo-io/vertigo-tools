@@ -266,6 +266,16 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createFacetDefinitionRangeAdapter();
       }
       @Override
+      public Adapter caseFacetDefinitionParamString(FacetDefinitionParamString object)
+      {
+        return createFacetDefinitionParamStringAdapter();
+      }
+      @Override
+      public Adapter caseFacetDefinitionParam(FacetDefinitionParam object)
+      {
+        return createFacetDefinitionParamAdapter();
+      }
+      @Override
       public Adapter caseFacetDefinition(FacetDefinition object)
       {
         return createFacetDefinitionAdapter();
@@ -284,6 +294,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseFacetedQueryDefinitionListFilterBuilderQuery(FacetedQueryDefinitionListFilterBuilderQuery object)
       {
         return createFacetedQueryDefinitionListFilterBuilderQueryAdapter();
+      }
+      @Override
+      public Adapter caseFacetedQueryDefinitionGeoSearchQuery(FacetedQueryDefinitionGeoSearchQuery object)
+      {
+        return createFacetedQueryDefinitionGeoSearchQueryAdapter();
       }
       @Override
       public Adapter caseFacetedQueryDefinitionListFilterBuilderClass(FacetedQueryDefinitionListFilterBuilderClass object)
@@ -943,6 +958,36 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionParamString <em>Facet Definition Param String</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionParamString
+   * @generated
+   */
+  public Adapter createFacetDefinitionParamStringAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionParam <em>Facet Definition Param</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetDefinitionParam
+   * @generated
+   */
+  public Adapter createFacetDefinitionParamAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetDefinition <em>Facet Definition</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -998,6 +1043,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFacetedQueryDefinitionListFilterBuilderQueryAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionGeoSearchQuery <em>Faceted Query Definition Geo Search Query</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionGeoSearchQuery
+   * @generated
+   */
+  public Adapter createFacetedQueryDefinitionGeoSearchQueryAdapter()
   {
     return null;
   }

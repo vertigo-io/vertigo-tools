@@ -4,7 +4,6 @@
 package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.AlterDomain;
-import io.vertigo.dsl.vertigoDsl.BooleanString;
 import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DataType;
 import io.vertigo.dsl.vertigoDsl.DomainType;
@@ -34,12 +33,12 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getDomain <em>Domain</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getDataType <em>Data Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getType <em>Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getFormatter <em>Formatter</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getStoreType <em>Store Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getIndexType <em>Index Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getMultiple <em>Multiple</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getUnit <em>Unit</em>}</li>
  * </ul>
  *
@@ -76,6 +75,26 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @ordered
    */
   protected DataType dataType = DATA_TYPE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getFormatter() <em>Formatter</em>}' reference.
@@ -146,26 +165,6 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @ordered
    */
   protected EList<Constraint> constraints;
-
-  /**
-   * The default value of the '{@link #getMultiple() <em>Multiple</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMultiple()
-   * @generated
-   * @ordered
-   */
-  protected static final BooleanString MULTIPLE_EDEFAULT = BooleanString.TRUE;
-
-  /**
-   * The cached value of the '{@link #getMultiple() <em>Multiple</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMultiple()
-   * @generated
-   * @ordered
-   */
-  protected BooleanString multiple = MULTIPLE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
@@ -276,6 +275,31 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
     dataType = newDataType == null ? DATA_TYPE_EDEFAULT : newDataType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE, oldDataType, dataType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__TYPE, oldType, type));
   }
 
   /**
@@ -409,31 +433,6 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public BooleanString getMultiple()
-  {
-    return multiple;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setMultiple(BooleanString newMultiple)
-  {
-    BooleanString oldMultiple = multiple;
-    multiple = newMultiple == null ? MULTIPLE_EDEFAULT : newMultiple;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__MULTIPLE, oldMultiple, multiple));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public String getUnit()
   {
     return unit;
@@ -468,6 +467,8 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
         return basicGetDomain();
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         return getDataType();
+      case VertigoDslPackage.ALTER_DOMAIN__TYPE:
+        return getType();
       case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
         if (resolve) return getFormatter();
         return basicGetFormatter();
@@ -479,8 +480,6 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
         return getConstraint();
       case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS:
         return getConstraints();
-      case VertigoDslPackage.ALTER_DOMAIN__MULTIPLE:
-        return getMultiple();
       case VertigoDslPackage.ALTER_DOMAIN__UNIT:
         return getUnit();
     }
@@ -504,6 +503,9 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         setDataType((DataType)newValue);
         return;
+      case VertigoDslPackage.ALTER_DOMAIN__TYPE:
+        setType((String)newValue);
+        return;
       case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
         setFormatter((Formatter)newValue);
         return;
@@ -520,9 +522,6 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
       case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS:
         getConstraints().clear();
         getConstraints().addAll((Collection<? extends Constraint>)newValue);
-        return;
-      case VertigoDslPackage.ALTER_DOMAIN__MULTIPLE:
-        setMultiple((BooleanString)newValue);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__UNIT:
         setUnit((String)newValue);
@@ -547,6 +546,9 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         setDataType(DATA_TYPE_EDEFAULT);
         return;
+      case VertigoDslPackage.ALTER_DOMAIN__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
       case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
         setFormatter((Formatter)null);
         return;
@@ -561,9 +563,6 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
         return;
       case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS:
         getConstraints().clear();
-        return;
-      case VertigoDslPackage.ALTER_DOMAIN__MULTIPLE:
-        setMultiple(MULTIPLE_EDEFAULT);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__UNIT:
         setUnit(UNIT_EDEFAULT);
@@ -586,6 +585,8 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
         return domain != null;
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         return dataType != DATA_TYPE_EDEFAULT;
+      case VertigoDslPackage.ALTER_DOMAIN__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
         return formatter != null;
       case VertigoDslPackage.ALTER_DOMAIN__STORE_TYPE:
@@ -596,8 +597,6 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
         return constraint != null && !constraint.isEmpty();
       case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS:
         return constraints != null && !constraints.isEmpty();
-      case VertigoDslPackage.ALTER_DOMAIN__MULTIPLE:
-        return multiple != MULTIPLE_EDEFAULT;
       case VertigoDslPackage.ALTER_DOMAIN__UNIT:
         return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
     }
@@ -617,12 +616,12 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (dataType: ");
     result.append(dataType);
+    result.append(", type: ");
+    result.append(type);
     result.append(", storeType: ");
     result.append(storeType);
     result.append(", indexType: ");
     result.append(indexType);
-    result.append(", multiple: ");
-    result.append(multiple);
     result.append(", unit: ");
     result.append(unit);
     result.append(')');

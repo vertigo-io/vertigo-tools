@@ -7,6 +7,7 @@ import io.vertigo.dsl.vertigoDsl.AlterDomain;
 import io.vertigo.dsl.vertigoDsl.AlterDtDefinition;
 import io.vertigo.dsl.vertigoDsl.Association;
 import io.vertigo.dsl.vertigoDsl.BooleanString;
+import io.vertigo.dsl.vertigoDsl.CardinalityString;
 import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DataType;
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
@@ -33,12 +34,15 @@ import io.vertigo.dsl.vertigoDsl.FacetDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionParam;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionParamString;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionRange;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionRangeString;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinition;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionDomainCriteria;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionFacets;
+import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionGeoSearchQuery;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery;
@@ -351,6 +355,20 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass facetDefinitionParamStringEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetDefinitionParamEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass facetDefinitionEClass = null;
 
   /**
@@ -373,6 +391,13 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   private EClass facetedQueryDefinitionListFilterBuilderQueryEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass facetedQueryDefinitionGeoSearchQueryEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -485,6 +510,13 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   private EEnum multiplicityStringEEnum = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EEnum cardinalityStringEEnum = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -870,9 +902,20 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
+  public EAttribute getDomain_Type()
+  {
+    return (EAttribute)domainEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getDomain_Formatter()
   {
-    return (EReference)domainEClass.getEStructuralFeatures().get(2);
+    return (EReference)domainEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -883,7 +926,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EAttribute getDomain_StoreType()
   {
-    return (EAttribute)domainEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)domainEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -894,7 +937,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EAttribute getDomain_IndexType()
   {
-    return (EAttribute)domainEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)domainEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -905,7 +948,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EReference getDomain_Constraint()
   {
-    return (EReference)domainEClass.getEStructuralFeatures().get(5);
+    return (EReference)domainEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -916,18 +959,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EReference getDomain_Constraints()
   {
-    return (EReference)domainEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getDomain_Multiple()
-  {
-    return (EAttribute)domainEClass.getEStructuralFeatures().get(7);
+    return (EReference)domainEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -980,9 +1012,20 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
+  public EAttribute getAlterDomain_Type()
+  {
+    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EReference getAlterDomain_Formatter()
   {
-    return (EReference)alterDomainEClass.getEStructuralFeatures().get(2);
+    return (EReference)alterDomainEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -993,7 +1036,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EAttribute getAlterDomain_StoreType()
   {
-    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(3);
+    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1004,7 +1047,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EAttribute getAlterDomain_IndexType()
   {
-    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1015,7 +1058,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EReference getAlterDomain_Constraint()
   {
-    return (EReference)alterDomainEClass.getEStructuralFeatures().get(5);
+    return (EReference)alterDomainEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -1026,18 +1069,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EReference getAlterDomain_Constraints()
   {
-    return (EReference)alterDomainEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getAlterDomain_Multiple()
-  {
-    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(7);
+    return (EReference)alterDomainEClass.getEStructuralFeatures().get(7);
   }
 
   /**
@@ -1156,7 +1188,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EAttribute getDtDefinitionDataFieldString_Required()
+  public EAttribute getDtDefinitionDataFieldString_Cardinality()
   {
     return (EAttribute)dtDefinitionDataFieldStringEClass.getEStructuralFeatures().get(2);
   }
@@ -1739,7 +1771,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EAttribute getTaskAttributeString_Required()
+  public EAttribute getTaskAttributeString_Cardinality()
   {
     return (EAttribute)taskAttributeStringEClass.getEStructuralFeatures().get(1);
   }
@@ -2036,6 +2068,61 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
+  public EClass getFacetDefinitionParamString()
+  {
+    return facetDefinitionParamStringEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFacetDefinitionParamString_ParamValueString()
+  {
+    return (EAttribute)facetDefinitionParamStringEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getFacetDefinitionParam()
+  {
+    return facetDefinitionParamEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getFacetDefinitionParam_Name()
+  {
+    return (EReference)facetDefinitionParamEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getFacetDefinitionParam_FacetDefinitionParamString()
+  {
+    return (EReference)facetDefinitionParamEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getFacetDefinition()
   {
     return facetDefinitionEClass;
@@ -2105,6 +2192,28 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   public EAttribute getFacetedQueryDefinitionListFilterBuilderQuery_String()
   {
     return (EAttribute)facetedQueryDefinitionListFilterBuilderQueryEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EClass getFacetedQueryDefinitionGeoSearchQuery()
+  {
+    return facetedQueryDefinitionGeoSearchQueryEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getFacetedQueryDefinitionGeoSearchQuery_String()
+  {
+    return (EAttribute)facetedQueryDefinitionGeoSearchQueryEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -2487,6 +2596,17 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
+  public EReference getFacetDefinitionAction_FacetDefinitionParam()
+  {
+    return (EReference)facetDefinitionActionEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getFacetedQueryDefinitionAction()
   {
     return facetedQueryDefinitionActionEClass;
@@ -2542,7 +2662,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderClass()
+  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionGeoSearchQuery()
   {
     return (EReference)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(4);
   }
@@ -2553,9 +2673,20 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionFacets()
+  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderClass()
   {
     return (EReference)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getFacetedQueryDefinitionAction_FacetedQueryDefinitionFacets()
+  {
+    return (EReference)facetedQueryDefinitionActionEClass.getEStructuralFeatures().get(6);
   }
 
   /**
@@ -2663,6 +2794,17 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
+  public EEnum getCardinalityString()
+  {
+    return cardinalityStringEEnum;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EEnum getInOutString()
   {
     return inOutStringEEnum;
@@ -2736,23 +2878,23 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     domainEClass = createEClass(DOMAIN);
     createEAttribute(domainEClass, DOMAIN__NAME);
     createEAttribute(domainEClass, DOMAIN__DATA_TYPE);
+    createEAttribute(domainEClass, DOMAIN__TYPE);
     createEReference(domainEClass, DOMAIN__FORMATTER);
     createEAttribute(domainEClass, DOMAIN__STORE_TYPE);
     createEAttribute(domainEClass, DOMAIN__INDEX_TYPE);
     createEReference(domainEClass, DOMAIN__CONSTRAINT);
     createEReference(domainEClass, DOMAIN__CONSTRAINTS);
-    createEAttribute(domainEClass, DOMAIN__MULTIPLE);
     createEAttribute(domainEClass, DOMAIN__UNIT);
 
     alterDomainEClass = createEClass(ALTER_DOMAIN);
     createEReference(alterDomainEClass, ALTER_DOMAIN__DOMAIN);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__DATA_TYPE);
+    createEAttribute(alterDomainEClass, ALTER_DOMAIN__TYPE);
     createEReference(alterDomainEClass, ALTER_DOMAIN__FORMATTER);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__STORE_TYPE);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__INDEX_TYPE);
     createEReference(alterDomainEClass, ALTER_DOMAIN__CONSTRAINT);
     createEReference(alterDomainEClass, ALTER_DOMAIN__CONSTRAINTS);
-    createEAttribute(alterDomainEClass, ALTER_DOMAIN__MULTIPLE);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__UNIT);
 
     domainTypeEClass = createEClass(DOMAIN_TYPE);
@@ -2767,7 +2909,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     dtDefinitionDataFieldStringEClass = createEClass(DT_DEFINITION_DATA_FIELD_STRING);
     createEReference(dtDefinitionDataFieldStringEClass, DT_DEFINITION_DATA_FIELD_STRING__REF_TO_DOMAIN_TYPE);
     createEAttribute(dtDefinitionDataFieldStringEClass, DT_DEFINITION_DATA_FIELD_STRING__LABEL);
-    createEAttribute(dtDefinitionDataFieldStringEClass, DT_DEFINITION_DATA_FIELD_STRING__REQUIRED);
+    createEAttribute(dtDefinitionDataFieldStringEClass, DT_DEFINITION_DATA_FIELD_STRING__CARDINALITY);
     createEAttribute(dtDefinitionDataFieldStringEClass, DT_DEFINITION_DATA_FIELD_STRING__PERSISTENT);
 
     dtDefinitionComputedFieldStringEClass = createEClass(DT_DEFINITION_COMPUTED_FIELD_STRING);
@@ -2834,7 +2976,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
 
     taskAttributeStringEClass = createEClass(TASK_ATTRIBUTE_STRING);
     createEReference(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE);
-    createEAttribute(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__REQUIRED);
+    createEAttribute(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__CARDINALITY);
     createEAttribute(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__INOUT);
 
     taskAttributeEClass = createEClass(TASK_ATTRIBUTE);
@@ -2871,6 +3013,13 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEReference(facetDefinitionRangeEClass, FACET_DEFINITION_RANGE__NAME);
     createEReference(facetDefinitionRangeEClass, FACET_DEFINITION_RANGE__FACET_DEFINITION_RANGE_STRING);
 
+    facetDefinitionParamStringEClass = createEClass(FACET_DEFINITION_PARAM_STRING);
+    createEAttribute(facetDefinitionParamStringEClass, FACET_DEFINITION_PARAM_STRING__PARAM_VALUE_STRING);
+
+    facetDefinitionParamEClass = createEClass(FACET_DEFINITION_PARAM);
+    createEReference(facetDefinitionParamEClass, FACET_DEFINITION_PARAM__NAME);
+    createEReference(facetDefinitionParamEClass, FACET_DEFINITION_PARAM__FACET_DEFINITION_PARAM_STRING);
+
     facetDefinitionEClass = createEClass(FACET_DEFINITION);
 
     facetedQueryDefinitionKeyConceptEClass = createEClass(FACETED_QUERY_DEFINITION_KEY_CONCEPT);
@@ -2881,6 +3030,9 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
 
     facetedQueryDefinitionListFilterBuilderQueryEClass = createEClass(FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY);
     createEAttribute(facetedQueryDefinitionListFilterBuilderQueryEClass, FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY__STRING);
+
+    facetedQueryDefinitionGeoSearchQueryEClass = createEClass(FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY);
+    createEAttribute(facetedQueryDefinitionGeoSearchQueryEClass, FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY__STRING);
 
     facetedQueryDefinitionListFilterBuilderClassEClass = createEClass(FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS);
     createEAttribute(facetedQueryDefinitionListFilterBuilderClassEClass, FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS__STRING);
@@ -2926,12 +3078,14 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEReference(facetDefinitionActionEClass, FACET_DEFINITION_ACTION__FACET_DEFINITION_FIELD_NAME);
     createEReference(facetDefinitionActionEClass, FACET_DEFINITION_ACTION__FACET_DEFINITON_LABEL);
     createEReference(facetDefinitionActionEClass, FACET_DEFINITION_ACTION__FACET_DEFINITION_RANGE);
+    createEReference(facetDefinitionActionEClass, FACET_DEFINITION_ACTION__FACET_DEFINITION_PARAM);
 
     facetedQueryDefinitionActionEClass = createEClass(FACETED_QUERY_DEFINITION_ACTION);
     createEAttribute(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__NAME);
     createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_KEY_CONCEPT);
     createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA);
     createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY);
+    createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY);
     createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS);
     createEReference(facetedQueryDefinitionActionEClass, FACETED_QUERY_DEFINITION_ACTION__FACETED_QUERY_DEFINITION_FACETS);
 
@@ -2946,6 +3100,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     dataTypeEEnum = createEEnum(DATA_TYPE);
     booleanStringEEnum = createEEnum(BOOLEAN_STRING);
     multiplicityStringEEnum = createEEnum(MULTIPLICITY_STRING);
+    cardinalityStringEEnum = createEEnum(CARDINALITY_STRING);
     inOutStringEEnum = createEEnum(IN_OUT_STRING);
   }
 
@@ -3039,23 +3194,23 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDomain_Name(), ecorePackage.getEString(), "name", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDomain_DataType(), this.getDataType(), "dataType", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDomain_Type(), ecorePackage.getEString(), "type", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDomain_Formatter(), this.getFormatter(), null, "formatter", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDomain_StoreType(), ecorePackage.getEString(), "storeType", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDomain_IndexType(), ecorePackage.getEString(), "indexType", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDomain_Constraint(), this.getConstraint(), null, "constraint", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDomain_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDomain_Multiple(), this.getBooleanString(), "multiple", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDomain_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(alterDomainEClass, AlterDomain.class, "AlterDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAlterDomain_Domain(), this.getDomainType(), null, "domain", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlterDomain_DataType(), this.getDataType(), "dataType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlterDomain_Type(), ecorePackage.getEString(), "type", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAlterDomain_Formatter(), this.getFormatter(), null, "formatter", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlterDomain_StoreType(), ecorePackage.getEString(), "storeType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlterDomain_IndexType(), ecorePackage.getEString(), "indexType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAlterDomain_Constraint(), this.getConstraint(), null, "constraint", null, 0, -1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAlterDomain_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlterDomain_Multiple(), this.getBooleanString(), "multiple", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlterDomain_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(domainTypeEClass, DomainType.class, "DomainType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3070,7 +3225,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEClass(dtDefinitionDataFieldStringEClass, DtDefinitionDataFieldString.class, "DtDefinitionDataFieldString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getDtDefinitionDataFieldString_RefToDomainType(), this.getRefToDomainType(), null, "refToDomainType", null, 0, 1, DtDefinitionDataFieldString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDtDefinitionDataFieldString_Label(), ecorePackage.getEString(), "label", null, 0, 1, DtDefinitionDataFieldString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDtDefinitionDataFieldString_Required(), this.getBooleanString(), "required", null, 0, 1, DtDefinitionDataFieldString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDtDefinitionDataFieldString_Cardinality(), this.getCardinalityString(), "cardinality", null, 0, 1, DtDefinitionDataFieldString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDtDefinitionDataFieldString_Persistent(), this.getBooleanString(), "persistent", null, 0, 1, DtDefinitionDataFieldString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(dtDefinitionComputedFieldStringEClass, DtDefinitionComputedFieldString.class, "DtDefinitionComputedFieldString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3137,7 +3292,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
 
     initEClass(taskAttributeStringEClass, TaskAttributeString.class, "TaskAttributeString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTaskAttributeString_RefToDomainType(), this.getRefToDomainType(), null, "refToDomainType", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaskAttributeString_Required(), this.getBooleanString(), "required", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getTaskAttributeString_Cardinality(), this.getCardinalityString(), "cardinality", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTaskAttributeString_Inout(), this.getInOutString(), "inout", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(taskAttributeEClass, TaskAttribute.class, "TaskAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3174,6 +3329,13 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEReference(getFacetDefinitionRange_Name(), this.getKEYWORDID(), null, "name", null, 0, 1, FacetDefinitionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFacetDefinitionRange_FacetDefinitionRangeString(), this.getFacetDefinitionRangeString(), null, "facetDefinitionRangeString", null, 0, 1, FacetDefinitionRange.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(facetDefinitionParamStringEClass, FacetDefinitionParamString.class, "FacetDefinitionParamString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetDefinitionParamString_ParamValueString(), ecorePackage.getEString(), "paramValueString", null, 0, 1, FacetDefinitionParamString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetDefinitionParamEClass, FacetDefinitionParam.class, "FacetDefinitionParam", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getFacetDefinitionParam_Name(), this.getKEYWORDID(), null, "name", null, 0, 1, FacetDefinitionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetDefinitionParam_FacetDefinitionParamString(), this.getFacetDefinitionParamString(), null, "facetDefinitionParamString", null, 0, 1, FacetDefinitionParam.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(facetDefinitionEClass, FacetDefinition.class, "FacetDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(facetedQueryDefinitionKeyConceptEClass, FacetedQueryDefinitionKeyConcept.class, "FacetedQueryDefinitionKeyConcept", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3184,6 +3346,9 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
 
     initEClass(facetedQueryDefinitionListFilterBuilderQueryEClass, FacetedQueryDefinitionListFilterBuilderQuery.class, "FacetedQueryDefinitionListFilterBuilderQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFacetedQueryDefinitionListFilterBuilderQuery_String(), ecorePackage.getEString(), "string", null, 0, 1, FacetedQueryDefinitionListFilterBuilderQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(facetedQueryDefinitionGeoSearchQueryEClass, FacetedQueryDefinitionGeoSearchQuery.class, "FacetedQueryDefinitionGeoSearchQuery", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFacetedQueryDefinitionGeoSearchQuery_String(), ecorePackage.getEString(), "string", null, 0, 1, FacetedQueryDefinitionGeoSearchQuery.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(facetedQueryDefinitionListFilterBuilderClassEClass, FacetedQueryDefinitionListFilterBuilderClass.class, "FacetedQueryDefinitionListFilterBuilderClass", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFacetedQueryDefinitionListFilterBuilderClass_String(), ecorePackage.getEString(), "string", null, 0, 1, FacetedQueryDefinitionListFilterBuilderClass.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3229,12 +3394,14 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEReference(getFacetDefinitionAction_FacetDefinitionFieldName(), this.getFacetDefinitionFieldName(), null, "facetDefinitionFieldName", null, 0, 1, FacetDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFacetDefinitionAction_FacetDefinitonLabel(), this.getFacetDefinitionLabel(), null, "facetDefinitonLabel", null, 0, 1, FacetDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFacetDefinitionAction_FacetDefinitionRange(), this.getFacetDefinitionRange(), null, "facetDefinitionRange", null, 0, -1, FacetDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetDefinitionAction_FacetDefinitionParam(), this.getFacetDefinitionParam(), null, "facetDefinitionParam", null, 0, -1, FacetDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(facetedQueryDefinitionActionEClass, FacetedQueryDefinitionAction.class, "FacetedQueryDefinitionAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFacetedQueryDefinitionAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionKeyConcept(), this.getFacetedQueryDefinitionKeyConcept(), null, "facetedQueryDefinitionKeyConcept", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionDomainCriteria(), this.getFacetedQueryDefinitionDomainCriteria(), null, "facetedQueryDefinitionDomainCriteria", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderQuery(), this.getFacetedQueryDefinitionListFilterBuilderQuery(), null, "facetedQueryDefinitionListFilterBuilderQuery", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionGeoSearchQuery(), this.getFacetedQueryDefinitionGeoSearchQuery(), null, "facetedQueryDefinitionGeoSearchQuery", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionListFilterBuilderClass(), this.getFacetedQueryDefinitionListFilterBuilderClass(), null, "facetedQueryDefinitionListFilterBuilderClass", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getFacetedQueryDefinitionAction_FacetedQueryDefinitionFacets(), this.getFacetedQueryDefinitionFacets(), null, "facetedQueryDefinitionFacets", null, 0, 1, FacetedQueryDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -3256,6 +3423,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     addEEnumLiteral(dataTypeEEnum, DataType.BIG_DECIMAL);
     addEEnumLiteral(dataTypeEEnum, DataType.LONG);
     addEEnumLiteral(dataTypeEEnum, DataType.DATA_STREAM);
+    addEEnumLiteral(dataTypeEEnum, DataType.VALUE_OBJECT);
 
     initEEnum(booleanStringEEnum, BooleanString.class, "BooleanString");
     addEEnumLiteral(booleanStringEEnum, BooleanString.TRUE);
@@ -3265,6 +3433,11 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     addEEnumLiteral(multiplicityStringEEnum, MultiplicityString.ZERO_ONE);
     addEEnumLiteral(multiplicityStringEEnum, MultiplicityString.ZERO_N);
     addEEnumLiteral(multiplicityStringEEnum, MultiplicityString.ONE_ONE);
+
+    initEEnum(cardinalityStringEEnum, CardinalityString.class, "CardinalityString");
+    addEEnumLiteral(cardinalityStringEEnum, CardinalityString.ONE);
+    addEEnumLiteral(cardinalityStringEEnum, CardinalityString.OPTIONAL);
+    addEEnumLiteral(cardinalityStringEEnum, CardinalityString.MANY);
 
     initEEnum(inOutStringEEnum, InOutString.class, "InOutString");
     addEEnumLiteral(inOutStringEEnum, InOutString.INOUT_IN);

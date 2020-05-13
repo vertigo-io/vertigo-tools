@@ -7,6 +7,7 @@ import io.vertigo.dsl.vertigoDsl.FacetDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionDtDefinition;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionFieldName;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionLabel;
+import io.vertigo.dsl.vertigoDsl.FacetDefinitionParam;
 import io.vertigo.dsl.vertigoDsl.FacetDefinitionRange;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
@@ -38,6 +39,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionActionImpl#getFacetDefinitionFieldName <em>Facet Definition Field Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionActionImpl#getFacetDefinitonLabel <em>Facet Definiton Label</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionActionImpl#getFacetDefinitionRange <em>Facet Definition Range</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.FacetDefinitionActionImpl#getFacetDefinitionParam <em>Facet Definition Param</em>}</li>
  * </ul>
  *
  * @generated
@@ -103,6 +105,16 @@ public class FacetDefinitionActionImpl extends FacetDefinitionImpl implements Fa
    * @ordered
    */
   protected EList<FacetDefinitionRange> facetDefinitionRange;
+
+  /**
+   * The cached value of the '{@link #getFacetDefinitionParam() <em>Facet Definition Param</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getFacetDefinitionParam()
+   * @generated
+   * @ordered
+   */
+  protected EList<FacetDefinitionParam> facetDefinitionParam;
 
   /**
    * <!-- begin-user-doc -->
@@ -321,6 +333,21 @@ public class FacetDefinitionActionImpl extends FacetDefinitionImpl implements Fa
    * @generated
    */
   @Override
+  public EList<FacetDefinitionParam> getFacetDefinitionParam()
+  {
+    if (facetDefinitionParam == null)
+    {
+      facetDefinitionParam = new EObjectContainmentEList<FacetDefinitionParam>(FacetDefinitionParam.class, this, VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_PARAM);
+    }
+    return facetDefinitionParam;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -333,6 +360,8 @@ public class FacetDefinitionActionImpl extends FacetDefinitionImpl implements Fa
         return basicSetFacetDefinitonLabel(null, msgs);
       case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_RANGE:
         return ((InternalEList<?>)getFacetDefinitionRange()).basicRemove(otherEnd, msgs);
+      case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_PARAM:
+        return ((InternalEList<?>)getFacetDefinitionParam()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -357,6 +386,8 @@ public class FacetDefinitionActionImpl extends FacetDefinitionImpl implements Fa
         return getFacetDefinitonLabel();
       case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_RANGE:
         return getFacetDefinitionRange();
+      case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_PARAM:
+        return getFacetDefinitionParam();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -388,6 +419,10 @@ public class FacetDefinitionActionImpl extends FacetDefinitionImpl implements Fa
         getFacetDefinitionRange().clear();
         getFacetDefinitionRange().addAll((Collection<? extends FacetDefinitionRange>)newValue);
         return;
+      case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_PARAM:
+        getFacetDefinitionParam().clear();
+        getFacetDefinitionParam().addAll((Collection<? extends FacetDefinitionParam>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -417,6 +452,9 @@ public class FacetDefinitionActionImpl extends FacetDefinitionImpl implements Fa
       case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_RANGE:
         getFacetDefinitionRange().clear();
         return;
+      case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_PARAM:
+        getFacetDefinitionParam().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -441,6 +479,8 @@ public class FacetDefinitionActionImpl extends FacetDefinitionImpl implements Fa
         return facetDefinitonLabel != null;
       case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_RANGE:
         return facetDefinitionRange != null && !facetDefinitionRange.isEmpty();
+      case VertigoDslPackage.FACET_DEFINITION_ACTION__FACET_DEFINITION_PARAM:
+        return facetDefinitionParam != null && !facetDefinitionParam.isEmpty();
     }
     return super.eIsSet(featureID);
   }

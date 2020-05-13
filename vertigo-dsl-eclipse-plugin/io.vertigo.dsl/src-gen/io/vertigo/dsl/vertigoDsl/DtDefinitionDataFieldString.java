@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString#getLabel <em>Label</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString#getRequired <em>Required</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString#getCardinality <em>Cardinality</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString#getPersistent <em>Persistent</em>}</li>
  * </ul>
  *
@@ -71,29 +71,29 @@ public interface DtDefinitionDataFieldString extends EObject
   void setLabel(String value);
 
   /**
-   * Returns the value of the '<em><b>Required</b></em>' attribute.
-   * The literals are from the enumeration {@link io.vertigo.dsl.vertigoDsl.BooleanString}.
+   * Returns the value of the '<em><b>Cardinality</b></em>' attribute.
+   * The literals are from the enumeration {@link io.vertigo.dsl.vertigoDsl.CardinalityString}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Required</em>' attribute.
-   * @see io.vertigo.dsl.vertigoDsl.BooleanString
-   * @see #setRequired(BooleanString)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinitionDataFieldString_Required()
+   * @return the value of the '<em>Cardinality</em>' attribute.
+   * @see io.vertigo.dsl.vertigoDsl.CardinalityString
+   * @see #setCardinality(CardinalityString)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinitionDataFieldString_Cardinality()
    * @model
    * @generated
    */
-  BooleanString getRequired();
+  CardinalityString getCardinality();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString#getRequired <em>Required</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString#getCardinality <em>Cardinality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Required</em>' attribute.
-   * @see io.vertigo.dsl.vertigoDsl.BooleanString
-   * @see #getRequired()
+   * @param value the new value of the '<em>Cardinality</em>' attribute.
+   * @see io.vertigo.dsl.vertigoDsl.CardinalityString
+   * @see #getCardinality()
    * @generated
    */
-  void setRequired(BooleanString value);
+  void setCardinality(CardinalityString value);
 
   /**
    * Returns the value of the '<em><b>Persistent</b></em>' attribute.

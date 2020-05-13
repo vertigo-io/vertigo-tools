@@ -68,7 +68,8 @@ enum DataType:
 	INSTANT='Instant' |
 	BIG_DECIMAL='BigDecimal' |
 	LONG='Long' |
-	DATA_STREAM='DataStream';
+	DATA_STREAM='DataStream' |
+	VALUE_OBJECT='ValueObject';
 
 enum BooleanString:
 	TRUE='\"true\"' |
@@ -76,24 +77,24 @@ enum BooleanString:
 
 Domain:
 	'create' 'Domain' name=ID '{'
-		'dataType' ':'  dataType=DataType
+		'dataType' ':'  dataType=DataType &
+		('type' ':' type=STRING)?
 		(('formatter' ':' formatter=[Formatter]) &
 		('storeType' ':' storeType=STRING)? &
 		('indexType' ':' indexType=STRING)? &
 		('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
-		('multiple' ':' multiple=BooleanString)? &
-		('unit' ':' unit=STRING)?)
+		('unit' ':' unit=STRING)?)?
 	'}';
 	
 AlterDomain:
 	'alter' 'Domain' domain=[DomainType] '{'
-		'dataType' ':'  dataType=DataType
+		'dataType' ':'  dataType=DataType &
+		('type' ':' type=STRING)?
 		(('formatter' ':' formatter=[Formatter]) &
 		('storeType' ':' storeType=STRING)? &
 		('indexType' ':' indexType=STRING)? &
 		('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
-		('multiple' ':' multiple=BooleanString)? &
-		('unit' ':' unit=STRING)?)
+		('unit' ':' unit=STRING)?)?
 	'}';
 	
 
@@ -110,7 +111,7 @@ DtDefinitionIdString:
 	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & ('label' ':' label=STRING ','?) ) '}';
 
 DtDefinitionDataFieldString:
-	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':' required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':' cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
 
 DtDefinitionComputedFieldString:
 	'{' ('domain' ':' refToDomainType=RefToDomainType  ','? & 'label' ':' label=STRING ','? & 'expression' ':' expressionString=STRING ','? ) '}';
@@ -177,6 +178,11 @@ enum MultiplicityString:
 	ZERO_ONE='\"0..1\"' |
 	ZERO_N='\"0..*\"' | 
 	ONE_ONE='\"1..1\"';
+	
+enum CardinalityString:
+	ONE='\"1\"' |
+	OPTIONAL='\"?"' | 
+	MANY='\"*\"';
 
 Association:
 	'create' 'Association' name=ID '{'
@@ -201,7 +207,7 @@ enum InOutString:
 	INOUT_OUT='\"out\"';
 
 TaskAttributeString:
-	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'required' ':' required=BooleanString ','? & 'inOut' ':' inout=InOutString ','? ) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'cardinality' ':' cardinality=CardinalityString ','? & 'inOut' ':' inout=InOutString ','? ) '}';
 
 TaskAttribute:
 	'attribute' name=ID taskAttributeString=TaskAttributeString ','?
@@ -244,13 +250,21 @@ FacetDefinitionRange:
 	'range' name = KEYWORDID facetDefinitionRangeString=FacetDefinitionRangeString ','?
 ;
 
+FacetDefinitionParamString:
+	'{' ('value' ':' paramValueString=STRING ) '}';
+
+FacetDefinitionParam:
+	'params' name = KEYWORDID facetDefinitionParamString=FacetDefinitionParamString ','?
+;
+
 
 FacetDefinition:
 	'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{'
 		(facetDefinitionDtDefinition = FacetDefinitionDtDefinition &
 		facetDefinitionFieldName = FacetDefinitionFieldName &
 		facetDefinitonLabel = FacetDefinitionLabel &
-		(facetDefinitionRange += FacetDefinitionRange*))
+		(facetDefinitionRange += FacetDefinitionRange*)&
+		(facetDefinitionParam += FacetDefinitionParam*))
 	'}';
 
 
@@ -267,6 +281,10 @@ FacetedQueryDefinitionListFilterBuilderQuery:
 	'listFilterBuilderClass' ':' string = STRING ','?
 ;
 
+FacetedQueryDefinitionGeoSearchQuery:
+	'geoSearchQuery' ':' string = STRING ','?
+;
+
 FacetedQueryDefinitionListFilterBuilderClass:
 	'listFilterBuilderQuery' ':' string = STRING ','?
 ;
@@ -281,6 +299,7 @@ FacetedQueryDefinition:
 		(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
 		facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
 		facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+		facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery? &
 		facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
 		facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
 	'}';

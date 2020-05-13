@@ -171,11 +171,11 @@ class VertigoDslParsingTest {
     		/********************************* Domains ********************************************************/
     		/**************************************************************************************************/
     		
-    		create Domain DoLongs {  
-    		    dataType : Long
-    		    multiple : "true"
-    		    formatter : FmtDefault
+    		create Domain DoGeopoint {
+    			dataType : ValueObject
+    			type : "io.vertigo.smarttype.GeoPoint"
     		}
+    		
     		
     		create Domain DoId {
     			dataType : Long
@@ -315,13 +315,13 @@ class VertigoDslParsingTest {
             
             create DtDefinition DtPerson {
             	id personId {domain: DoId label:"Id"}
-            	field firstName {domain: DoLabel label: "First Name" required:"false"}
-            	field lastName {domain: DoLabel label: "Last Name" required:"false"}
-            	field email {domain: DoEmail label:"E-mail" required: "false"}
-            	field picturefileId {domain: DoId label:"Picture" required:"false"}
-            	field picturefileIdTmp {domain: DoLabel label:"Picture" required:"false" persistent:"false"}
-            	field tags {domain: DoMultipleIds label: "Tags" required:"false"}
-            	field dateHired {domain: DoLocaldate label: "Date hired" required:"false"}
+            	field firstName {domain: DoLabel label: "First Name" cardinality:"?"}
+            	field lastName {domain: DoLabel label: "Last Name" cardinality:"?"}
+            	field email {domain: DoEmail label:"E-mail" cardinality:"?"}
+            	field picturefileId {domain: DoId label:"Picture" cardinality:"?"}
+            	field picturefileIdTmp {domain: DoLabel label:"Picture" cardinality:"?" persistent:"false"}
+            	field tags {domain: DoMultipleIds label: "Tags" cardinality:"?"}
+            	field dateHired {domain: DoLocaldate label: "Date hired" cardinality:"?"}
             	computed fullName {domain : DoLabel, label:"Full name"
                     expression:"return getFirstName() + \" \" + getLastName();"
                 }
@@ -329,19 +329,19 @@ class VertigoDslParsingTest {
             
             create DtDefinition DtGroups {
             	id groupId {domain: DoId label:"Id"}
-            	field name {domain: DoLabel label: "Name" required:"false"}
+            	field name {domain: DoLabel label: "Name" cardinality:"?"}
             }
             
             create DtDefinition DtMission {
             	id missionId {domain: DoId label:"Id"}
-            	field role {domain: DoCode label:"Role" required:"false"}
+            	field role {domain: DoCode label:"Role" cardinality:"?"}
             }
             
             create DtDefinition DtMissionDisplay {
-            	field missionId {domain: DoId label:"Id" required:"false"}
-            	field role {domain: DoCode label:"Role" required:"false"}
-            	field baseName {domain: DoLabel label:"Base" required:"false"}
-            	field businessName {domain: DoLabel label:"Business" required:"false"}
+            	field missionId {domain: DoId label:"Id" cardinality:"?"}
+            	field role {domain: DoCode label:"Role" cardinality:"?"}
+            	field baseName {domain: DoLabel label:"Base" cardinality:"?"}
+            	field businessName {domain: DoLabel label:"Business" cardinality:"?"}
             }
             
             
@@ -411,8 +411,7 @@ class VertigoDslParsingTest {
 	
 		val result = parser.parse(parserRule, new StringReader('''
 			create Domain DoLongs {  
-			    dataType : Long
-			    multiple : "true"
+			    dataType : ValueObject
 			    formatter : FmtDefault
 			}
 		'''))
@@ -430,15 +429,15 @@ class VertigoDslParsingTest {
 			create DtDefinition DtBase {
 				stereotype: "KeyConcept"
 				id baseId {domain: DoId label: "Id"}
-				field code {domain: DoCode label: "Code" required:"false"}
-				field name {domain: DoLabel label: "Name" required:"false"}
-				field healthLevel {domain: DoHealth label: "Health Level" required: "false"}	
-				field creationDate {domain: DoLocaldate label: "Creation Date" required:"false"}
-				field description {domain: DoDescription label: "Description" required:"false"}
-				field geoLocation {domain: DoLabel label:"Geographic Location" required:"false"}
-				field assetsValue {domain: DoCurrency label:"Current base assets value" required:"false"}
-				field rentingFee {domain: DoCurrency label: "Renting Fee" required:"false"}
-				field tags {domain: DoMultipleIds label: "Tags" required:"false"}
+				field code {domain: DoCode label: "Code" cardinality:"?"}
+				field name {domain: DoLabel label: "Name" cardinality:"?"}
+				field healthLevel {domain: DoHealth label: "Health Level" cardinality: "?"}	
+				field creationDate {domain: DoLocaldate label: "Creation Date" cardinality:"?"}
+				field description {domain: DoDescription label: "Description" cardinality:"?"}
+				field geoLocation {domain: DoLabel label:"Geographic Location" cardinality:"?"}
+				field assetsValue {domain: DoCurrency label:"Current base assets value" cardinality:"?"}
+				field rentingFee {domain: DoCurrency label: "Renting Fee" cardinality:"?"}
+				field tags {domain: DoMultipleIds label: "Tags" cardinality:"?"}
 			}
 		'''))
 		Assertions.assertNotNull(result)

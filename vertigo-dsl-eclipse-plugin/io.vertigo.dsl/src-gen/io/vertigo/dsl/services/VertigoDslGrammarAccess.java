@@ -470,446 +470,463 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	public class DomainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.Domain");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cCreateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cDomainKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cDataTypeKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDataTypeAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDataTypeDataTypeEnumRuleCall_6_0 = (RuleCall)cDataTypeAssignment_6.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_7 = (UnorderedGroup)cGroup.eContents().get(7);
-		private final Group cGroup_7_0 = (Group)cUnorderedGroup_7.eContents().get(0);
-		private final Keyword cFormatterKeyword_7_0_0 = (Keyword)cGroup_7_0.eContents().get(0);
-		private final Keyword cColonKeyword_7_0_1 = (Keyword)cGroup_7_0.eContents().get(1);
-		private final Assignment cFormatterAssignment_7_0_2 = (Assignment)cGroup_7_0.eContents().get(2);
-		private final CrossReference cFormatterFormatterCrossReference_7_0_2_0 = (CrossReference)cFormatterAssignment_7_0_2.eContents().get(0);
-		private final RuleCall cFormatterFormatterIDTerminalRuleCall_7_0_2_0_1 = (RuleCall)cFormatterFormatterCrossReference_7_0_2_0.eContents().get(1);
-		private final Group cGroup_7_1 = (Group)cUnorderedGroup_7.eContents().get(1);
-		private final Keyword cStoreTypeKeyword_7_1_0 = (Keyword)cGroup_7_1.eContents().get(0);
-		private final Keyword cColonKeyword_7_1_1 = (Keyword)cGroup_7_1.eContents().get(1);
-		private final Assignment cStoreTypeAssignment_7_1_2 = (Assignment)cGroup_7_1.eContents().get(2);
-		private final RuleCall cStoreTypeSTRINGTerminalRuleCall_7_1_2_0 = (RuleCall)cStoreTypeAssignment_7_1_2.eContents().get(0);
-		private final Group cGroup_7_2 = (Group)cUnorderedGroup_7.eContents().get(2);
-		private final Keyword cIndexTypeKeyword_7_2_0 = (Keyword)cGroup_7_2.eContents().get(0);
-		private final Keyword cColonKeyword_7_2_1 = (Keyword)cGroup_7_2.eContents().get(1);
-		private final Assignment cIndexTypeAssignment_7_2_2 = (Assignment)cGroup_7_2.eContents().get(2);
-		private final RuleCall cIndexTypeSTRINGTerminalRuleCall_7_2_2_0 = (RuleCall)cIndexTypeAssignment_7_2_2.eContents().get(0);
-		private final Group cGroup_7_3 = (Group)cUnorderedGroup_7.eContents().get(3);
-		private final Keyword cConstraintKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Keyword cColonKeyword_7_3_1 = (Keyword)cGroup_7_3.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_7_3_2 = (Keyword)cGroup_7_3.eContents().get(2);
-		private final Assignment cConstraintAssignment_7_3_3 = (Assignment)cGroup_7_3.eContents().get(3);
-		private final CrossReference cConstraintConstraintCrossReference_7_3_3_0 = (CrossReference)cConstraintAssignment_7_3_3.eContents().get(0);
-		private final RuleCall cConstraintConstraintIDTerminalRuleCall_7_3_3_0_1 = (RuleCall)cConstraintConstraintCrossReference_7_3_3_0.eContents().get(1);
-		private final Group cGroup_7_3_4 = (Group)cGroup_7_3.eContents().get(4);
-		private final Keyword cCommaKeyword_7_3_4_0 = (Keyword)cGroup_7_3_4.eContents().get(0);
-		private final Assignment cConstraintsAssignment_7_3_4_1 = (Assignment)cGroup_7_3_4.eContents().get(1);
-		private final CrossReference cConstraintsConstraintCrossReference_7_3_4_1_0 = (CrossReference)cConstraintsAssignment_7_3_4_1.eContents().get(0);
-		private final RuleCall cConstraintsConstraintIDTerminalRuleCall_7_3_4_1_0_1 = (RuleCall)cConstraintsConstraintCrossReference_7_3_4_1_0.eContents().get(1);
-		private final Keyword cRightSquareBracketKeyword_7_3_5 = (Keyword)cGroup_7_3.eContents().get(5);
-		private final Group cGroup_7_4 = (Group)cUnorderedGroup_7.eContents().get(4);
-		private final Keyword cMultipleKeyword_7_4_0 = (Keyword)cGroup_7_4.eContents().get(0);
-		private final Keyword cColonKeyword_7_4_1 = (Keyword)cGroup_7_4.eContents().get(1);
-		private final Assignment cMultipleAssignment_7_4_2 = (Assignment)cGroup_7_4.eContents().get(2);
-		private final RuleCall cMultipleBooleanStringEnumRuleCall_7_4_2_0 = (RuleCall)cMultipleAssignment_7_4_2.eContents().get(0);
-		private final Group cGroup_7_5 = (Group)cUnorderedGroup_7.eContents().get(5);
-		private final Keyword cUnitKeyword_7_5_0 = (Keyword)cGroup_7_5.eContents().get(0);
-		private final Keyword cColonKeyword_7_5_1 = (Keyword)cGroup_7_5.eContents().get(1);
-		private final Assignment cUnitAssignment_7_5_2 = (Assignment)cGroup_7_5.eContents().get(2);
-		private final RuleCall cUnitSTRINGTerminalRuleCall_7_5_2_0 = (RuleCall)cUnitAssignment_7_5_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
+		private final Keyword cCreateKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Keyword cDomainKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Assignment cNameAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_0_2_0 = (RuleCall)cNameAssignment_0_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
+		private final Keyword cDataTypeKeyword_0_4 = (Keyword)cGroup_0.eContents().get(4);
+		private final Keyword cColonKeyword_0_5 = (Keyword)cGroup_0.eContents().get(5);
+		private final Assignment cDataTypeAssignment_0_6 = (Assignment)cGroup_0.eContents().get(6);
+		private final RuleCall cDataTypeDataTypeEnumRuleCall_0_6_0 = (RuleCall)cDataTypeAssignment_0_6.eContents().get(0);
+		private final Group cGroup_1 = (Group)cUnorderedGroup.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
+		private final Keyword cTypeKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
+		private final Keyword cColonKeyword_1_0_1 = (Keyword)cGroup_1_0.eContents().get(1);
+		private final Assignment cTypeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
+		private final RuleCall cTypeSTRINGTerminalRuleCall_1_0_2_0 = (RuleCall)cTypeAssignment_1_0_2.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1_1 = (UnorderedGroup)cGroup_1.eContents().get(1);
+		private final Group cGroup_1_1_0 = (Group)cUnorderedGroup_1_1.eContents().get(0);
+		private final Keyword cFormatterKeyword_1_1_0_0 = (Keyword)cGroup_1_1_0.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_0_1 = (Keyword)cGroup_1_1_0.eContents().get(1);
+		private final Assignment cFormatterAssignment_1_1_0_2 = (Assignment)cGroup_1_1_0.eContents().get(2);
+		private final CrossReference cFormatterFormatterCrossReference_1_1_0_2_0 = (CrossReference)cFormatterAssignment_1_1_0_2.eContents().get(0);
+		private final RuleCall cFormatterFormatterIDTerminalRuleCall_1_1_0_2_0_1 = (RuleCall)cFormatterFormatterCrossReference_1_1_0_2_0.eContents().get(1);
+		private final Group cGroup_1_1_1 = (Group)cUnorderedGroup_1_1.eContents().get(1);
+		private final Keyword cStoreTypeKeyword_1_1_1_0 = (Keyword)cGroup_1_1_1.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_1_1 = (Keyword)cGroup_1_1_1.eContents().get(1);
+		private final Assignment cStoreTypeAssignment_1_1_1_2 = (Assignment)cGroup_1_1_1.eContents().get(2);
+		private final RuleCall cStoreTypeSTRINGTerminalRuleCall_1_1_1_2_0 = (RuleCall)cStoreTypeAssignment_1_1_1_2.eContents().get(0);
+		private final Group cGroup_1_1_2 = (Group)cUnorderedGroup_1_1.eContents().get(2);
+		private final Keyword cIndexTypeKeyword_1_1_2_0 = (Keyword)cGroup_1_1_2.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_2_1 = (Keyword)cGroup_1_1_2.eContents().get(1);
+		private final Assignment cIndexTypeAssignment_1_1_2_2 = (Assignment)cGroup_1_1_2.eContents().get(2);
+		private final RuleCall cIndexTypeSTRINGTerminalRuleCall_1_1_2_2_0 = (RuleCall)cIndexTypeAssignment_1_1_2_2.eContents().get(0);
+		private final Group cGroup_1_1_3 = (Group)cUnorderedGroup_1_1.eContents().get(3);
+		private final Keyword cConstraintKeyword_1_1_3_0 = (Keyword)cGroup_1_1_3.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_3_1 = (Keyword)cGroup_1_1_3.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_1_1_3_2 = (Keyword)cGroup_1_1_3.eContents().get(2);
+		private final Assignment cConstraintAssignment_1_1_3_3 = (Assignment)cGroup_1_1_3.eContents().get(3);
+		private final CrossReference cConstraintConstraintCrossReference_1_1_3_3_0 = (CrossReference)cConstraintAssignment_1_1_3_3.eContents().get(0);
+		private final RuleCall cConstraintConstraintIDTerminalRuleCall_1_1_3_3_0_1 = (RuleCall)cConstraintConstraintCrossReference_1_1_3_3_0.eContents().get(1);
+		private final Group cGroup_1_1_3_4 = (Group)cGroup_1_1_3.eContents().get(4);
+		private final Keyword cCommaKeyword_1_1_3_4_0 = (Keyword)cGroup_1_1_3_4.eContents().get(0);
+		private final Assignment cConstraintsAssignment_1_1_3_4_1 = (Assignment)cGroup_1_1_3_4.eContents().get(1);
+		private final CrossReference cConstraintsConstraintCrossReference_1_1_3_4_1_0 = (CrossReference)cConstraintsAssignment_1_1_3_4_1.eContents().get(0);
+		private final RuleCall cConstraintsConstraintIDTerminalRuleCall_1_1_3_4_1_0_1 = (RuleCall)cConstraintsConstraintCrossReference_1_1_3_4_1_0.eContents().get(1);
+		private final Keyword cRightSquareBracketKeyword_1_1_3_5 = (Keyword)cGroup_1_1_3.eContents().get(5);
+		private final Group cGroup_1_1_4 = (Group)cUnorderedGroup_1_1.eContents().get(4);
+		private final Keyword cUnitKeyword_1_1_4_0 = (Keyword)cGroup_1_1_4.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_4_1 = (Keyword)cGroup_1_1_4.eContents().get(1);
+		private final Assignment cUnitAssignment_1_1_4_2 = (Assignment)cGroup_1_1_4.eContents().get(2);
+		private final RuleCall cUnitSTRINGTerminalRuleCall_1_1_4_2_0 = (RuleCall)cUnitAssignment_1_1_4_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//Domain:
 		//	'create' 'Domain' name=ID '{'
-		//	'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? &
-		//	('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
-		//	constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit' ':' unit=STRING)?)
+		//	'dataType' ':' dataType=DataType & ('type' ':' type=STRING)? ('formatter' ':' formatter=[Formatter] & ('storeType'
+		//	':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
+		//	constraints+=[Constraint])* ']')? & ('unit' ':' unit=STRING)?)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'create' 'Domain' name=ID '{' 'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] & ('storeType' ':'
-		//storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
-		//constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit' ':' unit=STRING)?) '}'
-		public Group getGroup() { return cGroup; }
+		//'create' 'Domain' name=ID '{' 'dataType' ':' dataType=DataType & ('type' ':' type=STRING)? ('formatter' ':'
+		//formatter=[Formatter] & ('storeType' ':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':'
+		//'[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? & ('unit' ':' unit=STRING)?)? '}'
+		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
+		
+		//'create' 'Domain' name=ID '{' 'dataType' ':' dataType=DataType
+		public Group getGroup_0() { return cGroup_0; }
 		
 		//'create'
-		public Keyword getCreateKeyword_0() { return cCreateKeyword_0; }
+		public Keyword getCreateKeyword_0_0() { return cCreateKeyword_0_0; }
 		
 		//'Domain'
-		public Keyword getDomainKeyword_1() { return cDomainKeyword_1; }
+		public Keyword getDomainKeyword_0_1() { return cDomainKeyword_0_1; }
 		
 		//name=ID
-		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		public Assignment getNameAssignment_0_2() { return cNameAssignment_0_2; }
 		
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		public RuleCall getNameIDTerminalRuleCall_0_2_0() { return cNameIDTerminalRuleCall_0_2_0; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_0_3() { return cLeftCurlyBracketKeyword_0_3; }
 		
 		//'dataType'
-		public Keyword getDataTypeKeyword_4() { return cDataTypeKeyword_4; }
+		public Keyword getDataTypeKeyword_0_4() { return cDataTypeKeyword_0_4; }
 		
 		//':'
-		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
+		public Keyword getColonKeyword_0_5() { return cColonKeyword_0_5; }
 		
 		//dataType=DataType
-		public Assignment getDataTypeAssignment_6() { return cDataTypeAssignment_6; }
+		public Assignment getDataTypeAssignment_0_6() { return cDataTypeAssignment_0_6; }
 		
 		//DataType
-		public RuleCall getDataTypeDataTypeEnumRuleCall_6_0() { return cDataTypeDataTypeEnumRuleCall_6_0; }
+		public RuleCall getDataTypeDataTypeEnumRuleCall_0_6_0() { return cDataTypeDataTypeEnumRuleCall_0_6_0; }
+		
+		//('type' ':' type=STRING)? ('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? & ('indexType'
+		//':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
+		//('unit' ':' unit=STRING)?)? '}'
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//('type' ':' type=STRING)?
+		public Group getGroup_1_0() { return cGroup_1_0; }
+		
+		//'type'
+		public Keyword getTypeKeyword_1_0_0() { return cTypeKeyword_1_0_0; }
+		
+		//':'
+		public Keyword getColonKeyword_1_0_1() { return cColonKeyword_1_0_1; }
+		
+		//type=STRING
+		public Assignment getTypeAssignment_1_0_2() { return cTypeAssignment_1_0_2; }
+		
+		//STRING
+		public RuleCall getTypeSTRINGTerminalRuleCall_1_0_2_0() { return cTypeSTRINGTerminalRuleCall_1_0_2_0; }
 		
 		//('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? &
-		//('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? & ('multiple' ':'
-		//multiple=BooleanString)? & ('unit' ':' unit=STRING)?)
-		public UnorderedGroup getUnorderedGroup_7() { return cUnorderedGroup_7; }
+		//('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? & ('unit' ':' unit=STRING)?)?
+		public UnorderedGroup getUnorderedGroup_1_1() { return cUnorderedGroup_1_1; }
 		
 		//'formatter' ':' formatter=[Formatter]
-		public Group getGroup_7_0() { return cGroup_7_0; }
+		public Group getGroup_1_1_0() { return cGroup_1_1_0; }
 		
 		//'formatter'
-		public Keyword getFormatterKeyword_7_0_0() { return cFormatterKeyword_7_0_0; }
+		public Keyword getFormatterKeyword_1_1_0_0() { return cFormatterKeyword_1_1_0_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_0_1() { return cColonKeyword_7_0_1; }
+		public Keyword getColonKeyword_1_1_0_1() { return cColonKeyword_1_1_0_1; }
 		
 		//formatter=[Formatter]
-		public Assignment getFormatterAssignment_7_0_2() { return cFormatterAssignment_7_0_2; }
+		public Assignment getFormatterAssignment_1_1_0_2() { return cFormatterAssignment_1_1_0_2; }
 		
 		//[Formatter]
-		public CrossReference getFormatterFormatterCrossReference_7_0_2_0() { return cFormatterFormatterCrossReference_7_0_2_0; }
+		public CrossReference getFormatterFormatterCrossReference_1_1_0_2_0() { return cFormatterFormatterCrossReference_1_1_0_2_0; }
 		
 		//ID
-		public RuleCall getFormatterFormatterIDTerminalRuleCall_7_0_2_0_1() { return cFormatterFormatterIDTerminalRuleCall_7_0_2_0_1; }
+		public RuleCall getFormatterFormatterIDTerminalRuleCall_1_1_0_2_0_1() { return cFormatterFormatterIDTerminalRuleCall_1_1_0_2_0_1; }
 		
 		//('storeType' ':' storeType=STRING)?
-		public Group getGroup_7_1() { return cGroup_7_1; }
+		public Group getGroup_1_1_1() { return cGroup_1_1_1; }
 		
 		//'storeType'
-		public Keyword getStoreTypeKeyword_7_1_0() { return cStoreTypeKeyword_7_1_0; }
+		public Keyword getStoreTypeKeyword_1_1_1_0() { return cStoreTypeKeyword_1_1_1_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_1_1() { return cColonKeyword_7_1_1; }
+		public Keyword getColonKeyword_1_1_1_1() { return cColonKeyword_1_1_1_1; }
 		
 		//storeType=STRING
-		public Assignment getStoreTypeAssignment_7_1_2() { return cStoreTypeAssignment_7_1_2; }
+		public Assignment getStoreTypeAssignment_1_1_1_2() { return cStoreTypeAssignment_1_1_1_2; }
 		
 		//STRING
-		public RuleCall getStoreTypeSTRINGTerminalRuleCall_7_1_2_0() { return cStoreTypeSTRINGTerminalRuleCall_7_1_2_0; }
+		public RuleCall getStoreTypeSTRINGTerminalRuleCall_1_1_1_2_0() { return cStoreTypeSTRINGTerminalRuleCall_1_1_1_2_0; }
 		
 		//('indexType' ':' indexType=STRING)?
-		public Group getGroup_7_2() { return cGroup_7_2; }
+		public Group getGroup_1_1_2() { return cGroup_1_1_2; }
 		
 		//'indexType'
-		public Keyword getIndexTypeKeyword_7_2_0() { return cIndexTypeKeyword_7_2_0; }
+		public Keyword getIndexTypeKeyword_1_1_2_0() { return cIndexTypeKeyword_1_1_2_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_2_1() { return cColonKeyword_7_2_1; }
+		public Keyword getColonKeyword_1_1_2_1() { return cColonKeyword_1_1_2_1; }
 		
 		//indexType=STRING
-		public Assignment getIndexTypeAssignment_7_2_2() { return cIndexTypeAssignment_7_2_2; }
+		public Assignment getIndexTypeAssignment_1_1_2_2() { return cIndexTypeAssignment_1_1_2_2; }
 		
 		//STRING
-		public RuleCall getIndexTypeSTRINGTerminalRuleCall_7_2_2_0() { return cIndexTypeSTRINGTerminalRuleCall_7_2_2_0; }
+		public RuleCall getIndexTypeSTRINGTerminalRuleCall_1_1_2_2_0() { return cIndexTypeSTRINGTerminalRuleCall_1_1_2_2_0; }
 		
 		//('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')?
-		public Group getGroup_7_3() { return cGroup_7_3; }
+		public Group getGroup_1_1_3() { return cGroup_1_1_3; }
 		
 		//'constraint'
-		public Keyword getConstraintKeyword_7_3_0() { return cConstraintKeyword_7_3_0; }
+		public Keyword getConstraintKeyword_1_1_3_0() { return cConstraintKeyword_1_1_3_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_3_1() { return cColonKeyword_7_3_1; }
+		public Keyword getColonKeyword_1_1_3_1() { return cColonKeyword_1_1_3_1; }
 		
 		//'['
-		public Keyword getLeftSquareBracketKeyword_7_3_2() { return cLeftSquareBracketKeyword_7_3_2; }
+		public Keyword getLeftSquareBracketKeyword_1_1_3_2() { return cLeftSquareBracketKeyword_1_1_3_2; }
 		
 		//constraint+=[Constraint]
-		public Assignment getConstraintAssignment_7_3_3() { return cConstraintAssignment_7_3_3; }
+		public Assignment getConstraintAssignment_1_1_3_3() { return cConstraintAssignment_1_1_3_3; }
 		
 		//[Constraint]
-		public CrossReference getConstraintConstraintCrossReference_7_3_3_0() { return cConstraintConstraintCrossReference_7_3_3_0; }
+		public CrossReference getConstraintConstraintCrossReference_1_1_3_3_0() { return cConstraintConstraintCrossReference_1_1_3_3_0; }
 		
 		//ID
-		public RuleCall getConstraintConstraintIDTerminalRuleCall_7_3_3_0_1() { return cConstraintConstraintIDTerminalRuleCall_7_3_3_0_1; }
+		public RuleCall getConstraintConstraintIDTerminalRuleCall_1_1_3_3_0_1() { return cConstraintConstraintIDTerminalRuleCall_1_1_3_3_0_1; }
 		
 		//(','+ constraints+=[Constraint])*
-		public Group getGroup_7_3_4() { return cGroup_7_3_4; }
+		public Group getGroup_1_1_3_4() { return cGroup_1_1_3_4; }
 		
 		//','+
-		public Keyword getCommaKeyword_7_3_4_0() { return cCommaKeyword_7_3_4_0; }
+		public Keyword getCommaKeyword_1_1_3_4_0() { return cCommaKeyword_1_1_3_4_0; }
 		
 		//constraints+=[Constraint]
-		public Assignment getConstraintsAssignment_7_3_4_1() { return cConstraintsAssignment_7_3_4_1; }
+		public Assignment getConstraintsAssignment_1_1_3_4_1() { return cConstraintsAssignment_1_1_3_4_1; }
 		
 		//[Constraint]
-		public CrossReference getConstraintsConstraintCrossReference_7_3_4_1_0() { return cConstraintsConstraintCrossReference_7_3_4_1_0; }
+		public CrossReference getConstraintsConstraintCrossReference_1_1_3_4_1_0() { return cConstraintsConstraintCrossReference_1_1_3_4_1_0; }
 		
 		//ID
-		public RuleCall getConstraintsConstraintIDTerminalRuleCall_7_3_4_1_0_1() { return cConstraintsConstraintIDTerminalRuleCall_7_3_4_1_0_1; }
+		public RuleCall getConstraintsConstraintIDTerminalRuleCall_1_1_3_4_1_0_1() { return cConstraintsConstraintIDTerminalRuleCall_1_1_3_4_1_0_1; }
 		
 		//']'
-		public Keyword getRightSquareBracketKeyword_7_3_5() { return cRightSquareBracketKeyword_7_3_5; }
-		
-		//('multiple' ':' multiple=BooleanString)?
-		public Group getGroup_7_4() { return cGroup_7_4; }
-		
-		//'multiple'
-		public Keyword getMultipleKeyword_7_4_0() { return cMultipleKeyword_7_4_0; }
-		
-		//':'
-		public Keyword getColonKeyword_7_4_1() { return cColonKeyword_7_4_1; }
-		
-		//multiple=BooleanString
-		public Assignment getMultipleAssignment_7_4_2() { return cMultipleAssignment_7_4_2; }
-		
-		//BooleanString
-		public RuleCall getMultipleBooleanStringEnumRuleCall_7_4_2_0() { return cMultipleBooleanStringEnumRuleCall_7_4_2_0; }
+		public Keyword getRightSquareBracketKeyword_1_1_3_5() { return cRightSquareBracketKeyword_1_1_3_5; }
 		
 		//('unit' ':' unit=STRING)?
-		public Group getGroup_7_5() { return cGroup_7_5; }
+		public Group getGroup_1_1_4() { return cGroup_1_1_4; }
 		
 		//'unit'
-		public Keyword getUnitKeyword_7_5_0() { return cUnitKeyword_7_5_0; }
+		public Keyword getUnitKeyword_1_1_4_0() { return cUnitKeyword_1_1_4_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_5_1() { return cColonKeyword_7_5_1; }
+		public Keyword getColonKeyword_1_1_4_1() { return cColonKeyword_1_1_4_1; }
 		
 		//unit=STRING
-		public Assignment getUnitAssignment_7_5_2() { return cUnitAssignment_7_5_2; }
+		public Assignment getUnitAssignment_1_1_4_2() { return cUnitAssignment_1_1_4_2; }
 		
 		//STRING
-		public RuleCall getUnitSTRINGTerminalRuleCall_7_5_2_0() { return cUnitSTRINGTerminalRuleCall_7_5_2_0; }
+		public RuleCall getUnitSTRINGTerminalRuleCall_1_1_4_2_0() { return cUnitSTRINGTerminalRuleCall_1_1_4_2_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
 	}
 	public class AlterDomainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.AlterDomain");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cAlterKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Keyword cDomainKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cDomainAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cDomainDomainTypeCrossReference_2_0 = (CrossReference)cDomainAssignment_2.eContents().get(0);
-		private final RuleCall cDomainDomainTypeIDTerminalRuleCall_2_0_1 = (RuleCall)cDomainDomainTypeCrossReference_2_0.eContents().get(1);
-		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Keyword cDataTypeKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		private final Keyword cColonKeyword_5 = (Keyword)cGroup.eContents().get(5);
-		private final Assignment cDataTypeAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cDataTypeDataTypeEnumRuleCall_6_0 = (RuleCall)cDataTypeAssignment_6.eContents().get(0);
-		private final UnorderedGroup cUnorderedGroup_7 = (UnorderedGroup)cGroup.eContents().get(7);
-		private final Group cGroup_7_0 = (Group)cUnorderedGroup_7.eContents().get(0);
-		private final Keyword cFormatterKeyword_7_0_0 = (Keyword)cGroup_7_0.eContents().get(0);
-		private final Keyword cColonKeyword_7_0_1 = (Keyword)cGroup_7_0.eContents().get(1);
-		private final Assignment cFormatterAssignment_7_0_2 = (Assignment)cGroup_7_0.eContents().get(2);
-		private final CrossReference cFormatterFormatterCrossReference_7_0_2_0 = (CrossReference)cFormatterAssignment_7_0_2.eContents().get(0);
-		private final RuleCall cFormatterFormatterIDTerminalRuleCall_7_0_2_0_1 = (RuleCall)cFormatterFormatterCrossReference_7_0_2_0.eContents().get(1);
-		private final Group cGroup_7_1 = (Group)cUnorderedGroup_7.eContents().get(1);
-		private final Keyword cStoreTypeKeyword_7_1_0 = (Keyword)cGroup_7_1.eContents().get(0);
-		private final Keyword cColonKeyword_7_1_1 = (Keyword)cGroup_7_1.eContents().get(1);
-		private final Assignment cStoreTypeAssignment_7_1_2 = (Assignment)cGroup_7_1.eContents().get(2);
-		private final RuleCall cStoreTypeSTRINGTerminalRuleCall_7_1_2_0 = (RuleCall)cStoreTypeAssignment_7_1_2.eContents().get(0);
-		private final Group cGroup_7_2 = (Group)cUnorderedGroup_7.eContents().get(2);
-		private final Keyword cIndexTypeKeyword_7_2_0 = (Keyword)cGroup_7_2.eContents().get(0);
-		private final Keyword cColonKeyword_7_2_1 = (Keyword)cGroup_7_2.eContents().get(1);
-		private final Assignment cIndexTypeAssignment_7_2_2 = (Assignment)cGroup_7_2.eContents().get(2);
-		private final RuleCall cIndexTypeSTRINGTerminalRuleCall_7_2_2_0 = (RuleCall)cIndexTypeAssignment_7_2_2.eContents().get(0);
-		private final Group cGroup_7_3 = (Group)cUnorderedGroup_7.eContents().get(3);
-		private final Keyword cConstraintKeyword_7_3_0 = (Keyword)cGroup_7_3.eContents().get(0);
-		private final Keyword cColonKeyword_7_3_1 = (Keyword)cGroup_7_3.eContents().get(1);
-		private final Keyword cLeftSquareBracketKeyword_7_3_2 = (Keyword)cGroup_7_3.eContents().get(2);
-		private final Assignment cConstraintAssignment_7_3_3 = (Assignment)cGroup_7_3.eContents().get(3);
-		private final CrossReference cConstraintConstraintCrossReference_7_3_3_0 = (CrossReference)cConstraintAssignment_7_3_3.eContents().get(0);
-		private final RuleCall cConstraintConstraintIDTerminalRuleCall_7_3_3_0_1 = (RuleCall)cConstraintConstraintCrossReference_7_3_3_0.eContents().get(1);
-		private final Group cGroup_7_3_4 = (Group)cGroup_7_3.eContents().get(4);
-		private final Keyword cCommaKeyword_7_3_4_0 = (Keyword)cGroup_7_3_4.eContents().get(0);
-		private final Assignment cConstraintsAssignment_7_3_4_1 = (Assignment)cGroup_7_3_4.eContents().get(1);
-		private final CrossReference cConstraintsConstraintCrossReference_7_3_4_1_0 = (CrossReference)cConstraintsAssignment_7_3_4_1.eContents().get(0);
-		private final RuleCall cConstraintsConstraintIDTerminalRuleCall_7_3_4_1_0_1 = (RuleCall)cConstraintsConstraintCrossReference_7_3_4_1_0.eContents().get(1);
-		private final Keyword cRightSquareBracketKeyword_7_3_5 = (Keyword)cGroup_7_3.eContents().get(5);
-		private final Group cGroup_7_4 = (Group)cUnorderedGroup_7.eContents().get(4);
-		private final Keyword cMultipleKeyword_7_4_0 = (Keyword)cGroup_7_4.eContents().get(0);
-		private final Keyword cColonKeyword_7_4_1 = (Keyword)cGroup_7_4.eContents().get(1);
-		private final Assignment cMultipleAssignment_7_4_2 = (Assignment)cGroup_7_4.eContents().get(2);
-		private final RuleCall cMultipleBooleanStringEnumRuleCall_7_4_2_0 = (RuleCall)cMultipleAssignment_7_4_2.eContents().get(0);
-		private final Group cGroup_7_5 = (Group)cUnorderedGroup_7.eContents().get(5);
-		private final Keyword cUnitKeyword_7_5_0 = (Keyword)cGroup_7_5.eContents().get(0);
-		private final Keyword cColonKeyword_7_5_1 = (Keyword)cGroup_7_5.eContents().get(1);
-		private final Assignment cUnitAssignment_7_5_2 = (Assignment)cGroup_7_5.eContents().get(2);
-		private final RuleCall cUnitSTRINGTerminalRuleCall_7_5_2_0 = (RuleCall)cUnitAssignment_7_5_2.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cUnorderedGroup.eContents().get(0);
+		private final Keyword cAlterKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Keyword cDomainKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
+		private final Assignment cDomainAssignment_0_2 = (Assignment)cGroup_0.eContents().get(2);
+		private final CrossReference cDomainDomainTypeCrossReference_0_2_0 = (CrossReference)cDomainAssignment_0_2.eContents().get(0);
+		private final RuleCall cDomainDomainTypeIDTerminalRuleCall_0_2_0_1 = (RuleCall)cDomainDomainTypeCrossReference_0_2_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_0_3 = (Keyword)cGroup_0.eContents().get(3);
+		private final Keyword cDataTypeKeyword_0_4 = (Keyword)cGroup_0.eContents().get(4);
+		private final Keyword cColonKeyword_0_5 = (Keyword)cGroup_0.eContents().get(5);
+		private final Assignment cDataTypeAssignment_0_6 = (Assignment)cGroup_0.eContents().get(6);
+		private final RuleCall cDataTypeDataTypeEnumRuleCall_0_6_0 = (RuleCall)cDataTypeAssignment_0_6.eContents().get(0);
+		private final Group cGroup_1 = (Group)cUnorderedGroup.eContents().get(1);
+		private final Group cGroup_1_0 = (Group)cGroup_1.eContents().get(0);
+		private final Keyword cTypeKeyword_1_0_0 = (Keyword)cGroup_1_0.eContents().get(0);
+		private final Keyword cColonKeyword_1_0_1 = (Keyword)cGroup_1_0.eContents().get(1);
+		private final Assignment cTypeAssignment_1_0_2 = (Assignment)cGroup_1_0.eContents().get(2);
+		private final RuleCall cTypeSTRINGTerminalRuleCall_1_0_2_0 = (RuleCall)cTypeAssignment_1_0_2.eContents().get(0);
+		private final UnorderedGroup cUnorderedGroup_1_1 = (UnorderedGroup)cGroup_1.eContents().get(1);
+		private final Group cGroup_1_1_0 = (Group)cUnorderedGroup_1_1.eContents().get(0);
+		private final Keyword cFormatterKeyword_1_1_0_0 = (Keyword)cGroup_1_1_0.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_0_1 = (Keyword)cGroup_1_1_0.eContents().get(1);
+		private final Assignment cFormatterAssignment_1_1_0_2 = (Assignment)cGroup_1_1_0.eContents().get(2);
+		private final CrossReference cFormatterFormatterCrossReference_1_1_0_2_0 = (CrossReference)cFormatterAssignment_1_1_0_2.eContents().get(0);
+		private final RuleCall cFormatterFormatterIDTerminalRuleCall_1_1_0_2_0_1 = (RuleCall)cFormatterFormatterCrossReference_1_1_0_2_0.eContents().get(1);
+		private final Group cGroup_1_1_1 = (Group)cUnorderedGroup_1_1.eContents().get(1);
+		private final Keyword cStoreTypeKeyword_1_1_1_0 = (Keyword)cGroup_1_1_1.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_1_1 = (Keyword)cGroup_1_1_1.eContents().get(1);
+		private final Assignment cStoreTypeAssignment_1_1_1_2 = (Assignment)cGroup_1_1_1.eContents().get(2);
+		private final RuleCall cStoreTypeSTRINGTerminalRuleCall_1_1_1_2_0 = (RuleCall)cStoreTypeAssignment_1_1_1_2.eContents().get(0);
+		private final Group cGroup_1_1_2 = (Group)cUnorderedGroup_1_1.eContents().get(2);
+		private final Keyword cIndexTypeKeyword_1_1_2_0 = (Keyword)cGroup_1_1_2.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_2_1 = (Keyword)cGroup_1_1_2.eContents().get(1);
+		private final Assignment cIndexTypeAssignment_1_1_2_2 = (Assignment)cGroup_1_1_2.eContents().get(2);
+		private final RuleCall cIndexTypeSTRINGTerminalRuleCall_1_1_2_2_0 = (RuleCall)cIndexTypeAssignment_1_1_2_2.eContents().get(0);
+		private final Group cGroup_1_1_3 = (Group)cUnorderedGroup_1_1.eContents().get(3);
+		private final Keyword cConstraintKeyword_1_1_3_0 = (Keyword)cGroup_1_1_3.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_3_1 = (Keyword)cGroup_1_1_3.eContents().get(1);
+		private final Keyword cLeftSquareBracketKeyword_1_1_3_2 = (Keyword)cGroup_1_1_3.eContents().get(2);
+		private final Assignment cConstraintAssignment_1_1_3_3 = (Assignment)cGroup_1_1_3.eContents().get(3);
+		private final CrossReference cConstraintConstraintCrossReference_1_1_3_3_0 = (CrossReference)cConstraintAssignment_1_1_3_3.eContents().get(0);
+		private final RuleCall cConstraintConstraintIDTerminalRuleCall_1_1_3_3_0_1 = (RuleCall)cConstraintConstraintCrossReference_1_1_3_3_0.eContents().get(1);
+		private final Group cGroup_1_1_3_4 = (Group)cGroup_1_1_3.eContents().get(4);
+		private final Keyword cCommaKeyword_1_1_3_4_0 = (Keyword)cGroup_1_1_3_4.eContents().get(0);
+		private final Assignment cConstraintsAssignment_1_1_3_4_1 = (Assignment)cGroup_1_1_3_4.eContents().get(1);
+		private final CrossReference cConstraintsConstraintCrossReference_1_1_3_4_1_0 = (CrossReference)cConstraintsAssignment_1_1_3_4_1.eContents().get(0);
+		private final RuleCall cConstraintsConstraintIDTerminalRuleCall_1_1_3_4_1_0_1 = (RuleCall)cConstraintsConstraintCrossReference_1_1_3_4_1_0.eContents().get(1);
+		private final Keyword cRightSquareBracketKeyword_1_1_3_5 = (Keyword)cGroup_1_1_3.eContents().get(5);
+		private final Group cGroup_1_1_4 = (Group)cUnorderedGroup_1_1.eContents().get(4);
+		private final Keyword cUnitKeyword_1_1_4_0 = (Keyword)cGroup_1_1_4.eContents().get(0);
+		private final Keyword cColonKeyword_1_1_4_1 = (Keyword)cGroup_1_1_4.eContents().get(1);
+		private final Assignment cUnitAssignment_1_1_4_2 = (Assignment)cGroup_1_1_4.eContents().get(2);
+		private final RuleCall cUnitSTRINGTerminalRuleCall_1_1_4_2_0 = (RuleCall)cUnitAssignment_1_1_4_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
 		
 		//AlterDomain:
 		//	'alter' 'Domain' domain=[DomainType] '{'
-		//	'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? &
-		//	('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
-		//	constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit' ':' unit=STRING)?)
+		//	'dataType' ':' dataType=DataType & ('type' ':' type=STRING)? ('formatter' ':' formatter=[Formatter] & ('storeType'
+		//	':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
+		//	constraints+=[Constraint])* ']')? & ('unit' ':' unit=STRING)?)?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'alter' 'Domain' domain=[DomainType] '{' 'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] &
-		//('storeType' ':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':' '['
-		//constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit'
-		//':' unit=STRING)?) '}'
-		public Group getGroup() { return cGroup; }
+		//'alter' 'Domain' domain=[DomainType] '{' 'dataType' ':' dataType=DataType & ('type' ':' type=STRING)? ('formatter' ':'
+		//formatter=[Formatter] & ('storeType' ':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':'
+		//'[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? & ('unit' ':' unit=STRING)?)? '}'
+		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
+		
+		//'alter' 'Domain' domain=[DomainType] '{' 'dataType' ':' dataType=DataType
+		public Group getGroup_0() { return cGroup_0; }
 		
 		//'alter'
-		public Keyword getAlterKeyword_0() { return cAlterKeyword_0; }
+		public Keyword getAlterKeyword_0_0() { return cAlterKeyword_0_0; }
 		
 		//'Domain'
-		public Keyword getDomainKeyword_1() { return cDomainKeyword_1; }
+		public Keyword getDomainKeyword_0_1() { return cDomainKeyword_0_1; }
 		
 		//domain=[DomainType]
-		public Assignment getDomainAssignment_2() { return cDomainAssignment_2; }
+		public Assignment getDomainAssignment_0_2() { return cDomainAssignment_0_2; }
 		
 		//[DomainType]
-		public CrossReference getDomainDomainTypeCrossReference_2_0() { return cDomainDomainTypeCrossReference_2_0; }
+		public CrossReference getDomainDomainTypeCrossReference_0_2_0() { return cDomainDomainTypeCrossReference_0_2_0; }
 		
 		//ID
-		public RuleCall getDomainDomainTypeIDTerminalRuleCall_2_0_1() { return cDomainDomainTypeIDTerminalRuleCall_2_0_1; }
+		public RuleCall getDomainDomainTypeIDTerminalRuleCall_0_2_0_1() { return cDomainDomainTypeIDTerminalRuleCall_0_2_0_1; }
 		
 		//'{'
-		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		public Keyword getLeftCurlyBracketKeyword_0_3() { return cLeftCurlyBracketKeyword_0_3; }
 		
 		//'dataType'
-		public Keyword getDataTypeKeyword_4() { return cDataTypeKeyword_4; }
+		public Keyword getDataTypeKeyword_0_4() { return cDataTypeKeyword_0_4; }
 		
 		//':'
-		public Keyword getColonKeyword_5() { return cColonKeyword_5; }
+		public Keyword getColonKeyword_0_5() { return cColonKeyword_0_5; }
 		
 		//dataType=DataType
-		public Assignment getDataTypeAssignment_6() { return cDataTypeAssignment_6; }
+		public Assignment getDataTypeAssignment_0_6() { return cDataTypeAssignment_0_6; }
 		
 		//DataType
-		public RuleCall getDataTypeDataTypeEnumRuleCall_6_0() { return cDataTypeDataTypeEnumRuleCall_6_0; }
+		public RuleCall getDataTypeDataTypeEnumRuleCall_0_6_0() { return cDataTypeDataTypeEnumRuleCall_0_6_0; }
+		
+		//('type' ':' type=STRING)? ('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? & ('indexType'
+		//':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
+		//('unit' ':' unit=STRING)?)? '}'
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//('type' ':' type=STRING)?
+		public Group getGroup_1_0() { return cGroup_1_0; }
+		
+		//'type'
+		public Keyword getTypeKeyword_1_0_0() { return cTypeKeyword_1_0_0; }
+		
+		//':'
+		public Keyword getColonKeyword_1_0_1() { return cColonKeyword_1_0_1; }
+		
+		//type=STRING
+		public Assignment getTypeAssignment_1_0_2() { return cTypeAssignment_1_0_2; }
+		
+		//STRING
+		public RuleCall getTypeSTRINGTerminalRuleCall_1_0_2_0() { return cTypeSTRINGTerminalRuleCall_1_0_2_0; }
 		
 		//('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? &
-		//('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? & ('multiple' ':'
-		//multiple=BooleanString)? & ('unit' ':' unit=STRING)?)
-		public UnorderedGroup getUnorderedGroup_7() { return cUnorderedGroup_7; }
+		//('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? & ('unit' ':' unit=STRING)?)?
+		public UnorderedGroup getUnorderedGroup_1_1() { return cUnorderedGroup_1_1; }
 		
 		//'formatter' ':' formatter=[Formatter]
-		public Group getGroup_7_0() { return cGroup_7_0; }
+		public Group getGroup_1_1_0() { return cGroup_1_1_0; }
 		
 		//'formatter'
-		public Keyword getFormatterKeyword_7_0_0() { return cFormatterKeyword_7_0_0; }
+		public Keyword getFormatterKeyword_1_1_0_0() { return cFormatterKeyword_1_1_0_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_0_1() { return cColonKeyword_7_0_1; }
+		public Keyword getColonKeyword_1_1_0_1() { return cColonKeyword_1_1_0_1; }
 		
 		//formatter=[Formatter]
-		public Assignment getFormatterAssignment_7_0_2() { return cFormatterAssignment_7_0_2; }
+		public Assignment getFormatterAssignment_1_1_0_2() { return cFormatterAssignment_1_1_0_2; }
 		
 		//[Formatter]
-		public CrossReference getFormatterFormatterCrossReference_7_0_2_0() { return cFormatterFormatterCrossReference_7_0_2_0; }
+		public CrossReference getFormatterFormatterCrossReference_1_1_0_2_0() { return cFormatterFormatterCrossReference_1_1_0_2_0; }
 		
 		//ID
-		public RuleCall getFormatterFormatterIDTerminalRuleCall_7_0_2_0_1() { return cFormatterFormatterIDTerminalRuleCall_7_0_2_0_1; }
+		public RuleCall getFormatterFormatterIDTerminalRuleCall_1_1_0_2_0_1() { return cFormatterFormatterIDTerminalRuleCall_1_1_0_2_0_1; }
 		
 		//('storeType' ':' storeType=STRING)?
-		public Group getGroup_7_1() { return cGroup_7_1; }
+		public Group getGroup_1_1_1() { return cGroup_1_1_1; }
 		
 		//'storeType'
-		public Keyword getStoreTypeKeyword_7_1_0() { return cStoreTypeKeyword_7_1_0; }
+		public Keyword getStoreTypeKeyword_1_1_1_0() { return cStoreTypeKeyword_1_1_1_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_1_1() { return cColonKeyword_7_1_1; }
+		public Keyword getColonKeyword_1_1_1_1() { return cColonKeyword_1_1_1_1; }
 		
 		//storeType=STRING
-		public Assignment getStoreTypeAssignment_7_1_2() { return cStoreTypeAssignment_7_1_2; }
+		public Assignment getStoreTypeAssignment_1_1_1_2() { return cStoreTypeAssignment_1_1_1_2; }
 		
 		//STRING
-		public RuleCall getStoreTypeSTRINGTerminalRuleCall_7_1_2_0() { return cStoreTypeSTRINGTerminalRuleCall_7_1_2_0; }
+		public RuleCall getStoreTypeSTRINGTerminalRuleCall_1_1_1_2_0() { return cStoreTypeSTRINGTerminalRuleCall_1_1_1_2_0; }
 		
 		//('indexType' ':' indexType=STRING)?
-		public Group getGroup_7_2() { return cGroup_7_2; }
+		public Group getGroup_1_1_2() { return cGroup_1_1_2; }
 		
 		//'indexType'
-		public Keyword getIndexTypeKeyword_7_2_0() { return cIndexTypeKeyword_7_2_0; }
+		public Keyword getIndexTypeKeyword_1_1_2_0() { return cIndexTypeKeyword_1_1_2_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_2_1() { return cColonKeyword_7_2_1; }
+		public Keyword getColonKeyword_1_1_2_1() { return cColonKeyword_1_1_2_1; }
 		
 		//indexType=STRING
-		public Assignment getIndexTypeAssignment_7_2_2() { return cIndexTypeAssignment_7_2_2; }
+		public Assignment getIndexTypeAssignment_1_1_2_2() { return cIndexTypeAssignment_1_1_2_2; }
 		
 		//STRING
-		public RuleCall getIndexTypeSTRINGTerminalRuleCall_7_2_2_0() { return cIndexTypeSTRINGTerminalRuleCall_7_2_2_0; }
+		public RuleCall getIndexTypeSTRINGTerminalRuleCall_1_1_2_2_0() { return cIndexTypeSTRINGTerminalRuleCall_1_1_2_2_0; }
 		
 		//('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')?
-		public Group getGroup_7_3() { return cGroup_7_3; }
+		public Group getGroup_1_1_3() { return cGroup_1_1_3; }
 		
 		//'constraint'
-		public Keyword getConstraintKeyword_7_3_0() { return cConstraintKeyword_7_3_0; }
+		public Keyword getConstraintKeyword_1_1_3_0() { return cConstraintKeyword_1_1_3_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_3_1() { return cColonKeyword_7_3_1; }
+		public Keyword getColonKeyword_1_1_3_1() { return cColonKeyword_1_1_3_1; }
 		
 		//'['
-		public Keyword getLeftSquareBracketKeyword_7_3_2() { return cLeftSquareBracketKeyword_7_3_2; }
+		public Keyword getLeftSquareBracketKeyword_1_1_3_2() { return cLeftSquareBracketKeyword_1_1_3_2; }
 		
 		//constraint+=[Constraint]
-		public Assignment getConstraintAssignment_7_3_3() { return cConstraintAssignment_7_3_3; }
+		public Assignment getConstraintAssignment_1_1_3_3() { return cConstraintAssignment_1_1_3_3; }
 		
 		//[Constraint]
-		public CrossReference getConstraintConstraintCrossReference_7_3_3_0() { return cConstraintConstraintCrossReference_7_3_3_0; }
+		public CrossReference getConstraintConstraintCrossReference_1_1_3_3_0() { return cConstraintConstraintCrossReference_1_1_3_3_0; }
 		
 		//ID
-		public RuleCall getConstraintConstraintIDTerminalRuleCall_7_3_3_0_1() { return cConstraintConstraintIDTerminalRuleCall_7_3_3_0_1; }
+		public RuleCall getConstraintConstraintIDTerminalRuleCall_1_1_3_3_0_1() { return cConstraintConstraintIDTerminalRuleCall_1_1_3_3_0_1; }
 		
 		//(','+ constraints+=[Constraint])*
-		public Group getGroup_7_3_4() { return cGroup_7_3_4; }
+		public Group getGroup_1_1_3_4() { return cGroup_1_1_3_4; }
 		
 		//','+
-		public Keyword getCommaKeyword_7_3_4_0() { return cCommaKeyword_7_3_4_0; }
+		public Keyword getCommaKeyword_1_1_3_4_0() { return cCommaKeyword_1_1_3_4_0; }
 		
 		//constraints+=[Constraint]
-		public Assignment getConstraintsAssignment_7_3_4_1() { return cConstraintsAssignment_7_3_4_1; }
+		public Assignment getConstraintsAssignment_1_1_3_4_1() { return cConstraintsAssignment_1_1_3_4_1; }
 		
 		//[Constraint]
-		public CrossReference getConstraintsConstraintCrossReference_7_3_4_1_0() { return cConstraintsConstraintCrossReference_7_3_4_1_0; }
+		public CrossReference getConstraintsConstraintCrossReference_1_1_3_4_1_0() { return cConstraintsConstraintCrossReference_1_1_3_4_1_0; }
 		
 		//ID
-		public RuleCall getConstraintsConstraintIDTerminalRuleCall_7_3_4_1_0_1() { return cConstraintsConstraintIDTerminalRuleCall_7_3_4_1_0_1; }
+		public RuleCall getConstraintsConstraintIDTerminalRuleCall_1_1_3_4_1_0_1() { return cConstraintsConstraintIDTerminalRuleCall_1_1_3_4_1_0_1; }
 		
 		//']'
-		public Keyword getRightSquareBracketKeyword_7_3_5() { return cRightSquareBracketKeyword_7_3_5; }
-		
-		//('multiple' ':' multiple=BooleanString)?
-		public Group getGroup_7_4() { return cGroup_7_4; }
-		
-		//'multiple'
-		public Keyword getMultipleKeyword_7_4_0() { return cMultipleKeyword_7_4_0; }
-		
-		//':'
-		public Keyword getColonKeyword_7_4_1() { return cColonKeyword_7_4_1; }
-		
-		//multiple=BooleanString
-		public Assignment getMultipleAssignment_7_4_2() { return cMultipleAssignment_7_4_2; }
-		
-		//BooleanString
-		public RuleCall getMultipleBooleanStringEnumRuleCall_7_4_2_0() { return cMultipleBooleanStringEnumRuleCall_7_4_2_0; }
+		public Keyword getRightSquareBracketKeyword_1_1_3_5() { return cRightSquareBracketKeyword_1_1_3_5; }
 		
 		//('unit' ':' unit=STRING)?
-		public Group getGroup_7_5() { return cGroup_7_5; }
+		public Group getGroup_1_1_4() { return cGroup_1_1_4; }
 		
 		//'unit'
-		public Keyword getUnitKeyword_7_5_0() { return cUnitKeyword_7_5_0; }
+		public Keyword getUnitKeyword_1_1_4_0() { return cUnitKeyword_1_1_4_0; }
 		
 		//':'
-		public Keyword getColonKeyword_7_5_1() { return cColonKeyword_7_5_1; }
+		public Keyword getColonKeyword_1_1_4_1() { return cColonKeyword_1_1_4_1; }
 		
 		//unit=STRING
-		public Assignment getUnitAssignment_7_5_2() { return cUnitAssignment_7_5_2; }
+		public Assignment getUnitAssignment_1_1_4_2() { return cUnitAssignment_1_1_4_2; }
 		
 		//STRING
-		public RuleCall getUnitSTRINGTerminalRuleCall_7_5_2_0() { return cUnitSTRINGTerminalRuleCall_7_5_2_0; }
+		public RuleCall getUnitSTRINGTerminalRuleCall_1_1_4_2_0() { return cUnitSTRINGTerminalRuleCall_1_1_4_2_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_1_2() { return cRightCurlyBracketKeyword_1_2; }
 	}
 	public class DomainTypeElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.DomainType");
@@ -1046,10 +1063,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelSTRINGTerminalRuleCall_1_1_2_0 = (RuleCall)cLabelAssignment_1_1_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_1_3 = (Keyword)cGroup_1_1.eContents().get(3);
 		private final Group cGroup_1_2 = (Group)cUnorderedGroup_1.eContents().get(2);
-		private final Keyword cRequiredKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
+		private final Keyword cCardinalityKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
 		private final Keyword cColonKeyword_1_2_1 = (Keyword)cGroup_1_2.eContents().get(1);
-		private final Assignment cRequiredAssignment_1_2_2 = (Assignment)cGroup_1_2.eContents().get(2);
-		private final RuleCall cRequiredBooleanStringEnumRuleCall_1_2_2_0 = (RuleCall)cRequiredAssignment_1_2_2.eContents().get(0);
+		private final Assignment cCardinalityAssignment_1_2_2 = (Assignment)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCardinalityCardinalityStringEnumRuleCall_1_2_2_0 = (RuleCall)cCardinalityAssignment_1_2_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_2_3 = (Keyword)cGroup_1_2.eContents().get(3);
 		private final Group cGroup_1_3 = (Group)cUnorderedGroup_1.eContents().get(3);
 		private final Keyword cPersistentKeyword_1_3_0 = (Keyword)cGroup_1_3.eContents().get(0);
@@ -1060,19 +1077,19 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//DtDefinitionDataFieldString:
-		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':'
-		//	required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
+		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':'
+		//	cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':'
-		//required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}'
+		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':'
+		//cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
-		//('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':'
-		//required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','?)?)
+		//('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':'
+		//cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','?)?)
 		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
 		
 		//'domain' ':' refToDomainType=RefToDomainType ','?
@@ -1111,20 +1128,20 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//','?
 		public Keyword getCommaKeyword_1_1_3() { return cCommaKeyword_1_1_3; }
 		
-		//'required' ':' required=BooleanString ','?
+		//'cardinality' ':' cardinality=CardinalityString ','?
 		public Group getGroup_1_2() { return cGroup_1_2; }
 		
-		//'required'
-		public Keyword getRequiredKeyword_1_2_0() { return cRequiredKeyword_1_2_0; }
+		//'cardinality'
+		public Keyword getCardinalityKeyword_1_2_0() { return cCardinalityKeyword_1_2_0; }
 		
 		//':'
 		public Keyword getColonKeyword_1_2_1() { return cColonKeyword_1_2_1; }
 		
-		//required=BooleanString
-		public Assignment getRequiredAssignment_1_2_2() { return cRequiredAssignment_1_2_2; }
+		//cardinality=CardinalityString
+		public Assignment getCardinalityAssignment_1_2_2() { return cCardinalityAssignment_1_2_2; }
 		
-		//BooleanString
-		public RuleCall getRequiredBooleanStringEnumRuleCall_1_2_2_0() { return cRequiredBooleanStringEnumRuleCall_1_2_2_0; }
+		//CardinalityString
+		public RuleCall getCardinalityCardinalityStringEnumRuleCall_1_2_2_0() { return cCardinalityCardinalityStringEnumRuleCall_1_2_2_0; }
 		
 		//','?
 		public Keyword getCommaKeyword_1_2_3() { return cCommaKeyword_1_2_3; }
@@ -2131,10 +2148,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cRefToDomainTypeRefToDomainTypeParserRuleCall_1_0_2_0 = (RuleCall)cRefToDomainTypeAssignment_1_0_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_0_3 = (Keyword)cGroup_1_0.eContents().get(3);
 		private final Group cGroup_1_1 = (Group)cUnorderedGroup_1.eContents().get(1);
-		private final Keyword cRequiredKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Keyword cCardinalityKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
 		private final Keyword cColonKeyword_1_1_1 = (Keyword)cGroup_1_1.eContents().get(1);
-		private final Assignment cRequiredAssignment_1_1_2 = (Assignment)cGroup_1_1.eContents().get(2);
-		private final RuleCall cRequiredBooleanStringEnumRuleCall_1_1_2_0 = (RuleCall)cRequiredAssignment_1_1_2.eContents().get(0);
+		private final Assignment cCardinalityAssignment_1_1_2 = (Assignment)cGroup_1_1.eContents().get(2);
+		private final RuleCall cCardinalityCardinalityStringEnumRuleCall_1_1_2_0 = (RuleCall)cCardinalityAssignment_1_1_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_1_3 = (Keyword)cGroup_1_1.eContents().get(3);
 		private final Group cGroup_1_2 = (Group)cUnorderedGroup_1.eContents().get(2);
 		private final Keyword cInOutKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
@@ -2145,18 +2162,18 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//TaskAttributeString:
-		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'required' ':' required=BooleanString ','? & 'inOut' ':'
-		//	inout=InOutString ','?) '}';
+		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'cardinality' ':' cardinality=CardinalityString ','? &
+		//	'inOut' ':' inout=InOutString ','?) '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'required' ':' required=BooleanString ','? & 'inOut' ':'
-		//inout=InOutString ','?) '}'
+		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'cardinality' ':' cardinality=CardinalityString ','? & 'inOut'
+		//':' inout=InOutString ','?) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
-		//('domain' ':' refToDomainType=RefToDomainType ','? & 'required' ':' required=BooleanString ','? & 'inOut' ':'
+		//('domain' ':' refToDomainType=RefToDomainType ','? & 'cardinality' ':' cardinality=CardinalityString ','? & 'inOut' ':'
 		//inout=InOutString ','?)
 		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
 		
@@ -2178,20 +2195,20 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//','?
 		public Keyword getCommaKeyword_1_0_3() { return cCommaKeyword_1_0_3; }
 		
-		//'required' ':' required=BooleanString ','?
+		//'cardinality' ':' cardinality=CardinalityString ','?
 		public Group getGroup_1_1() { return cGroup_1_1; }
 		
-		//'required'
-		public Keyword getRequiredKeyword_1_1_0() { return cRequiredKeyword_1_1_0; }
+		//'cardinality'
+		public Keyword getCardinalityKeyword_1_1_0() { return cCardinalityKeyword_1_1_0; }
 		
 		//':'
 		public Keyword getColonKeyword_1_1_1() { return cColonKeyword_1_1_1; }
 		
-		//required=BooleanString
-		public Assignment getRequiredAssignment_1_1_2() { return cRequiredAssignment_1_1_2; }
+		//cardinality=CardinalityString
+		public Assignment getCardinalityAssignment_1_1_2() { return cCardinalityAssignment_1_1_2; }
 		
-		//BooleanString
-		public RuleCall getRequiredBooleanStringEnumRuleCall_1_1_2_0() { return cRequiredBooleanStringEnumRuleCall_1_1_2_0; }
+		//CardinalityString
+		public RuleCall getCardinalityCardinalityStringEnumRuleCall_1_1_2_0() { return cCardinalityCardinalityStringEnumRuleCall_1_1_2_0; }
 		
 		//','?
 		public Keyword getCommaKeyword_1_1_3() { return cCommaKeyword_1_1_3; }
@@ -2598,6 +2615,80 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//','?
 		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
 	}
+	public class FacetDefinitionParamStringElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.FacetDefinitionParamString");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Keyword cValueKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Keyword cColonKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cParamValueStringAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cParamValueStringSTRINGTerminalRuleCall_1_2_0 = (RuleCall)cParamValueStringAssignment_1_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		
+		//FacetDefinitionParamString:
+		//	'{' ('value' ':' paramValueString=STRING) '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'{' ('value' ':' paramValueString=STRING) '}'
+		public Group getGroup() { return cGroup; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
+		
+		//('value' ':' paramValueString=STRING)
+		public Group getGroup_1() { return cGroup_1; }
+		
+		//'value'
+		public Keyword getValueKeyword_1_0() { return cValueKeyword_1_0; }
+		
+		//':'
+		public Keyword getColonKeyword_1_1() { return cColonKeyword_1_1; }
+		
+		//paramValueString=STRING
+		public Assignment getParamValueStringAssignment_1_2() { return cParamValueStringAssignment_1_2; }
+		
+		//STRING
+		public RuleCall getParamValueStringSTRINGTerminalRuleCall_1_2_0() { return cParamValueStringSTRINGTerminalRuleCall_1_2_0; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
+	}
+	public class FacetDefinitionParamElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.FacetDefinitionParam");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cParamsKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameKEYWORDIDParserRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cFacetDefinitionParamStringAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cFacetDefinitionParamStringFacetDefinitionParamStringParserRuleCall_2_0 = (RuleCall)cFacetDefinitionParamStringAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//FacetDefinitionParam:
+		//	'params' name=KEYWORDID facetDefinitionParamString=FacetDefinitionParamString ','?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'params' name=KEYWORDID facetDefinitionParamString=FacetDefinitionParamString ','?
+		public Group getGroup() { return cGroup; }
+		
+		//'params'
+		public Keyword getParamsKeyword_0() { return cParamsKeyword_0; }
+		
+		//name=KEYWORDID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//KEYWORDID
+		public RuleCall getNameKEYWORDIDParserRuleCall_1_0() { return cNameKEYWORDIDParserRuleCall_1_0; }
+		
+		//facetDefinitionParamString=FacetDefinitionParamString
+		public Assignment getFacetDefinitionParamStringAssignment_2() { return cFacetDefinitionParamStringAssignment_2; }
+		
+		//FacetDefinitionParamString
+		public RuleCall getFacetDefinitionParamStringFacetDefinitionParamStringParserRuleCall_2_0() { return cFacetDefinitionParamStringFacetDefinitionParamStringParserRuleCall_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+	}
 	public class FacetDefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.FacetDefinition");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -2616,18 +2707,21 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFacetDefinitonLabelFacetDefinitionLabelParserRuleCall_5_2_0 = (RuleCall)cFacetDefinitonLabelAssignment_5_2.eContents().get(0);
 		private final Assignment cFacetDefinitionRangeAssignment_5_3 = (Assignment)cUnorderedGroup_5.eContents().get(3);
 		private final RuleCall cFacetDefinitionRangeFacetDefinitionRangeParserRuleCall_5_3_0 = (RuleCall)cFacetDefinitionRangeAssignment_5_3.eContents().get(0);
+		private final Assignment cFacetDefinitionParamAssignment_5_4 = (Assignment)cUnorderedGroup_5.eContents().get(4);
+		private final RuleCall cFacetDefinitionParamFacetDefinitionParamParserRuleCall_5_4_0 = (RuleCall)cFacetDefinitionParamAssignment_5_4.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//FacetDefinition:
 		//	'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{'
 		//	(facetDefinitionDtDefinition=FacetDefinitionDtDefinition & facetDefinitionFieldName=FacetDefinitionFieldName &
-		//	facetDefinitonLabel=FacetDefinitionLabel & facetDefinitionRange+=FacetDefinitionRange*)
+		//	facetDefinitonLabel=FacetDefinitionLabel & facetDefinitionRange+=FacetDefinitionRange* &
+		//	facetDefinitionParam+=FacetDefinitionParam*)
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{' (facetDefinitionDtDefinition=FacetDefinitionDtDefinition
 		//& facetDefinitionFieldName=FacetDefinitionFieldName & facetDefinitonLabel=FacetDefinitionLabel &
-		//facetDefinitionRange+=FacetDefinitionRange*) '}'
+		//facetDefinitionRange+=FacetDefinitionRange* & facetDefinitionParam+=FacetDefinitionParam*) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'create'
@@ -2649,7 +2743,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		public Keyword getLeftCurlyBracketKeyword_4() { return cLeftCurlyBracketKeyword_4; }
 		
 		//(facetDefinitionDtDefinition=FacetDefinitionDtDefinition & facetDefinitionFieldName=FacetDefinitionFieldName &
-		//facetDefinitonLabel=FacetDefinitionLabel & facetDefinitionRange+=FacetDefinitionRange*)
+		//facetDefinitonLabel=FacetDefinitionLabel & facetDefinitionRange+=FacetDefinitionRange* &
+		//facetDefinitionParam+=FacetDefinitionParam*)
 		public UnorderedGroup getUnorderedGroup_5() { return cUnorderedGroup_5; }
 		
 		//facetDefinitionDtDefinition=FacetDefinitionDtDefinition
@@ -2675,6 +2770,12 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//FacetDefinitionRange
 		public RuleCall getFacetDefinitionRangeFacetDefinitionRangeParserRuleCall_5_3_0() { return cFacetDefinitionRangeFacetDefinitionRangeParserRuleCall_5_3_0; }
+		
+		//facetDefinitionParam+=FacetDefinitionParam*
+		public Assignment getFacetDefinitionParamAssignment_5_4() { return cFacetDefinitionParamAssignment_5_4; }
+		
+		//FacetDefinitionParam
+		public RuleCall getFacetDefinitionParamFacetDefinitionParamParserRuleCall_5_4_0() { return cFacetDefinitionParamFacetDefinitionParamParserRuleCall_5_4_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -2763,6 +2864,37 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'listFilterBuilderClass'
 		public Keyword getListFilterBuilderClassKeyword_0() { return cListFilterBuilderClassKeyword_0; }
+		
+		//':'
+		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
+		
+		//string=STRING
+		public Assignment getStringAssignment_2() { return cStringAssignment_2; }
+		
+		//STRING
+		public RuleCall getStringSTRINGTerminalRuleCall_2_0() { return cStringSTRINGTerminalRuleCall_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+	}
+	public class FacetedQueryDefinitionGeoSearchQueryElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.FacetedQueryDefinitionGeoSearchQuery");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cGeoSearchQueryKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cColonKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cStringAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cStringSTRINGTerminalRuleCall_2_0 = (RuleCall)cStringAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//FacetedQueryDefinitionGeoSearchQuery:
+		//	'geoSearchQuery' ':' string=STRING ','?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'geoSearchQuery' ':' string=STRING ','?
+		public Group getGroup() { return cGroup; }
+		
+		//'geoSearchQuery'
+		public Keyword getGeoSearchQueryKeyword_0() { return cGeoSearchQueryKeyword_0; }
 		
 		//':'
 		public Keyword getColonKeyword_1() { return cColonKeyword_1; }
@@ -2886,10 +3018,12 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cFacetedQueryDefinitionDomainCriteriaFacetedQueryDefinitionDomainCriteriaParserRuleCall_5_1_0 = (RuleCall)cFacetedQueryDefinitionDomainCriteriaAssignment_5_1.eContents().get(0);
 		private final Assignment cFacetedQueryDefinitionListFilterBuilderQueryAssignment_5_2 = (Assignment)cUnorderedGroup_5.eContents().get(2);
 		private final RuleCall cFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_5_2_0 = (RuleCall)cFacetedQueryDefinitionListFilterBuilderQueryAssignment_5_2.eContents().get(0);
-		private final Assignment cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3 = (Assignment)cUnorderedGroup_5.eContents().get(3);
-		private final RuleCall cFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_3_0 = (RuleCall)cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3.eContents().get(0);
-		private final Assignment cFacetedQueryDefinitionFacetsAssignment_5_4 = (Assignment)cUnorderedGroup_5.eContents().get(4);
-		private final RuleCall cFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_4_0 = (RuleCall)cFacetedQueryDefinitionFacetsAssignment_5_4.eContents().get(0);
+		private final Assignment cFacetedQueryDefinitionGeoSearchQueryAssignment_5_3 = (Assignment)cUnorderedGroup_5.eContents().get(3);
+		private final RuleCall cFacetedQueryDefinitionGeoSearchQueryFacetedQueryDefinitionGeoSearchQueryParserRuleCall_5_3_0 = (RuleCall)cFacetedQueryDefinitionGeoSearchQueryAssignment_5_3.eContents().get(0);
+		private final Assignment cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_4 = (Assignment)cUnorderedGroup_5.eContents().get(4);
+		private final RuleCall cFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_4_0 = (RuleCall)cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_4.eContents().get(0);
+		private final Assignment cFacetedQueryDefinitionFacetsAssignment_5_5 = (Assignment)cUnorderedGroup_5.eContents().get(5);
+		private final RuleCall cFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_5_0 = (RuleCall)cFacetedQueryDefinitionFacetsAssignment_5_5.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
 		
 		//FacetedQueryDefinition:
@@ -2897,6 +3031,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
 		//	facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
 		//	facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+		//	facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery? &
 		//	facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
 		//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
 		//	'}';
@@ -2906,6 +3041,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
 		//facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
 		//facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+		//facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery? &
 		//facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
 		//facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets) '}'
 		public Group getGroup() { return cGroup; }
@@ -2931,6 +3067,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
 		//facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
 		//facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+		//facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery? &
 		//facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
 		//facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
 		public UnorderedGroup getUnorderedGroup_5() { return cUnorderedGroup_5; }
@@ -2953,17 +3090,23 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//FacetedQueryDefinitionListFilterBuilderQuery
 		public RuleCall getFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_5_2_0() { return cFacetedQueryDefinitionListFilterBuilderQueryFacetedQueryDefinitionListFilterBuilderQueryParserRuleCall_5_2_0; }
 		
+		//facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery?
+		public Assignment getFacetedQueryDefinitionGeoSearchQueryAssignment_5_3() { return cFacetedQueryDefinitionGeoSearchQueryAssignment_5_3; }
+		
+		//FacetedQueryDefinitionGeoSearchQuery
+		public RuleCall getFacetedQueryDefinitionGeoSearchQueryFacetedQueryDefinitionGeoSearchQueryParserRuleCall_5_3_0() { return cFacetedQueryDefinitionGeoSearchQueryFacetedQueryDefinitionGeoSearchQueryParserRuleCall_5_3_0; }
+		
 		//facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass
-		public Assignment getFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3() { return cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_3; }
+		public Assignment getFacetedQueryDefinitionListFilterBuilderClassAssignment_5_4() { return cFacetedQueryDefinitionListFilterBuilderClassAssignment_5_4; }
 		
 		//FacetedQueryDefinitionListFilterBuilderClass
-		public RuleCall getFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_3_0() { return cFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_3_0; }
+		public RuleCall getFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_4_0() { return cFacetedQueryDefinitionListFilterBuilderClassFacetedQueryDefinitionListFilterBuilderClassParserRuleCall_5_4_0; }
 		
 		//facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets
-		public Assignment getFacetedQueryDefinitionFacetsAssignment_5_4() { return cFacetedQueryDefinitionFacetsAssignment_5_4; }
+		public Assignment getFacetedQueryDefinitionFacetsAssignment_5_5() { return cFacetedQueryDefinitionFacetsAssignment_5_5; }
 		
 		//FacetedQueryDefinitionFacets
-		public RuleCall getFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_4_0() { return cFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_4_0; }
+		public RuleCall getFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_5_0() { return cFacetedQueryDefinitionFacetsFacetedQueryDefinitionFacetsParserRuleCall_5_5_0; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
@@ -3243,6 +3386,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cLONGLongKeyword_7_0 = (Keyword)cLONGEnumLiteralDeclaration_7.eContents().get(0);
 		private final EnumLiteralDeclaration cDATA_STREAMEnumLiteralDeclaration_8 = (EnumLiteralDeclaration)cAlternatives.eContents().get(8);
 		private final Keyword cDATA_STREAMDataStreamKeyword_8_0 = (Keyword)cDATA_STREAMEnumLiteralDeclaration_8.eContents().get(0);
+		private final EnumLiteralDeclaration cVALUE_OBJECTEnumLiteralDeclaration_9 = (EnumLiteralDeclaration)cAlternatives.eContents().get(9);
+		private final Keyword cVALUE_OBJECTValueObjectKeyword_9_0 = (Keyword)cVALUE_OBJECTEnumLiteralDeclaration_9.eContents().get(0);
 		
 		//enum DataType:
 		//	INTEGER='Integer' |
@@ -3253,11 +3398,12 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	INSTANT='Instant' |
 		//	BIG_DECIMAL='BigDecimal' |
 		//	LONG='Long' |
-		//	DATA_STREAM='DataStream';
+		//	DATA_STREAM='DataStream' |
+		//	VALUE_OBJECT='ValueObject';
 		public EnumRule getRule() { return rule; }
 		
 		//INTEGER='Integer' | DOUBLE='Double' | BOOLEAN='Boolean' | STRING='String' | LOCAL_DATE='LocalDate' | INSTANT='Instant' |
-		//BIG_DECIMAL='BigDecimal' | LONG='Long' | DATA_STREAM='DataStream'
+		//BIG_DECIMAL='BigDecimal' | LONG='Long' | DATA_STREAM='DataStream' | VALUE_OBJECT='ValueObject'
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//INTEGER='Integer'
@@ -3313,6 +3459,12 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		
 		//'DataStream'
 		public Keyword getDATA_STREAMDataStreamKeyword_8_0() { return cDATA_STREAMDataStreamKeyword_8_0; }
+		
+		//VALUE_OBJECT='ValueObject'
+		public EnumLiteralDeclaration getVALUE_OBJECTEnumLiteralDeclaration_9() { return cVALUE_OBJECTEnumLiteralDeclaration_9; }
+		
+		//'ValueObject'
+		public Keyword getVALUE_OBJECTValueObjectKeyword_9_0() { return cVALUE_OBJECTValueObjectKeyword_9_0; }
 	}
 	public class BooleanStringElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.BooleanString");
@@ -3379,6 +3531,43 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'\"1..1\"'
 		public Keyword getONE_ONE11Keyword_2_0() { return cONE_ONE11Keyword_2_0; }
 	}
+	public class CardinalityStringElements extends AbstractEnumRuleElementFinder {
+		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.CardinalityString");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final EnumLiteralDeclaration cONEEnumLiteralDeclaration_0 = (EnumLiteralDeclaration)cAlternatives.eContents().get(0);
+		private final Keyword cONE1Keyword_0_0 = (Keyword)cONEEnumLiteralDeclaration_0.eContents().get(0);
+		private final EnumLiteralDeclaration cOPTIONALEnumLiteralDeclaration_1 = (EnumLiteralDeclaration)cAlternatives.eContents().get(1);
+		private final Keyword cOPTIONALQuotationMarkQuestionMarkQuotationMarkKeyword_1_0 = (Keyword)cOPTIONALEnumLiteralDeclaration_1.eContents().get(0);
+		private final EnumLiteralDeclaration cMANYEnumLiteralDeclaration_2 = (EnumLiteralDeclaration)cAlternatives.eContents().get(2);
+		private final Keyword cMANYQuotationMarkAsteriskQuotationMarkKeyword_2_0 = (Keyword)cMANYEnumLiteralDeclaration_2.eContents().get(0);
+		
+		//enum CardinalityString:
+		//	ONE='\"1\"' |
+		//	OPTIONAL='\"?"' |
+		//	MANY='\"*\"';
+		public EnumRule getRule() { return rule; }
+		
+		//ONE='\"1\"' | OPTIONAL='\"?"' | MANY='\"*\"'
+		public Alternatives getAlternatives() { return cAlternatives; }
+		
+		//ONE='\"1\"'
+		public EnumLiteralDeclaration getONEEnumLiteralDeclaration_0() { return cONEEnumLiteralDeclaration_0; }
+		
+		//'\"1\"'
+		public Keyword getONE1Keyword_0_0() { return cONE1Keyword_0_0; }
+		
+		//OPTIONAL='\"?"'
+		public EnumLiteralDeclaration getOPTIONALEnumLiteralDeclaration_1() { return cOPTIONALEnumLiteralDeclaration_1; }
+		
+		//'\"?"'
+		public Keyword getOPTIONALQuotationMarkQuestionMarkQuotationMarkKeyword_1_0() { return cOPTIONALQuotationMarkQuestionMarkQuotationMarkKeyword_1_0; }
+		
+		//MANY='\"*\"'
+		public EnumLiteralDeclaration getMANYEnumLiteralDeclaration_2() { return cMANYEnumLiteralDeclaration_2; }
+		
+		//'\"*\"'
+		public Keyword getMANYQuotationMarkAsteriskQuotationMarkKeyword_2_0() { return cMANYQuotationMarkAsteriskQuotationMarkKeyword_2_0; }
+	}
 	public class InOutStringElements extends AbstractEnumRuleElementFinder {
 		private final EnumRule rule = (EnumRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.InOutString");
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
@@ -3440,6 +3629,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final DtDefinitionElements pDtDefinition;
 	private final AlterDtDefinitionElements pAlterDtDefinition;
 	private final MultiplicityStringElements eMultiplicityString;
+	private final CardinalityStringElements eCardinalityString;
 	private final AssociationElements pAssociation;
 	private final InOutStringElements eInOutString;
 	private final TaskAttributeStringElements pTaskAttributeString;
@@ -3452,10 +3642,13 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final FacetDefinitionLabelElements pFacetDefinitionLabel;
 	private final FacetDefinitionRangeStringElements pFacetDefinitionRangeString;
 	private final FacetDefinitionRangeElements pFacetDefinitionRange;
+	private final FacetDefinitionParamStringElements pFacetDefinitionParamString;
+	private final FacetDefinitionParamElements pFacetDefinitionParam;
 	private final FacetDefinitionElements pFacetDefinition;
 	private final FacetedQueryDefinitionKeyConceptElements pFacetedQueryDefinitionKeyConcept;
 	private final FacetedQueryDefinitionDomainCriteriaElements pFacetedQueryDefinitionDomainCriteria;
 	private final FacetedQueryDefinitionListFilterBuilderQueryElements pFacetedQueryDefinitionListFilterBuilderQuery;
+	private final FacetedQueryDefinitionGeoSearchQueryElements pFacetedQueryDefinitionGeoSearchQuery;
 	private final FacetedQueryDefinitionListFilterBuilderClassElements pFacetedQueryDefinitionListFilterBuilderClass;
 	private final FacetedQueryDefinitionFacetsElements pFacetedQueryDefinitionFacets;
 	private final FacetedQueryDefinitionElements pFacetedQueryDefinition;
@@ -3507,6 +3700,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pDtDefinition = new DtDefinitionElements();
 		this.pAlterDtDefinition = new AlterDtDefinitionElements();
 		this.eMultiplicityString = new MultiplicityStringElements();
+		this.eCardinalityString = new CardinalityStringElements();
 		this.pAssociation = new AssociationElements();
 		this.eInOutString = new InOutStringElements();
 		this.pTaskAttributeString = new TaskAttributeStringElements();
@@ -3519,10 +3713,13 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.pFacetDefinitionLabel = new FacetDefinitionLabelElements();
 		this.pFacetDefinitionRangeString = new FacetDefinitionRangeStringElements();
 		this.pFacetDefinitionRange = new FacetDefinitionRangeElements();
+		this.pFacetDefinitionParamString = new FacetDefinitionParamStringElements();
+		this.pFacetDefinitionParam = new FacetDefinitionParamElements();
 		this.pFacetDefinition = new FacetDefinitionElements();
 		this.pFacetedQueryDefinitionKeyConcept = new FacetedQueryDefinitionKeyConceptElements();
 		this.pFacetedQueryDefinitionDomainCriteria = new FacetedQueryDefinitionDomainCriteriaElements();
 		this.pFacetedQueryDefinitionListFilterBuilderQuery = new FacetedQueryDefinitionListFilterBuilderQueryElements();
+		this.pFacetedQueryDefinitionGeoSearchQuery = new FacetedQueryDefinitionGeoSearchQueryElements();
 		this.pFacetedQueryDefinitionListFilterBuilderClass = new FacetedQueryDefinitionListFilterBuilderClassElements();
 		this.pFacetedQueryDefinitionFacets = new FacetedQueryDefinitionFacetsElements();
 		this.pFacetedQueryDefinition = new FacetedQueryDefinitionElements();
@@ -3682,7 +3879,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	INSTANT='Instant' |
 	//	BIG_DECIMAL='BigDecimal' |
 	//	LONG='Long' |
-	//	DATA_STREAM='DataStream';
+	//	DATA_STREAM='DataStream' |
+	//	VALUE_OBJECT='ValueObject';
 	public DataTypeElements getDataTypeAccess() {
 		return eDataType;
 	}
@@ -3704,9 +3902,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Domain:
 	//	'create' 'Domain' name=ID '{'
-	//	'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? &
-	//	('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
-	//	constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit' ':' unit=STRING)?)
+	//	'dataType' ':' dataType=DataType & ('type' ':' type=STRING)? ('formatter' ':' formatter=[Formatter] & ('storeType'
+	//	':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
+	//	constraints+=[Constraint])* ']')? & ('unit' ':' unit=STRING)?)?
 	//	'}';
 	public DomainElements getDomainAccess() {
 		return pDomain;
@@ -3718,9 +3916,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//AlterDomain:
 	//	'alter' 'Domain' domain=[DomainType] '{'
-	//	'dataType' ':' dataType=DataType ('formatter' ':' formatter=[Formatter] & ('storeType' ':' storeType=STRING)? &
-	//	('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
-	//	constraints+=[Constraint])* ']')? & ('multiple' ':' multiple=BooleanString)? & ('unit' ':' unit=STRING)?)
+	//	'dataType' ':' dataType=DataType & ('type' ':' type=STRING)? ('formatter' ':' formatter=[Formatter] & ('storeType'
+	//	':' storeType=STRING)? & ('indexType' ':' indexType=STRING)? & ('constraint' ':' '[' constraint+=[Constraint] (','+
+	//	constraints+=[Constraint])* ']')? & ('unit' ':' unit=STRING)?)?
 	//	'}';
 	public AlterDomainElements getAlterDomainAccess() {
 		return pAlterDomain;
@@ -3761,8 +3959,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DtDefinitionDataFieldString:
-	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'required' ':'
-	//	required=BooleanString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
+	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':'
+	//	cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
 	public DtDefinitionDataFieldStringElements getDtDefinitionDataFieldStringAccess() {
 		return pDtDefinitionDataFieldString;
 	}
@@ -3918,6 +4116,18 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getMultiplicityStringAccess().getRule();
 	}
 	
+	//enum CardinalityString:
+	//	ONE='\"1\"' |
+	//	OPTIONAL='\"?"' |
+	//	MANY='\"*\"';
+	public CardinalityStringElements getCardinalityStringAccess() {
+		return eCardinalityString;
+	}
+	
+	public EnumRule getCardinalityStringRule() {
+		return getCardinalityStringAccess().getRule();
+	}
+	
 	//Association:
 	//	'create' 'Association' name=ID '{' (('fkFieldName' ':' fkFieldName=STRING ','?)? & 'dtDefinitionA' ':'
 	//	dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
@@ -3946,8 +4156,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//TaskAttributeString:
-	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'required' ':' required=BooleanString ','? & 'inOut' ':'
-	//	inout=InOutString ','?) '}';
+	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'cardinality' ':' cardinality=CardinalityString ','? &
+	//	'inOut' ':' inout=InOutString ','?) '}';
 	public TaskAttributeStringElements getTaskAttributeStringAccess() {
 		return pTaskAttributeString;
 	}
@@ -4051,10 +4261,31 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFacetDefinitionRangeAccess().getRule();
 	}
 	
+	//FacetDefinitionParamString:
+	//	'{' ('value' ':' paramValueString=STRING) '}';
+	public FacetDefinitionParamStringElements getFacetDefinitionParamStringAccess() {
+		return pFacetDefinitionParamString;
+	}
+	
+	public ParserRule getFacetDefinitionParamStringRule() {
+		return getFacetDefinitionParamStringAccess().getRule();
+	}
+	
+	//FacetDefinitionParam:
+	//	'params' name=KEYWORDID facetDefinitionParamString=FacetDefinitionParamString ','?;
+	public FacetDefinitionParamElements getFacetDefinitionParamAccess() {
+		return pFacetDefinitionParam;
+	}
+	
+	public ParserRule getFacetDefinitionParamRule() {
+		return getFacetDefinitionParamAccess().getRule();
+	}
+	
 	//FacetDefinition:
 	//	'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{'
 	//	(facetDefinitionDtDefinition=FacetDefinitionDtDefinition & facetDefinitionFieldName=FacetDefinitionFieldName &
-	//	facetDefinitonLabel=FacetDefinitionLabel & facetDefinitionRange+=FacetDefinitionRange*)
+	//	facetDefinitonLabel=FacetDefinitionLabel & facetDefinitionRange+=FacetDefinitionRange* &
+	//	facetDefinitionParam+=FacetDefinitionParam*)
 	//	'}';
 	public FacetDefinitionElements getFacetDefinitionAccess() {
 		return pFacetDefinition;
@@ -4094,6 +4325,16 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getFacetedQueryDefinitionListFilterBuilderQueryAccess().getRule();
 	}
 	
+	//FacetedQueryDefinitionGeoSearchQuery:
+	//	'geoSearchQuery' ':' string=STRING ','?;
+	public FacetedQueryDefinitionGeoSearchQueryElements getFacetedQueryDefinitionGeoSearchQueryAccess() {
+		return pFacetedQueryDefinitionGeoSearchQuery;
+	}
+	
+	public ParserRule getFacetedQueryDefinitionGeoSearchQueryRule() {
+		return getFacetedQueryDefinitionGeoSearchQueryAccess().getRule();
+	}
+	
 	//FacetedQueryDefinitionListFilterBuilderClass:
 	//	'listFilterBuilderQuery' ':' string=STRING ','?;
 	public FacetedQueryDefinitionListFilterBuilderClassElements getFacetedQueryDefinitionListFilterBuilderClassAccess() {
@@ -4119,6 +4360,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
 	//	facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
 	//	facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
+	//	facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery? &
 	//	facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
 	//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
 	//	'}';

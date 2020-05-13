@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRefToDomainType <em>Ref To Domain Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRequired <em>Required</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getCardinality <em>Cardinality</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getInout <em>Inout</em>}</li>
  * </ul>
  *
@@ -48,29 +48,29 @@ public interface TaskAttributeString extends EObject
   void setRefToDomainType(RefToDomainType value);
 
   /**
-   * Returns the value of the '<em><b>Required</b></em>' attribute.
-   * The literals are from the enumeration {@link io.vertigo.dsl.vertigoDsl.BooleanString}.
+   * Returns the value of the '<em><b>Cardinality</b></em>' attribute.
+   * The literals are from the enumeration {@link io.vertigo.dsl.vertigoDsl.CardinalityString}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Required</em>' attribute.
-   * @see io.vertigo.dsl.vertigoDsl.BooleanString
-   * @see #setRequired(BooleanString)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttributeString_Required()
+   * @return the value of the '<em>Cardinality</em>' attribute.
+   * @see io.vertigo.dsl.vertigoDsl.CardinalityString
+   * @see #setCardinality(CardinalityString)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttributeString_Cardinality()
    * @model
    * @generated
    */
-  BooleanString getRequired();
+  CardinalityString getCardinality();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRequired <em>Required</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getCardinality <em>Cardinality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Required</em>' attribute.
-   * @see io.vertigo.dsl.vertigoDsl.BooleanString
-   * @see #getRequired()
+   * @param value the new value of the '<em>Cardinality</em>' attribute.
+   * @see io.vertigo.dsl.vertigoDsl.CardinalityString
+   * @see #getCardinality()
    * @generated
    */
-  void setRequired(BooleanString value);
+  void setCardinality(CardinalityString value);
 
   /**
    * Returns the value of the '<em><b>Inout</b></em>' attribute.

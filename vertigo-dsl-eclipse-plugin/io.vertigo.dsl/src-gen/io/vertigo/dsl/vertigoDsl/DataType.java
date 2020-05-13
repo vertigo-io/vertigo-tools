@@ -108,7 +108,17 @@ public enum DataType implements Enumerator
    * @generated
    * @ordered
    */
-  DATA_STREAM(8, "DATA_STREAM", "DataStream");
+  DATA_STREAM(8, "DATA_STREAM", "DataStream"),
+
+  /**
+   * The '<em><b>VALUE OBJECT</b></em>' literal object.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #VALUE_OBJECT_VALUE
+   * @generated
+   * @ordered
+   */
+  VALUE_OBJECT(9, "VALUE_OBJECT", "ValueObject");
 
   /**
    * The '<em><b>INTEGER</b></em>' literal value.
@@ -210,6 +220,17 @@ public enum DataType implements Enumerator
   public static final int DATA_STREAM_VALUE = 8;
 
   /**
+   * The '<em><b>VALUE OBJECT</b></em>' literal value.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #VALUE_OBJECT
+   * @model literal="ValueObject"
+   * @generated
+   * @ordered
+   */
+  public static final int VALUE_OBJECT_VALUE = 9;
+
+  /**
    * An array of all the '<em><b>Data Type</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -227,6 +248,7 @@ public enum DataType implements Enumerator
       BIG_DECIMAL,
       LONG,
       DATA_STREAM,
+      VALUE_OBJECT,
     };
 
   /**
@@ -300,6 +322,7 @@ public enum DataType implements Enumerator
       case BIG_DECIMAL_VALUE: return BIG_DECIMAL;
       case LONG_VALUE: return LONG;
       case DATA_STREAM_VALUE: return DATA_STREAM;
+      case VALUE_OBJECT_VALUE: return VALUE_OBJECT;
     }
     return null;
   }

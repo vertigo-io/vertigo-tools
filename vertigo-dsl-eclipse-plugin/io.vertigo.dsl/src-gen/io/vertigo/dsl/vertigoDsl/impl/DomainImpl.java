@@ -3,7 +3,6 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.BooleanString;
 import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DataType;
 import io.vertigo.dsl.vertigoDsl.Domain;
@@ -33,12 +32,12 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getDataType <em>Data Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getType <em>Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getFormatter <em>Formatter</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getStoreType <em>Store Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getIndexType <em>Index Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getMultiple <em>Multiple</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getUnit <em>Unit</em>}</li>
  * </ul>
  *
@@ -85,6 +84,26 @@ public class DomainImpl extends ElementImpl implements Domain
    * @ordered
    */
   protected DataType dataType = DATA_TYPE_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected static final String TYPE_EDEFAULT = null;
+
+  /**
+   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getType()
+   * @generated
+   * @ordered
+   */
+  protected String type = TYPE_EDEFAULT;
 
   /**
    * The cached value of the '{@link #getFormatter() <em>Formatter</em>}' reference.
@@ -155,26 +174,6 @@ public class DomainImpl extends ElementImpl implements Domain
    * @ordered
    */
   protected EList<Constraint> constraints;
-
-  /**
-   * The default value of the '{@link #getMultiple() <em>Multiple</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMultiple()
-   * @generated
-   * @ordered
-   */
-  protected static final BooleanString MULTIPLE_EDEFAULT = BooleanString.TRUE;
-
-  /**
-   * The cached value of the '{@link #getMultiple() <em>Multiple</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getMultiple()
-   * @generated
-   * @ordered
-   */
-  protected BooleanString multiple = MULTIPLE_EDEFAULT;
 
   /**
    * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
@@ -265,6 +264,31 @@ public class DomainImpl extends ElementImpl implements Domain
     dataType = newDataType == null ? DATA_TYPE_EDEFAULT : newDataType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__DATA_TYPE, oldDataType, dataType));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public String getType()
+  {
+    return type;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setType(String newType)
+  {
+    String oldType = type;
+    type = newType;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__TYPE, oldType, type));
   }
 
   /**
@@ -398,31 +422,6 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public BooleanString getMultiple()
-  {
-    return multiple;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setMultiple(BooleanString newMultiple)
-  {
-    BooleanString oldMultiple = multiple;
-    multiple = newMultiple == null ? MULTIPLE_EDEFAULT : newMultiple;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__MULTIPLE, oldMultiple, multiple));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public String getUnit()
   {
     return unit;
@@ -456,6 +455,8 @@ public class DomainImpl extends ElementImpl implements Domain
         return getName();
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         return getDataType();
+      case VertigoDslPackage.DOMAIN__TYPE:
+        return getType();
       case VertigoDslPackage.DOMAIN__FORMATTER:
         if (resolve) return getFormatter();
         return basicGetFormatter();
@@ -467,8 +468,6 @@ public class DomainImpl extends ElementImpl implements Domain
         return getConstraint();
       case VertigoDslPackage.DOMAIN__CONSTRAINTS:
         return getConstraints();
-      case VertigoDslPackage.DOMAIN__MULTIPLE:
-        return getMultiple();
       case VertigoDslPackage.DOMAIN__UNIT:
         return getUnit();
     }
@@ -492,6 +491,9 @@ public class DomainImpl extends ElementImpl implements Domain
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         setDataType((DataType)newValue);
         return;
+      case VertigoDslPackage.DOMAIN__TYPE:
+        setType((String)newValue);
+        return;
       case VertigoDslPackage.DOMAIN__FORMATTER:
         setFormatter((Formatter)newValue);
         return;
@@ -508,9 +510,6 @@ public class DomainImpl extends ElementImpl implements Domain
       case VertigoDslPackage.DOMAIN__CONSTRAINTS:
         getConstraints().clear();
         getConstraints().addAll((Collection<? extends Constraint>)newValue);
-        return;
-      case VertigoDslPackage.DOMAIN__MULTIPLE:
-        setMultiple((BooleanString)newValue);
         return;
       case VertigoDslPackage.DOMAIN__UNIT:
         setUnit((String)newValue);
@@ -535,6 +534,9 @@ public class DomainImpl extends ElementImpl implements Domain
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         setDataType(DATA_TYPE_EDEFAULT);
         return;
+      case VertigoDslPackage.DOMAIN__TYPE:
+        setType(TYPE_EDEFAULT);
+        return;
       case VertigoDslPackage.DOMAIN__FORMATTER:
         setFormatter((Formatter)null);
         return;
@@ -549,9 +551,6 @@ public class DomainImpl extends ElementImpl implements Domain
         return;
       case VertigoDslPackage.DOMAIN__CONSTRAINTS:
         getConstraints().clear();
-        return;
-      case VertigoDslPackage.DOMAIN__MULTIPLE:
-        setMultiple(MULTIPLE_EDEFAULT);
         return;
       case VertigoDslPackage.DOMAIN__UNIT:
         setUnit(UNIT_EDEFAULT);
@@ -574,6 +573,8 @@ public class DomainImpl extends ElementImpl implements Domain
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         return dataType != DATA_TYPE_EDEFAULT;
+      case VertigoDslPackage.DOMAIN__TYPE:
+        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
       case VertigoDslPackage.DOMAIN__FORMATTER:
         return formatter != null;
       case VertigoDslPackage.DOMAIN__STORE_TYPE:
@@ -584,8 +585,6 @@ public class DomainImpl extends ElementImpl implements Domain
         return constraint != null && !constraint.isEmpty();
       case VertigoDslPackage.DOMAIN__CONSTRAINTS:
         return constraints != null && !constraints.isEmpty();
-      case VertigoDslPackage.DOMAIN__MULTIPLE:
-        return multiple != MULTIPLE_EDEFAULT;
       case VertigoDslPackage.DOMAIN__UNIT:
         return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
     }
@@ -607,12 +606,12 @@ public class DomainImpl extends ElementImpl implements Domain
     result.append(name);
     result.append(", dataType: ");
     result.append(dataType);
+    result.append(", type: ");
+    result.append(type);
     result.append(", storeType: ");
     result.append(storeType);
     result.append(", indexType: ");
     result.append(indexType);
-    result.append(", multiple: ");
-    result.append(multiple);
     result.append(", unit: ");
     result.append(unit);
     result.append(')');

@@ -104,10 +104,13 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.FACET_DEFINITION_LABEL: return createFacetDefinitionLabel();
       case VertigoDslPackage.FACET_DEFINITION_RANGE_STRING: return createFacetDefinitionRangeString();
       case VertigoDslPackage.FACET_DEFINITION_RANGE: return createFacetDefinitionRange();
+      case VertigoDslPackage.FACET_DEFINITION_PARAM_STRING: return createFacetDefinitionParamString();
+      case VertigoDslPackage.FACET_DEFINITION_PARAM: return createFacetDefinitionParam();
       case VertigoDslPackage.FACET_DEFINITION: return createFacetDefinition();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_KEY_CONCEPT: return createFacetedQueryDefinitionKeyConcept();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA: return createFacetedQueryDefinitionDomainCriteria();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY: return createFacetedQueryDefinitionListFilterBuilderQuery();
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY: return createFacetedQueryDefinitionGeoSearchQuery();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS: return createFacetedQueryDefinitionListFilterBuilderClass();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION_FACETS: return createFacetedQueryDefinitionFacets();
       case VertigoDslPackage.FACETED_QUERY_DEFINITION: return createFacetedQueryDefinition();
@@ -142,6 +145,8 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
         return createBooleanStringFromString(eDataType, initialValue);
       case VertigoDslPackage.MULTIPLICITY_STRING:
         return createMultiplicityStringFromString(eDataType, initialValue);
+      case VertigoDslPackage.CARDINALITY_STRING:
+        return createCardinalityStringFromString(eDataType, initialValue);
       case VertigoDslPackage.IN_OUT_STRING:
         return createInOutStringFromString(eDataType, initialValue);
       default:
@@ -165,6 +170,8 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
         return convertBooleanStringToString(eDataType, instanceValue);
       case VertigoDslPackage.MULTIPLICITY_STRING:
         return convertMultiplicityStringToString(eDataType, instanceValue);
+      case VertigoDslPackage.CARDINALITY_STRING:
+        return convertCardinalityStringToString(eDataType, instanceValue);
       case VertigoDslPackage.IN_OUT_STRING:
         return convertInOutStringToString(eDataType, instanceValue);
       default:
@@ -634,6 +641,30 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   @Override
+  public FacetDefinitionParamString createFacetDefinitionParamString()
+  {
+    FacetDefinitionParamStringImpl facetDefinitionParamString = new FacetDefinitionParamStringImpl();
+    return facetDefinitionParamString;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public FacetDefinitionParam createFacetDefinitionParam()
+  {
+    FacetDefinitionParamImpl facetDefinitionParam = new FacetDefinitionParamImpl();
+    return facetDefinitionParam;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public FacetDefinition createFacetDefinition()
   {
     FacetDefinitionImpl facetDefinition = new FacetDefinitionImpl();
@@ -674,6 +705,18 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     FacetedQueryDefinitionListFilterBuilderQueryImpl facetedQueryDefinitionListFilterBuilderQuery = new FacetedQueryDefinitionListFilterBuilderQueryImpl();
     return facetedQueryDefinitionListFilterBuilderQuery;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public FacetedQueryDefinitionGeoSearchQuery createFacetedQueryDefinitionGeoSearchQuery()
+  {
+    FacetedQueryDefinitionGeoSearchQueryImpl facetedQueryDefinitionGeoSearchQuery = new FacetedQueryDefinitionGeoSearchQueryImpl();
+    return facetedQueryDefinitionGeoSearchQuery;
   }
 
   /**
@@ -894,6 +937,28 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   public String convertMultiplicityStringToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public CardinalityString createCardinalityStringFromString(EDataType eDataType, String initialValue)
+  {
+    CardinalityString result = CardinalityString.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertCardinalityStringToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

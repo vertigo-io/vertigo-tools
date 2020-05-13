@@ -19,6 +19,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionAction#getFacetDefinitionFieldName <em>Facet Definition Field Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionAction#getFacetDefinitonLabel <em>Facet Definiton Label</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionAction#getFacetDefinitionRange <em>Facet Definition Range</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.FacetDefinitionAction#getFacetDefinitionParam <em>Facet Definition Param</em>}</li>
  * </ul>
  *
  * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getFacetDefinitionAction()
@@ -126,5 +127,17 @@ public interface FacetDefinitionAction extends FacetDefinition
    * @generated
    */
   EList<FacetDefinitionRange> getFacetDefinitionRange();
+
+  /**
+   * Returns the value of the '<em><b>Facet Definition Param</b></em>' containment reference list.
+   * The list contents are of type {@link io.vertigo.dsl.vertigoDsl.FacetDefinitionParam}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Facet Definition Param</em>' containment reference list.
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getFacetDefinitionAction_FacetDefinitionParam()
+   * @model containment="true"
+   * @generated
+   */
+  EList<FacetDefinitionParam> getFacetDefinitionParam();
 
 } // FacetDefinitionAction

@@ -354,6 +354,20 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.FACET_DEFINITION_PARAM_STRING:
+      {
+        FacetDefinitionParamString facetDefinitionParamString = (FacetDefinitionParamString)theEObject;
+        T result = caseFacetDefinitionParamString(facetDefinitionParamString);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACET_DEFINITION_PARAM:
+      {
+        FacetDefinitionParam facetDefinitionParam = (FacetDefinitionParam)theEObject;
+        T result = caseFacetDefinitionParam(facetDefinitionParam);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.FACET_DEFINITION:
       {
         FacetDefinition facetDefinition = (FacetDefinition)theEObject;
@@ -380,6 +394,13 @@ public class VertigoDslSwitch<T> extends Switch<T>
       {
         FacetedQueryDefinitionListFilterBuilderQuery facetedQueryDefinitionListFilterBuilderQuery = (FacetedQueryDefinitionListFilterBuilderQuery)theEObject;
         T result = caseFacetedQueryDefinitionListFilterBuilderQuery(facetedQueryDefinitionListFilterBuilderQuery);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY:
+      {
+        FacetedQueryDefinitionGeoSearchQuery facetedQueryDefinitionGeoSearchQuery = (FacetedQueryDefinitionGeoSearchQuery)theEObject;
+        T result = caseFacetedQueryDefinitionGeoSearchQuery(facetedQueryDefinitionGeoSearchQuery);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1098,6 +1119,38 @@ public class VertigoDslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition Param String</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition Param String</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinitionParamString(FacetDefinitionParamString object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Facet Definition Param</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Facet Definition Param</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetDefinitionParam(FacetDefinitionParam object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Facet Definition</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1157,6 +1210,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseFacetedQueryDefinitionListFilterBuilderQuery(FacetedQueryDefinitionListFilterBuilderQuery object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Faceted Query Definition Geo Search Query</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Faceted Query Definition Geo Search Query</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFacetedQueryDefinitionGeoSearchQuery(FacetedQueryDefinitionGeoSearchQuery object)
   {
     return null;
   }

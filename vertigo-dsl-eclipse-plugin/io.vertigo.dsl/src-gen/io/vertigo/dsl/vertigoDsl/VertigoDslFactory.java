@@ -366,6 +366,24 @@ public interface VertigoDslFactory extends EFactory
   FacetDefinitionRange createFacetDefinitionRange();
 
   /**
+   * Returns a new object of class '<em>Facet Definition Param String</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Facet Definition Param String</em>'.
+   * @generated
+   */
+  FacetDefinitionParamString createFacetDefinitionParamString();
+
+  /**
+   * Returns a new object of class '<em>Facet Definition Param</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Facet Definition Param</em>'.
+   * @generated
+   */
+  FacetDefinitionParam createFacetDefinitionParam();
+
+  /**
    * Returns a new object of class '<em>Facet Definition</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -400,6 +418,15 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   FacetedQueryDefinitionListFilterBuilderQuery createFacetedQueryDefinitionListFilterBuilderQuery();
+
+  /**
+   * Returns a new object of class '<em>Faceted Query Definition Geo Search Query</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Faceted Query Definition Geo Search Query</em>'.
+   * @generated
+   */
+  FacetedQueryDefinitionGeoSearchQuery createFacetedQueryDefinitionGeoSearchQuery();
 
   /**
    * Returns a new object of class '<em>Faceted Query Definition List Filter Builder Class</em>'.

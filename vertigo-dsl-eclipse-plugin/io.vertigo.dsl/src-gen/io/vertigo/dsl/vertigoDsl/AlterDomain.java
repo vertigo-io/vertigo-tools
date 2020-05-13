@@ -16,12 +16,12 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getDomain <em>Domain</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getDataType <em>Data Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getType <em>Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getFormatter <em>Formatter</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getStoreType <em>Store Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getIndexType <em>Index Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getConstraint <em>Constraint</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getMultiple <em>Multiple</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getUnit <em>Unit</em>}</li>
  * </ul>
  *
@@ -77,6 +77,28 @@ public interface AlterDomain extends Element
    * @generated
    */
   void setDataType(DataType value);
+
+  /**
+   * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Type</em>' attribute.
+   * @see #setType(String)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterDomain_Type()
+   * @model
+   * @generated
+   */
+  String getType();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getType <em>Type</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Type</em>' attribute.
+   * @see #getType()
+   * @generated
+   */
+  void setType(String value);
 
   /**
    * Returns the value of the '<em><b>Formatter</b></em>' reference.
@@ -167,31 +189,6 @@ public interface AlterDomain extends Element
    * @generated
    */
   EList<Constraint> getConstraints();
-
-  /**
-   * Returns the value of the '<em><b>Multiple</b></em>' attribute.
-   * The literals are from the enumeration {@link io.vertigo.dsl.vertigoDsl.BooleanString}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Multiple</em>' attribute.
-   * @see io.vertigo.dsl.vertigoDsl.BooleanString
-   * @see #setMultiple(BooleanString)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterDomain_Multiple()
-   * @model
-   * @generated
-   */
-  BooleanString getMultiple();
-
-  /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterDomain#getMultiple <em>Multiple</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Multiple</em>' attribute.
-   * @see io.vertigo.dsl.vertigoDsl.BooleanString
-   * @see #getMultiple()
-   * @generated
-   */
-  void setMultiple(BooleanString value);
 
   /**
    * Returns the value of the '<em><b>Unit</b></em>' attribute.

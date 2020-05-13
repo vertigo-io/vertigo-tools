@@ -4,6 +4,7 @@
 package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.BooleanString;
+import io.vertigo.dsl.vertigoDsl.CardinalityString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionDataFieldString;
 import io.vertigo.dsl.vertigoDsl.RefToDomainType;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
@@ -27,7 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getLabel <em>Label</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getRequired <em>Required</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getCardinality <em>Cardinality</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionDataFieldStringImpl#getPersistent <em>Persistent</em>}</li>
  * </ul>
  *
@@ -66,24 +67,24 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
   protected String label = LABEL_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getRequired() <em>Required</em>}' attribute.
+   * The default value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRequired()
+   * @see #getCardinality()
    * @generated
    * @ordered
    */
-  protected static final BooleanString REQUIRED_EDEFAULT = BooleanString.TRUE;
+  protected static final CardinalityString CARDINALITY_EDEFAULT = CardinalityString.ONE;
 
   /**
-   * The cached value of the '{@link #getRequired() <em>Required</em>}' attribute.
+   * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getRequired()
+   * @see #getCardinality()
    * @generated
    * @ordered
    */
-  protected BooleanString required = REQUIRED_EDEFAULT;
+  protected CardinalityString cardinality = CARDINALITY_EDEFAULT;
 
   /**
    * The default value of the '{@link #getPersistent() <em>Persistent</em>}' attribute.
@@ -207,9 +208,9 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
    * @generated
    */
   @Override
-  public BooleanString getRequired()
+  public CardinalityString getCardinality()
   {
-    return required;
+    return cardinality;
   }
 
   /**
@@ -218,12 +219,12 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
    * @generated
    */
   @Override
-  public void setRequired(BooleanString newRequired)
+  public void setCardinality(CardinalityString newCardinality)
   {
-    BooleanString oldRequired = required;
-    required = newRequired == null ? REQUIRED_EDEFAULT : newRequired;
+    CardinalityString oldCardinality = cardinality;
+    cardinality = newCardinality == null ? CARDINALITY_EDEFAULT : newCardinality;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REQUIRED, oldRequired, required));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__CARDINALITY, oldCardinality, cardinality));
   }
 
   /**
@@ -281,8 +282,8 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
         return getRefToDomainType();
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__LABEL:
         return getLabel();
-      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REQUIRED:
-        return getRequired();
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__CARDINALITY:
+        return getCardinality();
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__PERSISTENT:
         return getPersistent();
     }
@@ -305,8 +306,8 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__LABEL:
         setLabel((String)newValue);
         return;
-      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REQUIRED:
-        setRequired((BooleanString)newValue);
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__CARDINALITY:
+        setCardinality((CardinalityString)newValue);
         return;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__PERSISTENT:
         setPersistent((BooleanString)newValue);
@@ -331,8 +332,8 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__LABEL:
         setLabel(LABEL_EDEFAULT);
         return;
-      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REQUIRED:
-        setRequired(REQUIRED_EDEFAULT);
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__CARDINALITY:
+        setCardinality(CARDINALITY_EDEFAULT);
         return;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__PERSISTENT:
         setPersistent(PERSISTENT_EDEFAULT);
@@ -355,8 +356,8 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
         return refToDomainType != null;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__LABEL:
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
-      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__REQUIRED:
-        return required != REQUIRED_EDEFAULT;
+      case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__CARDINALITY:
+        return cardinality != CARDINALITY_EDEFAULT;
       case VertigoDslPackage.DT_DEFINITION_DATA_FIELD_STRING__PERSISTENT:
         return persistent != PERSISTENT_EDEFAULT;
     }
@@ -376,8 +377,8 @@ public class DtDefinitionDataFieldStringImpl extends MinimalEObjectImpl.Containe
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (label: ");
     result.append(label);
-    result.append(", required: ");
-    result.append(required);
+    result.append(", cardinality: ");
+    result.append(cardinality);
     result.append(", persistent: ");
     result.append(persistent);
     result.append(')');
