@@ -1,0 +1,74 @@
+{
+    "name": "vertigo-vscode",
+    "displayName": "Vertigo VS Code extension",
+    "description": "Vertigo Extensions provides language support for KSP and give access to Vertigo-Studio",
+    "version": "0.0.1",
+    "publisher": "Vertigo-io",
+    "icon": "images/vertigo.png",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/vertigo-io/vertigo-tools.git"
+    },
+    "bugs": {
+        "url": "https://github.com/vertigo-io/vertigo-tools/issues"
+    },
+    "engines": {
+        "vscode": "^1.41.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "activationEvents": [
+        "onLanguage:vertigo",
+		"onCommand:vertigo.studio.cleanGen"
+    ],
+    "main": "out/extension",
+    "contributes": {
+        "languages": [
+            {
+                "id": "vertigo",
+                "aliases": [
+                    "vertigo"
+                ],
+                "extensions": [
+                    ".ksp"
+                ],
+                "configuration": "./vertigo.configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "vertigo",
+                "scopeName": "text.vertigo",
+                "path": "./syntaxes/vertigo.tmLanguage.json"
+            }
+        ],
+        "commands": [
+            {
+                "command": "vertigo.studio.cleanGen",
+                "title": "Generate code with Vertigo-Studio"
+            }
+        ],
+        "menus": {
+            "explorer/context": [
+                {
+                    "command": "vertigo.studio.cleanGen",
+                    "group": "vertigo@1"
+                }
+            ]
+        }
+    },
+    "devDependencies": {
+        "@types/vscode": "^1.41.0",
+        "typescript": "^3.9.2",
+        "@types/node": "^12.12.16"
+    },
+    "dependencies": {
+        "vscode-languageclient": "^6.1.3"
+    },
+    "scripts": {
+        "compile": "tsc",
+        "watch": "tsc -w"
+    }
+}
