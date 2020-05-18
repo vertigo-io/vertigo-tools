@@ -97,8 +97,11 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING: return createTaskAttributeString();
       case VertigoDslPackage.TASK_ATTRIBUTE: return createTaskAttribute();
       case VertigoDslPackage.TASK_DATA_SPACE: return createTaskDataSpace();
+      case VertigoDslPackage.TASK_CLASS_NAME: return createTaskClassName();
+      case VertigoDslPackage.TASK_REQUEST: return createTaskRequest();
       case VertigoDslPackage.TASK_REQUEST_STRING: return createTaskRequestString();
       case VertigoDslPackage.TASK_DEFINITION: return createTaskDefinition();
+      case VertigoDslPackage.ALTER_TASK_DEFINITION: return createAlterTaskDefinition();
       case VertigoDslPackage.FACET_DEFINITION_DT_DEFINITION: return createFacetDefinitionDtDefinition();
       case VertigoDslPackage.FACET_DEFINITION_FIELD_NAME: return createFacetDefinitionFieldName();
       case VertigoDslPackage.FACET_DEFINITION_LABEL: return createFacetDefinitionLabel();
@@ -147,6 +150,8 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
         return createMultiplicityStringFromString(eDataType, initialValue);
       case VertigoDslPackage.CARDINALITY_STRING:
         return createCardinalityStringFromString(eDataType, initialValue);
+      case VertigoDslPackage.ASSOCIATION_TYPE_STRING:
+        return createAssociationTypeStringFromString(eDataType, initialValue);
       case VertigoDslPackage.IN_OUT_STRING:
         return createInOutStringFromString(eDataType, initialValue);
       default:
@@ -172,6 +177,8 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
         return convertMultiplicityStringToString(eDataType, instanceValue);
       case VertigoDslPackage.CARDINALITY_STRING:
         return convertCardinalityStringToString(eDataType, instanceValue);
+      case VertigoDslPackage.ASSOCIATION_TYPE_STRING:
+        return convertAssociationTypeStringToString(eDataType, instanceValue);
       case VertigoDslPackage.IN_OUT_STRING:
         return convertInOutStringToString(eDataType, instanceValue);
       default:
@@ -557,6 +564,30 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   @Override
+  public TaskClassName createTaskClassName()
+  {
+    TaskClassNameImpl taskClassName = new TaskClassNameImpl();
+    return taskClassName;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TaskRequest createTaskRequest()
+  {
+    TaskRequestImpl taskRequest = new TaskRequestImpl();
+    return taskRequest;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public TaskRequestString createTaskRequestString()
   {
     TaskRequestStringImpl taskRequestString = new TaskRequestStringImpl();
@@ -573,6 +604,18 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     TaskDefinitionImpl taskDefinition = new TaskDefinitionImpl();
     return taskDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AlterTaskDefinition createAlterTaskDefinition()
+  {
+    AlterTaskDefinitionImpl alterTaskDefinition = new AlterTaskDefinitionImpl();
+    return alterTaskDefinition;
   }
 
   /**
@@ -959,6 +1002,28 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   public String convertCardinalityStringToString(EDataType eDataType, Object instanceValue)
+  {
+    return instanceValue == null ? null : instanceValue.toString();
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public AssociationTypeString createAssociationTypeStringFromString(EDataType eDataType, String initialValue)
+  {
+    AssociationTypeString result = AssociationTypeString.get(initialValue);
+    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+    return result;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public String convertAssociationTypeStringToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

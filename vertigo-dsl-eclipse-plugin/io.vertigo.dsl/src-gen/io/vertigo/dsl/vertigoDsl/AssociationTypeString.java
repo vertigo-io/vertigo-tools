@@ -11,135 +11,113 @@ import org.eclipse.emf.common.util.Enumerator;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the literals of the enumeration '<em><b>Multiplicity String</b></em>',
+ * A representation of the literals of the enumeration '<em><b>Association Type String</b></em>',
  * and utility methods for working with them.
  * <!-- end-user-doc -->
- * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getMultiplicityString()
+ * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAssociationTypeString()
  * @model
  * @generated
  */
-public enum MultiplicityString implements Enumerator
+public enum AssociationTypeString implements Enumerator
 {
   /**
-   * The '<em><b>ZERO ONE</b></em>' literal object.
+   * The '<em><b>ONE</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #ZERO_ONE_VALUE
+   * @see #ONE_VALUE
    * @generated
    * @ordered
    */
-  ZERO_ONE(0, "ZERO_ONE", "\"0..1\""),
+  ONE(0, "ONE", "\"*>1\""),
 
   /**
-   * The '<em><b>ZERO N</b></em>' literal object.
+   * The '<em><b>OPTIONAL</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #ZERO_N_VALUE
+   * @see #OPTIONAL_VALUE
    * @generated
    * @ordered
    */
-  ZERO_N(1, "ZERO_N", "\"0..*\""),
+  OPTIONAL(1, "OPTIONAL", "\"*>?\""),
 
   /**
-   * The '<em><b>ONE ONE</b></em>' literal object.
+   * The '<em><b>MANY</b></em>' literal object.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #ONE_ONE_VALUE
+   * @see #MANY_VALUE
    * @generated
    * @ordered
    */
-  ONE_ONE(2, "ONE_ONE", "\"1..1\""),
+  MANY(2, "MANY", "\"*>*\"");
 
   /**
-   * The '<em><b>ONE N</b></em>' literal object.
+   * The '<em><b>ONE</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #ONE_N_VALUE
+   * @see #ONE
+   * @model literal="\"*&gt;1\""
    * @generated
    * @ordered
    */
-  ONE_N(3, "ONE_N", "\"1..*\"");
+  public static final int ONE_VALUE = 0;
 
   /**
-   * The '<em><b>ZERO ONE</b></em>' literal value.
+   * The '<em><b>OPTIONAL</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #ZERO_ONE
-   * @model literal="\"0..1\""
+   * @see #OPTIONAL
+   * @model literal="\"*&gt;?\""
    * @generated
    * @ordered
    */
-  public static final int ZERO_ONE_VALUE = 0;
+  public static final int OPTIONAL_VALUE = 1;
 
   /**
-   * The '<em><b>ZERO N</b></em>' literal value.
+   * The '<em><b>MANY</b></em>' literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #ZERO_N
-   * @model literal="\"0..*\""
+   * @see #MANY
+   * @model literal="\"*&gt;*\""
    * @generated
    * @ordered
    */
-  public static final int ZERO_N_VALUE = 1;
+  public static final int MANY_VALUE = 2;
 
   /**
-   * The '<em><b>ONE ONE</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #ONE_ONE
-   * @model literal="\"1..1\""
-   * @generated
-   * @ordered
-   */
-  public static final int ONE_ONE_VALUE = 2;
-
-  /**
-   * The '<em><b>ONE N</b></em>' literal value.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #ONE_N
-   * @model literal="\"1..*\""
-   * @generated
-   * @ordered
-   */
-  public static final int ONE_N_VALUE = 3;
-
-  /**
-   * An array of all the '<em><b>Multiplicity String</b></em>' enumerators.
+   * An array of all the '<em><b>Association Type String</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  private static final MultiplicityString[] VALUES_ARRAY =
-    new MultiplicityString[]
+  private static final AssociationTypeString[] VALUES_ARRAY =
+    new AssociationTypeString[]
     {
-      ZERO_ONE,
-      ZERO_N,
-      ONE_ONE,
-      ONE_N,
+      ONE,
+      OPTIONAL,
+      MANY,
     };
 
   /**
-   * A public read-only list of all the '<em><b>Multiplicity String</b></em>' enumerators.
+   * A public read-only list of all the '<em><b>Association Type String</b></em>' enumerators.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    */
-  public static final List<MultiplicityString> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
+  public static final List<AssociationTypeString> VALUES = Collections.unmodifiableList(Arrays.asList(VALUES_ARRAY));
 
   /**
-   * Returns the '<em><b>Multiplicity String</b></em>' literal with the specified literal value.
+   * Returns the '<em><b>Association Type String</b></em>' literal with the specified literal value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param literal the literal.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static MultiplicityString get(String literal)
+  public static AssociationTypeString get(String literal)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      MultiplicityString result = VALUES_ARRAY[i];
+      AssociationTypeString result = VALUES_ARRAY[i];
       if (result.toString().equals(literal))
       {
         return result;
@@ -149,18 +127,18 @@ public enum MultiplicityString implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Multiplicity String</b></em>' literal with the specified name.
+   * Returns the '<em><b>Association Type String</b></em>' literal with the specified name.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param name the name.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static MultiplicityString getByName(String name)
+  public static AssociationTypeString getByName(String name)
   {
     for (int i = 0; i < VALUES_ARRAY.length; ++i)
     {
-      MultiplicityString result = VALUES_ARRAY[i];
+      AssociationTypeString result = VALUES_ARRAY[i];
       if (result.getName().equals(name))
       {
         return result;
@@ -170,21 +148,20 @@ public enum MultiplicityString implements Enumerator
   }
 
   /**
-   * Returns the '<em><b>Multiplicity String</b></em>' literal with the specified integer value.
+   * Returns the '<em><b>Association Type String</b></em>' literal with the specified integer value.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the integer value.
    * @return the matching enumerator or <code>null</code>.
    * @generated
    */
-  public static MultiplicityString get(int value)
+  public static AssociationTypeString get(int value)
   {
     switch (value)
     {
-      case ZERO_ONE_VALUE: return ZERO_ONE;
-      case ZERO_N_VALUE: return ZERO_N;
-      case ONE_ONE_VALUE: return ONE_ONE;
-      case ONE_N_VALUE: return ONE_N;
+      case ONE_VALUE: return ONE;
+      case OPTIONAL_VALUE: return OPTIONAL;
+      case MANY_VALUE: return MANY;
     }
     return null;
   }
@@ -216,7 +193,7 @@ public enum MultiplicityString implements Enumerator
    * <!-- end-user-doc -->
    * @generated
    */
-  private MultiplicityString(int value, String name, String literal)
+  private AssociationTypeString(int value, String name, String literal)
   {
     this.value = value;
     this.name = name;
@@ -268,4 +245,4 @@ public enum MultiplicityString implements Enumerator
     return literal;
   }
   
-} //MultiplicityString
+} //AssociationTypeString

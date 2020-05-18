@@ -3,6 +3,7 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
+import io.vertigo.dsl.vertigoDsl.AlterTaskDefinition;
 import io.vertigo.dsl.vertigoDsl.TaskAttribute;
 import io.vertigo.dsl.vertigoDsl.TaskClassName;
 import io.vertigo.dsl.vertigoDsl.TaskDataSpace;
@@ -21,48 +22,39 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
+import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Task Definition</b></em>'.
+ * An implementation of the model object '<em><b>Alter Task Definition</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getName <em>Name</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getTaskDataSpace <em>Task Data Space</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getClassName <em>Class Name</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getRequest <em>Request</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskDefinitionImpl#getTaskAttributes <em>Task Attributes</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterTaskDefinitionImpl#getTaskDefinition <em>Task Definition</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterTaskDefinitionImpl#getTaskDataSpace <em>Task Data Space</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterTaskDefinitionImpl#getClassName <em>Class Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterTaskDefinitionImpl#getRequest <em>Request</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterTaskDefinitionImpl#getTaskAttributes <em>Task Attributes</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
+public class AlterTaskDefinitionImpl extends MinimalEObjectImpl.Container implements AlterTaskDefinition
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getTaskDefinition() <em>Task Definition</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getTaskDefinition()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected TaskDefinition taskDefinition;
 
   /**
    * The cached value of the '{@link #getTaskDataSpace() <em>Task Data Space</em>}' containment reference.
@@ -109,7 +101,7 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TaskDefinitionImpl()
+  protected AlterTaskDefinitionImpl()
   {
     super();
   }
@@ -122,7 +114,7 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   @Override
   protected EClass eStaticClass()
   {
-    return VertigoDslPackage.Literals.TASK_DEFINITION;
+    return VertigoDslPackage.Literals.ALTER_TASK_DEFINITION;
   }
 
   /**
@@ -131,9 +123,29 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
    * @generated
    */
   @Override
-  public String getName()
+  public TaskDefinition getTaskDefinition()
   {
-    return name;
+    if (taskDefinition != null && taskDefinition.eIsProxy())
+    {
+      InternalEObject oldTaskDefinition = (InternalEObject)taskDefinition;
+      taskDefinition = (TaskDefinition)eResolveProxy(oldTaskDefinition);
+      if (taskDefinition != oldTaskDefinition)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DEFINITION, oldTaskDefinition, taskDefinition));
+      }
+    }
+    return taskDefinition;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public TaskDefinition basicGetTaskDefinition()
+  {
+    return taskDefinition;
   }
 
   /**
@@ -142,12 +154,12 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
    * @generated
    */
   @Override
-  public void setName(String newName)
+  public void setTaskDefinition(TaskDefinition newTaskDefinition)
   {
-    String oldName = name;
-    name = newName;
+    TaskDefinition oldTaskDefinition = taskDefinition;
+    taskDefinition = newTaskDefinition;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_DEFINITION__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DEFINITION, oldTaskDefinition, taskDefinition));
   }
 
   /**
@@ -172,7 +184,7 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
     taskDataSpace = newTaskDataSpace;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE, oldTaskDataSpace, newTaskDataSpace);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE, oldTaskDataSpace, newTaskDataSpace);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -190,14 +202,14 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
     {
       NotificationChain msgs = null;
       if (taskDataSpace != null)
-        msgs = ((InternalEObject)taskDataSpace).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE, null, msgs);
+        msgs = ((InternalEObject)taskDataSpace).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE, null, msgs);
       if (newTaskDataSpace != null)
-        msgs = ((InternalEObject)newTaskDataSpace).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE, null, msgs);
+        msgs = ((InternalEObject)newTaskDataSpace).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE, null, msgs);
       msgs = basicSetTaskDataSpace(newTaskDataSpace, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE, newTaskDataSpace, newTaskDataSpace));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE, newTaskDataSpace, newTaskDataSpace));
   }
 
   /**
@@ -222,7 +234,7 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
     className = newClassName;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_DEFINITION__CLASS_NAME, oldClassName, newClassName);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME, oldClassName, newClassName);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -240,14 +252,14 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
     {
       NotificationChain msgs = null;
       if (className != null)
-        msgs = ((InternalEObject)className).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_DEFINITION__CLASS_NAME, null, msgs);
+        msgs = ((InternalEObject)className).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME, null, msgs);
       if (newClassName != null)
-        msgs = ((InternalEObject)newClassName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_DEFINITION__CLASS_NAME, null, msgs);
+        msgs = ((InternalEObject)newClassName).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME, null, msgs);
       msgs = basicSetClassName(newClassName, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_DEFINITION__CLASS_NAME, newClassName, newClassName));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME, newClassName, newClassName));
   }
 
   /**
@@ -272,7 +284,7 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
     request = newRequest;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_DEFINITION__REQUEST, oldRequest, newRequest);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST, oldRequest, newRequest);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -290,14 +302,14 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
     {
       NotificationChain msgs = null;
       if (request != null)
-        msgs = ((InternalEObject)request).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_DEFINITION__REQUEST, null, msgs);
+        msgs = ((InternalEObject)request).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST, null, msgs);
       if (newRequest != null)
-        msgs = ((InternalEObject)newRequest).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_DEFINITION__REQUEST, null, msgs);
+        msgs = ((InternalEObject)newRequest).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST, null, msgs);
       msgs = basicSetRequest(newRequest, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_DEFINITION__REQUEST, newRequest, newRequest));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST, newRequest, newRequest));
   }
 
   /**
@@ -310,7 +322,7 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     if (taskAttributes == null)
     {
-      taskAttributes = new EObjectContainmentEList<TaskAttribute>(TaskAttribute.class, this, VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES);
+      taskAttributes = new EObjectContainmentEList<TaskAttribute>(TaskAttribute.class, this, VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_ATTRIBUTES);
     }
     return taskAttributes;
   }
@@ -325,13 +337,13 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE:
         return basicSetTaskDataSpace(null, msgs);
-      case VertigoDslPackage.TASK_DEFINITION__CLASS_NAME:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME:
         return basicSetClassName(null, msgs);
-      case VertigoDslPackage.TASK_DEFINITION__REQUEST:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST:
         return basicSetRequest(null, msgs);
-      case VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_ATTRIBUTES:
         return ((InternalEList<?>)getTaskAttributes()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -347,15 +359,16 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_DEFINITION__NAME:
-        return getName();
-      case VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DEFINITION:
+        if (resolve) return getTaskDefinition();
+        return basicGetTaskDefinition();
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE:
         return getTaskDataSpace();
-      case VertigoDslPackage.TASK_DEFINITION__CLASS_NAME:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME:
         return getClassName();
-      case VertigoDslPackage.TASK_DEFINITION__REQUEST:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST:
         return getRequest();
-      case VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_ATTRIBUTES:
         return getTaskAttributes();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -372,19 +385,19 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_DEFINITION__NAME:
-        setName((String)newValue);
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DEFINITION:
+        setTaskDefinition((TaskDefinition)newValue);
         return;
-      case VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE:
         setTaskDataSpace((TaskDataSpace)newValue);
         return;
-      case VertigoDslPackage.TASK_DEFINITION__CLASS_NAME:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME:
         setClassName((TaskClassName)newValue);
         return;
-      case VertigoDslPackage.TASK_DEFINITION__REQUEST:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST:
         setRequest((TaskRequest)newValue);
         return;
-      case VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_ATTRIBUTES:
         getTaskAttributes().clear();
         getTaskAttributes().addAll((Collection<? extends TaskAttribute>)newValue);
         return;
@@ -402,19 +415,19 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_DEFINITION__NAME:
-        setName(NAME_EDEFAULT);
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DEFINITION:
+        setTaskDefinition((TaskDefinition)null);
         return;
-      case VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE:
         setTaskDataSpace((TaskDataSpace)null);
         return;
-      case VertigoDslPackage.TASK_DEFINITION__CLASS_NAME:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME:
         setClassName((TaskClassName)null);
         return;
-      case VertigoDslPackage.TASK_DEFINITION__REQUEST:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST:
         setRequest((TaskRequest)null);
         return;
-      case VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_ATTRIBUTES:
         getTaskAttributes().clear();
         return;
     }
@@ -431,35 +444,18 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_DEFINITION__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case VertigoDslPackage.TASK_DEFINITION__TASK_DATA_SPACE:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DEFINITION:
+        return taskDefinition != null;
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_DATA_SPACE:
         return taskDataSpace != null;
-      case VertigoDslPackage.TASK_DEFINITION__CLASS_NAME:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__CLASS_NAME:
         return className != null;
-      case VertigoDslPackage.TASK_DEFINITION__REQUEST:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__REQUEST:
         return request != null;
-      case VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES:
+      case VertigoDslPackage.ALTER_TASK_DEFINITION__TASK_ATTRIBUTES:
         return taskAttributes != null && !taskAttributes.isEmpty();
     }
     return super.eIsSet(featureID);
   }
 
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuilder result = new StringBuilder(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
-  }
-
-} //TaskDefinitionImpl
+} //AlterTaskDefinitionImpl

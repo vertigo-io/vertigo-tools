@@ -152,11 +152,11 @@ DtDefinitionType:
 DtDefinition:
 	'create' 'DtDefinition' {DtDefinitionAction} name=ID '{'
 		dtDefinitionStereotype=DtDefinitionStereotype?
+		dtDefinitionDataSpace=DtDefinitionDataSpace?
 		dtDefinitionIdField=DtDefinitionIdField?
 		dtDefinitionDataFields+=DtDefinitionDataField*
 		dtDefinitionComputedFields+=DtDefinitionComputedField*
-		((dtDefinitionDataSpace=DtDefinitionDataSpace?) &
-		(dtDefinitionSortField=DtDefinitionSortField?) &
+		((dtDefinitionSortField=DtDefinitionSortField?) &
 		(dtDefinitionHandleField=DtDefinitionHandleField?) &
 		(dtDefinitionDisplayField=DtDefinitionDisplayField?))
 	'}';
@@ -164,11 +164,11 @@ DtDefinition:
 AlterDtDefinition:
 	'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{'
 		dtDefinitionStereotype=DtDefinitionStereotype?
+		dtDefinitionDataSpace=DtDefinitionDataSpace?
 		dtDefinitionIdField=DtDefinitionIdField?
 		dtDefinitionDataFields+=DtDefinitionDataField*
 		dtDefinitionComputedFields+=DtDefinitionComputedField*
-		((dtDefinitionDataSpace=DtDefinitionDataSpace?) &
-		(dtDefinitionSortField=DtDefinitionSortField?) &
+		((dtDefinitionSortField=DtDefinitionSortField?) &
 		(dtDefinitionHandleField=DtDefinitionHandleField?) &
 		(dtDefinitionDisplayField=DtDefinitionDisplayField?))
 	'}';
@@ -177,12 +177,18 @@ AlterDtDefinition:
 enum MultiplicityString:
 	ZERO_ONE='\"0..1\"' |
 	ZERO_N='\"0..*\"' | 
-	ONE_ONE='\"1..1\"';
+	ONE_ONE='\"1..1\"' |
+	ONE_N='\"1..*\"';
 	
 enum CardinalityString:
 	ONE='\"1\"' |
 	OPTIONAL='\"?"' | 
 	MANY='\"*\"';
+	
+enum AssociationTypeString:
+	ONE='\"*>1\"' |
+	OPTIONAL='\"*>?"' | 
+	MANY='\"*>*\"';
 
 Association:
 	'create' 'Association' name=ID '{'
@@ -197,7 +203,7 @@ Association:
 		('labelB' ':' labelB=STRING ','? )? &
 		('roleA' ':' roleA=STRING ','? )? &
 		('roleB' ':' roleB=STRING ','? )? &
-		('type' ':' type=STRING))
+		('type' ':' type=AssociationTypeString)?)
 	'}'; 
 
 
@@ -217,17 +223,34 @@ TaskDataSpace:
 	'storeName' ':' storeName=STRING ','?
 ;
 
+TaskClassName:
+	'className' ':' className=STRING ','?
+;
+
+TaskRequest:
+	'request' ':' request=TaskRequestString ','?
+;
+
 TaskRequestString:
 	string = STRING
 ;
 
 TaskDefinition:
 	'create' 'Task' name=ID '{'
-		'className' ':' classname=STRING ','?
-		'request' ':' request=TaskRequestString ','?
-		taskAttributes+=TaskAttribute*
 		taskDataSpace=TaskDataSpace?
+		className=TaskClassName
+		request=TaskRequest?
+		taskAttributes+=TaskAttribute*
 	'}';
+	
+AlterTaskDefinition:
+	'alter' 'Task' taskDefinition=[TaskDefinition] '{'
+		taskDataSpace=TaskDataSpace?
+		className=TaskClassName
+		request=TaskRequest?
+		taskAttributes+=TaskAttribute*
+	'}';
+	
 
 
 FacetDefinitionDtDefinition:

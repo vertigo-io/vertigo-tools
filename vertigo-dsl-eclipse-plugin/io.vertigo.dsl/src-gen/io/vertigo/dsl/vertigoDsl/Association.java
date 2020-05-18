@@ -312,24 +312,27 @@ public interface Association extends Element
 
   /**
    * Returns the value of the '<em><b>Type</b></em>' attribute.
+   * The literals are from the enumeration {@link io.vertigo.dsl.vertigoDsl.AssociationTypeString}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
+   * @see io.vertigo.dsl.vertigoDsl.AssociationTypeString
+   * @see #setType(AssociationTypeString)
    * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAssociation_Type()
    * @model
    * @generated
    */
-  String getType();
+  AssociationTypeString getType();
 
   /**
    * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Association#getType <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Type</em>' attribute.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationTypeString
    * @see #getType()
    * @generated
    */
-  void setType(String value);
+  void setType(AssociationTypeString value);
 
 } // Association

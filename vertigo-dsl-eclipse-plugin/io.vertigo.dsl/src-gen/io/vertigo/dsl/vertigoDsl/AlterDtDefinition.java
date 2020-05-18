@@ -16,10 +16,10 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitione <em>Dt Definitione</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionStereotype <em>Dt Definition Stereotype</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDataSpace <em>Dt Definition Data Space</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionIdField <em>Dt Definition Id Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDataFields <em>Dt Definition Data Fields</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionComputedFields <em>Dt Definition Computed Fields</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDataSpace <em>Dt Definition Data Space</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionSortField <em>Dt Definition Sort Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionHandleField <em>Dt Definition Handle Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDisplayField <em>Dt Definition Display Field</em>}</li>
@@ -76,6 +76,28 @@ public interface AlterDtDefinition extends Element
   void setDtDefinitionStereotype(DtDefinitionStereotype value);
 
   /**
+   * Returns the value of the '<em><b>Dt Definition Data Space</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Dt Definition Data Space</em>' containment reference.
+   * @see #setDtDefinitionDataSpace(DtDefinitionDataSpace)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterDtDefinition_DtDefinitionDataSpace()
+   * @model containment="true"
+   * @generated
+   */
+  DtDefinitionDataSpace getDtDefinitionDataSpace();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDataSpace <em>Dt Definition Data Space</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Dt Definition Data Space</em>' containment reference.
+   * @see #getDtDefinitionDataSpace()
+   * @generated
+   */
+  void setDtDefinitionDataSpace(DtDefinitionDataSpace value);
+
+  /**
    * Returns the value of the '<em><b>Dt Definition Id Field</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -120,28 +142,6 @@ public interface AlterDtDefinition extends Element
    * @generated
    */
   EList<DtDefinitionComputedField> getDtDefinitionComputedFields();
-
-  /**
-   * Returns the value of the '<em><b>Dt Definition Data Space</b></em>' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Dt Definition Data Space</em>' containment reference.
-   * @see #setDtDefinitionDataSpace(DtDefinitionDataSpace)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterDtDefinition_DtDefinitionDataSpace()
-   * @model containment="true"
-   * @generated
-   */
-  DtDefinitionDataSpace getDtDefinitionDataSpace();
-
-  /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterDtDefinition#getDtDefinitionDataSpace <em>Dt Definition Data Space</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Dt Definition Data Space</em>' containment reference.
-   * @see #getDtDefinitionDataSpace()
-   * @generated
-   */
-  void setDtDefinitionDataSpace(DtDefinitionDataSpace value);
 
   /**
    * Returns the value of the '<em><b>Dt Definition Sort Field</b></em>' containment reference.

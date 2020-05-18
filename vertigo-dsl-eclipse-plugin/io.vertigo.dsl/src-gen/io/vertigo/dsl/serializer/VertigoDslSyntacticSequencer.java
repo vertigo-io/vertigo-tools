@@ -80,9 +80,9 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_1_3_q;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_2_3_q;
 	protected AbstractElementAlias match_TaskAttribute_CommaKeyword_3_q;
+	protected AbstractElementAlias match_TaskClassName_CommaKeyword_3_q;
 	protected AbstractElementAlias match_TaskDataSpace_CommaKeyword_3_q;
-	protected AbstractElementAlias match_TaskDefinition_CommaKeyword_11_q;
-	protected AbstractElementAlias match_TaskDefinition_CommaKeyword_7_q;
+	protected AbstractElementAlias match_TaskRequest_CommaKeyword_3_q;
 	
 	@Inject
 	protected void init(IGrammarAccess access) {
@@ -146,9 +146,9 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_TaskAttributeString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_1_3());
 		match_TaskAttributeString_CommaKeyword_1_2_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_2_3());
 		match_TaskAttribute_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeAccess().getCommaKeyword_3());
+		match_TaskClassName_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskClassNameAccess().getCommaKeyword_3());
 		match_TaskDataSpace_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskDataSpaceAccess().getCommaKeyword_3());
-		match_TaskDefinition_CommaKeyword_11_q = new TokenAlias(false, true, grammarAccess.getTaskDefinitionAccess().getCommaKeyword_11());
-		match_TaskDefinition_CommaKeyword_7_q = new TokenAlias(false, true, grammarAccess.getTaskDefinitionAccess().getCommaKeyword_7());
+		match_TaskRequest_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskRequestAccess().getCommaKeyword_3());
 	}
 	
 	@Override
@@ -281,12 +281,12 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_TaskAttributeString_CommaKeyword_1_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskAttribute_CommaKeyword_3_q.equals(syntax))
 				emit_TaskAttribute_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskClassName_CommaKeyword_3_q.equals(syntax))
+				emit_TaskClassName_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskDataSpace_CommaKeyword_3_q.equals(syntax))
 				emit_TaskDataSpace_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_TaskDefinition_CommaKeyword_11_q.equals(syntax))
-				emit_TaskDefinition_CommaKeyword_11_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_TaskDefinition_CommaKeyword_7_q.equals(syntax))
-				emit_TaskDefinition_CommaKeyword_7_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskRequest_CommaKeyword_3_q.equals(syntax))
+				emit_TaskRequest_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else acceptNodes(getLastNavigableState(), syntaxNodes);
 		}
 	}
@@ -422,7 +422,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     fkFieldName=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     fkFieldName=STRING (ambiguity) 'roleA' ':' roleA=STRING
 	 *     fkFieldName=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     fkFieldName=STRING (ambiguity) 'type' ':' type=STRING
+	 *     fkFieldName=STRING (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     fkFieldName=STRING (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -445,7 +445,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     roleB=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     roleB=STRING (ambiguity) 'roleA' ':' roleA=STRING
 	 *     roleB=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     roleB=STRING (ambiguity) 'type' ':' type=STRING
+	 *     roleB=STRING (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     roleB=STRING (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_10_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -468,7 +468,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'roleA' ':' roleA=STRING
 	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'roleB' ':' roleB=STRING
-	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'type' ':' type=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -491,7 +491,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'roleA' ':' roleA=STRING
 	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'roleB' ':' roleB=STRING
-	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'type' ':' type=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_2_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -514,7 +514,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     navigabilityA=BooleanString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     navigabilityA=BooleanString (ambiguity) 'roleA' ':' roleA=STRING
 	 *     navigabilityA=BooleanString (ambiguity) 'roleB' ':' roleB=STRING
-	 *     navigabilityA=BooleanString (ambiguity) 'type' ':' type=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     navigabilityA=BooleanString (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_3_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -537,7 +537,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     navigabilityB=BooleanString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     navigabilityB=BooleanString (ambiguity) 'roleA' ':' roleA=STRING
 	 *     navigabilityB=BooleanString (ambiguity) 'roleB' ':' roleB=STRING
-	 *     navigabilityB=BooleanString (ambiguity) 'type' ':' type=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     navigabilityB=BooleanString (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_4_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -560,7 +560,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     multiplicityA=MultiplicityString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     multiplicityA=MultiplicityString (ambiguity) 'roleA' ':' roleA=STRING
 	 *     multiplicityA=MultiplicityString (ambiguity) 'roleB' ':' roleB=STRING
-	 *     multiplicityA=MultiplicityString (ambiguity) 'type' ':' type=STRING
+	 *     multiplicityA=MultiplicityString (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     multiplicityA=MultiplicityString (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_5_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -583,7 +583,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     multiplicityB=MultiplicityString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     multiplicityB=MultiplicityString (ambiguity) 'roleA' ':' roleA=STRING
 	 *     multiplicityB=MultiplicityString (ambiguity) 'roleB' ':' roleB=STRING
-	 *     multiplicityB=MultiplicityString (ambiguity) 'type' ':' type=STRING
+	 *     multiplicityB=MultiplicityString (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     multiplicityB=MultiplicityString (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_6_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -606,7 +606,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     labelA=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     labelA=STRING (ambiguity) 'roleA' ':' roleA=STRING
 	 *     labelA=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     labelA=STRING (ambiguity) 'type' ':' type=STRING
+	 *     labelA=STRING (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     labelA=STRING (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_7_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -629,7 +629,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     labelB=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     labelB=STRING (ambiguity) 'roleA' ':' roleA=STRING
 	 *     labelB=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     labelB=STRING (ambiguity) 'type' ':' type=STRING
+	 *     labelB=STRING (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     labelB=STRING (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_8_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -652,7 +652,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     roleA=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
 	 *     roleA=STRING (ambiguity) 'roleA' ':' roleA=STRING
 	 *     roleA=STRING (ambiguity) 'roleB' ':' roleB=STRING
-	 *     roleA=STRING (ambiguity) 'type' ':' type=STRING
+	 *     roleA=STRING (ambiguity) 'type' ':' type=AssociationTypeString
 	 *     roleA=STRING (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_9_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -1264,6 +1264,17 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
+	 *     className=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_TaskClassName_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
 	 *     storeName=STRING (ambiguity) (rule end)
 	 */
 	protected void emit_TaskDataSpace_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -1275,22 +1286,9 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     request=TaskRequestString (ambiguity) '}' (rule end)
-	 *     request=TaskRequestString (ambiguity) taskAttributes+=TaskAttribute
-	 *     request=TaskRequestString (ambiguity) taskDataSpace=TaskDataSpace
+	 *     request=TaskRequestString (ambiguity) (rule end)
 	 */
-	protected void emit_TaskDefinition_CommaKeyword_11_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','?
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     classname=STRING (ambiguity) 'request' ':' request=TaskRequestString
-	 */
-	protected void emit_TaskDefinition_CommaKeyword_7_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_TaskRequest_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

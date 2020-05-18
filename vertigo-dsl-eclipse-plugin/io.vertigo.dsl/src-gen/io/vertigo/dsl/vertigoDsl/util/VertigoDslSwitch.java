@@ -304,6 +304,20 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.TASK_CLASS_NAME:
+      {
+        TaskClassName taskClassName = (TaskClassName)theEObject;
+        T result = caseTaskClassName(taskClassName);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.TASK_REQUEST:
+      {
+        TaskRequest taskRequest = (TaskRequest)theEObject;
+        T result = caseTaskRequest(taskRequest);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.TASK_REQUEST_STRING:
       {
         TaskRequestString taskRequestString = (TaskRequestString)theEObject;
@@ -316,6 +330,13 @@ public class VertigoDslSwitch<T> extends Switch<T>
         TaskDefinition taskDefinition = (TaskDefinition)theEObject;
         T result = caseTaskDefinition(taskDefinition);
         if (result == null) result = caseElement(taskDefinition);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.ALTER_TASK_DEFINITION:
+      {
+        AlterTaskDefinition alterTaskDefinition = (AlterTaskDefinition)theEObject;
+        T result = caseAlterTaskDefinition(alterTaskDefinition);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -1007,6 +1028,38 @@ public class VertigoDslSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Task Class Name</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task Class Name</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaskClassName(TaskClassName object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Task Request</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task Request</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaskRequest(TaskRequest object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>Task Request String</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -1034,6 +1087,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseTaskDefinition(TaskDefinition object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Alter Task Definition</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Alter Task Definition</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseAlterTaskDefinition(AlterTaskDefinition object)
   {
     return null;
   }

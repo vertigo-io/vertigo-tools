@@ -231,6 +231,16 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createTaskDataSpaceAdapter();
       }
       @Override
+      public Adapter caseTaskClassName(TaskClassName object)
+      {
+        return createTaskClassNameAdapter();
+      }
+      @Override
+      public Adapter caseTaskRequest(TaskRequest object)
+      {
+        return createTaskRequestAdapter();
+      }
+      @Override
       public Adapter caseTaskRequestString(TaskRequestString object)
       {
         return createTaskRequestStringAdapter();
@@ -239,6 +249,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
       public Adapter caseTaskDefinition(TaskDefinition object)
       {
         return createTaskDefinitionAdapter();
+      }
+      @Override
+      public Adapter caseAlterTaskDefinition(AlterTaskDefinition object)
+      {
+        return createAlterTaskDefinitionAdapter();
       }
       @Override
       public Adapter caseFacetDefinitionDtDefinition(FacetDefinitionDtDefinition object)
@@ -853,6 +868,36 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.TaskClassName <em>Task Class Name</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.TaskClassName
+   * @generated
+   */
+  public Adapter createTaskClassNameAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.TaskRequest <em>Task Request</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.TaskRequest
+   * @generated
+   */
+  public Adapter createTaskRequestAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.TaskRequestString <em>Task Request String</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -878,6 +923,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createTaskDefinitionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition <em>Alter Task Definition</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.AlterTaskDefinition
+   * @generated
+   */
+  public Adapter createAlterTaskDefinitionAdapter()
   {
     return null;
   }

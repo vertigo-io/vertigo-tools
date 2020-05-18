@@ -303,6 +303,24 @@ public interface VertigoDslFactory extends EFactory
   TaskDataSpace createTaskDataSpace();
 
   /**
+   * Returns a new object of class '<em>Task Class Name</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task Class Name</em>'.
+   * @generated
+   */
+  TaskClassName createTaskClassName();
+
+  /**
+   * Returns a new object of class '<em>Task Request</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task Request</em>'.
+   * @generated
+   */
+  TaskRequest createTaskRequest();
+
+  /**
    * Returns a new object of class '<em>Task Request String</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -319,6 +337,15 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   TaskDefinition createTaskDefinition();
+
+  /**
+   * Returns a new object of class '<em>Alter Task Definition</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Alter Task Definition</em>'.
+   * @generated
+   */
+  AlterTaskDefinition createAlterTaskDefinition();
 
   /**
    * Returns a new object of class '<em>Facet Definition Dt Definition</em>'.

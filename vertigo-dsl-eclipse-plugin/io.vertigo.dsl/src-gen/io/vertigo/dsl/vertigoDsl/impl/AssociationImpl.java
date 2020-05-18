@@ -4,6 +4,7 @@
 package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.Association;
+import io.vertigo.dsl.vertigoDsl.AssociationTypeString;
 import io.vertigo.dsl.vertigoDsl.BooleanString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionType;
 import io.vertigo.dsl.vertigoDsl.MultiplicityString;
@@ -271,7 +272,7 @@ public class AssociationImpl extends ElementImpl implements Association
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected static final AssociationTypeString TYPE_EDEFAULT = AssociationTypeString.ONE;
 
   /**
    * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
@@ -281,7 +282,7 @@ public class AssociationImpl extends ElementImpl implements Association
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected AssociationTypeString type = TYPE_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -650,7 +651,7 @@ public class AssociationImpl extends ElementImpl implements Association
    * @generated
    */
   @Override
-  public String getType()
+  public AssociationTypeString getType()
   {
     return type;
   }
@@ -661,10 +662,10 @@ public class AssociationImpl extends ElementImpl implements Association
    * @generated
    */
   @Override
-  public void setType(String newType)
+  public void setType(AssociationTypeString newType)
   {
-    String oldType = type;
-    type = newType;
+    AssociationTypeString oldType = type;
+    type = newType == null ? TYPE_EDEFAULT : newType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ASSOCIATION__TYPE, oldType, type));
   }
@@ -758,7 +759,7 @@ public class AssociationImpl extends ElementImpl implements Association
         setRoleB((String)newValue);
         return;
       case VertigoDslPackage.ASSOCIATION__TYPE:
-        setType((String)newValue);
+        setType((AssociationTypeString)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -852,7 +853,7 @@ public class AssociationImpl extends ElementImpl implements Association
       case VertigoDslPackage.ASSOCIATION__ROLE_B:
         return ROLE_B_EDEFAULT == null ? roleB != null : !ROLE_B_EDEFAULT.equals(roleB);
       case VertigoDslPackage.ASSOCIATION__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
+        return type != TYPE_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

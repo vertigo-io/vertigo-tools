@@ -5,49 +5,51 @@ package io.vertigo.dsl.vertigoDsl;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Task Definition</b></em>'.
+ * A representation of the model object '<em><b>Alter Task Definition</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getName <em>Name</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getTaskDataSpace <em>Task Data Space</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getClassName <em>Class Name</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getRequest <em>Request</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getTaskAttributes <em>Task Attributes</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getTaskDefinition <em>Task Definition</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getTaskDataSpace <em>Task Data Space</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getClassName <em>Class Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getRequest <em>Request</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getTaskAttributes <em>Task Attributes</em>}</li>
  * </ul>
  *
- * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskDefinition()
+ * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterTaskDefinition()
  * @model
  * @generated
  */
-public interface TaskDefinition extends Element
+public interface AlterTaskDefinition extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Task Definition</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskDefinition_Name()
+   * @return the value of the '<em>Task Definition</em>' reference.
+   * @see #setTaskDefinition(TaskDefinition)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterTaskDefinition_TaskDefinition()
    * @model
    * @generated
    */
-  String getName();
+  TaskDefinition getTaskDefinition();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getTaskDefinition <em>Task Definition</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Task Definition</em>' reference.
+   * @see #getTaskDefinition()
    * @generated
    */
-  void setName(String value);
+  void setTaskDefinition(TaskDefinition value);
 
   /**
    * Returns the value of the '<em><b>Task Data Space</b></em>' containment reference.
@@ -55,14 +57,14 @@ public interface TaskDefinition extends Element
    * <!-- end-user-doc -->
    * @return the value of the '<em>Task Data Space</em>' containment reference.
    * @see #setTaskDataSpace(TaskDataSpace)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskDefinition_TaskDataSpace()
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterTaskDefinition_TaskDataSpace()
    * @model containment="true"
    * @generated
    */
   TaskDataSpace getTaskDataSpace();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getTaskDataSpace <em>Task Data Space</em>}' containment reference.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getTaskDataSpace <em>Task Data Space</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Task Data Space</em>' containment reference.
@@ -77,14 +79,14 @@ public interface TaskDefinition extends Element
    * <!-- end-user-doc -->
    * @return the value of the '<em>Class Name</em>' containment reference.
    * @see #setClassName(TaskClassName)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskDefinition_ClassName()
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterTaskDefinition_ClassName()
    * @model containment="true"
    * @generated
    */
   TaskClassName getClassName();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getClassName <em>Class Name</em>}' containment reference.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getClassName <em>Class Name</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Class Name</em>' containment reference.
@@ -99,14 +101,14 @@ public interface TaskDefinition extends Element
    * <!-- end-user-doc -->
    * @return the value of the '<em>Request</em>' containment reference.
    * @see #setRequest(TaskRequest)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskDefinition_Request()
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterTaskDefinition_Request()
    * @model containment="true"
    * @generated
    */
   TaskRequest getRequest();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskDefinition#getRequest <em>Request</em>}' containment reference.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.AlterTaskDefinition#getRequest <em>Request</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Request</em>' containment reference.
@@ -121,10 +123,10 @@ public interface TaskDefinition extends Element
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Task Attributes</em>' containment reference list.
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskDefinition_TaskAttributes()
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getAlterTaskDefinition_TaskAttributes()
    * @model containment="true"
    * @generated
    */
   EList<TaskAttribute> getTaskAttributes();
 
-} // TaskDefinition
+} // AlterTaskDefinition

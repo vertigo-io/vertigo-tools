@@ -501,7 +501,59 @@ class VertigoDslParsingTest {
 				navigabilityB: "false"
 				roleA: "roleA"
 				roleB: "roleB"
-				type: "dsd"
+			}
+		'''))
+		Assertions.assertNotNull(result)
+
+		assertNoSyntaxError(result, parserRule)
+
+	}
+	
+	
+	@Test
+	def void checkTaskStoreName() {
+		
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "TaskDefinition") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			create Task TkGetProcessByName {
+				storeName : "orchestra"
+			    className : "io.vertigo.dynamox.task.TaskEngineSelect"
+			    request : "
+			        	select *
+			        	from o_process pro   
+			        	where pro.NAME = #name# and pro.ACTIVE_VERSION is true  	
+						"
+				attribute name	 	{domain : DoOLibelle		cardinality: "1" 	inOut :"in"}
+				attribute dtOProcessUi	 	{domain : DoDtOProcessUi		cardinality: "1" 	inOut :"out"}
+			}
+		'''))
+		Assertions.assertNotNull(result)
+
+		assertNoSyntaxError(result, parserRule)
+
+	}
+	
+	
+	@Test
+	def void checkDtDefinitonStoreName() {
+		
+		val parserRule = GrammarUtil.findRuleForName(access.getGrammar, "DtDefinition") as ParserRule
+	
+		val result = parser.parse(parserRule, new StringReader('''
+			create DtDefinition DtBase {
+				stereotype: "KeyConcept"
+				storeName : "orchestra"
+				id baseId {domain: DoId label: "Id"}
+				field code {domain: DoCode label: "Code" cardinality:"?"}
+				field name {domain: DoLabel label: "Name" cardinality:"?"}
+				field healthLevel {domain: DoHealth label: "Health Level" cardinality: "?"}	
+				field creationDate {domain: DoLocaldate label: "Creation Date" cardinality:"?"}
+				field description {domain: DoDescription label: "Description" cardinality:"?"}
+				field geoLocation {domain: DoLabel label:"Geographic Location" cardinality:"?"}
+				field assetsValue {domain: DoCurrency label:"Current base assets value" cardinality:"?"}
+				field rentingFee {domain: DoCurrency label: "Renting Fee" cardinality:"?"}
+				field tags {domain: DoMultipleIds label: "Tags" cardinality:"?"}
 			}
 		'''))
 		Assertions.assertNotNull(result)
