@@ -1,44 +1,105 @@
 {
-    "name": "VertigoDsl",
-    "scopeName": "text.vertigodsl",
+    "name": "Vertigo",
+    "scopeName": "text.vertigo",
     "fileTypes": [
-        "vertigodsl"
+        "vertigo"
     ],
     "repository": {
         "general": {
             "patterns": [
-                {
-                    "include": "#linecomment"
-                },
-                {
-                    "include": "#blockcomment"
-                },
-                {
-                    "include": "#keyword"
-                }
+                { "include": "#linecomment" },
+                { "include": "#blockcomment" },
+                { "include": "#keyword" },
+                { "include": "#definitionType" },
+                { "include": "#domainParameters" },
+                { "include": "#formatterParameters" },
+                { "include": "#constraintParameters" },
+                { "include": "#dtDefinitionParameters" },
+                { "include": "#associationParameters" },
+                { "include": "#taskParameters" },
+                { "include": "#fileInfoParameters" },
+                { "include": "#indexDefinitionParameters" },
+                { "include": "#facetDefinitionParameters" },
+                { "include": "#facetedQueryDefinitionParameters" },
+                { "include": "#constantsCardinality" },
+                { "include": "#constantsStereotype" },
+                { "include": "#constantsDatatype" }
             ]
         },
         "linecomment": {
-            "name": "comment.line.double-dash.vertigodsl",
+            "name": "comment.line.double-dash.vertigo",
             "begin": "(^[ \\t]+)?(?=//)",
             "end": "(?=$)"
         },
         "blockcomment": {
-            "name": "comment.block.vertigodsl",
+            "name": "comment.block.vertigo",
             "begin": "/\\*(\\*)?(?!/)",
             "end": "\\*/"
         },
         
         "keyword": {
-            "name": "keyword.control.vertigodsl",
-            "match": "\\b(Hello|from)\\b|!"
-
+            "name": "keyword.control.vertigo",
+            "match": "\\b(package|create|alter)\\b"
+        },
+        "definitionType": {
+            "name": "storage.type.vertigo",
+            "match": "\\b(Domain|Formatter|Constraint|DtDefinition|Association|Task|FileInfo|IndexDefinition|FacetDefinition|FacetedQueryDefinition)\\b"
+        },
+        "domainParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(dataType|type|formatter|storeType|indexType|constraint|unit)\\b"
+        },
+        "formatterParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(className|args)\\b"
+        },
+        "constraintParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(className|args|msg)\\b"
+        },
+        "dtDefinitionParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(storeName|stereotype|id|field|domain|cardinality|label|computed|sortField|displayField|handleField)\\b"
+        },
+        "associationParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(fkFieldName|dtDefinitionA|dtDefinitionB|navigabilityA|navigabilityB|multiplicityA|multiplicityB|labelA|labelB|roleA|roleB|type)\\b"
+        },
+        "taskParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(storeName|className|request|attribute|inOut)\\b"
+        },
+        "fileInfoParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(storeName)\\b"
+        },
+        "indexDefinitionParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(keyConcept|dtIndex|loaderId|indexCopyTo|from)\\b"
+        },
+        "facetDefinitionParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(dtDefinition|fieldName|label|filter|range|params|value)\\b"
+        },
+        "facetedQueryDefinitionParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(keyConcept|domainCriteria|listFilterBuilderQuery|geoSearchQuery|listFilterBuilderClass|facets)\\b"
+        },
+        "constantsCardinality": {
+            "name": "variable.other.enummember.vertigo",
+            "match": "\"(0\\.\\.1|0\\.\\.\\*|1\\.\\.1|1\\.\\.\\*|1|\\?|\\*|\\*>1|\\*>\\?|\\*>\\*|in|out)\""
+        },
+        "constantsStereotype": {
+            "name": "variable.other.enummember.vertigo",
+            "match": "(KeyConcept|MasterData|StaticMasterData)"
+        },
+        "constantsDatatype": {
+            "name": "support.type.vertigo",
+            "match": "\\b(Integer|Double|Boolean|String|LocalDate|Instant|BigDecimal|Long|DataStream|ValueObject)\\b"
         }
     },
     "patterns": [
-        {
-            "include": "#general"
-        }
+        { "include": "#general" }
     ],
-    "uuid": "8383e49a-fa0d-4bb5-827b-10e8abb294ca"
+    "uuid": "d8040a50-9952-11ea-bb37-0242ac130002"
 }
