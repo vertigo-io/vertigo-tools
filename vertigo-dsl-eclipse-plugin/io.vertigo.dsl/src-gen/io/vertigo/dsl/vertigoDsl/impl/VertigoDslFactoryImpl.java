@@ -72,9 +72,7 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.ELEMENT: return createElement();
       case VertigoDslPackage.DECLARED_DOMAIN: return createDeclaredDomain();
       case VertigoDslPackage.DECLARED_DT_DEFINITION: return createDeclaredDtDefinition();
-      case VertigoDslPackage.CONSTRAINT: return createConstraint();
       case VertigoDslPackage.FILE_INFO: return createFileInfo();
-      case VertigoDslPackage.FORMATTER: return createFormatter();
       case VertigoDslPackage.DOMAIN: return createDomain();
       case VertigoDslPackage.ALTER_DOMAIN: return createAlterDomain();
       case VertigoDslPackage.DOMAIN_TYPE: return createDomainType();
@@ -152,8 +150,6 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
         return createCardinalityStringFromString(eDataType, initialValue);
       case VertigoDslPackage.ASSOCIATION_TYPE_STRING:
         return createAssociationTypeStringFromString(eDataType, initialValue);
-      case VertigoDslPackage.IN_OUT_STRING:
-        return createInOutStringFromString(eDataType, initialValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -179,8 +175,6 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
         return convertCardinalityStringToString(eDataType, instanceValue);
       case VertigoDslPackage.ASSOCIATION_TYPE_STRING:
         return convertAssociationTypeStringToString(eDataType, instanceValue);
-      case VertigoDslPackage.IN_OUT_STRING:
-        return convertInOutStringToString(eDataType, instanceValue);
       default:
         throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
     }
@@ -264,34 +258,10 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   @Override
-  public Constraint createConstraint()
-  {
-    ConstraintImpl constraint = new ConstraintImpl();
-    return constraint;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public FileInfo createFileInfo()
   {
     FileInfoImpl fileInfo = new FileInfoImpl();
     return fileInfo;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public Formatter createFormatter()
-  {
-    FormatterImpl formatter = new FormatterImpl();
-    return formatter;
   }
 
   /**
@@ -1024,28 +994,6 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   public String convertAssociationTypeStringToString(EDataType eDataType, Object instanceValue)
-  {
-    return instanceValue == null ? null : instanceValue.toString();
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public InOutString createInOutStringFromString(EDataType eDataType, String initialValue)
-  {
-    InOutString result = InOutString.get(initialValue);
-    if (result == null) throw new IllegalArgumentException("The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
-    return result;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public String convertInOutStringToString(EDataType eDataType, Object instanceValue)
   {
     return instanceValue == null ? null : instanceValue.toString();
   }

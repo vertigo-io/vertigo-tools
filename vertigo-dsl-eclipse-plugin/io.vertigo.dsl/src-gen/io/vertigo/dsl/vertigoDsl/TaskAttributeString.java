@@ -16,7 +16,6 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getCardinality <em>Cardinality</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getInout <em>Inout</em>}</li>
  * </ul>
  *
  * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttributeString()
@@ -71,30 +70,5 @@ public interface TaskAttributeString extends EObject
    * @generated
    */
   void setCardinality(CardinalityString value);
-
-  /**
-   * Returns the value of the '<em><b>Inout</b></em>' attribute.
-   * The literals are from the enumeration {@link io.vertigo.dsl.vertigoDsl.InOutString}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Inout</em>' attribute.
-   * @see io.vertigo.dsl.vertigoDsl.InOutString
-   * @see #setInout(InOutString)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttributeString_Inout()
-   * @model
-   * @generated
-   */
-  InOutString getInout();
-
-  /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString#getInout <em>Inout</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Inout</em>' attribute.
-   * @see io.vertigo.dsl.vertigoDsl.InOutString
-   * @see #getInout()
-   * @generated
-   */
-  void setInout(InOutString value);
 
 } // TaskAttributeString

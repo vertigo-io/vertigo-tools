@@ -3,7 +3,6 @@
  */
 package io.vertigo.dsl.vertigoDsl;
 
-import org.eclipse.emf.common.util.EList;
 
 /**
  * <!-- begin-user-doc -->
@@ -16,13 +15,10 @@ import org.eclipse.emf.common.util.EList;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getDataType <em>Data Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getType <em>Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getFormatter <em>Formatter</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getStoreType <em>Store Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getIndexType <em>Index Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getConstraint <em>Constraint</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#getUnit <em>Unit</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#isType <em>Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#isStoreType <em>Store Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#isIndexType <em>Index Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.Domain#isUnit <em>Unit</em>}</li>
  * </ul>
  *
  * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain()
@@ -83,133 +79,87 @@ public interface Domain extends Element, DomainType
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Type</em>' attribute.
-   * @see #setType(String)
+   * @see #setType(boolean)
    * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain_Type()
    * @model
    * @generated
    */
-  String getType();
+  boolean isType();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#getType <em>Type</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#isType <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Type</em>' attribute.
-   * @see #getType()
+   * @see #isType()
    * @generated
    */
-  void setType(String value);
-
-  /**
-   * Returns the value of the '<em><b>Formatter</b></em>' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Formatter</em>' reference.
-   * @see #setFormatter(Formatter)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain_Formatter()
-   * @model
-   * @generated
-   */
-  Formatter getFormatter();
-
-  /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#getFormatter <em>Formatter</em>}' reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Formatter</em>' reference.
-   * @see #getFormatter()
-   * @generated
-   */
-  void setFormatter(Formatter value);
+  void setType(boolean value);
 
   /**
    * Returns the value of the '<em><b>Store Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Store Type</em>' attribute.
-   * @see #setStoreType(String)
+   * @see #setStoreType(boolean)
    * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain_StoreType()
    * @model
    * @generated
    */
-  String getStoreType();
+  boolean isStoreType();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#getStoreType <em>Store Type</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#isStoreType <em>Store Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Store Type</em>' attribute.
-   * @see #getStoreType()
+   * @see #isStoreType()
    * @generated
    */
-  void setStoreType(String value);
+  void setStoreType(boolean value);
 
   /**
    * Returns the value of the '<em><b>Index Type</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Index Type</em>' attribute.
-   * @see #setIndexType(String)
+   * @see #setIndexType(boolean)
    * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain_IndexType()
    * @model
    * @generated
    */
-  String getIndexType();
+  boolean isIndexType();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#getIndexType <em>Index Type</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#isIndexType <em>Index Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Index Type</em>' attribute.
-   * @see #getIndexType()
+   * @see #isIndexType()
    * @generated
    */
-  void setIndexType(String value);
-
-  /**
-   * Returns the value of the '<em><b>Constraint</b></em>' reference list.
-   * The list contents are of type {@link io.vertigo.dsl.vertigoDsl.Constraint}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Constraint</em>' reference list.
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain_Constraint()
-   * @model
-   * @generated
-   */
-  EList<Constraint> getConstraint();
-
-  /**
-   * Returns the value of the '<em><b>Constraints</b></em>' reference list.
-   * The list contents are of type {@link io.vertigo.dsl.vertigoDsl.Constraint}.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return the value of the '<em>Constraints</em>' reference list.
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain_Constraints()
-   * @model
-   * @generated
-   */
-  EList<Constraint> getConstraints();
+  void setIndexType(boolean value);
 
   /**
    * Returns the value of the '<em><b>Unit</b></em>' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Unit</em>' attribute.
-   * @see #setUnit(String)
+   * @see #setUnit(boolean)
    * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDomain_Unit()
    * @model
    * @generated
    */
-  String getUnit();
+  boolean isUnit();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#getUnit <em>Unit</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.Domain#isUnit <em>Unit</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Unit</em>' attribute.
-   * @see #getUnit()
+   * @see #isUnit()
    * @generated
    */
-  void setUnit(String value);
+  void setUnit(boolean value);
 
 } // Domain

@@ -21,10 +21,6 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VertigoDslGrammarAccess grammarAccess;
-	protected AbstractElementAlias match_AlterDomain_CommaKeyword_1_1_3_4_0_p;
-	protected AbstractElementAlias match_AlterDomain_Domain_RightCurlyBracketKeyword_1_2_p_or_RightCurlyBracketKeyword_1_2_p;
-	protected AbstractElementAlias match_AlterDomain_RightCurlyBracketKeyword_1_2_a;
-	protected AbstractElementAlias match_AlterDomain_RightCurlyBracketKeyword_1_2_p;
 	protected AbstractElementAlias match_Association_CommaKeyword_4_0_3_q;
 	protected AbstractElementAlias match_Association_CommaKeyword_4_10_3_q;
 	protected AbstractElementAlias match_Association_CommaKeyword_4_1_3_q;
@@ -36,9 +32,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_Association_CommaKeyword_4_7_3_q;
 	protected AbstractElementAlias match_Association_CommaKeyword_4_8_3_q;
 	protected AbstractElementAlias match_Association_CommaKeyword_4_9_3_q;
-	protected AbstractElementAlias match_Domain_CommaKeyword_1_1_3_4_0_p;
-	protected AbstractElementAlias match_Domain_RightCurlyBracketKeyword_1_2_a;
-	protected AbstractElementAlias match_Domain_RightCurlyBracketKeyword_1_2_p;
 	protected AbstractElementAlias match_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q;
 	protected AbstractElementAlias match_DtDefinitionComputedFieldString_CommaKeyword_1_1_3_q;
 	protected AbstractElementAlias match_DtDefinitionComputedFieldString_CommaKeyword_1_2_3_q;
@@ -78,8 +71,8 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_PackageString_FullStopKeyword_1_0_p;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_0_3_q;
 	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_1_3_q;
-	protected AbstractElementAlias match_TaskAttributeString_CommaKeyword_1_2_3_q;
 	protected AbstractElementAlias match_TaskAttribute_CommaKeyword_3_q;
+	protected AbstractElementAlias match_TaskAttribute_InKeyword_0_0_or_OutKeyword_0_1;
 	protected AbstractElementAlias match_TaskClassName_CommaKeyword_3_q;
 	protected AbstractElementAlias match_TaskDataSpace_CommaKeyword_3_q;
 	protected AbstractElementAlias match_TaskRequest_CommaKeyword_3_q;
@@ -87,10 +80,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (VertigoDslGrammarAccess) access;
-		match_AlterDomain_CommaKeyword_1_1_3_4_0_p = new TokenAlias(true, false, grammarAccess.getAlterDomainAccess().getCommaKeyword_1_1_3_4_0());
-		match_AlterDomain_Domain_RightCurlyBracketKeyword_1_2_p_or_RightCurlyBracketKeyword_1_2_p = new AlternativeAlias(false, false, new TokenAlias(true, false, grammarAccess.getAlterDomainAccess().getRightCurlyBracketKeyword_1_2()), new TokenAlias(true, false, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_1_2()));
-		match_AlterDomain_RightCurlyBracketKeyword_1_2_a = new TokenAlias(true, true, grammarAccess.getAlterDomainAccess().getRightCurlyBracketKeyword_1_2());
-		match_AlterDomain_RightCurlyBracketKeyword_1_2_p = new TokenAlias(true, false, grammarAccess.getAlterDomainAccess().getRightCurlyBracketKeyword_1_2());
 		match_Association_CommaKeyword_4_0_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_0_3());
 		match_Association_CommaKeyword_4_10_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_10_3());
 		match_Association_CommaKeyword_4_1_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_1_3());
@@ -102,9 +91,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_Association_CommaKeyword_4_7_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_7_3());
 		match_Association_CommaKeyword_4_8_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_8_3());
 		match_Association_CommaKeyword_4_9_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_9_3());
-		match_Domain_CommaKeyword_1_1_3_4_0_p = new TokenAlias(true, false, grammarAccess.getDomainAccess().getCommaKeyword_1_1_3_4_0());
-		match_Domain_RightCurlyBracketKeyword_1_2_a = new TokenAlias(true, true, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_1_2());
-		match_Domain_RightCurlyBracketKeyword_1_2_p = new TokenAlias(true, false, grammarAccess.getDomainAccess().getRightCurlyBracketKeyword_1_2());
 		match_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_0_3());
 		match_DtDefinitionComputedFieldString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_1_3());
 		match_DtDefinitionComputedFieldString_CommaKeyword_1_2_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_2_3());
@@ -144,8 +130,8 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_PackageString_FullStopKeyword_1_0_p = new TokenAlias(true, false, grammarAccess.getPackageStringAccess().getFullStopKeyword_1_0());
 		match_TaskAttributeString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_0_3());
 		match_TaskAttributeString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_1_3());
-		match_TaskAttributeString_CommaKeyword_1_2_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeStringAccess().getCommaKeyword_1_2_3());
 		match_TaskAttribute_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskAttributeAccess().getCommaKeyword_3());
+		match_TaskAttribute_InKeyword_0_0_or_OutKeyword_0_1 = new AlternativeAlias(false, false, new TokenAlias(false, false, grammarAccess.getTaskAttributeAccess().getInKeyword_0_0()), new TokenAlias(false, false, grammarAccess.getTaskAttributeAccess().getOutKeyword_0_1()));
 		match_TaskClassName_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskClassNameAccess().getCommaKeyword_3());
 		match_TaskDataSpace_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskDataSpaceAccess().getCommaKeyword_3());
 		match_TaskRequest_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getTaskRequestAccess().getCommaKeyword_3());
@@ -153,9 +139,22 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	
 	@Override
 	protected String getUnassignedRuleCallToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (ruleCall.getRule() == grammarAccess.getSTRINGRule())
+			return getSTRINGToken(semanticObject, ruleCall, node);
 		return "";
 	}
 	
+	/**
+	 * @Override
+	 * terminal STRING: 
+	 *     '"' ( ESCAPED_CHAR | !('\\'|'"') )* '"' |
+	 *     "'" ( ESCAPED_CHAR | !('\\'|"'") )* "'";
+	 */
+	protected String getSTRINGToken(EObject semanticObject, RuleCall ruleCall, INode node) {
+		if (node != null)
+			return getTokenText(node);
+		return "\"\"";
+	}
 	
 	@Override
 	protected void emitUnassignedTokens(EObject semanticObject, ISynTransition transition, INode fromNode, INode toNode) {
@@ -163,15 +162,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_AlterDomain_CommaKeyword_1_1_3_4_0_p.equals(syntax))
-				emit_AlterDomain_CommaKeyword_1_1_3_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_AlterDomain_Domain_RightCurlyBracketKeyword_1_2_p_or_RightCurlyBracketKeyword_1_2_p.equals(syntax))
-				emit_AlterDomain_Domain_RightCurlyBracketKeyword_1_2_p_or_RightCurlyBracketKeyword_1_2_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_AlterDomain_RightCurlyBracketKeyword_1_2_a.equals(syntax))
-				emit_AlterDomain_RightCurlyBracketKeyword_1_2_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_AlterDomain_RightCurlyBracketKeyword_1_2_p.equals(syntax))
-				emit_AlterDomain_RightCurlyBracketKeyword_1_2_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Association_CommaKeyword_4_0_3_q.equals(syntax))
+			if (match_Association_CommaKeyword_4_0_3_q.equals(syntax))
 				emit_Association_CommaKeyword_4_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Association_CommaKeyword_4_10_3_q.equals(syntax))
 				emit_Association_CommaKeyword_4_10_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -193,12 +184,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_Association_CommaKeyword_4_8_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Association_CommaKeyword_4_9_3_q.equals(syntax))
 				emit_Association_CommaKeyword_4_9_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Domain_CommaKeyword_1_1_3_4_0_p.equals(syntax))
-				emit_Domain_CommaKeyword_1_1_3_4_0_p(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Domain_RightCurlyBracketKeyword_1_2_a.equals(syntax))
-				emit_Domain_RightCurlyBracketKeyword_1_2_a(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_Domain_RightCurlyBracketKeyword_1_2_p.equals(syntax))
-				emit_Domain_RightCurlyBracketKeyword_1_2_p(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q.equals(syntax))
 				emit_DtDefinitionComputedFieldString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionComputedFieldString_CommaKeyword_1_1_3_q.equals(syntax))
@@ -277,10 +262,10 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_TaskAttributeString_CommaKeyword_1_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskAttributeString_CommaKeyword_1_1_3_q.equals(syntax))
 				emit_TaskAttributeString_CommaKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
-			else if (match_TaskAttributeString_CommaKeyword_1_2_3_q.equals(syntax))
-				emit_TaskAttributeString_CommaKeyword_1_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskAttribute_CommaKeyword_3_q.equals(syntax))
 				emit_TaskAttribute_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_TaskAttribute_InKeyword_0_0_or_OutKeyword_0_1.equals(syntax))
+				emit_TaskAttribute_InKeyword_0_0_or_OutKeyword_0_1(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskClassName_CommaKeyword_3_q.equals(syntax))
 				emit_TaskClassName_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_TaskDataSpace_CommaKeyword_3_q.equals(syntax))
@@ -291,121 +276,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
-	/**
-	 * Ambiguous syntax:
-	 *     ','+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     constraint+=[Constraint|ID] (ambiguity) constraints+=[Constraint|ID]
-	 *     constraints+=[Constraint|ID] (ambiguity) constraints+=[Constraint|ID]
-	 */
-	protected void emit_AlterDomain_CommaKeyword_1_1_3_4_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'+ | '}'+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 */
-	protected void emit_AlterDomain_Domain_RightCurlyBracketKeyword_1_2_p_or_RightCurlyBracketKeyword_1_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     (rule start) (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     (rule start) (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     (rule start) (ambiguity) 'indexType' ':' indexType=STRING
-	 *     (rule start) (ambiguity) 'storeType' ':' storeType=STRING
-	 *     (rule start) (ambiguity) 'type' ':' type=STRING
-	 *     (rule start) (ambiguity) 'unit' ':' unit=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'indexType' ':' indexType=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'storeType' ':' storeType=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'unit' ':' unit=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'indexType' ':' indexType=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'storeType' ':' storeType=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'unit' ':' unit=STRING
-	 *     dataType=DataType (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     dataType=DataType (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     dataType=DataType (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     dataType=DataType (ambiguity) 'indexType' ':' indexType=STRING
-	 *     dataType=DataType (ambiguity) 'storeType' ':' storeType=STRING
-	 *     dataType=DataType (ambiguity) 'type' ':' type=STRING
-	 *     dataType=DataType (ambiguity) 'unit' ':' unit=STRING
-	 *     dataType=DataType (ambiguity) (rule end)
-	 *     formatter=[Formatter|ID] (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     formatter=[Formatter|ID] (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     formatter=[Formatter|ID] (ambiguity) 'indexType' ':' indexType=STRING
-	 *     formatter=[Formatter|ID] (ambiguity) 'storeType' ':' storeType=STRING
-	 *     formatter=[Formatter|ID] (ambiguity) 'unit' ':' unit=STRING
-	 *     indexType=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     indexType=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     indexType=STRING (ambiguity) 'indexType' ':' indexType=STRING
-	 *     indexType=STRING (ambiguity) 'storeType' ':' storeType=STRING
-	 *     indexType=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     storeType=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     storeType=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     storeType=STRING (ambiguity) 'indexType' ':' indexType=STRING
-	 *     storeType=STRING (ambiguity) 'storeType' ':' storeType=STRING
-	 *     storeType=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     type=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     type=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     type=STRING (ambiguity) 'indexType' ':' indexType=STRING
-	 *     type=STRING (ambiguity) 'storeType' ':' storeType=STRING
-	 *     type=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     unit=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     unit=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     unit=STRING (ambiguity) 'indexType' ':' indexType=STRING
-	 *     unit=STRING (ambiguity) 'storeType' ':' storeType=STRING
-	 *     unit=STRING (ambiguity) 'unit' ':' unit=STRING
-	 */
-	protected void emit_AlterDomain_RightCurlyBracketKeyword_1_2_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'type' ':' type=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) (rule end)
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'type' ':' type=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) (rule end)
-	 *     formatter=[Formatter|ID] (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     formatter=[Formatter|ID] (ambiguity) 'type' ':' type=STRING
-	 *     formatter=[Formatter|ID] (ambiguity) (rule end)
-	 *     indexType=STRING (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     indexType=STRING (ambiguity) 'type' ':' type=STRING
-	 *     indexType=STRING (ambiguity) (rule end)
-	 *     storeType=STRING (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     storeType=STRING (ambiguity) 'type' ':' type=STRING
-	 *     storeType=STRING (ambiguity) (rule end)
-	 *     type=STRING (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     type=STRING (ambiguity) 'type' ':' type=STRING
-	 *     type=STRING (ambiguity) (rule end)
-	 *     unit=STRING (ambiguity) 'alter' 'Domain' domain=[DomainType|ID]
-	 *     unit=STRING (ambiguity) 'type' ':' type=STRING
-	 *     unit=STRING (ambiguity) (rule end)
-	 */
-	protected void emit_AlterDomain_RightCurlyBracketKeyword_1_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
 	/**
 	 * Ambiguous syntax:
 	 *     ','?
@@ -656,110 +526,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     roleA=STRING (ambiguity) '}' (rule end)
 	 */
 	protected void emit_Association_CommaKeyword_4_9_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     ','+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     constraint+=[Constraint|ID] (ambiguity) constraints+=[Constraint|ID]
-	 *     constraints+=[Constraint|ID] (ambiguity) constraints+=[Constraint|ID]
-	 */
-	protected void emit_Domain_CommaKeyword_1_1_3_4_0_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'*
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     (rule start) (ambiguity) 'create' 'Domain' name=ID
-	 *     (rule start) (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     (rule start) (ambiguity) 'indexType' ':' indexType=STRING
-	 *     (rule start) (ambiguity) 'storeType' ':' storeType=STRING
-	 *     (rule start) (ambiguity) 'type' ':' type=STRING
-	 *     (rule start) (ambiguity) 'unit' ':' unit=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'indexType' ':' indexType=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'storeType' ':' storeType=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'unit' ':' unit=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'indexType' ':' indexType=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'storeType' ':' storeType=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'unit' ':' unit=STRING
-	 *     dataType=DataType (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     dataType=DataType (ambiguity) 'create' 'Domain' name=ID
-	 *     dataType=DataType (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     dataType=DataType (ambiguity) 'indexType' ':' indexType=STRING
-	 *     dataType=DataType (ambiguity) 'storeType' ':' storeType=STRING
-	 *     dataType=DataType (ambiguity) 'type' ':' type=STRING
-	 *     dataType=DataType (ambiguity) 'unit' ':' unit=STRING
-	 *     dataType=DataType (ambiguity) (rule end)
-	 *     formatter=[Formatter|ID] (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     formatter=[Formatter|ID] (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     formatter=[Formatter|ID] (ambiguity) 'indexType' ':' indexType=STRING
-	 *     formatter=[Formatter|ID] (ambiguity) 'storeType' ':' storeType=STRING
-	 *     formatter=[Formatter|ID] (ambiguity) 'unit' ':' unit=STRING
-	 *     indexType=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     indexType=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     indexType=STRING (ambiguity) 'indexType' ':' indexType=STRING
-	 *     indexType=STRING (ambiguity) 'storeType' ':' storeType=STRING
-	 *     indexType=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     storeType=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     storeType=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     storeType=STRING (ambiguity) 'indexType' ':' indexType=STRING
-	 *     storeType=STRING (ambiguity) 'storeType' ':' storeType=STRING
-	 *     storeType=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     type=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     type=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     type=STRING (ambiguity) 'indexType' ':' indexType=STRING
-	 *     type=STRING (ambiguity) 'storeType' ':' storeType=STRING
-	 *     type=STRING (ambiguity) 'unit' ':' unit=STRING
-	 *     unit=STRING (ambiguity) 'constraint' ':' '[' constraint+=[Constraint|ID]
-	 *     unit=STRING (ambiguity) 'formatter' ':' formatter=[Formatter|ID]
-	 *     unit=STRING (ambiguity) 'indexType' ':' indexType=STRING
-	 *     unit=STRING (ambiguity) 'storeType' ':' storeType=STRING
-	 *     unit=STRING (ambiguity) 'unit' ':' unit=STRING
-	 */
-	protected void emit_Domain_RightCurlyBracketKeyword_1_2_a(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
-		acceptNodes(transition, nodes);
-	}
-	
-	/**
-	 * Ambiguous syntax:
-	 *     '}'+
-	 *
-	 * This ambiguous syntax occurs at:
-	 *     (rule start) (ambiguity) (rule start)
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'create' 'Domain' name=ID
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) 'type' ':' type=STRING
-	 *     constraint+=[Constraint|ID] ']' (ambiguity) (rule end)
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'create' 'Domain' name=ID
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) 'type' ':' type=STRING
-	 *     constraints+=[Constraint|ID] ']' (ambiguity) (rule end)
-	 *     formatter=[Formatter|ID] (ambiguity) 'create' 'Domain' name=ID
-	 *     formatter=[Formatter|ID] (ambiguity) 'type' ':' type=STRING
-	 *     formatter=[Formatter|ID] (ambiguity) (rule end)
-	 *     indexType=STRING (ambiguity) 'create' 'Domain' name=ID
-	 *     indexType=STRING (ambiguity) 'type' ':' type=STRING
-	 *     indexType=STRING (ambiguity) (rule end)
-	 *     storeType=STRING (ambiguity) 'create' 'Domain' name=ID
-	 *     storeType=STRING (ambiguity) 'type' ':' type=STRING
-	 *     storeType=STRING (ambiguity) (rule end)
-	 *     type=STRING (ambiguity) 'create' 'Domain' name=ID
-	 *     type=STRING (ambiguity) 'type' ':' type=STRING
-	 *     type=STRING (ambiguity) (rule end)
-	 *     unit=STRING (ambiguity) 'create' 'Domain' name=ID
-	 *     unit=STRING (ambiguity) 'type' ':' type=STRING
-	 *     unit=STRING (ambiguity) (rule end)
-	 */
-	protected void emit_Domain_RightCurlyBracketKeyword_1_2_p(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
@@ -1213,7 +979,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     refToDomainType=RefToDomainType (ambiguity) 'cardinality' ':' cardinality=CardinalityString
 	 *     refToDomainType=RefToDomainType (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
-	 *     refToDomainType=RefToDomainType (ambiguity) 'inOut' ':' inout=InOutString
 	 *     refToDomainType=RefToDomainType (ambiguity) '}' (rule end)
 	 */
 	protected void emit_TaskAttributeString_CommaKeyword_1_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -1227,7 +992,6 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * This ambiguous syntax occurs at:
 	 *     cardinality=CardinalityString (ambiguity) 'cardinality' ':' cardinality=CardinalityString
 	 *     cardinality=CardinalityString (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
-	 *     cardinality=CardinalityString (ambiguity) 'inOut' ':' inout=InOutString
 	 *     cardinality=CardinalityString (ambiguity) '}' (rule end)
 	 */
 	protected void emit_TaskAttributeString_CommaKeyword_1_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
@@ -1239,23 +1003,20 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     ','?
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     inout=InOutString (ambiguity) 'cardinality' ':' cardinality=CardinalityString
-	 *     inout=InOutString (ambiguity) 'domain' ':' refToDomainType=RefToDomainType
-	 *     inout=InOutString (ambiguity) 'inOut' ':' inout=InOutString
-	 *     inout=InOutString (ambiguity) '}' (rule end)
+	 *     taskAttributeString=TaskAttributeString (ambiguity) (rule end)
 	 */
-	protected void emit_TaskAttributeString_CommaKeyword_1_2_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_TaskAttribute_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	
 	/**
 	 * Ambiguous syntax:
-	 *     ','?
+	 *     'in' | 'out'
 	 *
 	 * This ambiguous syntax occurs at:
-	 *     taskAttributeString=TaskAttributeString (ambiguity) (rule end)
+	 *     (rule start) (ambiguity) name=ID
 	 */
-	protected void emit_TaskAttribute_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+	protected void emit_TaskAttribute_InKeyword_0_0_or_OutKeyword_0_1(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

@@ -4,7 +4,6 @@
 package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.CardinalityString;
-import io.vertigo.dsl.vertigoDsl.InOutString;
 import io.vertigo.dsl.vertigoDsl.RefToDomainType;
 import io.vertigo.dsl.vertigoDsl.TaskAttributeString;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
@@ -28,7 +27,6 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getCardinality <em>Cardinality</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl#getInout <em>Inout</em>}</li>
  * </ul>
  *
  * @generated
@@ -64,26 +62,6 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
    * @ordered
    */
   protected CardinalityString cardinality = CARDINALITY_EDEFAULT;
-
-  /**
-   * The default value of the '{@link #getInout() <em>Inout</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInout()
-   * @generated
-   * @ordered
-   */
-  protected static final InOutString INOUT_EDEFAULT = InOutString.INOUT_IN;
-
-  /**
-   * The cached value of the '{@link #getInout() <em>Inout</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getInout()
-   * @generated
-   * @ordered
-   */
-  protected InOutString inout = INOUT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -187,31 +165,6 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
    * @generated
    */
   @Override
-  public InOutString getInout()
-  {
-    return inout;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setInout(InOutString newInout)
-  {
-    InOutString oldInout = inout;
-    inout = newInout == null ? INOUT_EDEFAULT : newInout;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT, oldInout, inout));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -236,8 +189,6 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
         return getRefToDomainType();
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY:
         return getCardinality();
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
-        return getInout();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -257,9 +208,6 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
         return;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY:
         setCardinality((CardinalityString)newValue);
-        return;
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
-        setInout((InOutString)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -281,9 +229,6 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY:
         setCardinality(CARDINALITY_EDEFAULT);
         return;
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
-        setInout(INOUT_EDEFAULT);
-        return;
     }
     super.eUnset(featureID);
   }
@@ -302,8 +247,6 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
         return refToDomainType != null;
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING__CARDINALITY:
         return cardinality != CARDINALITY_EDEFAULT;
-      case VertigoDslPackage.TASK_ATTRIBUTE_STRING__INOUT:
-        return inout != INOUT_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }
@@ -321,8 +264,6 @@ public class TaskAttributeStringImpl extends MinimalEObjectImpl.Container implem
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (cardinality: ");
     result.append(cardinality);
-    result.append(", inout: ");
-    result.append(inout);
     result.append(')');
     return result.toString();
   }

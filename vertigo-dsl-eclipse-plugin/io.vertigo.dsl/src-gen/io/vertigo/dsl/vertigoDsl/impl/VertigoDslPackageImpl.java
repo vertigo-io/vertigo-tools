@@ -10,7 +10,6 @@ import io.vertigo.dsl.vertigoDsl.Association;
 import io.vertigo.dsl.vertigoDsl.AssociationTypeString;
 import io.vertigo.dsl.vertigoDsl.BooleanString;
 import io.vertigo.dsl.vertigoDsl.CardinalityString;
-import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DataType;
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
 import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition;
@@ -49,8 +48,6 @@ import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery;
 import io.vertigo.dsl.vertigoDsl.FileInfo;
-import io.vertigo.dsl.vertigoDsl.Formatter;
-import io.vertigo.dsl.vertigoDsl.InOutString;
 import io.vertigo.dsl.vertigoDsl.IndexDefinition;
 import io.vertigo.dsl.vertigoDsl.IndexDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex;
@@ -135,21 +132,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * <!-- end-user-doc -->
    * @generated
    */
-  private EClass constraintEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   private EClass fileInfoEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass formatterEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -551,13 +534,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   private EEnum associationTypeStringEEnum = null;
 
   /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EEnum inOutStringEEnum = null;
-
-  /**
    * Creates an instance of the model <b>Package</b>, registered with
    * {@link org.eclipse.emf.ecore.EPackage.Registry EPackage.Registry} by the package
    * package URI value.
@@ -769,61 +745,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EClass getConstraint()
-  {
-    return constraintEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getConstraint_Name()
-  {
-    return (EAttribute)constraintEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getConstraint_ClassName()
-  {
-    return (EAttribute)constraintEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getConstraint_Args()
-  {
-    return (EAttribute)constraintEClass.getEStructuralFeatures().get(2);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getConstraint_Msg()
-  {
-    return (EAttribute)constraintEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EClass getFileInfo()
   {
     return fileInfoEClass;
@@ -849,50 +770,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   public EAttribute getFileInfo_StoreName()
   {
     return (EAttribute)fileInfoEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EClass getFormatter()
-  {
-    return formatterEClass;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getFormatter_Name()
-  {
-    return (EAttribute)formatterEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getFormatter_ClassName()
-  {
-    return (EAttribute)formatterEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getFormatter_Args()
-  {
-    return (EAttribute)formatterEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -945,20 +822,9 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EReference getDomain_Formatter()
-  {
-    return (EReference)domainEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EAttribute getDomain_StoreType()
   {
-    return (EAttribute)domainEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)domainEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -969,29 +835,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EAttribute getDomain_IndexType()
   {
-    return (EAttribute)domainEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDomain_Constraint()
-  {
-    return (EReference)domainEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getDomain_Constraints()
-  {
-    return (EReference)domainEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)domainEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1002,7 +846,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EAttribute getDomain_Unit()
   {
-    return (EAttribute)domainEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)domainEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1055,20 +899,9 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EReference getAlterDomain_Formatter()
-  {
-    return (EReference)alterDomainEClass.getEStructuralFeatures().get(3);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public EAttribute getAlterDomain_StoreType()
   {
-    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(4);
+    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1079,29 +912,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EAttribute getAlterDomain_IndexType()
   {
-    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(5);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getAlterDomain_Constraint()
-  {
-    return (EReference)alterDomainEClass.getEStructuralFeatures().get(6);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EReference getAlterDomain_Constraints()
-  {
-    return (EReference)alterDomainEClass.getEStructuralFeatures().get(7);
+    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1112,7 +923,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   @Override
   public EAttribute getAlterDomain_Unit()
   {
-    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(8);
+    return (EAttribute)alterDomainEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -1806,17 +1617,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   public EAttribute getTaskAttributeString_Cardinality()
   {
     return (EAttribute)taskAttributeStringEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EAttribute getTaskAttributeString_Inout()
-  {
-    return (EAttribute)taskAttributeStringEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -2958,17 +2758,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
-  public EEnum getInOutString()
-  {
-    return inOutStringEEnum;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
   public VertigoDslFactory getVertigoDslFactory()
   {
     return (VertigoDslFactory)getEFactoryInstance();
@@ -3013,41 +2802,24 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     declaredDtDefinitionEClass = createEClass(DECLARED_DT_DEFINITION);
     createEAttribute(declaredDtDefinitionEClass, DECLARED_DT_DEFINITION__NAME);
 
-    constraintEClass = createEClass(CONSTRAINT);
-    createEAttribute(constraintEClass, CONSTRAINT__NAME);
-    createEAttribute(constraintEClass, CONSTRAINT__CLASS_NAME);
-    createEAttribute(constraintEClass, CONSTRAINT__ARGS);
-    createEAttribute(constraintEClass, CONSTRAINT__MSG);
-
     fileInfoEClass = createEClass(FILE_INFO);
     createEAttribute(fileInfoEClass, FILE_INFO__NAME);
     createEAttribute(fileInfoEClass, FILE_INFO__STORE_NAME);
-
-    formatterEClass = createEClass(FORMATTER);
-    createEAttribute(formatterEClass, FORMATTER__NAME);
-    createEAttribute(formatterEClass, FORMATTER__CLASS_NAME);
-    createEAttribute(formatterEClass, FORMATTER__ARGS);
 
     domainEClass = createEClass(DOMAIN);
     createEAttribute(domainEClass, DOMAIN__NAME);
     createEAttribute(domainEClass, DOMAIN__DATA_TYPE);
     createEAttribute(domainEClass, DOMAIN__TYPE);
-    createEReference(domainEClass, DOMAIN__FORMATTER);
     createEAttribute(domainEClass, DOMAIN__STORE_TYPE);
     createEAttribute(domainEClass, DOMAIN__INDEX_TYPE);
-    createEReference(domainEClass, DOMAIN__CONSTRAINT);
-    createEReference(domainEClass, DOMAIN__CONSTRAINTS);
     createEAttribute(domainEClass, DOMAIN__UNIT);
 
     alterDomainEClass = createEClass(ALTER_DOMAIN);
     createEReference(alterDomainEClass, ALTER_DOMAIN__DOMAIN);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__DATA_TYPE);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__TYPE);
-    createEReference(alterDomainEClass, ALTER_DOMAIN__FORMATTER);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__STORE_TYPE);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__INDEX_TYPE);
-    createEReference(alterDomainEClass, ALTER_DOMAIN__CONSTRAINT);
-    createEReference(alterDomainEClass, ALTER_DOMAIN__CONSTRAINTS);
     createEAttribute(alterDomainEClass, ALTER_DOMAIN__UNIT);
 
     domainTypeEClass = createEClass(DOMAIN_TYPE);
@@ -3130,7 +2902,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     taskAttributeStringEClass = createEClass(TASK_ATTRIBUTE_STRING);
     createEReference(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE);
     createEAttribute(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__CARDINALITY);
-    createEAttribute(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__INOUT);
 
     taskAttributeEClass = createEClass(TASK_ATTRIBUTE);
     createEAttribute(taskAttributeEClass, TASK_ATTRIBUTE__NAME);
@@ -3268,7 +3039,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     multiplicityStringEEnum = createEEnum(MULTIPLICITY_STRING);
     cardinalityStringEEnum = createEEnum(CARDINALITY_STRING);
     associationTypeStringEEnum = createEEnum(ASSOCIATION_TYPE_STRING);
-    inOutStringEEnum = createEEnum(IN_OUT_STRING);
   }
 
   /**
@@ -3304,9 +3074,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     declaredDomainEClass.getESuperTypes().add(this.getDomainType());
     declaredDtDefinitionEClass.getESuperTypes().add(this.getElement());
     declaredDtDefinitionEClass.getESuperTypes().add(this.getDtDefinitionType());
-    constraintEClass.getESuperTypes().add(this.getElement());
     fileInfoEClass.getESuperTypes().add(this.getElement());
-    formatterEClass.getESuperTypes().add(this.getElement());
     domainEClass.getESuperTypes().add(this.getElement());
     domainEClass.getESuperTypes().add(this.getDomainType());
     alterDomainEClass.getESuperTypes().add(this.getElement());
@@ -3343,42 +3111,25 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEClass(declaredDtDefinitionEClass, DeclaredDtDefinition.class, "DeclaredDtDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDeclaredDtDefinition_Name(), ecorePackage.getEString(), "name", null, 0, 1, DeclaredDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(constraintEClass, Constraint.class, "Constraint", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getConstraint_Name(), ecorePackage.getEString(), "name", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getConstraint_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getConstraint_Args(), ecorePackage.getEString(), "args", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getConstraint_Msg(), ecorePackage.getEString(), "msg", null, 0, 1, Constraint.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(fileInfoEClass, FileInfo.class, "FileInfo", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFileInfo_Name(), ecorePackage.getEString(), "name", null, 0, 1, FileInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getFileInfo_StoreName(), ecorePackage.getEString(), "storeName", null, 0, 1, FileInfo.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
-    initEClass(formatterEClass, Formatter.class, "Formatter", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getFormatter_Name(), ecorePackage.getEString(), "name", null, 0, 1, Formatter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFormatter_ClassName(), ecorePackage.getEString(), "className", null, 0, 1, Formatter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getFormatter_Args(), ecorePackage.getEString(), "args", null, 0, 1, Formatter.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
     initEClass(domainEClass, Domain.class, "Domain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDomain_Name(), ecorePackage.getEString(), "name", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getDomain_DataType(), this.getDataType(), "dataType", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDomain_Type(), ecorePackage.getEString(), "type", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDomain_Formatter(), this.getFormatter(), null, "formatter", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDomain_StoreType(), ecorePackage.getEString(), "storeType", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDomain_IndexType(), ecorePackage.getEString(), "indexType", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDomain_Constraint(), this.getConstraint(), null, "constraint", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getDomain_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getDomain_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDomain_Type(), ecorePackage.getEBoolean(), "type", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDomain_StoreType(), ecorePackage.getEBoolean(), "storeType", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDomain_IndexType(), ecorePackage.getEBoolean(), "indexType", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getDomain_Unit(), ecorePackage.getEBoolean(), "unit", null, 0, 1, Domain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(alterDomainEClass, AlterDomain.class, "AlterDomain", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getAlterDomain_Domain(), this.getDomainType(), null, "domain", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAlterDomain_DataType(), this.getDataType(), "dataType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlterDomain_Type(), ecorePackage.getEString(), "type", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAlterDomain_Formatter(), this.getFormatter(), null, "formatter", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlterDomain_StoreType(), ecorePackage.getEString(), "storeType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlterDomain_IndexType(), ecorePackage.getEString(), "indexType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAlterDomain_Constraint(), this.getConstraint(), null, "constraint", null, 0, -1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getAlterDomain_Constraints(), this.getConstraint(), null, "constraints", null, 0, -1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, !IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getAlterDomain_Unit(), ecorePackage.getEString(), "unit", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlterDomain_Type(), ecorePackage.getEBoolean(), "type", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlterDomain_StoreType(), ecorePackage.getEBoolean(), "storeType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlterDomain_IndexType(), ecorePackage.getEBoolean(), "indexType", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAlterDomain_Unit(), ecorePackage.getEBoolean(), "unit", null, 0, 1, AlterDomain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(domainTypeEClass, DomainType.class, "DomainType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -3460,7 +3211,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEClass(taskAttributeStringEClass, TaskAttributeString.class, "TaskAttributeString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTaskAttributeString_RefToDomainType(), this.getRefToDomainType(), null, "refToDomainType", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getTaskAttributeString_Cardinality(), this.getCardinalityString(), "cardinality", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getTaskAttributeString_Inout(), this.getInOutString(), "inout", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(taskAttributeEClass, TaskAttribute.class, "TaskAttribute", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getTaskAttribute_Name(), ecorePackage.getEString(), "name", null, 0, 1, TaskAttribute.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3624,10 +3374,6 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     addEEnumLiteral(associationTypeStringEEnum, AssociationTypeString.ONE);
     addEEnumLiteral(associationTypeStringEEnum, AssociationTypeString.OPTIONAL);
     addEEnumLiteral(associationTypeStringEEnum, AssociationTypeString.MANY);
-
-    initEEnum(inOutStringEEnum, InOutString.class, "InOutString");
-    addEEnumLiteral(inOutStringEEnum, InOutString.INOUT_IN);
-    addEEnumLiteral(inOutStringEEnum, InOutString.INOUT_OUT);
 
     // Create resource
     createResource(eNS_URI);

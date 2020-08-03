@@ -29,7 +29,7 @@ terminal STRING:
     "'" ( ESCAPED_CHAR | !('\\'|"'") )* "'";
 
 Element:
-	Constraint | Formatter | Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition | Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
+	Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition | Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
 
 DeclaredDomain:
 	'declare' 'Domain' name = ID;
@@ -38,24 +38,9 @@ DeclaredDtDefinition:
 	'declare' 'DtDefinition' name = ID;
 
 
-Constraint:
-	'create' 'Constraint' name=ID '{'
-		'className' ':' className=STRING
-		('args' ':' args=STRING)?
-		('msg' ':' msg=STRING)?
-	'}';
-
 FileInfo:
 	'create' 'FileInfo' name=ID '{'
 		'storeName' ':' storeName=STRING
-	'}';
-
-
-
-Formatter:
-	'create' 'Formatter' name=ID '{'
-		'className' ':' className=STRING
-		('args' ':' args=STRING)?
 	'}';
 
 
@@ -77,24 +62,20 @@ enum BooleanString:
 
 Domain:
 	'create' 'Domain' name=ID '{'
-		'dataType' ':'  dataType=DataType &
-		('type' ':' type=STRING)?
-		(('formatter' ':' formatter=[Formatter]) &
-		('storeType' ':' storeType=STRING)? &
-		('indexType' ':' indexType=STRING)? &
-		('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
-		('unit' ':' unit=STRING)?)?
+		'dataType' ':'  dataType=DataType
+		(('type' ':' type?=STRING)? &
+		('storeType' ':' storeType?=STRING)? &
+		('indexType' ':' indexType?=STRING)? &
+		('unit' ':' unit?=STRING)?)
 	'}';
 	
 AlterDomain:
 	'alter' 'Domain' domain=[DomainType] '{'
-		'dataType' ':'  dataType=DataType &
-		('type' ':' type=STRING)?
-		(('formatter' ':' formatter=[Formatter]) &
-		('storeType' ':' storeType=STRING)? &
-		('indexType' ':' indexType=STRING)? &
-		('constraint' ':' '[' constraint+=[Constraint] (','+ constraints+=[Constraint])* ']')? &
-		('unit' ':' unit=STRING)?)?
+		'dataType' ':'  dataType=DataType
+		(('type' ':' type?=STRING)? &
+		('storeType' ':' storeType?=STRING)? &
+		('indexType' ':' indexType?=STRING)? &
+		('unit' ':' unit?=STRING)?)
 	'}';
 	
 
@@ -208,15 +189,11 @@ Association:
 
 
 
-enum InOutString:
-	INOUT_IN='\"in\"' |
-	INOUT_OUT='\"out\"';
-
 TaskAttributeString:
-	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'cardinality' ':' cardinality=CardinalityString ','? & 'inOut' ':' inout=InOutString ','? ) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'cardinality' ':' cardinality=CardinalityString ','? ) '}';
 
 TaskAttribute:
-	'attribute' name=ID taskAttributeString=TaskAttributeString ','?
+	('in' | 'out') name=ID taskAttributeString=TaskAttributeString ','?
 ;
 
 TaskDataSpace:

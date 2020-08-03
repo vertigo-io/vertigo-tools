@@ -9,7 +9,6 @@ import io.vertigo.dsl.vertigoDsl.AlterDomain;
 import io.vertigo.dsl.vertigoDsl.AlterDtDefinition;
 import io.vertigo.dsl.vertigoDsl.AlterTaskDefinition;
 import io.vertigo.dsl.vertigoDsl.Association;
-import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
 import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition;
 import io.vertigo.dsl.vertigoDsl.Domain;
@@ -41,7 +40,6 @@ import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionKeyConcept;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderClass;
 import io.vertigo.dsl.vertigoDsl.FacetedQueryDefinitionListFilterBuilderQuery;
 import io.vertigo.dsl.vertigoDsl.FileInfo;
-import io.vertigo.dsl.vertigoDsl.Formatter;
 import io.vertigo.dsl.vertigoDsl.IndexDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.IndexDefinitionDtIndex;
 import io.vertigo.dsl.vertigoDsl.IndexDefinitionIndexCopyTo;
@@ -96,9 +94,6 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case VertigoDslPackage.ASSOCIATION:
 				sequence_Association(context, (Association) semanticObject); 
-				return; 
-			case VertigoDslPackage.CONSTRAINT:
-				sequence_Constraint(context, (Constraint) semanticObject); 
 				return; 
 			case VertigoDslPackage.DECLARED_DOMAIN:
 				sequence_DeclaredDomain(context, (DeclaredDomain) semanticObject); 
@@ -193,9 +188,6 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case VertigoDslPackage.FILE_INFO:
 				sequence_FileInfo(context, (FileInfo) semanticObject); 
 				return; 
-			case VertigoDslPackage.FORMATTER:
-				sequence_Formatter(context, (Formatter) semanticObject); 
-				return; 
 			case VertigoDslPackage.INDEX_DEFINITION_ACTION:
 				sequence_IndexDefinition(context, (IndexDefinitionAction) semanticObject); 
 				return; 
@@ -258,11 +250,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     AlterDomain returns AlterDomain
 	 *
 	 * Constraint:
-	 *     (
-	 *         (type=STRING | formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | unit=STRING)? 
-	 *         (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)? 
-	 *         (domain=[DomainType|ID] dataType=DataType)?
-	 *     )+
+	 *     (domain=[DomainType|ID] dataType=DataType (type?=STRING | storeType?=STRING | indexType?=STRING | unit?=STRING)*)
 	 */
 	protected void sequence_AlterDomain(ISerializationContext context, AlterDomain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -333,19 +321,6 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Element returns Constraint
-	 *     Constraint returns Constraint
-	 *
-	 * Constraint:
-	 *     (name=ID className=STRING args=STRING? msg=STRING?)
-	 */
-	protected void sequence_Constraint(ISerializationContext context, Constraint semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     Element returns DeclaredDomain
 	 *     DeclaredDomain returns DeclaredDomain
 	 *     DomainType returns DeclaredDomain
@@ -391,11 +366,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     DomainType returns Domain
 	 *
 	 * Constraint:
-	 *     (
-	 *         (type=STRING | formatter=[Formatter|ID] | storeType=STRING | indexType=STRING | unit=STRING)? 
-	 *         (constraint+=[Constraint|ID] constraints+=[Constraint|ID]*)? 
-	 *         (name=ID dataType=DataType)?
-	 *     )+
+	 *     (name=ID dataType=DataType (type?=STRING | storeType?=STRING | indexType?=STRING | unit?=STRING)*)
 	 */
 	protected void sequence_Domain(ISerializationContext context, Domain semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -910,19 +881,6 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     Element returns Formatter
-	 *     Formatter returns Formatter
-	 *
-	 * Constraint:
-	 *     (name=ID className=STRING args=STRING?)
-	 */
-	protected void sequence_Formatter(ISerializationContext context, Formatter semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     IndexDefinitionDtIndex returns IndexDefinitionDtIndex
 	 *
 	 * Constraint:
@@ -1094,7 +1052,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     TaskAttributeString returns TaskAttributeString
 	 *
 	 * Constraint:
-	 *     (refToDomainType=RefToDomainType | cardinality=CardinalityString | inout=InOutString)+
+	 *     (refToDomainType=RefToDomainType | cardinality=CardinalityString)+
 	 */
 	protected void sequence_TaskAttributeString(ISerializationContext context, TaskAttributeString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

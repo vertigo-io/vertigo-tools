@@ -78,15 +78,6 @@ public interface VertigoDslFactory extends EFactory
   DeclaredDtDefinition createDeclaredDtDefinition();
 
   /**
-   * Returns a new object of class '<em>Constraint</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Constraint</em>'.
-   * @generated
-   */
-  Constraint createConstraint();
-
-  /**
    * Returns a new object of class '<em>File Info</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -94,15 +85,6 @@ public interface VertigoDslFactory extends EFactory
    * @generated
    */
   FileInfo createFileInfo();
-
-  /**
-   * Returns a new object of class '<em>Formatter</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>Formatter</em>'.
-   * @generated
-   */
-  Formatter createFormatter();
 
   /**
    * Returns a new object of class '<em>Domain</em>'.

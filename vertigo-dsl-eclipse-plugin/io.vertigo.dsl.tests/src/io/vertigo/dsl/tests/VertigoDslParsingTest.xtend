@@ -73,99 +73,7 @@ class VertigoDslParsingTest {
     		}
     		
     		
-    		/**************************************************************************************************/
-    		/********************************* Formatters *****************************************************/
-    		/**************************************************************************************************/
-    		create Formatter FmtDefault{
-    			className : "io.vertigo.dynamox.domain.formatter.FormatterDefault"
-    		}
-    		
-    		create Formatter FmtId{
-    			className : "io.vertigo.ui.formatter.FormatterId"
-    		}
-    		
-    		
-    		create Formatter FmtDate {
-    		     className :"io.vertigo.dynamox.domain.formatter.FormatterDate"
-    		     args : "dd/MM/yyyy"
-    		}
-    		
-    		create Formatter FmtDateHeure {
-    		     className :"io.vertigo.dynamox.domain.formatter.FormatterDate"
-    		     args : "dd/MM/yyyy '�' HH'h'mm"
-    		}
-    		
-    		create Formatter FmtTags {
-    			className : "io.vertigo.dynamox.domain.formatter.FormatterDefault"
-    			/* TODO implement tags formatter */
-    		}
-    		
-    		create Formatter FmtCurrency {
-    			className : "io.vertigo.dynamox.domain.formatter.FormatterDefault"
-    			/* TODO implement currency formatter */
-    		}
-    		
-    		
-    		/**************************************************************************************************/
-    		/********************************* Constraints ****************************************************/
-    		/**************************************************************************************************/
-    		
-    		create Constraint CkEmail {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintRegex"
-    			args : "^[_a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*@[a-zA-Z0-9-]+(\.[_a-zA-Z0-9-]+)*(\.[a-zA-Z0-9-]{2,3})+$"
-    			msg : "L'email n'est pas valide"
-    		}
-    		
-    		create Constraint CkMaxLength20 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
-    			args :"20"
-    		}
-    		
-    		create Constraint CkMaxLength32 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
-    			args :"32"
-    		}
-    		
-    		create Constraint CkMaxLength50 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
-    			args :"50"
-    		}
-    		
-    		create Constraint CkMaxLength100 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
-    			args :"100"
-    		}
-    		
-    		create Constraint CkMaxLength150 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
-    			args :"150"
-    		}
-    		
-    		create Constraint CkMaxLength250 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
-    			args :"250"
-    		}
-    		
-    		create Constraint CkMaxLength350 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
-    			args :"350"
-    		}
-    		
-    		create Constraint CkMaxLength3000 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintStringLength"
-    			args :"3000"
-    		}
-    		
-    		create Constraint CkMinHealthValue0 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintNumberMinimum"
-    			args :"0"
-    		}
-    		
-    		create Constraint CkMaxHealthValue100 {
-    			className: "io.vertigo.dynamox.domain.constraint.ConstraintNumberMaximum"
-    			args :"100"
-    		}
-    		
+    		    		
     		
     		/**************************************************************************************************/
     		/********************************* Domains ********************************************************/
@@ -179,32 +87,27 @@ class VertigoDslParsingTest {
     		
     		create Domain DoId {
     			dataType : Long
-    			formatter : FmtId
     			storeType : "NUMERIC"
     		}
     		
     		create Domain DoMultipleIds {
     			dataType : String
-    			formatter : FmtDefault
     		    storeType : "TEXT"
     		}
     		
     		create Domain DoInstant {
     			dataType : Instant
-    			formatter : FmtDateHeure
     			storeType : "TIMESTAMP"
     		}
     		
     		create Domain DoLocaldate {
     			dataType : LocalDate
-    			formatter : FmtDate
     			storeType : "DATE"
     		}
     		
     		
     		create Domain DoCurrency {
     			dataType : BigDecimal
-    			formatter : FmtCurrency
     			unit : "$"
     			storeType: "NUMERIC(12,2)"
     		}
@@ -212,44 +115,33 @@ class VertigoDslParsingTest {
     		
     		create Domain DoHealth {
     			dataType: Integer
-    			formatter : FmtDefault
-    			constraint : [CkMinHealthValue0, CkMaxHealthValue100]
     			storeType : "NUMERIC"
     		}
     		
     		create Domain DoLabel {
     			dataType : String
-    			formatter : FmtDefault
-    			constraint : [CkMaxLength100]
     			storeType : "VARCHAR(100)"
     			indexType : "text_fr:sortable"
     		}
     		
     		create Domain DoDescription {
     			dataType : String
-    			formatter : FmtDefault
-    			constraint : [CkMaxLength350]
     			storeType : "VARCHAR(350)"
     			indexType : "text_fr"
     		}
     		
     		create Domain DoEmail {
     			dataType : String
-    			formatter : FmtDefault
-    			constraint : [CkEmail, CkMaxLength150]
     			storeType : "VARCHAR(150)"
     		}
     		
     		create Domain DoUrl {
     			dataType : String
-    			formatter : FmtDefault
     			storeType : "TEXT"
     		}
     		
     		create Domain DoCode {
     			dataType : String
-    			formatter : FmtDefault
-    			constraint : [CkMaxLength100]
     			storeType : "VARCHAR(100)"
     			indexType : "code:keyword"
     		}
@@ -257,52 +149,43 @@ class VertigoDslParsingTest {
     		
     		create Domain DoPassword {
     			dataType : String
-    			formatter : FmtDefault
-    			constraint : [CkMaxLength32]
     			storeType : "VARCHAR(32)"
     		}
     		
     		create Domain DoText {
     			dataType : String
-    			formatter : FmtDefault
     			storeType : "TEXT"
     		}
     		
     		create Domain DoFilePath {
     			dataType : String
-    			formatter : FmtDefault
     			storeType : "VARCHAR(500)"
     		}
     		
     		create Domain DoFileData {
     			dataType : DataStream
-    			formatter : FmtDefault
     			storeType : "bytea"
     		}
     		
     		create Domain DoTags {
     			dataType : String
-    			formatter : FmtTags
     			storeType : "TEXT"
     			indexType : "multiple_code:facetable"
     		}
     		
     		create Domain DoYesNo {
     			dataType : Boolean
-    			formatter : FmtDefault
     			storeType : "bool"
     		}
     		
     		
     		create Domain DoSize {
     			dataType : Long
-    			formatter : FmtDefault
     			storeType : "NUMERIC"
     		}
     		
     		create Domain DoCount {
     			dataType : Long
-    			formatter : FmtDefault
     			storeType : "NUMERIC"
     		}
     	'''.parse(resourceSet)
@@ -379,8 +262,6 @@ class VertigoDslParsingTest {
 		val result = parser.parse(parserRule, new StringReader('''
 			create Domain DO_HEALTH { 
 				dataType: Integer
-				formatter : FMT_DEFAULT
-				constraint : [CK_MIN_HEALTH_VALUE_0, CK_MAX_HEALTH_VALUE_100]
 				storeType : "NUMERIC"
 			}
 		'''))
@@ -412,7 +293,6 @@ class VertigoDslParsingTest {
 		val result = parser.parse(parserRule, new StringReader('''
 			create Domain DoLongs {  
 			    dataType : ValueObject
-			    formatter : FmtDefault
 			}
 		'''))
 		Assertions.assertNotNull(result)
@@ -524,8 +404,8 @@ class VertigoDslParsingTest {
 			        	from o_process pro   
 			        	where pro.NAME = #name# and pro.ACTIVE_VERSION is true  	
 						"
-				attribute name	 	{domain : DoOLibelle		cardinality: "1" 	inOut :"in"}
-				attribute dtOProcessUi	 	{domain : DoDtOProcessUi		cardinality: "1" 	inOut :"out"}
+				in name	 	{domain : DoOLibelle		cardinality: "1" }
+				out dtOProcessUi	 	{domain : DoDtOProcessUi		cardinality: "1" }
 			}
 		'''))
 		Assertions.assertNotNull(result)

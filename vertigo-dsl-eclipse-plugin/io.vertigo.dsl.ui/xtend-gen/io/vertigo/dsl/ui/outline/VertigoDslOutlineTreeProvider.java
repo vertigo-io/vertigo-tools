@@ -7,14 +7,12 @@ import com.google.common.base.Objects;
 import com.google.inject.Inject;
 import io.vertigo.dsl.ui.outline.VirtualOutlineNode;
 import io.vertigo.dsl.vertigoDsl.Association;
-import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
 import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition;
 import io.vertigo.dsl.vertigoDsl.Domain;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionAction;
 import io.vertigo.dsl.vertigoDsl.Element;
 import io.vertigo.dsl.vertigoDsl.FileInfo;
-import io.vertigo.dsl.vertigoDsl.Formatter;
 import io.vertigo.dsl.vertigoDsl.Model;
 import io.vertigo.dsl.vertigoDsl.TaskDefinition;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
@@ -48,14 +46,6 @@ public class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
   }
   
   public boolean _isLeaf(final DeclaredDomain declaredDomain) {
-    return true;
-  }
-  
-  public boolean _isLeaf(final Formatter formatter) {
-    return true;
-  }
-  
-  public boolean _isLeaf(final Constraint constraint) {
     return true;
   }
   
@@ -111,76 +101,54 @@ public class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
             this.createNode(associationOutlineNode, element);
           } else {
             EClass _eClass_1 = element.eClass();
-            boolean _equals_1 = Objects.equal(_eClass_1, VertigoDslPackage.Literals.CONSTRAINT);
+            boolean _equals_1 = Objects.equal(_eClass_1, VertigoDslPackage.Literals.TASK_DEFINITION);
             if (_equals_1) {
-              if ((constraintOutlineNode == null)) {
-                Image _image_3 = this.imageHelper.getImage("link.png");
-                VirtualOutlineNode _virtualOutlineNode_3 = new VirtualOutlineNode(parentNode, _image_3, "Constraints", false);
-                constraintOutlineNode = _virtualOutlineNode_3;
+              if ((taskOutlineNode == null)) {
+                Image _image_3 = this.imageHelper.getImage("gear.png");
+                VirtualOutlineNode _virtualOutlineNode_3 = new VirtualOutlineNode(parentNode, _image_3, "Tasks", false);
+                taskOutlineNode = _virtualOutlineNode_3;
               }
-              this.createNode(constraintOutlineNode, element);
+              this.createNode(taskOutlineNode, element);
             } else {
               EClass _eClass_2 = element.eClass();
-              boolean _equals_2 = Objects.equal(_eClass_2, VertigoDslPackage.Literals.FORMATTER);
+              boolean _equals_2 = Objects.equal(_eClass_2, VertigoDslPackage.Literals.FILE_INFO);
               if (_equals_2) {
-                if ((formatterOutlineNode == null)) {
-                  Image _image_4 = this.imageHelper.getImage("formatter.png");
-                  VirtualOutlineNode _virtualOutlineNode_4 = new VirtualOutlineNode(parentNode, _image_4, "Formatters", false);
-                  formatterOutlineNode = _virtualOutlineNode_4;
+                if ((fileInfoOutlineNode == null)) {
+                  Image _image_4 = this.imageHelper.getImage("file.png");
+                  VirtualOutlineNode _virtualOutlineNode_4 = new VirtualOutlineNode(parentNode, _image_4, "File Infos", false);
+                  fileInfoOutlineNode = _virtualOutlineNode_4;
                 }
-                this.createNode(formatterOutlineNode, element);
+                this.createNode(fileInfoOutlineNode, element);
               } else {
                 EClass _eClass_3 = element.eClass();
-                boolean _equals_3 = Objects.equal(_eClass_3, VertigoDslPackage.Literals.TASK_DEFINITION);
+                boolean _equals_3 = Objects.equal(_eClass_3, VertigoDslPackage.Literals.FACET_DEFINITION_ACTION);
                 if (_equals_3) {
-                  if ((taskOutlineNode == null)) {
-                    Image _image_5 = this.imageHelper.getImage("gear.png");
-                    VirtualOutlineNode _virtualOutlineNode_5 = new VirtualOutlineNode(parentNode, _image_5, "Tasks", false);
-                    taskOutlineNode = _virtualOutlineNode_5;
+                  if ((facetDefinitionOutlineNode == null)) {
+                    Image _image_5 = this.imageHelper.getImage("file.png");
+                    VirtualOutlineNode _virtualOutlineNode_5 = new VirtualOutlineNode(parentNode, _image_5, "Facet Definitions", false);
+                    facetDefinitionOutlineNode = _virtualOutlineNode_5;
                   }
-                  this.createNode(taskOutlineNode, element);
+                  this.createNode(facetDefinitionOutlineNode, element);
                 } else {
                   EClass _eClass_4 = element.eClass();
-                  boolean _equals_4 = Objects.equal(_eClass_4, VertigoDslPackage.Literals.FILE_INFO);
+                  boolean _equals_4 = Objects.equal(_eClass_4, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION);
                   if (_equals_4) {
-                    if ((fileInfoOutlineNode == null)) {
+                    if ((facetedQueryDefinitionOutlineNode == null)) {
                       Image _image_6 = this.imageHelper.getImage("file.png");
-                      VirtualOutlineNode _virtualOutlineNode_6 = new VirtualOutlineNode(parentNode, _image_6, "File Infos", false);
-                      fileInfoOutlineNode = _virtualOutlineNode_6;
+                      VirtualOutlineNode _virtualOutlineNode_6 = new VirtualOutlineNode(parentNode, _image_6, "Faceted Query Definitions", false);
+                      facetedQueryDefinitionOutlineNode = _virtualOutlineNode_6;
                     }
-                    this.createNode(fileInfoOutlineNode, element);
+                    this.createNode(facetedQueryDefinitionOutlineNode, element);
                   } else {
                     EClass _eClass_5 = element.eClass();
-                    boolean _equals_5 = Objects.equal(_eClass_5, VertigoDslPackage.Literals.FACET_DEFINITION_ACTION);
+                    boolean _equals_5 = Objects.equal(_eClass_5, VertigoDslPackage.Literals.INDEX_DEFINITION_ACTION);
                     if (_equals_5) {
-                      if ((facetDefinitionOutlineNode == null)) {
+                      if ((indexDefinitionOutlineNode == null)) {
                         Image _image_7 = this.imageHelper.getImage("file.png");
-                        VirtualOutlineNode _virtualOutlineNode_7 = new VirtualOutlineNode(parentNode, _image_7, "Facet Definitions", false);
-                        facetDefinitionOutlineNode = _virtualOutlineNode_7;
+                        VirtualOutlineNode _virtualOutlineNode_7 = new VirtualOutlineNode(parentNode, _image_7, "Index Definitions", false);
+                        indexDefinitionOutlineNode = _virtualOutlineNode_7;
                       }
-                      this.createNode(facetDefinitionOutlineNode, element);
-                    } else {
-                      EClass _eClass_6 = element.eClass();
-                      boolean _equals_6 = Objects.equal(_eClass_6, VertigoDslPackage.Literals.FACETED_QUERY_DEFINITION_ACTION);
-                      if (_equals_6) {
-                        if ((facetedQueryDefinitionOutlineNode == null)) {
-                          Image _image_8 = this.imageHelper.getImage("file.png");
-                          VirtualOutlineNode _virtualOutlineNode_8 = new VirtualOutlineNode(parentNode, _image_8, "Faceted Query Definitions", false);
-                          facetedQueryDefinitionOutlineNode = _virtualOutlineNode_8;
-                        }
-                        this.createNode(facetedQueryDefinitionOutlineNode, element);
-                      } else {
-                        EClass _eClass_7 = element.eClass();
-                        boolean _equals_7 = Objects.equal(_eClass_7, VertigoDslPackage.Literals.INDEX_DEFINITION_ACTION);
-                        if (_equals_7) {
-                          if ((indexDefinitionOutlineNode == null)) {
-                            Image _image_9 = this.imageHelper.getImage("file.png");
-                            VirtualOutlineNode _virtualOutlineNode_9 = new VirtualOutlineNode(parentNode, _image_9, "Index Definitions", false);
-                            indexDefinitionOutlineNode = _virtualOutlineNode_9;
-                          }
-                          this.createNode(indexDefinitionOutlineNode, element);
-                        }
-                      }
+                      this.createNode(indexDefinitionOutlineNode, element);
                     }
                   }
                 }

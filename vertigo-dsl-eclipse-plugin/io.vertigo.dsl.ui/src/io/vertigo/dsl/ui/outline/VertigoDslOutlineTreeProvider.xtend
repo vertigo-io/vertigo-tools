@@ -5,13 +5,11 @@ package io.vertigo.dsl.ui.outline
 
 import com.google.inject.Inject
 import io.vertigo.dsl.vertigoDsl.Association
-import io.vertigo.dsl.vertigoDsl.Constraint
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain
 import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition
 import io.vertigo.dsl.vertigoDsl.Domain
 import io.vertigo.dsl.vertigoDsl.DtDefinitionAction
 import io.vertigo.dsl.vertigoDsl.FileInfo
-import io.vertigo.dsl.vertigoDsl.Formatter
 import io.vertigo.dsl.vertigoDsl.Model
 import io.vertigo.dsl.vertigoDsl.TaskDefinition
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage
@@ -43,14 +41,6 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 	}
 	
 	def _isLeaf(DeclaredDomain declaredDomain) {
-		true
-	}
-	
-	def _isLeaf(Formatter formatter) {
-		true
-	}
-	
-	def _isLeaf(Constraint constraint) {
 		true
 	}
 	
@@ -99,17 +89,7 @@ class VertigoDslOutlineTreeProvider extends DefaultOutlineTreeProvider {
 					associationOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("assoc.png"),"Associations", false)		
 				}
 				createNode(associationOutlineNode, element); 
-			} else if (element.eClass == VertigoDslPackage.Literals.CONSTRAINT) {
-				if (constraintOutlineNode === null) {
-					constraintOutlineNode 	= new VirtualOutlineNode(parentNode, imageHelper.getImage("link.png"),"Constraints", false)		
-				}
-				createNode(constraintOutlineNode, element); 
-			} else if (element.eClass == VertigoDslPackage.Literals.FORMATTER) {
-				if (formatterOutlineNode === null) {
-					formatterOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("formatter.png"),"Formatters", false)		
-				}
-				createNode(formatterOutlineNode, element); 
-			} else if (element.eClass == VertigoDslPackage.Literals.TASK_DEFINITION) {
+			}  else if (element.eClass == VertigoDslPackage.Literals.TASK_DEFINITION) {
 				if (taskOutlineNode === null) {
 					taskOutlineNode = new VirtualOutlineNode(parentNode, imageHelper.getImage("gear.png"),"Tasks", false)		
 				}

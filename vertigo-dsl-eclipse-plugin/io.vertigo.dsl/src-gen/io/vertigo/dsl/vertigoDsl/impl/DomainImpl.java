@@ -3,24 +3,15 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DataType;
 import io.vertigo.dsl.vertigoDsl.Domain;
-import io.vertigo.dsl.vertigoDsl.Formatter;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
-
-import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 
-import org.eclipse.emf.common.util.EList;
-
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -32,13 +23,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getName <em>Name</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getDataType <em>Data Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getType <em>Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getFormatter <em>Formatter</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getStoreType <em>Store Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getIndexType <em>Index Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getConstraint <em>Constraint</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#isType <em>Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#isStoreType <em>Store Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#isIndexType <em>Index Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DomainImpl#isUnit <em>Unit</em>}</li>
  * </ul>
  *
  * @generated
@@ -86,114 +74,84 @@ public class DomainImpl extends ElementImpl implements Domain
   protected DataType dataType = DATA_TYPE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The default value of the '{@link #isType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #isType()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected static final boolean TYPE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #isType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #isType()
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected boolean type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFormatter() <em>Formatter</em>}' reference.
+   * The default value of the '{@link #isStoreType() <em>Store Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFormatter()
+   * @see #isStoreType()
    * @generated
    * @ordered
    */
-  protected Formatter formatter;
+  protected static final boolean STORE_TYPE_EDEFAULT = false;
 
   /**
-   * The default value of the '{@link #getStoreType() <em>Store Type</em>}' attribute.
+   * The cached value of the '{@link #isStoreType() <em>Store Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStoreType()
+   * @see #isStoreType()
    * @generated
    * @ordered
    */
-  protected static final String STORE_TYPE_EDEFAULT = null;
+  protected boolean storeType = STORE_TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getStoreType() <em>Store Type</em>}' attribute.
+   * The default value of the '{@link #isIndexType() <em>Index Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStoreType()
+   * @see #isIndexType()
    * @generated
    * @ordered
    */
-  protected String storeType = STORE_TYPE_EDEFAULT;
+  protected static final boolean INDEX_TYPE_EDEFAULT = false;
 
   /**
-   * The default value of the '{@link #getIndexType() <em>Index Type</em>}' attribute.
+   * The cached value of the '{@link #isIndexType() <em>Index Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIndexType()
+   * @see #isIndexType()
    * @generated
    * @ordered
    */
-  protected static final String INDEX_TYPE_EDEFAULT = null;
+  protected boolean indexType = INDEX_TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIndexType() <em>Index Type</em>}' attribute.
+   * The default value of the '{@link #isUnit() <em>Unit</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIndexType()
+   * @see #isUnit()
    * @generated
    * @ordered
    */
-  protected String indexType = INDEX_TYPE_EDEFAULT;
+  protected static final boolean UNIT_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' reference list.
+   * The cached value of the '{@link #isUnit() <em>Unit</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConstraint()
+   * @see #isUnit()
    * @generated
    * @ordered
    */
-  protected EList<Constraint> constraint;
-
-  /**
-   * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getConstraints()
-   * @generated
-   * @ordered
-   */
-  protected EList<Constraint> constraints;
-
-  /**
-   * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getUnit()
-   * @generated
-   * @ordered
-   */
-  protected static final String UNIT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getUnit()
-   * @generated
-   * @ordered
-   */
-  protected String unit = UNIT_EDEFAULT;
+  protected boolean unit = UNIT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -272,7 +230,7 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public String getType()
+  public boolean isType()
   {
     return type;
   }
@@ -283,9 +241,9 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public void setType(String newType)
+  public void setType(boolean newType)
   {
-    String oldType = type;
+    boolean oldType = type;
     type = newType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__TYPE, oldType, type));
@@ -297,52 +255,7 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public Formatter getFormatter()
-  {
-    if (formatter != null && formatter.eIsProxy())
-    {
-      InternalEObject oldFormatter = (InternalEObject)formatter;
-      formatter = (Formatter)eResolveProxy(oldFormatter);
-      if (formatter != oldFormatter)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VertigoDslPackage.DOMAIN__FORMATTER, oldFormatter, formatter));
-      }
-    }
-    return formatter;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Formatter basicGetFormatter()
-  {
-    return formatter;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setFormatter(Formatter newFormatter)
-  {
-    Formatter oldFormatter = formatter;
-    formatter = newFormatter;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__FORMATTER, oldFormatter, formatter));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getStoreType()
+  public boolean isStoreType()
   {
     return storeType;
   }
@@ -353,9 +266,9 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public void setStoreType(String newStoreType)
+  public void setStoreType(boolean newStoreType)
   {
-    String oldStoreType = storeType;
+    boolean oldStoreType = storeType;
     storeType = newStoreType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__STORE_TYPE, oldStoreType, storeType));
@@ -367,7 +280,7 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public String getIndexType()
+  public boolean isIndexType()
   {
     return indexType;
   }
@@ -378,9 +291,9 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public void setIndexType(String newIndexType)
+  public void setIndexType(boolean newIndexType)
   {
-    String oldIndexType = indexType;
+    boolean oldIndexType = indexType;
     indexType = newIndexType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__INDEX_TYPE, oldIndexType, indexType));
@@ -392,37 +305,7 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public EList<Constraint> getConstraint()
-  {
-    if (constraint == null)
-    {
-      constraint = new EObjectResolvingEList<Constraint>(Constraint.class, this, VertigoDslPackage.DOMAIN__CONSTRAINT);
-    }
-    return constraint;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<Constraint> getConstraints()
-  {
-    if (constraints == null)
-    {
-      constraints = new EObjectResolvingEList<Constraint>(Constraint.class, this, VertigoDslPackage.DOMAIN__CONSTRAINTS);
-    }
-    return constraints;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getUnit()
+  public boolean isUnit()
   {
     return unit;
   }
@@ -433,9 +316,9 @@ public class DomainImpl extends ElementImpl implements Domain
    * @generated
    */
   @Override
-  public void setUnit(String newUnit)
+  public void setUnit(boolean newUnit)
   {
-    String oldUnit = unit;
+    boolean oldUnit = unit;
     unit = newUnit;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DOMAIN__UNIT, oldUnit, unit));
@@ -456,20 +339,13 @@ public class DomainImpl extends ElementImpl implements Domain
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         return getDataType();
       case VertigoDslPackage.DOMAIN__TYPE:
-        return getType();
-      case VertigoDslPackage.DOMAIN__FORMATTER:
-        if (resolve) return getFormatter();
-        return basicGetFormatter();
+        return isType();
       case VertigoDslPackage.DOMAIN__STORE_TYPE:
-        return getStoreType();
+        return isStoreType();
       case VertigoDslPackage.DOMAIN__INDEX_TYPE:
-        return getIndexType();
-      case VertigoDslPackage.DOMAIN__CONSTRAINT:
-        return getConstraint();
-      case VertigoDslPackage.DOMAIN__CONSTRAINTS:
-        return getConstraints();
+        return isIndexType();
       case VertigoDslPackage.DOMAIN__UNIT:
-        return getUnit();
+        return isUnit();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -479,7 +355,6 @@ public class DomainImpl extends ElementImpl implements Domain
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -492,27 +367,16 @@ public class DomainImpl extends ElementImpl implements Domain
         setDataType((DataType)newValue);
         return;
       case VertigoDslPackage.DOMAIN__TYPE:
-        setType((String)newValue);
-        return;
-      case VertigoDslPackage.DOMAIN__FORMATTER:
-        setFormatter((Formatter)newValue);
+        setType((Boolean)newValue);
         return;
       case VertigoDslPackage.DOMAIN__STORE_TYPE:
-        setStoreType((String)newValue);
+        setStoreType((Boolean)newValue);
         return;
       case VertigoDslPackage.DOMAIN__INDEX_TYPE:
-        setIndexType((String)newValue);
-        return;
-      case VertigoDslPackage.DOMAIN__CONSTRAINT:
-        getConstraint().clear();
-        getConstraint().addAll((Collection<? extends Constraint>)newValue);
-        return;
-      case VertigoDslPackage.DOMAIN__CONSTRAINTS:
-        getConstraints().clear();
-        getConstraints().addAll((Collection<? extends Constraint>)newValue);
+        setIndexType((Boolean)newValue);
         return;
       case VertigoDslPackage.DOMAIN__UNIT:
-        setUnit((String)newValue);
+        setUnit((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -537,20 +401,11 @@ public class DomainImpl extends ElementImpl implements Domain
       case VertigoDslPackage.DOMAIN__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case VertigoDslPackage.DOMAIN__FORMATTER:
-        setFormatter((Formatter)null);
-        return;
       case VertigoDslPackage.DOMAIN__STORE_TYPE:
         setStoreType(STORE_TYPE_EDEFAULT);
         return;
       case VertigoDslPackage.DOMAIN__INDEX_TYPE:
         setIndexType(INDEX_TYPE_EDEFAULT);
-        return;
-      case VertigoDslPackage.DOMAIN__CONSTRAINT:
-        getConstraint().clear();
-        return;
-      case VertigoDslPackage.DOMAIN__CONSTRAINTS:
-        getConstraints().clear();
         return;
       case VertigoDslPackage.DOMAIN__UNIT:
         setUnit(UNIT_EDEFAULT);
@@ -574,19 +429,13 @@ public class DomainImpl extends ElementImpl implements Domain
       case VertigoDslPackage.DOMAIN__DATA_TYPE:
         return dataType != DATA_TYPE_EDEFAULT;
       case VertigoDslPackage.DOMAIN__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case VertigoDslPackage.DOMAIN__FORMATTER:
-        return formatter != null;
+        return type != TYPE_EDEFAULT;
       case VertigoDslPackage.DOMAIN__STORE_TYPE:
-        return STORE_TYPE_EDEFAULT == null ? storeType != null : !STORE_TYPE_EDEFAULT.equals(storeType);
+        return storeType != STORE_TYPE_EDEFAULT;
       case VertigoDslPackage.DOMAIN__INDEX_TYPE:
-        return INDEX_TYPE_EDEFAULT == null ? indexType != null : !INDEX_TYPE_EDEFAULT.equals(indexType);
-      case VertigoDslPackage.DOMAIN__CONSTRAINT:
-        return constraint != null && !constraint.isEmpty();
-      case VertigoDslPackage.DOMAIN__CONSTRAINTS:
-        return constraints != null && !constraints.isEmpty();
+        return indexType != INDEX_TYPE_EDEFAULT;
       case VertigoDslPackage.DOMAIN__UNIT:
-        return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
+        return unit != UNIT_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

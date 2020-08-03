@@ -4,24 +4,16 @@
 package io.vertigo.dsl.vertigoDsl.impl;
 
 import io.vertigo.dsl.vertigoDsl.AlterDomain;
-import io.vertigo.dsl.vertigoDsl.Constraint;
 import io.vertigo.dsl.vertigoDsl.DataType;
 import io.vertigo.dsl.vertigoDsl.DomainType;
-import io.vertigo.dsl.vertigoDsl.Formatter;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
-import java.util.Collection;
-
 import org.eclipse.emf.common.notify.Notification;
-
-import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
-
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -33,13 +25,10 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getDomain <em>Domain</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getDataType <em>Data Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getType <em>Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getFormatter <em>Formatter</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getStoreType <em>Store Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getIndexType <em>Index Type</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getConstraint <em>Constraint</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getConstraints <em>Constraints</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#getUnit <em>Unit</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#isType <em>Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#isStoreType <em>Store Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#isIndexType <em>Index Type</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.AlterDomainImpl#isUnit <em>Unit</em>}</li>
  * </ul>
  *
  * @generated
@@ -77,114 +66,84 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
   protected DataType dataType = DATA_TYPE_EDEFAULT;
 
   /**
-   * The default value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The default value of the '{@link #isType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #isType()
    * @generated
    * @ordered
    */
-  protected static final String TYPE_EDEFAULT = null;
+  protected static final boolean TYPE_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getType() <em>Type</em>}' attribute.
+   * The cached value of the '{@link #isType() <em>Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getType()
+   * @see #isType()
    * @generated
    * @ordered
    */
-  protected String type = TYPE_EDEFAULT;
+  protected boolean type = TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getFormatter() <em>Formatter</em>}' reference.
+   * The default value of the '{@link #isStoreType() <em>Store Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getFormatter()
+   * @see #isStoreType()
    * @generated
    * @ordered
    */
-  protected Formatter formatter;
+  protected static final boolean STORE_TYPE_EDEFAULT = false;
 
   /**
-   * The default value of the '{@link #getStoreType() <em>Store Type</em>}' attribute.
+   * The cached value of the '{@link #isStoreType() <em>Store Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStoreType()
+   * @see #isStoreType()
    * @generated
    * @ordered
    */
-  protected static final String STORE_TYPE_EDEFAULT = null;
+  protected boolean storeType = STORE_TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getStoreType() <em>Store Type</em>}' attribute.
+   * The default value of the '{@link #isIndexType() <em>Index Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getStoreType()
+   * @see #isIndexType()
    * @generated
    * @ordered
    */
-  protected String storeType = STORE_TYPE_EDEFAULT;
+  protected static final boolean INDEX_TYPE_EDEFAULT = false;
 
   /**
-   * The default value of the '{@link #getIndexType() <em>Index Type</em>}' attribute.
+   * The cached value of the '{@link #isIndexType() <em>Index Type</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIndexType()
+   * @see #isIndexType()
    * @generated
    * @ordered
    */
-  protected static final String INDEX_TYPE_EDEFAULT = null;
+  protected boolean indexType = INDEX_TYPE_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getIndexType() <em>Index Type</em>}' attribute.
+   * The default value of the '{@link #isUnit() <em>Unit</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getIndexType()
+   * @see #isUnit()
    * @generated
    * @ordered
    */
-  protected String indexType = INDEX_TYPE_EDEFAULT;
+  protected static final boolean UNIT_EDEFAULT = false;
 
   /**
-   * The cached value of the '{@link #getConstraint() <em>Constraint</em>}' reference list.
+   * The cached value of the '{@link #isUnit() <em>Unit</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getConstraint()
+   * @see #isUnit()
    * @generated
    * @ordered
    */
-  protected EList<Constraint> constraint;
-
-  /**
-   * The cached value of the '{@link #getConstraints() <em>Constraints</em>}' reference list.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getConstraints()
-   * @generated
-   * @ordered
-   */
-  protected EList<Constraint> constraints;
-
-  /**
-   * The default value of the '{@link #getUnit() <em>Unit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getUnit()
-   * @generated
-   * @ordered
-   */
-  protected static final String UNIT_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getUnit() <em>Unit</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getUnit()
-   * @generated
-   * @ordered
-   */
-  protected String unit = UNIT_EDEFAULT;
+  protected boolean unit = UNIT_EDEFAULT;
 
   /**
    * <!-- begin-user-doc -->
@@ -283,7 +242,7 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public String getType()
+  public boolean isType()
   {
     return type;
   }
@@ -294,9 +253,9 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public void setType(String newType)
+  public void setType(boolean newType)
   {
-    String oldType = type;
+    boolean oldType = type;
     type = newType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__TYPE, oldType, type));
@@ -308,52 +267,7 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public Formatter getFormatter()
-  {
-    if (formatter != null && formatter.eIsProxy())
-    {
-      InternalEObject oldFormatter = (InternalEObject)formatter;
-      formatter = (Formatter)eResolveProxy(oldFormatter);
-      if (formatter != oldFormatter)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, VertigoDslPackage.ALTER_DOMAIN__FORMATTER, oldFormatter, formatter));
-      }
-    }
-    return formatter;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public Formatter basicGetFormatter()
-  {
-    return formatter;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public void setFormatter(Formatter newFormatter)
-  {
-    Formatter oldFormatter = formatter;
-    formatter = newFormatter;
-    if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__FORMATTER, oldFormatter, formatter));
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getStoreType()
+  public boolean isStoreType()
   {
     return storeType;
   }
@@ -364,9 +278,9 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public void setStoreType(String newStoreType)
+  public void setStoreType(boolean newStoreType)
   {
-    String oldStoreType = storeType;
+    boolean oldStoreType = storeType;
     storeType = newStoreType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__STORE_TYPE, oldStoreType, storeType));
@@ -378,7 +292,7 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public String getIndexType()
+  public boolean isIndexType()
   {
     return indexType;
   }
@@ -389,9 +303,9 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public void setIndexType(String newIndexType)
+  public void setIndexType(boolean newIndexType)
   {
-    String oldIndexType = indexType;
+    boolean oldIndexType = indexType;
     indexType = newIndexType;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__INDEX_TYPE, oldIndexType, indexType));
@@ -403,37 +317,7 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public EList<Constraint> getConstraint()
-  {
-    if (constraint == null)
-    {
-      constraint = new EObjectResolvingEList<Constraint>(Constraint.class, this, VertigoDslPackage.ALTER_DOMAIN__CONSTRAINT);
-    }
-    return constraint;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public EList<Constraint> getConstraints()
-  {
-    if (constraints == null)
-    {
-      constraints = new EObjectResolvingEList<Constraint>(Constraint.class, this, VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS);
-    }
-    return constraints;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String getUnit()
+  public boolean isUnit()
   {
     return unit;
   }
@@ -444,9 +328,9 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * @generated
    */
   @Override
-  public void setUnit(String newUnit)
+  public void setUnit(boolean newUnit)
   {
-    String oldUnit = unit;
+    boolean oldUnit = unit;
     unit = newUnit;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.ALTER_DOMAIN__UNIT, oldUnit, unit));
@@ -468,20 +352,13 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         return getDataType();
       case VertigoDslPackage.ALTER_DOMAIN__TYPE:
-        return getType();
-      case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
-        if (resolve) return getFormatter();
-        return basicGetFormatter();
+        return isType();
       case VertigoDslPackage.ALTER_DOMAIN__STORE_TYPE:
-        return getStoreType();
+        return isStoreType();
       case VertigoDslPackage.ALTER_DOMAIN__INDEX_TYPE:
-        return getIndexType();
-      case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINT:
-        return getConstraint();
-      case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS:
-        return getConstraints();
+        return isIndexType();
       case VertigoDslPackage.ALTER_DOMAIN__UNIT:
-        return getUnit();
+        return isUnit();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -491,7 +368,6 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
    * <!-- end-user-doc -->
    * @generated
    */
-  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -504,27 +380,16 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
         setDataType((DataType)newValue);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__TYPE:
-        setType((String)newValue);
-        return;
-      case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
-        setFormatter((Formatter)newValue);
+        setType((Boolean)newValue);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__STORE_TYPE:
-        setStoreType((String)newValue);
+        setStoreType((Boolean)newValue);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__INDEX_TYPE:
-        setIndexType((String)newValue);
-        return;
-      case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINT:
-        getConstraint().clear();
-        getConstraint().addAll((Collection<? extends Constraint>)newValue);
-        return;
-      case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS:
-        getConstraints().clear();
-        getConstraints().addAll((Collection<? extends Constraint>)newValue);
+        setIndexType((Boolean)newValue);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__UNIT:
-        setUnit((String)newValue);
+        setUnit((Boolean)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -549,20 +414,11 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
       case VertigoDslPackage.ALTER_DOMAIN__TYPE:
         setType(TYPE_EDEFAULT);
         return;
-      case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
-        setFormatter((Formatter)null);
-        return;
       case VertigoDslPackage.ALTER_DOMAIN__STORE_TYPE:
         setStoreType(STORE_TYPE_EDEFAULT);
         return;
       case VertigoDslPackage.ALTER_DOMAIN__INDEX_TYPE:
         setIndexType(INDEX_TYPE_EDEFAULT);
-        return;
-      case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINT:
-        getConstraint().clear();
-        return;
-      case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS:
-        getConstraints().clear();
         return;
       case VertigoDslPackage.ALTER_DOMAIN__UNIT:
         setUnit(UNIT_EDEFAULT);
@@ -586,19 +442,13 @@ public class AlterDomainImpl extends ElementImpl implements AlterDomain
       case VertigoDslPackage.ALTER_DOMAIN__DATA_TYPE:
         return dataType != DATA_TYPE_EDEFAULT;
       case VertigoDslPackage.ALTER_DOMAIN__TYPE:
-        return TYPE_EDEFAULT == null ? type != null : !TYPE_EDEFAULT.equals(type);
-      case VertigoDslPackage.ALTER_DOMAIN__FORMATTER:
-        return formatter != null;
+        return type != TYPE_EDEFAULT;
       case VertigoDslPackage.ALTER_DOMAIN__STORE_TYPE:
-        return STORE_TYPE_EDEFAULT == null ? storeType != null : !STORE_TYPE_EDEFAULT.equals(storeType);
+        return storeType != STORE_TYPE_EDEFAULT;
       case VertigoDslPackage.ALTER_DOMAIN__INDEX_TYPE:
-        return INDEX_TYPE_EDEFAULT == null ? indexType != null : !INDEX_TYPE_EDEFAULT.equals(indexType);
-      case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINT:
-        return constraint != null && !constraint.isEmpty();
-      case VertigoDslPackage.ALTER_DOMAIN__CONSTRAINTS:
-        return constraints != null && !constraints.isEmpty();
+        return indexType != INDEX_TYPE_EDEFAULT;
       case VertigoDslPackage.ALTER_DOMAIN__UNIT:
-        return UNIT_EDEFAULT == null ? unit != null : !UNIT_EDEFAULT.equals(unit);
+        return unit != UNIT_EDEFAULT;
     }
     return super.eIsSet(featureID);
   }

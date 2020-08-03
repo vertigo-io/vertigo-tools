@@ -106,19 +106,9 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createDeclaredDtDefinitionAdapter();
       }
       @Override
-      public Adapter caseConstraint(Constraint object)
-      {
-        return createConstraintAdapter();
-      }
-      @Override
       public Adapter caseFileInfo(FileInfo object)
       {
         return createFileInfoAdapter();
-      }
-      @Override
-      public Adapter caseFormatter(Formatter object)
-      {
-        return createFormatterAdapter();
       }
       @Override
       public Adapter caseDomain(Domain object)
@@ -493,21 +483,6 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.Constraint <em>Constraint</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see io.vertigo.dsl.vertigoDsl.Constraint
-   * @generated
-   */
-  public Adapter createConstraintAdapter()
-  {
-    return null;
-  }
-
-  /**
    * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.FileInfo <em>File Info</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -518,21 +493,6 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createFileInfoAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.Formatter <em>Formatter</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see io.vertigo.dsl.vertigoDsl.Formatter
-   * @generated
-   */
-  public Adapter createFormatterAdapter()
   {
     return null;
   }
