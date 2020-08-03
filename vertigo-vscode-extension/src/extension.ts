@@ -2,11 +2,12 @@
 
 import * as path from 'path';
 import * as os from 'os';
-import * as child_process from 'child_process';
 
 import {Trace} from 'vscode-jsonrpc';
-import { commands, window, workspace, ExtensionContext, Uri, OutputChannel } from 'vscode';
+import { tasks,  workspace, ExtensionContext} from 'vscode';
 import { LanguageClient, LanguageClientOptions, ServerOptions } from 'vscode-languageclient';
+
+import { VertigoStudioTaskProvider } from './vertigoStudioTaskProvider';
 
 
 export function activate(context: ExtensionContext) {
@@ -36,42 +37,12 @@ export function activate(context: ExtensionContext) {
     // client can be deactivated on extension deactivation
     context.subscriptions.push(disposable);
 
-	let studioOutputChannel = window.createOutputChannel("Vertigo Studio");
-	context.subscriptions.push(studioOutputChannel);
-	
-    var disposable2 =commands.registerCommand("vertigo.studio.cleanGen", async (studioConfigPath) => {
-        studioOutputChannel.appendLine("Launching Vertigo-Studio with config file : " + studioConfigPath);
-        let launcher = os.platform() === 'win32' ? 'vertigo-studio-standalone.bat' : 'vertigo-studio-standalone';
-        studioOutputChannel.show();
-       
-        let executable = context.asAbsolutePath(path.join('src', 'vertigo-studio', 'bin', launcher));
-
-        child_process.exec(executable + " " + studioConfigPath, (error, stdout, stderr) => {
-            if (error) {
-                studioOutputChannel.append(`error: ${error.message}`);
-                return;
-            }
-            if (stderr) {
-                studioOutputChannel.append(`stderr: ${stderr}`);
-                return;
-            }
-            studioOutputChannel.append(`stdout: ${stdout}`);
-        });
-
-        /*
-        let studio = child_process.spawn(executable, [studioConfigPath.s], {});
-        
-		studio.stdout.on("data", (data) => {
-            studioOutputChannel.append(data);
-        });
-		studio.stderr.on("data", (data) => {
-            studioOutputChannel.append(data);
-        });
-        */
-
-    })
-    context.subscriptions.push(disposable2);
+    let launcherStudio = os.platform() === 'win32' ? 'vertigo-studio-standalone.bat' : 'vertigo-studio-standalone';
+    let executableStudio = context.asAbsolutePath(path.join('src', 'vertigo-studio', 'bin', launcherStudio));
     
+    tasks.registerTaskProvider("vertigo-studio", new VertigoStudioTaskProvider(executableStudio));
+
+   
    
 }
 

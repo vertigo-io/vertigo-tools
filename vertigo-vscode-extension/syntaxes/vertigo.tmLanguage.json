@@ -67,7 +67,7 @@
         },
         "taskParameters": {
             "name": "entity.name.tag.vertigo",
-            "match": "\\b(storeName|className|request|attribute|inOut)\\b"
+            "match": "\\b(storeName|className|request|in|out)\\b"
         },
         "fileInfoParameters": {
             "name": "entity.name.tag.vertigo",

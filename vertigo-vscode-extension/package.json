@@ -20,8 +20,7 @@
         "Programming Languages"
     ],
     "activationEvents": [
-        "onLanguage:vertigo",
-		"onCommand:vertigo.studio.cleanGen"
+        "onLanguage:vertigo"
     ],
     "main": "out/extension",
     "contributes": {
@@ -44,20 +43,25 @@
                 "path": "./syntaxes/vertigo.tmLanguage.json"
             }
         ],
-        "commands": [
-            {
-                "command": "vertigo.studio.cleanGen",
-                "title": "Generate code with Vertigo-Studio"
-            }
-        ],
-        "menus": {
-            "explorer/context": [
-                {
-                    "command": "vertigo.studio.cleanGen",
-                    "group": "vertigo@1"
-                }
-            ]
-        }
+        "taskDefinitions": [
+			{
+				"type": "vertigo-studio",
+				"required": [
+                    "task",
+                    "file"
+				],
+				"properties": {
+					"task": {
+						"type": "string",
+						"description": "The Vertigo task to execute (generate or watch)"
+					},
+					"file": {
+						"type": "string",
+						"description": "The Uri of the studio configuration file"
+					}
+				}
+			}
+		]
     },
     "devDependencies": {
         "@types/vscode": "^1.41.0",
