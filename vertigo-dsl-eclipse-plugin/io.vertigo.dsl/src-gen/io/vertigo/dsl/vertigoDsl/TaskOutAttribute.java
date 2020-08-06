@@ -7,22 +7,22 @@ import org.eclipse.emf.ecore.EObject;
 
 /**
  * <!-- begin-user-doc -->
- * A representation of the model object '<em><b>Task Attribute</b></em>'.
+ * A representation of the model object '<em><b>Task Out Attribute</b></em>'.
  * <!-- end-user-doc -->
  *
  * <p>
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttribute#getName <em>Name</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskAttribute#getTaskAttributeString <em>Task Attribute String</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskOutAttribute#getName <em>Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.TaskOutAttribute#getTaskAttributeString <em>Task Attribute String</em>}</li>
  * </ul>
  *
- * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttribute()
+ * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskOutAttribute()
  * @model
  * @generated
  */
-public interface TaskAttribute extends EObject
+public interface TaskOutAttribute extends EObject
 {
   /**
    * Returns the value of the '<em><b>Name</b></em>' attribute.
@@ -30,14 +30,14 @@ public interface TaskAttribute extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Name</em>' attribute.
    * @see #setName(String)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttribute_Name()
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskOutAttribute_Name()
    * @model
    * @generated
    */
   String getName();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskAttribute#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskOutAttribute#getName <em>Name</em>}' attribute.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Name</em>' attribute.
@@ -52,14 +52,14 @@ public interface TaskAttribute extends EObject
    * <!-- end-user-doc -->
    * @return the value of the '<em>Task Attribute String</em>' containment reference.
    * @see #setTaskAttributeString(TaskAttributeString)
-   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskAttribute_TaskAttributeString()
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getTaskOutAttribute_TaskAttributeString()
    * @model containment="true"
    * @generated
    */
   TaskAttributeString getTaskAttributeString();
 
   /**
-   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskAttribute#getTaskAttributeString <em>Task Attribute String</em>}' containment reference.
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.TaskOutAttribute#getTaskAttributeString <em>Task Attribute String</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @param value the new value of the '<em>Task Attribute String</em>' containment reference.
@@ -68,4 +68,4 @@ public interface TaskAttribute extends EObject
    */
   void setTaskAttributeString(TaskAttributeString value);
 
-} // TaskAttribute
+} // TaskOutAttribute

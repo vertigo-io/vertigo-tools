@@ -79,6 +79,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="refToDomainType" eType="#//RefToDomainType"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="label" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" eType="#//CardinalityString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="expressionString" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionIdField">
@@ -171,7 +172,12 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="cardinality" eType="#//CardinalityString"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="TaskAttribute">
+  <eClassifiers xsi:type="ecore:EClass" name="TaskInAttribute">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="taskAttributeString" eType="#//TaskAttributeString"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="TaskOutAttribute">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskAttributeString" eType="#//TaskAttributeString"
         containment="true"/>
@@ -198,7 +204,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="request" eType="#//TaskRequest"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskAttributes" upperBound="-1"
-        eType="#//TaskAttribute" containment="true"/>
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="AlterTaskDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskDefinition" eType="#//TaskDefinition"/>
@@ -209,7 +215,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="request" eType="#//TaskRequest"
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="taskAttributes" upperBound="-1"
-        eType="#//TaskAttribute" containment="true"/>
+        eType="ecore:EClass http://www.eclipse.org/emf/2002/Ecore#//EObject" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FacetDefinitionDtDefinition">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinition" eType="#//DtDefinitionType"/>

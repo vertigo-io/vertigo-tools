@@ -3,8 +3,8 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.TaskAttribute;
 import io.vertigo.dsl.vertigoDsl.TaskAttributeString;
+import io.vertigo.dsl.vertigoDsl.TaskInAttribute;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -18,19 +18,19 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Task Attribute</b></em>'.
+ * An implementation of the model object '<em><b>Task In Attribute</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeImpl#getName <em>Name</em>}</li>
- *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeImpl#getTaskAttributeString <em>Task Attribute String</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskInAttributeImpl#getName <em>Name</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.TaskInAttributeImpl#getTaskAttributeString <em>Task Attribute String</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements TaskAttribute
+public class TaskInAttributeImpl extends MinimalEObjectImpl.Container implements TaskInAttribute
 {
   /**
    * The default value of the '{@link #getName() <em>Name</em>}' attribute.
@@ -67,7 +67,7 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
    * <!-- end-user-doc -->
    * @generated
    */
-  protected TaskAttributeImpl()
+  protected TaskInAttributeImpl()
   {
     super();
   }
@@ -80,7 +80,7 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
   @Override
   protected EClass eStaticClass()
   {
-    return VertigoDslPackage.Literals.TASK_ATTRIBUTE;
+    return VertigoDslPackage.Literals.TASK_IN_ATTRIBUTE;
   }
 
   /**
@@ -105,7 +105,7 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
     String oldName = name;
     name = newName;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_IN_ATTRIBUTE__NAME, oldName, name));
   }
 
   /**
@@ -130,7 +130,7 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
     taskAttributeString = newTaskAttributeString;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING, oldTaskAttributeString, newTaskAttributeString);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING, oldTaskAttributeString, newTaskAttributeString);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -148,14 +148,14 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
     {
       NotificationChain msgs = null;
       if (taskAttributeString != null)
-        msgs = ((InternalEObject)taskAttributeString).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING, null, msgs);
+        msgs = ((InternalEObject)taskAttributeString).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING, null, msgs);
       if (newTaskAttributeString != null)
-        msgs = ((InternalEObject)newTaskAttributeString).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING, null, msgs);
+        msgs = ((InternalEObject)newTaskAttributeString).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING, null, msgs);
       msgs = basicSetTaskAttributeString(newTaskAttributeString, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING, newTaskAttributeString, newTaskAttributeString));
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING, newTaskAttributeString, newTaskAttributeString));
   }
 
   /**
@@ -168,7 +168,7 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
         return basicSetTaskAttributeString(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
@@ -184,9 +184,9 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE__NAME:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__NAME:
         return getName();
-      case VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
         return getTaskAttributeString();
     }
     return super.eGet(featureID, resolve, coreType);
@@ -202,10 +202,10 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE__NAME:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__NAME:
         setName((String)newValue);
         return;
-      case VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
         setTaskAttributeString((TaskAttributeString)newValue);
         return;
     }
@@ -222,10 +222,10 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE__NAME:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__NAME:
         setName(NAME_EDEFAULT);
         return;
-      case VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
         setTaskAttributeString((TaskAttributeString)null);
         return;
     }
@@ -242,9 +242,9 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
   {
     switch (featureID)
     {
-      case VertigoDslPackage.TASK_ATTRIBUTE__NAME:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-      case VertigoDslPackage.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING:
         return taskAttributeString != null;
     }
     return super.eIsSet(featureID);
@@ -267,4 +267,4 @@ public class TaskAttributeImpl extends MinimalEObjectImpl.Container implements T
     return result.toString();
   }
 
-} //TaskAttributeImpl
+} //TaskInAttributeImpl

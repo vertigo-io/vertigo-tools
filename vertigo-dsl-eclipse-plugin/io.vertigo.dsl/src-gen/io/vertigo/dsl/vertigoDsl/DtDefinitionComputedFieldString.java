@@ -16,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString#getLabel <em>Label</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString#getCardinality <em>Cardinality</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString#getExpressionString <em>Expression String</em>}</li>
  * </ul>
  *
@@ -68,6 +69,31 @@ public interface DtDefinitionComputedFieldString extends EObject
    * @generated
    */
   void setLabel(String value);
+
+  /**
+   * Returns the value of the '<em><b>Cardinality</b></em>' attribute.
+   * The literals are from the enumeration {@link io.vertigo.dsl.vertigoDsl.CardinalityString}.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Cardinality</em>' attribute.
+   * @see io.vertigo.dsl.vertigoDsl.CardinalityString
+   * @see #setCardinality(CardinalityString)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinitionComputedFieldString_Cardinality()
+   * @model
+   * @generated
+   */
+  CardinalityString getCardinality();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString#getCardinality <em>Cardinality</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Cardinality</em>' attribute.
+   * @see io.vertigo.dsl.vertigoDsl.CardinalityString
+   * @see #getCardinality()
+   * @generated
+   */
+  void setCardinality(CardinalityString value);
 
   /**
    * Returns the value of the '<em><b>Expression String</b></em>' attribute.

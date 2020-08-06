@@ -92,10 +92,10 @@ DtDefinitionIdString:
 	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & ('label' ':' label=STRING ','?) ) '}';
 
 DtDefinitionDataFieldString:
-	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':' cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':' cardinality=CardinalityString ','?)? & ('persistent' ':' persistent=BooleanString ','? )?) '}';
 
 DtDefinitionComputedFieldString:
-	'{' ('domain' ':' refToDomainType=RefToDomainType  ','? & 'label' ':' label=STRING ','? & 'expression' ':' expressionString=STRING ','? ) '}';
+	'{' ('domain' ':' refToDomainType=RefToDomainType  ','? & 'label' ':' label=STRING ','? & ('cardinality' ':' cardinality=CardinalityString ','?)? & 'expression' ':' expressionString=STRING ','? ) '}';
 
 DtDefinitionIdField:
 	'id' name=KEYWORDID idString=DtDefinitionIdString ','? ; 
@@ -192,8 +192,12 @@ Association:
 TaskAttributeString:
 	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'cardinality' ':' cardinality=CardinalityString ','? ) '}';
 
-TaskAttribute:
-	('in' | 'out') name=ID taskAttributeString=TaskAttributeString ','?
+TaskInAttribute:
+	'in' name=ID taskAttributeString=TaskAttributeString ','?
+;
+
+TaskOutAttribute:
+	'out' name=ID taskAttributeString=TaskAttributeString ','?
 ;
 
 TaskDataSpace:
@@ -217,7 +221,9 @@ TaskDefinition:
 		taskDataSpace=TaskDataSpace?
 		className=TaskClassName
 		request=TaskRequest?
-		taskAttributes+=TaskAttribute*
+		taskAttributes+=TaskInAttribute*
+		taskAttributes+=TaskOutAttribute?
+		
 	'}';
 	
 AlterTaskDefinition:
@@ -225,7 +231,8 @@ AlterTaskDefinition:
 		taskDataSpace=TaskDataSpace?
 		className=TaskClassName
 		request=TaskRequest?
-		taskAttributes+=TaskAttribute*
+		taskAttributes+=TaskInAttribute*
+		taskAttributes+=TaskOutAttribute?
 	'}';
 	
 

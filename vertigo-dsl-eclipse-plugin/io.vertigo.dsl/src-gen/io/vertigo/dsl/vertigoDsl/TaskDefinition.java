@@ -5,6 +5,8 @@ package io.vertigo.dsl.vertigoDsl;
 
 import org.eclipse.emf.common.util.EList;
 
+import org.eclipse.emf.ecore.EObject;
+
 /**
  * <!-- begin-user-doc -->
  * A representation of the model object '<em><b>Task Definition</b></em>'.
@@ -117,7 +119,7 @@ public interface TaskDefinition extends Element
 
   /**
    * Returns the value of the '<em><b>Task Attributes</b></em>' containment reference list.
-   * The list contents are of type {@link io.vertigo.dsl.vertigoDsl.TaskAttribute}.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Task Attributes</em>' containment reference list.
@@ -125,6 +127,6 @@ public interface TaskDefinition extends Element
    * @model containment="true"
    * @generated
    */
-  EList<TaskAttribute> getTaskAttributes();
+  EList<EObject> getTaskAttributes();
 
 } // TaskDefinition

@@ -1535,9 +1535,9 @@ ruleDtDefinitionComputedFieldString returns [EObject current=null]
 					{
 						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 2);
 					}
-								({true}?=>(otherlv_10='expression'
+								({true}?=>(otherlv_10='cardinality'
 								{
-									newLeafNode(otherlv_10, grammarAccess.getDtDefinitionComputedFieldStringAccess().getExpressionKeyword_1_2_0());
+									newLeafNode(otherlv_10, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCardinalityKeyword_1_2_0());
 								}
 								otherlv_11=':'
 								{
@@ -1545,9 +1545,53 @@ ruleDtDefinitionComputedFieldString returns [EObject current=null]
 								}
 								(
 									(
-										lv_expressionString_12_0=RULE_STRING
 										{
-											newLeafNode(lv_expressionString_12_0, grammarAccess.getDtDefinitionComputedFieldStringAccess().getExpressionStringSTRINGTerminalRuleCall_1_2_2_0());
+											newCompositeNode(grammarAccess.getDtDefinitionComputedFieldStringAccess().getCardinalityCardinalityStringEnumRuleCall_1_2_2_0());
+										}
+										lv_cardinality_12_0=ruleCardinalityString
+										{
+											if ($current==null) {
+												$current = createModelElementForParent(grammarAccess.getDtDefinitionComputedFieldStringRule());
+											}
+											set(
+												$current,
+												"cardinality",
+												lv_cardinality_12_0,
+												"io.vertigo.dsl.VertigoDsl.CardinalityString");
+											afterParserOrEnumRuleCall();
+										}
+									)
+								)
+								(
+									otherlv_13=','
+									{
+										newLeafNode(otherlv_13, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_2_3());
+									}
+								)?
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1());
+					}
+				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 3)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1(), 3);
+					}
+								({true}?=>(otherlv_14='expression'
+								{
+									newLeafNode(otherlv_14, grammarAccess.getDtDefinitionComputedFieldStringAccess().getExpressionKeyword_1_3_0());
+								}
+								otherlv_15=':'
+								{
+									newLeafNode(otherlv_15, grammarAccess.getDtDefinitionComputedFieldStringAccess().getColonKeyword_1_3_1());
+								}
+								(
+									(
+										lv_expressionString_16_0=RULE_STRING
+										{
+											newLeafNode(lv_expressionString_16_0, grammarAccess.getDtDefinitionComputedFieldStringAccess().getExpressionStringSTRINGTerminalRuleCall_1_3_2_0());
 										}
 										{
 											if ($current==null) {
@@ -1556,15 +1600,15 @@ ruleDtDefinitionComputedFieldString returns [EObject current=null]
 											setWithLastConsumed(
 												$current,
 												"expressionString",
-												lv_expressionString_12_0,
+												lv_expressionString_16_0,
 												"io.vertigo.dsl.VertigoDsl.STRING");
 										}
 									)
 								)
 								(
-									otherlv_13=','
+									otherlv_17=','
 									{
-										newLeafNode(otherlv_13, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_2_3());
+										newLeafNode(otherlv_17, grammarAccess.getDtDefinitionComputedFieldStringAccess().getCommaKeyword_1_3_3());
 									}
 								)?
 								))
@@ -1581,9 +1625,9 @@ ruleDtDefinitionComputedFieldString returns [EObject current=null]
 				  getUnorderedGroupHelper().leave(grammarAccess.getDtDefinitionComputedFieldStringAccess().getUnorderedGroup_1());
 				}
 		)
-		otherlv_14='}'
+		otherlv_18='}'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getDtDefinitionComputedFieldStringAccess().getRightCurlyBracketKeyword_2());
+			newLeafNode(otherlv_18, grammarAccess.getDtDefinitionComputedFieldStringAccess().getRightCurlyBracketKeyword_2());
 		}
 	)
 ;
@@ -3241,15 +3285,15 @@ ruleTaskAttributeString returns [EObject current=null]
 	)
 ;
 
-// Entry rule entryRuleTaskAttribute
-entryRuleTaskAttribute returns [EObject current=null]:
-	{ newCompositeNode(grammarAccess.getTaskAttributeRule()); }
-	iv_ruleTaskAttribute=ruleTaskAttribute
-	{ $current=$iv_ruleTaskAttribute.current; }
+// Entry rule entryRuleTaskInAttribute
+entryRuleTaskInAttribute returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTaskInAttributeRule()); }
+	iv_ruleTaskInAttribute=ruleTaskInAttribute
+	{ $current=$iv_ruleTaskInAttribute.current; }
 	EOF;
 
-// Rule TaskAttribute
-ruleTaskAttribute returns [EObject current=null]
+// Rule TaskInAttribute
+ruleTaskInAttribute returns [EObject current=null]
 @init {
 	enterRule();
 }
@@ -3257,31 +3301,24 @@ ruleTaskAttribute returns [EObject current=null]
 	leaveRule();
 }:
 	(
-		(
-			otherlv_0='in'
-			{
-				newLeafNode(otherlv_0, grammarAccess.getTaskAttributeAccess().getInKeyword_0_0());
-			}
-			    |
-			otherlv_1='out'
-			{
-				newLeafNode(otherlv_1, grammarAccess.getTaskAttributeAccess().getOutKeyword_0_1());
-			}
-		)
+		otherlv_0='in'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getTaskInAttributeAccess().getInKeyword_0());
+		}
 		(
 			(
-				lv_name_2_0=RULE_ID
+				lv_name_1_0=RULE_ID
 				{
-					newLeafNode(lv_name_2_0, grammarAccess.getTaskAttributeAccess().getNameIDTerminalRuleCall_1_0());
+					newLeafNode(lv_name_1_0, grammarAccess.getTaskInAttributeAccess().getNameIDTerminalRuleCall_1_0());
 				}
 				{
 					if ($current==null) {
-						$current = createModelElement(grammarAccess.getTaskAttributeRule());
+						$current = createModelElement(grammarAccess.getTaskInAttributeRule());
 					}
 					setWithLastConsumed(
 						$current,
 						"name",
-						lv_name_2_0,
+						lv_name_1_0,
 						"org.eclipse.xtext.common.Terminals.ID");
 				}
 			)
@@ -3289,26 +3326,92 @@ ruleTaskAttribute returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTaskAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0());
+					newCompositeNode(grammarAccess.getTaskInAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0());
 				}
-				lv_taskAttributeString_3_0=ruleTaskAttributeString
+				lv_taskAttributeString_2_0=ruleTaskAttributeString
 				{
 					if ($current==null) {
-						$current = createModelElementForParent(grammarAccess.getTaskAttributeRule());
+						$current = createModelElementForParent(grammarAccess.getTaskInAttributeRule());
 					}
 					set(
 						$current,
 						"taskAttributeString",
-						lv_taskAttributeString_3_0,
+						lv_taskAttributeString_2_0,
 						"io.vertigo.dsl.VertigoDsl.TaskAttributeString");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)
 		(
-			otherlv_4=','
+			otherlv_3=','
 			{
-				newLeafNode(otherlv_4, grammarAccess.getTaskAttributeAccess().getCommaKeyword_3());
+				newLeafNode(otherlv_3, grammarAccess.getTaskInAttributeAccess().getCommaKeyword_3());
+			}
+		)?
+	)
+;
+
+// Entry rule entryRuleTaskOutAttribute
+entryRuleTaskOutAttribute returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getTaskOutAttributeRule()); }
+	iv_ruleTaskOutAttribute=ruleTaskOutAttribute
+	{ $current=$iv_ruleTaskOutAttribute.current; }
+	EOF;
+
+// Rule TaskOutAttribute
+ruleTaskOutAttribute returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='out'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getTaskOutAttributeAccess().getOutKeyword_0());
+		}
+		(
+			(
+				lv_name_1_0=RULE_ID
+				{
+					newLeafNode(lv_name_1_0, grammarAccess.getTaskOutAttributeAccess().getNameIDTerminalRuleCall_1_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getTaskOutAttributeRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"name",
+						lv_name_1_0,
+						"org.eclipse.xtext.common.Terminals.ID");
+				}
+			)
+		)
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTaskOutAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0());
+				}
+				lv_taskAttributeString_2_0=ruleTaskAttributeString
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTaskOutAttributeRule());
+					}
+					set(
+						$current,
+						"taskAttributeString",
+						lv_taskAttributeString_2_0,
+						"io.vertigo.dsl.VertigoDsl.TaskAttributeString");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)
+		(
+			otherlv_3=','
+			{
+				newLeafNode(otherlv_3, grammarAccess.getTaskOutAttributeAccess().getCommaKeyword_3());
 			}
 		)?
 	)
@@ -3609,9 +3712,9 @@ ruleTaskDefinition returns [EObject current=null]
 		(
 			(
 				{
-					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getTaskAttributesTaskAttributeParserRuleCall_7_0());
+					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getTaskAttributesTaskInAttributeParserRuleCall_7_0());
 				}
-				lv_taskAttributes_7_0=ruleTaskAttribute
+				lv_taskAttributes_7_0=ruleTaskInAttribute
 				{
 					if ($current==null) {
 						$current = createModelElementForParent(grammarAccess.getTaskDefinitionRule());
@@ -3620,14 +3723,33 @@ ruleTaskDefinition returns [EObject current=null]
 						$current,
 						"taskAttributes",
 						lv_taskAttributes_7_0,
-						"io.vertigo.dsl.VertigoDsl.TaskAttribute");
+						"io.vertigo.dsl.VertigoDsl.TaskInAttribute");
 					afterParserOrEnumRuleCall();
 				}
 			)
 		)*
-		otherlv_8='}'
+		(
+			(
+				{
+					newCompositeNode(grammarAccess.getTaskDefinitionAccess().getTaskAttributesTaskOutAttributeParserRuleCall_8_0());
+				}
+				lv_taskAttributes_8_0=ruleTaskOutAttribute
+				{
+					if ($current==null) {
+						$current = createModelElementForParent(grammarAccess.getTaskDefinitionRule());
+					}
+					add(
+						$current,
+						"taskAttributes",
+						lv_taskAttributes_8_0,
+						"io.vertigo.dsl.VertigoDsl.TaskOutAttribute");
+					afterParserOrEnumRuleCall();
+				}
+			)
+		)?
+		otherlv_9='}'
 		{
-			newLeafNode(otherlv_8, grammarAccess.getTaskDefinitionAccess().getRightCurlyBracketKeyword_8());
+			newLeafNode(otherlv_9, grammarAccess.getTaskDefinitionAccess().getRightCurlyBracketKeyword_9());
 		}
 	)
 ;

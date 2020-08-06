@@ -3,7 +3,6 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
-import io.vertigo.dsl.vertigoDsl.TaskAttribute;
 import io.vertigo.dsl.vertigoDsl.TaskClassName;
 import io.vertigo.dsl.vertigoDsl.TaskDataSpace;
 import io.vertigo.dsl.vertigoDsl.TaskDefinition;
@@ -18,6 +17,7 @@ import org.eclipse.emf.common.notify.NotificationChain;
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
@@ -102,7 +102,7 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
    * @generated
    * @ordered
    */
-  protected EList<TaskAttribute> taskAttributes;
+  protected EList<EObject> taskAttributes;
 
   /**
    * <!-- begin-user-doc -->
@@ -306,11 +306,11 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
    * @generated
    */
   @Override
-  public EList<TaskAttribute> getTaskAttributes()
+  public EList<EObject> getTaskAttributes()
   {
     if (taskAttributes == null)
     {
-      taskAttributes = new EObjectContainmentEList<TaskAttribute>(TaskAttribute.class, this, VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES);
+      taskAttributes = new EObjectContainmentEList<EObject>(EObject.class, this, VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES);
     }
     return taskAttributes;
   }
@@ -386,7 +386,7 @@ public class TaskDefinitionImpl extends ElementImpl implements TaskDefinition
         return;
       case VertigoDslPackage.TASK_DEFINITION__TASK_ATTRIBUTES:
         getTaskAttributes().clear();
-        getTaskAttributes().addAll((Collection<? extends TaskAttribute>)newValue);
+        getTaskAttributes().addAll((Collection<? extends EObject>)newValue);
         return;
     }
     super.eSet(featureID, newValue);

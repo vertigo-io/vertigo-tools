@@ -727,19 +727,19 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//DtDefinitionDataFieldString:
-		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':'
-		//	cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
+		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':'
+		//	cardinality=CardinalityString ','?)? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':'
-		//cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}'
+		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':'
+		//cardinality=CardinalityString ','?)? & ('persistent' ':' persistent=BooleanString ','?)?) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
-		//('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':'
-		//cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','?)?)
+		//('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':'
+		//cardinality=CardinalityString ','?)? & ('persistent' ':' persistent=BooleanString ','?)?)
 		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
 		
 		//'domain' ':' refToDomainType=RefToDomainType ','?
@@ -778,7 +778,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//','?
 		public Keyword getCommaKeyword_1_1_3() { return cCommaKeyword_1_1_3; }
 		
-		//'cardinality' ':' cardinality=CardinalityString ','?
+		//('cardinality' ':' cardinality=CardinalityString ','?)?
 		public Group getGroup_1_2() { return cGroup_1_2; }
 		
 		//'cardinality'
@@ -835,27 +835,33 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cLabelSTRINGTerminalRuleCall_1_1_2_0 = (RuleCall)cLabelAssignment_1_1_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_1_3 = (Keyword)cGroup_1_1.eContents().get(3);
 		private final Group cGroup_1_2 = (Group)cUnorderedGroup_1.eContents().get(2);
-		private final Keyword cExpressionKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
+		private final Keyword cCardinalityKeyword_1_2_0 = (Keyword)cGroup_1_2.eContents().get(0);
 		private final Keyword cColonKeyword_1_2_1 = (Keyword)cGroup_1_2.eContents().get(1);
-		private final Assignment cExpressionStringAssignment_1_2_2 = (Assignment)cGroup_1_2.eContents().get(2);
-		private final RuleCall cExpressionStringSTRINGTerminalRuleCall_1_2_2_0 = (RuleCall)cExpressionStringAssignment_1_2_2.eContents().get(0);
+		private final Assignment cCardinalityAssignment_1_2_2 = (Assignment)cGroup_1_2.eContents().get(2);
+		private final RuleCall cCardinalityCardinalityStringEnumRuleCall_1_2_2_0 = (RuleCall)cCardinalityAssignment_1_2_2.eContents().get(0);
 		private final Keyword cCommaKeyword_1_2_3 = (Keyword)cGroup_1_2.eContents().get(3);
+		private final Group cGroup_1_3 = (Group)cUnorderedGroup_1.eContents().get(3);
+		private final Keyword cExpressionKeyword_1_3_0 = (Keyword)cGroup_1_3.eContents().get(0);
+		private final Keyword cColonKeyword_1_3_1 = (Keyword)cGroup_1_3.eContents().get(1);
+		private final Assignment cExpressionStringAssignment_1_3_2 = (Assignment)cGroup_1_3.eContents().get(2);
+		private final RuleCall cExpressionStringSTRINGTerminalRuleCall_1_3_2_0 = (RuleCall)cExpressionStringAssignment_1_3_2.eContents().get(0);
+		private final Keyword cCommaKeyword_1_3_3 = (Keyword)cGroup_1_3.eContents().get(3);
 		private final Keyword cRightCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
 		
 		//DtDefinitionComputedFieldString:
-		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'expression' ':'
-		//	expressionString=STRING ','?) '}';
+		//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':'
+		//	cardinality=CardinalityString ','?)? & 'expression' ':' expressionString=STRING ','?) '}';
 		@Override public ParserRule getRule() { return rule; }
 		
-		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'expression' ':'
-		//expressionString=STRING ','?) '}'
+		//'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':'
+		//cardinality=CardinalityString ','?)? & 'expression' ':' expressionString=STRING ','?) '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'{'
 		public Keyword getLeftCurlyBracketKeyword_0() { return cLeftCurlyBracketKeyword_0; }
 		
-		//('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'expression' ':'
-		//expressionString=STRING ','?)
+		//('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':'
+		//cardinality=CardinalityString ','?)? & 'expression' ':' expressionString=STRING ','?)
 		public UnorderedGroup getUnorderedGroup_1() { return cUnorderedGroup_1; }
 		
 		//'domain' ':' refToDomainType=RefToDomainType ','?
@@ -894,23 +900,41 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//','?
 		public Keyword getCommaKeyword_1_1_3() { return cCommaKeyword_1_1_3; }
 		
-		//'expression' ':' expressionString=STRING ','?
+		//('cardinality' ':' cardinality=CardinalityString ','?)?
 		public Group getGroup_1_2() { return cGroup_1_2; }
 		
-		//'expression'
-		public Keyword getExpressionKeyword_1_2_0() { return cExpressionKeyword_1_2_0; }
+		//'cardinality'
+		public Keyword getCardinalityKeyword_1_2_0() { return cCardinalityKeyword_1_2_0; }
 		
 		//':'
 		public Keyword getColonKeyword_1_2_1() { return cColonKeyword_1_2_1; }
 		
-		//expressionString=STRING
-		public Assignment getExpressionStringAssignment_1_2_2() { return cExpressionStringAssignment_1_2_2; }
+		//cardinality=CardinalityString
+		public Assignment getCardinalityAssignment_1_2_2() { return cCardinalityAssignment_1_2_2; }
 		
-		//STRING
-		public RuleCall getExpressionStringSTRINGTerminalRuleCall_1_2_2_0() { return cExpressionStringSTRINGTerminalRuleCall_1_2_2_0; }
+		//CardinalityString
+		public RuleCall getCardinalityCardinalityStringEnumRuleCall_1_2_2_0() { return cCardinalityCardinalityStringEnumRuleCall_1_2_2_0; }
 		
 		//','?
 		public Keyword getCommaKeyword_1_2_3() { return cCommaKeyword_1_2_3; }
+		
+		//'expression' ':' expressionString=STRING ','?
+		public Group getGroup_1_3() { return cGroup_1_3; }
+		
+		//'expression'
+		public Keyword getExpressionKeyword_1_3_0() { return cExpressionKeyword_1_3_0; }
+		
+		//':'
+		public Keyword getColonKeyword_1_3_1() { return cColonKeyword_1_3_1; }
+		
+		//expressionString=STRING
+		public Assignment getExpressionStringAssignment_1_3_2() { return cExpressionStringAssignment_1_3_2; }
+		
+		//STRING
+		public RuleCall getExpressionStringSTRINGTerminalRuleCall_1_3_2_0() { return cExpressionStringSTRINGTerminalRuleCall_1_3_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_1_3_3() { return cCommaKeyword_1_3_3; }
 		
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
@@ -1858,33 +1882,60 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_2() { return cRightCurlyBracketKeyword_2; }
 	}
-	public class TaskAttributeElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.TaskAttribute");
+	public class TaskInAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.TaskInAttribute");
 		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Alternatives cAlternatives_0 = (Alternatives)cGroup.eContents().get(0);
-		private final Keyword cInKeyword_0_0 = (Keyword)cAlternatives_0.eContents().get(0);
-		private final Keyword cOutKeyword_0_1 = (Keyword)cAlternatives_0.eContents().get(1);
+		private final Keyword cInKeyword_0 = (Keyword)cGroup.eContents().get(0);
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Assignment cTaskAttributeStringAssignment_2 = (Assignment)cGroup.eContents().get(2);
 		private final RuleCall cTaskAttributeStringTaskAttributeStringParserRuleCall_2_0 = (RuleCall)cTaskAttributeStringAssignment_2.eContents().get(0);
 		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		
-		//TaskAttribute:
-		//	('in' | 'out') name=ID taskAttributeString=TaskAttributeString ','?;
+		//TaskInAttribute:
+		//	'in' name=ID taskAttributeString=TaskAttributeString ','?;
 		@Override public ParserRule getRule() { return rule; }
 		
-		//('in' | 'out') name=ID taskAttributeString=TaskAttributeString ','?
+		//'in' name=ID taskAttributeString=TaskAttributeString ','?
 		public Group getGroup() { return cGroup; }
 		
-		//('in' | 'out')
-		public Alternatives getAlternatives_0() { return cAlternatives_0; }
-		
 		//'in'
-		public Keyword getInKeyword_0_0() { return cInKeyword_0_0; }
+		public Keyword getInKeyword_0() { return cInKeyword_0; }
+		
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		
+		//taskAttributeString=TaskAttributeString
+		public Assignment getTaskAttributeStringAssignment_2() { return cTaskAttributeStringAssignment_2; }
+		
+		//TaskAttributeString
+		public RuleCall getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0() { return cTaskAttributeStringTaskAttributeStringParserRuleCall_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_3() { return cCommaKeyword_3; }
+	}
+	public class TaskOutAttributeElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.TaskOutAttribute");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cOutKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cTaskAttributeStringAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cTaskAttributeStringTaskAttributeStringParserRuleCall_2_0 = (RuleCall)cTaskAttributeStringAssignment_2.eContents().get(0);
+		private final Keyword cCommaKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		
+		//TaskOutAttribute:
+		//	'out' name=ID taskAttributeString=TaskAttributeString ','?;
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'out' name=ID taskAttributeString=TaskAttributeString ','?
+		public Group getGroup() { return cGroup; }
 		
 		//'out'
-		public Keyword getOutKeyword_0_1() { return cOutKeyword_0_1; }
+		public Keyword getOutKeyword_0() { return cOutKeyword_0; }
 		
 		//name=ID
 		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
@@ -2024,20 +2075,23 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRequestAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cRequestTaskRequestParserRuleCall_6_0 = (RuleCall)cRequestAssignment_6.eContents().get(0);
 		private final Assignment cTaskAttributesAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cTaskAttributesTaskAttributeParserRuleCall_7_0 = (RuleCall)cTaskAttributesAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final RuleCall cTaskAttributesTaskInAttributeParserRuleCall_7_0 = (RuleCall)cTaskAttributesAssignment_7.eContents().get(0);
+		private final Assignment cTaskAttributesAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cTaskAttributesTaskOutAttributeParserRuleCall_8_0 = (RuleCall)cTaskAttributesAssignment_8.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//TaskDefinition:
 		//	'create' 'Task' name=ID '{'
 		//	taskDataSpace=TaskDataSpace?
 		//	className=TaskClassName
 		//	request=TaskRequest?
-		//	taskAttributes+=TaskAttribute*
+		//	taskAttributes+=TaskInAttribute*
+		//	taskAttributes+=TaskOutAttribute?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'Task' name=ID '{' taskDataSpace=TaskDataSpace? className=TaskClassName request=TaskRequest?
-		//taskAttributes+=TaskAttribute* '}'
+		//taskAttributes+=TaskInAttribute* taskAttributes+=TaskOutAttribute? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'create'
@@ -2073,14 +2127,20 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//TaskRequest
 		public RuleCall getRequestTaskRequestParserRuleCall_6_0() { return cRequestTaskRequestParserRuleCall_6_0; }
 		
-		//taskAttributes+=TaskAttribute*
+		//taskAttributes+=TaskInAttribute*
 		public Assignment getTaskAttributesAssignment_7() { return cTaskAttributesAssignment_7; }
 		
-		//TaskAttribute
-		public RuleCall getTaskAttributesTaskAttributeParserRuleCall_7_0() { return cTaskAttributesTaskAttributeParserRuleCall_7_0; }
+		//TaskInAttribute
+		public RuleCall getTaskAttributesTaskInAttributeParserRuleCall_7_0() { return cTaskAttributesTaskInAttributeParserRuleCall_7_0; }
+		
+		//taskAttributes+=TaskOutAttribute?
+		public Assignment getTaskAttributesAssignment_8() { return cTaskAttributesAssignment_8; }
+		
+		//TaskOutAttribute
+		public RuleCall getTaskAttributesTaskOutAttributeParserRuleCall_8_0() { return cTaskAttributesTaskOutAttributeParserRuleCall_8_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class AlterTaskDefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.AlterTaskDefinition");
@@ -2098,20 +2158,23 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Assignment cRequestAssignment_6 = (Assignment)cGroup.eContents().get(6);
 		private final RuleCall cRequestTaskRequestParserRuleCall_6_0 = (RuleCall)cRequestAssignment_6.eContents().get(0);
 		private final Assignment cTaskAttributesAssignment_7 = (Assignment)cGroup.eContents().get(7);
-		private final RuleCall cTaskAttributesTaskAttributeParserRuleCall_7_0 = (RuleCall)cTaskAttributesAssignment_7.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
+		private final RuleCall cTaskAttributesTaskInAttributeParserRuleCall_7_0 = (RuleCall)cTaskAttributesAssignment_7.eContents().get(0);
+		private final Assignment cTaskAttributesAssignment_8 = (Assignment)cGroup.eContents().get(8);
+		private final RuleCall cTaskAttributesTaskOutAttributeParserRuleCall_8_0 = (RuleCall)cTaskAttributesAssignment_8.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//AlterTaskDefinition:
 		//	'alter' 'Task' taskDefinition=[TaskDefinition] '{'
 		//	taskDataSpace=TaskDataSpace?
 		//	className=TaskClassName
 		//	request=TaskRequest?
-		//	taskAttributes+=TaskAttribute*
+		//	taskAttributes+=TaskInAttribute*
+		//	taskAttributes+=TaskOutAttribute?
 		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'alter' 'Task' taskDefinition=[TaskDefinition] '{' taskDataSpace=TaskDataSpace? className=TaskClassName
-		//request=TaskRequest? taskAttributes+=TaskAttribute* '}'
+		//request=TaskRequest? taskAttributes+=TaskInAttribute* taskAttributes+=TaskOutAttribute? '}'
 		public Group getGroup() { return cGroup; }
 		
 		//'alter'
@@ -2150,14 +2213,20 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//TaskRequest
 		public RuleCall getRequestTaskRequestParserRuleCall_6_0() { return cRequestTaskRequestParserRuleCall_6_0; }
 		
-		//taskAttributes+=TaskAttribute*
+		//taskAttributes+=TaskInAttribute*
 		public Assignment getTaskAttributesAssignment_7() { return cTaskAttributesAssignment_7; }
 		
-		//TaskAttribute
-		public RuleCall getTaskAttributesTaskAttributeParserRuleCall_7_0() { return cTaskAttributesTaskAttributeParserRuleCall_7_0; }
+		//TaskInAttribute
+		public RuleCall getTaskAttributesTaskInAttributeParserRuleCall_7_0() { return cTaskAttributesTaskInAttributeParserRuleCall_7_0; }
+		
+		//taskAttributes+=TaskOutAttribute?
+		public Assignment getTaskAttributesAssignment_8() { return cTaskAttributesAssignment_8; }
+		
+		//TaskOutAttribute
+		public RuleCall getTaskAttributesTaskOutAttributeParserRuleCall_8_0() { return cTaskAttributesTaskOutAttributeParserRuleCall_8_0; }
 		
 		//'}'
-		public Keyword getRightCurlyBracketKeyword_8() { return cRightCurlyBracketKeyword_8; }
+		public Keyword getRightCurlyBracketKeyword_9() { return cRightCurlyBracketKeyword_9; }
 	}
 	public class FacetDefinitionDtDefinitionElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.FacetDefinitionDtDefinition");
@@ -3396,7 +3465,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final AssociationTypeStringElements eAssociationTypeString;
 	private final AssociationElements pAssociation;
 	private final TaskAttributeStringElements pTaskAttributeString;
-	private final TaskAttributeElements pTaskAttribute;
+	private final TaskInAttributeElements pTaskInAttribute;
+	private final TaskOutAttributeElements pTaskOutAttribute;
 	private final TaskDataSpaceElements pTaskDataSpace;
 	private final TaskClassNameElements pTaskClassName;
 	private final TaskRequestElements pTaskRequest;
@@ -3468,7 +3538,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.eAssociationTypeString = new AssociationTypeStringElements();
 		this.pAssociation = new AssociationElements();
 		this.pTaskAttributeString = new TaskAttributeStringElements();
-		this.pTaskAttribute = new TaskAttributeElements();
+		this.pTaskInAttribute = new TaskInAttributeElements();
+		this.pTaskOutAttribute = new TaskOutAttributeElements();
 		this.pTaskDataSpace = new TaskDataSpaceElements();
 		this.pTaskClassName = new TaskClassNameElements();
 		this.pTaskRequest = new TaskRequestElements();
@@ -3700,8 +3771,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DtDefinitionDataFieldString:
-	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'cardinality' ':'
-	//	cardinality=CardinalityString ','? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
+	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':'
+	//	cardinality=CardinalityString ','?)? & ('persistent' ':' persistent=BooleanString ','?)?) '}';
 	public DtDefinitionDataFieldStringElements getDtDefinitionDataFieldStringAccess() {
 		return pDtDefinitionDataFieldString;
 	}
@@ -3711,8 +3782,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DtDefinitionComputedFieldString:
-	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & 'expression' ':'
-	//	expressionString=STRING ','?) '}';
+	//	'{' ('domain' ':' refToDomainType=RefToDomainType ','? & 'label' ':' label=STRING ','? & ('cardinality' ':'
+	//	cardinality=CardinalityString ','?)? & 'expression' ':' expressionString=STRING ','?) '}';
 	public DtDefinitionComputedFieldStringElements getDtDefinitionComputedFieldStringAccess() {
 		return pDtDefinitionComputedFieldString;
 	}
@@ -3908,14 +3979,24 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		return getTaskAttributeStringAccess().getRule();
 	}
 	
-	//TaskAttribute:
-	//	('in' | 'out') name=ID taskAttributeString=TaskAttributeString ','?;
-	public TaskAttributeElements getTaskAttributeAccess() {
-		return pTaskAttribute;
+	//TaskInAttribute:
+	//	'in' name=ID taskAttributeString=TaskAttributeString ','?;
+	public TaskInAttributeElements getTaskInAttributeAccess() {
+		return pTaskInAttribute;
 	}
 	
-	public ParserRule getTaskAttributeRule() {
-		return getTaskAttributeAccess().getRule();
+	public ParserRule getTaskInAttributeRule() {
+		return getTaskInAttributeAccess().getRule();
+	}
+	
+	//TaskOutAttribute:
+	//	'out' name=ID taskAttributeString=TaskAttributeString ','?;
+	public TaskOutAttributeElements getTaskOutAttributeAccess() {
+		return pTaskOutAttribute;
+	}
+	
+	public ParserRule getTaskOutAttributeRule() {
+		return getTaskOutAttributeAccess().getRule();
 	}
 	
 	//TaskDataSpace:
@@ -3963,7 +4044,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	taskDataSpace=TaskDataSpace?
 	//	className=TaskClassName
 	//	request=TaskRequest?
-	//	taskAttributes+=TaskAttribute*
+	//	taskAttributes+=TaskInAttribute*
+	//	taskAttributes+=TaskOutAttribute?
 	//	'}';
 	public TaskDefinitionElements getTaskDefinitionAccess() {
 		return pTaskDefinition;
@@ -3978,7 +4060,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	taskDataSpace=TaskDataSpace?
 	//	className=TaskClassName
 	//	request=TaskRequest?
-	//	taskAttributes+=TaskAttribute*
+	//	taskAttributes+=TaskInAttribute*
+	//	taskAttributes+=TaskOutAttribute?
 	//	'}';
 	public AlterTaskDefinitionElements getAlterTaskDefinitionAccess() {
 		return pAlterTaskDefinition;

@@ -93,7 +93,8 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.ALTER_DT_DEFINITION: return createAlterDtDefinition();
       case VertigoDslPackage.ASSOCIATION: return createAssociation();
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING: return createTaskAttributeString();
-      case VertigoDslPackage.TASK_ATTRIBUTE: return createTaskAttribute();
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE: return createTaskInAttribute();
+      case VertigoDslPackage.TASK_OUT_ATTRIBUTE: return createTaskOutAttribute();
       case VertigoDslPackage.TASK_DATA_SPACE: return createTaskDataSpace();
       case VertigoDslPackage.TASK_CLASS_NAME: return createTaskClassName();
       case VertigoDslPackage.TASK_REQUEST: return createTaskRequest();
@@ -510,10 +511,22 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
    * @generated
    */
   @Override
-  public TaskAttribute createTaskAttribute()
+  public TaskInAttribute createTaskInAttribute()
   {
-    TaskAttributeImpl taskAttribute = new TaskAttributeImpl();
-    return taskAttribute;
+    TaskInAttributeImpl taskInAttribute = new TaskInAttributeImpl();
+    return taskInAttribute;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public TaskOutAttribute createTaskOutAttribute()
+  {
+    TaskOutAttributeImpl taskOutAttribute = new TaskOutAttributeImpl();
+    return taskOutAttribute;
   }
 
   /**

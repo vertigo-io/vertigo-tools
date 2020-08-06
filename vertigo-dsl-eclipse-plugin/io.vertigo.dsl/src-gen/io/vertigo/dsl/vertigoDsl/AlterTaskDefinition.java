@@ -119,7 +119,7 @@ public interface AlterTaskDefinition extends EObject
 
   /**
    * Returns the value of the '<em><b>Task Attributes</b></em>' containment reference list.
-   * The list contents are of type {@link io.vertigo.dsl.vertigoDsl.TaskAttribute}.
+   * The list contents are of type {@link org.eclipse.emf.ecore.EObject}.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @return the value of the '<em>Task Attributes</em>' containment reference list.
@@ -127,6 +127,6 @@ public interface AlterTaskDefinition extends EObject
    * @model containment="true"
    * @generated
    */
-  EList<TaskAttribute> getTaskAttributes();
+  EList<EObject> getTaskAttributes();
 
 } // AlterTaskDefinition

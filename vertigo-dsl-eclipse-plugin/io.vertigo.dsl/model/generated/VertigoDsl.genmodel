@@ -93,6 +93,7 @@
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionComputedFieldString">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionComputedFieldString/refToDomainType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionComputedFieldString/label"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionComputedFieldString/cardinality"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionComputedFieldString/expressionString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionIdField">
@@ -154,9 +155,13 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//TaskAttributeString/refToDomainType"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//TaskAttributeString/cardinality"/>
     </genClasses>
-    <genClasses ecoreClass="VertigoDsl.ecore#//TaskAttribute">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//TaskAttribute/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//TaskAttribute/taskAttributeString"/>
+    <genClasses ecoreClass="VertigoDsl.ecore#//TaskInAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//TaskInAttribute/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//TaskInAttribute/taskAttributeString"/>
+    </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//TaskOutAttribute">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//TaskOutAttribute/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//TaskOutAttribute/taskAttributeString"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//TaskDataSpace">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//TaskDataSpace/storeName"/>

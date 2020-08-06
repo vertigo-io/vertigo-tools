@@ -50,11 +50,12 @@ import io.vertigo.dsl.vertigoDsl.KEYWORDID;
 import io.vertigo.dsl.vertigoDsl.Model;
 import io.vertigo.dsl.vertigoDsl.PackageString;
 import io.vertigo.dsl.vertigoDsl.RefToDomainType;
-import io.vertigo.dsl.vertigoDsl.TaskAttribute;
 import io.vertigo.dsl.vertigoDsl.TaskAttributeString;
 import io.vertigo.dsl.vertigoDsl.TaskClassName;
 import io.vertigo.dsl.vertigoDsl.TaskDataSpace;
 import io.vertigo.dsl.vertigoDsl.TaskDefinition;
+import io.vertigo.dsl.vertigoDsl.TaskInAttribute;
+import io.vertigo.dsl.vertigoDsl.TaskOutAttribute;
 import io.vertigo.dsl.vertigoDsl.TaskRequest;
 import io.vertigo.dsl.vertigoDsl.TaskRequestString;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
@@ -218,9 +219,6 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 			case VertigoDslPackage.REF_TO_DOMAIN_TYPE:
 				sequence_RefToDomainType(context, (RefToDomainType) semanticObject); 
 				return; 
-			case VertigoDslPackage.TASK_ATTRIBUTE:
-				sequence_TaskAttribute(context, (TaskAttribute) semanticObject); 
-				return; 
 			case VertigoDslPackage.TASK_ATTRIBUTE_STRING:
 				sequence_TaskAttributeString(context, (TaskAttributeString) semanticObject); 
 				return; 
@@ -232,6 +230,12 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case VertigoDslPackage.TASK_DEFINITION:
 				sequence_TaskDefinition(context, (TaskDefinition) semanticObject); 
+				return; 
+			case VertigoDslPackage.TASK_IN_ATTRIBUTE:
+				sequence_TaskInAttribute(context, (TaskInAttribute) semanticObject); 
+				return; 
+			case VertigoDslPackage.TASK_OUT_ATTRIBUTE:
+				sequence_TaskOutAttribute(context, (TaskOutAttribute) semanticObject); 
 				return; 
 			case VertigoDslPackage.TASK_REQUEST:
 				sequence_TaskRequest(context, (TaskRequest) semanticObject); 
@@ -283,7 +287,14 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     AlterTaskDefinition returns AlterTaskDefinition
 	 *
 	 * Constraint:
-	 *     (taskDefinition=[TaskDefinition|ID] taskDataSpace=TaskDataSpace? className=TaskClassName request=TaskRequest? taskAttributes+=TaskAttribute*)
+	 *     (
+	 *         taskDefinition=[TaskDefinition|ID] 
+	 *         taskDataSpace=TaskDataSpace? 
+	 *         className=TaskClassName 
+	 *         request=TaskRequest? 
+	 *         taskAttributes+=TaskInAttribute* 
+	 *         taskAttributes+=TaskOutAttribute?
+	 *     )
 	 */
 	protected void sequence_AlterTaskDefinition(ISerializationContext context, AlterTaskDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -378,7 +389,7 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     DtDefinitionComputedFieldString returns DtDefinitionComputedFieldString
 	 *
 	 * Constraint:
-	 *     (refToDomainType=RefToDomainType | label=STRING | expressionString=STRING)+
+	 *     (refToDomainType=RefToDomainType | label=STRING | cardinality=CardinalityString | expressionString=STRING)+
 	 */
 	protected void sequence_DtDefinitionComputedFieldString(ISerializationContext context, DtDefinitionComputedFieldString semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -1061,27 +1072,6 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	
 	/**
 	 * Contexts:
-	 *     TaskAttribute returns TaskAttribute
-	 *
-	 * Constraint:
-	 *     (name=ID taskAttributeString=TaskAttributeString)
-	 */
-	protected void sequence_TaskAttribute(ISerializationContext context, TaskAttribute semanticObject) {
-		if (errorAcceptor != null) {
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.TASK_ATTRIBUTE__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.TASK_ATTRIBUTE__NAME));
-			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.TASK_ATTRIBUTE__TASK_ATTRIBUTE_STRING));
-		}
-		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
-		feeder.accept(grammarAccess.getTaskAttributeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
-		feeder.accept(grammarAccess.getTaskAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0(), semanticObject.getTaskAttributeString());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Contexts:
 	 *     TaskClassName returns TaskClassName
 	 *
 	 * Constraint:
@@ -1122,10 +1112,59 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     TaskDefinition returns TaskDefinition
 	 *
 	 * Constraint:
-	 *     (name=ID taskDataSpace=TaskDataSpace? className=TaskClassName request=TaskRequest? taskAttributes+=TaskAttribute*)
+	 *     (
+	 *         name=ID 
+	 *         taskDataSpace=TaskDataSpace? 
+	 *         className=TaskClassName 
+	 *         request=TaskRequest? 
+	 *         taskAttributes+=TaskInAttribute* 
+	 *         taskAttributes+=TaskOutAttribute?
+	 *     )
 	 */
 	protected void sequence_TaskDefinition(ISerializationContext context, TaskDefinition semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TaskInAttribute returns TaskInAttribute
+	 *
+	 * Constraint:
+	 *     (name=ID taskAttributeString=TaskAttributeString)
+	 */
+	protected void sequence_TaskInAttribute(ISerializationContext context, TaskInAttribute semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.TASK_IN_ATTRIBUTE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.TASK_IN_ATTRIBUTE__NAME));
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.TASK_IN_ATTRIBUTE__TASK_ATTRIBUTE_STRING));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTaskInAttributeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getTaskInAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0(), semanticObject.getTaskAttributeString());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     TaskOutAttribute returns TaskOutAttribute
+	 *
+	 * Constraint:
+	 *     (name=ID taskAttributeString=TaskAttributeString)
+	 */
+	protected void sequence_TaskOutAttribute(ISerializationContext context, TaskOutAttribute semanticObject) {
+		if (errorAcceptor != null) {
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.TASK_OUT_ATTRIBUTE__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.TASK_OUT_ATTRIBUTE__NAME));
+			if (transientValues.isValueTransient(semanticObject, VertigoDslPackage.Literals.TASK_OUT_ATTRIBUTE__TASK_ATTRIBUTE_STRING) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, VertigoDslPackage.Literals.TASK_OUT_ATTRIBUTE__TASK_ATTRIBUTE_STRING));
+		}
+		SequenceFeeder feeder = createSequencerFeeder(context, semanticObject);
+		feeder.accept(grammarAccess.getTaskOutAttributeAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getTaskOutAttributeAccess().getTaskAttributeStringTaskAttributeStringParserRuleCall_2_0(), semanticObject.getTaskAttributeString());
+		feeder.finish();
 	}
 	
 	

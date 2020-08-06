@@ -267,13 +267,22 @@ public interface VertigoDslFactory extends EFactory
   TaskAttributeString createTaskAttributeString();
 
   /**
-   * Returns a new object of class '<em>Task Attribute</em>'.
+   * Returns a new object of class '<em>Task In Attribute</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>Task Attribute</em>'.
+   * @return a new object of class '<em>Task In Attribute</em>'.
    * @generated
    */
-  TaskAttribute createTaskAttribute();
+  TaskInAttribute createTaskInAttribute();
+
+  /**
+   * Returns a new object of class '<em>Task Out Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Task Out Attribute</em>'.
+   * @generated
+   */
+  TaskOutAttribute createTaskOutAttribute();
 
   /**
    * Returns a new object of class '<em>Task Data Space</em>'.

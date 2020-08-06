@@ -211,9 +211,14 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createTaskAttributeStringAdapter();
       }
       @Override
-      public Adapter caseTaskAttribute(TaskAttribute object)
+      public Adapter caseTaskInAttribute(TaskInAttribute object)
       {
-        return createTaskAttributeAdapter();
+        return createTaskInAttributeAdapter();
+      }
+      @Override
+      public Adapter caseTaskOutAttribute(TaskOutAttribute object)
+      {
+        return createTaskOutAttributeAdapter();
       }
       @Override
       public Adapter caseTaskDataSpace(TaskDataSpace object)
@@ -798,16 +803,31 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.TaskAttribute <em>Task Attribute</em>}'.
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.TaskInAttribute <em>Task In Attribute</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see io.vertigo.dsl.vertigoDsl.TaskAttribute
+   * @see io.vertigo.dsl.vertigoDsl.TaskInAttribute
    * @generated
    */
-  public Adapter createTaskAttributeAdapter()
+  public Adapter createTaskInAttributeAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.TaskOutAttribute <em>Task Out Attribute</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.TaskOutAttribute
+   * @generated
+   */
+  public Adapter createTaskOutAttributeAdapter()
   {
     return null;
   }

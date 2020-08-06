@@ -274,10 +274,17 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case VertigoDslPackage.TASK_ATTRIBUTE:
+      case VertigoDslPackage.TASK_IN_ATTRIBUTE:
       {
-        TaskAttribute taskAttribute = (TaskAttribute)theEObject;
-        T result = caseTaskAttribute(taskAttribute);
+        TaskInAttribute taskInAttribute = (TaskInAttribute)theEObject;
+        T result = caseTaskInAttribute(taskInAttribute);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case VertigoDslPackage.TASK_OUT_ATTRIBUTE:
+      {
+        TaskOutAttribute taskOutAttribute = (TaskOutAttribute)theEObject;
+        T result = caseTaskOutAttribute(taskOutAttribute);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -948,17 +955,33 @@ public class VertigoDslSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>Task Attribute</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>Task In Attribute</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>Task Attribute</em>'.
+   * @return the result of interpreting the object as an instance of '<em>Task In Attribute</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseTaskAttribute(TaskAttribute object)
+  public T caseTaskInAttribute(TaskInAttribute object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Task Out Attribute</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Task Out Attribute</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseTaskOutAttribute(TaskOutAttribute object)
   {
     return null;
   }

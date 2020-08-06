@@ -309,15 +309,15 @@ class VertigoDslParsingTest {
 			create DtDefinition DtBase {
 				stereotype: "KeyConcept"
 				id baseId {domain: DoId label: "Id"}
-				field code {domain: DoCode label: "Code" cardinality:"?"}
-				field name {domain: DoLabel label: "Name" cardinality:"?"}
-				field healthLevel {domain: DoHealth label: "Health Level" cardinality: "?"}	
-				field creationDate {domain: DoLocaldate label: "Creation Date" cardinality:"?"}
-				field description {domain: DoDescription label: "Description" cardinality:"?"}
-				field geoLocation {domain: DoLabel label:"Geographic Location" cardinality:"?"}
-				field assetsValue {domain: DoCurrency label:"Current base assets value" cardinality:"?"}
-				field rentingFee {domain: DoCurrency label: "Renting Fee" cardinality:"?"}
-				field tags {domain: DoMultipleIds label: "Tags" cardinality:"?"}
+				field code {domain: DoCode label: "Code" cardinality:"1"}
+				field name {domain: DoLabel label: "Name" }
+				field healthLevel {domain: DoHealth label: "Health Level" }	
+				field creationDate {domain: DoLocaldate label: "Creation Date" }
+				field description {domain: DoDescription label: "Description" }
+				field geoLocation {domain: DoLabel label:"Geographic Location" }
+				field assetsValue {domain: DoCurrency label:"Current base assets value" }
+				field rentingFee {domain: DoCurrency label: "Renting Fee" }
+				field tags {domain: DoMultipleIds label: "Tags" }
 			}
 		'''))
 		Assertions.assertNotNull(result)

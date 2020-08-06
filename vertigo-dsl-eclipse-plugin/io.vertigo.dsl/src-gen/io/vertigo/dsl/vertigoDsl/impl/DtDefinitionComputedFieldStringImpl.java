@@ -3,6 +3,7 @@
  */
 package io.vertigo.dsl.vertigoDsl.impl;
 
+import io.vertigo.dsl.vertigoDsl.CardinalityString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionComputedFieldString;
 import io.vertigo.dsl.vertigoDsl.RefToDomainType;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
@@ -26,6 +27,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionComputedFieldStringImpl#getRefToDomainType <em>Ref To Domain Type</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionComputedFieldStringImpl#getLabel <em>Label</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionComputedFieldStringImpl#getCardinality <em>Cardinality</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionComputedFieldStringImpl#getExpressionString <em>Expression String</em>}</li>
  * </ul>
  *
@@ -62,6 +64,26 @@ public class DtDefinitionComputedFieldStringImpl extends MinimalEObjectImpl.Cont
    * @ordered
    */
   protected String label = LABEL_EDEFAULT;
+
+  /**
+   * The default value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCardinality()
+   * @generated
+   * @ordered
+   */
+  protected static final CardinalityString CARDINALITY_EDEFAULT = CardinalityString.ONE;
+
+  /**
+   * The cached value of the '{@link #getCardinality() <em>Cardinality</em>}' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getCardinality()
+   * @generated
+   * @ordered
+   */
+  protected CardinalityString cardinality = CARDINALITY_EDEFAULT;
 
   /**
    * The default value of the '{@link #getExpressionString() <em>Expression String</em>}' attribute.
@@ -185,6 +207,31 @@ public class DtDefinitionComputedFieldStringImpl extends MinimalEObjectImpl.Cont
    * @generated
    */
   @Override
+  public CardinalityString getCardinality()
+  {
+    return cardinality;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setCardinality(CardinalityString newCardinality)
+  {
+    CardinalityString oldCardinality = cardinality;
+    cardinality = newCardinality == null ? CARDINALITY_EDEFAULT : newCardinality;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__CARDINALITY, oldCardinality, cardinality));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public String getExpressionString()
   {
     return expressionString;
@@ -234,6 +281,8 @@ public class DtDefinitionComputedFieldStringImpl extends MinimalEObjectImpl.Cont
         return getRefToDomainType();
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__LABEL:
         return getLabel();
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__CARDINALITY:
+        return getCardinality();
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__EXPRESSION_STRING:
         return getExpressionString();
     }
@@ -255,6 +304,9 @@ public class DtDefinitionComputedFieldStringImpl extends MinimalEObjectImpl.Cont
         return;
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__LABEL:
         setLabel((String)newValue);
+        return;
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__CARDINALITY:
+        setCardinality((CardinalityString)newValue);
         return;
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__EXPRESSION_STRING:
         setExpressionString((String)newValue);
@@ -279,6 +331,9 @@ public class DtDefinitionComputedFieldStringImpl extends MinimalEObjectImpl.Cont
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__LABEL:
         setLabel(LABEL_EDEFAULT);
         return;
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__CARDINALITY:
+        setCardinality(CARDINALITY_EDEFAULT);
+        return;
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__EXPRESSION_STRING:
         setExpressionString(EXPRESSION_STRING_EDEFAULT);
         return;
@@ -300,6 +355,8 @@ public class DtDefinitionComputedFieldStringImpl extends MinimalEObjectImpl.Cont
         return refToDomainType != null;
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__LABEL:
         return LABEL_EDEFAULT == null ? label != null : !LABEL_EDEFAULT.equals(label);
+      case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__CARDINALITY:
+        return cardinality != CARDINALITY_EDEFAULT;
       case VertigoDslPackage.DT_DEFINITION_COMPUTED_FIELD_STRING__EXPRESSION_STRING:
         return EXPRESSION_STRING_EDEFAULT == null ? expressionString != null : !EXPRESSION_STRING_EDEFAULT.equals(expressionString);
     }
@@ -319,6 +376,8 @@ public class DtDefinitionComputedFieldStringImpl extends MinimalEObjectImpl.Cont
     StringBuilder result = new StringBuilder(super.toString());
     result.append(" (label: ");
     result.append(label);
+    result.append(", cardinality: ");
+    result.append(cardinality);
     result.append(", expressionString: ");
     result.append(expressionString);
     result.append(')');
