@@ -2,7 +2,7 @@
 <feature
       id="io.vertigo.dsl.feature"
       label="Vertigo DSL Feature"
-      version="2.0.4.qualifier"
+      version="3.0.0.qualifier"
       provider-name="Vertigo-io">
 
    <description>
