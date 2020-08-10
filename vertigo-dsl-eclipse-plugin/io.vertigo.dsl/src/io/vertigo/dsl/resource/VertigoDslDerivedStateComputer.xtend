@@ -25,7 +25,7 @@ class VertigoDslDerivedStateComputer implements IDerivedStateComputer {
 
 		val List<EObject> derived = newArrayList();
 		
-		if (resource.contents.get(0) instanceof ModelImpl) {
+		if (!resource.contents.isEmpty && resource.contents.get(0) instanceof ModelImpl) {
 			val ModelImpl myModelImpl = resource.contents.get(0) as ModelImpl
 			for (item : addedDomains) {
 				myModelImpl.elements.filter([(it instanceof DeclaredDomain) && (it as DeclaredDomain).name.equals(item)]).forEach[

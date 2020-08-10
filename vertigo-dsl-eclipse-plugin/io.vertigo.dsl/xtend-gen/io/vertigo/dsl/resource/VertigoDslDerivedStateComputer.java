@@ -32,10 +32,9 @@ public class VertigoDslDerivedStateComputer implements IDerivedStateComputer {
       }
     }
     final List<EObject> derived = CollectionLiterals.<EObject>newArrayList();
-    EObject _get = resource.getContents().get(0);
-    if ((_get instanceof ModelImpl)) {
-      EObject _get_1 = resource.getContents().get(0);
-      final ModelImpl myModelImpl = ((ModelImpl) _get_1);
+    if (((!resource.getContents().isEmpty()) && (resource.getContents().get(0) instanceof ModelImpl))) {
+      EObject _get = resource.getContents().get(0);
+      final ModelImpl myModelImpl = ((ModelImpl) _get);
       for (final String item : addedDomains) {
         final Function1<Element, Boolean> _function = (Element it) -> {
           return Boolean.valueOf(((it instanceof DeclaredDomain) && ((DeclaredDomain) it).getName().equals(item)));
