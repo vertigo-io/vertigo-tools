@@ -64,23 +64,23 @@ async function getVertigoStudioTasks(studioLauncher: string): Promise<vscode.Tas
 		const studioConfigFileUri = vscode.Uri.joinPath(folderUri, 'studio-config.json');
 		if (!await exists(studioConfigFileUri.fsPath)) {
 			continue;
-        }
-
-        const generateKind: StudioTaskDefinition = {
-            type: 'vertigo-studio',
-            task: 'generate',
-            file: studioConfigFileUri.toString()
-        };
-    
-        result.push(new vscode.Task(generateKind, workspaceFolder, workspaceFolder.name + ' - generate', 'vertigo-studio', new vscode.ShellExecution(studioLauncher, ['generate', studioConfigFileUri.toString()])));
-
-        const watchKind: StudioTaskDefinition = {
-            type: 'vertigo-studio',
-            task: 'watch',
-            file: studioConfigFileUri.toString()
-        };
-        result.push(new vscode.Task(generateKind, workspaceFolder,workspaceFolder.name + ' - watch', 'vertigo-studio', new vscode.ShellExecution(studioLauncher, ['watch', studioConfigFileUri.toString()])));
+		}
+		
+		result.push(createVsCodeTask('clean', workspaceFolder, studioLauncher, studioConfigFileUri));
+		result.push(createVsCodeTask('generate', workspaceFolder, studioLauncher, studioConfigFileUri));
+		result.push(createVsCodeTask('watch', workspaceFolder, studioLauncher, studioConfigFileUri));
+		result.push(createVsCodeTask('clean_watch', workspaceFolder, studioLauncher, studioConfigFileUri));
         
 	}
 	return result;
+}
+
+
+function createVsCodeTask(goal : string, workspaceFolder: vscode.WorkspaceFolder, studioLauncher: string, studioConfigFileUri: vscode.Uri):vscode.Task {
+	const taskKind: StudioTaskDefinition = {
+		type: 'vertigo-studio',
+		task: goal,
+		file: studioConfigFileUri.toString()
+	};
+	return new vscode.Task(taskKind, workspaceFolder,workspaceFolder.name + ' - ' + goal, 'vertigo-studio', new vscode.ShellExecution(studioLauncher, [goal, studioConfigFileUri.toString()]));
 }
