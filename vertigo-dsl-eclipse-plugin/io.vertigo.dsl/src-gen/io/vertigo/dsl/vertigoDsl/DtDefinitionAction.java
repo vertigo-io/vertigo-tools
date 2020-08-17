@@ -23,6 +23,7 @@ import org.eclipse.emf.common.util.EList;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction#getDtDefinitionSortField <em>Dt Definition Sort Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction#getDtDefinitionHandleField <em>Dt Definition Handle Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction#getDtDefinitionDisplayField <em>Dt Definition Display Field</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction#getDtDefinitionStaticValues <em>Dt Definition Static Values</em>}</li>
  * </ul>
  *
  * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinitionAction()
@@ -208,5 +209,27 @@ public interface DtDefinitionAction extends DtDefinition
    * @generated
    */
   void setDtDefinitionDisplayField(DtDefinitionDisplayField value);
+
+  /**
+   * Returns the value of the '<em><b>Dt Definition Static Values</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Dt Definition Static Values</em>' containment reference.
+   * @see #setDtDefinitionStaticValues(DtDefinitionStaticValues)
+   * @see io.vertigo.dsl.vertigoDsl.VertigoDslPackage#getDtDefinitionAction_DtDefinitionStaticValues()
+   * @model containment="true"
+   * @generated
+   */
+  DtDefinitionStaticValues getDtDefinitionStaticValues();
+
+  /**
+   * Sets the value of the '{@link io.vertigo.dsl.vertigoDsl.DtDefinitionAction#getDtDefinitionStaticValues <em>Dt Definition Static Values</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Dt Definition Static Values</em>' containment reference.
+   * @see #getDtDefinitionStaticValues()
+   * @generated
+   */
+  void setDtDefinitionStaticValues(DtDefinitionStaticValues value);
 
 } // DtDefinitionAction

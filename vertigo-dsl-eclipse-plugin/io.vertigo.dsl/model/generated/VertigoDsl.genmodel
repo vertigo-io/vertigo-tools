@@ -123,6 +123,9 @@
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionHandleField">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionHandleField/handleField"/>
     </genClasses>
+    <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionStaticValues">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//DtDefinitionStaticValues/handleField"/>
+    </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinitionType"/>
     <genClasses ecoreClass="VertigoDsl.ecore#//DtDefinition"/>
     <genClasses ecoreClass="VertigoDsl.ecore#//AlterDtDefinition">
@@ -135,6 +138,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//AlterDtDefinition/dtDefinitionSortField"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//AlterDtDefinition/dtDefinitionHandleField"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//AlterDtDefinition/dtDefinitionDisplayField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//AlterDtDefinition/dtDefinitionStaticValues"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//Association">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//Association/name"/>
@@ -261,6 +265,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionSortField"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionHandleField"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionDisplayField"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference VertigoDsl.ecore#//DtDefinitionAction/dtDefinitionStaticValues"/>
     </genClasses>
     <genClasses ecoreClass="VertigoDsl.ecore#//FacetDefinitionAction">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute VertigoDsl.ecore#//FacetDefinitionAction/name"/>

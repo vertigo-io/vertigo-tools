@@ -48,6 +48,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	protected AbstractElementAlias match_DtDefinitionIdString_CommaKeyword_1_0_3_q;
 	protected AbstractElementAlias match_DtDefinitionIdString_CommaKeyword_1_1_3_q;
 	protected AbstractElementAlias match_DtDefinitionSortField_CommaKeyword_3_q;
+	protected AbstractElementAlias match_DtDefinitionStaticValues_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionStereotype_CommaKeyword_3_q;
 	protected AbstractElementAlias match_DtDefinitionType_CommaKeyword_1_1_q;
 	protected AbstractElementAlias match_FacetDefinitionDtDefinition_CommaKeyword_3_q;
@@ -108,6 +109,7 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		match_DtDefinitionIdString_CommaKeyword_1_0_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionIdStringAccess().getCommaKeyword_1_0_3());
 		match_DtDefinitionIdString_CommaKeyword_1_1_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionIdStringAccess().getCommaKeyword_1_1_3());
 		match_DtDefinitionSortField_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionSortFieldAccess().getCommaKeyword_3());
+		match_DtDefinitionStaticValues_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionStaticValuesAccess().getCommaKeyword_3());
 		match_DtDefinitionStereotype_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionStereotypeAccess().getCommaKeyword_3());
 		match_DtDefinitionType_CommaKeyword_1_1_q = new TokenAlias(false, true, grammarAccess.getDtDefinitionTypeAccess().getCommaKeyword_1_1());
 		match_FacetDefinitionDtDefinition_CommaKeyword_3_q = new TokenAlias(false, true, grammarAccess.getFacetDefinitionDtDefinitionAccess().getCommaKeyword_3());
@@ -149,7 +151,8 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 * @Override
 	 * terminal STRING: 
 	 *     '"' ( ESCAPED_CHAR | !('\\'|'"') )* '"' |
-	 *     "'" ( ESCAPED_CHAR | !('\\'|"'") )* "'";
+	 *     "'" ( ESCAPED_CHAR | !('\\'|"'") )* "'" |
+	 *     "`" ( ESCAPED_CHAR | !('\\'|'`') )* "`" ;
 	 */
 	protected String getSTRINGToken(EObject semanticObject, RuleCall ruleCall, INode node) {
 		if (node != null)
@@ -219,6 +222,8 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 				emit_DtDefinitionIdString_CommaKeyword_1_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionSortField_CommaKeyword_3_q.equals(syntax))
 				emit_DtDefinitionSortField_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_DtDefinitionStaticValues_CommaKeyword_3_q.equals(syntax))
+				emit_DtDefinitionStaticValues_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionStereotype_CommaKeyword_3_q.equals(syntax))
 				emit_DtDefinitionStereotype_CommaKeyword_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_DtDefinitionType_CommaKeyword_1_1_q.equals(syntax))
@@ -752,6 +757,17 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	 *     sortField=STRING (ambiguity) (rule end)
 	 */
 	protected void emit_DtDefinitionSortField_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     handleField=STRING (ambiguity) (rule end)
+	 */
+	protected void emit_DtDefinitionStaticValues_CommaKeyword_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
 		acceptNodes(transition, nodes);
 	}
 	

@@ -2088,6 +2088,57 @@ ruleDtDefinitionHandleField returns [EObject current=null]
 	)
 ;
 
+// Entry rule entryRuleDtDefinitionStaticValues
+entryRuleDtDefinitionStaticValues returns [EObject current=null]:
+	{ newCompositeNode(grammarAccess.getDtDefinitionStaticValuesRule()); }
+	iv_ruleDtDefinitionStaticValues=ruleDtDefinitionStaticValues
+	{ $current=$iv_ruleDtDefinitionStaticValues.current; }
+	EOF;
+
+// Rule DtDefinitionStaticValues
+ruleDtDefinitionStaticValues returns [EObject current=null]
+@init {
+	enterRule();
+}
+@after {
+	leaveRule();
+}:
+	(
+		otherlv_0='values'
+		{
+			newLeafNode(otherlv_0, grammarAccess.getDtDefinitionStaticValuesAccess().getValuesKeyword_0());
+		}
+		otherlv_1=':'
+		{
+			newLeafNode(otherlv_1, grammarAccess.getDtDefinitionStaticValuesAccess().getColonKeyword_1());
+		}
+		(
+			(
+				lv_handleField_2_0=RULE_STRING
+				{
+					newLeafNode(lv_handleField_2_0, grammarAccess.getDtDefinitionStaticValuesAccess().getHandleFieldSTRINGTerminalRuleCall_2_0());
+				}
+				{
+					if ($current==null) {
+						$current = createModelElement(grammarAccess.getDtDefinitionStaticValuesRule());
+					}
+					setWithLastConsumed(
+						$current,
+						"handleField",
+						lv_handleField_2_0,
+						"io.vertigo.dsl.VertigoDsl.STRING");
+				}
+			)
+		)
+		(
+			otherlv_3=','
+			{
+				newLeafNode(otherlv_3, grammarAccess.getDtDefinitionStaticValuesAccess().getCommaKeyword_3());
+			}
+		)?
+	)
+;
+
 // Entry rule entryRuleDtDefinition
 entryRuleDtDefinition returns [EObject current=null]:
 	{ newCompositeNode(grammarAccess.getDtDefinitionRule()); }
@@ -2326,6 +2377,34 @@ ruleDtDefinition returns [EObject current=null]
 						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_10());
 					}
 				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_10(), 3)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_10(), 3);
+					}
+								({true}?=>((
+									{
+										newCompositeNode(grammarAccess.getDtDefinitionAccess().getDtDefinitionStaticValuesDtDefinitionStaticValuesParserRuleCall_10_3_0());
+									}
+									lv_dtDefinitionStaticValues_14_0=ruleDtDefinitionStaticValues
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getDtDefinitionRule());
+										}
+										set(
+											$current,
+											"dtDefinitionStaticValues",
+											lv_dtDefinitionStaticValues_14_0,
+											"io.vertigo.dsl.VertigoDsl.DtDefinitionStaticValues");
+										afterParserOrEnumRuleCall();
+									}
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_10());
+					}
+				)
 			)
 					)*
 				)
@@ -2334,9 +2413,9 @@ ruleDtDefinition returns [EObject current=null]
 				  getUnorderedGroupHelper().leave(grammarAccess.getDtDefinitionAccess().getUnorderedGroup_10());
 				}
 		)
-		otherlv_14='}'
+		otherlv_15='}'
 		{
-			newLeafNode(otherlv_14, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_11());
+			newLeafNode(otherlv_15, grammarAccess.getDtDefinitionAccess().getRightCurlyBracketKeyword_11());
 		}
 	)
 ;
@@ -2567,6 +2646,34 @@ ruleAlterDtDefinition returns [EObject current=null]
 						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_9());
 					}
 				)
+			)|
+			(
+				{getUnorderedGroupHelper().canSelect(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_9(), 3)}?=>(
+					{
+						getUnorderedGroupHelper().select(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_9(), 3);
+					}
+								({true}?=>((
+									{
+										newCompositeNode(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionStaticValuesDtDefinitionStaticValuesParserRuleCall_9_3_0());
+									}
+									lv_dtDefinitionStaticValues_13_0=ruleDtDefinitionStaticValues
+									{
+										if ($current==null) {
+											$current = createModelElementForParent(grammarAccess.getAlterDtDefinitionRule());
+										}
+										set(
+											$current,
+											"dtDefinitionStaticValues",
+											lv_dtDefinitionStaticValues_13_0,
+											"io.vertigo.dsl.VertigoDsl.DtDefinitionStaticValues");
+										afterParserOrEnumRuleCall();
+									}
+								)
+								))
+					{ 
+						getUnorderedGroupHelper().returnFromSelection(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_9());
+					}
+				)
 			)
 					)*
 				)
@@ -2575,9 +2682,9 @@ ruleAlterDtDefinition returns [EObject current=null]
 				  getUnorderedGroupHelper().leave(grammarAccess.getAlterDtDefinitionAccess().getUnorderedGroup_9());
 				}
 		)
-		otherlv_13='}'
+		otherlv_14='}'
 		{
-			newLeafNode(otherlv_13, grammarAccess.getAlterDtDefinitionAccess().getRightCurlyBracketKeyword_10());
+			newLeafNode(otherlv_14, grammarAccess.getAlterDtDefinitionAccess().getRightCurlyBracketKeyword_10());
 		}
 	)
 ;
@@ -5684,9 +5791,9 @@ ruleAssociationTypeString returns [Enumerator current=null]
 	)
 ;
 
-fragment RULE_ESCAPED_CHAR : '\\' ('b'|'n'|'t'|'r'|'\\'|'.'|'"');
+fragment RULE_ESCAPED_CHAR : '\\' ('b'|'n'|'t'|'r'|'\\'|'.'|'"'|'`');
 
-RULE_STRING : ('"' (RULE_ESCAPED_CHAR|~(('\\'|'"')))* '"'|'\'' (RULE_ESCAPED_CHAR|~(('\\'|'\'')))* '\'');
+RULE_STRING : ('"' (RULE_ESCAPED_CHAR|~(('\\'|'"')))* '"'|'\'' (RULE_ESCAPED_CHAR|~(('\\'|'\'')))* '\''|'`' (RULE_ESCAPED_CHAR|~(('\\'|'`')))* '`');
 
 RULE_ID : '^'? ('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'_'|'0'..'9')*;
 

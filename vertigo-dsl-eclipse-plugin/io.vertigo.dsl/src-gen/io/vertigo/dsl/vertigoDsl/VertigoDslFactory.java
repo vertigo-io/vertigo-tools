@@ -222,6 +222,15 @@ public interface VertigoDslFactory extends EFactory
   DtDefinitionHandleField createDtDefinitionHandleField();
 
   /**
+   * Returns a new object of class '<em>Dt Definition Static Values</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Dt Definition Static Values</em>'.
+   * @generated
+   */
+  DtDefinitionStaticValues createDtDefinitionStaticValues();
+
+  /**
    * Returns a new object of class '<em>Dt Definition Type</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

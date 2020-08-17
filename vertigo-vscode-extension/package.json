@@ -53,7 +53,7 @@
 				"properties": {
 					"task": {
 						"type": "string",
-						"description": "The Vertigo task to execute (generate or watch)"
+						"description": "The Vertigo task to execute (clean, generate, watch or clean_watch)"
 					},
 					"file": {
 						"type": "string",

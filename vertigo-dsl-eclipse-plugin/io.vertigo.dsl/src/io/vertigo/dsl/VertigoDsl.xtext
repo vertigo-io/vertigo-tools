@@ -21,12 +21,13 @@ KEYWORDID:
 
 
 terminal fragment ESCAPED_CHAR:
-    '\\' ('b'|'n'|'t'|'r'|'\\'|'.'|'"');
+    '\\'('b'|'n'|'t'|'r'|'\\'|'.'|'"'|'`');
 
 @Override
 terminal STRING: 
     '"' ( ESCAPED_CHAR | !('\\'|'"') )* '"' |
-    "'" ( ESCAPED_CHAR | !('\\'|"'") )* "'";
+    "'" ( ESCAPED_CHAR | !('\\'|"'") )* "'" |
+    "`" ( ESCAPED_CHAR | !('\\'|'`') )* "`" ;
 
 Element:
 	Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition | Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
@@ -126,6 +127,10 @@ DtDefinitionHandleField:
 	'handleField' ':' handleField=STRING ','?
 ;
 
+DtDefinitionStaticValues:
+	'values' ':' handleField=STRING ','?
+;
+
 DtDefinitionType:
 	DtDefinition | DeclaredDtDefinition ','?
 ;
@@ -139,7 +144,8 @@ DtDefinition:
 		dtDefinitionComputedFields+=DtDefinitionComputedField*
 		((dtDefinitionSortField=DtDefinitionSortField?) &
 		(dtDefinitionHandleField=DtDefinitionHandleField?) &
-		(dtDefinitionDisplayField=DtDefinitionDisplayField?))
+		(dtDefinitionDisplayField=DtDefinitionDisplayField?) &
+		(dtDefinitionStaticValues=DtDefinitionStaticValues?))
 	'}';
 
 AlterDtDefinition:
@@ -151,7 +157,8 @@ AlterDtDefinition:
 		dtDefinitionComputedFields+=DtDefinitionComputedField*
 		((dtDefinitionSortField=DtDefinitionSortField?) &
 		(dtDefinitionHandleField=DtDefinitionHandleField?) &
-		(dtDefinitionDisplayField=DtDefinitionDisplayField?))
+		(dtDefinitionDisplayField=DtDefinitionDisplayField?) &
+		(dtDefinitionStaticValues=DtDefinitionStaticValues?))
 	'}';
 
 

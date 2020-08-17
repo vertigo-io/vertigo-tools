@@ -235,6 +235,13 @@ public class VertigoDslSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case VertigoDslPackage.DT_DEFINITION_STATIC_VALUES:
+      {
+        DtDefinitionStaticValues dtDefinitionStaticValues = (DtDefinitionStaticValues)theEObject;
+        T result = caseDtDefinitionStaticValues(dtDefinitionStaticValues);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case VertigoDslPackage.DT_DEFINITION_TYPE:
       {
         DtDefinitionType dtDefinitionType = (DtDefinitionType)theEObject;
@@ -870,6 +877,22 @@ public class VertigoDslSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseDtDefinitionHandleField(DtDefinitionHandleField object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Dt Definition Static Values</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Dt Definition Static Values</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseDtDefinitionStaticValues(DtDefinitionStaticValues object)
   {
     return null;
   }

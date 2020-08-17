@@ -173,6 +173,7 @@ public class VertigoSTRINGValueConverter extends STRINGValueConverter {
 				case '"':
 				case '\'':
 				case '\\':
+				case '`':
 				case '.':
 					// append as is
 					break;
@@ -194,7 +195,7 @@ public class VertigoSTRINGValueConverter extends STRINGValueConverter {
 	 * @since 2.7
 	 */
 	protected String getInvalidEscapeSequenceMessage() {
-		return "Invalid escape sequence (valid ones are  \\b  \\t  \\n  \\f  \\r  \\\"  \\'  \\\\ )";
+		return "Invalid escape sequence (valid ones are  \\b  \\t  \\n  \\f  \\r  \\\"  \\' \\` \\\\ )";
 	}
 	
 	/**

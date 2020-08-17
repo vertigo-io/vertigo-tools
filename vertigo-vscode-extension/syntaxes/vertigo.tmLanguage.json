@@ -59,7 +59,7 @@
         },
         "dtDefinitionParameters": {
             "name": "entity.name.tag.vertigo",
-            "match": "\\b(storeName|stereotype|id|field|domain|cardinality|label|computed|sortField|displayField|handleField)\\b"
+            "match": "\\b(storeName|stereotype|id|field|domain|cardinality|label|computed|sortField|displayField|handleField|values)\\b"
         },
         "associationParameters": {
             "name": "entity.name.tag.vertigo",

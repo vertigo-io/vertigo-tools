@@ -27,6 +27,7 @@ import io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionIdField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionIdString;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionSortField;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionStaticValues;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionStereotype;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionType;
 import io.vertigo.dsl.vertigoDsl.Element;
@@ -239,6 +240,13 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   private EClass dtDefinitionHandleFieldEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass dtDefinitionStaticValuesEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1325,6 +1333,28 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
+  public EClass getDtDefinitionStaticValues()
+  {
+    return dtDefinitionStaticValuesEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getDtDefinitionStaticValues_HandleField()
+  {
+    return (EAttribute)dtDefinitionStaticValuesEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getDtDefinitionType()
   {
     return dtDefinitionTypeEClass;
@@ -1449,6 +1479,17 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
   public EReference getAlterDtDefinition_DtDefinitionDisplayField()
   {
     return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAlterDtDefinition_DtDefinitionStaticValues()
+  {
+    return (EReference)alterDtDefinitionEClass.getEStructuralFeatures().get(9);
   }
 
   /**
@@ -2524,6 +2565,17 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
+  public EReference getDtDefinitionAction_DtDefinitionStaticValues()
+  {
+    return (EReference)dtDefinitionActionEClass.getEStructuralFeatures().get(9);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getFacetDefinitionAction()
   {
     return facetDefinitionActionEClass;
@@ -2922,6 +2974,9 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     dtDefinitionHandleFieldEClass = createEClass(DT_DEFINITION_HANDLE_FIELD);
     createEAttribute(dtDefinitionHandleFieldEClass, DT_DEFINITION_HANDLE_FIELD__HANDLE_FIELD);
 
+    dtDefinitionStaticValuesEClass = createEClass(DT_DEFINITION_STATIC_VALUES);
+    createEAttribute(dtDefinitionStaticValuesEClass, DT_DEFINITION_STATIC_VALUES__HANDLE_FIELD);
+
     dtDefinitionTypeEClass = createEClass(DT_DEFINITION_TYPE);
 
     dtDefinitionEClass = createEClass(DT_DEFINITION);
@@ -2936,6 +2991,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_SORT_FIELD);
     createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_HANDLE_FIELD);
     createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_DISPLAY_FIELD);
+    createEReference(alterDtDefinitionEClass, ALTER_DT_DEFINITION__DT_DEFINITION_STATIC_VALUES);
 
     associationEClass = createEClass(ASSOCIATION);
     createEAttribute(associationEClass, ASSOCIATION__NAME);
@@ -3065,6 +3121,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_SORT_FIELD);
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_HANDLE_FIELD);
     createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD);
+    createEReference(dtDefinitionActionEClass, DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES);
 
     facetDefinitionActionEClass = createEClass(FACET_DEFINITION_ACTION);
     createEAttribute(facetDefinitionActionEClass, FACET_DEFINITION_ACTION__NAME);
@@ -3236,6 +3293,9 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEClass(dtDefinitionHandleFieldEClass, DtDefinitionHandleField.class, "DtDefinitionHandleField", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getDtDefinitionHandleField_HandleField(), ecorePackage.getEString(), "handleField", null, 0, 1, DtDefinitionHandleField.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
+    initEClass(dtDefinitionStaticValuesEClass, DtDefinitionStaticValues.class, "DtDefinitionStaticValues", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getDtDefinitionStaticValues_HandleField(), ecorePackage.getEString(), "handleField", null, 0, 1, DtDefinitionStaticValues.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(dtDefinitionTypeEClass, DtDefinitionType.class, "DtDefinitionType", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(dtDefinitionEClass, DtDefinition.class, "DtDefinition", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -3250,6 +3310,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEReference(getAlterDtDefinition_DtDefinitionSortField(), this.getDtDefinitionSortField(), null, "dtDefinitionSortField", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAlterDtDefinition_DtDefinitionHandleField(), this.getDtDefinitionHandleField(), null, "dtDefinitionHandleField", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getAlterDtDefinition_DtDefinitionDisplayField(), this.getDtDefinitionDisplayField(), null, "dtDefinitionDisplayField", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAlterDtDefinition_DtDefinitionStaticValues(), this.getDtDefinitionStaticValues(), null, "dtDefinitionStaticValues", null, 0, 1, AlterDtDefinition.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(associationEClass, Association.class, "Association", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getAssociation_Name(), ecorePackage.getEString(), "name", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -3379,6 +3440,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEReference(getDtDefinitionAction_DtDefinitionSortField(), this.getDtDefinitionSortField(), null, "dtDefinitionSortField", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDtDefinitionAction_DtDefinitionHandleField(), this.getDtDefinitionHandleField(), null, "dtDefinitionHandleField", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getDtDefinitionAction_DtDefinitionDisplayField(), this.getDtDefinitionDisplayField(), null, "dtDefinitionDisplayField", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getDtDefinitionAction_DtDefinitionStaticValues(), this.getDtDefinitionStaticValues(), null, "dtDefinitionStaticValues", null, 0, 1, DtDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(facetDefinitionActionEClass, FacetDefinitionAction.class, "FacetDefinitionAction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getFacetDefinitionAction_Name(), ecorePackage.getEString(), "name", null, 0, 1, FacetDefinitionAction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

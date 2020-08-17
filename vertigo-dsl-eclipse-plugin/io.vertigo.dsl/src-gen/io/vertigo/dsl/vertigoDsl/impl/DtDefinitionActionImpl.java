@@ -11,6 +11,7 @@ import io.vertigo.dsl.vertigoDsl.DtDefinitionDisplayField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionHandleField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionIdField;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionSortField;
+import io.vertigo.dsl.vertigoDsl.DtDefinitionStaticValues;
 import io.vertigo.dsl.vertigoDsl.DtDefinitionStereotype;
 import io.vertigo.dsl.vertigoDsl.VertigoDslPackage;
 
@@ -46,6 +47,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionActionImpl#getDtDefinitionSortField <em>Dt Definition Sort Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionActionImpl#getDtDefinitionHandleField <em>Dt Definition Handle Field</em>}</li>
  *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionActionImpl#getDtDefinitionDisplayField <em>Dt Definition Display Field</em>}</li>
+ *   <li>{@link io.vertigo.dsl.vertigoDsl.impl.DtDefinitionActionImpl#getDtDefinitionStaticValues <em>Dt Definition Static Values</em>}</li>
  * </ul>
  *
  * @generated
@@ -151,6 +153,16 @@ public class DtDefinitionActionImpl extends DtDefinitionImpl implements DtDefini
    * @ordered
    */
   protected DtDefinitionDisplayField dtDefinitionDisplayField;
+
+  /**
+   * The cached value of the '{@link #getDtDefinitionStaticValues() <em>Dt Definition Static Values</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getDtDefinitionStaticValues()
+   * @generated
+   * @ordered
+   */
+  protected DtDefinitionStaticValues dtDefinitionStaticValues;
 
   /**
    * <!-- begin-user-doc -->
@@ -534,6 +546,56 @@ public class DtDefinitionActionImpl extends DtDefinitionImpl implements DtDefini
    * @generated
    */
   @Override
+  public DtDefinitionStaticValues getDtDefinitionStaticValues()
+  {
+    return dtDefinitionStaticValues;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetDtDefinitionStaticValues(DtDefinitionStaticValues newDtDefinitionStaticValues, NotificationChain msgs)
+  {
+    DtDefinitionStaticValues oldDtDefinitionStaticValues = dtDefinitionStaticValues;
+    dtDefinitionStaticValues = newDtDefinitionStaticValues;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES, oldDtDefinitionStaticValues, newDtDefinitionStaticValues);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public void setDtDefinitionStaticValues(DtDefinitionStaticValues newDtDefinitionStaticValues)
+  {
+    if (newDtDefinitionStaticValues != dtDefinitionStaticValues)
+    {
+      NotificationChain msgs = null;
+      if (dtDefinitionStaticValues != null)
+        msgs = ((InternalEObject)dtDefinitionStaticValues).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES, null, msgs);
+      if (newDtDefinitionStaticValues != null)
+        msgs = ((InternalEObject)newDtDefinitionStaticValues).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES, null, msgs);
+      msgs = basicSetDtDefinitionStaticValues(newDtDefinitionStaticValues, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES, newDtDefinitionStaticValues, newDtDefinitionStaticValues));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
     switch (featureID)
@@ -554,6 +616,8 @@ public class DtDefinitionActionImpl extends DtDefinitionImpl implements DtDefini
         return basicSetDtDefinitionHandleField(null, msgs);
       case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD:
         return basicSetDtDefinitionDisplayField(null, msgs);
+      case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES:
+        return basicSetDtDefinitionStaticValues(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -586,6 +650,8 @@ public class DtDefinitionActionImpl extends DtDefinitionImpl implements DtDefini
         return getDtDefinitionHandleField();
       case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD:
         return getDtDefinitionDisplayField();
+      case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES:
+        return getDtDefinitionStaticValues();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -630,6 +696,9 @@ public class DtDefinitionActionImpl extends DtDefinitionImpl implements DtDefini
       case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD:
         setDtDefinitionDisplayField((DtDefinitionDisplayField)newValue);
         return;
+      case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES:
+        setDtDefinitionStaticValues((DtDefinitionStaticValues)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -671,6 +740,9 @@ public class DtDefinitionActionImpl extends DtDefinitionImpl implements DtDefini
       case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD:
         setDtDefinitionDisplayField((DtDefinitionDisplayField)null);
         return;
+      case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES:
+        setDtDefinitionStaticValues((DtDefinitionStaticValues)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -703,6 +775,8 @@ public class DtDefinitionActionImpl extends DtDefinitionImpl implements DtDefini
         return dtDefinitionHandleField != null;
       case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_DISPLAY_FIELD:
         return dtDefinitionDisplayField != null;
+      case VertigoDslPackage.DT_DEFINITION_ACTION__DT_DEFINITION_STATIC_VALUES:
+        return dtDefinitionStaticValues != null;
     }
     return super.eIsSet(featureID);
   }

@@ -78,6 +78,7 @@ public class VertigoDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDtDefinitionDisplayFieldAccess().getGroup(), "rule__DtDefinitionDisplayField__Group__0");
 			builder.put(grammarAccess.getDtDefinitionSortFieldAccess().getGroup(), "rule__DtDefinitionSortField__Group__0");
 			builder.put(grammarAccess.getDtDefinitionHandleFieldAccess().getGroup(), "rule__DtDefinitionHandleField__Group__0");
+			builder.put(grammarAccess.getDtDefinitionStaticValuesAccess().getGroup(), "rule__DtDefinitionStaticValues__Group__0");
 			builder.put(grammarAccess.getDtDefinitionTypeAccess().getGroup_1(), "rule__DtDefinitionType__Group_1__0");
 			builder.put(grammarAccess.getDtDefinitionAccess().getGroup(), "rule__DtDefinition__Group__0");
 			builder.put(grammarAccess.getAlterDtDefinitionAccess().getGroup(), "rule__AlterDtDefinition__Group__0");
@@ -172,6 +173,7 @@ public class VertigoDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDtDefinitionDisplayFieldAccess().getDisplayFieldAssignment_2(), "rule__DtDefinitionDisplayField__DisplayFieldAssignment_2");
 			builder.put(grammarAccess.getDtDefinitionSortFieldAccess().getSortFieldAssignment_2(), "rule__DtDefinitionSortField__SortFieldAssignment_2");
 			builder.put(grammarAccess.getDtDefinitionHandleFieldAccess().getHandleFieldAssignment_2(), "rule__DtDefinitionHandleField__HandleFieldAssignment_2");
+			builder.put(grammarAccess.getDtDefinitionStaticValuesAccess().getHandleFieldAssignment_2(), "rule__DtDefinitionStaticValues__HandleFieldAssignment_2");
 			builder.put(grammarAccess.getDtDefinitionAccess().getNameAssignment_3(), "rule__DtDefinition__NameAssignment_3");
 			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionStereotypeAssignment_5(), "rule__DtDefinition__DtDefinitionStereotypeAssignment_5");
 			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionDataSpaceAssignment_6(), "rule__DtDefinition__DtDefinitionDataSpaceAssignment_6");
@@ -181,6 +183,7 @@ public class VertigoDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionSortFieldAssignment_10_0(), "rule__DtDefinition__DtDefinitionSortFieldAssignment_10_0");
 			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionHandleFieldAssignment_10_1(), "rule__DtDefinition__DtDefinitionHandleFieldAssignment_10_1");
 			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionDisplayFieldAssignment_10_2(), "rule__DtDefinition__DtDefinitionDisplayFieldAssignment_10_2");
+			builder.put(grammarAccess.getDtDefinitionAccess().getDtDefinitionStaticValuesAssignment_10_3(), "rule__DtDefinition__DtDefinitionStaticValuesAssignment_10_3");
 			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitioneAssignment_2(), "rule__AlterDtDefinition__DtDefinitioneAssignment_2");
 			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionStereotypeAssignment_4(), "rule__AlterDtDefinition__DtDefinitionStereotypeAssignment_4");
 			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDataSpaceAssignment_5(), "rule__AlterDtDefinition__DtDefinitionDataSpaceAssignment_5");
@@ -190,6 +193,7 @@ public class VertigoDslParser extends AbstractContentAssistParser {
 			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionSortFieldAssignment_9_0(), "rule__AlterDtDefinition__DtDefinitionSortFieldAssignment_9_0");
 			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionHandleFieldAssignment_9_1(), "rule__AlterDtDefinition__DtDefinitionHandleFieldAssignment_9_1");
 			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionDisplayFieldAssignment_9_2(), "rule__AlterDtDefinition__DtDefinitionDisplayFieldAssignment_9_2");
+			builder.put(grammarAccess.getAlterDtDefinitionAccess().getDtDefinitionStaticValuesAssignment_9_3(), "rule__AlterDtDefinition__DtDefinitionStaticValuesAssignment_9_3");
 			builder.put(grammarAccess.getAssociationAccess().getNameAssignment_2(), "rule__Association__NameAssignment_2");
 			builder.put(grammarAccess.getAssociationAccess().getFkFieldNameAssignment_4_0_2(), "rule__Association__FkFieldNameAssignment_4_0_2");
 			builder.put(grammarAccess.getAssociationAccess().getDtDefinitionAAssignment_4_1_2(), "rule__Association__DtDefinitionAAssignment_4_1_2");

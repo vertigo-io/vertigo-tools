@@ -115,6 +115,9 @@
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionHandleField">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="handleField" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionStaticValues">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="handleField" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinitionType"/>
   <eClassifiers xsi:type="ecore:EClass" name="DtDefinition" eSuperTypes="#//Element #//DtDefinitionType"/>
   <eClassifiers xsi:type="ecore:EClass" name="AlterDtDefinition" eSuperTypes="#//Element">
@@ -135,6 +138,8 @@
         eType="#//DtDefinitionHandleField" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDisplayField"
         eType="#//DtDefinitionDisplayField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionStaticValues"
+        eType="#//DtDefinitionStaticValues" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EEnum" name="MultiplicityString">
     <eLiterals name="ZERO_ONE" literal="&quot;0..1&quot;"/>
@@ -306,6 +311,8 @@
         eType="#//DtDefinitionHandleField" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionDisplayField"
         eType="#//DtDefinitionDisplayField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinitionStaticValues"
+        eType="#//DtDefinitionStaticValues" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FacetDefinitionAction" eSuperTypes="#//FacetDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

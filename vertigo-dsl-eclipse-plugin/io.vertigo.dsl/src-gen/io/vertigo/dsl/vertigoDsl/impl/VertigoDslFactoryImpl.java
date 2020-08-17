@@ -88,6 +88,7 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.DT_DEFINITION_DISPLAY_FIELD: return createDtDefinitionDisplayField();
       case VertigoDslPackage.DT_DEFINITION_SORT_FIELD: return createDtDefinitionSortField();
       case VertigoDslPackage.DT_DEFINITION_HANDLE_FIELD: return createDtDefinitionHandleField();
+      case VertigoDslPackage.DT_DEFINITION_STATIC_VALUES: return createDtDefinitionStaticValues();
       case VertigoDslPackage.DT_DEFINITION_TYPE: return createDtDefinitionType();
       case VertigoDslPackage.DT_DEFINITION: return createDtDefinition();
       case VertigoDslPackage.ALTER_DT_DEFINITION: return createAlterDtDefinition();
@@ -443,6 +444,18 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     DtDefinitionHandleFieldImpl dtDefinitionHandleField = new DtDefinitionHandleFieldImpl();
     return dtDefinitionHandleField;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public DtDefinitionStaticValues createDtDefinitionStaticValues()
+  {
+    DtDefinitionStaticValuesImpl dtDefinitionStaticValues = new DtDefinitionStaticValuesImpl();
+    return dtDefinitionStaticValues;
   }
 
   /**
