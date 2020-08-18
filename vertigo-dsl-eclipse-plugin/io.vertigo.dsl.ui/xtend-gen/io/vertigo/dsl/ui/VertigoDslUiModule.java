@@ -31,7 +31,7 @@ public class VertigoDslUiModule extends AbstractVertigoDslUiModule {
     return VertigoDslHighlightingConfiguration.class;
   }
   
-  public VertigoDslUiModule(final AbstractUIPlugin arg0) {
-    super(arg0);
+  public VertigoDslUiModule(final AbstractUIPlugin plugin) {
+    super(plugin);
   }
 }
