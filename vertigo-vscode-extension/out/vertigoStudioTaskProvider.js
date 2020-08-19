@@ -44,7 +44,7 @@ async function getVertigoStudioTasks(studioLauncher) {
         if (!folderUri.fsPath) {
             continue;
         }
-        const studioConfigFileUri = vscode.Uri.joinPath(folderUri, 'studio-config.json');
+        const studioConfigFileUri = vscode.Uri.joinPath(folderUri, 'studio-config.yaml');
         if (!await exists(studioConfigFileUri.fsPath)) {
             continue;
         }
