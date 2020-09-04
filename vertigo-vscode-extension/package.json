@@ -2,8 +2,8 @@
     "name": "vertigo-vscode",
     "displayName": "Vertigo VS Code extension",
     "description": "Vertigo Extensions provides language support for KSP and give access to Vertigo-Studio",
-    "version": "0.0.1",
-    "publisher": "Vertigo-io",
+    "version": "3.0.0-RC",
+    "publisher": "vertigo-io",
     "icon": "images/vertigo.png",
     "license": "Apache-2.0",
     "repository": {
@@ -44,24 +44,24 @@
             }
         ],
         "taskDefinitions": [
-			{
-				"type": "vertigo-studio",
-				"required": [
+            {
+                "type": "vertigo-studio",
+                "required": [
                     "task",
                     "file"
-				],
-				"properties": {
-					"task": {
-						"type": "string",
-						"description": "The Vertigo task to execute (clean, generate, watch or clean_watch)"
-					},
-					"file": {
-						"type": "string",
-						"description": "The Uri of the studio configuration file"
-					}
-				}
-			}
-		]
+                ],
+                "properties": {
+                    "task": {
+                        "type": "string",
+                        "description": "The Vertigo task to execute (clean, generate, watch or clean_watch)"
+                    },
+                    "file": {
+                        "type": "string",
+                        "description": "The Uri of the studio configuration file"
+                    }
+                }
+            }
+        ]
     },
     "devDependencies": {
         "@types/vscode": "^1.41.0",

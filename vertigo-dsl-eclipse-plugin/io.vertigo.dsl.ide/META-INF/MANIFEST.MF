@@ -3,7 +3,7 @@ Automatic-Module-Name: io.vertigo.dsl.ide
 Bundle-ManifestVersion: 2
 Bundle-Name: io.vertigo.dsl.ide
 Bundle-Vendor: Vertigo.io
-Bundle-Version: 3.0.0.qualifier
+Bundle-Version: 3.0.0.RC
 Bundle-SymbolicName: io.vertigo.dsl.ide; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: io.vertigo.dsl,
