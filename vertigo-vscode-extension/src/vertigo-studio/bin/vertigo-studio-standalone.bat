@@ -80,7 +80,7 @@ set CMD_LINE_ARGS=%*
 @rem Setup the command line
 
 @rem Execute mydsl-standalone
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %MYDSL_STANDALONE_OPTS%  -jar "%APP_HOME%\lib\vertigo-studio-3.0.0-RC-standalone.jar" %CMD_LINE_ARGS%
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %MYDSL_STANDALONE_OPTS%  -jar "%APP_HOME%\lib\vertigo-studio-3.0.0-standalone.jar" %CMD_LINE_ARGS%
 
 :end
 @rem End local scope for the variables with windows NT shell
