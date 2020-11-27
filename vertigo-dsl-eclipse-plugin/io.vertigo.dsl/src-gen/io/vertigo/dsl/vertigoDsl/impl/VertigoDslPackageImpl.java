@@ -7,6 +7,7 @@ import io.vertigo.dsl.vertigoDsl.AlterDomain;
 import io.vertigo.dsl.vertigoDsl.AlterDtDefinition;
 import io.vertigo.dsl.vertigoDsl.AlterTaskDefinition;
 import io.vertigo.dsl.vertigoDsl.Association;
+import io.vertigo.dsl.vertigoDsl.AssociationNN;
 import io.vertigo.dsl.vertigoDsl.AssociationTypeString;
 import io.vertigo.dsl.vertigoDsl.BooleanString;
 import io.vertigo.dsl.vertigoDsl.CardinalityString;
@@ -275,6 +276,13 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   private EClass associationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass associationNNEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -1652,6 +1660,127 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
    * @generated
    */
   @Override
+  public EClass getAssociationNN()
+  {
+    return associationNNEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAssociationNN_Name()
+  {
+    return (EAttribute)associationNNEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAssociationNN_TableName()
+  {
+    return (EAttribute)associationNNEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAssociationNN_DtDefinitionA()
+  {
+    return (EReference)associationNNEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EReference getAssociationNN_DtDefinitionB()
+  {
+    return (EReference)associationNNEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAssociationNN_NavigabilityA()
+  {
+    return (EAttribute)associationNNEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAssociationNN_NavigabilityB()
+  {
+    return (EAttribute)associationNNEClass.getEStructuralFeatures().get(5);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAssociationNN_LabelA()
+  {
+    return (EAttribute)associationNNEClass.getEStructuralFeatures().get(6);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAssociationNN_LabelB()
+  {
+    return (EAttribute)associationNNEClass.getEStructuralFeatures().get(7);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAssociationNN_RoleA()
+  {
+    return (EAttribute)associationNNEClass.getEStructuralFeatures().get(8);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public EAttribute getAssociationNN_RoleB()
+  {
+    return (EAttribute)associationNNEClass.getEStructuralFeatures().get(9);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
   public EClass getTaskAttributeString()
   {
     return taskAttributeStringEClass;
@@ -3008,6 +3137,18 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     createEAttribute(associationEClass, ASSOCIATION__ROLE_B);
     createEAttribute(associationEClass, ASSOCIATION__TYPE);
 
+    associationNNEClass = createEClass(ASSOCIATION_NN);
+    createEAttribute(associationNNEClass, ASSOCIATION_NN__NAME);
+    createEAttribute(associationNNEClass, ASSOCIATION_NN__TABLE_NAME);
+    createEReference(associationNNEClass, ASSOCIATION_NN__DT_DEFINITION_A);
+    createEReference(associationNNEClass, ASSOCIATION_NN__DT_DEFINITION_B);
+    createEAttribute(associationNNEClass, ASSOCIATION_NN__NAVIGABILITY_A);
+    createEAttribute(associationNNEClass, ASSOCIATION_NN__NAVIGABILITY_B);
+    createEAttribute(associationNNEClass, ASSOCIATION_NN__LABEL_A);
+    createEAttribute(associationNNEClass, ASSOCIATION_NN__LABEL_B);
+    createEAttribute(associationNNEClass, ASSOCIATION_NN__ROLE_A);
+    createEAttribute(associationNNEClass, ASSOCIATION_NN__ROLE_B);
+
     taskAttributeStringEClass = createEClass(TASK_ATTRIBUTE_STRING);
     createEReference(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__REF_TO_DOMAIN_TYPE);
     createEAttribute(taskAttributeStringEClass, TASK_ATTRIBUTE_STRING__CARDINALITY);
@@ -3196,6 +3337,7 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     dtDefinitionEClass.getESuperTypes().add(this.getDtDefinitionType());
     alterDtDefinitionEClass.getESuperTypes().add(this.getElement());
     associationEClass.getESuperTypes().add(this.getElement());
+    associationNNEClass.getESuperTypes().add(this.getElement());
     taskDefinitionEClass.getESuperTypes().add(this.getElement());
     facetDefinitionEClass.getESuperTypes().add(this.getElement());
     facetedQueryDefinitionEClass.getESuperTypes().add(this.getElement());
@@ -3326,6 +3468,18 @@ public class VertigoDslPackageImpl extends EPackageImpl implements VertigoDslPac
     initEAttribute(getAssociation_RoleA(), ecorePackage.getEString(), "roleA", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAssociation_RoleB(), ecorePackage.getEString(), "roleB", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getAssociation_Type(), this.getAssociationTypeString(), "type", null, 0, 1, Association.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(associationNNEClass, AssociationNN.class, "AssociationNN", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getAssociationNN_Name(), ecorePackage.getEString(), "name", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociationNN_TableName(), ecorePackage.getEString(), "tableName", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAssociationNN_DtDefinitionA(), this.getDtDefinitionType(), null, "dtDefinitionA", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getAssociationNN_DtDefinitionB(), this.getDtDefinitionType(), null, "dtDefinitionB", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociationNN_NavigabilityA(), this.getBooleanString(), "navigabilityA", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociationNN_NavigabilityB(), this.getBooleanString(), "navigabilityB", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociationNN_LabelA(), ecorePackage.getEString(), "labelA", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociationNN_LabelB(), ecorePackage.getEString(), "labelB", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociationNN_RoleA(), ecorePackage.getEString(), "roleA", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getAssociationNN_RoleB(), ecorePackage.getEString(), "roleB", null, 0, 1, AssociationNN.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(taskAttributeStringEClass, TaskAttributeString.class, "TaskAttributeString", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getTaskAttributeString_RefToDomainType(), this.getRefToDomainType(), null, "refToDomainType", null, 0, 1, TaskAttributeString.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

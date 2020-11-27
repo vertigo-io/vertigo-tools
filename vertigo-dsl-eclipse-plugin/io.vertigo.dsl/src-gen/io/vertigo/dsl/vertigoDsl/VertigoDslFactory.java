@@ -267,6 +267,15 @@ public interface VertigoDslFactory extends EFactory
   Association createAssociation();
 
   /**
+   * Returns a new object of class '<em>Association NN</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Association NN</em>'.
+   * @generated
+   */
+  AssociationNN createAssociationNN();
+
+  /**
    * Returns a new object of class '<em>Task Attribute String</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

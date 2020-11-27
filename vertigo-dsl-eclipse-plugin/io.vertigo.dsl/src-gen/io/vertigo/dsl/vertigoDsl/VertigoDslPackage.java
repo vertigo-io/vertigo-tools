@@ -1175,6 +1175,115 @@ public interface VertigoDslPackage extends EPackage
   int ASSOCIATION_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 13;
 
   /**
+   * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.AssociationNNImpl <em>Association NN</em>}' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see io.vertigo.dsl.vertigoDsl.impl.AssociationNNImpl
+   * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getAssociationNN()
+   * @generated
+   */
+  int ASSOCIATION_NN = 27;
+
+  /**
+   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__NAME = ELEMENT_FEATURE_COUNT + 0;
+
+  /**
+   * The feature id for the '<em><b>Table Name</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__TABLE_NAME = ELEMENT_FEATURE_COUNT + 1;
+
+  /**
+   * The feature id for the '<em><b>Dt Definition A</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__DT_DEFINITION_A = ELEMENT_FEATURE_COUNT + 2;
+
+  /**
+   * The feature id for the '<em><b>Dt Definition B</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__DT_DEFINITION_B = ELEMENT_FEATURE_COUNT + 3;
+
+  /**
+   * The feature id for the '<em><b>Navigability A</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__NAVIGABILITY_A = ELEMENT_FEATURE_COUNT + 4;
+
+  /**
+   * The feature id for the '<em><b>Navigability B</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__NAVIGABILITY_B = ELEMENT_FEATURE_COUNT + 5;
+
+  /**
+   * The feature id for the '<em><b>Label A</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__LABEL_A = ELEMENT_FEATURE_COUNT + 6;
+
+  /**
+   * The feature id for the '<em><b>Label B</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__LABEL_B = ELEMENT_FEATURE_COUNT + 7;
+
+  /**
+   * The feature id for the '<em><b>Role A</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__ROLE_A = ELEMENT_FEATURE_COUNT + 8;
+
+  /**
+   * The feature id for the '<em><b>Role B</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN__ROLE_B = ELEMENT_FEATURE_COUNT + 9;
+
+  /**
+   * The number of structural features of the '<em>Association NN</em>' class.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int ASSOCIATION_NN_FEATURE_COUNT = ELEMENT_FEATURE_COUNT + 10;
+
+  /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl <em>Task Attribute String</em>}' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1182,7 +1291,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskAttributeString()
    * @generated
    */
-  int TASK_ATTRIBUTE_STRING = 27;
+  int TASK_ATTRIBUTE_STRING = 28;
 
   /**
    * The feature id for the '<em><b>Ref To Domain Type</b></em>' containment reference.
@@ -1219,7 +1328,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskInAttribute()
    * @generated
    */
-  int TASK_IN_ATTRIBUTE = 28;
+  int TASK_IN_ATTRIBUTE = 29;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1256,7 +1365,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskOutAttribute()
    * @generated
    */
-  int TASK_OUT_ATTRIBUTE = 29;
+  int TASK_OUT_ATTRIBUTE = 30;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1293,7 +1402,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskDataSpace()
    * @generated
    */
-  int TASK_DATA_SPACE = 30;
+  int TASK_DATA_SPACE = 31;
 
   /**
    * The feature id for the '<em><b>Store Name</b></em>' attribute.
@@ -1321,7 +1430,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskClassName()
    * @generated
    */
-  int TASK_CLASS_NAME = 31;
+  int TASK_CLASS_NAME = 32;
 
   /**
    * The feature id for the '<em><b>Class Name</b></em>' attribute.
@@ -1349,7 +1458,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskRequest()
    * @generated
    */
-  int TASK_REQUEST = 32;
+  int TASK_REQUEST = 33;
 
   /**
    * The feature id for the '<em><b>Request</b></em>' containment reference.
@@ -1377,7 +1486,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskRequestString()
    * @generated
    */
-  int TASK_REQUEST_STRING = 33;
+  int TASK_REQUEST_STRING = 34;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1405,7 +1514,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getTaskDefinition()
    * @generated
    */
-  int TASK_DEFINITION = 34;
+  int TASK_DEFINITION = 35;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -1469,7 +1578,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getAlterTaskDefinition()
    * @generated
    */
-  int ALTER_TASK_DEFINITION = 35;
+  int ALTER_TASK_DEFINITION = 36;
 
   /**
    * The feature id for the '<em><b>Task Definition</b></em>' reference.
@@ -1533,7 +1642,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionDtDefinition()
    * @generated
    */
-  int FACET_DEFINITION_DT_DEFINITION = 36;
+  int FACET_DEFINITION_DT_DEFINITION = 37;
 
   /**
    * The feature id for the '<em><b>Dt Definition</b></em>' reference.
@@ -1561,7 +1670,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionFieldName()
    * @generated
    */
-  int FACET_DEFINITION_FIELD_NAME = 37;
+  int FACET_DEFINITION_FIELD_NAME = 38;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1589,7 +1698,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionLabel()
    * @generated
    */
-  int FACET_DEFINITION_LABEL = 38;
+  int FACET_DEFINITION_LABEL = 39;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1617,7 +1726,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionRangeString()
    * @generated
    */
-  int FACET_DEFINITION_RANGE_STRING = 39;
+  int FACET_DEFINITION_RANGE_STRING = 40;
 
   /**
    * The feature id for the '<em><b>Filter String</b></em>' attribute.
@@ -1654,7 +1763,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionRange()
    * @generated
    */
-  int FACET_DEFINITION_RANGE = 40;
+  int FACET_DEFINITION_RANGE = 41;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -1691,7 +1800,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionParamString()
    * @generated
    */
-  int FACET_DEFINITION_PARAM_STRING = 41;
+  int FACET_DEFINITION_PARAM_STRING = 42;
 
   /**
    * The feature id for the '<em><b>Param Value String</b></em>' attribute.
@@ -1719,7 +1828,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionParam()
    * @generated
    */
-  int FACET_DEFINITION_PARAM = 42;
+  int FACET_DEFINITION_PARAM = 43;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -1756,7 +1865,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinition()
    * @generated
    */
-  int FACET_DEFINITION = 43;
+  int FACET_DEFINITION = 44;
 
   /**
    * The number of structural features of the '<em>Facet Definition</em>' class.
@@ -1775,7 +1884,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionKeyConcept()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_KEY_CONCEPT = 44;
+  int FACETED_QUERY_DEFINITION_KEY_CONCEPT = 45;
 
   /**
    * The feature id for the '<em><b>Dt Definition</b></em>' reference.
@@ -1803,7 +1912,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionDomainCriteria()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA = 45;
+  int FACETED_QUERY_DEFINITION_DOMAIN_CRITERIA = 46;
 
   /**
    * The feature id for the '<em><b>Ref To Domain Type</b></em>' containment reference.
@@ -1831,7 +1940,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionListFilterBuilderQuery()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY = 46;
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_QUERY = 47;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1859,7 +1968,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionGeoSearchQuery()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY = 47;
+  int FACETED_QUERY_DEFINITION_GEO_SEARCH_QUERY = 48;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1887,7 +1996,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionListFilterBuilderClass()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS = 48;
+  int FACETED_QUERY_DEFINITION_LIST_FILTER_BUILDER_CLASS = 49;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -1915,7 +2024,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionFacets()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_FACETS = 49;
+  int FACETED_QUERY_DEFINITION_FACETS = 50;
 
   /**
    * The feature id for the '<em><b>Facet Definition</b></em>' reference list.
@@ -1952,7 +2061,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinition()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION = 50;
+  int FACETED_QUERY_DEFINITION = 51;
 
   /**
    * The number of structural features of the '<em>Faceted Query Definition</em>' class.
@@ -1971,7 +2080,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionKeyConcept()
    * @generated
    */
-  int INDEX_DEFINITION_KEY_CONCEPT = 51;
+  int INDEX_DEFINITION_KEY_CONCEPT = 52;
 
   /**
    * The feature id for the '<em><b>Dt Definition</b></em>' reference.
@@ -1999,7 +2108,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionDtIndex()
    * @generated
    */
-  int INDEX_DEFINITION_DT_INDEX = 52;
+  int INDEX_DEFINITION_DT_INDEX = 53;
 
   /**
    * The feature id for the '<em><b>Dt Definition</b></em>' reference.
@@ -2027,7 +2136,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionIndexCopyToString()
    * @generated
    */
-  int INDEX_DEFINITION_INDEX_COPY_TO_STRING = 53;
+  int INDEX_DEFINITION_INDEX_COPY_TO_STRING = 54;
 
   /**
    * The feature id for the '<em><b>String</b></em>' attribute.
@@ -2055,7 +2164,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionIndexCopyTo()
    * @generated
    */
-  int INDEX_DEFINITION_INDEX_COPY_TO = 54;
+  int INDEX_DEFINITION_INDEX_COPY_TO = 55;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' containment reference.
@@ -2092,7 +2201,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionLoaderId()
    * @generated
    */
-  int INDEX_DEFINITION_LOADER_ID = 55;
+  int INDEX_DEFINITION_LOADER_ID = 56;
 
   /**
    * The feature id for the '<em><b>Loader Id String</b></em>' attribute.
@@ -2120,7 +2229,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinition()
    * @generated
    */
-  int INDEX_DEFINITION = 56;
+  int INDEX_DEFINITION = 57;
 
   /**
    * The number of structural features of the '<em>Index Definition</em>' class.
@@ -2139,7 +2248,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDtDefinitionAction()
    * @generated
    */
-  int DT_DEFINITION_ACTION = 57;
+  int DT_DEFINITION_ACTION = 58;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2248,7 +2357,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetDefinitionAction()
    * @generated
    */
-  int FACET_DEFINITION_ACTION = 58;
+  int FACET_DEFINITION_ACTION = 59;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2321,7 +2430,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getFacetedQueryDefinitionAction()
    * @generated
    */
-  int FACETED_QUERY_DEFINITION_ACTION = 59;
+  int FACETED_QUERY_DEFINITION_ACTION = 60;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2403,7 +2512,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getIndexDefinitionAction()
    * @generated
    */
-  int INDEX_DEFINITION_ACTION = 60;
+  int INDEX_DEFINITION_ACTION = 61;
 
   /**
    * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -2467,7 +2576,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getDataType()
    * @generated
    */
-  int DATA_TYPE = 61;
+  int DATA_TYPE = 62;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.BooleanString <em>Boolean String</em>}' enum.
@@ -2477,7 +2586,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getBooleanString()
    * @generated
    */
-  int BOOLEAN_STRING = 62;
+  int BOOLEAN_STRING = 63;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.MultiplicityString <em>Multiplicity String</em>}' enum.
@@ -2487,7 +2596,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getMultiplicityString()
    * @generated
    */
-  int MULTIPLICITY_STRING = 63;
+  int MULTIPLICITY_STRING = 64;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.CardinalityString <em>Cardinality String</em>}' enum.
@@ -2497,7 +2606,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getCardinalityString()
    * @generated
    */
-  int CARDINALITY_STRING = 64;
+  int CARDINALITY_STRING = 65;
 
   /**
    * The meta object id for the '{@link io.vertigo.dsl.vertigoDsl.AssociationTypeString <em>Association Type String</em>}' enum.
@@ -2507,7 +2616,7 @@ public interface VertigoDslPackage extends EPackage
    * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getAssociationTypeString()
    * @generated
    */
-  int ASSOCIATION_TYPE_STRING = 65;
+  int ASSOCIATION_TYPE_STRING = 66;
 
 
   /**
@@ -3516,6 +3625,126 @@ public interface VertigoDslPackage extends EPackage
    * @generated
    */
   EAttribute getAssociation_Type();
+
+  /**
+   * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.AssociationNN <em>Association NN</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for class '<em>Association NN</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN
+   * @generated
+   */
+  EClass getAssociationNN();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getName <em>Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Name</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getName()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EAttribute getAssociationNN_Name();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getTableName <em>Table Name</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Table Name</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getTableName()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EAttribute getAssociationNN_TableName();
+
+  /**
+   * Returns the meta object for the reference '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getDtDefinitionA <em>Dt Definition A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Dt Definition A</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getDtDefinitionA()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EReference getAssociationNN_DtDefinitionA();
+
+  /**
+   * Returns the meta object for the reference '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getDtDefinitionB <em>Dt Definition B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the reference '<em>Dt Definition B</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getDtDefinitionB()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EReference getAssociationNN_DtDefinitionB();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getNavigabilityA <em>Navigability A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Navigability A</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getNavigabilityA()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EAttribute getAssociationNN_NavigabilityA();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getNavigabilityB <em>Navigability B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Navigability B</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getNavigabilityB()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EAttribute getAssociationNN_NavigabilityB();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getLabelA <em>Label A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label A</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getLabelA()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EAttribute getAssociationNN_LabelA();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getLabelB <em>Label B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Label B</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getLabelB()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EAttribute getAssociationNN_LabelB();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getRoleA <em>Role A</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Role A</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getRoleA()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EAttribute getAssociationNN_RoleA();
+
+  /**
+   * Returns the meta object for the attribute '{@link io.vertigo.dsl.vertigoDsl.AssociationNN#getRoleB <em>Role B</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Role B</em>'.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN#getRoleB()
+   * @see #getAssociationNN()
+   * @generated
+   */
+  EAttribute getAssociationNN_RoleB();
 
   /**
    * Returns the meta object for class '{@link io.vertigo.dsl.vertigoDsl.TaskAttributeString <em>Task Attribute String</em>}'.
@@ -5516,6 +5745,96 @@ public interface VertigoDslPackage extends EPackage
      * @generated
      */
     EAttribute ASSOCIATION__TYPE = eINSTANCE.getAssociation_Type();
+
+    /**
+     * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.AssociationNNImpl <em>Association NN</em>}' class.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @see io.vertigo.dsl.vertigoDsl.impl.AssociationNNImpl
+     * @see io.vertigo.dsl.vertigoDsl.impl.VertigoDslPackageImpl#getAssociationNN()
+     * @generated
+     */
+    EClass ASSOCIATION_NN = eINSTANCE.getAssociationNN();
+
+    /**
+     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION_NN__NAME = eINSTANCE.getAssociationNN_Name();
+
+    /**
+     * The meta object literal for the '<em><b>Table Name</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION_NN__TABLE_NAME = eINSTANCE.getAssociationNN_TableName();
+
+    /**
+     * The meta object literal for the '<em><b>Dt Definition A</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSOCIATION_NN__DT_DEFINITION_A = eINSTANCE.getAssociationNN_DtDefinitionA();
+
+    /**
+     * The meta object literal for the '<em><b>Dt Definition B</b></em>' reference feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EReference ASSOCIATION_NN__DT_DEFINITION_B = eINSTANCE.getAssociationNN_DtDefinitionB();
+
+    /**
+     * The meta object literal for the '<em><b>Navigability A</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION_NN__NAVIGABILITY_A = eINSTANCE.getAssociationNN_NavigabilityA();
+
+    /**
+     * The meta object literal for the '<em><b>Navigability B</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION_NN__NAVIGABILITY_B = eINSTANCE.getAssociationNN_NavigabilityB();
+
+    /**
+     * The meta object literal for the '<em><b>Label A</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION_NN__LABEL_A = eINSTANCE.getAssociationNN_LabelA();
+
+    /**
+     * The meta object literal for the '<em><b>Label B</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION_NN__LABEL_B = eINSTANCE.getAssociationNN_LabelB();
+
+    /**
+     * The meta object literal for the '<em><b>Role A</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION_NN__ROLE_A = eINSTANCE.getAssociationNN_RoleA();
+
+    /**
+     * The meta object literal for the '<em><b>Role B</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute ASSOCIATION_NN__ROLE_B = eINSTANCE.getAssociationNN_RoleB();
 
     /**
      * The meta object literal for the '{@link io.vertigo.dsl.vertigoDsl.impl.TaskAttributeStringImpl <em>Task Attribute String</em>}' class.

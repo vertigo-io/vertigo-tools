@@ -136,18 +136,19 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cDeclaredDtDefinitionParserRuleCall_5 = (RuleCall)cAlternatives.eContents().get(5);
 		private final RuleCall cAlterDtDefinitionParserRuleCall_6 = (RuleCall)cAlternatives.eContents().get(6);
 		private final RuleCall cAssociationParserRuleCall_7 = (RuleCall)cAlternatives.eContents().get(7);
-		private final RuleCall cTaskDefinitionParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
-		private final RuleCall cFacetDefinitionParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
-		private final RuleCall cIndexDefinitionParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
-		private final RuleCall cFacetedQueryDefinitionParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cAssociationNNParserRuleCall_8 = (RuleCall)cAlternatives.eContents().get(8);
+		private final RuleCall cTaskDefinitionParserRuleCall_9 = (RuleCall)cAlternatives.eContents().get(9);
+		private final RuleCall cFacetDefinitionParserRuleCall_10 = (RuleCall)cAlternatives.eContents().get(10);
+		private final RuleCall cIndexDefinitionParserRuleCall_11 = (RuleCall)cAlternatives.eContents().get(11);
+		private final RuleCall cFacetedQueryDefinitionParserRuleCall_12 = (RuleCall)cAlternatives.eContents().get(12);
 		
 		//Element:
 		//	Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition |
-		//	Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
+		//	Association | AssociationNN | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition | Association
-		//| TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition
+		//| AssociationNN | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition
 		public Alternatives getAlternatives() { return cAlternatives; }
 		
 		//Domain
@@ -174,17 +175,20 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//Association
 		public RuleCall getAssociationParserRuleCall_7() { return cAssociationParserRuleCall_7; }
 		
+		//AssociationNN
+		public RuleCall getAssociationNNParserRuleCall_8() { return cAssociationNNParserRuleCall_8; }
+		
 		//TaskDefinition
-		public RuleCall getTaskDefinitionParserRuleCall_8() { return cTaskDefinitionParserRuleCall_8; }
+		public RuleCall getTaskDefinitionParserRuleCall_9() { return cTaskDefinitionParserRuleCall_9; }
 		
 		//FacetDefinition
-		public RuleCall getFacetDefinitionParserRuleCall_9() { return cFacetDefinitionParserRuleCall_9; }
+		public RuleCall getFacetDefinitionParserRuleCall_10() { return cFacetDefinitionParserRuleCall_10; }
 		
 		//IndexDefinition
-		public RuleCall getIndexDefinitionParserRuleCall_10() { return cIndexDefinitionParserRuleCall_10; }
+		public RuleCall getIndexDefinitionParserRuleCall_11() { return cIndexDefinitionParserRuleCall_11; }
 		
 		//FacetedQueryDefinition
-		public RuleCall getFacetedQueryDefinitionParserRuleCall_11() { return cFacetedQueryDefinitionParserRuleCall_11; }
+		public RuleCall getFacetedQueryDefinitionParserRuleCall_12() { return cFacetedQueryDefinitionParserRuleCall_12; }
 	}
 	public class DeclaredDomainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.DeclaredDomain");
@@ -1844,6 +1848,280 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//'}'
 		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
 	}
+	public class AssociationNNElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.AssociationNN");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cCreateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Keyword cAssociationNNKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cNameAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final RuleCall cNameIDTerminalRuleCall_2_0 = (RuleCall)cNameAssignment_2.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final UnorderedGroup cUnorderedGroup_4 = (UnorderedGroup)cGroup.eContents().get(4);
+		private final Group cGroup_4_0 = (Group)cUnorderedGroup_4.eContents().get(0);
+		private final Keyword cTableNameKeyword_4_0_0 = (Keyword)cGroup_4_0.eContents().get(0);
+		private final Keyword cColonKeyword_4_0_1 = (Keyword)cGroup_4_0.eContents().get(1);
+		private final Assignment cTableNameAssignment_4_0_2 = (Assignment)cGroup_4_0.eContents().get(2);
+		private final RuleCall cTableNameSTRINGTerminalRuleCall_4_0_2_0 = (RuleCall)cTableNameAssignment_4_0_2.eContents().get(0);
+		private final Keyword cCommaKeyword_4_0_3 = (Keyword)cGroup_4_0.eContents().get(3);
+		private final Group cGroup_4_1 = (Group)cUnorderedGroup_4.eContents().get(1);
+		private final Keyword cDtDefinitionAKeyword_4_1_0 = (Keyword)cGroup_4_1.eContents().get(0);
+		private final Keyword cColonKeyword_4_1_1 = (Keyword)cGroup_4_1.eContents().get(1);
+		private final Assignment cDtDefinitionAAssignment_4_1_2 = (Assignment)cGroup_4_1.eContents().get(2);
+		private final CrossReference cDtDefinitionADtDefinitionTypeCrossReference_4_1_2_0 = (CrossReference)cDtDefinitionAAssignment_4_1_2.eContents().get(0);
+		private final RuleCall cDtDefinitionADtDefinitionTypeIDTerminalRuleCall_4_1_2_0_1 = (RuleCall)cDtDefinitionADtDefinitionTypeCrossReference_4_1_2_0.eContents().get(1);
+		private final Keyword cCommaKeyword_4_1_3 = (Keyword)cGroup_4_1.eContents().get(3);
+		private final Group cGroup_4_2 = (Group)cUnorderedGroup_4.eContents().get(2);
+		private final Keyword cDtDefinitionBKeyword_4_2_0 = (Keyword)cGroup_4_2.eContents().get(0);
+		private final Keyword cColonKeyword_4_2_1 = (Keyword)cGroup_4_2.eContents().get(1);
+		private final Assignment cDtDefinitionBAssignment_4_2_2 = (Assignment)cGroup_4_2.eContents().get(2);
+		private final CrossReference cDtDefinitionBDtDefinitionTypeCrossReference_4_2_2_0 = (CrossReference)cDtDefinitionBAssignment_4_2_2.eContents().get(0);
+		private final RuleCall cDtDefinitionBDtDefinitionTypeIDTerminalRuleCall_4_2_2_0_1 = (RuleCall)cDtDefinitionBDtDefinitionTypeCrossReference_4_2_2_0.eContents().get(1);
+		private final Keyword cCommaKeyword_4_2_3 = (Keyword)cGroup_4_2.eContents().get(3);
+		private final Group cGroup_4_3 = (Group)cUnorderedGroup_4.eContents().get(3);
+		private final Keyword cNavigabilityAKeyword_4_3_0 = (Keyword)cGroup_4_3.eContents().get(0);
+		private final Keyword cColonKeyword_4_3_1 = (Keyword)cGroup_4_3.eContents().get(1);
+		private final Assignment cNavigabilityAAssignment_4_3_2 = (Assignment)cGroup_4_3.eContents().get(2);
+		private final RuleCall cNavigabilityABooleanStringEnumRuleCall_4_3_2_0 = (RuleCall)cNavigabilityAAssignment_4_3_2.eContents().get(0);
+		private final Keyword cCommaKeyword_4_3_3 = (Keyword)cGroup_4_3.eContents().get(3);
+		private final Group cGroup_4_4 = (Group)cUnorderedGroup_4.eContents().get(4);
+		private final Keyword cNavigabilityBKeyword_4_4_0 = (Keyword)cGroup_4_4.eContents().get(0);
+		private final Keyword cColonKeyword_4_4_1 = (Keyword)cGroup_4_4.eContents().get(1);
+		private final Assignment cNavigabilityBAssignment_4_4_2 = (Assignment)cGroup_4_4.eContents().get(2);
+		private final RuleCall cNavigabilityBBooleanStringEnumRuleCall_4_4_2_0 = (RuleCall)cNavigabilityBAssignment_4_4_2.eContents().get(0);
+		private final Keyword cCommaKeyword_4_4_3 = (Keyword)cGroup_4_4.eContents().get(3);
+		private final Group cGroup_4_5 = (Group)cUnorderedGroup_4.eContents().get(5);
+		private final Keyword cLabelAKeyword_4_5_0 = (Keyword)cGroup_4_5.eContents().get(0);
+		private final Keyword cColonKeyword_4_5_1 = (Keyword)cGroup_4_5.eContents().get(1);
+		private final Assignment cLabelAAssignment_4_5_2 = (Assignment)cGroup_4_5.eContents().get(2);
+		private final RuleCall cLabelASTRINGTerminalRuleCall_4_5_2_0 = (RuleCall)cLabelAAssignment_4_5_2.eContents().get(0);
+		private final Keyword cCommaKeyword_4_5_3 = (Keyword)cGroup_4_5.eContents().get(3);
+		private final Group cGroup_4_6 = (Group)cUnorderedGroup_4.eContents().get(6);
+		private final Keyword cLabelBKeyword_4_6_0 = (Keyword)cGroup_4_6.eContents().get(0);
+		private final Keyword cColonKeyword_4_6_1 = (Keyword)cGroup_4_6.eContents().get(1);
+		private final Assignment cLabelBAssignment_4_6_2 = (Assignment)cGroup_4_6.eContents().get(2);
+		private final RuleCall cLabelBSTRINGTerminalRuleCall_4_6_2_0 = (RuleCall)cLabelBAssignment_4_6_2.eContents().get(0);
+		private final Keyword cCommaKeyword_4_6_3 = (Keyword)cGroup_4_6.eContents().get(3);
+		private final Group cGroup_4_7 = (Group)cUnorderedGroup_4.eContents().get(7);
+		private final Keyword cRoleAKeyword_4_7_0 = (Keyword)cGroup_4_7.eContents().get(0);
+		private final Keyword cColonKeyword_4_7_1 = (Keyword)cGroup_4_7.eContents().get(1);
+		private final Assignment cRoleAAssignment_4_7_2 = (Assignment)cGroup_4_7.eContents().get(2);
+		private final RuleCall cRoleASTRINGTerminalRuleCall_4_7_2_0 = (RuleCall)cRoleAAssignment_4_7_2.eContents().get(0);
+		private final Keyword cCommaKeyword_4_7_3 = (Keyword)cGroup_4_7.eContents().get(3);
+		private final Group cGroup_4_8 = (Group)cUnorderedGroup_4.eContents().get(8);
+		private final Keyword cRoleBKeyword_4_8_0 = (Keyword)cGroup_4_8.eContents().get(0);
+		private final Keyword cColonKeyword_4_8_1 = (Keyword)cGroup_4_8.eContents().get(1);
+		private final Assignment cRoleBAssignment_4_8_2 = (Assignment)cGroup_4_8.eContents().get(2);
+		private final RuleCall cRoleBSTRINGTerminalRuleCall_4_8_2_0 = (RuleCall)cRoleBAssignment_4_8_2.eContents().get(0);
+		private final Keyword cCommaKeyword_4_8_3 = (Keyword)cGroup_4_8.eContents().get(3);
+		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		
+		//AssociationNN:
+		//	'create' 'AssociationNN' name=ID '{' (('tableName' ':' tableName=STRING ','?)? & 'dtDefinitionA' ':'
+		//	dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
+		//	':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('labelA' ':'
+		//	labelA=STRING ','?)? & ('labelB' ':' labelB=STRING ','?)? & ('roleA' ':' roleA=STRING ','?)? & ('roleB' ':'
+		//	roleB=STRING ','?)?) '}';
+		@Override public ParserRule getRule() { return rule; }
+		
+		//'create' 'AssociationNN' name=ID '{' (('tableName' ':' tableName=STRING ','?)? & 'dtDefinitionA' ':'
+		//dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
+		//':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('labelA' ':'
+		//labelA=STRING ','?)? & ('labelB' ':' labelB=STRING ','?)? & ('roleA' ':' roleA=STRING ','?)? & ('roleB' ':'
+		//roleB=STRING ','?)?) '}'
+		public Group getGroup() { return cGroup; }
+		
+		//'create'
+		public Keyword getCreateKeyword_0() { return cCreateKeyword_0; }
+		
+		//'AssociationNN'
+		public Keyword getAssociationNNKeyword_1() { return cAssociationNNKeyword_1; }
+		
+		//name=ID
+		public Assignment getNameAssignment_2() { return cNameAssignment_2; }
+		
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_2_0() { return cNameIDTerminalRuleCall_2_0; }
+		
+		//'{'
+		public Keyword getLeftCurlyBracketKeyword_3() { return cLeftCurlyBracketKeyword_3; }
+		
+		//(('tableName' ':' tableName=STRING ','?)? & 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB'
+		//':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA' ':' navigabilityA=BooleanString ','?)? & ('navigabilityB'
+		//':' navigabilityB=BooleanString ','?)? & ('labelA' ':' labelA=STRING ','?)? & ('labelB' ':' labelB=STRING ','?)? &
+		//('roleA' ':' roleA=STRING ','?)? & ('roleB' ':' roleB=STRING ','?)?)
+		public UnorderedGroup getUnorderedGroup_4() { return cUnorderedGroup_4; }
+		
+		//('tableName' ':' tableName=STRING ','?)?
+		public Group getGroup_4_0() { return cGroup_4_0; }
+		
+		//'tableName'
+		public Keyword getTableNameKeyword_4_0_0() { return cTableNameKeyword_4_0_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_0_1() { return cColonKeyword_4_0_1; }
+		
+		//tableName=STRING
+		public Assignment getTableNameAssignment_4_0_2() { return cTableNameAssignment_4_0_2; }
+		
+		//STRING
+		public RuleCall getTableNameSTRINGTerminalRuleCall_4_0_2_0() { return cTableNameSTRINGTerminalRuleCall_4_0_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_0_3() { return cCommaKeyword_4_0_3; }
+		
+		//'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','?
+		public Group getGroup_4_1() { return cGroup_4_1; }
+		
+		//'dtDefinitionA'
+		public Keyword getDtDefinitionAKeyword_4_1_0() { return cDtDefinitionAKeyword_4_1_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_1_1() { return cColonKeyword_4_1_1; }
+		
+		//dtDefinitionA=[DtDefinitionType]
+		public Assignment getDtDefinitionAAssignment_4_1_2() { return cDtDefinitionAAssignment_4_1_2; }
+		
+		//[DtDefinitionType]
+		public CrossReference getDtDefinitionADtDefinitionTypeCrossReference_4_1_2_0() { return cDtDefinitionADtDefinitionTypeCrossReference_4_1_2_0; }
+		
+		//ID
+		public RuleCall getDtDefinitionADtDefinitionTypeIDTerminalRuleCall_4_1_2_0_1() { return cDtDefinitionADtDefinitionTypeIDTerminalRuleCall_4_1_2_0_1; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_1_3() { return cCommaKeyword_4_1_3; }
+		
+		//'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','?
+		public Group getGroup_4_2() { return cGroup_4_2; }
+		
+		//'dtDefinitionB'
+		public Keyword getDtDefinitionBKeyword_4_2_0() { return cDtDefinitionBKeyword_4_2_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_2_1() { return cColonKeyword_4_2_1; }
+		
+		//dtDefinitionB=[DtDefinitionType]
+		public Assignment getDtDefinitionBAssignment_4_2_2() { return cDtDefinitionBAssignment_4_2_2; }
+		
+		//[DtDefinitionType]
+		public CrossReference getDtDefinitionBDtDefinitionTypeCrossReference_4_2_2_0() { return cDtDefinitionBDtDefinitionTypeCrossReference_4_2_2_0; }
+		
+		//ID
+		public RuleCall getDtDefinitionBDtDefinitionTypeIDTerminalRuleCall_4_2_2_0_1() { return cDtDefinitionBDtDefinitionTypeIDTerminalRuleCall_4_2_2_0_1; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_2_3() { return cCommaKeyword_4_2_3; }
+		
+		//('navigabilityA' ':' navigabilityA=BooleanString ','?)?
+		public Group getGroup_4_3() { return cGroup_4_3; }
+		
+		//'navigabilityA'
+		public Keyword getNavigabilityAKeyword_4_3_0() { return cNavigabilityAKeyword_4_3_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_3_1() { return cColonKeyword_4_3_1; }
+		
+		//navigabilityA=BooleanString
+		public Assignment getNavigabilityAAssignment_4_3_2() { return cNavigabilityAAssignment_4_3_2; }
+		
+		//BooleanString
+		public RuleCall getNavigabilityABooleanStringEnumRuleCall_4_3_2_0() { return cNavigabilityABooleanStringEnumRuleCall_4_3_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_3_3() { return cCommaKeyword_4_3_3; }
+		
+		//('navigabilityB' ':' navigabilityB=BooleanString ','?)?
+		public Group getGroup_4_4() { return cGroup_4_4; }
+		
+		//'navigabilityB'
+		public Keyword getNavigabilityBKeyword_4_4_0() { return cNavigabilityBKeyword_4_4_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_4_1() { return cColonKeyword_4_4_1; }
+		
+		//navigabilityB=BooleanString
+		public Assignment getNavigabilityBAssignment_4_4_2() { return cNavigabilityBAssignment_4_4_2; }
+		
+		//BooleanString
+		public RuleCall getNavigabilityBBooleanStringEnumRuleCall_4_4_2_0() { return cNavigabilityBBooleanStringEnumRuleCall_4_4_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_4_3() { return cCommaKeyword_4_4_3; }
+		
+		//('labelA' ':' labelA=STRING ','?)?
+		public Group getGroup_4_5() { return cGroup_4_5; }
+		
+		//'labelA'
+		public Keyword getLabelAKeyword_4_5_0() { return cLabelAKeyword_4_5_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_5_1() { return cColonKeyword_4_5_1; }
+		
+		//labelA=STRING
+		public Assignment getLabelAAssignment_4_5_2() { return cLabelAAssignment_4_5_2; }
+		
+		//STRING
+		public RuleCall getLabelASTRINGTerminalRuleCall_4_5_2_0() { return cLabelASTRINGTerminalRuleCall_4_5_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_5_3() { return cCommaKeyword_4_5_3; }
+		
+		//('labelB' ':' labelB=STRING ','?)?
+		public Group getGroup_4_6() { return cGroup_4_6; }
+		
+		//'labelB'
+		public Keyword getLabelBKeyword_4_6_0() { return cLabelBKeyword_4_6_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_6_1() { return cColonKeyword_4_6_1; }
+		
+		//labelB=STRING
+		public Assignment getLabelBAssignment_4_6_2() { return cLabelBAssignment_4_6_2; }
+		
+		//STRING
+		public RuleCall getLabelBSTRINGTerminalRuleCall_4_6_2_0() { return cLabelBSTRINGTerminalRuleCall_4_6_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_6_3() { return cCommaKeyword_4_6_3; }
+		
+		//('roleA' ':' roleA=STRING ','?)?
+		public Group getGroup_4_7() { return cGroup_4_7; }
+		
+		//'roleA'
+		public Keyword getRoleAKeyword_4_7_0() { return cRoleAKeyword_4_7_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_7_1() { return cColonKeyword_4_7_1; }
+		
+		//roleA=STRING
+		public Assignment getRoleAAssignment_4_7_2() { return cRoleAAssignment_4_7_2; }
+		
+		//STRING
+		public RuleCall getRoleASTRINGTerminalRuleCall_4_7_2_0() { return cRoleASTRINGTerminalRuleCall_4_7_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_7_3() { return cCommaKeyword_4_7_3; }
+		
+		//('roleB' ':' roleB=STRING ','?)?
+		public Group getGroup_4_8() { return cGroup_4_8; }
+		
+		//'roleB'
+		public Keyword getRoleBKeyword_4_8_0() { return cRoleBKeyword_4_8_0; }
+		
+		//':'
+		public Keyword getColonKeyword_4_8_1() { return cColonKeyword_4_8_1; }
+		
+		//roleB=STRING
+		public Assignment getRoleBAssignment_4_8_2() { return cRoleBAssignment_4_8_2; }
+		
+		//STRING
+		public RuleCall getRoleBSTRINGTerminalRuleCall_4_8_2_0() { return cRoleBSTRINGTerminalRuleCall_4_8_2_0; }
+		
+		//','?
+		public Keyword getCommaKeyword_4_8_3() { return cCommaKeyword_4_8_3; }
+		
+		//'}'
+		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+	}
 	public class TaskAttributeStringElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "io.vertigo.dsl.VertigoDsl.TaskAttributeString");
 		private final Group cGroup = (Group)rule.eContents().get(1);
@@ -3470,6 +3748,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	private final CardinalityStringElements eCardinalityString;
 	private final AssociationTypeStringElements eAssociationTypeString;
 	private final AssociationElements pAssociation;
+	private final AssociationNNElements pAssociationNN;
 	private final TaskAttributeStringElements pTaskAttributeString;
 	private final TaskInAttributeElements pTaskInAttribute;
 	private final TaskOutAttributeElements pTaskOutAttribute;
@@ -3544,6 +3823,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		this.eCardinalityString = new CardinalityStringElements();
 		this.eAssociationTypeString = new AssociationTypeStringElements();
 		this.pAssociation = new AssociationElements();
+		this.pAssociationNN = new AssociationNNElements();
 		this.pTaskAttributeString = new TaskAttributeStringElements();
 		this.pTaskInAttribute = new TaskInAttributeElements();
 		this.pTaskOutAttribute = new TaskOutAttributeElements();
@@ -3649,7 +3929,7 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//Element:
 	//	Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition |
-	//	Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
+	//	Association | AssociationNN | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
 	public ElementElements getElementAccess() {
 		return pElement;
 	}
@@ -3954,6 +4234,20 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	public ParserRule getAssociationRule() {
 		return getAssociationAccess().getRule();
+	}
+	
+	//AssociationNN:
+	//	'create' 'AssociationNN' name=ID '{' (('tableName' ':' tableName=STRING ','?)? & 'dtDefinitionA' ':'
+	//	dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
+	//	':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('labelA' ':'
+	//	labelA=STRING ','?)? & ('labelB' ':' labelB=STRING ','?)? & ('roleA' ':' roleA=STRING ','?)? & ('roleB' ':'
+	//	roleB=STRING ','?)?) '}';
+	public AssociationNNElements getAssociationNNAccess() {
+		return pAssociationNN;
+	}
+	
+	public ParserRule getAssociationNNRule() {
+		return getAssociationNNAccess().getRule();
 	}
 	
 	//TaskAttributeString:

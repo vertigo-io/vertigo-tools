@@ -93,6 +93,7 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
       case VertigoDslPackage.DT_DEFINITION: return createDtDefinition();
       case VertigoDslPackage.ALTER_DT_DEFINITION: return createAlterDtDefinition();
       case VertigoDslPackage.ASSOCIATION: return createAssociation();
+      case VertigoDslPackage.ASSOCIATION_NN: return createAssociationNN();
       case VertigoDslPackage.TASK_ATTRIBUTE_STRING: return createTaskAttributeString();
       case VertigoDslPackage.TASK_IN_ATTRIBUTE: return createTaskInAttribute();
       case VertigoDslPackage.TASK_OUT_ATTRIBUTE: return createTaskOutAttribute();
@@ -504,6 +505,18 @@ public class VertigoDslFactoryImpl extends EFactoryImpl implements VertigoDslFac
   {
     AssociationImpl association = new AssociationImpl();
     return association;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public AssociationNN createAssociationNN()
+  {
+    AssociationNNImpl associationNN = new AssociationNNImpl();
+    return associationNN;
   }
 
   /**

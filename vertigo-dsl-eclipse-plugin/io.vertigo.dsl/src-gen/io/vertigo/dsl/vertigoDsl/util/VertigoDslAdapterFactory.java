@@ -211,6 +211,11 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
         return createAssociationAdapter();
       }
       @Override
+      public Adapter caseAssociationNN(AssociationNN object)
+      {
+        return createAssociationNNAdapter();
+      }
+      @Override
       public Adapter caseTaskAttributeString(TaskAttributeString object)
       {
         return createTaskAttributeStringAdapter();
@@ -803,6 +808,21 @@ public class VertigoDslAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createAssociationAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link io.vertigo.dsl.vertigoDsl.AssociationNN <em>Association NN</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see io.vertigo.dsl.vertigoDsl.AssociationNN
+   * @generated
+   */
+  public Adapter createAssociationNNAdapter()
   {
     return null;
   }

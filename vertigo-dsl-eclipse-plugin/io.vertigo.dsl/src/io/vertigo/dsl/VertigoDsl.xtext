@@ -30,7 +30,7 @@ terminal STRING:
     "`" ( ESCAPED_CHAR | !('\\'|'`') )* "`" ;
 
 Element:
-	Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition | Association | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
+	Domain | AlterDomain | FileInfo | DeclaredDomain | DtDefinition | DeclaredDtDefinition | AlterDtDefinition | Association | AssociationNN | TaskDefinition | FacetDefinition | IndexDefinition | FacetedQueryDefinition;
 
 DeclaredDomain:
 	'declare' 'Domain' name = ID;
@@ -192,6 +192,20 @@ Association:
 		('roleA' ':' roleA=STRING ','? )? &
 		('roleB' ':' roleB=STRING ','? )? &
 		('type' ':' type=AssociationTypeString)?)
+	'}'; 
+	
+	
+AssociationNN:
+	'create' 'AssociationNN' name=ID '{'
+		(('tableName' ':' tableName=STRING ','? )? &
+		('dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType] ','?) &
+		('dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? ) &
+		('navigabilityA' ':' navigabilityA=BooleanString ','? )? &
+		('navigabilityB' ':' navigabilityB=BooleanString ','? )? &
+		('labelA' ':' labelA=STRING ','? )? &
+		('labelB' ':' labelB=STRING ','? )? &
+		('roleA' ':' roleA=STRING ','? )? &
+		('roleB' ':' roleB=STRING ','? )?)
 	'}'; 
 
 

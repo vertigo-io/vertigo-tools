@@ -16,6 +16,7 @@
                 { "include": "#constraintParameters" },
                 { "include": "#dtDefinitionParameters" },
                 { "include": "#associationParameters" },
+                { "include": "#associationNNParameters" },
                 { "include": "#taskParameters" },
                 { "include": "#fileInfoParameters" },
                 { "include": "#indexDefinitionParameters" },
@@ -64,6 +65,10 @@
         "associationParameters": {
             "name": "entity.name.tag.vertigo",
             "match": "\\b(fkFieldName|dtDefinitionA|dtDefinitionB|navigabilityA|navigabilityB|multiplicityA|multiplicityB|labelA|labelB|roleA|roleB|type)\\b"
+        },
+        "associationNNParameters": {
+            "name": "entity.name.tag.vertigo",
+            "match": "\\b(tableName|dtDefinitionA|dtDefinitionB|navigabilityA|navigabilityB|labelA|labelB|roleA|roleB|type)\\b"
         },
         "taskParameters": {
             "name": "entity.name.tag.vertigo",

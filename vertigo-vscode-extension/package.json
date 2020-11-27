@@ -2,7 +2,7 @@
     "name": "vertigo-vscode",
     "displayName": "Vertigo VS Code extension",
     "description": "Vertigo Extensions provides language support for KSP and give access to Vertigo-Studio",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "publisher": "vertigo-io",
     "icon": "images/vertigo.png",
     "license": "Apache-2.0",

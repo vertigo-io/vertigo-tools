@@ -9,6 +9,7 @@ import io.vertigo.dsl.vertigoDsl.AlterDomain;
 import io.vertigo.dsl.vertigoDsl.AlterDtDefinition;
 import io.vertigo.dsl.vertigoDsl.AlterTaskDefinition;
 import io.vertigo.dsl.vertigoDsl.Association;
+import io.vertigo.dsl.vertigoDsl.AssociationNN;
 import io.vertigo.dsl.vertigoDsl.DeclaredDomain;
 import io.vertigo.dsl.vertigoDsl.DeclaredDtDefinition;
 import io.vertigo.dsl.vertigoDsl.Domain;
@@ -96,6 +97,9 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 				return; 
 			case VertigoDslPackage.ASSOCIATION:
 				sequence_Association(context, (Association) semanticObject); 
+				return; 
+			case VertigoDslPackage.ASSOCIATION_NN:
+				sequence_AssociationNN(context, (AssociationNN) semanticObject); 
 				return; 
 			case VertigoDslPackage.DECLARED_DOMAIN:
 				sequence_DeclaredDomain(context, (DeclaredDomain) semanticObject); 
@@ -306,6 +310,32 @@ public class VertigoDslSemanticSequencer extends AbstractDelegatingSemanticSeque
 	 *     )
 	 */
 	protected void sequence_AlterTaskDefinition(ISerializationContext context, AlterTaskDefinition semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Contexts:
+	 *     Element returns AssociationNN
+	 *     AssociationNN returns AssociationNN
+	 *
+	 * Constraint:
+	 *     (
+	 *         name=ID 
+	 *         (
+	 *             tableName=STRING | 
+	 *             dtDefinitionA=[DtDefinitionType|ID] | 
+	 *             dtDefinitionB=[DtDefinitionType|ID] | 
+	 *             navigabilityA=BooleanString | 
+	 *             navigabilityB=BooleanString | 
+	 *             labelA=STRING | 
+	 *             labelB=STRING | 
+	 *             roleA=STRING | 
+	 *             roleB=STRING
+	 *         )*
+	 *     )
+	 */
+	protected void sequence_AssociationNN(ISerializationContext context, AssociationNN semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	

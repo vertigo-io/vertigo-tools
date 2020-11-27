@@ -20,6 +20,15 @@ import org.eclipse.xtext.serializer.sequencer.AbstractSyntacticSequencer;
 public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 
 	protected VertigoDslGrammarAccess grammarAccess;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_0_3_q;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_1_3_q;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_2_3_q;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_3_3_q;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_4_3_q;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_5_3_q;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_6_3_q;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_7_3_q;
+	protected AbstractElementAlias match_AssociationNN_CommaKeyword_4_8_3_q;
 	protected AbstractElementAlias match_Association_CommaKeyword_4_0_3_q;
 	protected AbstractElementAlias match_Association_CommaKeyword_4_10_3_q;
 	protected AbstractElementAlias match_Association_CommaKeyword_4_1_3_q;
@@ -81,6 +90,15 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 	@Inject
 	protected void init(IGrammarAccess access) {
 		grammarAccess = (VertigoDslGrammarAccess) access;
+		match_AssociationNN_CommaKeyword_4_0_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_0_3());
+		match_AssociationNN_CommaKeyword_4_1_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_1_3());
+		match_AssociationNN_CommaKeyword_4_2_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_2_3());
+		match_AssociationNN_CommaKeyword_4_3_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_3_3());
+		match_AssociationNN_CommaKeyword_4_4_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_4_3());
+		match_AssociationNN_CommaKeyword_4_5_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_5_3());
+		match_AssociationNN_CommaKeyword_4_6_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_6_3());
+		match_AssociationNN_CommaKeyword_4_7_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_7_3());
+		match_AssociationNN_CommaKeyword_4_8_3_q = new TokenAlias(false, true, grammarAccess.getAssociationNNAccess().getCommaKeyword_4_8_3());
 		match_Association_CommaKeyword_4_0_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_0_3());
 		match_Association_CommaKeyword_4_10_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_10_3());
 		match_Association_CommaKeyword_4_1_3_q = new TokenAlias(false, true, grammarAccess.getAssociationAccess().getCommaKeyword_4_1_3());
@@ -166,7 +184,25 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		List<INode> transitionNodes = collectNodes(fromNode, toNode);
 		for (AbstractElementAlias syntax : transition.getAmbiguousSyntaxes()) {
 			List<INode> syntaxNodes = getNodesFor(transitionNodes, syntax);
-			if (match_Association_CommaKeyword_4_0_3_q.equals(syntax))
+			if (match_AssociationNN_CommaKeyword_4_0_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_AssociationNN_CommaKeyword_4_1_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_1_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_AssociationNN_CommaKeyword_4_2_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_2_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_AssociationNN_CommaKeyword_4_3_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_3_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_AssociationNN_CommaKeyword_4_4_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_4_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_AssociationNN_CommaKeyword_4_5_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_5_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_AssociationNN_CommaKeyword_4_6_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_6_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_AssociationNN_CommaKeyword_4_7_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_7_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_AssociationNN_CommaKeyword_4_8_3_q.equals(syntax))
+				emit_AssociationNN_CommaKeyword_4_8_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
+			else if (match_Association_CommaKeyword_4_0_3_q.equals(syntax))
 				emit_Association_CommaKeyword_4_0_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
 			else if (match_Association_CommaKeyword_4_10_3_q.equals(syntax))
 				emit_Association_CommaKeyword_4_10_3_q(semanticObject, getLastNavigableState(), syntaxNodes);
@@ -284,6 +320,186 @@ public class VertigoDslSyntacticSequencer extends AbstractSyntacticSequencer {
 		}
 	}
 
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     tableName=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     tableName=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     tableName=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     tableName=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     tableName=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     tableName=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     tableName=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     tableName=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     tableName=STRING (ambiguity) 'tableName' ':' tableName=STRING
+	 *     tableName=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_0_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'labelA' ':' labelA=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'labelB' ':' labelB=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'roleA' ':' roleA=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'roleB' ':' roleB=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) 'tableName' ':' tableName=STRING
+	 *     dtDefinitionA=[DtDefinitionType|ID] (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_1_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'labelA' ':' labelA=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'labelB' ':' labelB=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'roleA' ':' roleA=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'roleB' ':' roleB=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) 'tableName' ':' tableName=STRING
+	 *     dtDefinitionB=[DtDefinitionType|ID] (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_2_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     navigabilityA=BooleanString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     navigabilityA=BooleanString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     navigabilityA=BooleanString (ambiguity) 'labelA' ':' labelA=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'labelB' ':' labelB=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     navigabilityA=BooleanString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     navigabilityA=BooleanString (ambiguity) 'roleA' ':' roleA=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'roleB' ':' roleB=STRING
+	 *     navigabilityA=BooleanString (ambiguity) 'tableName' ':' tableName=STRING
+	 *     navigabilityA=BooleanString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_3_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     navigabilityB=BooleanString (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     navigabilityB=BooleanString (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     navigabilityB=BooleanString (ambiguity) 'labelA' ':' labelA=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'labelB' ':' labelB=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     navigabilityB=BooleanString (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     navigabilityB=BooleanString (ambiguity) 'roleA' ':' roleA=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'roleB' ':' roleB=STRING
+	 *     navigabilityB=BooleanString (ambiguity) 'tableName' ':' tableName=STRING
+	 *     navigabilityB=BooleanString (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_4_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     labelA=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     labelA=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     labelA=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     labelA=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     labelA=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     labelA=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     labelA=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     labelA=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     labelA=STRING (ambiguity) 'tableName' ':' tableName=STRING
+	 *     labelA=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_5_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     labelB=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     labelB=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     labelB=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     labelB=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     labelB=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     labelB=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     labelB=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     labelB=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     labelB=STRING (ambiguity) 'tableName' ':' tableName=STRING
+	 *     labelB=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_6_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     roleA=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     roleA=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     roleA=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     roleA=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     roleA=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     roleA=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     roleA=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     roleA=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     roleA=STRING (ambiguity) 'tableName' ':' tableName=STRING
+	 *     roleA=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_7_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
+	/**
+	 * Ambiguous syntax:
+	 *     ','?
+	 *
+	 * This ambiguous syntax occurs at:
+	 *     roleB=STRING (ambiguity) 'dtDefinitionA' ':' dtDefinitionA=[DtDefinitionType|ID]
+	 *     roleB=STRING (ambiguity) 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType|ID]
+	 *     roleB=STRING (ambiguity) 'labelA' ':' labelA=STRING
+	 *     roleB=STRING (ambiguity) 'labelB' ':' labelB=STRING
+	 *     roleB=STRING (ambiguity) 'navigabilityA' ':' navigabilityA=BooleanString
+	 *     roleB=STRING (ambiguity) 'navigabilityB' ':' navigabilityB=BooleanString
+	 *     roleB=STRING (ambiguity) 'roleA' ':' roleA=STRING
+	 *     roleB=STRING (ambiguity) 'roleB' ':' roleB=STRING
+	 *     roleB=STRING (ambiguity) 'tableName' ':' tableName=STRING
+	 *     roleB=STRING (ambiguity) '}' (rule end)
+	 */
+	protected void emit_AssociationNN_CommaKeyword_4_8_3_q(EObject semanticObject, ISynNavigable transition, List<INode> nodes) {
+		acceptNodes(transition, nodes);
+	}
+	
 	/**
 	 * Ambiguous syntax:
 	 *     ','?
