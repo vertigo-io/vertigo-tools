@@ -38,7 +38,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final RuleCall cElementsElementParserRuleCall_2_0 = (RuleCall)cElementsAssignment_2.eContents().get(0);
 		
 		//Model:
-		//	'package' packageString=PackageString elements+=Element*;
+		//	'package' packageString=PackageString
+		//	elements+=Element*;
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'package' packageString=PackageString elements+=Element*
@@ -259,7 +260,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//FileInfo:
-		//	'create' 'FileInfo' name=ID '{' 'storeName' ':' storeName=STRING '}';
+		//	'create' 'FileInfo' name=ID '{'
+		//	'storeName' ':' storeName=STRING
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'FileInfo' name=ID '{' 'storeName' ':' storeName=STRING '}'
@@ -331,8 +334,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//Domain:
-		//	'create' 'Domain' name=ID '{' 'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType' ':'
-		//	storeType?=STRING)? & ('indexType' ':' indexType?=STRING)? & ('unit' ':' unit?=STRING)?) '}';
+		//	'create' 'Domain' name=ID '{'
+		//	'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType' ':' storeType?=STRING)? & ('indexType'
+		//	':' indexType?=STRING)? & ('unit' ':' unit?=STRING)?)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'Domain' name=ID '{' 'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType' ':'
@@ -470,8 +475,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_8 = (Keyword)cGroup.eContents().get(8);
 		
 		//AlterDomain:
-		//	'alter' 'Domain' domain=[DomainType] '{' 'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType'
-		//	':' storeType?=STRING)? & ('indexType' ':' indexType?=STRING)? & ('unit' ':' unit?=STRING)?) '}';
+		//	'alter' 'Domain' domain=[DomainType] '{'
+		//	'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType' ':' storeType?=STRING)? & ('indexType'
+		//	':' indexType?=STRING)? & ('unit' ':' unit?=STRING)?)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'alter' 'Domain' domain=[DomainType] '{' 'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType' ':'
@@ -1285,11 +1292,15 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_11 = (Keyword)cGroup.eContents().get(11);
 		
 		//DtDefinition:
-		//	'create' 'DtDefinition' {DtDefinitionAction} name=ID '{' dtDefinitionStereotype=DtDefinitionStereotype?
-		//	dtDefinitionDataSpace=DtDefinitionDataSpace? dtDefinitionIdField=DtDefinitionIdField?
-		//	dtDefinitionDataFields+=DtDefinitionDataField* dtDefinitionComputedFields+=DtDefinitionComputedField*
-		//	(dtDefinitionSortField=DtDefinitionSortField? & dtDefinitionHandleField=DtDefinitionHandleField? &
-		//	dtDefinitionDisplayField=DtDefinitionDisplayField? & dtDefinitionStaticValues=DtDefinitionStaticValues?) '}';
+		//	'create' 'DtDefinition' {DtDefinitionAction} name=ID '{'
+		//	dtDefinitionStereotype=DtDefinitionStereotype?
+		//	dtDefinitionDataSpace=DtDefinitionDataSpace?
+		//	dtDefinitionIdField=DtDefinitionIdField?
+		//	dtDefinitionDataFields+=DtDefinitionDataField*
+		//	dtDefinitionComputedFields+=DtDefinitionComputedField* (dtDefinitionSortField=DtDefinitionSortField? &
+		//	dtDefinitionHandleField=DtDefinitionHandleField? & dtDefinitionDisplayField=DtDefinitionDisplayField? &
+		//	dtDefinitionStaticValues=DtDefinitionStaticValues?)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'DtDefinition' {DtDefinitionAction} name=ID '{' dtDefinitionStereotype=DtDefinitionStereotype?
@@ -1409,11 +1420,15 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_10 = (Keyword)cGroup.eContents().get(10);
 		
 		//AlterDtDefinition:
-		//	'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{' dtDefinitionStereotype=DtDefinitionStereotype?
-		//	dtDefinitionDataSpace=DtDefinitionDataSpace? dtDefinitionIdField=DtDefinitionIdField?
-		//	dtDefinitionDataFields+=DtDefinitionDataField* dtDefinitionComputedFields+=DtDefinitionComputedField*
-		//	(dtDefinitionSortField=DtDefinitionSortField? & dtDefinitionHandleField=DtDefinitionHandleField? &
-		//	dtDefinitionDisplayField=DtDefinitionDisplayField? & dtDefinitionStaticValues=DtDefinitionStaticValues?) '}';
+		//	'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{'
+		//	dtDefinitionStereotype=DtDefinitionStereotype?
+		//	dtDefinitionDataSpace=DtDefinitionDataSpace?
+		//	dtDefinitionIdField=DtDefinitionIdField?
+		//	dtDefinitionDataFields+=DtDefinitionDataField*
+		//	dtDefinitionComputedFields+=DtDefinitionComputedField* (dtDefinitionSortField=DtDefinitionSortField? &
+		//	dtDefinitionHandleField=DtDefinitionHandleField? & dtDefinitionDisplayField=DtDefinitionDisplayField? &
+		//	dtDefinitionStaticValues=DtDefinitionStaticValues?)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{' dtDefinitionStereotype=DtDefinitionStereotype?
@@ -1592,7 +1607,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('multiplicityA'
 		//	':' multiplicityA=MultiplicityString ','?)? & ('multiplicityB' ':' multiplicityB=MultiplicityString ','?)? &
 		//	('labelA' ':' labelA=STRING ','?)? & ('labelB' ':' labelB=STRING ','?)? & ('roleA' ':' roleA=STRING ','?)? & ('roleB'
-		//	':' roleB=STRING ','?)? & ('type' ':' type=AssociationTypeString)?) '}';
+		//	':' roleB=STRING ','?)? & ('type' ':' type=AssociationTypeString)?)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'Association' name=ID '{' (('fkFieldName' ':' fkFieldName=STRING ','?)? & 'dtDefinitionA' ':'
@@ -1920,7 +1936,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
 		//	':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('labelA' ':'
 		//	labelA=STRING ','?)? & ('labelB' ':' labelB=STRING ','?)? & ('roleA' ':' roleA=STRING ','?)? & ('roleB' ':'
-		//	roleB=STRING ','?)?) '}';
+		//	roleB=STRING ','?)?)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'AssociationNN' name=ID '{' (('tableName' ':' tableName=STRING ','?)? & 'dtDefinitionA' ':'
@@ -2392,8 +2409,13 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//TaskDefinition:
-		//	'create' 'Task' name=ID '{' taskDataSpace=TaskDataSpace? className=TaskClassName request=TaskRequest?
-		//	taskAttributes+=TaskInAttribute* taskAttributes+=TaskOutAttribute? '}';
+		//	'create' 'Task' name=ID '{'
+		//	taskDataSpace=TaskDataSpace?
+		//	className=TaskClassName
+		//	request=TaskRequest?
+		//	taskAttributes+=TaskInAttribute*
+		//	taskAttributes+=TaskOutAttribute?
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'Task' name=ID '{' taskDataSpace=TaskDataSpace? className=TaskClassName request=TaskRequest?
@@ -2470,8 +2492,13 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_9 = (Keyword)cGroup.eContents().get(9);
 		
 		//AlterTaskDefinition:
-		//	'alter' 'Task' taskDefinition=[TaskDefinition] '{' taskDataSpace=TaskDataSpace? className=TaskClassName
-		//	request=TaskRequest? taskAttributes+=TaskInAttribute* taskAttributes+=TaskOutAttribute? '}';
+		//	'alter' 'Task' taskDefinition=[TaskDefinition] '{'
+		//	taskDataSpace=TaskDataSpace?
+		//	className=TaskClassName
+		//	request=TaskRequest?
+		//	taskAttributes+=TaskInAttribute*
+		//	taskAttributes+=TaskOutAttribute?
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'alter' 'Task' taskDefinition=[TaskDefinition] '{' taskDataSpace=TaskDataSpace? className=TaskClassName
@@ -2832,7 +2859,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{'
 		//	(facetDefinitionDtDefinition=FacetDefinitionDtDefinition & facetDefinitionFieldName=FacetDefinitionFieldName &
 		//	facetDefinitonLabel=FacetDefinitionLabel & facetDefinitionRange+=FacetDefinitionRange* &
-		//	facetDefinitionParam+=FacetDefinitionParam*) '}';
+		//	facetDefinitionParam+=FacetDefinitionParam*)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{' (facetDefinitionDtDefinition=FacetDefinitionDtDefinition
@@ -3149,7 +3177,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//	facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
 		//	facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery? &
 		//	facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
-		//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets) '}';
+		//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'FacetedQueryDefinition' {FacetedQueryDefinitionAction} name=ID '{'
@@ -3307,7 +3336,6 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//// TODO : voir si on ne peut pas ici restreindre les �l�ments du STRING aux filters, soit en autocompl�tion soit en validation
-		//
 		//IndexDefinitionIndexCopyToString:
 		//	'{' 'from' ':' string=STRING '}';
 		@Override public ParserRule getRule() { return rule; }
@@ -3422,7 +3450,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		//IndexDefinition:
 		//	'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{' (indexDefinitionKeyConcept=IndexDefinitionKeyConcept &
 		//	indexDefinitionDtIndex=IndexDefinitionDtIndex & indexDefinitionLoaderId=IndexDefinitionLoaderId &
-		//	indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo?) '}';
+		//	indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo?)
+		//	'}';
 		@Override public ParserRule getRule() { return rule; }
 		
 		//'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{' (indexDefinitionKeyConcept=IndexDefinitionKeyConcept &
@@ -3505,8 +3534,16 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cVALUE_OBJECTValueObjectKeyword_9_0 = (Keyword)cVALUE_OBJECTEnumLiteralDeclaration_9.eContents().get(0);
 		
 		//enum DataType:
-		//	INTEGER='Integer' | DOUBLE='Double' | BOOLEAN='Boolean' | STRING='String' | LOCAL_DATE='LocalDate' |
-		//	INSTANT='Instant' | BIG_DECIMAL='BigDecimal' | LONG='Long' | DATA_STREAM='DataStream' | VALUE_OBJECT='ValueObject';
+		//	INTEGER='Integer' |
+		//	DOUBLE='Double' |
+		//	BOOLEAN='Boolean' |
+		//	STRING='String' |
+		//	LOCAL_DATE='LocalDate' |
+		//	INSTANT='Instant' |
+		//	BIG_DECIMAL='BigDecimal' |
+		//	LONG='Long' |
+		//	DATA_STREAM='DataStream' |
+		//	VALUE_OBJECT='ValueObject';
 		public EnumRule getRule() { return rule; }
 		
 		//INTEGER='Integer' | DOUBLE='Double' | BOOLEAN='Boolean' | STRING='String' | LOCAL_DATE='LocalDate' | INSTANT='Instant' |
@@ -3582,7 +3619,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cFALSEFalseKeyword_1_0 = (Keyword)cFALSEEnumLiteralDeclaration_1.eContents().get(0);
 		
 		//enum BooleanString:
-		//	TRUE='\"true\"' | FALSE='\"false\"';
+		//	TRUE='\"true\"' |
+		//	FALSE='\"false\"';
 		public EnumRule getRule() { return rule; }
 		
 		//TRUE='\"true\"' | FALSE='\"false\"'
@@ -3613,7 +3651,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cONE_N1Keyword_3_0 = (Keyword)cONE_NEnumLiteralDeclaration_3.eContents().get(0);
 		
 		//enum MultiplicityString:
-		//	ZERO_ONE='\"0..1\"' | ZERO_N='\"0..*\"' | ONE_ONE='\"1..1\"' | ONE_N='\"1..*\"';
+		//	ZERO_ONE='\"0..1\"' |
+		//	ZERO_N='\"0..*\"' |
+		//	ONE_ONE='\"1..1\"' |
+		//	ONE_N='\"1..*\"';
 		public EnumRule getRule() { return rule; }
 		
 		//ZERO_ONE='\"0..1\"' | ZERO_N='\"0..*\"' | ONE_ONE='\"1..1\"' | ONE_N='\"1..*\"'
@@ -3654,7 +3695,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cMANYQuotationMarkAsteriskQuotationMarkKeyword_2_0 = (Keyword)cMANYEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum CardinalityString:
-		//	ONE='\"1\"' | OPTIONAL='\"?"' | MANY='\"*\"';
+		//	ONE='\"1\"' |
+		//	OPTIONAL='\"?"' |
+		//	MANY='\"*\"';
 		public EnumRule getRule() { return rule; }
 		
 		//ONE='\"1\"' | OPTIONAL='\"?"' | MANY='\"*\"'
@@ -3689,7 +3732,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 		private final Keyword cMANYQuotationMarkAsteriskGreaterThanSignAsteriskQuotationMarkKeyword_2_0 = (Keyword)cMANYEnumLiteralDeclaration_2.eContents().get(0);
 		
 		//enum AssociationTypeString:
-		//	ONE='\"*>1\"' | OPTIONAL='\"*>?"' | MANY='\"*>*\"';
+		//	ONE='\"*>1\"' |
+		//	OPTIONAL='\"*>?"' |
+		//	MANY='\"*>*\"';
 		public EnumRule getRule() { return rule; }
 		
 		//ONE='\"*>1\"' | OPTIONAL='\"*>?"' | MANY='\"*>*\"'
@@ -3884,7 +3929,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 
 	
 	//Model:
-	//	'package' packageString=PackageString elements+=Element*;
+	//	'package' packageString=PackageString
+	//	elements+=Element*;
 	public ModelElements getModelAccess() {
 		return pModel;
 	}
@@ -3921,8 +3967,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	
 	//@Override
 	//terminal STRING:
-	//	'"' (ESCAPED_CHAR | !('\\' | '"'))* '"' | "'" (ESCAPED_CHAR | !('\\' | "'"))* "'" | "`" (ESCAPED_CHAR | !('\\' |
-	//	'`'))* "`";
+	//	'"' (ESCAPED_CHAR | !('\\' | '"'))* '"' |
+	//	"'" (ESCAPED_CHAR | !('\\' | "'"))* "'" |
+	//	"`" (ESCAPED_CHAR | !('\\' | '`'))* "`";
 	public TerminalRule getSTRINGRule() {
 		return tSTRING;
 	}
@@ -3959,7 +4006,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//FileInfo:
-	//	'create' 'FileInfo' name=ID '{' 'storeName' ':' storeName=STRING '}';
+	//	'create' 'FileInfo' name=ID '{'
+	//	'storeName' ':' storeName=STRING
+	//	'}';
 	public FileInfoElements getFileInfoAccess() {
 		return pFileInfo;
 	}
@@ -3969,8 +4018,16 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum DataType:
-	//	INTEGER='Integer' | DOUBLE='Double' | BOOLEAN='Boolean' | STRING='String' | LOCAL_DATE='LocalDate' |
-	//	INSTANT='Instant' | BIG_DECIMAL='BigDecimal' | LONG='Long' | DATA_STREAM='DataStream' | VALUE_OBJECT='ValueObject';
+	//	INTEGER='Integer' |
+	//	DOUBLE='Double' |
+	//	BOOLEAN='Boolean' |
+	//	STRING='String' |
+	//	LOCAL_DATE='LocalDate' |
+	//	INSTANT='Instant' |
+	//	BIG_DECIMAL='BigDecimal' |
+	//	LONG='Long' |
+	//	DATA_STREAM='DataStream' |
+	//	VALUE_OBJECT='ValueObject';
 	public DataTypeElements getDataTypeAccess() {
 		return eDataType;
 	}
@@ -3980,7 +4037,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum BooleanString:
-	//	TRUE='\"true\"' | FALSE='\"false\"';
+	//	TRUE='\"true\"' |
+	//	FALSE='\"false\"';
 	public BooleanStringElements getBooleanStringAccess() {
 		return eBooleanString;
 	}
@@ -3990,8 +4048,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//Domain:
-	//	'create' 'Domain' name=ID '{' 'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType' ':'
-	//	storeType?=STRING)? & ('indexType' ':' indexType?=STRING)? & ('unit' ':' unit?=STRING)?) '}';
+	//	'create' 'Domain' name=ID '{'
+	//	'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType' ':' storeType?=STRING)? & ('indexType'
+	//	':' indexType?=STRING)? & ('unit' ':' unit?=STRING)?)
+	//	'}';
 	public DomainElements getDomainAccess() {
 		return pDomain;
 	}
@@ -4001,8 +4061,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AlterDomain:
-	//	'alter' 'Domain' domain=[DomainType] '{' 'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType'
-	//	':' storeType?=STRING)? & ('indexType' ':' indexType?=STRING)? & ('unit' ':' unit?=STRING)?) '}';
+	//	'alter' 'Domain' domain=[DomainType] '{'
+	//	'dataType' ':' dataType=DataType (('type' ':' type?=STRING)? & ('storeType' ':' storeType?=STRING)? & ('indexType'
+	//	':' indexType?=STRING)? & ('unit' ':' unit?=STRING)?)
+	//	'}';
 	public AlterDomainElements getAlterDomainAccess() {
 		return pAlterDomain;
 	}
@@ -4164,11 +4226,15 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//DtDefinition:
-	//	'create' 'DtDefinition' {DtDefinitionAction} name=ID '{' dtDefinitionStereotype=DtDefinitionStereotype?
-	//	dtDefinitionDataSpace=DtDefinitionDataSpace? dtDefinitionIdField=DtDefinitionIdField?
-	//	dtDefinitionDataFields+=DtDefinitionDataField* dtDefinitionComputedFields+=DtDefinitionComputedField*
-	//	(dtDefinitionSortField=DtDefinitionSortField? & dtDefinitionHandleField=DtDefinitionHandleField? &
-	//	dtDefinitionDisplayField=DtDefinitionDisplayField? & dtDefinitionStaticValues=DtDefinitionStaticValues?) '}';
+	//	'create' 'DtDefinition' {DtDefinitionAction} name=ID '{'
+	//	dtDefinitionStereotype=DtDefinitionStereotype?
+	//	dtDefinitionDataSpace=DtDefinitionDataSpace?
+	//	dtDefinitionIdField=DtDefinitionIdField?
+	//	dtDefinitionDataFields+=DtDefinitionDataField*
+	//	dtDefinitionComputedFields+=DtDefinitionComputedField* (dtDefinitionSortField=DtDefinitionSortField? &
+	//	dtDefinitionHandleField=DtDefinitionHandleField? & dtDefinitionDisplayField=DtDefinitionDisplayField? &
+	//	dtDefinitionStaticValues=DtDefinitionStaticValues?)
+	//	'}';
 	public DtDefinitionElements getDtDefinitionAccess() {
 		return pDtDefinition;
 	}
@@ -4178,11 +4244,15 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AlterDtDefinition:
-	//	'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{' dtDefinitionStereotype=DtDefinitionStereotype?
-	//	dtDefinitionDataSpace=DtDefinitionDataSpace? dtDefinitionIdField=DtDefinitionIdField?
-	//	dtDefinitionDataFields+=DtDefinitionDataField* dtDefinitionComputedFields+=DtDefinitionComputedField*
-	//	(dtDefinitionSortField=DtDefinitionSortField? & dtDefinitionHandleField=DtDefinitionHandleField? &
-	//	dtDefinitionDisplayField=DtDefinitionDisplayField? & dtDefinitionStaticValues=DtDefinitionStaticValues?) '}';
+	//	'alter' 'DtDefinition' dtDefinitione=[DtDefinitionType] '{'
+	//	dtDefinitionStereotype=DtDefinitionStereotype?
+	//	dtDefinitionDataSpace=DtDefinitionDataSpace?
+	//	dtDefinitionIdField=DtDefinitionIdField?
+	//	dtDefinitionDataFields+=DtDefinitionDataField*
+	//	dtDefinitionComputedFields+=DtDefinitionComputedField* (dtDefinitionSortField=DtDefinitionSortField? &
+	//	dtDefinitionHandleField=DtDefinitionHandleField? & dtDefinitionDisplayField=DtDefinitionDisplayField? &
+	//	dtDefinitionStaticValues=DtDefinitionStaticValues?)
+	//	'}';
 	public AlterDtDefinitionElements getAlterDtDefinitionAccess() {
 		return pAlterDtDefinition;
 	}
@@ -4192,7 +4262,10 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum MultiplicityString:
-	//	ZERO_ONE='\"0..1\"' | ZERO_N='\"0..*\"' | ONE_ONE='\"1..1\"' | ONE_N='\"1..*\"';
+	//	ZERO_ONE='\"0..1\"' |
+	//	ZERO_N='\"0..*\"' |
+	//	ONE_ONE='\"1..1\"' |
+	//	ONE_N='\"1..*\"';
 	public MultiplicityStringElements getMultiplicityStringAccess() {
 		return eMultiplicityString;
 	}
@@ -4202,7 +4275,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum CardinalityString:
-	//	ONE='\"1\"' | OPTIONAL='\"?"' | MANY='\"*\"';
+	//	ONE='\"1\"' |
+	//	OPTIONAL='\"?"' |
+	//	MANY='\"*\"';
 	public CardinalityStringElements getCardinalityStringAccess() {
 		return eCardinalityString;
 	}
@@ -4212,7 +4287,9 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//enum AssociationTypeString:
-	//	ONE='\"*>1\"' | OPTIONAL='\"*>?"' | MANY='\"*>*\"';
+	//	ONE='\"*>1\"' |
+	//	OPTIONAL='\"*>?"' |
+	//	MANY='\"*>*\"';
 	public AssociationTypeStringElements getAssociationTypeStringAccess() {
 		return eAssociationTypeString;
 	}
@@ -4227,7 +4304,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('multiplicityA'
 	//	':' multiplicityA=MultiplicityString ','?)? & ('multiplicityB' ':' multiplicityB=MultiplicityString ','?)? &
 	//	('labelA' ':' labelA=STRING ','?)? & ('labelB' ':' labelB=STRING ','?)? & ('roleA' ':' roleA=STRING ','?)? & ('roleB'
-	//	':' roleB=STRING ','?)? & ('type' ':' type=AssociationTypeString)?) '}';
+	//	':' roleB=STRING ','?)? & ('type' ':' type=AssociationTypeString)?)
+	//	'}';
 	public AssociationElements getAssociationAccess() {
 		return pAssociation;
 	}
@@ -4241,7 +4319,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	dtDefinitionA=[DtDefinitionType] ','? & 'dtDefinitionB' ':' dtDefinitionB=[DtDefinitionType] ','? & ('navigabilityA'
 	//	':' navigabilityA=BooleanString ','?)? & ('navigabilityB' ':' navigabilityB=BooleanString ','?)? & ('labelA' ':'
 	//	labelA=STRING ','?)? & ('labelB' ':' labelB=STRING ','?)? & ('roleA' ':' roleA=STRING ','?)? & ('roleB' ':'
-	//	roleB=STRING ','?)?) '}';
+	//	roleB=STRING ','?)?)
+	//	'}';
 	public AssociationNNElements getAssociationNNAccess() {
 		return pAssociationNN;
 	}
@@ -4321,8 +4400,13 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//TaskDefinition:
-	//	'create' 'Task' name=ID '{' taskDataSpace=TaskDataSpace? className=TaskClassName request=TaskRequest?
-	//	taskAttributes+=TaskInAttribute* taskAttributes+=TaskOutAttribute? '}';
+	//	'create' 'Task' name=ID '{'
+	//	taskDataSpace=TaskDataSpace?
+	//	className=TaskClassName
+	//	request=TaskRequest?
+	//	taskAttributes+=TaskInAttribute*
+	//	taskAttributes+=TaskOutAttribute?
+	//	'}';
 	public TaskDefinitionElements getTaskDefinitionAccess() {
 		return pTaskDefinition;
 	}
@@ -4332,8 +4416,13 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//AlterTaskDefinition:
-	//	'alter' 'Task' taskDefinition=[TaskDefinition] '{' taskDataSpace=TaskDataSpace? className=TaskClassName
-	//	request=TaskRequest? taskAttributes+=TaskInAttribute* taskAttributes+=TaskOutAttribute? '}';
+	//	'alter' 'Task' taskDefinition=[TaskDefinition] '{'
+	//	taskDataSpace=TaskDataSpace?
+	//	className=TaskClassName
+	//	request=TaskRequest?
+	//	taskAttributes+=TaskInAttribute*
+	//	taskAttributes+=TaskOutAttribute?
+	//	'}';
 	public AlterTaskDefinitionElements getAlterTaskDefinitionAccess() {
 		return pAlterTaskDefinition;
 	}
@@ -4416,7 +4505,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	'create' 'FacetDefinition' {FacetDefinitionAction} name=ID '{'
 	//	(facetDefinitionDtDefinition=FacetDefinitionDtDefinition & facetDefinitionFieldName=FacetDefinitionFieldName &
 	//	facetDefinitonLabel=FacetDefinitionLabel & facetDefinitionRange+=FacetDefinitionRange* &
-	//	facetDefinitionParam+=FacetDefinitionParam*) '}';
+	//	facetDefinitionParam+=FacetDefinitionParam*)
+	//	'}';
 	public FacetDefinitionElements getFacetDefinitionAccess() {
 		return pFacetDefinition;
 	}
@@ -4492,7 +4582,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//	facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
 	//	facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery? &
 	//	facetedQueryDefinitionListFilterBuilderClass=FacetedQueryDefinitionListFilterBuilderClass &
-	//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets) '}';
+	//	facetedQueryDefinitionFacets=FacetedQueryDefinitionFacets)
+	//	'}';
 	public FacetedQueryDefinitionElements getFacetedQueryDefinitionAccess() {
 		return pFacetedQueryDefinition;
 	}
@@ -4522,7 +4613,6 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	}
 	
 	//// TODO : voir si on ne peut pas ici restreindre les �l�ments du STRING aux filters, soit en autocompl�tion soit en validation
-	//
 	//IndexDefinitionIndexCopyToString:
 	//	'{' 'from' ':' string=STRING '}';
 	public IndexDefinitionIndexCopyToStringElements getIndexDefinitionIndexCopyToStringAccess() {
@@ -4556,7 +4646,8 @@ public class VertigoDslGrammarAccess extends AbstractGrammarElementFinder {
 	//IndexDefinition:
 	//	'create' 'IndexDefinition' {IndexDefinitionAction} name=ID '{' (indexDefinitionKeyConcept=IndexDefinitionKeyConcept &
 	//	indexDefinitionDtIndex=IndexDefinitionDtIndex & indexDefinitionLoaderId=IndexDefinitionLoaderId &
-	//	indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo?) '}';
+	//	indexDefinitionIndexCopyTo=IndexDefinitionIndexCopyTo?)
+	//	'}';
 	public IndexDefinitionElements getIndexDefinitionAccess() {
 		return pIndexDefinition;
 	}
