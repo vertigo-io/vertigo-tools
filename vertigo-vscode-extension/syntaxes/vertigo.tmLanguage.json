@@ -44,7 +44,7 @@
         },
         "definitionType": {
             "name": "storage.type.vertigo",
-            "match": "\\b(Domain|Formatter|Constraint|DtDefinition|Association|Task|FileInfo|IndexDefinition|FacetDefinition|FacetedQueryDefinition)\\b"
+            "match": "\\b(Domain|Formatter|Constraint|DtDefinition|Association|AssociationNN|Task|FileInfo|IndexDefinition|FacetDefinition|FacetedQueryDefinition)\\b"
         },
         "domainParameters": {
             "name": "entity.name.tag.vertigo",
