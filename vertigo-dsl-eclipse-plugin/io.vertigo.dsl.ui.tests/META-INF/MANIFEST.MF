@@ -3,7 +3,7 @@ Automatic-Module-Name: io.vertigo.dsl.ui.tests
 Bundle-ManifestVersion: 2
 Bundle-Name: io.vertigo.dsl.ui.tests
 Bundle-Vendor: Vertigo.io
-Bundle-Version: 3.0.0.1
+Bundle-Version: 3.1.0
 Bundle-SymbolicName: io.vertigo.dsl.ui.tests; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: io.vertigo.dsl.ui,
