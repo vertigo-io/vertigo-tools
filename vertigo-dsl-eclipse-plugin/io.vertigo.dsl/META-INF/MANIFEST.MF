@@ -3,7 +3,7 @@ Automatic-Module-Name: io.vertigo.dsl
 Bundle-ManifestVersion: 2
 Bundle-Name: io.vertigo.dsl
 Bundle-Vendor: Vertigo.io
-Bundle-Version: 3.1.0
+Bundle-Version: 3.1.1
 Bundle-SymbolicName: io.vertigo.dsl; singleton:=true
 Bundle-ActivationPolicy: lazy
 Require-Bundle: org.eclipse.xtext,

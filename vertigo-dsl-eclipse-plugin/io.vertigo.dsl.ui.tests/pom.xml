@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>io.vertigo.dsl</groupId>
 		<artifactId>io.vertigo.dsl.parent</artifactId>
-		<version>3.1.0</version>
+		<version>3.1.1</version>
 	</parent>
 	<artifactId>io.vertigo.dsl.ui.tests</artifactId>
 	<packaging>eclipse-test-plugin</packaging>
