@@ -297,8 +297,8 @@ FacetDefinition:
 
 
 
-FacetedQueryDefinitionKeyConcept:
-	'keyConcept' ':' dtDefinition=[DtDefinitionType] ','?
+FacetedQueryDefinitionDtIndex:
+	'dtIndex' ':' dtDefinition=[DtDefinitionType] ','?
 ;
 
 FacetedQueryDefinitionDomainCriteria:
@@ -324,7 +324,7 @@ FacetedQueryDefinitionFacets:
 
 FacetedQueryDefinition:
 	'create' 'FacetedQueryDefinition' {FacetedQueryDefinitionAction} name=ID '{'
-		(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionKeyConcept &
+		(facetedQueryDefinitionKeyConcept=FacetedQueryDefinitionDtIndex &
 		facetedQueryDefinitionDomainCriteria=FacetedQueryDefinitionDomainCriteria &
 		facetedQueryDefinitionListFilterBuilderQuery=FacetedQueryDefinitionListFilterBuilderQuery &
 		facetedQueryDefinitionGeoSearchQuery=FacetedQueryDefinitionGeoSearchQuery? &

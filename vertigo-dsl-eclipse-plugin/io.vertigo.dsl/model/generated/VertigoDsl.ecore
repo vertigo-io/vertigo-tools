@@ -263,7 +263,7 @@
         eType="#//FacetDefinitionParamString" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FacetDefinition" eSuperTypes="#//Element"/>
-  <eClassifiers xsi:type="ecore:EClass" name="FacetedQueryDefinitionKeyConcept">
+  <eClassifiers xsi:type="ecore:EClass" name="FacetedQueryDefinitionDtIndex">
     <eStructuralFeatures xsi:type="ecore:EReference" name="dtDefinition" eType="#//DtDefinitionType"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="FacetedQueryDefinitionDomainCriteria">
@@ -342,7 +342,7 @@
   <eClassifiers xsi:type="ecore:EClass" name="FacetedQueryDefinitionAction" eSuperTypes="#//FacetedQueryDefinition">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="facetedQueryDefinitionKeyConcept"
-        eType="#//FacetedQueryDefinitionKeyConcept" containment="true"/>
+        eType="#//FacetedQueryDefinitionDtIndex" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="facetedQueryDefinitionDomainCriteria"
         eType="#//FacetedQueryDefinitionDomainCriteria" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="facetedQueryDefinitionListFilterBuilderQuery"
