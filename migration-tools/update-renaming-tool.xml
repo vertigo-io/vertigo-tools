@@ -11,7 +11,6 @@
 	<property name="src.path" value="." />
 
 	<target name="4.1.0 to 4.2.0" description="Usefull renames from 4.1.0 to 4.2.0">
-
 		<echo message="Renamed in *.java : io.vertigo.datamodel.structure.definitions.Formatter to io.vertigo.datamodel.smarttype.definitions.Formatter" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure.definitions.Formatter" value="io.vertigo.datamodel.smarttype.definitions.Formatter" summary="true">
 			<include name="**/*.java" />
@@ -25,45 +24,55 @@
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure." value="io.vertigo.datamodel.data." summary="true">
 			<include name="**/*.java" />
 		</replace>
-
+		
 		<echo message="Renamed in *.java : DtObjectUtil/DataObjectUtil to DataUtil" />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="DataObjectUtil" value="DataUtil" summary="true">
+		<replace dir="${src.path}" encoding="${src.encoding}" token="DtObjectUtil" value="DataUtil" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		
+		<echo message="Renamed in *.java : DtField to DataField" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="DtField" value="DataField" summary="true">
+			<include name="**/*.java" />
+		</replace>
+
+		<echo message="Renamed in *.java : findDtDefinition to findDataDefinition" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="findDtDefinition" value="findDataDefinition" summary="true">
 			<include name="**/*.java" />
 		</replace>
 
 		<echo message="Renamed in *.java : DtDefinition to DataDefinition" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
 			<fileset dir="${src.path}">
 				<include name="**/*.java" />
 			</fileset>
-			<regexp pattern="(\s*)DtDefinition" />
+			<regexp pattern="([\s\.&lt;]+)DtDefinition" />
 			<substitution expression="\1DataDefinition" />
 		</replaceregexp>
-
+		
 		<echo message="Renamed in *.java : DtObject to Data" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
 			<fileset dir="${src.path}">
 				<include name="**/*.java" />
 			</fileset>
-			<regexp pattern="(\s*DtObject" />
+			<regexp pattern="([\s\.&lt;]+)DtObject" />
 			<substitution expression="\1Data" />
 		</replaceregexp>
-
+		
 		<echo message="Renamed in *DAO.java : createDtObjectUID(/createDataUID( to createUID(" />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="createDataUID(" value="createUID(" summary="true">
+		<replace dir="${src.path}" encoding="${src.encoding}" token="createDtObjectUID(" value="createUID(" summary="true">
 			<include name="**/*DAO.java" />
 		</replace>
-
+		
 		<echo message="Rollback in *.java : DataDefinitions to DtDefinitions" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="DataDefinitions" value="DtDefinitions" summary="true">
 			<include name="**/*.java" />
 		</replace>
-
+		
 		<echo message="Rollback in *.java : primaryDataDefinitionName to primaryDtDefinitionName" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="primaryDataDefinitionName" value="primaryDtDefinitionName" summary="true">
 			<include name="**/*.java" />
 		</replace>
-
+		
 		<echo message="Rollback in *.java : foreignDataDefinitionName to foreignDtDefinitionName" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="foreignDataDefinitionName" value="foreignDtDefinitionName" summary="true">
 			<include name="**/*.java" />
