@@ -9,7 +9,7 @@
 	<!-- =================================================================== -->
 	<property name="src.encoding" value="utf8" />
 	<property name="src.path" value="." />
-	
+
 	<target name="2.1.0 to 3.0.0" description="Usefull renames from 2.1.0 to 3.0.0">
 
 		<echo message="Renamed in *.java : io.vertigo.app. to io.vertigo.core.node." />
@@ -19,45 +19,45 @@
 
 		<echo message="Renamed in *.java : io.vertigo.core.component. to io.vertigo.core.node.component." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.core.component." value="io.vertigo.core.node.component." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 
 		<echo message="Renamed in *.java : io.vertigo.lang. to io.vertigo.core.lang." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.lang." value="io.vertigo.core.lang." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.jsp (error page) : io.vertigo.lang. to io.vertigo.core.lang." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.lang." value="io.vertigo.core.lang." summary="true">
-			 <include name="**/*.jsp" />
+			<include name="**/*.jsp" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.util. to io.vertigo.core.util." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.util." value="io.vertigo.core.util." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.core.node.Home to io.vertigo.core.node.Node" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.core.node.Home" value="io.vertigo.core.node.Node" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<replace dir="${src.path}" encoding="${src.encoding}" token="Home.getApp()." value="Node.getNode()." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : AutoCloseableApp to AutoCloseableNode" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="AutoCloseableApp" value="AutoCloseableNode" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.yaml : envIndex: to enIndexPrefix:" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="envIndex:" value="enIndexPrefix:" summary="true">
 			<include name="**/*.yaml" />
 		</replace>
-		
+
 		<echo message="Renamed in *.yaml : - webservices.apiPrefix: to - webservices.javalin:" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="- webservices.apiPrefix:" value="- webservices.javalin:" summary="true">
 			<include name="**/*.yaml" />
 		</replace>
-		
+
 		<echo message="Renamed in *.ksp : required:&quot;true&quot; to cardinality:&quot;1&quot; or &quot;*&quot;" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
 			<fileset dir="${src.path}">
@@ -81,158 +81,158 @@
 			<regexp pattern="(domain\s*:\s*Do[a-z]+\s.*)required\s*:\s*&quot;false&quot;" />
 			<substitution expression="\1cardinality: &quot;?&quot;" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.dynamo.collections. to io.vertigo.datafactory.collections." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamo.collections." value="io.vertigo.datafactory.collections." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.dynamo.search. to io.vertigo.datafactory.search." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamo.search." value="io.vertigo.datafactory.search." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.dynamo.impl.search. to io.vertigo.datafactory.impl.search." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamo.impl.search." value="io.vertigo.datafactory.impl.search." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : *.search.metamodel to *.search.definitions" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token=".search.metamodel." value=".search.definitions." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : *.filestore.metamodel to *.filestore.definitions" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token=".filestore.metamodel." value=".filestore.definitions." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : *.structure.metamodel to *.structure.definitions" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token=".structure.metamodel." value=".structure.definitions." summary="true">
-			 <include name="**/*.java" />
-		</replace>		
+			<include name="**/*.java" />
+		</replace>
 		<echo message="Renamed in *.java : *.task.metamodel to *.task.definitions" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token=".task.metamodel." value=".task.definitions." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : *.collections.metamodel to *.collections.definitions" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token=".collections.metamodel." value=".collections.definitions." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.commons.command.CommandDefinition to io.vertigo.commons.command.definitions.CommandDefinition" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.commons.command.CommandDefinition" value="io.vertigo.commons.command.definitions.CommandDefinition" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.commons.command.CommandParam to io.vertigo.commons.command.definitions.CommandParam" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.commons.command.CommandParam" value="io.vertigo.commons.command.definitions.CommandParam" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-		
-		
+
+
 		<echo message="Renamed in *.java : TimeSeriesDataBaseManager to TimeSeriesManager" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="TimeSeriesDataBaseManager" value="TimeSeriesManager" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<replace dir="${src.path}" encoding="${src.encoding}" token="timeSeriesDataBaseManager" value="timeSeriesManager" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.dynamox.domain.constraint. to io.vertigo.datamodel.impl.smarttype.constraint." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamox.domain.constraint." value="io.vertigo.datamodel.impl.smarttype.constraint." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.dynamox.domain.formatter. to io.vertigo.datamodel.impl.smarttype.formatter." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamox.domain.formatter." value="io.vertigo.datamodel.impl.smarttype.formatter." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.social.services.notification.NotificationServices to io.vertigo.social.notification.NotificationManager" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.social.services.notification.NotificationServices" value="io.vertigo.social.notification.NotificationManager" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.social.services.comment.CommentServices to io.vertigo.social.comment.CommentManager" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.social.services.comment.CommentServices" value="io.vertigo.social.comment.CommentManager" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.social.services.handle.HandleServices to io.vertigo.social.handle.HandleManager" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.social.services.handle.HandleServices" value="io.vertigo.social.handle.HandleManager" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.social.services. to io.vertigo.social." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.social.services." value="io.vertigo.social." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.geo.services.geosearch.GeoSearchServices to io.vertigo.geo.geosearch.GeoSearchManager" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.geo.services.geosearch.GeoSearchServices" value="io.vertigo.geo.geosearch.GeoSearchManager" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.geo.services. to io.vertigo.geo." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.geo.services." value="io.geo.social." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.datamodel.smarttype.ModelDefinitionProvider to io.vertigo.datamodel.impl.smarttype.ModelDefinitionProvider" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.smarttype.ModelDefinitionProvider" value="io.vertigo.datamodel.impl.smarttype.ModelDefinitionProvider" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : ModelManager to SmartTypeManager (lower and upper case)" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="ModelManager" value="SmartTypeManager" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<replace dir="${src.path}" encoding="${src.encoding}" token="modelManager" value="smartTypeManager" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : Assertion.checkArgument( to Assertion.check().isTrue(" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="Assertion.checkArgument(" value="Assertion.check().isTrue(" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : Assertion.checkState( to Assertion.check().isTrue(" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="Assertion.checkState(" value="Assertion.check().isTrue(" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : Assertion.checkNotNull( to Assertion.check().isNotNull(" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="Assertion.checkNotNull(" value="Assertion.check().isNotNull(" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : Assertion.checkArgNotEmpty( to Assertion.check().isNotBlank(" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="Assertion.checkArgNotEmpty(" value="Assertion.check().isNotBlank(" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : StringUtil.isEmpty( to StringUtil.isBlank(" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="StringUtil.isEmpty(" value="StringUtil.isBlank(" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.html : VUi.methods.httpPostAjax to VUiPage.httpPostAjax" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="VUi.methods.httpPostAjax" value="VUiPage.httpPostAjax" summary="true">
-			 <include name="**/*.html" />
+			<include name="**/*.html" />
 		</replace>
-		
+
 		<echo message="Renamed in web.xml : io.vertigo.vega.plugins.webservice.webserver.sparkjava.VegaSparkFilter to io.vertigo.vega.plugins.webservice.webserver.javalin.VegaJavalinFilter" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.vega.plugins.webservice.webserver.sparkjava.VegaSparkFilter" value="io.vertigo.vega.plugins.webservice.webserver.javalin.VegaJavalinFilter" summary="true">
-			 <include name="**/web.xml" />
+			<include name="**/web.xml" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.datamodel.impl.smarttype.constraint. to io.vertigo.basics.constraint." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.impl.smarttype.constraint." value="io.vertigo.basics.constraint." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.datamodel.impl.smarttype.formatter. to io.vertigo.basics.formatter." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.impl.smarttype.formatter." value="io.vertigo.basics.formatter." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.dynamox.task. to io.vertigo.basics.task." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamox.task." value="io.vertigo.basics.task." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.ksp : io.vertigo.dynamox.task. to io.vertigo.basics.task." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamox.task." value="io.vertigo.basics.task." summary="true">
-			 <include name="**/*.ksp" />
+			<include name="**/*.ksp" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : io.vertigo.dynamox.search.AbstractSqlSearchLoader to io.vertigo.datafactory.impl.search.loader.AbstractSqlSearchLoader" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamox.search.AbstractSqlSearchLoader" value="io.vertigo.datafactory.impl.search.loader.AbstractSqlSearchLoader" summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
-    
+
 	</target>
-	
+
 	<target name="1.1.3 to 2.0.0" description="Usefull renames from 1.1.3 to 2.0.0">
 		<echo message="Renamed in *.java : io.vertigo.mail. to io.vertigo.social.mail." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.mail." value="io.vertigo.social.mail." summary="true">
@@ -247,15 +247,15 @@
 			<substitution expression="\1" />
 		</replaceregexp>
 	</target>
-	
+
 	<target name="CONST Java Entity to CamelCase java" description="Replace old java definitions to CamelCase definition new in vertigo 2.0">
-			<copy todir="${src.path}\generated-java" encoding="${src.encoding}" overwrite="true">
-				<fileset dir="${src.path}">
-					<include name="**/*.java" />
-				</fileset>
-				<filterchain>
-				 	<tokenfilter>
-				 		<scriptfilter language="javascript">
+		<copy todir="${src.path}\generated-java" encoding="${src.encoding}" overwrite="true">
+			<fileset dir="${src.path}">
+				<include name="**/*.java" />
+			</fileset>
+			<filterchain>
+				<tokenfilter>
+					<scriptfilter language="javascript">
 							function upperCamelCase(str) {
 							  return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
 							   if (p1) { return p1.toUpperCase();} 
@@ -280,19 +280,19 @@
 							});
 						    self.setToken(result);
 						</scriptfilter>
-					</tokenfilter>
-				</filterchain>
-			</copy> 
-		</target>
-		
+				</tokenfilter>
+			</filterchain>
+		</copy>
+	</target>
+
 	<target name="CONST KSP to CamelCase ksp" description="Replace old ksp definitions to CamelCase definition new in vertigo 2.0">
 		<copy todir="${src.path}\generated-ksp" encoding="${src.encoding}" overwrite="true">
 			<fileset dir="${src.path}">
 				<include name="**/*.ksp" />
 			</fileset>
 			<filterchain>
-			 	<tokenfilter>
-			 		<scriptfilter language="javascript">
+				<tokenfilter>
+					<scriptfilter language="javascript">
 						function upperCamelCase(str) {
 						  return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
 						   if (p1) { return p1.toUpperCase();} 
@@ -335,19 +335,19 @@
 					</scriptfilter>
 				</tokenfilter>
 			</filterchain>
-		</copy> 
+		</copy>
 	</target>
-	
+
 	<!-- ====================================================================== -->
 	<!-- Replace quarto's ksp definitions by a Java definition provider         -->
 	<!-- ====================================================================== -->
 	<target name="0.9.3 to 0.9.4 publisher definitions from ksp to Java" description="Replace quarto's ksp definitions by a Java definition provider">
-		<copy todir="${src.path}" >
+		<copy todir="${src.path}">
 			<fileset dir="${src.path}">
 				<include name="**/*.ksp" />
-				<containsregexp expression="create(\s)*(PublisherNode|PublisherDefinition)"/>
+				<containsregexp expression="create(\s)*(PublisherNode|PublisherDefinition)" />
 			</fileset>
-			<globmapper from="*.ksp" to="*.ksp2java" casesensitive="no"/>
+			<globmapper from="*.ksp" to="*.ksp2java" casesensitive="no" />
 		</copy>
 
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
@@ -358,13 +358,13 @@
 			<substitution expression=".build();${line.separator}${line.separator}" />
 		</replaceregexp>
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-					<fileset dir="${src.path}">
-						<include name="**/*.ksp2java" />
-					</fileset>
-					<regexp pattern="\n\s*\}" />
-					<substitution expression=".build();${line.separator}${line.separator}}" />
+			<fileset dir="${src.path}">
+				<include name="**/*.ksp2java" />
+			</fileset>
+			<regexp pattern="\n\s*\}" />
+			<substitution expression=".build();${line.separator}${line.separator}}" />
 		</replaceregexp>
-		
+
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
 				<include name="**/*.ksp2java" />
@@ -452,7 +452,7 @@
 
 		<echo message="Renamed in *.java : io.vertigo.core.spaces.component. to io.vertigo.core.component." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.core.spaces.component." value="io.vertigo.core.component." summary="true">
-			 <include name="**/*.java" />
+			<include name="**/*.java" />
 		</replace>
 
 		<echo message="Renamed in *.java : new WrappedException(.*, e); to WrappedException.wrap(e, msg)" />
@@ -463,7 +463,7 @@
 			<regexp pattern="new WrappedException\((&quot;.+&quot;), e\);" />
 			<substitution expression="WrappedException.wrap(e, \1);" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.java : new WrappedException(e); to WrappedException.wrap(e);" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
 			<fileset dir="${src.path}">
@@ -472,7 +472,7 @@
 			<regexp pattern="throw new WrappedException\((.+)\);" />
 			<substitution expression="throw WrappedException.wrap\(\1\);" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.java : WrappedException.wrapIfNeeded(e); to WrappedException.wrap(e);" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
 			<fileset dir="${src.path}">
@@ -506,7 +506,7 @@
 			<regexp pattern="\.getStringValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
 			<substitution expression=".getParam(&quot;\1&quot;).getValueAsString()" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.java : .getBooleanValue(&quot;([a-zA-Z0-9\.]+)&quot;); to .getParam(\1).getValueAsBoolean" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -515,7 +515,7 @@
 			<regexp pattern="\.getBooleanValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
 			<substitution expression=".getParam(&quot;\1&quot;).getValueAsBoolean()" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.java : .getIntValue(&quot;([a-zA-Z0-9\.]+)&quot;); to .getParam(\1).getValueAsInt" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -524,7 +524,7 @@
 			<regexp pattern="\.getIntValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
 			<substitution expression=".getParam(&quot;\1&quot;).getValueAsInt()" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.java : .getLongValue(&quot;([a-zA-Z0-9\.]+)&quot;); to .getParam(\1).getValueAsLong" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -533,7 +533,7 @@
 			<regexp pattern="\.getLongValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
 			<substitution expression=".getParam(&quot;\1&quot;).getValueAsLong()" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).account to io.vertigo.x.account.\1" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -542,7 +542,7 @@
 			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.account" />
 			<substitution expression="io.vertigo.x.account.\1" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).audit to io.vertigo.x.audit.\1" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -551,7 +551,7 @@
 			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.audit" />
 			<substitution expression="io.vertigo.x.audit.\1" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).comment to io.vertigo.x.comment.\1" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -560,7 +560,7 @@
 			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.comment" />
 			<substitution expression="io.vertigo.x.comment.\1" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).notification to io.vertigo.x.notification.\1" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -569,7 +569,7 @@
 			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.notification" />
 			<substitution expression="io.vertigo.x.notification.\1" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).rules to io.vertigo.x.rules.\1" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -578,8 +578,8 @@
 			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.rules" />
 			<substitution expression="io.vertigo.x.rules.\1" />
 		</replaceregexp>
-		
-		
+
+
 		<echo message="Renamed in *.xml : api=&quot;([a-zA-Z]+)Manager&quot; class=&quot;io.vertigo.x.([a-zA-Z\.]+)Manager to api=&quot;\1Services&quot; class=&quot;io.vertigo.x.\2Services" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -588,12 +588,12 @@
 			<regexp pattern="api=&quot;([a-zA-Z]+)Manager&quot; class=&quot;io\.vertigo\.x\.([a-zA-Z\.]+)Manager" />
 			<substitution expression="api=&quot;\1Services&quot; class=&quot;io.vertigo.x.\2Services" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.xml : api=&quot;WorkflowServices&quot; class=&quot;io.vertigo.x.impl.workflow.WorkflowServices to api=&quot;WorkflowManager&quot; class=&quot;io.vertigo.x.impl.workflow.WorkflowManager" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="api=&quot;WorkflowServices&quot; class=&quot;io.vertigo.x.impl.workflow.WorkflowServices" value="api=&quot;WorkflowManager&quot; class=&quot;io.vertigo.x.impl.workflow.WorkflowManager" summary="true">
 			<include name="**/*.xml" />
 		</replace>
-		
+
 		<echo message="Renamed in *.xml : io.vertigo.x.account.impl.services.AccountServicesImpl to io.vertigo.x.account.impl.services.AccountServicesImpl" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.x.account.impl.services.AccountServicesImpl" value="io.vertigo.x.account.impl.services.AccountServicesImpl" summary="true">
 			<include name="**/*.xml" />
@@ -825,7 +825,7 @@
 			<include name="**/pom.xml" />
 		</replace>
 	</target>
-	
+
 	<target name="0.8.1 to 0.8.2 (task)" description="Usefull renames from 0.8.1 to 0.8.2 (task attributes)">
 		<echo message="Renamed in *.ksp : attribute .... inOut:'in' to in ..." />
 		<replaceregexp encoding="${src.encoding}" flags="gi" byline="true">
