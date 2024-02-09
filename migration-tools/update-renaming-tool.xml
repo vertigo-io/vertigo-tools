@@ -10,6 +10,66 @@
 	<property name="src.encoding" value="utf8" />
 	<property name="src.path" value="." />
 
+	<target name="4.1.0 to 4.2.0" description="Usefull renames from 4.1.0 to 4.2.0">
+
+		<echo message="Renamed in *.java : io.vertigo.datamodel.structure.definitions.Formatter to io.vertigo.datamodel.smarttype.definitions.Formatter" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure.definitions.Formatter" value="io.vertigo.datamodel.smarttype.definitions.Formatter" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : io.vertigo.datamodel.structure.definitions.Constraint to io.vertigo.datamodel.smarttype.definitions.Constraint" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure.definitions.Constraint" value="io.vertigo.datamodel.smarttype.definitions.Constraint" summary="true">
+			<include name="**/*.java" />
+		</replace>
+
+		<echo message="Renamed in *.java : io.vertigo.datamodel.structure. to io.vertigo.datamodel.data." />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure." value="io.vertigo.datamodel.data." summary="true">
+			<include name="**/*.java" />
+		</replace>
+
+		<echo message="Renamed in *.java : DtObjectUtil/DataObjectUtil to DataUtil" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="DataObjectUtil" value="DataUtil" summary="true">
+			<include name="**/*.java" />
+		</replace>
+
+		<echo message="Renamed in *.java : DtDefinition to DataDefinition" />
+		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+			<fileset dir="${src.path}">
+				<include name="**/*.java" />
+			</fileset>
+			<regexp pattern="(\s*)DtDefinition" />
+			<substitution expression="\1DataDefinition" />
+		</replaceregexp>
+
+		<echo message="Renamed in *.java : DtObject to Data" />
+		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+			<fileset dir="${src.path}">
+				<include name="**/*.java" />
+			</fileset>
+			<regexp pattern="(\s*DtObject" />
+			<substitution expression="\1Data" />
+		</replaceregexp>
+
+		<echo message="Renamed in *DAO.java : createDtObjectUID(/createDataUID( to createUID(" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="createDataUID(" value="createUID(" summary="true">
+			<include name="**/*DAO.java" />
+		</replace>
+
+		<echo message="Rollback in *.java : DataDefinitions to DtDefinitions" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="DataDefinitions" value="DtDefinitions" summary="true">
+			<include name="**/*.java" />
+		</replace>
+
+		<echo message="Rollback in *.java : primaryDataDefinitionName to primaryDtDefinitionName" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="primaryDataDefinitionName" value="primaryDtDefinitionName" summary="true">
+			<include name="**/*.java" />
+		</replace>
+
+		<echo message="Rollback in *.java : foreignDataDefinitionName to foreignDtDefinitionName" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="foreignDataDefinitionName" value="foreignDtDefinitionName" summary="true">
+			<include name="**/*.java" />
+		</replace>
+	</target>
+
 	<target name="2.1.0 to 3.0.0" description="Usefull renames from 2.1.0 to 3.0.0">
 
 		<echo message="Renamed in *.java : io.vertigo.app. to io.vertigo.core.node." />
@@ -256,30 +316,30 @@
 			<filterchain>
 				<tokenfilter>
 					<scriptfilter language="javascript">
-							function upperCamelCase(str) {
-							  return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
-							   if (p1) { return p1.toUpperCase();} 
-							   if (p2) { return p2.toUpperCase();} 
-							   return match.toLowerCase();
-							  });
-							}
-				 			function lowerCamelCase(str) {
-							  return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
-							   if (p1) { return p1.toLowerCase();} 
-							   if (p2) { return p2.toUpperCase();} 
-							   return match.toLowerCase();
-							  });
-							}
-				 			//replace domain
-							var result = self.getToken().replace(/((?:domain|name|dtDefinitionA|dtDefinitionB|primaryDtDefinitionName|foreignDtDefinitionName) = ")([A-Z0-9_]+)"/g, function(match, p1, p2, index) {
-							   return p1+upperCamelCase(p2)+"\"";
-							});
-				 			//replace in methods
-				 			result = result.replace(/((?:createDtListURIForNNAssociation|createUID)\(this, ")([A-Z0-9_]+)"/g, function(match, p1, p2, after, index) {
-							   return p1+lowerCamelCase(p2)+"\"";
-							});
-						    self.setToken(result);
-						</scriptfilter>
+                            function upperCamelCase(str) {
+                              return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
+                               if (p1) { return p1.toUpperCase();} 
+                               if (p2) { return p2.toUpperCase();} 
+                               return match.toLowerCase();
+                              });
+                            }
+                            function lowerCamelCase(str) {
+                              return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
+                               if (p1) { return p1.toLowerCase();} 
+                               if (p2) { return p2.toUpperCase();} 
+                               return match.toLowerCase();
+                              });
+                            }
+                            //replace domain
+                            var result = self.getToken().replace(/((?:domain|name|dtDefinitionA|dtDefinitionB|primaryDtDefinitionName|foreignDtDefinitionName) = ")([A-Z0-9_]+)"/g, function(match, p1, p2, index) {
+                               return p1+upperCamelCase(p2)+"\"";
+                            });
+                            //replace in methods
+                            result = result.replace(/((?:createDtListURIForNNAssociation|createUID)\(this, ")([A-Z0-9_]+)"/g, function(match, p1, p2, after, index) {
+                               return p1+lowerCamelCase(p2)+"\"";
+                            });
+                            self.setToken(result);
+                        </scriptfilter>
 				</tokenfilter>
 			</filterchain>
 		</copy>
@@ -293,46 +353,46 @@
 			<filterchain>
 				<tokenfilter>
 					<scriptfilter language="javascript">
-						function upperCamelCase(str) {
-						  return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
-						   if (p1) { return p1.toUpperCase();} 
-						   if (p2) { return p2.toUpperCase();} 
-						   return match.toLowerCase();
-						  });
-						}
-			 			function lowerCamelCase(str) {
-						  return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
-						   if (p1) { return p1.toLowerCase();} 
-						   if (p2) { return p2.toUpperCase();} 
-						   return match.toLowerCase();
-						  });
-						}
-			 			//replace definitions
-						var result = self.getToken().replace(/(\W|^(?:create|alter)\s+)([A-Z][a-zA-Z]+\s+)([A-Z0-9_]+)(\s*\{)/g, function(match, verb, p1, p2, after, index) {
-						   return verb+p1+upperCamelCase(p2)+after;
-						});
-			 			//replace fields and tasks attributes
-			 			result = result.replace(/(\W(?:id|field|computed|range|indexCopyTo|attribute)\s+)([A-Z0-9_]+)(\s*\{)/g, function(match, p1, p2, after, index) {
-						   return p1+lowerCamelCase(p2)+after;
-						});
-			 			//replace attributes
-			 			result = result.replace(/(\W(?:formatter|dtDefinition|keyConcept|dtIndex|domain|domainCriteria|dtDefinitionA|dtDefinitionB))(\s*:\s*)([A-Z0-9_]+\W*)/g, function(match, attr, p1, p2, index) {
-			 			   return attr+p1+upperCamelCase(p2);
-			 			});
-			 			//replace lower attributes
-			 			result = result.replace(/(\W(?:fkFieldName|fieldName|sortField|displayField))(\s*:\s*)([\"A-Z0-9_]+\W*)/g, function(match, attr, p1, p2, index) {
-			 			   return attr+p1+lowerCamelCase(p2);
-			 			});
-			 			//replace multiple attributes
-			 			result = result.replace(/(\W(?:facets|constraint|from))(\s*:\s*)([\[\]\s,A-Z0-9_]+\W*)/g, function(match, attr, p1, p2, index) {
-			 			   return attr+p1+upperCamelCase(p2);
-			 			});
-			 			//replace lower request attributes
-			 			result = result.replace(/\#([A-Z0-9_\.]+)\#/g, function(match, p1, index) {
-			 				return "#"+lowerCamelCase(p1)+"#";
-			 			});
-					    self.setToken(result);
-					</scriptfilter>
+                        function upperCamelCase(str) {
+                          return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
+                           if (p1) { return p1.toUpperCase();} 
+                           if (p2) { return p2.toUpperCase();} 
+                           return match.toLowerCase();
+                          });
+                        }
+                        function lowerCamelCase(str) {
+                          return str.replace(/((?:\W|^)\w)|_+(\w)|\w/g, function(match, p1, p2, index) {
+                           if (p1) { return p1.toLowerCase();} 
+                           if (p2) { return p2.toUpperCase();} 
+                           return match.toLowerCase();
+                          });
+                        }
+                        //replace definitions
+                        var result = self.getToken().replace(/(\W|^(?:create|alter)\s+)([A-Z][a-zA-Z]+\s+)([A-Z0-9_]+)(\s*\{)/g, function(match, verb, p1, p2, after, index) {
+                           return verb+p1+upperCamelCase(p2)+after;
+                        });
+                        //replace fields and tasks attributes
+                        result = result.replace(/(\W(?:id|field|computed|range|indexCopyTo|attribute)\s+)([A-Z0-9_]+)(\s*\{)/g, function(match, p1, p2, after, index) {
+                           return p1+lowerCamelCase(p2)+after;
+                        });
+                        //replace attributes
+                        result = result.replace(/(\W(?:formatter|dtDefinition|keyConcept|dtIndex|domain|domainCriteria|dtDefinitionA|dtDefinitionB))(\s*:\s*)([A-Z0-9_]+\W*)/g, function(match, attr, p1, p2, index) {
+                           return attr+p1+upperCamelCase(p2);
+                        });
+                        //replace lower attributes
+                        result = result.replace(/(\W(?:fkFieldName|fieldName|sortField|displayField))(\s*:\s*)([\"A-Z0-9_]+\W*)/g, function(match, attr, p1, p2, index) {
+                           return attr+p1+lowerCamelCase(p2);
+                        });
+                        //replace multiple attributes
+                        result = result.replace(/(\W(?:facets|constraint|from))(\s*:\s*)([\[\]\s,A-Z0-9_]+\W*)/g, function(match, attr, p1, p2, index) {
+                           return attr+p1+upperCamelCase(p2);
+                        });
+                        //replace lower request attributes
+                        result = result.replace(/\#([A-Z0-9_\.]+)\#/g, function(match, p1, index) {
+                            return "#"+lowerCamelCase(p1)+"#";
+                        });
+                        self.setToken(result);
+                    </scriptfilter>
 				</tokenfilter>
 			</filterchain>
 		</copy>
@@ -371,23 +431,23 @@
 			</fileset>
 			<regexp pattern="package\s*([A-Za-z0-9\.]*)\.([A-Za-z0-9]+)" />
 			<substitution expression="package \1.\2;
-				${line.separator}import java.util.List;
-				${line.separator}import io.vertigo.core.definition.Definition;
-				${line.separator}import io.vertigo.core.definition.DefinitionSpace;
-				${line.separator}import io.vertigo.core.definition.SimpleDefinitionProvider;
-				${line.separator}import io.vertigo.quarto.services.publisher.metamodel.PublisherDataDefinition;
-				${line.separator}import io.vertigo.quarto.services.publisher.metamodel.PublisherNodeDefinition;
-				${line.separator}import io.vertigo.quarto.services.publisher.metamodel.PublisherNodeDefinitionBuilder;
-				${line.separator}import io.vertigo.util.ListBuilder;
-				${line.separator}
-				${line.separator}public final class \2PublisherDefinitionProvider implements SimpleDefinitionProvider {
-				${line.separator}
-				${line.separator}@Override
-				${line.separator}public List&lt;Definition&gt; provideDefinitions(final DefinitionSpace definitionSpace) {
-				${line.separator}		return new ListBuilder&lt;Definition&gt;()
-				${line.separator}				.add(/*TODO*/)
-				${line.separator}				.build();
-				${line.separator}	} " />
+                ${line.separator}import java.util.List;
+                ${line.separator}import io.vertigo.core.definition.Definition;
+                ${line.separator}import io.vertigo.core.definition.DefinitionSpace;
+                ${line.separator}import io.vertigo.core.definition.SimpleDefinitionProvider;
+                ${line.separator}import io.vertigo.quarto.services.publisher.metamodel.PublisherDataDefinition;
+                ${line.separator}import io.vertigo.quarto.services.publisher.metamodel.PublisherNodeDefinition;
+                ${line.separator}import io.vertigo.quarto.services.publisher.metamodel.PublisherNodeDefinitionBuilder;
+                ${line.separator}import io.vertigo.util.ListBuilder;
+                ${line.separator}
+                ${line.separator}public final class \2PublisherDefinitionProvider implements SimpleDefinitionProvider {
+                ${line.separator}
+                ${line.separator}@Override
+                ${line.separator}public List&lt;Definition&gt; provideDefinitions(final DefinitionSpace definitionSpace) {
+                ${line.separator}       return new ListBuilder&lt;Definition&gt;()
+                ${line.separator}               .add(/*TODO*/)
+                ${line.separator}               .build();
+                ${line.separator}   } " />
 		</replaceregexp>
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
@@ -695,14 +755,14 @@
 			<include name="**/*.java" />
 		</replace>
 		<!-- Can't do that too many false positive 
-		<echo message="Replace in *.java opt.isEmpty() to !opt.isPresent()" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.java"/>
-			</fileset>
-			<regexp pattern="([a-z][a-zA-Z]+)\.isEmpty\(\)" />
-				<substitution expression="!\1.isPresent()" />
-		</replaceregexp> -->
+        <echo message="Replace in *.java opt.isEmpty() to !opt.isPresent()" />
+        <replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+            <fileset dir="${src.path}">
+                <include name="**/*.java"/>
+            </fileset>
+            <regexp pattern="([a-z][a-zA-Z]+)\.isEmpty\(\)" />
+                <substitution expression="!\1.isPresent()" />
+        </replaceregexp> -->
 	</target>
 
 	<target name="0.9.0 to 0.9.1" description="Usefull renames from 0.9.0 to 0.9.1">
@@ -725,12 +785,12 @@
 
 	<target name="0.8.3 to 0.9.0" description="Usefull renames from 0.8.3 to 0.9.0">
 		<!-- <echo message="Renamed in LocalManager in boot : LocalManager to <boot local=\'<boot>\'" />
-				<replace summary="true" dir="${src.path}" encoding="${src.encoding}"
-					token="io.vertigo.dynamox.search.DefaultListFilterBuilder" value="io.vertigo.dynamox.search.DslListFilterBuilder">
-					<include name="**/*.xml"/>
-					<exclude name="update-renaming-tool.xml"/>
-				</replace>
-				-->
+                <replace summary="true" dir="${src.path}" encoding="${src.encoding}"
+                    token="io.vertigo.dynamox.search.DefaultListFilterBuilder" value="io.vertigo.dynamox.search.DslListFilterBuilder">
+                    <include name="**/*.xml"/>
+                    <exclude name="update-renaming-tool.xml"/>
+                </replace>
+                -->
 		<echo message="Renamed in *.xml : io.vertigo.commons.plugins.resource.java.ClassPathResourceResolverPlugin to io.vertigo.core.plugins.resource.classpath.ClassPathResourceResolverPlugin" />
 		<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.commons.plugins.resource.java.ClassPathResourceResolverPlugin" value="io.vertigo.core.plugins.resource.classpath.ClassPathResourceResolverPlugin">
 			<include name="**/*.xml" />
@@ -753,23 +813,23 @@
 			<exclude name="update-renaming-tool.xml" />
 		</replace>
 		<!-- Can't replace because of too many false positives 
-			<echo message="Renamed in *.xml : &lt;/property to &lt;/param" />
-			<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="&lt;/property" value="&lt;/param">
-				<include name="**/*.xml" />
-				<exclude name="update-renaming-tool.xml" />
-			</replace>
-			-->
+            <echo message="Renamed in *.xml : &lt;/property to &lt;/param" />
+            <replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="&lt;/property" value="&lt;/param">
+                <include name="**/*.xml" />
+                <exclude name="update-renaming-tool.xml" />
+            </replace>
+            -->
 		<echo message="Renamed in *.xml : &lt;config to &lt;path" />
 		<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="&lt;config " value="&lt;path ">
 			<include name="**/*.xml" />
 			<exclude name="update-renaming-tool.xml" />
 		</replace>
 		<!-- Can't replace because of too many false positives 
-			<echo message="Renamed in *.xml : &lt;/config to &lt;/path" />
-			<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="&lt;/config" value="&lt;/path">
-				<include name="**/*.xml" />
-				<exclude name="update-renaming-tool.xml" />
-			</replace -->
+            <echo message="Renamed in *.xml : &lt;/config to &lt;/path" />
+            <replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="&lt;/config" value="&lt;/path">
+                <include name="**/*.xml" />
+                <exclude name="update-renaming-tool.xml" />
+            </replace -->
 
 		<echo message="Renamed in *.xml : &lt;application-config to &lt;config" />
 		<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="&lt;application-config" value="&lt;config">
