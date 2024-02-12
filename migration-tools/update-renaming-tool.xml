@@ -11,6 +11,13 @@
 	<property name="src.path" value="." />
 
 	<target name="4.1.0 to 4.2.0" description="Usefull renames from 4.1.0 to 4.2.0">
+
+
+		<echo message="Renamed in *.java : io.vertigo.core.util.NamedThreadFactory to io.vertigo.core.lang.NamedThreadFactory" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.core.util.NamedThreadFactory" value="io.vertigo.core.lang.NamedThreadFactory" summary="true">
+			<include name="**/*.java" />
+		</replace>
+
 		<echo message="Renamed in *.java : io.vertigo.datamodel.structure.definitions.Formatter to io.vertigo.datamodel.smarttype.definitions.Formatter" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure.definitions.Formatter" value="io.vertigo.datamodel.smarttype.definitions.Formatter" summary="true">
 			<include name="**/*.java" />
@@ -19,17 +26,25 @@
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure.definitions.Constraint" value="io.vertigo.datamodel.smarttype.definitions.Constraint" summary="true">
 			<include name="**/*.java" />
 		</replace>
+		<echo message="Renamed in *.java : io.vertigo.datamodel.data.definitions.DtProperty to io.vertigo.datamodel.smarttype.definitions.DtProperty" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.data.definitions.DtProperty" value="io.vertigo.datamodel.smarttype.definitions.DtProperty" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : io.vertigo.datamodel.data.definitions.Property to io.vertigo.datamodel.smarttype.definitions.Property" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.data.definitions.Property" value="io.vertigo.datamodel.smarttype.definitions.Property" summary="true">
+			<include name="**/*.java" />
+		</replace>
 
 		<echo message="Renamed in *.java : io.vertigo.datamodel.structure. to io.vertigo.datamodel.data." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure." value="io.vertigo.datamodel.data." summary="true">
 			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : DtObjectUtil/DataObjectUtil to DataUtil" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="DtObjectUtil" value="DataUtil" summary="true">
 			<include name="**/*.java" />
 		</replace>
-		
+
 		<echo message="Renamed in *.java : DtField to DataField" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="DtField" value="DataField" summary="true">
 			<include name="**/*.java" />
@@ -45,36 +60,44 @@
 			<fileset dir="${src.path}">
 				<include name="**/*.java" />
 			</fileset>
-			<regexp pattern="([\s\.&lt;]+)DtDefinition" />
+			<regexp pattern="([\s\.&lt;\(]+)DtDefinition" />
 			<substitution expression="\1DataDefinition" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *.java : DtObject to Data" />
 		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
 			<fileset dir="${src.path}">
 				<include name="**/*.java" />
 			</fileset>
-			<regexp pattern="([\s\.&lt;]+)DtObject" />
+			<regexp pattern="([\s\.&lt;\(]+)DtObject" />
 			<substitution expression="\1Data" />
 		</replaceregexp>
-		
+
 		<echo message="Renamed in *DAO.java : createDtObjectUID(/createDataUID( to createUID(" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="createDtObjectUID(" value="createUID(" summary="true">
 			<include name="**/*DAO.java" />
 		</replace>
-		
+
+		<echo message="Renamed in *.java : createDtObject(/createData( to createData(" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="createDtObject(" value="createData(" summary="true">
+			<include name="**/*.java" />
+		</replace>
+
 		<echo message="Rollback in *.java : DataDefinitions to DtDefinitions" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="DataDefinitions" value="DtDefinitions" summary="true">
 			<include name="**/*.java" />
 		</replace>
-		
-		<echo message="Rollback in *.java : primaryDataDefinitionName to primaryDtDefinitionName" />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="primaryDataDefinitionName" value="primaryDtDefinitionName" summary="true">
+		<echo message="Rollback in *.java : DataValidator to DtObjectValidator" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="DataValidator" value="DtObjectValidator" summary="true">
 			<include name="**/*.java" />
 		</replace>
-		
-		<echo message="Rollback in *.java : foreignDataDefinitionName to foreignDtDefinitionName" />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="foreignDataDefinitionName" value="foreignDtDefinitionName" summary="true">
+
+		<echo message="Renamed in *.java : dtDefinitionA to dataDefinitionA" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="dtDefinitionA" value="dataDefinitionA" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : dtDefinitionB to dataDefinitionB" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="dtDefinitionB" value="dataDefinitionB" summary="true">
 			<include name="**/*.java" />
 		</replace>
 	</target>
