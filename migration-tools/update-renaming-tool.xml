@@ -721,6 +721,14 @@
 			<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)field " />
 			<substitution expression="field " />
 		</replaceregexp>
+		<echo message="Replace in *.ksp persistent: &quot;true&quot;,\n(\t)+key to key" />
+		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+			<fileset dir="${src.path}">
+				<include name="**/*.ksp" />
+			</fileset>
+			<regexp pattern="persistent\s*:\s*&quot;true&quot;(,)?\s*\n(\s+)key " />
+			<substitution expression="key " />
+		</replaceregexp>
 		<echo message="Replace in *.java &lt;D extends DtObject&gt; URI&lt;D&gt; to &lt;E extends Entity&gt; URI&lt;E&gt;" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="&lt;D extends DtObject&gt; URI&lt;D&gt;" value="&lt;E extends Entity&gt; URI&lt;E&gt;" summary="true">
 			<include name="**/*.java" />
@@ -795,6 +803,14 @@
             <regexp pattern="([a-z][a-zA-Z]+)\.isEmpty\(\)" />
                 <substitution expression="!\1.isPresent()" />
         </replaceregexp> -->
+		<echo message="Renamed in *.java : DAO.get( to DAO.read(" />
+		<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="DAO.get(" value="DAO.read(">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : DAO.getList( to DAO.findAll(" />
+		<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="DAO.getList(" value="DAO.findAll(">
+			<include name="**/*.java" />
+		</replace>
 	</target>
 
 	<target name="0.9.0 to 0.9.1" description="Usefull renames from 0.9.0 to 0.9.1">
