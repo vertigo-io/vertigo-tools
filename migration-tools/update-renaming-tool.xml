@@ -26,12 +26,12 @@
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure.definitions.Constraint" value="io.vertigo.datamodel.smarttype.definitions.Constraint" summary="true">
 			<include name="**/*.java" />
 		</replace>
-		<echo message="Renamed in *.java : io.vertigo.datamodel.data.definitions.DtProperty to io.vertigo.datamodel.smarttype.definitions.DtProperty" />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.data.definitions.DtProperty" value="io.vertigo.datamodel.smarttype.definitions.DtProperty" summary="true">
+		<echo message="Renamed in *.java : io.vertigo.datamodel.structure.definitions.DtProperty to io.vertigo.datamodel.smarttype.definitions.DtProperty" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure.definitions.DtProperty" value="io.vertigo.datamodel.smarttype.definitions.DtProperty" summary="true">
 			<include name="**/*.java" />
 		</replace>
-		<echo message="Renamed in *.java : io.vertigo.datamodel.data.definitions.Property to io.vertigo.datamodel.smarttype.definitions.Property" />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.data.definitions.Property" value="io.vertigo.datamodel.smarttype.definitions.Property" summary="true">
+		<echo message="Renamed in *.java : io.vertigo.datamodel.structure.definitions.Property to io.vertigo.datamodel.smarttype.definitions.Property" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.datamodel.structure.definitions.Property" value="io.vertigo.datamodel.smarttype.definitions.Property" summary="true">
 			<include name="**/*.java" />
 		</replace>
 
@@ -40,8 +40,8 @@
 			<include name="**/*.java" />
 		</replace>
 
-		<echo message="Renamed in *.java : DtObjectUtil/DataObjectUtil to DataUtil" />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="DtObjectUtil" value="DataUtil" summary="true">
+		<echo message="Renamed in *.java : DtObjectUtil/DataObjectUtil to DataModelUtil" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="DtObjectUtil" value="DataModelUtil" summary="true">
 			<include name="**/*.java" />
 		</replace>
 
@@ -64,13 +64,13 @@
 			<substitution expression="\1DataDefinition" />
 		</replaceregexp>
 
-		<echo message="Renamed in *.java : DtObject to Data" />
+		<echo message="Renamed in *.java : DtObject to DataObject" />
 		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
 			<fileset dir="${src.path}">
 				<include name="**/*.java" />
 			</fileset>
 			<regexp pattern="([\s\.&lt;\(]+)DtObject" />
-			<substitution expression="\1Data" />
+			<substitution expression="\1DataObject" />
 		</replaceregexp>
 
 		<echo message="Renamed in *DAO.java : createDtObjectUID(/createDataUID( to createUID(" />
@@ -78,8 +78,13 @@
 			<include name="**/*DAO.java" />
 		</replace>
 
-		<echo message="Renamed in *.java : createDtObject(/createData( to createData(" />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="createDtObject(" value="createData(" summary="true">
+		<echo message="Renamed in *.java : createDtObject(/createData( to createDataObject(" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="createDtObject(" value="createDataObject(" summary="true">
+			<include name="**/*.java" />
+		</replace>
+
+		<echo message="Renamed in *.java : getDtDefinition( to getDataDefinition(" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="getDtDefinition(" value="getDataDefinition(" summary="true">
 			<include name="**/*.java" />
 		</replace>
 
