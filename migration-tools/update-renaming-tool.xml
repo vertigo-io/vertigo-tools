@@ -715,24 +715,24 @@
 			<fileset dir="${src.path}">
 				<include name="**/*.ksp" />
 			</fileset>
-			<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)key " />
-			<substitution expression="field " />
+			<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)key(\s)" />
+			<substitution expression="field\3" />
 		</replaceregexp>
 		<echo message="Replace in *.ksp persistent: &quot;false&quot;,\n(\t)+field to field" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
 				<include name="**/*.ksp" />
 			</fileset>
-			<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)field " />
-			<substitution expression="field " />
+			<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)field(\s)" />
+			<substitution expression="field\3" />
 		</replaceregexp>
 		<echo message="Replace in *.ksp persistent: &quot;true&quot;,\n(\t)+key to key" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
 			<fileset dir="${src.path}">
 				<include name="**/*.ksp" />
 			</fileset>
-			<regexp pattern="persistent\s*:\s*&quot;true&quot;(,)?\s*\n(\s+)key " />
-			<substitution expression="key " />
+			<regexp pattern="persistent\s*:\s*&quot;true&quot;(,)?\s*\n(\s+)key(\s)" />
+			<substitution expression="key\3" />
 		</replaceregexp>
 		<echo message="Replace in *.java &lt;D extends DtObject&gt; URI&lt;D&gt; to &lt;E extends Entity&gt; URI&lt;E&gt;" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="&lt;D extends DtObject&gt; URI&lt;D&gt;" value="&lt;E extends Entity&gt; URI&lt;E&gt;" summary="true">
