@@ -331,6 +331,24 @@
 	</target>
 
 	<target name="1.1.3 to 2.0.0" description="Usefull renames from 1.1.3 to 2.0.0">
+		<echo message="Renamed in *.ksp : notNull:&quot; : to required:&quot;" />
+        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+            <fileset dir="${src.path}">
+                <include name="**/*.ksp" />
+            </fileset>
+            <regexp pattern="(\s+)notNull\s*:\s*&quot;" />
+            <substitution expression="\1required:&quot;" />
+        </replaceregexp>
+		
+		<echo message="Renamed in *.ksp : key XXX : to id XXX" />
+        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+            <fileset dir="${src.path}">
+                <include name="**/*.ksp" />
+            </fileset>
+            <regexp pattern="(\s+)key(\s+[a-zA-Z])" />
+            <substitution expression="\1id\2" />
+        </replaceregexp>
+		
 		<echo message="Renamed in *.java : io.vertigo.mail. to io.vertigo.social.mail." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.mail." value="io.vertigo.social.mail." summary="true">
 			<include name="**/*.java" />
