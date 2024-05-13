@@ -155,6 +155,15 @@
 			<include name="**/*.yaml" />
 		</replace>
 
+        <echo message="Renamed in *.ksp : attribute .... inOut:'in' to in ..." />
+        <replaceregexp encoding="${src.encoding}" flags="gi" byline="true">
+            <fileset dir="${src.path}">
+                <include name="**/*.ksp" />
+            </fileset>
+            <regexp pattern="attribute(\s+.*\s+)inOut\s*:\s*&quot;(in|out)&quot;" />
+            <substitution expression="\2\1" />
+        </replaceregexp>
+		
 		<echo message="Renamed in *.ksp : required:&quot;true&quot; to cardinality:&quot;1&quot; or &quot;*&quot;" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
 			<fileset dir="${src.path}">
