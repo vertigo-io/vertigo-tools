@@ -209,6 +209,22 @@
             <substitution expression="\1cardinality: &quot;?&quot;" />
         </replaceregexp>
         
+		<echo message="Renamed in *.java : io.vertigo.dynamo.store.StoreManager to io.vertigo.datastore.entitystore.EntityStoreManager" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamo.store.StoreManager" value="io.vertigo.datastore.entitystore.EntityStoreManager" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : io.vertigo.dynamo.store.StoreManager to io.vertigo.datastore.entitystore.EntityStoreManager" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="StoreManager storeManager" value="EntityStoreManager entityStoreManager" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : storeManager.getDataStore(). to entityStoreManager." />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="storeManager.getDataStore()." value="entityStoreManager." summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : storeManager.getFileStore(). to fileStoreManager." />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="storeManager.getFileStore()." value="fileStoreManager." summary="true">
+			<include name="**/*.java" />
+		</replace>
 		<echo message="Renamed in *.java : io.vertigo.dynamo.collections. to io.vertigo.datafactory.collections." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamo.collections." value="io.vertigo.datafactory.collections." summary="true">
 			<include name="**/*.java" />
