@@ -169,25 +169,46 @@
 			<fileset dir="${src.path}">
 				<include name="**/*.ksp" />
 			</fileset>
-			<regexp pattern="(domain\s*:\s*Do[a-z]+)Dtc(\s.*)required\s*:\s*&quot;true&quot;" />
+			<regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dtc(.*\s.*)required\s*:\s*&quot;true&quot;" />
 			<substitution expression="\1\2cardinality: &quot;*&quot;" />
 		</replaceregexp>
+	    <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+            <fileset dir="${src.path}">
+                <include name="**/*.ksp" />
+            </fileset>
+            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dto(.*\s.*)required\s*:\s*&quot;true&quot;" />
+            <substitution expression="\1\2cardinality: &quot;1&quot;" />
+        </replaceregexp>
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
 			<fileset dir="${src.path}">
 				<include name="**/*.ksp" />
 			</fileset>
-			<regexp pattern="(domain\s*:\s*Do[a-z]+[^D][^t][^c]\s*)required\s*:\s*&quot;true&quot;" />
+			<regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+[^D][^t][^c].*\s*)required\s*:\s*&quot;true&quot;" />
 			<substitution expression="\1cardinality: &quot;1&quot;" />
 		</replaceregexp>
 		<echo message="Renamed in *.ksp : required:&quot;false&quot; to cardinality:&quot;?&quot;" />
 		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp" />
-			</fileset>
-			<regexp pattern="(domain\s*:\s*Do[a-z]+\s.*)required\s*:\s*&quot;false&quot;" />
-			<substitution expression="\1cardinality: &quot;?&quot;" />
-		</replaceregexp>
-
+            <fileset dir="${src.path}">
+                <include name="**/*.ksp" />
+            </fileset>
+            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dtc(.*\s.*)required\s*:\s*&quot;false&quot;" />
+            <substitution expression="\1\2cardinality: &quot;?&quot;" />
+        </replaceregexp>
+        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+            <fileset dir="${src.path}">
+                <include name="**/*.ksp" />
+            </fileset>
+            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dto(.*\s.*)required\s*:\s*&quot;false&quot;" />
+            <substitution expression="\1\2cardinality: &quot;?&quot;" />
+        </replaceregexp>
+		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+            <fileset dir="${src.path}">
+                <include name="**/*.ksp" />
+            </fileset>
+            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+\s.*)required\s*:\s*&quot;false&quot;" />
+            <substitution expression="\1cardinality: &quot;?&quot;" />
+        </replaceregexp>
+        
 		<echo message="Renamed in *.java : io.vertigo.dynamo.collections. to io.vertigo.datafactory.collections." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamo.collections." value="io.vertigo.datafactory.collections." summary="true">
 			<include name="**/*.java" />
@@ -843,10 +864,11 @@
             <regexp pattern="([a-z][a-zA-Z]+)\.isEmpty\(\)" />
                 <substitution expression="!\1.isPresent()" />
         </replaceregexp> -->
+		<!-- get() to read() for FileStore only, not DAO
 		<echo message="Renamed in *.java : DAO.get( to DAO.read(" />
 		<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="DAO.get(" value="DAO.read(">
 			<include name="**/*.java" />
-		</replace>
+		</replace> -->
 		<echo message="Renamed in *.java : DAO.getList( to DAO.findAll(" />
 		<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="DAO.getList(" value="DAO.findAll(">
 			<include name="**/*.java" />
