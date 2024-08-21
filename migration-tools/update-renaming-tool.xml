@@ -96,6 +96,10 @@
 		<replace dir="${src.path}" encoding="${src.encoding}" token="DataValidator" value="DtObjectValidator" summary="true">
 			<include name="**/*.java" />
 		</replace>
+		<echo message="Rollback in *.java : DataObjectValidator to DtObjectValidator" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="DataObjectValidator" value="DtObjectValidator" summary="true">
+			<include name="**/*.java" />
+		</replace>
 
 		<echo message="Renamed in *.java : dtDefinitionA to dataDefinitionA" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="dtDefinitionA" value="dataDefinitionA" summary="true">
