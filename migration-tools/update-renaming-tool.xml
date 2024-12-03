@@ -69,7 +69,7 @@
 			<fileset dir="${src.path}">
 				<include name="**/*.java" />
 			</fileset>
-			<regexp pattern="([\s\.&lt;\(]+)DtObject" />
+			<regexp pattern="([\s\.&lt;\(]+)DtObject(?!Errors)" />
 			<substitution expression="\1DataObject" />
 		</replaceregexp>
 
