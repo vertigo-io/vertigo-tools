@@ -10,9 +10,43 @@
 	<property name="src.encoding" value="utf8" />
 	<property name="src.path" value="." />
 
-	<target name="4.1.0 to 4.2.0" description="Usefull renames from 4.1.0 to 4.2.0">
+	<target name="4.2.0 to 4.3.0" description="Usefull renames from 4.2.0 to 4.3.0">
+		<echo message="Renamed in *.java : import.*MessageKey to import.*LocaleMessageKey" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.core.param.MessageKey" value="io.vertigo.core.param.LocaleMessageKey" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : MessageKey to LocaleMessageKey" />
+		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
+			<fileset dir="${src.path}">
+				<include name="**/*.java" />
+			</fileset>
+			<regexp pattern="([\s\.&lt;\(]+)MessageKey" />
+			<substitution expression="\1LocaleMessageKey" />
+		</replaceregexp>
 
+		<echo message="Renamed in *.java : Base64Codec to Base64UrlCodec" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.commons.impl.codec.base64.Base64Codec" value="io.vertigo.commons.impl.codec.base64.Base64UrlCodec" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<replace dir="${src.path}" encoding="${src.encoding}" token="new Base64Codec()" value="new Base64UrlCodec()" summary="true">
+			<include name="**/*.java" />
+		</replace>
 
+		<echo message="Renamed in *.html : vu:messages-dsfr to vu:dsfr-messages" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="&lt;vu:messages-dsfr" value="&lt;vu:dsfr-messages" summary="true">
+			<include name="**/*.html" />
+		</replace>
+
+		<echo message="Renamed in *.html : vu:text-editor to vu:q-text-editor" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="&lt;vu:text-editor" value="&lt;vu:q-text-editor" summary="true">
+			<include name="**/*.html" />
+		</replace>
+		<replace dir="${src.path}" encoding="${src.encoding}" token="&lt;/vu:text-editor" value="&lt;/vu:q-text-editor" summary="true">
+			<include name="**/*.html" />
+		</replace>
+	</target>
+	
+	<target name="4.1.0 to 4.2.0" description="Usefull renames from 4.1.0 to 4.2.0">	
 		<echo message="Renamed in *.java : io.vertigo.core.util.NamedThreadFactory to io.vertigo.core.lang.NamedThreadFactory" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.core.util.NamedThreadFactory" value="io.vertigo.core.lang.NamedThreadFactory" summary="true">
 			<include name="**/*.java" />
@@ -111,8 +145,24 @@
 		</replace>
 	</target>
 
-	<target name="2.1.0 to 3.0.0" description="Usefull renames from 2.1.0 to 3.0.0">
+	<target name="3.6.0 to 4.0.0" description="Usefull renames from 3.6.0 to 4.0.0">
+		<echo message="Renamed in *.java : import.*.MessageText to import.*.LocaleMessageText" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.core.lang.MessageText" value="io.vertigo.core.locale.LocaleMessageText" summary="true">
+			<include name="**/*.java" />
+		</replace>
+		<echo message="Renamed in *.java : MessageText to LocaleMessageText" />
+		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
+			<fileset dir="${src.path}">
+				<include name="**/*.java" />
+			</fileset>
+			<regexp pattern="([\s\.&lt;\(]+)MessageText" />
+			<substitution expression="\1LocaleMessageText" />
+		</replaceregexp>
 
+		<!-- Note: @Analytics -> @Trace NOT automated, annotation signature changed (processName -> category + name) -->
+	</target>
+
+	<target name="2.1.0 to 3.0.0" description="Usefull renames from 2.1.0 to 3.0.0">
 		<echo message="Renamed in *.java : io.vertigo.app. to io.vertigo.core.node." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.app." value="io.vertigo.core.node." summary="true">
 			<include name="**/*.java" />
@@ -310,7 +360,7 @@
 			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.geo.services. to io.vertigo.geo." />
-		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.geo.services." value="io.geo.social." summary="true">
+		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.geo.services." value="io.vertigo.geo." summary="true">
 			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : io.vertigo.datamodel.smarttype.ModelDefinitionProvider to io.vertigo.datamodel.impl.smarttype.ModelDefinitionProvider" />
@@ -377,7 +427,6 @@
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamox.search.AbstractSqlSearchLoader" value="io.vertigo.datafactory.impl.search.loader.AbstractSqlSearchLoader" summary="true">
 			<include name="**/*.java" />
 		</replace>
-
 	</target>
 
 	<target name="1.1.3 to 2.0.0" description="Usefull renames from 1.1.3 to 2.0.0">
