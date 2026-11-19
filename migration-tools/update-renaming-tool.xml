@@ -10,6 +10,34 @@
 	<property name="src.encoding" value="utf8" />
 	<property name="src.path" value="." />
 
+	<target name="4.4.1 to 4.5.0" description="Usefull renames from 4.4.1 to 4.5.0">
+		<echo message="Fixed in *.html : th:url=&quot;'@{/x}'&quot; (the text @{/x}) to th:url=&quot;@{/x}&quot; (the link), also the other url params (downloadUrl, sortUrl...)" />
+		<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
+			<fileset dir="${src.path}">
+				<include name="**/*.html" />
+			</fileset>
+			<regexp pattern="(th:|data-th-)([\w-]*[uU]rl)=&quot;'(@\{(?:[^'{}]|\{[^'{}]*\})*\})'&quot;" />
+			<substitution expression="\1\2=&quot;\3&quot;" />
+		</replaceregexp>
+
+		<echo message="Renamed in *.html : vu:checkbox-confirm to vu:checkbox-inline-edit (the same component, always editable)" />
+		<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
+			<fileset dir="${src.path}">
+				<include name="**/*.html" />
+			</fileset>
+			<regexp pattern="(&lt;/?vu:)checkbox-confirm(?![\w-])" />
+			<substitution expression="\1checkbox-inline-edit" />
+		</replaceregexp>
+
+		<echo message="Renamed in *.html : the DSFR bundle of vertigo-ui moved to vertigo-ui/static/3rdParty/dsfr/vue-dsfr@8.21.0/, dsfr.umd.js to vertigo-dsfr.umd.js" />
+		<replace dir="${src.path}" encoding="${src.encoding}" token="vertigo-ui/static/3rdParty/dsfr/dsfr.umd.js" value="vertigo-ui/static/3rdParty/dsfr/vue-dsfr@8.21.0/vertigo-dsfr.umd.js" summary="true">
+			<include name="**/*.html" />
+		</replace>
+		<replace dir="${src.path}" encoding="${src.encoding}" token="vertigo-ui/static/3rdParty/dsfr/vertigo-dsfr.css" value="vertigo-ui/static/3rdParty/dsfr/vue-dsfr@8.21.0/vertigo-dsfr.css" summary="true">
+			<include name="**/*.html" />
+		</replace>
+	</target>
+
 	<target name="4.2.0 to 4.3.0" description="Usefull renames from 4.2.0 to 4.3.0">
 		<echo message="Renamed in *.java : import.*MessageKey to import.*LocaleMessageKey" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.core.param.MessageKey" value="io.vertigo.core.param.LocaleMessageKey" summary="true">
