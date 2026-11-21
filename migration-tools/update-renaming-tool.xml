@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- ====================================================================== -->
-<!-- Ant build file (http://ant.apache.org/) for Ant 1.6.2 or above.        -->
+<!-- Ant build file (http://ant.apache.org/) for Ant 1.8 or above.          -->
 <!-- ====================================================================== -->
 <project name="Vertigo Update Renaming Tool" default="">
 	<!-- =================================================================== -->
@@ -10,34 +10,68 @@
 	<property name="src.encoding" value="utf8" />
 	<property name="src.path" value="." />
 
+	<!-- replaceregexp has no summary : runs the nested rule and echoes the number of files it modified -->
+	<macrodef name="countModified">
+		<attribute name="includes" />
+		<element name="rule" implicit="true" />
+		<sequential>
+			<local name="count.cache" />
+			<local name="count.before" />
+			<local name="count.modified" />
+			<tempfile property="count.cache" deleteonexit="true" />
+			<resourcecount property="count.before">
+				<fileset dir="${src.path}" includes="@{includes}">
+					<modified update="true" delayupdate="false">
+						<param name="cache.cachefile" value="${count.cache}" />
+					</modified>
+				</fileset>
+			</resourcecount>
+			<rule />
+			<resourcecount property="count.modified">
+				<fileset dir="${src.path}" includes="@{includes}">
+					<modified update="true" delayupdate="false">
+						<param name="cache.cachefile" value="${count.cache}" />
+					</modified>
+				</fileset>
+			</resourcecount>
+			<echo message="  ${count.modified} file(s) modified" />
+		</sequential>
+	</macrodef>
+
 	<target name="4.4.1 to 4.5.0" description="Usefull renames from 4.4.1 to 4.5.0">
 		<echo message="Fixed in *.html : th:url=&quot;'@{/x}'&quot; (the text @{/x}) to th:url=&quot;@{/x}&quot; (the link), also the other url params (downloadUrl, sortUrl...)" />
-		<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.html" />
-			</fileset>
-			<regexp pattern="(th:|data-th-)([\w-]*[uU]rl)=&quot;'(@\{(?:[^'{}]|\{[^'{}]*\})*\})'&quot;" />
-			<substitution expression="\1\2=&quot;\3&quot;" />
-		</replaceregexp>
+		<countModified includes="**/*.html">
+			<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.html" />
+				</fileset>
+				<regexp pattern="(th:|data-th-)([\w-]*[uU]rl)=&quot;'(@\{(?:[^'{}]|\{[^'{}]*\})*\})'&quot;" />
+				<substitution expression="\1\2=&quot;\3&quot;" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Fixed in *.html : th:with=&quot;x='#{...}'&quot; (the text #{...}) to th:with=&quot;x=#{...}&quot; (its value), for a value that is a whole expression" />
-		<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.html" />
-			</fileset>
-			<!-- in a th:with (after its other variables, their texts skipped), x='expression' : the whole value is one expression -->
-			<regexp pattern="((?:(?:th:|data-th-)with=&quot;|\G(?!^))(?:[^&quot;']|'(?:[^'\\]|\\.)*')*?\b\w+\s*=\s*)'([$#@*~]\{(?:[^'{}]|\{[^'{}]*\})*\})'" />
-			<substitution expression="\1\2" />
-		</replaceregexp>
+		<countModified includes="**/*.html">
+			<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.html" />
+				</fileset>
+				<!-- in a th:with (after its other variables, their texts skipped), x='expression' : the whole value is one expression -->
+				<regexp pattern="((?:(?:th:|data-th-)with=&quot;|\G(?!^))(?:[^&quot;']|'(?:[^'\\]|\\.)*')*?\b\w+\s*=\s*)'([$#@*~]\{(?:[^'{}]|\{[^'{}]*\})*\})'" />
+				<substitution expression="\1\2" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.html : vu:checkbox-confirm to vu:checkbox-inline-edit (the same component, always editable)" />
-		<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.html" />
-			</fileset>
-			<regexp pattern="(&lt;/?vu:)checkbox-confirm(?![\w-])" />
-			<substitution expression="\1checkbox-inline-edit" />
-		</replaceregexp>
+		<countModified includes="**/*.html">
+			<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.html" />
+				</fileset>
+				<regexp pattern="(&lt;/?vu:)checkbox-confirm(?![\w-])" />
+				<substitution expression="\1checkbox-inline-edit" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.html : the DSFR bundle of vertigo-ui moved to vertigo-ui/static/3rdParty/dsfr/vue-dsfr@8.21.0/, dsfr.umd.js to vertigo-dsfr.umd.js" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="vertigo-ui/static/3rdParty/dsfr/dsfr.umd.js" value="vertigo-ui/static/3rdParty/dsfr/vue-dsfr@8.21.0/vertigo-dsfr.umd.js" summary="true">
@@ -54,13 +88,15 @@
 			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : MessageKey to LocaleMessageKey" />
-		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="([\s\.&lt;\(]+)MessageKey" />
-			<substitution expression="\1LocaleMessageKey" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="([\s\.&lt;\(]+)MessageKey" />
+				<substitution expression="\1LocaleMessageKey" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.java : Base64Codec to Base64UrlCodec" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.commons.impl.codec.base64.Base64Codec" value="io.vertigo.commons.impl.codec.base64.Base64UrlCodec" summary="true">
@@ -128,22 +164,26 @@
 		</replace>
 
 		<echo message="Renamed in *.java : DtDefinition to DataDefinition" />
-		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="([\s\.&lt;\(]+)DtDefinition" />
-			<substitution expression="\1DataDefinition" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="([\s\.&lt;\(]+)DtDefinition" />
+				<substitution expression="\1DataDefinition" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.java : DtObject to DataObject" />
-		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="([\s\.&lt;\(]+)DtObject(?!Errors)" />
-			<substitution expression="\1DataObject" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="([\s\.&lt;\(]+)DtObject(?!Errors)" />
+				<substitution expression="\1DataObject" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *DAO.java : createDtObjectUID(/createDataUID( to createUID(" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="createDtObjectUID(" value="createUID(" summary="true">
@@ -189,13 +229,15 @@
 			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : MessageText to LocaleMessageText" />
-		<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="([\s\.&lt;\(]+)MessageText" />
-			<substitution expression="\1LocaleMessageText" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gs" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="([\s\.&lt;\(]+)MessageText" />
+				<substitution expression="\1LocaleMessageText" />
+			</replaceregexp>
+		</countModified>
 
 		<!-- Note: @Analytics -> @Trace NOT automated, annotation signature changed (processName -> category + name) -->
 	</target>
@@ -248,58 +290,72 @@
 		</replace>
 
         <echo message="Renamed in *.ksp : attribute .... inOut:'in' to in ..." />
-        <replaceregexp encoding="${src.encoding}" flags="gi" byline="true">
-            <fileset dir="${src.path}">
-                <include name="**/*.ksp" />
-            </fileset>
-            <regexp pattern="attribute(\s+.*\s+)inOut\s*:\s*&quot;(in|out)&quot;" />
-            <substitution expression="\2\1" />
-        </replaceregexp>
+        <countModified includes="**/*.ksp">
+	        <replaceregexp encoding="${src.encoding}" flags="gi" byline="true">
+	            <fileset dir="${src.path}">
+	                <include name="**/*.ksp" />
+	            </fileset>
+	            <regexp pattern="attribute(\s+.*\s+)inOut\s*:\s*&quot;(in|out)&quot;" />
+	            <substitution expression="\2\1" />
+	        </replaceregexp>
+        </countModified>
 		
 		<echo message="Renamed in *.ksp : required:&quot;true&quot; to cardinality:&quot;1&quot; or &quot;*&quot;" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp" />
-			</fileset>
-			<regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dtc(.*\s.*)required\s*:\s*&quot;true&quot;" />
-			<substitution expression="\1\2cardinality: &quot;*&quot;" />
-		</replaceregexp>
-	    <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-            <fileset dir="${src.path}">
-                <include name="**/*.ksp" />
-            </fileset>
-            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dto(.*\s.*)required\s*:\s*&quot;true&quot;" />
-            <substitution expression="\1\2cardinality: &quot;1&quot;" />
-        </replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp" />
-			</fileset>
-			<regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+[^D][^t][^c].*\s*)required\s*:\s*&quot;true&quot;" />
-			<substitution expression="\1cardinality: &quot;1&quot;" />
-		</replaceregexp>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp" />
+				</fileset>
+				<regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dtc(.*\s.*)required\s*:\s*&quot;true&quot;" />
+				<substitution expression="\1\2cardinality: &quot;*&quot;" />
+			</replaceregexp>
+		</countModified>
+	    <countModified includes="**/*.ksp">
+		    <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+	            <fileset dir="${src.path}">
+	                <include name="**/*.ksp" />
+	            </fileset>
+	            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dto(.*\s.*)required\s*:\s*&quot;true&quot;" />
+	            <substitution expression="\1\2cardinality: &quot;1&quot;" />
+	        </replaceregexp>
+	    </countModified>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp" />
+				</fileset>
+				<regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+[^D][^t][^c].*\s*)required\s*:\s*&quot;true&quot;" />
+				<substitution expression="\1cardinality: &quot;1&quot;" />
+			</replaceregexp>
+		</countModified>
 		<echo message="Renamed in *.ksp : required:&quot;false&quot; to cardinality:&quot;?&quot;" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-            <fileset dir="${src.path}">
-                <include name="**/*.ksp" />
-            </fileset>
-            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dtc(.*\s.*)required\s*:\s*&quot;false&quot;" />
-            <substitution expression="\1\2cardinality: &quot;?&quot;" />
-        </replaceregexp>
-        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-            <fileset dir="${src.path}">
-                <include name="**/*.ksp" />
-            </fileset>
-            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dto(.*\s.*)required\s*:\s*&quot;false&quot;" />
-            <substitution expression="\1\2cardinality: &quot;?&quot;" />
-        </replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-            <fileset dir="${src.path}">
-                <include name="**/*.ksp" />
-            </fileset>
-            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+\s.*)required\s*:\s*&quot;false&quot;" />
-            <substitution expression="\1cardinality: &quot;?&quot;" />
-        </replaceregexp>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+	            <fileset dir="${src.path}">
+	                <include name="**/*.ksp" />
+	            </fileset>
+	            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dtc(.*\s.*)required\s*:\s*&quot;false&quot;" />
+	            <substitution expression="\1\2cardinality: &quot;?&quot;" />
+	        </replaceregexp>
+		</countModified>
+        <countModified includes="**/*.ksp">
+	        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+	            <fileset dir="${src.path}">
+	                <include name="**/*.ksp" />
+	            </fileset>
+	            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+)Dto(.*\s.*)required\s*:\s*&quot;false&quot;" />
+	            <substitution expression="\1\2cardinality: &quot;?&quot;" />
+	        </replaceregexp>
+        </countModified>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+	            <fileset dir="${src.path}">
+	                <include name="**/*.ksp" />
+	            </fileset>
+	            <regexp pattern="(domain\s*:\s*Do[a-zA-Z0-9]+\s.*)required\s*:\s*&quot;false&quot;" />
+	            <substitution expression="\1cardinality: &quot;?&quot;" />
+	        </replaceregexp>
+		</countModified>
         
 		<echo message="Renamed in *.java : io.vertigo.dynamo.store.StoreManager to io.vertigo.datastore.entitystore.EntityStoreManager" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.dynamo.store.StoreManager" value="io.vertigo.datastore.entitystore.EntityStoreManager" summary="true">
@@ -469,35 +525,41 @@
 
 	<target name="1.1.3 to 2.0.0" description="Usefull renames from 1.1.3 to 2.0.0">
 		<echo message="Renamed in *.ksp : notNull:&quot; : to required:&quot;" />
-        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-            <fileset dir="${src.path}">
-                <include name="**/*.ksp" />
-            </fileset>
-            <regexp pattern="(\s+)notNull\s*:\s*&quot;" />
-            <substitution expression="\1required:&quot;" />
-        </replaceregexp>
+        <countModified includes="**/*.ksp">
+	        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+	            <fileset dir="${src.path}">
+	                <include name="**/*.ksp" />
+	            </fileset>
+	            <regexp pattern="(\s+)notNull\s*:\s*&quot;" />
+	            <substitution expression="\1required:&quot;" />
+	        </replaceregexp>
+        </countModified>
 		
 		<echo message="Renamed in *.ksp : key XXX : to id XXX" />
-        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-            <fileset dir="${src.path}">
-                <include name="**/*.ksp" />
-            </fileset>
-            <regexp pattern="(\s+)key(\s+[a-zA-Z])" />
-            <substitution expression="\1id\2" />
-        </replaceregexp>
+        <countModified includes="**/*.ksp">
+	        <replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+	            <fileset dir="${src.path}">
+	                <include name="**/*.ksp" />
+	            </fileset>
+	            <regexp pattern="(\s+)key(\s+[a-zA-Z])" />
+	            <substitution expression="\1id\2" />
+	        </replaceregexp>
+        </countModified>
 		
 		<echo message="Renamed in *.java : io.vertigo.mail. to io.vertigo.social.mail." />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="io.vertigo.mail." value="io.vertigo.social.mail." summary="true">
 			<include name="**/*.java" />
 		</replace>
 		<echo message="Renamed in *.java : StringUtil.constToLowerCamelCase(XxxFields.yyy.name()) to XxxFields.yyy.name()" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="StringUtil\.constToLowerCamelCase\((.+\..+\.name\(\))\)" />
-			<substitution expression="\1" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="StringUtil\.constToLowerCamelCase\((.+\..+\.name\(\))\)" />
+				<substitution expression="\1" />
+			</replaceregexp>
+		</countModified>
 	</target>
 
 	<target name="CONST Java Entity to CamelCase java" description="Replace old java definitions to CamelCase definition new in vertigo 2.0">
@@ -602,27 +664,32 @@
 			<globmapper from="*.ksp" to="*.ksp2java" casesensitive="no" />
 		</copy>
 
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="\n\s*\}\s*\n" />
-			<substitution expression=".build();${line.separator}${line.separator}" />
-		</replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="\n\s*\}" />
-			<substitution expression=".build();${line.separator}${line.separator}}" />
-		</replaceregexp>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="\n\s*\}\s*\n" />
+				<substitution expression=".build();${line.separator}${line.separator}" />
+			</replaceregexp>
+		</countModified>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="\n\s*\}" />
+				<substitution expression=".build();${line.separator}${line.separator}}" />
+			</replaceregexp>
+		</countModified>
 
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="package\s*([A-Za-z0-9\.]*)\.([A-Za-z0-9]+)" />
-			<substitution expression="package \1.\2;
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="package\s*([A-Za-z0-9\.]*)\.([A-Za-z0-9]+)" />
+				<substitution expression="package \1.\2;
                 ${line.separator}import java.util.List;
                 ${line.separator}import io.vertigo.core.definition.Definition;
                 ${line.separator}import io.vertigo.core.definition.DefinitionSpace;
@@ -640,56 +707,71 @@
                 ${line.separator}               .add(/*TODO*/)
                 ${line.separator}               .build();
                 ${line.separator}   } " />
-		</replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="create\s*PublisherNode\s*([A-Za-z_0-9]+)\s*\{" />
-			<substitution expression="private final PublisherNodeDefinition \1 = new PublisherNodeDefinitionBuilder()" />
-		</replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="stringField\s*([A-Za-z_0-9]+)\s*\{\s*\}" />
-			<substitution expression=".addStringField(&quot;\1&quot;)" />
-		</replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="booleanField\s*([A-Za-z_0-9]+)\s*\{\s*\}" />
-			<substitution expression=".addBooleanField(&quot;\1&quot;)" />
-		</replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="imageField\s*([A-Za-z_0-9]+)\s*\{\s*\}" />
-			<substitution expression=".addImageField(&quot;\1&quot;)" />
-		</replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="dataField\s*([A-Za-z_0-9]+)\s*\{\s*type\s*:\s*([A-Za-z_0-9]+)\s*\}" />
-			<substitution expression=".addNodeField(&quot;\1&quot;, \2)" />
-		</replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="listField\s*([A-Za-z_0-9]+)\s*\{\s*type\s*:\s*([A-Za-z_0-9]+)\s*\}" />
-			<substitution expression=".addListField(&quot;\1&quot;, \2)" />
-		</replaceregexp>
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp2java" />
-			</fileset>
-			<regexp pattern="create\s*PublisherDefinition\s*([A-Za-z_0-9]+)\s*\{\s*root\s*:\s*([A-Za-z_0-9]+)(\s)*\}" />
-			<substitution expression="private final PublisherDataDefinition \1 = new PublisherDataDefinition(&quot;\1&quot;, \2);" />
-		</replaceregexp>
+			</replaceregexp>
+		</countModified>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="create\s*PublisherNode\s*([A-Za-z_0-9]+)\s*\{" />
+				<substitution expression="private final PublisherNodeDefinition \1 = new PublisherNodeDefinitionBuilder()" />
+			</replaceregexp>
+		</countModified>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="stringField\s*([A-Za-z_0-9]+)\s*\{\s*\}" />
+				<substitution expression=".addStringField(&quot;\1&quot;)" />
+			</replaceregexp>
+		</countModified>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="booleanField\s*([A-Za-z_0-9]+)\s*\{\s*\}" />
+				<substitution expression=".addBooleanField(&quot;\1&quot;)" />
+			</replaceregexp>
+		</countModified>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="imageField\s*([A-Za-z_0-9]+)\s*\{\s*\}" />
+				<substitution expression=".addImageField(&quot;\1&quot;)" />
+			</replaceregexp>
+		</countModified>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="dataField\s*([A-Za-z_0-9]+)\s*\{\s*type\s*:\s*([A-Za-z_0-9]+)\s*\}" />
+				<substitution expression=".addNodeField(&quot;\1&quot;, \2)" />
+			</replaceregexp>
+		</countModified>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="listField\s*([A-Za-z_0-9]+)\s*\{\s*type\s*:\s*([A-Za-z_0-9]+)\s*\}" />
+				<substitution expression=".addListField(&quot;\1&quot;, \2)" />
+			</replaceregexp>
+		</countModified>
+		<countModified includes="**/*.ksp2java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp2java" />
+				</fileset>
+				<regexp pattern="create\s*PublisherDefinition\s*([A-Za-z_0-9]+)\s*\{\s*root\s*:\s*([A-Za-z_0-9]+)(\s)*\}" />
+				<substitution expression="private final PublisherDataDefinition \1 = new PublisherDataDefinition(&quot;\1&quot;, \2);" />
+			</replaceregexp>
+		</countModified>
 	</target>
 
 	<!-- ====================================================================== -->
@@ -708,31 +790,37 @@
 		</replace>
 
 		<echo message="Renamed in *.java : new WrappedException(.*, e); to WrappedException.wrap(e, msg)" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="new WrappedException\((&quot;.+&quot;), e\);" />
-			<substitution expression="WrappedException.wrap(e, \1);" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="new WrappedException\((&quot;.+&quot;), e\);" />
+				<substitution expression="WrappedException.wrap(e, \1);" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.java : new WrappedException(e); to WrappedException.wrap(e);" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="throw new WrappedException\((.+)\);" />
-			<substitution expression="throw WrappedException.wrap\(\1\);" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="throw new WrappedException\((.+)\);" />
+				<substitution expression="throw WrappedException.wrap\(\1\);" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.java : WrappedException.wrapIfNeeded(e); to WrappedException.wrap(e);" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="throw WrappedException.wrapIfNeeded\((.+)\);" />
-			<substitution expression="throw WrappedException.wrap\(\1\);" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="throw WrappedException.wrapIfNeeded\((.+)\);" />
+				<substitution expression="throw WrappedException.wrap\(\1\);" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.java : Injector to DIInjector" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token=".Injector;" value=".DIInjector;" summary="true">
@@ -751,95 +839,115 @@
 		</replace>
 
 		<echo message="Renamed in *.java : .getStringValue(&quot;([a-zA-Z0-9\.]+)&quot;); to .getParam(\1).getValueAsString" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="\.getStringValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
-			<substitution expression=".getParam(&quot;\1&quot;).getValueAsString()" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="\.getStringValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
+				<substitution expression=".getParam(&quot;\1&quot;).getValueAsString()" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.java : .getBooleanValue(&quot;([a-zA-Z0-9\.]+)&quot;); to .getParam(\1).getValueAsBoolean" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="\.getBooleanValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
-			<substitution expression=".getParam(&quot;\1&quot;).getValueAsBoolean()" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="\.getBooleanValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
+				<substitution expression=".getParam(&quot;\1&quot;).getValueAsBoolean()" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.java : .getIntValue(&quot;([a-zA-Z0-9\.]+)&quot;); to .getParam(\1).getValueAsInt" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="\.getIntValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
-			<substitution expression=".getParam(&quot;\1&quot;).getValueAsInt()" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="\.getIntValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
+				<substitution expression=".getParam(&quot;\1&quot;).getValueAsInt()" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.java : .getLongValue(&quot;([a-zA-Z0-9\.]+)&quot;); to .getParam(\1).getValueAsLong" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.java" />
-			</fileset>
-			<regexp pattern="\.getLongValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
-			<substitution expression=".getParam(&quot;\1&quot;).getValueAsLong()" />
-		</replaceregexp>
+		<countModified includes="**/*.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.java" />
+				</fileset>
+				<regexp pattern="\.getLongValue\(&quot;([a-zA-Z0-9\.]+)&quot;\)" />
+				<substitution expression=".getParam(&quot;\1&quot;).getValueAsLong()" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).account to io.vertigo.x.account.\1" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.xml" />
-			</fileset>
-			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.account" />
-			<substitution expression="io.vertigo.x.account.\1" />
-		</replaceregexp>
+		<countModified includes="**/*.xml">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.xml" />
+				</fileset>
+				<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.account" />
+				<substitution expression="io.vertigo.x.account.\1" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).audit to io.vertigo.x.audit.\1" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.xml" />
-			</fileset>
-			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.audit" />
-			<substitution expression="io.vertigo.x.audit.\1" />
-		</replaceregexp>
+		<countModified includes="**/*.xml">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.xml" />
+				</fileset>
+				<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.audit" />
+				<substitution expression="io.vertigo.x.audit.\1" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).comment to io.vertigo.x.comment.\1" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.xml" />
-			</fileset>
-			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.comment" />
-			<substitution expression="io.vertigo.x.comment.\1" />
-		</replaceregexp>
+		<countModified includes="**/*.xml">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.xml" />
+				</fileset>
+				<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.comment" />
+				<substitution expression="io.vertigo.x.comment.\1" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).notification to io.vertigo.x.notification.\1" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.xml" />
-			</fileset>
-			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.notification" />
-			<substitution expression="io.vertigo.x.notification.\1" />
-		</replaceregexp>
+		<countModified includes="**/*.xml">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.xml" />
+				</fileset>
+				<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.notification" />
+				<substitution expression="io.vertigo.x.notification.\1" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.xml : io.vertigo.x.([a-zA-Z]+).rules to io.vertigo.x.rules.\1" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.xml" />
-			</fileset>
-			<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.rules" />
-			<substitution expression="io.vertigo.x.rules.\1" />
-		</replaceregexp>
+		<countModified includes="**/*.xml">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.xml" />
+				</fileset>
+				<regexp pattern="io\.vertigo\.x\.([a-zA-Z]+)\.rules" />
+				<substitution expression="io.vertigo.x.rules.\1" />
+			</replaceregexp>
+		</countModified>
 
 
 		<echo message="Renamed in *.xml : api=&quot;([a-zA-Z]+)Manager&quot; class=&quot;io.vertigo.x.([a-zA-Z\.]+)Manager to api=&quot;\1Services&quot; class=&quot;io.vertigo.x.\2Services" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.xml" />
-			</fileset>
-			<regexp pattern="api=&quot;([a-zA-Z]+)Manager&quot; class=&quot;io\.vertigo\.x\.([a-zA-Z\.]+)Manager" />
-			<substitution expression="api=&quot;\1Services&quot; class=&quot;io.vertigo.x.\2Services" />
-		</replaceregexp>
+		<countModified includes="**/*.xml">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.xml" />
+				</fileset>
+				<regexp pattern="api=&quot;([a-zA-Z]+)Manager&quot; class=&quot;io\.vertigo\.x\.([a-zA-Z\.]+)Manager" />
+				<substitution expression="api=&quot;\1Services&quot; class=&quot;io.vertigo.x.\2Services" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Renamed in *.xml : api=&quot;WorkflowServices&quot; class=&quot;io.vertigo.x.impl.workflow.WorkflowServices to api=&quot;WorkflowManager&quot; class=&quot;io.vertigo.x.impl.workflow.WorkflowManager" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="api=&quot;WorkflowServices&quot; class=&quot;io.vertigo.x.impl.workflow.WorkflowServices" value="api=&quot;WorkflowManager&quot; class=&quot;io.vertigo.x.impl.workflow.WorkflowManager" summary="true">
@@ -866,50 +974,60 @@
 			<include name="**/*.java" />
 		</replace>
 		<echo message="Replace in *.ksp persistent: &quot;false&quot;,\n(\t)+key to field" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp" />
-			</fileset>
-			<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)key(\s)" />
-			<substitution expression="field\3" />
-		</replaceregexp>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp" />
+				</fileset>
+				<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)key(\s)" />
+				<substitution expression="field\3" />
+			</replaceregexp>
+		</countModified>
 		<echo message="Replace in *.ksp persistent: &quot;false&quot;,\n(\t)+field to field" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp" />
-			</fileset>
-			<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)field(\s)" />
-			<substitution expression="field\3" />
-		</replaceregexp>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp" />
+				</fileset>
+				<regexp pattern="persistent\s*:\s*&quot;false&quot;(,)?\s*\n(\s+)field(\s)" />
+				<substitution expression="field\3" />
+			</replaceregexp>
+		</countModified>
 		<echo message="Replace in *.ksp persistent: &quot;true&quot;,\n(\t)+key to key" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp" />
-			</fileset>
-			<regexp pattern="persistent\s*:\s*&quot;true&quot;(,)?\s*\n(\s+)key(\s)" />
-			<substitution expression="key\3" />
-		</replaceregexp>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp" />
+				</fileset>
+				<regexp pattern="persistent\s*:\s*&quot;true&quot;(,)?\s*\n(\s+)key(\s)" />
+				<substitution expression="key\3" />
+			</replaceregexp>
+		</countModified>
 		<echo message="Replace in *.ksp attribute .* domain: DO_.*_DTC notNull:&quot;false&quot; to attribute .* domain: DO_.*_DTC notNull:&quot;true&quot;" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp" />
-			</fileset>
-			<regexp pattern="(attribute.+DO_[A-Z_]+_DTC\s.+notNull\s*:\s*)&quot;false&quot;" />
-			<substitution expression="\1&quot;true&quot;" />
-		</replaceregexp>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp" />
+				</fileset>
+				<regexp pattern="(attribute.+DO_[A-Z_]+_DTC\s.+notNull\s*:\s*)&quot;false&quot;" />
+				<substitution expression="\1&quot;true&quot;" />
+			</replaceregexp>
+		</countModified>
 		<echo message="Replace in *.java &lt;D extends DtObject&gt; URI&lt;D&gt; to &lt;E extends Entity&gt; URI&lt;E&gt;" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="&lt;D extends DtObject&gt; URI&lt;D&gt;" value="&lt;E extends Entity&gt; URI&lt;E&gt;" summary="true">
 			<include name="**/*.java" />
 		</replace>
 
 		<echo message="Replace in *SearchLoader.java super(taskManager); to super(taskManager, transactionManager);" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*SearchLoader.java" />
-			</fileset>
-			<regexp pattern="\)\s+\{\s*\n(\s+)super\(taskManager\);" />
-			<substitution expression=", final VTransactionManager transactionManager) {${line.separator}\1super(taskManager, transactionManager);" />
-		</replaceregexp>
+		<countModified includes="**/*SearchLoader.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*SearchLoader.java" />
+				</fileset>
+				<regexp pattern="\)\s+\{\s*\n(\s+)super\(taskManager\);" />
+				<substitution expression=", final VTransactionManager transactionManager) {${line.separator}\1super(taskManager, transactionManager);" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Replace in *SearchLoader.java import io.vertigo.dynamo.task.TaskManager; to import io.vertigo.dynamo.task.TaskManager;\nimport io.vertigo.dynamo.transaction.VTransactionManager;" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="import io.vertigo.dynamo.task.TaskManager;" value="import io.vertigo.dynamo.task.TaskManager;${line.separator}import io.vertigo.dynamo.transaction.VTransactionManager;" summary="true">
@@ -917,13 +1035,15 @@
 		</replace>
 
 		<echo message="Replace in *SearchLoader.java loadData(final List&lt;URI&lt;?&gt;&gt; to loadData(final SearchChunk&lt;?&gt; searchChunk) { final List&lt;URI&lt;?&gt;&gt; uris = searchChunk.getAllURIs();" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/*SearchLoader.java" />
-			</fileset>
-			<regexp pattern="loadData\(\n?\s*final\s+List&lt;URI&lt;([A-Za-z0-9]+)&gt;&gt;\s+([A-Za-z0-9]+)\)\s+\{\s+\n(\s+)" />
-			<substitution expression="loadData(final SearchChunk&lt;\1&gt; searchChunk) \{${line.separator}\3final List&lt;URI&lt;\1&gt;&gt; \2 = searchChunk.getAllURIs();${line.separator}\3" />
-		</replaceregexp>
+		<countModified includes="**/*SearchLoader.java">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*SearchLoader.java" />
+				</fileset>
+				<regexp pattern="loadData\(\n?\s*final\s+List&lt;URI&lt;([A-Za-z0-9]+)&gt;&gt;\s+([A-Za-z0-9]+)\)\s+\{\s+\n(\s+)" />
+				<substitution expression="loadData(final SearchChunk&lt;\1&gt; searchChunk) \{${line.separator}\3final List&lt;URI&lt;\1&gt;&gt; \2 = searchChunk.getAllURIs();${line.separator}\3" />
+			</replaceregexp>
+		</countModified>
 
 		<echo message="Replace in *SearchLoader.java import io.vertigo.dynamo.search.metamodel.SearchIndexDefinition; to import io.vertigo.dynamo.search.metamodel.SearchChunk;\\nimport io.vertigo.dynamo.search.metamodel.SearchIndexDefinition;" />
 		<replace dir="${src.path}" encoding="${src.encoding}" token="import io.vertigo.dynamo.search.metamodel.SearchIndexDefinition;" value="import io.vertigo.dynamo.search.metamodel.SearchChunk;${line.separator}import io.vertigo.dynamo.search.metamodel.SearchIndexDefinition;" summary="true">
@@ -964,13 +1084,15 @@
 		</replace>
 		<!-- Can't do that too many false positive 
         <echo message="Replace in *.java opt.isEmpty() to !opt.isPresent()" />
-        <replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-            <fileset dir="${src.path}">
-                <include name="**/*.java"/>
-            </fileset>
-            <regexp pattern="([a-z][a-zA-Z]+)\.isEmpty\(\)" />
-                <substitution expression="!\1.isPresent()" />
-        </replaceregexp> -->
+        <countModified includes="**/*.java">
+	        <replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+	            <fileset dir="${src.path}">
+	                <include name="**/*.java"/>
+	            </fileset>
+	            <regexp pattern="([a-z][a-zA-Z]+)\.isEmpty\(\)" />
+	                <substitution expression="!\1.isPresent()" />
+	        </replaceregexp>
+        </countModified> -->
 		<!-- get() to read() for FileStore only, not DAO
 		<echo message="Renamed in *.java : DAO.get( to DAO.read(" />
 		<replace summary="true" dir="${src.path}" encoding="${src.encoding}" token="DAO.get(" value="DAO.read(">
@@ -1105,13 +1227,15 @@
 
 	<target name="0.8.1 to 0.8.2 (task)" description="Usefull renames from 0.8.1 to 0.8.2 (task attributes)">
 		<echo message="Renamed in *.ksp : attribute .... inOut:'in' to in ..." />
-		<replaceregexp encoding="${src.encoding}" flags="gi" byline="true">
-			<fileset dir="${src.path}">
-				<include name="**/*.ksp" />
-			</fileset>
-			<regexp pattern="attribute(\s+.*\s+)inOut\s*:\s*&quot;(in|out)&quot;\s*,?" />
-			<substitution expression="\2\1" />
-		</replaceregexp>
+		<countModified includes="**/*.ksp">
+			<replaceregexp encoding="${src.encoding}" flags="gi" byline="true">
+				<fileset dir="${src.path}">
+					<include name="**/*.ksp" />
+				</fileset>
+				<regexp pattern="attribute(\s+.*\s+)inOut\s*:\s*&quot;(in|out)&quot;\s*,?" />
+				<substitution expression="\2\1" />
+			</replaceregexp>
+		</countModified>
 	</target>
 
 	<target name="0.8.1 to 0.8.2" description="Usefull renames from 0.8.1 to 0.8.2">
@@ -1220,22 +1344,24 @@
 		</replace>
 
 		<echo message="Replaced in web.xml spark.servlet.SparkFilter and application by a new VegaSparkFilter" />
-		<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
-			<fileset dir="${src.path}">
-				<include name="**/web.xml" />
-			</fileset>
+		<countModified includes="**/web.xml">
+			<replaceregexp encoding="${src.encoding}" flags="gis" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/web.xml" />
+				</fileset>
 
-			<regexp pattern="&lt;filter-name&gt;SparkFilter&lt;/filter-name&gt;
+				<regexp pattern="&lt;filter-name&gt;SparkFilter&lt;/filter-name&gt;
 ([ \t\n]+?)&lt;filter-class&gt;spark.servlet.SparkFilter&lt;/filter-class&gt;
 ([ \t\n]+?)&lt;init-param&gt;
 ([ \t\n]+?)&lt;param-name&gt;applicationClass&lt;/param-name&gt;
 ([ \t\n]+?)&lt;param-value&gt;io.vertigo.vega.plugins.webservice.routesregister.sparkjava.VegaSparkApplication&lt;/param-value&gt;
 ([ \t\n]+?)&lt;/init-param&gt;&gt;" />
-			<substitution expression="&lt;filter&gt;
+				<substitution expression="&lt;filter&gt;
 ([ \t\n]+?)&lt;filter-name&gt;SparkFilter&lt;/filter-name&gt;
 ([ \t\n]+?)&lt;filter-class&gt;io.vertigo.vega.plugins.webservice.webserver.sparkjava.VegaSparkFilter&lt;/filter-class&gt;    
 ([ \t\n]+?)&lt;/filter&gt;&gt;" />
-		</replaceregexp>
+			</replaceregexp>
+		</countModified>
 
 	</target>
 
