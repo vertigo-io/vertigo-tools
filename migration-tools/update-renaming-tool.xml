@@ -20,6 +20,16 @@
 			<substitution expression="\1\2=&quot;\3&quot;" />
 		</replaceregexp>
 
+		<echo message="Fixed in *.html : th:with=&quot;x='#{...}'&quot; (the text #{...}) to th:with=&quot;x=#{...}&quot; (its value), for a value that is a whole expression" />
+		<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
+			<fileset dir="${src.path}">
+				<include name="**/*.html" />
+			</fileset>
+			<!-- in a th:with (after its other variables, their texts skipped), x='expression' : the whole value is one expression -->
+			<regexp pattern="((?:(?:th:|data-th-)with=&quot;|\G(?!^))(?:[^&quot;']|'(?:[^'\\]|\\.)*')*?\b\w+\s*=\s*)'([$#@*~]\{(?:[^'{}]|\{[^'{}]*\})*\})'" />
+			<substitution expression="\1\2" />
+		</replaceregexp>
+
 		<echo message="Renamed in *.html : vu:checkbox-confirm to vu:checkbox-inline-edit (the same component, always editable)" />
 		<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
 			<fileset dir="${src.path}">
