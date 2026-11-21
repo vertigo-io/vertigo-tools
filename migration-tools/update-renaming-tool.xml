@@ -62,6 +62,18 @@
 			</replaceregexp>
 		</countModified>
 
+		<echo message="Marked in *.html : a clickable q-item holding a button or a link (a button in a button), with a comment (not rendered) : remove its clickable if the inner button carries the action ; check the q-item of a block already in an HTML comment : the marker ends that comment" />
+		<countModified includes="**/*.html">
+			<replaceregexp encoding="${src.encoding}" flags="gs" byline="false">
+				<fileset dir="${src.path}">
+					<include name="**/*.html" />
+				</fileset>
+				<!-- a q-item tag (not q-item-section) not marked yet, clickable or with a @click, then up to its end a button or a link -->
+				<regexp pattern="(?&lt;!\*/--&gt;)(&lt;q-item(?=[\s&gt;])[^&gt;]*?(?:\sclickable(?:=&quot;true&quot;)?(?=[\s/&gt;])|[\s:]@click|\sv-on:click)[^&gt;]*&gt;)(?=(?:(?!&lt;/q-item&gt;).)*?&lt;(?:vu:button|vu:dsfr-button|q-btn[\s/&gt;]|a[\s&gt;]|button[\s&gt;]))" />
+				<substitution expression="&lt;!--/* Vertigo 4.5.0 : this clickable q-item holds a button or a link (a button in a button) : remove its clickable if the inner button carries the action, then this comment */--&gt;\1" />
+			</replaceregexp>
+		</countModified>
+
 		<echo message="Renamed in *.html : vu:checkbox-confirm to vu:checkbox-inline-edit (the same component, always editable)" />
 		<countModified includes="**/*.html">
 			<replaceregexp encoding="${src.encoding}" flags="g" byline="true">
